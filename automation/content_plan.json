@@ -7,34 +7,14 @@
     "username": "mentviro"
   },
   "settings": {
-    "post_time_utc": "17:00",
-    "story_time_utc": "17:05",
+    "post_time_utc": "16:00",
+    "story_time_utc": "16:05",
     "colors": {
-      "background": [
-        6,
-        6,
-        6
-      ],
-      "white": [
-        255,
-        255,
-        255
-      ],
-      "silver": [
-        192,
-        192,
-        192
-      ],
-      "light_silver": [
-        220,
-        220,
-        220
-      ],
-      "dark_silver": [
-        130,
-        130,
-        130
-      ]
+      "background": [6, 6, 6],
+      "white": [255, 255, 255],
+      "silver": [192, 192, 192],
+      "light_silver": [220, 220, 220],
+      "dark_silver": [130, 130, 130]
     }
   },
   "posts": [
@@ -44,112 +24,20 @@
       "type": "carousel",
       "topic": "5 Denkfehler, die dich arm halten",
       "status": "published",
-      "post_id": "17917669308165566",
-      "hook": "Du arbeitest 40h/Woche – und kommst trotzdem nicht weiter.",
+      "post_id": "17888772186377235",
+      "hook": "Du arbeitest 40h/Woche \u2013 und kommst trotzdem nicht weiter.",
       "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Du arbeitest 40h/Woche –",
-            "und kommst trotzdem",
-            "nicht weiter."
-          ],
-          "body": [
-            "Das ist kein Zufall.",
-            "Lies weiter. →"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "DENKFEHLER #1",
-          "num": "1 / 5",
-          "title": [
-            "Du tauschst",
-            "Zeit gegen Geld"
-          ],
-          "body": [
-            "Reiche bauen Systeme.",
-            "Sie verkaufen keine Zeit."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #2",
-          "num": "2 / 5",
-          "title": [
-            "Du denkst, Schulden",
-            "sind immer schlecht"
-          ],
-          "body": [
-            "Gute Schulden kaufen Assets.",
-            "Schlechte kaufen Konsum."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #3",
-          "num": "3 / 5",
-          "title": [
-            "Du sparst statt",
-            "zu investieren"
-          ],
-          "body": [
-            "Inflation frisst dein Erspartes.",
-            "Investitionen lassen es wachsen."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #4",
-          "num": "4 / 5",
-          "title": [
-            "Du wartest auf",
-            "den richtigen Moment"
-          ],
-          "body": [
-            "Der beste Zeitpunkt war gestern.",
-            "Der zweitbeste: JETZT."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #5",
-          "num": "5 / 5",
-          "title": [
-            "Du glaubst, das ist",
-            "nichts für dich"
-          ],
-          "body": [
-            "Das Mindset ist die",
-            "einzige Grenze, die zählt."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Tägliches Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "für täglich mehr."
-          ]
-        }
+        {"badge": null, "num": null, "title": ["Du arbeitest 40h/Woche \u2013", "und kommst trotzdem", "nicht weiter."], "body": ["Das ist kein Zufall.", "Lies weiter. \u2192"], "is_cover": true},
+        {"badge": "DENKFEHLER #1", "num": "1 / 5", "title": ["Du tauschst", "Zeit gegen Geld"], "body": ["Reiche bauen Systeme.", "Sie verkaufen keine Zeit."]},
+        {"badge": "DENKFEHLER #2", "num": "2 / 5", "title": ["Du denkst, Schulden", "sind immer schlecht"], "body": ["Gute Schulden kaufen Assets.", "Schlechte kaufen Konsum."]},
+        {"badge": "DENKFEHLER #3", "num": "3 / 5", "title": ["Du sparst statt", "zu investieren"], "body": ["Inflation frisst dein Erspartes.", "Investitionen lassen es wachsen."]},
+        {"badge": "DENKFEHLER #4", "num": "4 / 5", "title": ["Du wartest auf", "den richtigen Moment"], "body": ["Der beste Zeitpunkt war gestern.", "Der zweitbeste: JETZT."]},
+        {"badge": "DENKFEHLER #5", "num": "5 / 5", "title": ["Du glaubst, das ist", "nichts f\u00fcr dich"], "body": ["Das Mindset ist die", "einzige Grenze, die z\u00e4hlt."]},
+        {"badge": "FOLGE UNS", "num": null, "title": ["T\u00e4gliches Mindset", "& Money Moves"], "body": ["Folge @mentviro", "f\u00fcr t\u00e4glich mehr."]}
       ],
-      "caption": "Die meisten Menschen arbeiten ihr Leben lang hart – und fragen sich, warum sie nie vorankommen.\n\nDie Wahrheit: Es liegt nicht an der Fähigkeit. Es liegt am Denken.\n\nDiese 5 Denkfehler halten 95% der Menschen davon ab, finanziell frei zu werden. 👇\n\nWelcher trifft auf dich zu? Schreib's in die Kommentare! 👇\n\n#mindset #finanziellefreiheit #richdadpoordad #gelddenken #passiveseinkommen #investieren #mentviro #reichtum #erfolg #motivation #wealthmindset #moneymindset #selbstentwicklung #entrepreneur #financialfreedom",
-      "pexels_queries": [
-        "businessman dark moody",
-        "asian businessman black suit",
-        "money briefcase",
-        "gold bars cash",
-        "man luxury car",
-        "man suit foggy forest",
-        "confident businessman"
-      ],
-      "story_text": [
-        "NEU AUF MENTVIRO",
-        "5 Denkfehler,",
-        "die dich arm halten",
-        "→ Sieh dir den Post an"
-      ]
+      "caption": "Die meisten Menschen arbeiten ihr Leben lang hart \u2013 und fragen sich, warum sie nie vorankommen.\n\nDie Wahrheit: Es liegt nicht an der F\u00e4higkeit. Es liegt am Denken.\n\nDiese 5 Denkfehler halten 95% der Menschen davon ab, finanziell frei zu werden. \ud83d\udc47\n\nWelcher trifft auf dich zu? Schreib's in die Kommentare! \ud83d\udc47\n\n#mindset #finanziellefreiheit #richdadpoordad #gelddenken #passiveseinkommen #investieren #mentviro #reichtum #erfolg #motivation #wealthmindset #moneymindset #selbstentwicklung #entrepreneur #financialfreedom",
+      "pexels_queries": ["dark empty road horizon night", "chess king black dramatic", "dark rainy city window", "hourglass sand dark moody", "fog forest dark minimal", "neon city night aerial", "dark mountain silhouette"],
+      "story_text": ["NEU AUF MENTVIRO", "5 Denkfehler,", "die dich arm halten", "\u2192 Sieh dir den Post an"]
     },
     {
       "day": 2,
@@ -157,122 +45,37 @@
       "type": "reel",
       "topic": "Der Unterschied zwischen arm und reich",
       "status": "pending",
-      "hook": "Der einzige Unterschied zwischen dir und einem Millionär ist nicht das Geld.",
+      "hook": "Der einzige Unterschied zwischen dir und einem Million\u00e4r ist nicht das Geld.",
       "script": [
-        "Du glaubst, Reiche haben einfach mehr Glück gehabt?",
+        "Du glaubst, Reiche haben einfach mehr Gl\u00fcck gehabt?",
         "Falsch. Der einzige Unterschied ist ihr Denken.",
         "Arme denken: 'Ich kann mir das nicht leisten.'",
         "Reiche fragen: 'Wie kann ich mir das leisten?'",
-        "Eine Frage verändert alles.",
-        "Folge @mentviro für tägliche Mindset-Shifts."
+        "Eine Frage ver\u00e4ndert alles.",
+        "Folge @mentviro f\u00fcr t\u00e4gliche Mindset-Shifts."
       ],
-      "caption": "Der einzige Unterschied zwischen arm und reich ist nicht das Geld – es ist die Frage, die du dir stellst. 🧠\n\n'Ich kann mir das nicht leisten' schließt dein Gehirn ab.\n'Wie kann ich mir das leisten?' öffnet es.\n\nRich Dad Poor Dad hat mir das gelehrt. Und es hat alles verändert. 👇\n\nSpeicher diesen Post. Du wirst ihn brauchen.\n\n#mindset #richdadpoordad #finanziellefreiheit #mentviro #moneymindset #wealthmindset #motivation #erfolg #gelddenken #entrepreneur #passiveseinkommen #investieren #selbstentwicklung #businessmindset #reichtum",
-      "pexels_video_query": "businessman city success luxury dark cinematic",
-      "story_text": [
-        "NEUES REEL",
-        "Arm vs. Reich –",
-        "der echte Unterschied",
-        "→ Schau jetzt"
-      ]
+      "caption": "Der einzige Unterschied zwischen arm und reich ist nicht das Geld \u2013 es ist die Frage, die du dir stellst. \ud83e\udde0\n\n'Ich kann mir das nicht leisten' schlie\u00dft dein Gehirn ab.\n'Wie kann ich mir das leisten?' \u00f6ffnet es.\n\nRich Dad Poor Dad hat mir das gelehrt. Und es hat alles ver\u00e4ndert. \ud83d\udc47\n\nSpeicher diesen Post. Du wirst ihn brauchen.\n\n#mindset #richdadpoordad #finanziellefreiheit #mentviro #moneymindset #wealthmindset #motivation #erfolg #gelddenken #entrepreneur #passiveseinkommen #investieren #selbstentwicklung #businessmindset #reichtum",
+      "pexels_video_query": "cinematic dark city night aerial luxury",
+      "story_text": ["NEUES REEL", "Arm vs. Reich \u2013", "der echte Unterschied", "\u2192 Schau jetzt"]
     },
     {
       "day": 3,
       "date": "2026-05-19",
       "type": "carousel",
-      "topic": "Cashflow vs. Gehalt – Der Game Changer",
+      "topic": "Cashflow vs. Gehalt \u2013 Der Game Changer",
       "status": "pending",
       "hook": "Dein Gehalt macht dich nicht reich. Cashflow schon.",
       "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Dein Gehalt macht",
-            "dich nicht reich.",
-            "Cashflow schon."
-          ],
-          "body": [
-            "Hier ist der Unterschied. →"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "GEHALT",
-          "num": "1 / 4",
-          "title": [
-            "Du arbeitest →",
-            "du bekommst Geld"
-          ],
-          "body": [
-            "Hörst du auf zu arbeiten?",
-            "Hört das Geld auf."
-          ]
-        },
-        {
-          "badge": "CASHFLOW",
-          "num": "2 / 4",
-          "title": [
-            "Dein Geld",
-            "arbeitet für dich"
-          ],
-          "body": [
-            "Miete. Dividenden.",
-            "Kurs-Gewinne. Immer."
-          ]
-        },
-        {
-          "badge": "DER SHIFT",
-          "num": "3 / 4",
-          "title": [
-            "Vom Angestellten",
-            "zum Investor"
-          ],
-          "body": [
-            "1. Gehalt sparen.",
-            "2. Assets kaufen.",
-            "3. Cashflow reinvestieren."
-          ]
-        },
-        {
-          "badge": "STARTE JETZT",
-          "num": "4 / 4",
-          "title": [
-            "Dein erster",
-            "Cashflow-Move"
-          ],
-          "body": [
-            "Auch mit 50€/Monat",
-            "kannst du starten."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Mehr Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "für täglich mehr."
-          ]
-        }
+        {"badge": null, "num": null, "title": ["Dein Gehalt macht", "dich nicht reich.", "Cashflow schon."], "body": ["Hier ist der Unterschied. \u2192"], "is_cover": true},
+        {"badge": "GEHALT", "num": "1 / 4", "title": ["Du arbeitest \u2192", "du bekommst Geld"], "body": ["H\u00f6rst du auf zu arbeiten?", "H\u00f6rt das Geld auf."]},
+        {"badge": "CASHFLOW", "num": "2 / 4", "title": ["Dein Geld", "arbeitet f\u00fcr dich"], "body": ["Miete. Dividenden.", "Kurs-Gewinne. Immer."]},
+        {"badge": "DER SHIFT", "num": "3 / 4", "title": ["Vom Angestellten", "zum Investor"], "body": ["1. Gehalt sparen.", "2. Assets kaufen.", "3. Cashflow reinvestieren."]},
+        {"badge": "STARTE JETZT", "num": "4 / 4", "title": ["Dein erster", "Cashflow-Move"], "body": ["Auch mit 50\u20ac/Monat", "kannst du starten."]},
+        {"badge": "FOLGE UNS", "num": null, "title": ["Mehr Mindset", "& Money Moves"], "body": ["Folge @mentviro", "f\u00fcr t\u00e4glich mehr."]}
       ],
-      "caption": "Warum werden manche Menschen mit dem gleichen Gehalt reich – und andere nicht?\n\nDas Geheimnis: Cashflow.\n\nDein Gehalt macht dich beschäftigt. Cashflow macht dich frei. 💰\n\nWie du den Shift machst – in diesem Carousel. Swipe durch! 👇\n\n#cashflow #passiveseinkommen #finanziellefreiheit #mentviro #investieren #richdadpoordad #moneymindset #wealthmindset #gelddenken #entrepreneur #erfolg #assets #dividenden #motivation #businessmindset",
-      "pexels_queries": [
-        "money flow investment",
-        "stock market success",
-        "businessman investor",
-        "passive income growth",
-        "financial freedom",
-        "follow success"
-      ],
-      "story_text": [
-        "HEUTE AUF MENTVIRO",
-        "Cashflow vs. Gehalt –",
-        "der Game Changer",
-        "→ Swipe durch den Post"
-      ]
+      "caption": "Warum werden manche Menschen mit dem gleichen Gehalt reich \u2013 und andere nicht?\n\nDas Geheimnis: Cashflow.\n\nDein Gehalt macht dich besch\u00e4ftigt. Cashflow macht dich frei. \ud83d\udcb0\n\nWie du den Shift machst \u2013 in diesem Carousel. Swipe durch! \ud83d\udc47\n\n#cashflow #passiveseinkommen #finanziellefreiheit #mentviro #investieren #richdadpoordad #moneymindset #wealthmindset #gelddenken #entrepreneur #erfolg #assets #dividenden #motivation #businessmindset",
+      "pexels_queries": ["dark penthouse city view night", "water flow river long exposure dark", "dark abstract light tunnel", "chess board minimal dark", "dark clock time blur", "dark minimal success"],
+      "story_text": ["HEUTE AUF MENTVIRO", "Cashflow vs. Gehalt \u2013", "der Game Changer", "\u2192 Swipe durch den Post"]
     },
     {
       "day": 4,
@@ -280,140 +83,45 @@
       "type": "reel",
       "topic": "Wie Reiche Steuern nutzen (statt zahlen)",
       "status": "pending",
-      "hook": "Reiche zahlen weniger Steuern als du. Und es ist völlig legal.",
+      "hook": "Reiche zahlen weniger Steuern als du. Und es ist v\u00f6llig legal.",
       "script": [
         "Reiche zahlen weniger Steuern als Angestellte.",
         "Nicht weil das System unfair ist.",
         "Sondern weil sie das System verstehen.",
-        "Angestellte: Verdienen → Steuern → Ausgaben",
-        "Reiche: Verdienen → Ausgaben → Steuern",
+        "Angestellte: Verdienen \u2192 Steuern \u2192 Ausgaben",
+        "Reiche: Verdienen \u2192 Ausgaben \u2192 Steuern",
         "Dieser Unterschied macht Millionen.",
         "Folge @mentviro. Lern das System."
       ],
-      "caption": "Reiche zahlen weniger Steuern als du – und es ist 100% legal. 🏛️\n\nAngestellte: Brutto → Steuern → Netto\nSelbstständige/Investoren: Brutto → Ausgaben absetzen → Steuern auf Gewinn\n\nRich Dad Poor Dad Lektion #3. Die wichtigste, die sie dir nie beibringen. 📚\n\n#steuern #finanziellefreiheit #mentviro #richdadpoordad #entrepreneur #gelddenken #investieren #wealthmindset #moneymindset #erfolg #businessmindset #passiveseinkommen #reichtum",
-      "pexels_video_query": "businessman office luxury success dark",
-      "story_text": [
-        "NEUES REEL",
-        "Steuern wie die Reichen –",
-        "völlig legal",
-        "→ Schau jetzt"
-      ]
+      "caption": "Reiche zahlen weniger Steuern als du \u2013 und es ist 100% legal. \ud83c\udfd9\ufe0f\n\nDer Trick liegt nicht in der Steuerhinterziehung, sondern im System.\n\nAngestellte: Brutto \u2192 Steuern \u2192 Netto\nSelbst\u00e4ndige/Investoren: Brutto \u2192 Ausgaben absetzen \u2192 Steuern auf Gewinn\n\nRich Dad Poor Dad Lektion #3. Die wichtigste, die sie dir nie beibringen. \ud83d\udcda\n\nSpeicher diesen Post.\n\n#steuern #steuertipps #finanziellefreiheit #mentviro #richdadpoordad #entrepreneur #selbst\u00e4ndig #gelddenken #investieren #wealthmindset #moneymindset #erfolg #businessmindset #passiveseinkommen #reichtum",
+      "pexels_video_query": "dark skyscraper glass reflection city",
+      "story_text": ["NEUES REEL", "Steuern wie die Reichen \u2013", "v\u00f6llig legal", "\u2192 Schau jetzt"]
     },
     {
       "day": 5,
       "date": "2026-05-21",
       "type": "carousel",
-      "topic": "5 Bücher, die dein Gelddenken verändern",
+      "topic": "5 B\u00fccher, die dein Gelddenken ver\u00e4ndern",
       "status": "pending",
-      "hook": "Diese 5 Bücher haben mehr Millionäre geschaffen als jedes Studium.",
+      "hook": "Diese 5 B\u00fccher haben mehr Million\u00e4re geschaffen als jedes Studium.",
       "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Diese 5 Bücher",
-            "haben mehr Millionäre",
-            "gemacht als jedes Studium."
-          ],
-          "body": [
-            "Lies sie. →"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "BUCH #1",
-          "num": "1 / 5",
-          "title": [
-            "Rich Dad",
-            "Poor Dad"
-          ],
-          "body": [
-            "Robert Kiyosaki.",
-            "Das Fundament allen Gelddenkens."
-          ]
-        },
-        {
-          "badge": "BUCH #2",
-          "num": "2 / 5",
-          "title": [
-            "Think and",
-            "Grow Rich"
-          ],
-          "body": [
-            "Napoleon Hill.",
-            "Mindset ist alles."
-          ]
-        },
-        {
-          "badge": "BUCH #3",
-          "num": "3 / 5",
-          "title": [
-            "The Millionaire",
-            "Fastlane"
-          ],
-          "body": [
-            "MJ DeMarco.",
-            "Der schnelle Weg zur Freiheit."
-          ]
-        },
-        {
-          "badge": "BUCH #4",
-          "num": "4 / 5",
-          "title": [
-            "Psychology",
-            "of Money"
-          ],
-          "body": [
-            "Morgan Housel.",
-            "Warum wir so falsch denken."
-          ]
-        },
-        {
-          "badge": "BUCH #5",
-          "num": "5 / 5",
-          "title": [
-            "Die Kunst des",
-            "klaren Denkens"
-          ],
-          "body": [
-            "Rolf Dobelli.",
-            "Denkfehler eliminieren."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Mehr Empfehlungen",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "für täglich mehr."
-          ]
-        }
+        {"badge": null, "num": null, "title": ["Diese 5 B\u00fccher", "haben mehr Million\u00e4re", "gemacht als jedes Studium."], "body": ["Lies sie. \u2192"], "is_cover": true},
+        {"badge": "BUCH #1", "num": "1 / 5", "title": ["Rich Dad", "Poor Dad"], "body": ["Robert Kiyosaki.", "Das Fundament allen Gelddenkens."]},
+        {"badge": "BUCH #2", "num": "2 / 5", "title": ["Think and", "Grow Rich"], "body": ["Napoleon Hill.", "Mindset ist alles."]},
+        {"badge": "BUCH #3", "num": "3 / 5", "title": ["The Millionaire", "Fastlane"], "body": ["MJ DeMarco.", "Der schnelle Weg zur Freiheit."]},
+        {"badge": "BUCH #4", "num": "4 / 5", "title": ["Psychology", "of Money"], "body": ["Morgan Housel.", "Warum wir so falsch denken."]},
+        {"badge": "BUCH #5", "num": "5 / 5", "title": ["Die Kunst des", "klaren Denkens"], "body": ["Rolf Dobelli.", "Denkfehler eliminieren."]},
+        {"badge": "FOLGE UNS", "num": null, "title": ["Mehr Empfehlungen", "& Money Moves"], "body": ["Folge @mentviro", "f\u00fcr t\u00e4glich mehr."]}
       ],
-      "caption": "Ich habe hunderte Bücher gelesen. Diese 5 haben mich am meisten verändert. 📚\n\nNicht Schule. Nicht Ausbildung. Bücher.\n\nWelches davon hast du gelesen? Kommentar! 👇\n\n#bücher #lesen #richdadpoordad #finanziellefreiheit #mentviro #moneymindset #wealthmindset #motivation #erfolg #selfimprovement #persönlichkeitsentwicklung #entrepreneur #gelddenken #buchempfehlung #businessmindset",
-      "pexels_queries": [
-        "reading book dark library",
-        "book knowledge wisdom",
-        "rich man reading",
-        "library books businessman",
-        "reading success",
-        "follow learn"
-      ],
-      "story_text": [
-        "HEUTE AUF MENTVIRO",
-        "5 Bücher für",
-        "Geld-Mindset",
-        "→ Swipe durch den Post"
-      ]
+      "caption": "Ich habe hunderte B\u00fccher gelesen. Diese 5 haben mich am meisten ver\u00e4ndert. \ud83d\udcda\n\nNicht Schule. Nicht Ausbildung. B\u00fccher.\n\nWelches davon hast du gelesen? Kommentar! \ud83d\udc47\n\n#b\u00fccher #lesen #richdadpoordad #finanziellefreiheit #mentviro #moneymindset #wealthmindset #motivation #erfolg #selfimprovement #pers\u00f6nlichkeitsentwicklung #entrepreneur #gelddenken #buchempfehlung #businessmindset",
+      "pexels_queries": ["open book dark dramatic light", "dark library candle dramatic", "books shelf dark moody minimal", "reading lamp night dark cozy", "dark wooden desk books ink", "minimal dark desk studying"],
+      "story_text": ["HEUTE AUF MENTVIRO", "5 B\u00fccher f\u00fcr", "Geld-Mindset", "\u2192 Swipe durch den Post"]
     },
     {
       "day": 6,
       "date": "2026-05-22",
       "type": "reel",
-      "topic": "Passives Einkommen – So fängst du an",
+      "topic": "Passives Einkommen \u2013 So f\u00e4ngst du an",
       "status": "pending",
       "hook": "Passives Einkommen ist kein Mythos. Jeder kann damit anfangen.",
       "script": [
@@ -422,115 +130,32 @@
         "Schritt 1: Spare 10% deines Einkommens.",
         "Schritt 2: Investiere es in ETFs oder Dividenden-Aktien.",
         "Schritt 3: Reinvestiere alles.",
-        "In 10 Jahren schaust du zurück und bist froh.",
-        "Folge @mentviro für den Start."
+        "In 10 Jahren schaust du zur\u00fcck und bist froh.",
+        "Oder du f\u00e4ngst nie an.",
+        "Folge @mentviro f\u00fcr den Start."
       ],
-      "caption": "Passives Einkommen aufbauen klingt kompliziert. Ist es nicht. 💸\n\n1️⃣ 10% sparen\n2️⃣ In breit gestreute ETFs investieren\n3️⃣ Alles reinvestieren\n4️⃣ Zeit arbeiten lassen\n\nDer größte Fehler: Warten auf den 'richtigen Moment'.\n\nDer ist jetzt. 📲\n\n#passiveseinkommen #etf #investieren #finanziellefreiheit #mentviro #dividenden #wealthmindset #moneymindset #entrepreneur #erfolg #motivation #richdadpoordad #businessmindset #reichtum",
-      "pexels_video_query": "money growing investment financial freedom",
-      "story_text": [
-        "NEUES REEL",
-        "Passives Einkommen –",
-        "so fängst du an",
-        "→ Schau jetzt"
-      ]
+      "caption": "Passives Einkommen aufbauen klingt kompliziert. Ist es nicht. \ud83d\udcb8\n\nDie einfachste Formel:\n1\ufe0f\u20e3 10% sparen\n2\ufe0f\u20e3 In breit gestreute ETFs investieren\n3\ufe0f\u20e3 Alles reinvestieren\n4\ufe0f\u20e3 Zeit arbeiten lassen\n\nDer gr\u00f6\u00dfte Fehler: Warten auf den 'richtigen Moment'.\n\nDer ist jetzt. \ud83d\udcf2\n\n#passiveseinkommen #etf #investieren #finanziellefreiheit #mentviro #geldanlage #dividenden #wealthmindset #moneymindset #entrepreneur #erfolg #motivation #richdadpoordad #businessmindset #reichtum",
+      "pexels_video_query": "ocean waves aerial drone dark cinematic",
+      "story_text": ["NEUES REEL", "Passives Einkommen \u2013", "so f\u00e4ngst du an", "\u2192 Schau jetzt"]
     },
     {
       "day": 7,
       "date": "2026-05-23",
       "type": "carousel",
-      "topic": "Assets vs. Liabilities – Rich Dad erklärt es dir",
+      "topic": "Assets vs. Liabilities \u2013 Rich Dad erkl\u00e4rt es dir",
       "status": "pending",
       "hook": "Die meisten Menschen denken, ihr Haus ist ein Asset. Es ist keins.",
       "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Dein Haus ist",
-            "kein Asset.",
-            "Das ist keins."
-          ],
-          "body": [
-            "Rich Dad erklärt warum. →"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "DEFINITION",
-          "num": "1 / 4",
-          "title": [
-            "Asset =",
-            "Geld rein"
-          ],
-          "body": [
-            "Aktien. ETFs. Mietimmobilien.",
-            "Digitale Produkte."
-          ]
-        },
-        {
-          "badge": "DEFINITION",
-          "num": "2 / 4",
-          "title": [
-            "Liability =",
-            "Geld raus"
-          ],
-          "body": [
-            "Kredit. Leasingauto.",
-            "Konsumgüter. Dein Haus?"
-          ]
-        },
-        {
-          "badge": "DER SCHOCK",
-          "num": "3 / 4",
-          "title": [
-            "Dein Haus nimmt",
-            "dir Geld weg"
-          ],
-          "body": [
-            "Zinsen. Reparaturen.",
-            "Nebenkosten. Steuern."
-          ]
-        },
-        {
-          "badge": "DIE LÖSUNG",
-          "num": "4 / 4",
-          "title": [
-            "Kaufe Assets,",
-            "bevor du Luxus kaufst"
-          ],
-          "body": [
-            "Lass Assets deinen",
-            "Lifestyle zahlen."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Tägliches Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "für täglich mehr."
-          ]
-        }
+        {"badge": null, "num": null, "title": ["Dein Haus ist", "kein Asset.", "Es ist eine Schuld."], "body": ["Rich Dad erkl\u00e4rt warum. \u2192"], "is_cover": true},
+        {"badge": "DEFINITION", "num": "1 / 4", "title": ["Asset =", "Geld rein"], "body": ["Aktien. ETFs. Mietimmobilien.", "Digitale Produkte."]},
+        {"badge": "DEFINITION", "num": "2 / 4", "title": ["Liability =", "Geld raus"], "body": ["Kredit. Leasingauto.", "Konsumgüter. Dein Haus?"]},
+        {"badge": "DER SCHOCK", "num": "3 / 4", "title": ["Dein Haus nimmt", "dir Geld weg"], "body": ["Zinsen. Reparaturen.", "Nebenkosten. Steuern."]},
+        {"badge": "DIE L\u00d6SUNG", "num": "4 / 4", "title": ["Kaufe Assets,", "bevor du Luxus kaufst"], "body": ["Lass Assets deinen", "Lifestyle zahlen."]},
+        {"badge": "FOLGE UNS", "num": null, "title": ["T\u00e4gliches Mindset", "& Money Moves"], "body": ["Folge @mentviro", "f\u00fcr t\u00e4glich mehr."]}
       ],
-      "caption": "Rich Dad Poor Dad Lektion #1: Der Unterschied zwischen Assets und Liabilities. 🏠❌\n\nDie meisten Menschen denken, ihr Eigenheim ist ihr größtes Asset.\n\nRobert Kiyosaki sagt: Es ist ihre größte Liability.\n\nWenn dein Haus dir jeden Monat Geld kostet – ist es eine Schuld, kein Vermögen.\n\nVersteht das. Verändert alles. 👇\n\n#assets #liabilities #richdadpoordad #finanziellefreiheit #mentviro #immobilien #investieren #gelddenken #moneymindset #wealthmindset #erfolg #motivation #entrepreneur #passiveseinkommen #businessmindset",
-      "pexels_queries": [
-        "luxury house mansion",
-        "businessman investment",
-        "money growth assets",
-        "financial freedom",
-        "investor success",
-        "follow motivation"
-      ],
-      "story_text": [
-        "HEUTE AUF MENTVIRO",
-        "Assets vs. Liabilities –",
-        "der echte Unterschied",
-        "→ Swipe durch den Post"
-      ]
+      "caption": "Rich Dad Poor Dad Lektion #1: Der Unterschied zwischen Assets und Liabilities. \ud83c\udfe0\u274c\n\nDie meisten Menschen denken, ihr Eigenheim ist ihr gr\u00f6\u00dftes Asset.\n\nRobert Kiyosaki sagt: Es ist ihre gr\u00f6\u00dfte Liability.\n\nWenn dein Haus dir jeden Monat Geld kostet \u2013 ist es eine Schuld, kein Verm\u00f6gen.\n\nVersteht das. Ver\u00e4ndert alles. \ud83d\udc47\n\n#assets #liabilities #richdadpoordad #finanziellefreiheit #mentviro #immobilien #investieren #gelddenken #moneymindset #wealthmindset #erfolg #motivation #entrepreneur #passiveseinkommen #businessmindset",
+      "pexels_queries": ["dark luxury apartment interior night", "abstract geometry dark minimal", "dark gold metallic texture", "aerial city night lights", "dark hands holding keys close", "dark chess board close up"],
+      "story_text": ["HEUTE AUF MENTVIRO", "Assets vs. Liabilities \u2013", "der echte Unterschied", "\u2192 Swipe durch den Post"]
     }
   ]
 }
