@@ -26,6 +26,7 @@ jobs:
         env:
           COMPOSIO_API_KEY:   ${{ secrets.COMPOSIO_API_KEY }}
           MENTVIRO_LOGO_URL:  ${{ secrets.MENTVIRO_LOGO_URL }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: python automation/daily_post.py
 
       - name: Commit updated plan
