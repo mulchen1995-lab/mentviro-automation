@@ -152,17 +152,17 @@ def get_todays_post(plan):
     return None
 
 def check_and_refill_content(plan):
-    """Auto-generate 3 new posts via Claude API when < 2 pending remain."""
+    """Auto-generate 3 new posts via Gemini API (free) when < 2 pending remain."""
     pending = [p for p in plan["posts"] if p["status"] == "pending"]
     if len(pending) >= 2:
         return
 
-    api_key = os.environ.get("CLAUDE_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("⚠ CLAUDE_API_KEY not set — skipping auto-generation")
+        print("⚠ GEMINI_API_KEY not set — skipping auto-generation")
         return
 
-    print(f"📝 Only {len(pending)} pending post(s) left — auto-generating 3 more via Claude...")
+    print(f"📝 Only {len(pending)} pending post(s) left — auto-generating 3 more via Gemini...")
 
     existing_topics = [p["topic"] for p in plan["posts"]]
     last_day = max(p["day"] for p in plan["posts"])
@@ -224,19 +224,19 @@ Reel-Schema:
 
     try:
         r = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={"x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": "claude-sonnet-4-6", "max_tokens": 8000, "messages": [{"role": "user", "content": prompt}]},
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}",
+            headers={"content-type": "application/json"},
+            json={"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"maxOutputTokens": 8000, "temperature": 0.9}},
             timeout=120,
         )
         if r.status_code != 200:
-            print(f"⚠ Claude API error {r.status_code}: {r.text[:300]}")
+            print(f"⚠ Gemini API error {r.status_code}: {r.text[:300]}")
             return
-        text = r.json()["content"][0]["text"].strip()
+        text = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
         start = text.find("[")
         end = text.rfind("]") + 1
         if start == -1 or end == 0:
-            print("⚠ No JSON array in Claude response")
+            print("⚠ No JSON array in Gemini response")
             return
         new_posts = json.loads(text[start:end])
         plan["posts"].extend(new_posts)
