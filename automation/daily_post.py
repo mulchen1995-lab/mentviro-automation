@@ -151,6 +151,100 @@ def get_todays_post(plan):
             return post
     return None
 
+def check_and_refill_content(plan):
+    """Auto-generate 3 new posts via Claude API when < 2 pending remain."""
+    pending = [p for p in plan["posts"] if p["status"] == "pending"]
+    if len(pending) >= 2:
+        return
+
+    api_key = os.environ.get("CLAUDE_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        print("⚠ CLAUDE_API_KEY not set — skipping auto-generation")
+        return
+
+    print(f"📝 Only {len(pending)} pending post(s) left — auto-generating 3 more via Claude...")
+
+    existing_topics = [p["topic"] for p in plan["posts"]]
+    last_day = max(p["day"] for p in plan["posts"])
+    from datetime import timedelta
+    last_date = max(date.fromisoformat(p["date"]) for p in plan["posts"])
+    last_type = plan["posts"][-1]["type"] if plan["posts"] else "reel"
+
+    start_date = last_date + timedelta(days=1)
+    dates = [(start_date + timedelta(days=i)).isoformat() for i in range(3)]
+    types = []
+    t = last_type
+    for _ in range(3):
+        t = "reel" if t == "carousel" else "carousel"
+        types.append(t)
+
+    prompt = f"""Du bist viraler Content Creator für @mentviro (Business Mindset, Instagram, Deutsch).
+
+Erstelle GENAU 3 neue Posts als JSON-Array. Nicht mehr, nicht weniger.
+
+BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
+{chr(10).join(f'- {t}' for t in existing_topics)}
+
+VIRALER CONTENT — PFLICHT:
+Orientiere dich an aktuellen Viral-Formaten auf Instagram/TikTok:
+- Hooks wie: "Niemand redet darüber", "Das sagt dir kein Banker", "Ich wünschte, ich hätte das mit 20 gewusst", "Hör sofort damit auf", "Das ist die bittere Wahrheit über..."
+- Kontroverse oder überraschende Aussagen die zum Kommentieren anregen
+- Zahlen-Listicles: "5 Dinge die...", "3 Fehler warum..."
+- Curiosity-Gap: Leser muss wissen wie es weitergeht
+- Maximale Relevanz für Menschen 20–40 die Vermögen aufbauen wollen
+
+VORGABEN:
+- Types (in dieser Reihenfolge): {types}
+- Tage: {last_day+1} bis {last_day+3}
+- Daten: {dates[0]} bis {dates[2]}
+- Sprache: Deutsch, Themen: Mindset, Finanzen, Investieren, Entrepreneurship, Erfolg
+- PEXELS QUERIES: cinematic, dunkel, ästhetisch. NIEMALS: businessman, office, suit, handshake
+  Gute Beispiele: "dark foggy forest path moody", "aerial city night lights cinematic", "chess king macro shadow dramatic", "dark ocean waves drone aerial", "dark marble texture minimal", "lone silhouette fog dark dramatic"
+- Slide title[]: max 3 kurze Zeilen, body[]: max 2 Zeilen
+- Caption: emotional, provokant, mit 15 deutschen/englischen Hashtags
+
+Gib NUR das JSON-Array aus, kein Text davor/danach.
+
+Carousel-Schema:
+{{"day":N,"date":"YYYY-MM-DD","type":"carousel","topic":"...","status":"pending","hook":"...",
+"slides":[
+  {{"badge":null,"num":null,"title":["..."],"body":["..."],"is_cover":true}},
+  {{"badge":"PUNKT #1","num":"1 / N","title":["..."],"body":["..."]}},
+  ...,
+  {{"badge":"FOLGE UNS","num":null,"title":["Mehr Mindset","& Money Moves"],"body":["Folge @mentviro","für täglich mehr."]}}
+],
+"caption":"...","pexels_queries":["q1","q2","q3","q4","q5","q6"],
+"story_text":["NEU AUF MENTVIRO","Zeile 1","Zeile 2","→ Sieh dir den Post an"]}}
+
+Reel-Schema:
+{{"day":N,"date":"YYYY-MM-DD","type":"reel","topic":"...","status":"pending","hook":"...",
+"script":["Satz 1","Satz 2","Satz 3","Satz 4","Satz 5","Folge @mentviro."],
+"caption":"...","pexels_video_query":"dark cinematic query",
+"story_text":["NEUES REEL","Zeile 1","Zeile 2","→ Schau jetzt"]}}"""
+
+    try:
+        r = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={"x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+            json={"model": "claude-sonnet-4-6", "max_tokens": 8000, "messages": [{"role": "user", "content": prompt}]},
+            timeout=120,
+        )
+        if r.status_code != 200:
+            print(f"⚠ Claude API error {r.status_code}: {r.text[:300]}")
+            return
+        text = r.json()["content"][0]["text"].strip()
+        start = text.find("[")
+        end = text.rfind("]") + 1
+        if start == -1 or end == 0:
+            print("⚠ No JSON array in Claude response")
+            return
+        new_posts = json.loads(text[start:end])
+        plan["posts"].extend(new_posts)
+        save_plan(plan)
+        print(f"✅ Auto-generated {len(new_posts)} new posts (Day {last_day+1}–{last_day+len(new_posts)})")
+    except Exception as e:
+        print(f"⚠ Auto-generation failed: {e}")
+
 # ─── FONT HELPERS ────────────────────────────────────────────────────────────
 
 def fnt(size, bold=False):
@@ -583,6 +677,9 @@ def main():
 
     plan = load_plan()
     init_colors(plan)
+
+    check_and_refill_content(plan)
+    plan = load_plan()  # reload after potential auto-generation
 
     post = get_todays_post(plan)
     if not post:
