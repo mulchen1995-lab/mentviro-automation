@@ -595,22 +595,26 @@ def run_reel(post, plan):
         audio_url = file_data.get("s3url") or file_data.get("url")
     print(f"  {'Audio ready' if audio_url else 'No audio - posting without voiceover'}")
 
-    print("  Searching Pexels video...")
-    result, err = run_composio_tool_safe(
-        "PEXELS_SEARCH_VIDEOS",
-        {"query": post.get("pexels_video_query", "cinematic dark city night"), "per_page": 3},
-        account=cfg["pexels_account"],
-    )
+        print("  Searching Pexels video...")
     video_url = None
-    if not err and result:
-        videos = (result.get("data") or result).get("videos", [])
-        for v in videos:
+    try:
+        pexels_key = os.environ.get("PEXELS_API_KEY", "")
+        r = requests.get(
+            "https://api.pexels.com/videos/search",
+            headers={"Authorization": pexels_key},
+            params={"query": post.get("pexels_video_query", "cinematic dark city night"), "per_page": 5, "orientation": "portrait"},
+            timeout=30,
+        )
+        for v in r.json().get("videos", []):
             for vf in v.get("video_files", []):
-                if "mp4" in vf.get("file_type", "") or vf.get("link", "").endswith(".mp4"):
+                if "mp4" in vf.get("file_type", ""):
                     video_url = vf["link"]
                     break
             if video_url:
                 break
+    except Exception as e:
+        print(f"  ⚠ Pexels error: {e}")
+
 
     if not video_url:
         raise RuntimeError("No Pexels video found for reel")
