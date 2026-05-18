@@ -355,37 +355,46 @@ def dark_overlay(base_rgb, strength=195):
         od.line([(0, y), (W, y)], fill=(0, 0, 0, a))
     return Image.alpha_composite(base_rgb.convert("RGBA"), ov)
 
-# ─── COMPOSIO WRAPPER (direct REST API) ──────────────────────────────────────
+# ─── COMPOSIO WRAPPER ────────────────────────────────────────────────────────
+
+def _patch_composio():
+    """Monkey-patch composio to skip the broken update_apps cache refresh."""
+    try:
+        import composio.client.utils as _cu
+        _cu.check_cache_refresh = lambda *a, **kw: None
+    except Exception:
+        pass
+
+_patch_composio()
+
+_toolset = None
+
+def get_toolset():
+    global _toolset
+    if _toolset is None:
+        api_key = os.environ.get("COMPOSIO_API_KEY")
+        if not api_key:
+            raise RuntimeError("COMPOSIO_API_KEY not set")
+        from composio import ComposioToolSet as _TS
+        _toolset = _TS(api_key=api_key)
+    return _toolset
 
 def run_composio_tool_safe(slug, params, account=None):
-    api_key = os.environ.get("COMPOSIO_API_KEY")
-    if not api_key:
-        return None, "COMPOSIO_API_KEY not set"
-    headers = {"x-api-key": api_key, "Content-Type": "application/json"}
-    body = {"input": params}
-    if account:
-        body["connectedAccountId"] = account
-
-    # Try v2 endpoint first, fall back to v1
-    for url in [
-        f"https://backend.composio.dev/api/v2/actions/{slug}/execute",
-        f"https://backend.composio.dev/api/v1/actions/{slug}/execute",
-    ]:
-        try:
-            r = requests.post(url, headers=headers, json=body, timeout=60)
-            print(f"  [composio] {slug} -> {r.status_code} via {url.split('/api/')[1].split('/')[0]}")
-            if r.status_code == 404:
-                continue
-            data = r.json()
-            if r.status_code >= 400:
-                return None, data.get("message") or data.get("error") or f"HTTP {r.status_code}"
-            # Check for action-level errors
-            if data.get("successfull") is False or data.get("error"):
-                return None, data.get("error", "unknown error")
-            return data, None
-        except Exception as e:
-            return None, str(e)
-    return None, f"No working endpoint for {slug}"
+    import traceback
+    try:
+        ts = get_toolset()
+        kwargs = {"action": slug, "params": params}
+        if account:
+            kwargs["connected_account_id"] = account
+        result = ts.execute_action(**kwargs)
+        print(f"  [composio] {slug} result keys={list(result.keys()) if isinstance(result, dict) else type(result).__name__}")
+        if isinstance(result, dict):
+            if result.get("successfull") is False or result.get("error"):
+                return None, result.get("error", "unknown error")
+        return result, None
+    except Exception as e:
+        print(f"  [composio] {slug} EXCEPTION: {traceback.format_exc()[-500:]}")
+        return None, str(e)
 
 # ─── PEXELS HELPER ───────────────────────────────────────────────────────────
 
