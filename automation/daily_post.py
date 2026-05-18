@@ -371,17 +371,21 @@ def get_toolset():
     return _toolset
 
 def run_composio_tool_safe(slug, params, account=None):
+    import traceback
     try:
         ts = get_toolset()
         kwargs = {"action": slug, "params": params}
         if account:
             kwargs["connected_account_id"] = account
+        print(f"  [composio] calling {slug} with params={list(params.keys())}")
         result = ts.execute_action(**kwargs)
+        print(f"  [composio] raw result type={type(result).__name__} keys={list(result.keys()) if isinstance(result, dict) else 'n/a'}")
         if isinstance(result, dict):
             if result.get("successfull") is False or result.get("error"):
                 return None, result.get("error", "unknown error")
         return result, None
     except Exception as e:
+        print(f"  [composio] EXCEPTION: {traceback.format_exc()}")
         return None, str(e)
 
 # ─── PEXELS HELPER ───────────────────────────────────────────────────────────
