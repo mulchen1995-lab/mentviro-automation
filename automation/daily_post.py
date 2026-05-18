@@ -7,7 +7,7 @@ Runs daily via GitHub Actions cron at 18:00 CET
 import os, sys, json, io, time, random, requests, base64
 from datetime import date, datetime
 from PIL import Image, ImageDraw, ImageFont
-from composio_openai import ComposioToolSet, Action
+from composio_openai import ComposioToolSet
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 PLAN_FILE  = os.path.join(os.path.dirname(__file__), "content_plan.json")
