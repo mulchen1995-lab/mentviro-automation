@@ -611,6 +611,7 @@ def run_reel(post, plan):
     if not video_url:
         raise RuntimeError("No Pexels video found for reel")
 
+    print(f"  Video URL: {video_url}")
     print("  Posting reel...")
     result, err = run_composio_tool_safe(
         "INSTAGRAM_POST_IG_USER_MEDIA",
@@ -618,6 +619,7 @@ def run_reel(post, plan):
          "media_type": "REELS", "caption": post["caption"], "share_to_feed": True},
         account=cfg["composio_account"],
     )
+    print(f"  Reel result: {result!r}")
     if err:
         raise RuntimeError(f"Reel container failed: {err}")
     container_id = (result.get("data") or result).get("id")
