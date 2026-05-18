@@ -601,7 +601,7 @@ def run_reel(post, plan):
         {"query": post.get("pexels_video_query", "cinematic dark city night"), "per_page": 3},
         account=cfg["pexels_account"],
     )
-       video_url = None
+    video_url = None
     if not err and result:
         videos = (result.get("data") or result).get("videos", [])
         for v in videos:
@@ -637,6 +637,7 @@ def run_reel(post, plan):
     media_id = (result.get("data") or result).get("id")
     print(f"  Reel live! ID: {media_id}")
     return media_id
+
 
 # ─── STORY WORKFLOW ──────────────────────────────────────────────────────────
 
