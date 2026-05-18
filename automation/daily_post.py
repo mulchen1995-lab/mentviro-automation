@@ -364,7 +364,7 @@ def run_composio_tool_safe(slug, params, account=None):
         if account:
             payload["connectedAccountId"] = account
         r = requests.post(
-            f"https://backend.composio.dev/api/v1/actions/{slug}/execute",
+            f"https://backend.composio.dev/api/v3/actions/{slug}/execute",
             headers={"x-api-key": api_key, "Content-Type": "application/json"},
             json=payload,
             timeout=60,
