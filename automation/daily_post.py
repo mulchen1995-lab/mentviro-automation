@@ -601,12 +601,12 @@ def run_reel(post, plan):
         {"query": post.get("pexels_video_query", "cinematic dark city night"), "per_page": 3},
         account=cfg["pexels_account"],
     )
-    video_url = None
+       video_url = None
     if not err and result:
         videos = (result.get("data") or result).get("videos", [])
         for v in videos:
             for vf in v.get("video_files", []):
-                         if "mp4" in vf.get("file_type", "") or vf.get("link", "").endswith(".mp4"):
+                if "mp4" in vf.get("file_type", "") or vf.get("link", "").endswith(".mp4"):
                     video_url = vf["link"]
                     break
             if video_url:
