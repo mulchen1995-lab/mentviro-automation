@@ -357,23 +357,29 @@ def dark_overlay(base_rgb, strength=195):
 
 # ─── COMPOSIO WRAPPER ────────────────────────────────────────────────────────
 
+from composio import ComposioToolSet as _ComposioToolSet
+
+_toolset = None
+
+def get_toolset():
+    global _toolset
+    if _toolset is None:
+        api_key = os.environ.get("COMPOSIO_API_KEY")
+        if not api_key:
+            raise RuntimeError("COMPOSIO_API_KEY not set")
+        _toolset = _ComposioToolSet(api_key=api_key)
+    return _toolset
+
 def run_composio_tool_safe(slug, params, account=None):
-    api_key = os.environ.get("COMPOSIO_API_KEY")
     try:
-        payload = {"input": params}
+        ts = get_toolset()
+        kwargs = {"action": slug, "params": params}
         if account:
-            payload["connectedAccountId"] = account
-        r = requests.post(
-            f"https://backend.composio.dev/api/v3/actions/{slug}/execute",
-            headers={"x-api-key": api_key, "Content-Type": "application/json"},
-            json=payload,
-            timeout=60,
-        )
-        if r.status_code != 200:
-            return None, f"HTTP {r.status_code}: {r.text[:200]}"
-        result = r.json()
-        if not result.get("successfull", True) or result.get("error"):
-            return None, result.get("error", "unknown error")
+            kwargs["connected_account_id"] = account
+        result = ts.execute_action(**kwargs)
+        if isinstance(result, dict):
+            if result.get("successfull") is False or result.get("error"):
+                return None, result.get("error", "unknown error")
         return result, None
     except Exception as e:
         return None, str(e)
