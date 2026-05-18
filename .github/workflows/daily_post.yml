@@ -2,7 +2,7 @@ name: mentviro Daily Instagram Post
 
 on:
   schedule:
-    - cron: '0 16 * * *'   # 18:00 Uhr Berlin (CEST = UTC+2)
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -24,9 +24,10 @@ jobs:
 
       - name: Run daily post
         env:
-          COMPOSIO_API_KEY:   ${{ secrets.COMPOSIO_API_KEY }}
-          MENTVIRO_LOGO_URL:  ${{ secrets.MENTVIRO_LOGO_URL }}
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+          MENTVIRO_LOGO_URL: ${{ secrets.MENTVIRO_LOGO_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python automation/daily_post.py
 
       - name: Commit updated plan
