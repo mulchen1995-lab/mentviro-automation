@@ -606,7 +606,7 @@ def run_reel(post, plan):
         videos = (result.get("data") or result).get("videos", [])
         for v in videos:
             for vf in v.get("video_files", []):
-                if vf.get("quality") in ("hd", "sd") and "mp4" in vf.get("file_type", ""):
+                         if "mp4" in vf.get("file_type", "") or vf.get("link", "").endswith(".mp4"):
                     video_url = vf["link"]
                     break
             if video_url:
