@@ -372,7 +372,8 @@ def get_toolset():
 def run_composio_tool_safe(slug, params, account=None):
     try:
         ts = get_toolset()
-        kwargs = {"action": slug, "params": params}
+        from composio import Action as ComposioAction
+kwargs = {"action": ComposioAction(slug), "params": params}
         if account:
             kwargs["connected_account_id"] = account
         result = ts.execute_action(**kwargs)
