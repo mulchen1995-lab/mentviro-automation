@@ -8,6 +8,7 @@ import os, sys, json, io, time, random, requests, base64
 from datetime import date, datetime
 from PIL import Image, ImageDraw, ImageFont
 from composio_openai import ComposioToolSet
+from composio import Action
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 PLAN_FILE  = os.path.join(os.path.dirname(__file__), "content_plan.json")
@@ -372,8 +373,7 @@ def get_toolset():
 def run_composio_tool_safe(slug, params, account=None):
     try:
         ts = get_toolset()
-        from composio import Action as ComposioAction
-kwargs = {"action": ComposioAction(slug), "params": params}
+        kwargs = {"action": getattr(Action, slug), "params": params}
         if account:
             kwargs["connected_account_id"] = account
         result = ts.execute_action(**kwargs)
