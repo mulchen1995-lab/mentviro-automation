@@ -14,7 +14,6 @@ PLAN_FILE  = os.path.join(os.path.dirname(__file__), "content_plan.json")
 LOGO_FILE  = os.path.join(os.path.dirname(__file__), "assets", "mentviro_logo.png")
 LOGO_URL   = os.getenv("MENTVIRO_LOGO_URL", "")
 
-# Embedded MENTVIRO logo — transparent PNG (151×220 px), black bg removed
 _LOGO_B64 = (
     "iVBORw0KGgoAAAANSUhEUgAAAJcAAADcCAYAAAB9ADPWAAAYMElEQVR42u2de3RcVb3Hv7+9z5nJ"
     "TGaSmWmatpRAW95JENHax/XRglBQeWtSZIleKy7XXVx1KV7RCyVNZbF4+oLKVde9gorg5GoVsdxa"
@@ -128,8 +127,8 @@ _LOGO_B64 = (
     "giAIgiAIgiAIgiAII8z/AyfoDF/A6cxJAAAAAElFTkSuQmCC"
 )
 
-W, H   = 1080, 1350   # carousel portrait
-SW, SH = 1080, 1920   # story
+W, H   = 1080, 1350
+SW, SH = 1080, 1920
 
 # ─── LOAD PLAN ───────────────────────────────────────────────────────────────
 
@@ -152,7 +151,6 @@ def get_todays_post(plan):
     return None
 
 def check_and_refill_content(plan):
-    """Auto-generate 3 new posts via Gemini API (free) when < 2 pending remain."""
     pending = [p for p in plan["posts"] if p["status"] == "pending"]
     if len(pending) >= 2:
         return
@@ -267,7 +265,6 @@ def get_logo_asset(size=90):
     if _logo_cache and _logo_cache[0] == size:
         return _logo_cache[1]
 
-    # 1. Try local file (committed to repo)
     if os.path.exists(LOGO_FILE):
         try:
             logo = Image.open(LOGO_FILE).convert("RGBA")
@@ -277,7 +274,6 @@ def get_logo_asset(size=90):
         except Exception:
             pass
 
-    # 2. Embedded logo (always works, no network needed)
     try:
         logo = Image.open(io.BytesIO(base64.b64decode(_LOGO_B64))).convert("RGBA")
         logo.thumbnail((size, size), Image.LANCZOS)
@@ -286,7 +282,6 @@ def get_logo_asset(size=90):
     except Exception:
         pass
 
-    # 3. Try URL from env var
     if LOGO_URL:
         try:
             r = requests.get(LOGO_URL, timeout=10)
@@ -297,7 +292,6 @@ def get_logo_asset(size=90):
         except Exception:
             pass
 
-    # 4. PIL-drawn fallback
     sym = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(sym)
     s, col = size, (192, 192, 192, 140)
@@ -391,7 +385,6 @@ def run_composio_tool_safe(slug, params, account=None):
 # ─── PEXELS HELPER ───────────────────────────────────────────────────────────
 
 def pexels_portrait(query, account, target_w=W, target_h=H):
-    """Fetch a cinematic Pexels image via Composio, resize to target dimensions."""
     result, err = run_composio_tool_safe(
         "PEXELS_SEARCH_PHOTOS",
         {"query": query, "orientation": "portrait", "per_page": 5, "size": "large"},
@@ -403,7 +396,6 @@ def pexels_portrait(query, account, target_w=W, target_h=H):
     photos = (result.get("data") or result).get("photos", [])
     if not photos:
         return None
-    # Pick randomly from top results for visual variety
     photo = random.choice(photos[:min(3, len(photos))])
     url = photo["src"].get("portrait") or photo["src"].get("large2x") or photo["src"].get("large")
     try:
@@ -424,10 +416,29 @@ def pexels_portrait(query, account, target_w=W, target_h=H):
         print(f"  ⚠ Image download failed ({e})")
         return None
 
+def pexels_video(query):
+    pexels_key = os.environ.get("PEXELS_API_KEY", "")
+    if not pexels_key:
+        print("  ⚠ PEXELS_API_KEY not set")
+        return None
+    try:
+        r = requests.get(
+            "https://api.pexels.com/videos/search",
+            headers={"Authorization": pexels_key},
+            params={"query": query, "per_page": 5, "orientation": "portrait"},
+            timeout=30,
+        )
+        for v in r.json().get("videos", []):
+            for vf in v.get("video_files", []):
+                if "mp4" in vf.get("file_type", ""):
+                    return vf["link"]
+    except Exception as e:
+        print(f"  ⚠ Pexels video error: {e}")
+    return None
+
 # ─── CAROUSEL BUILDER ────────────────────────────────────────────────────────
 
 def build_carousel_slide(slide, bg_img=None):
-    """Render one carousel slide → JPEG bytes. bg_img is an RGB PIL Image or None."""
     is_cover = slide.get("is_cover", False)
     is_bw    = is_cover
 
@@ -441,7 +452,6 @@ def build_carousel_slide(slide, bg_img=None):
 
     draw_base_frame(img, is_bw=is_bw, slide_num=slide.get("num"), badge=slide.get("badge"))
     d = ImageDraw.Draw(img)
-    ACC  = COLORS["white"] if is_bw else COLORS["silver"]
     BODY = (175, 175, 175)
 
     content_top = 165 + (30 if slide.get("badge") else 0)
@@ -471,7 +481,6 @@ def build_carousel_slide(slide, bg_img=None):
 # ─── STORY BUILDER ───────────────────────────────────────────────────────────
 
 def build_story(post, pexels_account):
-    """Render story slide (1080x1920)."""
     query = (post.get("pexels_queries") or ["dark cityscape night cinematic"])[0]
     bg = pexels_portrait(query, pexels_account, target_w=SW, target_h=SH)
     if bg is None:
@@ -512,7 +521,6 @@ def build_story(post, pexels_account):
 # ─── UPLOAD HELPER ───────────────────────────────────────────────────────────
 
 def upload_image(img_bytes, filename):
-    """Upload to tmpfiles.org and return clean public URL."""
     for attempt in range(3):
         try:
             r = requests.post(
@@ -595,26 +603,8 @@ def run_reel(post, plan):
         audio_url = file_data.get("s3url") or file_data.get("url")
     print(f"  {'Audio ready' if audio_url else 'No audio - posting without voiceover'}")
 
-        print("  Searching Pexels video...")
-    video_url = None
-    try:
-        pexels_key = os.environ.get("PEXELS_API_KEY", "")
-        r = requests.get(
-            "https://api.pexels.com/videos/search",
-            headers={"Authorization": pexels_key},
-            params={"query": post.get("pexels_video_query", "cinematic dark city night"), "per_page": 5, "orientation": "portrait"},
-            timeout=30,
-        )
-        for v in r.json().get("videos", []):
-            for vf in v.get("video_files", []):
-                if "mp4" in vf.get("file_type", ""):
-                    video_url = vf["link"]
-                    break
-            if video_url:
-                break
-    except Exception as e:
-        print(f"  ⚠ Pexels error: {e}")
-
+    print("  Searching Pexels video...")
+    video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
 
     if not video_url:
         raise RuntimeError("No Pexels video found for reel")
@@ -641,7 +631,6 @@ def run_reel(post, plan):
     media_id = (result.get("data") or result).get("id")
     print(f"  Reel live! ID: {media_id}")
     return media_id
-
 
 # ─── STORY WORKFLOW ──────────────────────────────────────────────────────────
 
@@ -684,7 +673,7 @@ def main():
     init_colors(plan)
 
     check_and_refill_content(plan)
-    plan = load_plan()  # reload after potential auto-generation
+    plan = load_plan()
 
     post = get_todays_post(plan)
     if not post:
