@@ -7,7 +7,6 @@ Runs daily via GitHub Actions cron at 18:00 CET
 import os, sys, json, io, time, random, requests, base64
 from datetime import date, datetime
 from PIL import Image, ImageDraw, ImageFont
-from composio_openai import ComposioToolSet
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 PLAN_FILE  = os.path.join(os.path.dirname(__file__), "content_plan.json")
@@ -358,25 +357,22 @@ def dark_overlay(base_rgb, strength=195):
 
 # ─── COMPOSIO WRAPPER ────────────────────────────────────────────────────────
 
-_toolset = None
-
-def get_toolset():
-    global _toolset
-    if _toolset is None:
-        api_key = os.environ.get("COMPOSIO_API_KEY")
-        if not api_key:
-            raise RuntimeError("COMPOSIO_API_KEY env var not set")
-        _toolset = ComposioToolSet(api_key=api_key)
-    return _toolset
-
 def run_composio_tool_safe(slug, params, account=None):
+    api_key = os.environ.get("COMPOSIO_API_KEY")
     try:
-        ts = get_toolset()
-        kwargs = {"action": slug, "params": params}
+        payload = {"input": params}
         if account:
-            kwargs["connected_account_id"] = account
-        result = ts.execute_action(**kwargs)
-        if result.get("successfull") is False or result.get("error"):
+            payload["connectedAccountId"] = account
+        r = requests.post(
+            f"https://backend.composio.dev/api/v1/actions/{slug}/execute",
+            headers={"x-api-key": api_key, "Content-Type": "application/json"},
+            json=payload,
+            timeout=60,
+        )
+        if r.status_code != 200:
+            return None, f"HTTP {r.status_code}: {r.text[:200]}"
+        result = r.json()
+        if not result.get("successfull", True) or result.get("error"):
             return None, result.get("error", "unknown error")
         return result, None
     except Exception as e:
