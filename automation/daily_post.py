@@ -680,10 +680,34 @@ def run_story(post, plan):
 
 # ─── MAIN ────────────────────────────────────────────────────────────────────
 
+def composio_preflight():
+    """Check Composio API connectivity and list connected accounts."""
+    api_key = os.environ.get("COMPOSIO_API_KEY", "")
+    if not api_key:
+        print("  COMPOSIO_API_KEY not set!")
+        return
+    headers = {"x-api-key": api_key}
+    try:
+        r = requests.get(
+            "https://backend.composio.dev/api/v1/connectedAccounts?pageSize=20",
+            headers=headers, timeout=15
+        )
+        print(f"  Composio accounts API: {r.status_code}")
+        if r.status_code == 200:
+            items = r.json().get("items", [])
+            for a in items:
+                print(f"    {a.get('appUniqueId','?')} | id={a.get('id','?')} | status={a.get('status','?')}")
+        else:
+            print(f"  Response: {r.text[:300]}")
+    except Exception as e:
+        print(f"  Preflight error: {e}")
+
 def main():
     print(f"\n{'='*55}")
     print(f"  mentviro Auto-Post --- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"{'='*55}\n")
+    print("Composio preflight:")
+    composio_preflight()
 
     plan = load_plan()
     init_colors(plan)
