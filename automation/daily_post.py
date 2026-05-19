@@ -2,10 +2,12 @@
 """
 mentviro Daily Instagram Automation
 Runs daily via GitHub Actions cron at 18:00 CET
+Posts carousels, reels and stories to @mentviro via instagrapi.
 """
 
-import os, sys, json, io, time, random, requests, base64
+import os, sys, json, io, time, random, requests, base64, tempfile
 from datetime import date, datetime
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
@@ -13,118 +15,8 @@ PLAN_FILE  = os.path.join(os.path.dirname(__file__), "content_plan.json")
 LOGO_FILE  = os.path.join(os.path.dirname(__file__), "assets", "mentviro_logo.png")
 LOGO_URL   = os.getenv("MENTVIRO_LOGO_URL", "")
 
-_LOGO_B64 = (
-    "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"
-)
+# Logo is loaded from LOGO_FILE path or LOGO_URL env var; symbol drawn as fallback
+_LOGO_B64 = ""
 
 W, H   = 1080, 1350
 SW, SH = 1080, 1920
@@ -355,112 +247,9 @@ def dark_overlay(base_rgb, strength=195):
         od.line([(0, y), (W, y)], fill=(0, 0, 0, a))
     return Image.alpha_composite(base_rgb.convert("RGBA"), ov)
 
-# ─── COMPOSIO WRAPPER ────────────────────────────────────────────────────────
+# ─── PEXELS HELPERS ──────────────────────────────────────────────────────────
 
-def _patch_composio():
-    """Monkey-patch composio to skip broken cache/validation calls (HTTP 500 on backend)."""
-    try:
-        import composio.client.utils as _cu
-        _cu.check_cache_refresh = lambda *a, **kw: None
-    except Exception:
-        pass
-    try:
-        import composio.client as _cc
-        # Skip validate_api_key which hits a broken endpoint → HTTP 500
-        _cc.Composio.validate_api_key = lambda self, key, *a, **kw: key
-    except Exception:
-        pass
-    try:
-        import composio.tools.toolset as _ts
-        # Also skip _validate_connection_ids
-        if hasattr(_ts.ComposioToolSet, '_validate_connection_ids'):
-            _ts.ComposioToolSet._validate_connection_ids = lambda self, *a, **kw: []
-    except Exception:
-        pass
-    # Patch Action.load to create a stub for any unrecognised action slug.
-    # Without this, execute_action raises EnumStringNotFound because update_apps
-    # (which populates the cache) returns HTTP 500 on the Composio backend.
-    try:
-        from composio.client.enums.action import Action as _Action
-        _orig_action_load = _Action.load
-
-        def _stub_action_load(self):
-            try:
-                return _orig_action_load(self)
-            except Exception:
-                slug = self.slug
-                app_name = slug.split('_')[0].lower()
-                class _Stub:
-                    name = slug
-                    app = app_name
-                    version = None
-                    available_version = []
-                    no_auth = False
-                    is_local = False
-                    is_runtime = False   # True → toolset tries action_registry["runtime"] → KeyError
-                    tags = []
-                    path = None
-                    replaced_by = None
-                    shell = False
-                stub = _Stub()
-                self._data = stub
-                return stub
-
-        _Action.load = _stub_action_load
-    except Exception as _e:
-        print(f"  [patch] Action.load stub failed: {_e}")
-
-    # Patch substitute_file_uploads/downloads to no-ops.
-    # Without this, execute_action calls _get_single_action_schema which tries to
-    # fetch the action schema from Composio backend → "Failed to fetch apps" (HTTP 500).
-    # We only pass URL strings (never file objects) so skipping this is safe.
-    try:
-        import composio.tools.toolset as _ts2
-        if hasattr(_ts2.ComposioToolSet, 'substitute_file_uploads'):
-            _ts2.ComposioToolSet.substitute_file_uploads = lambda self, action, request: request
-        if hasattr(_ts2.ComposioToolSet, 'substitute_file_downloads'):
-            _ts2.ComposioToolSet.substitute_file_downloads = lambda self, action, resp: resp
-        # toolset.py may have imported check_cache_refresh before our utils patch → patch again
-        if hasattr(_ts2, 'check_cache_refresh'):
-            _ts2.check_cache_refresh = lambda *a, **kw: None
-    except Exception as _e:
-        print(f"  [patch] substitute_file patch failed: {_e}")
-
-_patch_composio()
-
-_toolset = None
-
-def get_toolset():
-    global _toolset
-    if _toolset is None:
-        api_key = os.environ.get("COMPOSIO_API_KEY")
-        if not api_key:
-            raise RuntimeError("COMPOSIO_API_KEY not set")
-        from composio import ComposioToolSet as _TS
-        _toolset = _TS(api_key=api_key)
-    return _toolset
-
-def run_composio_tool_safe(slug, params, account=None):
-    import traceback
-    try:
-        ts = get_toolset()
-        kwargs = {"action": slug, "params": params}
-        if account:
-            kwargs["connected_account_id"] = account
-        result = ts.execute_action(**kwargs)
-        print(f"  [composio] {slug} result keys={list(result.keys()) if isinstance(result, dict) else type(result).__name__}")
-        if isinstance(result, dict):
-            if result.get("successfull") is False or result.get("error"):
-                return None, result.get("error", "unknown error")
-        return result, None
-    except Exception as e:
-        print(f"  [composio] {slug} EXCEPTION: {traceback.format_exc()[-500:]}")
-        return None, str(e)
-
-# ─── PEXELS HELPER ───────────────────────────────────────────────────────────
-
-def pexels_portrait(query, account=None, target_w=W, target_h=H):
-    """Direct Pexels Photos API — no Composio SDK needed."""
+def pexels_portrait(query, target_w=W, target_h=H):
     pexels_key = os.environ.get("PEXELS_API_KEY", "")
     if not pexels_key:
         print(f"  ⚠ PEXELS_API_KEY not set")
@@ -562,9 +351,9 @@ def build_carousel_slide(slide, bg_img=None):
 
 # ─── STORY BUILDER ───────────────────────────────────────────────────────────
 
-def build_story(post, pexels_account):
+def build_story(post):
     query = (post.get("pexels_queries") or ["dark cityscape night cinematic"])[0]
-    bg = pexels_portrait(query, pexels_account, target_w=SW, target_h=SH)
+    bg = pexels_portrait(query, target_w=SW, target_h=SH)
     if bg is None:
         bg = Image.new("RGB", (SW, SH), (0, 0, 0))
 
@@ -600,81 +389,90 @@ def build_story(post, pexels_account):
     buf.seek(0)
     return buf.read()
 
-# ─── UPLOAD HELPER ───────────────────────────────────────────────────────────
+# ─── INSTAGRAM CLIENT ────────────────────────────────────────────────────────
 
-def upload_image(img_bytes, filename):
-    for attempt in range(3):
+_ig_client = None
+
+def get_ig_client():
+    global _ig_client
+    if _ig_client is not None:
+        return _ig_client
+
+    from instagrapi import Client
+
+    username = os.environ.get("IG_USERNAME", "mentviro")
+    password = os.environ.get("IG_PASSWORD")
+    if not password:
+        raise RuntimeError("IG_PASSWORD not set")
+
+    cl = Client()
+    cl.delay_range = [1, 3]
+
+    # Try session-based login first (avoids challenge on repeated runs)
+    session_json = os.environ.get("IG_SESSION", "")
+    if session_json:
         try:
-            r = requests.post(
-                "https://tmpfiles.org/api/v1/upload",
-                files={"file": (filename, io.BytesIO(img_bytes), "image/jpeg")},
-                timeout=60,
-            )
-            if r.status_code == 200:
-                url = r.json().get("data", {}).get("url", "")
-                if "tmpfiles.org/" in url and "/dl/" not in url:
-                    url = url.replace("tmpfiles.org/", "tmpfiles.org/dl/")
-                return url
+            import json as _json
+            settings = _json.loads(session_json)
+            cl.load_settings(settings)
+            cl.login(username, password)
+            print("  Instagram: session login OK")
+            _ig_client = cl
+            return cl
         except Exception as e:
-            print(f"  Upload attempt {attempt+1} failed: {e}")
-            time.sleep(2)
-    raise RuntimeError(f"Failed to upload {filename}")
+            print(f"  Session login failed ({e}), trying password login...")
+            cl = Client()
+            cl.delay_range = [1, 3]
+
+    cl.login(username, password)
+    print("  Instagram: password login OK")
+    _ig_client = cl
+    return cl
 
 # ─── CAROUSEL WORKFLOW ───────────────────────────────────────────────────────
 
 def run_carousel(post, plan):
-    cfg = plan["account"]
     print(f"Building carousel: {post['topic']}")
     slides = post["slides"]
     pexels_queries = post.get("pexels_queries", [])
 
-    slide_urls = []
-    for i, slide in enumerate(slides):
-        print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
-        bg_img = None
-        if not slide.get("is_cover") and pexels_queries:
-            query = pexels_queries[min(i, len(pexels_queries)-1)]
-            bg_img = pexels_portrait(query, cfg["pexels_account"])
-        img_bytes = build_carousel_slide(slide, bg_img)
-        url = upload_image(img_bytes, f"mentviro_d{post['day']}_s{i+1}.jpg")
-        slide_urls.append(url)
-        print("ok")
-        time.sleep(0.5)
+    tmp_paths = []
+    try:
+        for i, slide in enumerate(slides):
+            print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
+            bg_img = None
+            if not slide.get("is_cover") and pexels_queries:
+                query = pexels_queries[min(i, len(pexels_queries)-1)]
+                bg_img = pexels_portrait(query)
+            img_bytes = build_carousel_slide(slide, bg_img)
+            path = f"/tmp/mentviro_d{post['day']}_s{i+1}.jpg"
+            with open(path, "wb") as f:
+                f.write(img_bytes)
+            tmp_paths.append(path)
+            print("ok")
+            time.sleep(0.5)
 
-    print("Creating carousel container...")
-    result, err = run_composio_tool_safe(
-        "INSTAGRAM_CREATE_CAROUSEL_CONTAINER",
-        {"ig_user_id": cfg["ig_user_id"], "child_image_urls": slide_urls, "caption": post["caption"]},
-        account=cfg["composio_account"],
-    )
-    if err:
-        raise RuntimeError(f"Carousel container failed: {err}")
-    creation_id = (result.get("data") or result).get("id")
-    print(f"  Container: {creation_id}")
+        print("Uploading carousel to Instagram...")
+        cl = get_ig_client()
+        media = cl.album_upload(tmp_paths, caption=post["caption"])
+        print(f"  Carousel live! ID: {media.pk}")
+        return str(media.pk)
 
-    time.sleep(5)
-    print("Publishing carousel...")
-    result, err = run_composio_tool_safe(
-        "INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH",
-        {"ig_user_id": cfg["ig_user_id"], "creation_id": creation_id, "max_wait_seconds": 120},
-        account=cfg["composio_account"],
-    )
-    if err:
-        raise RuntimeError(f"Publish failed: {err}")
-    media_id = (result.get("data") or result).get("id")
-    print(f"  Carousel live! ID: {media_id}")
-    return media_id
+    finally:
+        for p in tmp_paths:
+            try:
+                os.unlink(p)
+            except Exception:
+                pass
 
 # ─── REEL WORKFLOW ───────────────────────────────────────────────────────────
 
 def run_reel(post, plan):
-    cfg = plan["account"]
     print(f"Building reel: {post['topic']}")
 
     script_text = " ".join(post.get("script", [post.get("hook", "")]))
 
-    print("  Generating voiceover (ElevenLabs direct API)...")
-    audio_url = None
+    print("  Generating voiceover (ElevenLabs)...")
     try:
         el_key = os.environ.get(
             "ELEVENLABS_API_KEY",
@@ -688,104 +486,66 @@ def run_reel(post, plan):
             timeout=60,
         )
         if el_r.status_code == 200 and len(el_r.content) > 1000:
-            audio_url = "generated"
+            print("  Audio generated (not mixed into video)")
         else:
             print(f"  ⚠ ElevenLabs {el_r.status_code}: {el_r.text[:200]}")
-    except Exception as _el_e:
-        print(f"  ⚠ ElevenLabs error: {_el_e}")
-    print(f"  {'Audio generated' if audio_url else 'No audio — posting without voiceover'}")
+    except Exception as e:
+        print(f"  ⚠ ElevenLabs error: {e}")
 
     print("  Searching Pexels video...")
     video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
-
     if not video_url:
         raise RuntimeError("No Pexels video found for reel")
 
-    print(f"  Video URL: {video_url}")
-    print("  Posting reel...")
-    result, err = run_composio_tool_safe(
-        "INSTAGRAM_POST_IG_USER_MEDIA",
-        {"ig_user_id": cfg["ig_user_id"], "video_url": video_url,
-         "media_type": "REELS", "caption": post["caption"], "share_to_feed": True},
-        account=cfg["composio_account"],
-    )
-    print(f"  Reel result: {result!r}")
-    if err:
-        raise RuntimeError(f"Reel container failed: {err}")
-    container_id = (result.get("data") or result).get("id")
-    time.sleep(10)
+    print(f"  Downloading video...")
+    video_path = f"/tmp/mentviro_reel_d{post['day']}.mp4"
+    r = requests.get(video_url, timeout=120, stream=True)
+    with open(video_path, "wb") as f:
+        for chunk in r.iter_content(chunk_size=65536):
+            f.write(chunk)
+    size_mb = os.path.getsize(video_path) / 1024 / 1024
+    print(f"  Video: {size_mb:.1f} MB")
 
-    result, err = run_composio_tool_safe(
-        "INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH",
-        {"ig_user_id": cfg["ig_user_id"], "creation_id": container_id, "max_wait_seconds": 180},
-        account=cfg["composio_account"],
-    )
-    if err:
-        raise RuntimeError(f"Reel publish failed: {err}")
-    media_id = (result.get("data") or result).get("id")
-    print(f"  Reel live! ID: {media_id}")
-    return media_id
+    try:
+        print("  Uploading reel to Instagram...")
+        cl = get_ig_client()
+        media = cl.clip_upload(video_path, caption=post["caption"])
+        print(f"  Reel live! ID: {media.pk}")
+        return str(media.pk)
+    finally:
+        try:
+            os.unlink(video_path)
+        except Exception:
+            pass
 
 # ─── STORY WORKFLOW ──────────────────────────────────────────────────────────
 
 def run_story(post, plan):
-    cfg = plan["account"]
     print("Building story...")
-    story_bytes = build_story(post, cfg["pexels_account"])
-    story_url = upload_image(story_bytes, f"mentviro_story_d{post['day']}.jpg")
-    print(f"  Story uploaded")
+    story_bytes = build_story(post)
 
-    result, err = run_composio_tool_safe(
-        "INSTAGRAM_POST_IG_USER_MEDIA",
-        {"ig_user_id": cfg["ig_user_id"], "image_url": story_url, "media_type": "STORIES"},
-        account=cfg["composio_account"],
-    )
-    if err:
-        raise RuntimeError(f"Story container failed: {err}")
-    container_id = (result.get("data") or result).get("id")
-    time.sleep(3)
+    story_path = f"/tmp/mentviro_story_d{post['day']}.jpg"
+    with open(story_path, "wb") as f:
+        f.write(story_bytes)
 
-    result, err = run_composio_tool_safe(
-        "INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH",
-        {"ig_user_id": cfg["ig_user_id"], "creation_id": container_id, "max_wait_seconds": 60},
-        account=cfg["composio_account"],
-    )
-    if err:
-        raise RuntimeError(f"Story publish failed: {err}")
-    story_id = (result.get("data") or result).get("id")
-    print(f"  Story live! ID: {story_id}")
-    return story_id
+    try:
+        print("  Uploading story to Instagram...")
+        cl = get_ig_client()
+        media = cl.photo_upload_to_story(story_path)
+        print(f"  Story live! ID: {media.pk}")
+        return str(media.pk)
+    finally:
+        try:
+            os.unlink(story_path)
+        except Exception:
+            pass
 
 # ─── MAIN ────────────────────────────────────────────────────────────────────
-
-def composio_preflight():
-    """Check Composio API connectivity and list connected accounts."""
-    api_key = os.environ.get("COMPOSIO_API_KEY", "")
-    if not api_key:
-        print("  COMPOSIO_API_KEY not set!")
-        return
-    headers = {"x-api-key": api_key}
-    try:
-        r = requests.get(
-            "https://backend.composio.dev/api/v1/connectedAccounts?pageSize=20",
-            headers=headers, timeout=15
-        )
-        print(f"  Composio accounts API: {r.status_code}")
-        if r.status_code == 200:
-            items = r.json().get("items", [])
-            for a in items:
-                print(f"    {a.get('appUniqueId','?')} | id={a.get('id','?')} | status={a.get('status','?')}")
-        else:
-            print(f"  Response: {r.text[:300]}")
-    except Exception as e:
-        print(f"  Preflight error: {e}")
 
 def main():
     print(f"\n{'='*55}")
     print(f"  mentviro Auto-Post --- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"{'='*55}\n")
-    print("Composio preflight:")
-    composio_preflight()
 
     plan = load_plan()
     init_colors(plan)
@@ -821,7 +581,9 @@ def main():
         print(f"{'='*55}\n")
 
     except Exception as e:
+        import traceback
         print(f"\nERROR: {e}")
+        traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
