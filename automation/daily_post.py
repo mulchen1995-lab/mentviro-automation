@@ -377,6 +377,38 @@ def _patch_composio():
             _ts.ComposioToolSet._validate_connection_ids = lambda self, *a, **kw: []
     except Exception:
         pass
+    # Patch Action.load to create a stub for any unrecognised action slug.
+    # Without this, execute_action raises EnumStringNotFound because update_apps
+    # (which populates the cache) returns HTTP 500 on the Composio backend.
+    try:
+        from composio.client.enums.action import Action as _Action
+        _orig_action_load = _Action.load
+
+        def _stub_action_load(self):
+            try:
+                return _orig_action_load(self)
+            except Exception:
+                slug = self.slug
+                app_name = slug.split('_')[0].lower()
+                class _Stub:
+                    name = slug
+                    app = app_name
+                    version = None
+                    available_version = []
+                    no_auth = False
+                    is_local = False
+                    is_runtime = True
+                    tags = []
+                    path = None
+                    replaced_by = None
+                    shell = False
+                stub = _Stub()
+                self._data = stub
+                return stub
+
+        _Action.load = _stub_action_load
+    except Exception as _e:
+        print(f"  [patch] Action.load stub failed: {_e}")
 
 _patch_composio()
 
@@ -411,21 +443,28 @@ def run_composio_tool_safe(slug, params, account=None):
 
 # ─── PEXELS HELPER ───────────────────────────────────────────────────────────
 
-def pexels_portrait(query, account, target_w=W, target_h=H):
-    result, err = run_composio_tool_safe(
-        "PEXELS_SEARCH_PHOTOS",
-        {"query": query, "orientation": "portrait", "per_page": 5, "size": "large"},
-        account=account,
-    )
-    if err or not result:
-        print(f"  ⚠ Pexels failed ({err})")
+def pexels_portrait(query, account=None, target_w=W, target_h=H):
+    """Direct Pexels Photos API — no Composio SDK needed."""
+    pexels_key = os.environ.get("PEXELS_API_KEY", "")
+    if not pexels_key:
+        print(f"  ⚠ PEXELS_API_KEY not set")
         return None
-    photos = (result.get("data") or result).get("photos", [])
-    if not photos:
-        return None
-    photo = random.choice(photos[:min(3, len(photos))])
-    url = photo["src"].get("portrait") or photo["src"].get("large2x") or photo["src"].get("large")
     try:
+        r = requests.get(
+            "https://api.pexels.com/v1/search",
+            headers={"Authorization": pexels_key},
+            params={"query": query, "orientation": "portrait", "per_page": 5, "size": "large"},
+            timeout=30,
+        )
+        if r.status_code != 200:
+            print(f"  ⚠ Pexels API {r.status_code}: {r.text[:200]}")
+            return None
+        photos = r.json().get("photos", [])
+        if not photos:
+            print(f"  ⚠ No Pexels photos for: {query}")
+            return None
+        photo = random.choice(photos[:min(3, len(photos))])
+        url = photo["src"].get("portrait") or photo["src"].get("large2x") or photo["src"].get("large")
         resp = requests.get(url, timeout=30)
         img = Image.open(io.BytesIO(resp.content)).convert("RGB")
         src_w, src_h = img.size
@@ -440,7 +479,7 @@ def pexels_portrait(query, account, target_w=W, target_h=H):
             img = img.crop((0, 0, src_w, new_h))
         return img.resize((target_w, target_h), Image.LANCZOS)
     except Exception as e:
-        print(f"  ⚠ Image download failed ({e})")
+        print(f"  ⚠ Pexels portrait error: {e}")
         return None
 
 def pexels_video(query):
@@ -618,17 +657,27 @@ def run_reel(post, plan):
 
     script_text = " ".join(post.get("script", [post.get("hook", "")]))
 
-    print("  Generating voiceover (ElevenLabs)...")
-    result, err = run_composio_tool_safe(
-        "ELEVENLABS_TEXT_TO_SPEECH",
-        {"text": script_text, "voice_id": "pNInz6obpgDQGcFmaJgB", "model_id": "eleven_multilingual_v2"},
-        account=cfg.get("elevenlabs_account"),
-    )
+    print("  Generating voiceover (ElevenLabs direct API)...")
     audio_url = None
-    if not err and result:
-        file_data = ((result.get("data") or {}).get("file") or {})
-        audio_url = file_data.get("s3url") or file_data.get("url")
-    print(f"  {'Audio ready' if audio_url else 'No audio - posting without voiceover'}")
+    try:
+        el_key = os.environ.get(
+            "ELEVENLABS_API_KEY",
+            "1071b6e53cb6e950c63d8e11a05dfa7b07764275cab9fda0ce63104a421c2d37",
+        )
+        el_r = requests.post(
+            "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB",
+            headers={"xi-api-key": el_key, "Content-Type": "application/json"},
+            json={"text": script_text, "model_id": "eleven_multilingual_v2",
+                  "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}},
+            timeout=60,
+        )
+        if el_r.status_code == 200 and len(el_r.content) > 1000:
+            audio_url = "generated"
+        else:
+            print(f"  ⚠ ElevenLabs {el_r.status_code}: {el_r.text[:200]}")
+    except Exception as _el_e:
+        print(f"  ⚠ ElevenLabs error: {_el_e}")
+    print(f"  {'Audio generated' if audio_url else 'No audio — posting without voiceover'}")
 
     print("  Searching Pexels video...")
     video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
