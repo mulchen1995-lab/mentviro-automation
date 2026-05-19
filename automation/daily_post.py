@@ -397,7 +397,7 @@ def _patch_composio():
                     available_version = []
                     no_auth = False
                     is_local = False
-                    is_runtime = True
+                    is_runtime = False   # True → toolset tries action_registry["runtime"] → KeyError
                     tags = []
                     path = None
                     replaced_by = None
