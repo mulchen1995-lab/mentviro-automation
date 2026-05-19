@@ -26,6 +26,7 @@ jobs:
         env:
           IG_USERNAME: mentviro
           IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+          IG_SESSION: ${{ secrets.IG_SESSION }}
           MENTVIRO_LOGO_URL: ${{ secrets.MENTVIRO_LOGO_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}

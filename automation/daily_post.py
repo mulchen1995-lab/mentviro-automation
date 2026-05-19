@@ -405,25 +405,24 @@ def get_ig_client():
     if not password:
         raise RuntimeError("IG_PASSWORD not set")
 
-    cl = Client()
-    cl.delay_range = [1, 3]
-
-    # Try session-based login first (avoids challenge on repeated runs)
+    # Session reuse: load saved session and verify without hitting login endpoint.
+    # This bypasses Instagram's IP-based login blocks on cloud runners.
     session_json = os.environ.get("IG_SESSION", "")
     if session_json:
+        cl = Client()
+        cl.delay_range = [1, 3]
         try:
-            import json as _json
-            settings = _json.loads(session_json)
+            settings = json.loads(session_json)
             cl.load_settings(settings)
-            cl.login(username, password)
-            print("  Instagram: session login OK")
+            cl.get_timeline_feed()  # Verifies session without triggering login check
+            print("  Instagram: session reuse OK")
             _ig_client = cl
             return cl
         except Exception as e:
-            print(f"  Session login failed ({e}), trying password login...")
-            cl = Client()
-            cl.delay_range = [1, 3]
+            print(f"  Session invalid or expired ({e}) — falling back to password login")
 
+    cl = Client()
+    cl.delay_range = [1, 3]
     cl.login(username, password)
     print("  Instagram: password login OK")
     _ig_client = cl
