@@ -367,7 +367,7 @@ def _patch_composio():
     try:
         import composio.client as _cc
         # Skip validate_api_key which hits a broken endpoint → HTTP 500
-        _cc.Composio.validate_api_key = lambda self, key: key
+        _cc.Composio.validate_api_key = lambda self, key, *a, **kw: key
     except Exception:
         pass
     try:
