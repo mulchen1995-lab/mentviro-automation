@@ -410,6 +410,22 @@ def _patch_composio():
     except Exception as _e:
         print(f"  [patch] Action.load stub failed: {_e}")
 
+    # Patch substitute_file_uploads/downloads to no-ops.
+    # Without this, execute_action calls _get_single_action_schema which tries to
+    # fetch the action schema from Composio backend → "Failed to fetch apps" (HTTP 500).
+    # We only pass URL strings (never file objects) so skipping this is safe.
+    try:
+        import composio.tools.toolset as _ts2
+        if hasattr(_ts2.ComposioToolSet, 'substitute_file_uploads'):
+            _ts2.ComposioToolSet.substitute_file_uploads = lambda self, action, request: request
+        if hasattr(_ts2.ComposioToolSet, 'substitute_file_downloads'):
+            _ts2.ComposioToolSet.substitute_file_downloads = lambda self, action, resp: resp
+        # toolset.py may have imported check_cache_refresh before our utils patch → patch again
+        if hasattr(_ts2, 'check_cache_refresh'):
+            _ts2.check_cache_refresh = lambda *a, **kw: None
+    except Exception as _e:
+        print(f"  [patch] substitute_file patch failed: {_e}")
+
 _patch_composio()
 
 _toolset = None
