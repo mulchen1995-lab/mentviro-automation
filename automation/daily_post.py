@@ -358,10 +358,23 @@ def dark_overlay(base_rgb, strength=195):
 # ─── COMPOSIO WRAPPER ────────────────────────────────────────────────────────
 
 def _patch_composio():
-    """Monkey-patch composio to skip the broken update_apps cache refresh."""
+    """Monkey-patch composio to skip broken cache/validation calls (HTTP 500 on backend)."""
     try:
         import composio.client.utils as _cu
         _cu.check_cache_refresh = lambda *a, **kw: None
+    except Exception:
+        pass
+    try:
+        import composio.client as _cc
+        # Skip validate_api_key which hits a broken endpoint → HTTP 500
+        _cc.Composio.validate_api_key = lambda self, key: key
+    except Exception:
+        pass
+    try:
+        import composio.tools.toolset as _ts
+        # Also skip _validate_connection_ids
+        if hasattr(_ts.ComposioToolSet, '_validate_connection_ids'):
+            _ts.ComposioToolSet._validate_connection_ids = lambda self, *a, **kw: []
     except Exception:
         pass
 
