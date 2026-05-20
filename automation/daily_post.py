@@ -508,17 +508,34 @@ def run_reel(post, plan):
     size_mb = os.path.getsize(video_path) / 1024 / 1024
     print(f"  Video: {size_mb:.1f} MB")
 
+    # Generate thumbnail with ffmpeg (pre-installed on ubuntu-latest) to avoid
+    # the moviepy dependency that instagrapi tries to pull in for thumbnails.
+    thumb_path = video_path + ".jpg"
+    try:
+        import subprocess
+        subprocess.run(
+            ["ffmpeg", "-y", "-i", video_path, "-ss", "0", "-vframes", "1", "-q:v", "2", thumb_path],
+            check=True, capture_output=True
+        )
+        print("  Thumbnail generated via ffmpeg")
+    except Exception as e:
+        print(f"  ⚠ ffmpeg thumbnail failed: {e} — uploading without thumbnail")
+        thumb_path = None
+
     try:
         print("  Uploading reel to Instagram...")
         cl = get_ig_client()
-        media = cl.clip_upload(video_path, caption=post["caption"])
+        media = cl.clip_upload(video_path, caption=post["caption"],
+                               thumbnail=thumb_path if thumb_path else None)
         print(f"  Reel live! ID: {media.pk}")
         return str(media.pk)
     finally:
-        try:
-            os.unlink(video_path)
-        except Exception:
-            pass
+        for p in [video_path, thumb_path]:
+            try:
+                if p:
+                    os.unlink(p)
+            except Exception:
+                pass
 
 # ─── STORY WORKFLOW ──────────────────────────────────────────────────────────
 
