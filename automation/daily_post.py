@@ -469,7 +469,58 @@ def run_carousel(post, plan):
 
 # ─── REEL WORKFLOW ───────────────────────────────────────────────────────────
 
+def _wrap_title(text, max_len=26):
+    """Split a long string into 2-3 shorter title lines for carousel slides."""
+    if len(text) <= max_len:
+        return [text]
+    words = text.split()
+    lines, cur = [], []
+    for w in words:
+        if sum(len(x) + 1 for x in cur) + len(w) > max_len and cur:
+            lines.append(" ".join(cur))
+            cur = [w]
+        else:
+            cur.append(w)
+    if cur:
+        lines.append(" ".join(cur))
+    return lines[:3]
+
+
+def _reel_as_carousel(post, plan):
+    """Fallback: convert reel script lines into a carousel and post it."""
+    print("  Building carousel from reel script as fallback...")
+    script = post.get("script", [post.get("hook", post["topic"])])
+    n = len(script)
+    slides = []
+    slides.append({
+        "badge": None, "num": None, "is_cover": True,
+        "title": _wrap_title(post.get("hook", post["topic"])),
+        "body": ["Lies weiter. →"],
+    })
+    for i, line in enumerate(script):
+        slides.append({
+            "badge": None,
+            "num": f"{i+1} / {n}",
+            "title": _wrap_title(line),
+            "body": [],
+        })
+    slides.append({
+        "badge": "FOLGE UNS", "num": None,
+        "title": ["Tägliches Mindset", "& Money Moves"],
+        "body": ["Folge @mentviro", "für täglich mehr."],
+    })
+    fallback_post = dict(
+        post,
+        type="carousel",
+        slides=slides,
+        pexels_queries=[post.get("pexels_video_query", "dark city cinematic night")],
+    )
+    return run_carousel(fallback_post, plan)
+
+
 def run_reel(post, plan):
+    import subprocess
+
     print(f"Building reel: {post['topic']}")
 
     script_text = " ".join(post.get("script", [post.get("hook", "")]))
@@ -497,42 +548,80 @@ def run_reel(post, plan):
     print("  Searching Pexels video...")
     video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
     if not video_url:
-        raise RuntimeError("No Pexels video found for reel")
+        print("  ⚠ No Pexels video found — falling back to carousel")
+        return _reel_as_carousel(post, plan)
 
-    print(f"  Downloading video...")
-    video_path = f"/tmp/mentviro_reel_d{post['day']}.mp4"
+    print("  Downloading video...")
+    raw_path  = f"/tmp/mentviro_reel_d{post['day']}_raw.mp4"
+    conv_path = f"/tmp/mentviro_reel_d{post['day']}.mp4"
+    thumb_path = conv_path + ".jpg"
+
     r = requests.get(video_url, timeout=120, stream=True)
-    with open(video_path, "wb") as f:
+    with open(raw_path, "wb") as f:
         for chunk in r.iter_content(chunk_size=65536):
             f.write(chunk)
-    size_mb = os.path.getsize(video_path) / 1024 / 1024
-    print(f"  Video: {size_mb:.1f} MB")
+    size_mb = os.path.getsize(raw_path) / 1024 / 1024
+    print(f"  Raw video: {size_mb:.1f} MB")
 
-    # Generate thumbnail with ffmpeg (pre-installed on ubuntu-latest) to avoid
-    # the moviepy dependency that instagrapi tries to pull in for thumbnails.
-    thumb_path = video_path + ".jpg"
+    # Re-encode to H264/AAC 1080×1920, looping short clips
     try:
-        import subprocess
-        subprocess.run(
-            ["ffmpeg", "-y", "-i", video_path, "-ss", "0", "-vframes", "1", "-q:v", "2", thumb_path],
-            check=True, capture_output=True
+        probe = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "csv=p=0", raw_path],
+            capture_output=True, text=True, timeout=30,
         )
-        print("  Thumbnail generated via ffmpeg")
+        duration = float((probe.stdout.strip().split("\n")[0]) or "0")
+        print(f"  Duration: {duration:.1f}s")
+        loop_args = []
+        if duration < 5:
+            loops = max(1, int(20 / max(duration, 0.1)))
+            loop_args = ["-stream_loop", str(loops)]
+            print(f"  Short clip — looping ×{loops}")
+        subprocess.run(
+            ["ffmpeg", "-y"] + loop_args + [
+                "-i", raw_path,
+                "-vf", ("scale=1080:1920:force_original_aspect_ratio=decrease,"
+                         "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1"),
+                "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+                "-c:a", "aac", "-b:a", "128k",
+                "-t", "30",
+                conv_path,
+            ],
+            check=True, capture_output=True, timeout=240,
+        )
+        enc_mb = os.path.getsize(conv_path) / 1024 / 1024
+        print(f"  Re-encoded: {enc_mb:.1f} MB")
+
+        subprocess.run(
+            ["ffmpeg", "-y", "-i", conv_path,
+             "-ss", "0", "-vframes", "1", "-q:v", "2", thumb_path],
+            check=True, capture_output=True, timeout=30,
+        )
+        print("  Thumbnail generated")
+        final_video = conv_path
     except Exception as e:
-        print(f"  ⚠ ffmpeg thumbnail failed: {e} — uploading without thumbnail")
+        print(f"  ⚠ ffmpeg processing failed: {e} — using raw video")
+        final_video = raw_path
         thumb_path = None
 
     try:
         print("  Uploading reel to Instagram...")
         cl = get_ig_client()
-        media = cl.clip_upload(video_path, caption=post["caption"],
-                               thumbnail=thumb_path if thumb_path else None)
+        media = cl.clip_upload(
+            final_video,
+            caption=post["caption"],
+            thumbnail=thumb_path if thumb_path and os.path.exists(thumb_path) else None,
+        )
         print(f"  Reel live! ID: {media.pk}")
         return str(media.pk)
+    except Exception as e:
+        print(f"  ⚠ clip_upload failed ({type(e).__name__}: {e})")
+        print("  → Falling back to carousel")
+        return _reel_as_carousel(post, plan)
     finally:
-        for p in [video_path, thumb_path]:
+        for p in [raw_path, conv_path, thumb_path]:
             try:
-                if p:
+                if p and os.path.exists(p):
                     os.unlink(p)
             except Exception:
                 pass
