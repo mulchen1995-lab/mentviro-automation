@@ -409,22 +409,20 @@ def get_ig_client():
     # This bypasses Instagram's IP-based login blocks on cloud runners.
     session_json = os.environ.get("IG_SESSION", "")
     if session_json:
+        import tempfile
+        # load_settings() expects a file path — write JSON to temp file
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            f.write(session_json)
+            tmp_path = f.name
         cl = Client()
         cl.delay_range = [1, 3]
-        try:
-            import tempfile
-            # load_settings() expects a file path, not a dict — write to temp file
-            with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
-                f.write(session_json)
-                tmp_path = f.name
-            cl.load_settings(tmp_path)
-            os.unlink(tmp_path)
-            cl.get_timeline_feed()  # Verifies session without triggering login check
-            print("  Instagram: session reuse OK")
-            _ig_client = cl
-            return cl
-        except Exception as e:
-            print(f"  Session invalid or expired ({e}) — falling back to password login")
+        cl.load_settings(tmp_path)
+        os.unlink(tmp_path)
+        # Skip verification: any call to accounts/login/ is IP-blocked on CI.
+        # The session is assumed valid; upload calls will surface errors if not.
+        print("  Instagram: session loaded from IG_SESSION")
+        _ig_client = cl
+        return cl
 
     cl = Client()
     cl.delay_range = [1, 3]
