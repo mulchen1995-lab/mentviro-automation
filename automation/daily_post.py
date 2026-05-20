@@ -412,8 +412,13 @@ def get_ig_client():
         cl = Client()
         cl.delay_range = [1, 3]
         try:
-            settings = json.loads(session_json)
-            cl.load_settings(settings)
+            import tempfile
+            # load_settings() expects a file path, not a dict — write to temp file
+            with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+                f.write(session_json)
+                tmp_path = f.name
+            cl.load_settings(tmp_path)
+            os.unlink(tmp_path)
             cl.get_timeline_feed()  # Verifies session without triggering login check
             print("  Instagram: session reuse OK")
             _ig_client = cl
