@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 mentviro Daily Instagram Automation
 Runs daily via GitHub Actions cron at 18:00 CET
@@ -21,7 +21,10 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
-# ─── CONFIG ──────────────────────────────────────────────────────────────────
+# Cross-platform temp directory (works on Linux CI and Windows self-hosted)
+TMPDIR = tempfile.gettempdir()
+
+# â”€â”€â”€ CONFIG â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 PLAN_FILE  = os.path.join(os.path.dirname(__file__), "content_plan.json")
 LOGO_FILE  = os.path.join(os.path.dirname(__file__), "assets", "mentviro_logo.png")
 LOGO_URL   = os.getenv("MENTVIRO_LOGO_URL", "")
@@ -30,7 +33,7 @@ _LOGO_B64  = ""
 W, H   = 1080, 1350   # carousel / single image
 SW, SH = 1080, 1920   # story / reel
 
-# ─── PLAN ────────────────────────────────────────────────────────────────────
+# â”€â”€â”€ PLAN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def load_plan():
     with open(PLAN_FILE) as f:
@@ -50,7 +53,7 @@ def get_todays_post(plan):
             return post
     return None
 
-# ─── TELEGRAM ────────────────────────────────────────────────────────────────
+# â”€â”€â”€ TELEGRAM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def send_telegram(message: str):
     """Send a Telegram notification. Fails silently if not configured."""
@@ -67,7 +70,7 @@ def send_telegram(message: str):
     except Exception:
         pass
 
-# ─── SESSION AGE CHECK ───────────────────────────────────────────────────────
+# â”€â”€â”€ SESSION AGE CHECK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def check_session_age():
     """Warn via Telegram if the IG session is older than 45 days."""
@@ -83,18 +86,18 @@ def check_session_age():
         print(f"  IG session age: {age_days:.0f} days", end="")
         if age_days > 45:
             msg = (
-                f"⚠️ <b>mentviro-bot</b>: IG-Session ist <b>{age_days:.0f} Tage</b> alt!\n"
-                "Bitte <code>regen_ig_session.py</code> ausführen und "
+                f"âš ï¸ <b>mentviro-bot</b>: IG-Session ist <b>{age_days:.0f} Tage</b> alt!\n"
+                "Bitte <code>regen_ig_session.py</code> ausfÃ¼hren und "
                 "das <b>IG_SESSION</b> GitHub-Secret aktualisieren."
             )
             send_telegram(msg)
-            print(" — ⚠ ALERT sent via Telegram")
+            print(" â€” âš  ALERT sent via Telegram")
         else:
-            print(" — OK")
+            print(" â€” OK")
     except Exception as e:
-        print(f"\n  ⚠ Session-age check failed: {e}")
+        print(f"\n  âš  Session-age check failed: {e}")
 
-# ─── FONT HELPERS ────────────────────────────────────────────────────────────
+# â”€â”€â”€ FONT HELPERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def fnt(size, bold=False):
     weight = "Bold" if bold else "Regular"
@@ -105,7 +108,8 @@ def fnt(size, bold=False):
         # DejaVu fallback
         f"/usr/share/fonts/truetype/dejavu/DejaVuSans{'-Bold' if bold else ''}.ttf",
         f"/usr/local/share/fonts/DejaVuSans{'-Bold' if bold else ''}.ttf",
-        # Windows fallback
+        # Windows — Montserrat if installed, Arial fallback
+        f"C:/Windows/Fonts/Montserrat-{weight}.ttf",
         f"C:/Windows/Fonts/{'arialbd' if bold else 'arial'}.ttf",
         # Local assets fallback
         os.path.join(os.path.dirname(__file__), "assets",
@@ -116,7 +120,7 @@ def fnt(size, bold=False):
             return ImageFont.truetype(p, size)
     return ImageFont.load_default()
 
-# ─── LOGO WATERMARK ──────────────────────────────────────────────────────────
+# â”€â”€â”€ LOGO WATERMARK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 _logo_cache = None
 
@@ -172,7 +176,7 @@ def paste_logo(img_rgba, x, y, size=90):
     logo = get_logo_asset(size)
     img_rgba.alpha_composite(logo, (x - size // 2, y - size // 2))
 
-# ─── DESIGN HELPERS ──────────────────────────────────────────────────────────
+# â”€â”€â”€ DESIGN HELPERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 COLORS = None
 
@@ -218,7 +222,7 @@ def dark_overlay(base_rgb, w=W, h=H, strength=195):
         od.line([(0, y), (w, y)], fill=(0, 0, 0, a))
     return Image.alpha_composite(base_rgb.convert("RGBA"), ov)
 
-# ─── PEXELS HELPERS ──────────────────────────────────────────────────────────
+# â”€â”€â”€ PEXELS HELPERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def pexels_portrait(query, target_w=W, target_h=H):
     pexels_key = os.environ.get("PEXELS_API_KEY", "")
@@ -252,7 +256,7 @@ def pexels_portrait(query, target_w=W, target_h=H):
             img   = img.crop((0, 0, src_w, new_h))
         return img.resize((target_w, target_h), Image.LANCZOS)
     except Exception as e:
-        print(f"  ⚠ Pexels portrait error: {e}")
+        print(f"  âš  Pexels portrait error: {e}")
         return None
 
 def pexels_video(query):
@@ -271,10 +275,10 @@ def pexels_video(query):
                 if "mp4" in vf.get("file_type", ""):
                     return vf["link"]
     except Exception as e:
-        print(f"  ⚠ Pexels video error: {e}")
+        print(f"  âš  Pexels video error: {e}")
     return None
 
-# ─── CAROUSEL BUILDER ────────────────────────────────────────────────────────
+# â”€â”€â”€ CAROUSEL BUILDER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     is_cover = slide.get("is_cover", False)
@@ -317,7 +321,7 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     buf.seek(0)
     return buf.read()
 
-# ─── STORY BUILDER ───────────────────────────────────────────────────────────
+# â”€â”€â”€ STORY BUILDER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def build_story(post):
     query = (post.get("pexels_queries") or ["dark cityscape night cinematic"])[0]
@@ -340,7 +344,7 @@ def build_story(post):
 
     paste_logo(story_rgba, SW // 2, SH // 2 - 260, size=200)
 
-    texts = post.get("story_text", ["NEU", post.get("topic", ""), "→ Sieh dir den Post an"])
+    texts = post.get("story_text", ["NEU", post.get("topic", ""), "â†’ Sieh dir den Post an"])
     y = SH // 2 - 60
     for j, line in enumerate(texts):
         sz   = 34 if j == 0 else (84 if j < len(texts)-1 else 46)
@@ -357,7 +361,7 @@ def build_story(post):
     buf.seek(0)
     return buf.read()
 
-# ─── INSTAGRAM CLIENT ────────────────────────────────────────────────────────
+# â”€â”€â”€ INSTAGRAM CLIENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 _ig_client = None
 
@@ -393,7 +397,7 @@ def get_ig_client():
     _ig_client = cl
     return cl
 
-# ─── ENGAGEMENT TRACKING ─────────────────────────────────────────────────────
+# â”€â”€â”€ ENGAGEMENT TRACKING â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def fetch_and_store_insights(plan):
     """
@@ -428,7 +432,7 @@ def fetch_and_store_insights(plan):
                   f"{post['insights']['comments']} comments  (score {score})")
             updated = True
         except Exception as e:
-            print(f"  ⚠ Insights Day {post['day']}: {e}")
+            print(f"  âš  Insights Day {post['day']}: {e}")
 
     if updated:
         save_plan(plan)
@@ -453,23 +457,23 @@ def get_engagement_context(plan):
     for score, p in scored[:6]:
         ins = p["insights"]
         lines.append(
-            f"  {'✅' if score > 20 else '➡'} '{p['topic']}' ({p['type']}) — "
+            f"  {'âœ…' if score > 20 else 'âž¡'} '{p['topic']}' ({p['type']}) â€” "
             f"{ins.get('likes',0)} Likes, {ins.get('comments',0)} Comments "
             f"[Score {score}]"
         )
-    lines.append("\n→ Baue auf Themen mit hohem Score auf. "
+    lines.append("\nâ†’ Baue auf Themen mit hohem Score auf. "
                  "Wiederhole erfolgreiche Formate (Hook-Stil, Struktur, Kontrast).")
     return "\n".join(lines) + "\n"
 
-# ─── TREND + HASHTAG CONTEXT ─────────────────────────────────────────────────
+# â”€â”€â”€ TREND + HASHTAG CONTEXT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 # Curated high-performing German business/finance hashtags
 HASHTAG_POOL = [
     "#geldanlage", "#finanztipps", "#investieren", "#etfinvestor", "#aktien",
-    "#vermögensaufbau", "#passiveseinkommen", "#finanziellefreiheit", "#reichwerden",
-    "#businessmindset", "#erfolgsmentalität", "#unternehmertum", "#selbstständig",
+    "#vermÃ¶gensaufbau", "#passiveseinkommen", "#finanziellefreiheit", "#reichwerden",
+    "#businessmindset", "#erfolgsmentalitÃ¤t", "#unternehmertum", "#selbststÃ¤ndig",
     "#motivation", "#erfolgreich", "#mindset", "#successmindset", "#entrepreneur",
-    "#finanzbildung", "#sparplan", "#depot", "#dividenden", "#börsenwissen",
+    "#finanzbildung", "#sparplan", "#depot", "#dividenden", "#bÃ¶rsenwissen",
     "#reichtum", "#wohlstand", "#businesstips", "#mentaltraining", "#zielsetzung",
     "#mentviro", "#businessmindset", "#moneyminds", "#wealthbuilding",
 ]
@@ -498,11 +502,11 @@ def get_trending_context():
             trending = [item.findtext("title", "").strip() for item in items
                         if item.findtext("title", "").strip()]
             if trending:
-                lines.append("GOOGLE TRENDS — Trending Searches Deutschland (heute):")
+                lines.append("GOOGLE TRENDS â€” Trending Searches Deutschland (heute):")
                 for t in trending:
-                    lines.append(f"  • {t}")
+                    lines.append(f"  â€¢ {t}")
     except Exception as e:
-        print(f"  ⚠ Google Trends RSS failed: {e}")
+        print(f"  âš  Google Trends RSS failed: {e}")
 
     # 2. Financial News RSS
     feeds = [
@@ -527,13 +531,13 @@ def get_trending_context():
     if headlines:
         lines.append("\nAKTUELLE WIRTSCHAFTS-HEADLINES (heute):")
         for h in headlines[:12]:
-            lines.append(f"  • {h}")
+            lines.append(f"  â€¢ {h}")
 
     if not lines:
         return ""
     return "\n" + "\n".join(lines) + "\n"
 
-# ─── CONTENT AUTO-GENERATION ─────────────────────────────────────────────────
+# â”€â”€â”€ CONTENT AUTO-GENERATION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def check_and_refill_content(plan):
     pending = [p for p in plan["posts"] if p["status"] == "pending"]
@@ -542,17 +546,17 @@ def check_and_refill_content(plan):
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("⚠ GEMINI_API_KEY not set — skipping auto-generation")
+        print("âš  GEMINI_API_KEY not set â€” skipping auto-generation")
         return
 
-    print(f"📝 Only {len(pending)} pending post(s) left — auto-generating 3 more via Gemini...")
+    print(f"ðŸ“ Only {len(pending)} pending post(s) left â€” auto-generating 3 more via Gemini...")
 
     print("  Fetching trending context...")
     trend_context = get_trending_context()
     if trend_context:
         print(f"  Trends loaded ({len(trend_context)} chars)")
     else:
-        print("  No trend data available — continuing without")
+        print("  No trend data available â€” continuing without")
 
     engagement_context = get_engagement_context(plan)
     if engagement_context:
@@ -573,7 +577,7 @@ def check_and_refill_content(plan):
 
     hashtag_sample = random.sample(HASHTAG_POOL, min(20, len(HASHTAG_POOL)))
 
-    prompt = f"""Du bist viraler Content Creator für @mentviro (Business Mindset, Instagram, Deutsch).
+    prompt = f"""Du bist viraler Content Creator fÃ¼r @mentviro (Business Mindset, Instagram, Deutsch).
 
 Erstelle GENAU 3 neue Posts als JSON-Array. Nicht mehr, nicht weniger.
 
@@ -581,21 +585,21 @@ BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 {chr(10).join(f'- {t}' for t in existing_topics)}
 {trend_context}
 WICHTIG ZU DEN TREND-DATEN: Greife aktuelle Trends und Headlines auf, wo sie passen.
-Verknüpfe sie mit Business-Mindset-Perspektive. Nutze Ereignisse als Hook, nicht als Nachricht.
+VerknÃ¼pfe sie mit Business-Mindset-Perspektive. Nutze Ereignisse als Hook, nicht als Nachricht.
 {engagement_context}
-VIRALER CONTENT — PFLICHT:
-- Hooks: "Niemand redet darüber", "Das sagt dir kein Banker", "Hör sofort damit auf", "Die bittere Wahrheit über..."
+VIRALER CONTENT â€” PFLICHT:
+- Hooks: "Niemand redet darÃ¼ber", "Das sagt dir kein Banker", "HÃ¶r sofort damit auf", "Die bittere Wahrheit Ã¼ber..."
 - Kontroverse Aussagen die zum Kommentieren anregen
 - Curiosity-Gap: Leser muss wissen wie es weitergeht
 - Zahlen-Listicles: "5 Dinge die...", "3 Fehler warum..."
-- Zielgruppe: 20–40 Jahre, Vermögensaufbau, Deutschland
+- Zielgruppe: 20â€“40 Jahre, VermÃ¶gensaufbau, Deutschland
 
 VORGABEN:
 - Types (Reihenfolge): {types}
 - Tage: {last_day+1} bis {last_day+3}
 - Daten: {dates[0]} bis {dates[2]}
 - Sprache: Deutsch | Themen: Mindset, Finanzen, Investieren, Entrepreneurship
-- PEXELS QUERIES: cinematic, dunkel, ästhetisch. NIEMALS: businessman, office, suit, handshake
+- PEXELS QUERIES: cinematic, dunkel, Ã¤sthetisch. NIEMALS: businessman, office, suit, handshake
   Gut: "dark foggy forest path moody", "aerial city night cinematic", "chess king macro shadow"
 - Slide title[]: max 3 kurze Zeilen | body[]: max 2 Zeilen
 - Caption: emotional, provokant, exakt 15 Hashtags aus dieser Liste (mix):
@@ -612,17 +616,17 @@ Carousel-Schema:
   {{"badge":null,"num":null,"title":["..."],"body":["..."],"is_cover":true}},
   {{"badge":"PUNKT #1","num":"1 / N","title":["..."],"body":["..."]}},
   ...,
-  {{"badge":"FOLGE UNS","num":null,"title":["Mehr Mindset","& Money Moves"],"body":["Folge @mentviro","für täglich mehr."]}}
+  {{"badge":"FOLGE UNS","num":null,"title":["Mehr Mindset","& Money Moves"],"body":["Folge @mentviro","fÃ¼r tÃ¤glich mehr."]}}
 ],
 "caption":"...","pexels_queries":["q1","q2","q3","q4","q5","q6"],
-"story_text":["NEU AUF MENTVIRO","Zeile 1","Zeile 2","→ Sieh dir den Post an"],
+"story_text":["NEU AUF MENTVIRO","Zeile 1","Zeile 2","â†’ Sieh dir den Post an"],
 "story_poll":"Kurze Frage?"}}
 
 Reel-Schema:
 {{"day":N,"date":"YYYY-MM-DD","type":"reel","topic":"...","status":"pending","hook":"...",
 "script":["Satz 1","Satz 2","Satz 3","Satz 4","Satz 5","Folge @mentviro."],
 "caption":"...","pexels_video_query":"dark cinematic query",
-"story_text":["NEUES REEL","Zeile 1","Zeile 2","→ Schau jetzt"],
+"story_text":["NEUES REEL","Zeile 1","Zeile 2","â†’ Schau jetzt"],
 "story_poll":"Kurze Frage?"}}"""
 
     try:
@@ -634,22 +638,22 @@ Reel-Schema:
             timeout=120,
         )
         if r.status_code != 200:
-            print(f"⚠ Gemini API error {r.status_code}: {r.text[:300]}")
+            print(f"âš  Gemini API error {r.status_code}: {r.text[:300]}")
             return
         text  = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
         start = text.find("[")
         end   = text.rfind("]") + 1
         if start == -1 or end == 0:
-            print("⚠ No JSON array in Gemini response")
+            print("âš  No JSON array in Gemini response")
             return
         new_posts = json.loads(text[start:end])
         plan["posts"].extend(new_posts)
         save_plan(plan)
-        print(f"✅ Auto-generated {len(new_posts)} new posts (Day {last_day+1}–{last_day+len(new_posts)})")
+        print(f"âœ… Auto-generated {len(new_posts)} new posts (Day {last_day+1}â€“{last_day+len(new_posts)})")
     except Exception as e:
-        print(f"⚠ Auto-generation failed: {e}")
+        print(f"âš  Auto-generation failed: {e}")
 
-# ─── CAROUSEL WORKFLOW ───────────────────────────────────────────────────────
+# â”€â”€â”€ CAROUSEL WORKFLOW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def run_carousel(post, plan):
     print(f"Building carousel: {post['topic']}")
@@ -665,7 +669,7 @@ def run_carousel(post, plan):
                 query  = pexels_queries[min(i, len(pexels_queries)-1)]
                 bg_img = pexels_portrait(query)
             img_bytes = build_carousel_slide(slide, bg_img)
-            path = f"/tmp/mentviro_d{post['day']}_s{i+1}.jpg"
+            path = f"{TMPDIR}/mentviro_d{post['day']}_s{i+1}.jpg"
             with open(path, "wb") as f:
                 f.write(img_bytes)
             tmp_paths.append(path)
@@ -685,7 +689,7 @@ def run_carousel(post, plan):
             except Exception:
                 pass
 
-# ─── REEL WORKFLOW ───────────────────────────────────────────────────────────
+# â”€â”€â”€ REEL WORKFLOW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def _wrap_title(text, max_len=26):
     if len(text) <= max_len:
@@ -704,7 +708,7 @@ def _wrap_title(text, max_len=26):
 
 def _reel_as_carousel(post, plan):
     """
-    Fallback: convert reel script into a vertical 9:16 carousel (1080×1920).
+    Fallback: convert reel script into a vertical 9:16 carousel (1080Ã—1920).
     Matches reel aesthetic better than landscape slides.
     """
     print("  Building 9:16 carousel from reel script as fallback...")
@@ -715,7 +719,7 @@ def _reel_as_carousel(post, plan):
     slides.append({
         "badge": None, "num": None, "is_cover": True,
         "title": _wrap_title(post.get("hook", post["topic"])),
-        "body":  ["Lies weiter. →"],
+        "body":  ["Lies weiter. â†’"],
     })
     for i, line in enumerate(script):
         slides.append({
@@ -726,8 +730,8 @@ def _reel_as_carousel(post, plan):
         })
     slides.append({
         "badge": "FOLGE UNS", "num": None,
-        "title": ["Tägliches Mindset", "& Money Moves"],
-        "body":  ["Folge @mentviro", "für täglich mehr."],
+        "title": ["TÃ¤gliches Mindset", "& Money Moves"],
+        "body":  ["Folge @mentviro", "fÃ¼r tÃ¤glich mehr."],
     })
 
     pq = post.get("pexels_video_query", "dark city cinematic night")
@@ -740,7 +744,7 @@ def _reel_as_carousel(post, plan):
                 bg_img = pexels_portrait(pq, target_w=SW, target_h=SH)
             # Build in 9:16 format
             img_bytes = build_carousel_slide(slide, bg_img, w=SW, h=SH)
-            path = f"/tmp/mentviro_reel_fb_d{post['day']}_s{i+1}.jpg"
+            path = f"{TMPDIR}/mentviro_reel_fb_d{post['day']}_s{i+1}.jpg"
             with open(path, "wb") as f:
                 f.write(img_bytes)
             tmp_paths.append(path)
@@ -782,19 +786,19 @@ def run_reel(post, plan):
         if el_r.status_code == 200 and len(el_r.content) > 1000:
             print("  Audio generated")
         else:
-            print(f"  ⚠ ElevenLabs {el_r.status_code}: {el_r.text[:200]}")
+            print(f"  âš  ElevenLabs {el_r.status_code}: {el_r.text[:200]}")
     except Exception as e:
-        print(f"  ⚠ ElevenLabs error: {e}")
+        print(f"  âš  ElevenLabs error: {e}")
 
     print("  Searching Pexels video...")
     video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
     if not video_url:
-        print("  ⚠ No Pexels video found — falling back to 9:16 carousel")
+        print("  âš  No Pexels video found â€” falling back to 9:16 carousel")
         return _reel_as_carousel(post, plan)
 
     print("  Downloading video...")
-    raw_path   = f"/tmp/mentviro_reel_d{post['day']}_raw.mp4"
-    conv_path  = f"/tmp/mentviro_reel_d{post['day']}.mp4"
+    raw_path   = f"{TMPDIR}/mentviro_reel_d{post['day']}_raw.mp4"
+    conv_path  = f"{TMPDIR}/mentviro_reel_d{post['day']}.mp4"
     thumb_path = conv_path + ".jpg"
 
     r = requests.get(video_url, timeout=120, stream=True)
@@ -816,7 +820,7 @@ def run_reel(post, plan):
         if duration < 5:
             loops     = max(1, int(20 / max(duration, 0.1)))
             loop_args = ["-stream_loop", str(loops)]
-            print(f"  Short clip — looping ×{loops}")
+            print(f"  Short clip â€” looping Ã—{loops}")
         subprocess.run(
             ["ffmpeg", "-y"] + loop_args + [
                 "-i", raw_path,
@@ -837,7 +841,7 @@ def run_reel(post, plan):
         print(f"  Re-encoded: {os.path.getsize(conv_path)/1024/1024:.1f} MB, thumbnail OK")
         final_video = conv_path
     except Exception as e:
-        print(f"  ⚠ ffmpeg failed: {e} — using raw video")
+        print(f"  âš  ffmpeg failed: {e} â€” using raw video")
         final_video = raw_path
         thumb_path  = None
 
@@ -852,8 +856,8 @@ def run_reel(post, plan):
         print(f"  Reel live! ID: {media.pk}")
         return str(media.pk)
     except Exception as e:
-        print(f"  ⚠ clip_upload failed ({type(e).__name__}: {e})")
-        print("  → Falling back to 9:16 carousel")
+        print(f"  âš  clip_upload failed ({type(e).__name__}: {e})")
+        print("  â†’ Falling back to 9:16 carousel")
         return _reel_as_carousel(post, plan)
     finally:
         for p in [raw_path, conv_path, thumb_path]:
@@ -863,12 +867,12 @@ def run_reel(post, plan):
             except Exception:
                 pass
 
-# ─── STORY WORKFLOW ──────────────────────────────────────────────────────────
+# â”€â”€â”€ STORY WORKFLOW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def run_story(post, plan):
     print("Building story...")
     story_bytes = build_story(post)
-    story_path  = f"/tmp/mentviro_story_d{post['day']}.jpg"
+    story_path  = f"{TMPDIR}/mentviro_story_d{post['day']}.jpg"
 
     with open(story_path, "wb") as f:
         f.write(story_bytes)
@@ -886,12 +890,12 @@ def run_story(post, plan):
                 poll = StoryPoll(
                     x=0.5, y=0.72, width=0.9, height=0.14,
                     question=poll_q,
-                    tallies=[{"text": "Ja ✅"}, {"text": "Nein ❌"}],
+                    tallies=[{"text": "Ja âœ…"}, {"text": "Nein âŒ"}],
                 )
                 stickers = [poll]
                 print(f"  Adding poll: '{poll_q}'")
             except Exception as e:
-                print(f"  ⚠ Poll sticker skipped: {e}")
+                print(f"  âš  Poll sticker skipped: {e}")
 
         if stickers:
             media = cl.photo_upload_to_story(story_path, stickers=stickers)
@@ -906,11 +910,11 @@ def run_story(post, plan):
         except Exception:
             pass
 
-# ─── HTML DASHBOARD ──────────────────────────────────────────────────────────
+# â”€â”€â”€ HTML DASHBOARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def generate_dashboard(plan):
     """
-    Generate docs/index.html — a simple overview of upcoming + recent posts.
+    Generate docs/index.html â€” a simple overview of upcoming + recent posts.
     Committed to repo; visible via GitHub Pages if enabled.
     """
     today      = date.today().isoformat()
@@ -929,7 +933,7 @@ def generate_dashboard(plan):
         if not ins:
             return ""
         return (f'<span style="color:#888;font-size:13px"> &nbsp;'
-                f'❤ {ins.get("likes",0)}  💬 {ins.get("comments",0)}</span>')
+                f'â¤ {ins.get("likes",0)}  ðŸ’¬ {ins.get("comments",0)}</span>')
 
     rows_upcoming = ""
     for p in upcoming:
@@ -968,18 +972,18 @@ def generate_dashboard(plan):
 </head>
 <body>
   <h1>mentviro Content Dashboard</h1>
-  <p class="sub">Generiert am {today} &nbsp;·&nbsp; {len(upcoming)} ausstehend &nbsp;·&nbsp; {len(recent)} kürzlich veröffentlicht</p>
+  <p class="sub">Generiert am {today} &nbsp;Â·&nbsp; {len(upcoming)} ausstehend &nbsp;Â·&nbsp; {len(recent)} kÃ¼rzlich verÃ¶ffentlicht</p>
 
-  <h2>📅 Kommende Posts</h2>
+  <h2>ðŸ“… Kommende Posts</h2>
   <table>
     <tr><th>Datum</th><th>Tag</th><th>Typ</th><th>Thema</th></tr>
     {rows_upcoming if rows_upcoming else '<tr><td colspan="4" style="color:#666">Keine ausstehenden Posts</td></tr>'}
   </table>
 
-  <h2>✅ Zuletzt veröffentlicht</h2>
+  <h2>âœ… Zuletzt verÃ¶ffentlicht</h2>
   <table>
     <tr><th>Datum</th><th>Tag</th><th>Typ</th><th>Thema + Performance</th></tr>
-    {rows_recent if rows_recent else '<tr><td colspan="4" style="color:#666">Noch keine veröffentlichten Posts</td></tr>'}
+    {rows_recent if rows_recent else '<tr><td colspan="4" style="color:#666">Noch keine verÃ¶ffentlichten Posts</td></tr>'}
   </table>
 </body>
 </html>"""
@@ -989,9 +993,9 @@ def generate_dashboard(plan):
     out_path = os.path.join(docs_dir, "index.html")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"  Dashboard written → docs/index.html ({len(upcoming)} upcoming, {len(recent)} recent)")
+    print(f"  Dashboard written â†’ docs/index.html ({len(upcoming)} upcoming, {len(recent)} recent)")
 
-# ─── OPTIMAL POSTING TIME ────────────────────────────────────────────────────
+# â”€â”€â”€ OPTIMAL POSTING TIME â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def update_posting_time_stats(plan):
     """
@@ -1029,13 +1033,13 @@ def update_posting_time_stats(plan):
     }
     save_plan(plan)
 
-    current_cron_hour = 16  # 0 16 * * * → 18:00 CET
+    current_cron_hour = 16  # 0 16 * * * â†’ 18:00 CET
     if best_hour != current_cron_hour and len(hour_scores) >= 5:
-        print(f"  📊 Posting-time tip: best avg engagement at {best_hour}:00 UTC "
+        print(f"  ðŸ“Š Posting-time tip: best avg engagement at {best_hour}:00 UTC "
               f"(currently {current_cron_hour}:00 UTC). "
               f"Consider updating cron to '0 {best_hour} * * *'.")
 
-# ─── MAIN ────────────────────────────────────────────────────────────────────
+# â”€â”€â”€ MAIN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 def main():
     print(f"\n{'='*55}")
@@ -1055,7 +1059,7 @@ def main():
         fetch_and_store_insights(plan)
         plan = load_plan()
     except Exception as e:
-        print(f"  ⚠ Insights fetch failed: {e}")
+        print(f"  âš  Insights fetch failed: {e}")
 
     # 7. Update posting-time statistics
     update_posting_time_stats(plan)
@@ -1094,9 +1098,9 @@ def main():
         generate_dashboard(plan)
 
         summary = (
-            f"✅ <b>mentviro</b> Day {post['day']} gepostet!\n"
-            f"📌 {post['type'].upper()}: {post['topic']}\n"
-            f"🆔 Post: <code>{media_id}</code> | Story: <code>{story_id}</code>"
+            f"âœ… <b>mentviro</b> Day {post['day']} gepostet!\n"
+            f"ðŸ“Œ {post['type'].upper()}: {post['topic']}\n"
+            f"ðŸ†” Post: <code>{media_id}</code> | Story: <code>{story_id}</code>"
         )
         send_telegram(summary)
 
@@ -1109,10 +1113,12 @@ def main():
         tb = traceback.format_exc()
         print(f"\nERROR: {e}\n{tb}")
         send_telegram(
-            f"❌ <b>mentviro-bot FEHLER</b> (Day {post.get('day','?')})\n"
+            f"âŒ <b>mentviro-bot FEHLER</b> (Day {post.get('day','?')})\n"
             f"<code>{type(e).__name__}: {str(e)[:300]}</code>"
         )
         sys.exit(1)
 
 if __name__ == "__main__":
     main()
+
+
