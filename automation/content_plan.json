@@ -102,7 +102,8 @@
       "date": "2026-05-21",
       "type": "carousel",
       "topic": "5 B\u00fccher, die dein Gelddenken ver\u00e4ndern",
-      "status": "pending",
+      "status": "published",
+      "post_id": "auto-posted-run39",
       "hook": "Diese 5 B\u00fccher haben mehr Million\u00e4re geschaffen als jedes Studium.",
       "slides": [
         {"badge": null, "num": null, "title": ["Diese 5 B\u00fccher", "haben mehr Million\u00e4re", "gemacht als jedes Studium."], "body": ["Lies sie. \u2192"], "is_cover": true},
