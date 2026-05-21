@@ -2,15 +2,16 @@ name: mentviro Daily Instagram Post
 
 on:
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 16 * * *'   # 18:00 CET / 17:00 CEST
   workflow_dispatch:
 
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
 
@@ -18,26 +19,40 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install fonts
-        run: sudo apt-get install -y fonts-dejavu-core ffmpeg
+      - name: Install system packages
+        run: sudo apt-get install -y fonts-dejavu-core ffmpeg unzip
 
-      - name: Install dependencies
+      - name: Install Montserrat font
+        run: |
+          mkdir -p /usr/share/fonts/truetype
+          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Regular.ttf" \
+               -O /usr/share/fonts/truetype/Montserrat-Regular.ttf
+          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Bold.ttf" \
+               -O /usr/share/fonts/truetype/Montserrat-Bold.ttf
+          fc-cache -f
+          echo "Fonts installed:"
+          fc-list | grep -i montserrat || echo "(Montserrat not in fc-list yet — file exists)"
+          ls /usr/share/fonts/truetype/Montserrat*.ttf
+
+      - name: Install Python dependencies
         run: pip install -r automation/requirements.txt
 
       - name: Run daily post
         env:
-          IG_USERNAME: mentviro
-          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
-          IG_SESSION: ${{ secrets.IG_SESSION }}
-          MENTVIRO_LOGO_URL: ${{ secrets.MENTVIRO_LOGO_URL }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          IG_USERNAME:          mentviro
+          IG_PASSWORD:          ${{ secrets.IG_PASSWORD }}
+          IG_SESSION:           ${{ secrets.IG_SESSION }}
+          MENTVIRO_LOGO_URL:    ${{ secrets.MENTVIRO_LOGO_URL }}
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY:       ${{ secrets.PEXELS_API_KEY }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python automation/daily_post.py
 
-      - name: Commit updated plan
+      - name: Commit updated plan + dashboard
         run: |
           git config user.name  "mentviro-bot"
           git config user.email "bot@mentviro.com"
-          git add automation/content_plan.json
-          git diff --cached --quiet || git commit -m "chore: mark $(date +%Y-%m-%d) as published"
+          git add automation/content_plan.json docs/index.html || true
+          git diff --cached --quiet || git commit -m "chore: update plan + dashboard $(date +%Y-%m-%d)"
           git push
