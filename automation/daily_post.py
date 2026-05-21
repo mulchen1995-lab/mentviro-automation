@@ -180,23 +180,35 @@ def init_colors(plan):
 
 # ─── DESIGN HELPERS ──────────────────────────────────────────────────────────
 
+MARGIN = 90   # px — safe zone left & right, prevents text from touching edges
+
+def text_width(text, font_size, bold=False):
+    return fnt(font_size, bold).getbbox(text)[2]
+
+def fit_font_size(text, max_width, start_size, bold=False, min_size=28):
+    """Reduce font size until text fits within max_width pixels."""
+    sz = start_size
+    while sz > min_size and text_width(text, sz, bold) > max_width:
+        sz -= 4
+    return sz
+
 def draw_base_frame(img_rgba, w=W, h=H, is_bw=False, slide_num=None, badge=None):
     d    = ImageDraw.Draw(img_rgba)
     ACC  = COLORS["white"] if is_bw else COLORS["silver"]
     BODY = (180, 180, 180) if is_bw else COLORS["dark"]
     d.rectangle([(0, 0), (w, 5)], fill=ACC)
     d.rectangle([(0, h-5), (w, h)], fill=ACC)
-    d.text((60, 28), "MENTVIRO", font=fnt(28, True), fill=ACC)
-    d.text((60, 62), "BUSINESS MINDSET", font=fnt(17), fill=BODY)
-    d.rectangle([(60, 96), (w-60, 98)], fill=(70, 70, 70))
+    d.text((MARGIN, 28), "MENTVIRO", font=fnt(28, True), fill=ACC)
+    d.text((MARGIN, 62), "BUSINESS MINDSET", font=fnt(17), fill=BODY)
+    d.rectangle([(MARGIN, 96), (w-MARGIN, 98)], fill=(70, 70, 70))
     if badge:
-        d.text((60, 120), badge, font=fnt(30, True), fill=ACC)
+        d.text((MARGIN, 120), badge, font=fnt(30, True), fill=ACC)
     if slide_num:
         bb = fnt(26).getbbox(slide_num)
-        d.text((w - 60 - (bb[2]-bb[0]), 124), slide_num, font=fnt(26), fill=BODY)
-    d.rectangle([(60, h-120), (w-60, h-116)], fill=(60, 60, 60))
-    d.text((60, h-100), "@mentviro", font=fnt(30, True), fill=COLORS["white"])
-    paste_logo(img_rgba, w - 80, h - 78, size=80)
+        d.text((w - MARGIN - (bb[2]-bb[0]), 124), slide_num, font=fnt(26), fill=BODY)
+    d.rectangle([(MARGIN, h-120), (w-MARGIN, h-116)], fill=(60, 60, 60))
+    d.text((MARGIN, h-100), "@mentviro", font=fnt(30, True), fill=COLORS["white"])
+    paste_logo(img_rgba, w - MARGIN + 10, h - 78, size=80)
 
 def dark_overlay(base_rgb, w=W, h=H, strength=195):
     ov = Image.new("RGBA", (w, h))
@@ -272,21 +284,25 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
                     slide_num=slide.get("num"), badge=slide.get("badge"))
     d    = ImageDraw.Draw(img)
     BODY = (175, 175, 175)
+    max_text_w = w - MARGIN * 2        # safe text width (never touch edges)
     content_top = 165 + (30 if slide.get("badge") else 0)
     if is_cover:
         paste_logo(img, w // 2, int(h * 0.23), size=200)
         content_top = int(h * 0.42)
 
     y = content_top + 30
+    base_title_sz = 74 if not is_cover else 68
     for line in slide.get("title", []):
-        sz = 74 if not is_cover else 68
-        d.text((60, y), line, font=fnt(sz, True), fill=COLORS["white"])
+        # Auto-shrink font until line fits within safe area
+        sz = fit_font_size(line, max_text_w, base_title_sz, bold=True)
+        d.text((MARGIN, y), line, font=fnt(sz, True), fill=COLORS["white"])
         bb = fnt(sz, True).getbbox(line)
         y += (bb[3] - bb[1]) + 14
     y += 36
     for line in slide.get("body", []):
-        d.text((60, y), line, font=fnt(40), fill=BODY)
-        bb = fnt(40).getbbox(line)
+        sz = fit_font_size(line, max_text_w, 40, bold=False)
+        d.text((MARGIN, y), line, font=fnt(sz), fill=BODY)
+        bb = fnt(sz).getbbox(line)
         y += (bb[3] - bb[1]) + 12
 
     buf = io.BytesIO()
@@ -310,17 +326,19 @@ def build_attached_story(post):
     SIL = COLORS["silver"]
 
     d.rectangle([(0, 0), (SW, 7)], fill=SIL)
-    d.text((60, 55), "@mentviro", font=fnt(40, True), fill=SIL)
-    d.rectangle([(60, 108), (200, 115)], fill=SIL)
+    d.text((MARGIN, 55), "@mentviro", font=fnt(40, True), fill=SIL)
+    d.rectangle([(MARGIN, 108), (MARGIN + 140, 115)], fill=SIL)
     paste_logo(img, SW // 2, SH // 2 - 260, size=200)
 
     texts = post.get("story_text", ["NEU", post.get("topic", ""), "Jetzt ansehen"])
+    max_text_w = SW - MARGIN * 2
     y = SH // 2 - 60
     for j, line in enumerate(texts):
         sz   = 34 if j == 0 else (84 if j < len(texts)-1 else 46)
         bold = j > 0
         col  = SIL if j == 0 else (COLORS["white"] if j < len(texts)-1 else SIL)
-        d.text((60, y), line, font=fnt(sz, bold), fill=col)
+        sz   = fit_font_size(line, max_text_w, sz, bold=bold)
+        d.text((MARGIN, y), line, font=fnt(sz, bold), fill=col)
         bb = fnt(sz, bold).getbbox(line)
         y += (bb[3] - bb[1]) + 12
     d.rectangle([(0, SH-7), (SW, SH)], fill=SIL)
@@ -352,33 +370,35 @@ def build_quote_story(story_data: dict):
 
     # Top bar + badge
     d.rectangle([(0, 0), (SW, 7)], fill=SIL)
-    d.text((60, 28), "MENTVIRO", font=fnt(28, True), fill=SIL)
-    d.text((60, 62), "BUSINESS MINDSET", font=fnt(17), fill=COLORS["dark"])
-    d.rectangle([(60, 96), (SW-60, 98)], fill=(70, 70, 70))
+    d.text((MARGIN, 28), "MENTVIRO", font=fnt(28, True), fill=SIL)
+    d.text((MARGIN, 62), "BUSINESS MINDSET", font=fnt(17), fill=COLORS["dark"])
+    d.rectangle([(MARGIN, 96), (SW-MARGIN, 98)], fill=(70, 70, 70))
 
     # "ZITAT DES TAGES" badge
-    badge = "ZITAT DES TAGES"
-    d.text((60, 130), badge, font=fnt(26, True), fill=SIL)
+    d.text((MARGIN, 130), "ZITAT DES TAGES", font=fnt(26, True), fill=SIL)
 
     # Decorative large quotation mark
-    d.text((50, 260), "“", font=fnt(180, True), fill=(255, 255, 255, 30))
+    d.text((MARGIN - 20, 260), "“", font=fnt(180, True), fill=(255, 255, 255, 30))
 
-    # Quote text — wrap to ~22 chars per line
-    words  = text.split()
+    # Quote text — pixel-aware wrapping within safe zone
+    max_q_w = SW - MARGIN * 2
+    words = text.split()
     lines, cur = [], []
-    for w in words:
-        if sum(len(x)+1 for x in cur)+len(w) > 22 and cur:
+    for word in words:
+        test = " ".join(cur + [word])
+        if text_width(test, 64, bold=True) > max_q_w and cur:
             lines.append(" ".join(cur))
-            cur = [w]
+            cur = [word]
         else:
-            cur.append(w)
+            cur.append(word)
     if cur:
         lines.append(" ".join(cur))
 
     y = SH // 2 - (len(lines) * 80) // 2 - 40
     for line in lines[:6]:
-        d.text((80, y), line, font=fnt(64, True), fill=WHT)
-        bb = fnt(64, True).getbbox(line)
+        sz = fit_font_size(line, max_q_w, 64, bold=True)
+        d.text((MARGIN, y), line, font=fnt(sz, True), fill=WHT)
+        bb = fnt(sz, True).getbbox(line)
         y += (bb[3] - bb[1]) + 16
 
     # Author
@@ -418,31 +438,34 @@ def build_tips_story(story_data: dict):
 
     # Top bar
     d.rectangle([(0, 0), (SW, 7)], fill=SIL)
-    d.text((60, 28), "MENTVIRO", font=fnt(28, True), fill=SIL)
-    d.text((60, 62), "BUSINESS MINDSET", font=fnt(17), fill=COLORS["dark"])
-    d.rectangle([(60, 96), (SW-60, 98)], fill=(70, 70, 70))
+    d.text((MARGIN, 28), "MENTVIRO", font=fnt(28, True), fill=SIL)
+    d.text((MARGIN, 62), "BUSINESS MINDSET", font=fnt(17), fill=COLORS["dark"])
+    d.rectangle([(MARGIN, 96), (SW - MARGIN, 98)], fill=(70, 70, 70))
 
     # "3 TIPPS" hero text
-    d.text((60, 160), "3", font=fnt(180, True), fill=(255, 255, 255, 20))
-    d.text((60, 145), "3 TIPPS", font=fnt(90, True), fill=WHT)
+    d.text((MARGIN, 160), "3", font=fnt(180, True), fill=(255, 255, 255, 20))
+    d.text((MARGIN, 145), "3 TIPPS", font=fnt(90, True), fill=WHT)
 
     # Subtitle
-    d.text((60, 260), title, font=fnt(36), fill=SIL)
-    d.rectangle([(60, 310), (200, 313)], fill=SIL)
+    max_text_w = SW - MARGIN * 2
+    title_sz = fit_font_size(title, max_text_w, 36, bold=False)
+    d.text((MARGIN, 260), title, font=fnt(title_sz), fill=SIL)
+    d.rectangle([(MARGIN, 310), (MARGIN + 140, 313)], fill=SIL)
 
     # Tips
     numbers = ["01", "02", "03"]
     y = 370
     for i, (num, tip) in enumerate(zip(numbers, items)):
         # Number accent
-        d.text((60, y), num, font=fnt(44, True), fill=SIL)
+        d.text((MARGIN, y), num, font=fnt(44, True), fill=SIL)
         y += 52
 
-        # Tip text — wrap to ~28 chars
+        # Tip text — pixel-aware word wrapping within safe zone
         tip_words = tip.split()
         tip_lines, cur = [], []
         for w in tip_words:
-            if sum(len(x)+1 for x in cur)+len(w) > 28 and cur:
+            test = " ".join(cur + [w])
+            if text_width(test, 46, bold=True) > max_text_w and cur:
                 tip_lines.append(" ".join(cur))
                 cur = [w]
             else:
@@ -450,8 +473,9 @@ def build_tips_story(story_data: dict):
         if cur:
             tip_lines.append(" ".join(cur))
         for tl in tip_lines[:2]:
-            d.text((60, y), tl, font=fnt(46, True), fill=WHT)
-            bb = fnt(46, True).getbbox(tl)
+            sz = fit_font_size(tl, max_text_w, 46, bold=True)
+            d.text((MARGIN, y), tl, font=fnt(sz, True), fill=WHT)
+            bb = fnt(sz, True).getbbox(tl)
             y += (bb[3] - bb[1]) + 8
         y += 50  # gap between tips
 
