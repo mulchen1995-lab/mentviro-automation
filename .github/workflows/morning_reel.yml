@@ -1,12 +1,12 @@
-name: mentviro Evening Carousel (18:00 CET)
+name: mentviro Morning Reel (07:00 CET)
 
 on:
   schedule:
-    - cron: '0 16 * * *'   # 18:00 CET / 17:00 CEST
+    - cron: '0 5 * * *'   # 07:00 CET / 06:00 CEST
   workflow_dispatch:
 
 jobs:
-  carousel:
+  reel:
     runs-on: self-hosted
     timeout-minutes: 20
     permissions:
@@ -37,13 +37,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r automation/requirements.txt
 
-      - name: Post carousel
+      - name: Post reel
         env:
-          RUN_MODE:             carousel
+          RUN_MODE:             reel
           IG_USERNAME:          mentviro
           IG_PASSWORD:          ${{ secrets.IG_PASSWORD }}
           IG_SESSION:           ${{ secrets.IG_SESSION }}
-          MENTVIRO_LOGO_URL:    ${{ secrets.MENTVIRO_LOGO_URL }}
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:       ${{ secrets.PEXELS_API_KEY }}
           TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -56,5 +55,5 @@ jobs:
           git config user.name "mentviro-bot"
           git config user.email "bot@mentviro.com"
           git add automation/content_plan.json docs/index.html || true
-          git diff --cached --quiet || git commit -m "chore: carousel $(date +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "chore: reel $(date +%Y-%m-%d)"
           git push

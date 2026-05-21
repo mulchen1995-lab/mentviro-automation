@@ -1,13 +1,19 @@
-name: mentviro Daily Post — Cloud Fallback
+name: mentviro Fallbacks (Cloud — wenn PC aus)
 
-# Runs 2h after the primary workflow.
-# If the self-hosted runner already posted today → exits immediately (no-op).
-# If the self-hosted runner was offline → posts as carousel on ubuntu-latest.
+# Runs 2h after each primary workflow on ubuntu-latest.
+# Skips automatically if self-hosted runner already posted.
 
 on:
   schedule:
-    - cron: '0 18 * * *'   # 20:00 CET / 19:00 CEST  (+2h after primary)
+    - cron: '0 7 * * *'    # 09:00 CET — reel fallback
+    - cron: '0 12 * * *'   # 14:00 CET — stories fallback
+    - cron: '0 18 * * *'   # 20:00 CET — carousel fallback
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'reel | stories | carousel'
+        required: true
+        default: 'carousel'
 
 jobs:
   fallback:
@@ -19,36 +25,57 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Determine mode from schedule
+        id: mode
+        run: |
+          if [ -n "${{ github.event.inputs.mode }}" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+          else
+            HOUR=$(date -u +%H)
+            case $HOUR in
+              07) MODE="reel" ;;
+              12) MODE="stories" ;;
+              18) MODE="carousel" ;;
+              *) MODE="carousel" ;;
+            esac
+          fi
+          echo "mode=$MODE" >> $GITHUB_OUTPUT
+          echo "Running fallback: $MODE"
+
       - name: Check if already posted today
         id: check
         run: |
           TODAY=$(date +%Y-%m-%d)
+          MODE="${{ steps.mode.outputs.mode }}"
           STATUS=$(python3 -c "
           import json, sys
           plan = json.load(open('automation/content_plan.json'))
           today = '$TODAY'
-          for p in plan['posts']:
-              if p['date'] == today and p['status'] == 'published':
-                  print('published')
-                  sys.exit(0)
+          mode  = '$MODE'
+          if mode == 'stories':
+              for s in plan.get('story_queue', []):
+                  if s['date'] == today and s['status'] == 'published':
+                      print('published'); sys.exit(0)
+          else:
+              for p in plan['posts']:
+                  if p['date'] == today and p.get('type') == mode and p['status'] == 'published':
+                      print('published'); sys.exit(0)
           print('pending')
           ")
           echo "status=$STATUS" >> $GITHUB_OUTPUT
-          echo "Today ($TODAY): $STATUS"
+          echo "Today $TODAY [$MODE]: $STATUS"
 
-      - name: Skip — already posted today
+      - name: Skip — already posted
         if: steps.check.outputs.status == 'published'
-        run: echo "✅ Self-hosted runner already posted today. Fallback not needed."
+        run: echo "Self-hosted runner already posted. Fallback not needed."
 
-      - name: Setup (only if post is still pending)
+      - name: Setup environment
         if: steps.check.outputs.status == 'pending'
         run: |
-          sudo apt-get install -y fonts-dejavu-core ffmpeg unzip
+          sudo apt-get install -y fonts-dejavu-core ffmpeg
           mkdir -p /usr/share/fonts/truetype
-          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Regular.ttf" \
-               -O /usr/share/fonts/truetype/Montserrat-Regular.ttf
-          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Bold.ttf" \
-               -O /usr/share/fonts/truetype/Montserrat-Bold.ttf
+          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Regular.ttf" -O /usr/share/fonts/truetype/Montserrat-Regular.ttf
+          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Bold.ttf" -O /usr/share/fonts/truetype/Montserrat-Bold.ttf
           fc-cache -f
 
       - uses: actions/setup-python@v5
@@ -60,9 +87,10 @@ jobs:
         if: steps.check.outputs.status == 'pending'
         run: pip install -r automation/requirements.txt
 
-      - name: Run post (fallback — cloud runner)
+      - name: Run fallback post
         if: steps.check.outputs.status == 'pending'
         env:
+          RUN_MODE:             ${{ steps.mode.outputs.mode }}
           IG_USERNAME:          mentviro
           IG_PASSWORD:          ${{ secrets.IG_PASSWORD }}
           IG_SESSION:           ${{ secrets.IG_SESSION }}
@@ -73,11 +101,11 @@ jobs:
           TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python automation/daily_post.py
 
-      - name: Commit updated plan + dashboard
+      - name: Commit
         if: steps.check.outputs.status == 'pending'
         run: |
-          git config user.name  "mentviro-bot"
+          git config user.name "mentviro-bot"
           git config user.email "bot@mentviro.com"
           git add automation/content_plan.json docs/index.html || true
-          git diff --cached --quiet || git commit -m "chore: fallback post $(date +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "chore: fallback ${{ steps.mode.outputs.mode }} $(date +%Y-%m-%d)"
           git push

@@ -1,14 +1,14 @@
-name: mentviro Evening Carousel (18:00 CET)
+name: mentviro Midday Stories (12:00 CET)
 
 on:
   schedule:
-    - cron: '0 16 * * *'   # 18:00 CET / 17:00 CEST
+    - cron: '0 10 * * *'   # 12:00 CET / 11:00 CEST
   workflow_dispatch:
 
 jobs:
-  carousel:
+  stories:
     runs-on: self-hosted
-    timeout-minutes: 20
+    timeout-minutes: 15
     permissions:
       contents: write
     steps:
@@ -28,7 +28,7 @@ jobs:
       - name: Install Montserrat (Linux)
         if: runner.os == 'Linux'
         run: |
-          sudo apt-get install -y fonts-dejavu-core ffmpeg
+          sudo apt-get install -y fonts-dejavu-core
           mkdir -p /usr/share/fonts/truetype
           wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Regular.ttf" -O /usr/share/fonts/truetype/Montserrat-Regular.ttf
           wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Bold.ttf" -O /usr/share/fonts/truetype/Montserrat-Bold.ttf
@@ -37,13 +37,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r automation/requirements.txt
 
-      - name: Post carousel
+      - name: Post daily stories
         env:
-          RUN_MODE:             carousel
+          RUN_MODE:             stories
           IG_USERNAME:          mentviro
           IG_PASSWORD:          ${{ secrets.IG_PASSWORD }}
           IG_SESSION:           ${{ secrets.IG_SESSION }}
-          MENTVIRO_LOGO_URL:    ${{ secrets.MENTVIRO_LOGO_URL }}
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:       ${{ secrets.PEXELS_API_KEY }}
           TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -56,5 +55,5 @@ jobs:
           git config user.name "mentviro-bot"
           git config user.email "bot@mentviro.com"
           git add automation/content_plan.json docs/index.html || true
-          git diff --cached --quiet || git commit -m "chore: carousel $(date +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "chore: stories $(date +%Y-%m-%d)"
           git push
