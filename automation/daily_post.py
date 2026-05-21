@@ -41,6 +41,70 @@ def get_todays_post(plan):
             return post
     return None
 
+def get_trending_context():
+    """
+    Fetch current trending topics for DE finance/business via:
+      1. Google Trends Daily RSS (top trending searches in Germany)
+      2. Financial news RSS feeds (Handelsblatt, NTV Wirtschaft, Focus Money)
+    Returns a formatted string to inject into the Gemini prompt.
+    All sources fail silently so the main flow is never blocked.
+    """
+    import xml.etree.ElementTree as ET
+    lines = []
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; mentviro-bot/1.0)"}
+
+    # ── 1. Google Trends Daily Trending Searches (DE) ───────────────────────
+    try:
+        r = requests.get(
+            "https://trends.google.com/trending/rss?geo=DE",
+            timeout=12, headers=headers,
+        )
+        if r.status_code == 200:
+            root = ET.fromstring(r.content)
+            items = root.findall(".//item")[:15]
+            trending = []
+            for item in items:
+                title = item.findtext("title", "").strip()
+                if title:
+                    trending.append(title)
+            if trending:
+                lines.append("GOOGLE TRENDS — Trending Searches Deutschland (heute):")
+                for t in trending:
+                    lines.append(f"  • {t}")
+    except Exception as e:
+        print(f"  ⚠ Google Trends RSS failed: {e}")
+
+    # ── 2. Financial News RSS ───────────────────────────────────────────────
+    feeds = [
+        ("Handelsblatt Finanzen", "https://www.handelsblatt.com/rss/finanzen"),
+        ("NTV Wirtschaft",        "https://www.n-tv.de/wirtschaft/rss"),
+        ("Focus Money",           "https://rss.focus.de/fol/xml/rss_folnews.xml"),
+    ]
+    headlines = []
+    for name, url in feeds:
+        try:
+            r = requests.get(url, timeout=10, headers=headers)
+            if r.status_code != 200:
+                continue
+            root = ET.fromstring(r.content)
+            items = root.findall(".//item")[:4]
+            for item in items:
+                title = item.findtext("title", "").strip()
+                if title:
+                    headlines.append(title)
+        except Exception:
+            pass
+    if headlines:
+        lines.append("\nAKTUELLE WIRTSCHAFTS-HEADLINES (heute):")
+        for h in headlines[:12]:
+            lines.append(f"  • {h}")
+
+    if not lines:
+        return ""
+
+    return "\n" + "\n".join(lines) + "\n"
+
+
 def check_and_refill_content(plan):
     pending = [p for p in plan["posts"] if p["status"] == "pending"]
     if len(pending) >= 2:
@@ -52,6 +116,13 @@ def check_and_refill_content(plan):
         return
 
     print(f"📝 Only {len(pending)} pending post(s) left — auto-generating 3 more via Gemini...")
+
+    print("  Fetching trending context...")
+    trend_context = get_trending_context()
+    if trend_context:
+        print(f"  Trends loaded ({len(trend_context)} chars)")
+    else:
+        print("  No trend data available — continuing without")
 
     existing_topics = [p["topic"] for p in plan["posts"]]
     last_day = max(p["day"] for p in plan["posts"])
@@ -73,6 +144,10 @@ Erstelle GENAU 3 neue Posts als JSON-Array. Nicht mehr, nicht weniger.
 
 BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 {chr(10).join(f'- {t}' for t in existing_topics)}
+{trend_context}
+WICHTIG ZU DEN TREND-DATEN: Greife die obigen aktuellen Trends und Headlines auf, wo sie thematisch passen.
+Verknüpfe sie mit Business-Mindset-Perspektive (z.B. "Was der ETF-Boom dir über Mentalität verrät").
+Nutze aktuelle Ereignisse als Hook, nicht als Nachricht — @mentviro kommentiert, erklärt, inspiriert.
 
 VIRALER CONTENT — PFLICHT:
 Orientiere dich an aktuellen Viral-Formaten auf Instagram/TikTok:
