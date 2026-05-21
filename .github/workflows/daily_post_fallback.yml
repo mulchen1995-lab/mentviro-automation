@@ -1,0 +1,83 @@
+name: mentviro Daily Post — Cloud Fallback
+
+# Runs 2h after the primary workflow.
+# If the self-hosted runner already posted today → exits immediately (no-op).
+# If the self-hosted runner was offline → posts as carousel on ubuntu-latest.
+
+on:
+  schedule:
+    - cron: '0 18 * * *'   # 20:00 CET / 19:00 CEST  (+2h after primary)
+  workflow_dispatch:
+
+jobs:
+  fallback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check if already posted today
+        id: check
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          STATUS=$(python3 -c "
+          import json, sys
+          plan = json.load(open('automation/content_plan.json'))
+          today = '$TODAY'
+          for p in plan['posts']:
+              if p['date'] == today and p['status'] == 'published':
+                  print('published')
+                  sys.exit(0)
+          print('pending')
+          ")
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          echo "Today ($TODAY): $STATUS"
+
+      - name: Skip — already posted today
+        if: steps.check.outputs.status == 'published'
+        run: echo "✅ Self-hosted runner already posted today. Fallback not needed."
+
+      - name: Setup (only if post is still pending)
+        if: steps.check.outputs.status == 'pending'
+        run: |
+          sudo apt-get install -y fonts-dejavu-core ffmpeg unzip
+          mkdir -p /usr/share/fonts/truetype
+          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Regular.ttf" \
+               -O /usr/share/fonts/truetype/Montserrat-Regular.ttf
+          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Bold.ttf" \
+               -O /usr/share/fonts/truetype/Montserrat-Bold.ttf
+          fc-cache -f
+
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.status == 'pending'
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: steps.check.outputs.status == 'pending'
+        run: pip install -r automation/requirements.txt
+
+      - name: Run post (fallback — cloud runner)
+        if: steps.check.outputs.status == 'pending'
+        env:
+          IG_USERNAME:          mentviro
+          IG_PASSWORD:          ${{ secrets.IG_PASSWORD }}
+          IG_SESSION:           ${{ secrets.IG_SESSION }}
+          MENTVIRO_LOGO_URL:    ${{ secrets.MENTVIRO_LOGO_URL }}
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY:       ${{ secrets.PEXELS_API_KEY }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python automation/daily_post.py
+
+      - name: Commit updated plan + dashboard
+        if: steps.check.outputs.status == 'pending'
+        run: |
+          git config user.name  "mentviro-bot"
+          git config user.email "bot@mentviro.com"
+          git add automation/content_plan.json docs/index.html || true
+          git diff --cached --quiet || git commit -m "chore: fallback post $(date +%Y-%m-%d)"
+          git push
