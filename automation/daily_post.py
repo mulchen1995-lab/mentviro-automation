@@ -879,8 +879,7 @@ def run_reel(post, plan):
 
     script_text = " ".join(post.get("script", [post.get("hook", "")]))
     try:
-        el_key = os.environ.get("ELEVENLABS_API_KEY",
-                                "1071b6e53cb6e950c63d8e11a05dfa7b07764275cab9fda0ce63104a421c2d37")
+        el_key = os.environ.get("ELEVENLABS_API_KEY", "")
         el_r = requests.post(
             "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB",
             headers={"xi-api-key": el_key, "Content-Type": "application/json"},

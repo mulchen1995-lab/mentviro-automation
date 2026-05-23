@@ -7,26 +7,18 @@ on:
 
 jobs:
   carousel:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Montserrat (Windows)
-        if: runner.os == 'Windows'
-        shell: powershell
-        run: |
-          foreach ($w in @("Regular","Bold")) {
-            $d = "C:\Windows\Fonts\Montserrat-$w.ttf"
-            if (-not (Test-Path $d)) {
-              Invoke-WebRequest "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-$w.ttf" -OutFile $d -UseBasicParsing
-            }
-          }
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Install Montserrat (Linux)
-        if: runner.os == 'Linux'
+      - name: Install system deps
         run: |
           sudo apt-get install -y fonts-dejavu-core ffmpeg
           mkdir -p /usr/share/fonts/truetype
@@ -46,6 +38,7 @@ jobs:
           MENTVIRO_LOGO_URL:    ${{ secrets.MENTVIRO_LOGO_URL }}
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:       ${{ secrets.PEXELS_API_KEY }}
+          ELEVENLABS_API_KEY:   ${{ secrets.ELEVENLABS_API_KEY }}
           TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python automation/daily_post.py

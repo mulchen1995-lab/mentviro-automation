@@ -932,5 +932,222 @@
       ]
     }
   ],
-  "story_queue": []
+  "story_queue": [
+    {
+      "day": 2,
+      "date": "2026-05-18",
+      "status": "pending",
+      "topic": "dark empty road fog cinematic night",
+      "quote": {
+        "text": "Der Unterschied zwischen arm und reich liegt nicht im Geldbeutel, sondern im Denken.",
+        "author": "Robert Kiyosaki"
+      },
+      "tips": {
+        "title": "So denkst du wie Reiche",
+        "items": [
+          "Frag immer: Wie kann ich das?",
+          "Lerne täglich 20 Min. über Geld",
+          "Investiere bevor du ausgibst"
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "date": "2026-05-19",
+      "status": "pending",
+      "topic": "dark flowing water river long exposure night",
+      "quote": {
+        "text": "Reiche kaufen zuerst Assets. Arme kaufen zuerst Konsum.",
+        "author": "Robert Kiyosaki"
+      },
+      "tips": {
+        "title": "Cashflow aufbauen in 3 Schritten",
+        "items": [
+          "Richte einen ETF-Sparplan ein",
+          "Wähle Dividenden-Aktien gezielt",
+          "Reinvestiere jeden Ertrag sofort"
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "date": "2026-05-20",
+      "status": "pending",
+      "topic": "dark glass skyscraper reflection city night",
+      "quote": {
+        "text": "Es ist nicht wie viel du verdienst — es ist wie viel du behältst.",
+        "author": "Robert Kiyosaki"
+      },
+      "tips": {
+        "title": "Steuern legal optimieren",
+        "items": [
+          "Setze Betriebsausgaben ab",
+          "Gründe ein Gewerbe oder GbR",
+          "Lerne die Grundlagen des Steuerrechts"
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "date": "2026-05-22",
+      "status": "pending",
+      "topic": "dark ocean waves aerial drone night cinematic",
+      "quote": {
+        "text": "Wenn du keinen Weg findest, im Schlaf Geld zu verdienen, arbeitest du bis du stirbst.",
+        "author": "Warren Buffett"
+      },
+      "tips": {
+        "title": "Passives Einkommen starten",
+        "items": [
+          "Spare sofort 10% deines Einkommens",
+          "Investiere in breit gestreute ETFs",
+          "Reinvestiere Dividenden konsequent"
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "date": "2026-05-23",
+      "status": "pending",
+      "topic": "dark luxury apartment interior minimal night",
+      "quote": {
+        "text": "Reiche kaufen Assets. Arme kaufen Liabilities, die sie für Assets halten.",
+        "author": "Robert Kiyosaki"
+      },
+      "tips": {
+        "title": "Assets vs. Liabilities erkennen",
+        "items": [
+          "Liste deine Assets schriftlich auf",
+          "Trenne Konsum klar von Investment",
+          "Kaufe immer zuerst Vermögenswerte"
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "date": "2026-05-24",
+      "status": "pending",
+      "topic": "dark spiral staircase symmetry cinematic minimal",
+      "quote": {
+        "text": "Der Zinseszins ist das achte Weltwunder. Wer ihn versteht, verdient ihn. Wer nicht, zahlt ihn.",
+        "author": "Albert Einstein"
+      },
+      "tips": {
+        "title": "Compound-Effekt nutzen",
+        "items": [
+          "Fange heute an, nicht morgen",
+          "Reinvestiere alle Erträge sofort",
+          "Denke in Jahrzehnten, nicht Jahren"
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "date": "2026-05-25",
+      "status": "pending",
+      "topic": "dark gear mechanism industrial macro cinematic",
+      "quote": {
+        "text": "Gib mir einen langen Hebel und einen festen Punkt — und ich hebe die Welt aus den Angeln.",
+        "author": "Archimedes"
+      },
+      "tips": {
+        "title": "Leverage einsetzen ab heute",
+        "items": [
+          "Nutze Kapital als ersten Hebel",
+          "Baue Schritt für Schritt ein Team auf",
+          "Erstelle einmal skalierbaren Content"
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "date": "2026-05-26",
+      "status": "pending",
+      "topic": "dark morning desk lamp book minimal aesthetic",
+      "quote": {
+        "text": "Qualität ist keine Handlung. Sie ist eine Gewohnheit.",
+        "author": "Aristoteles"
+      },
+      "tips": {
+        "title": "Millionärs-Gewohnheiten starten",
+        "items": [
+          "Lese täglich mindestens 20 Minuten",
+          "Tracke jeden Tag deine Ausgaben",
+          "Investiere vor jedem Konsum"
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "date": "2026-05-27",
+      "status": "pending",
+      "topic": "dark crowd fog silhouette aerial dramatic",
+      "quote": {
+        "text": "Der größte Feind deines Reichtums bist du selbst.",
+        "author": "@mentviro"
+      },
+      "tips": {
+        "title": "Raus aus der 99%-Falle",
+        "items": [
+          "Denke in Systemen, nicht in Jobs",
+          "Zahle zuerst dir selbst",
+          "Handle heute, warte nie"
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "date": "2026-05-28",
+      "status": "pending",
+      "topic": "dark abstract geometric light minimal cinematic",
+      "quote": {
+        "text": "Finanzielle Freiheit beginnt mit dem ersten systematischen Schritt.",
+        "author": "@mentviro"
+      },
+      "tips": {
+        "title": "Das 50-30-20 Prinzip umsetzen",
+        "items": [
+          "50% max für Lebenshaltungskosten",
+          "30% direkt investieren — immer",
+          "20% für Wachstum und Erlebnisse"
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "date": "2026-05-29",
+      "status": "pending",
+      "topic": "dark ancient marble statue dramatic light",
+      "quote": {
+        "text": "Die größte Macht besitzt, wer die Kontrolle über seine eigenen Gedanken hat.",
+        "author": "Marc Aurel"
+      },
+      "tips": {
+        "title": "Wie ein Stoiker investieren",
+        "items": [
+          "Fokussiere nur das Kontrollierbare",
+          "Lebe bewusst unter deinen Möglichkeiten",
+          "Investiere ruhig und langfristig"
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "date": "2026-05-30",
+      "status": "pending",
+      "topic": "dark city network aerial lights connection night",
+      "quote": {
+        "text": "Du bist der Durchschnitt der fünf Menschen, mit denen du die meiste Zeit verbringst.",
+        "author": "Jim Rohn"
+      },
+      "tips": {
+        "title": "Dein Netzwerk upgraden",
+        "items": [
+          "Umgib dich mit wachstumsorientierten Menschen",
+          "Geh auf Business-Events und Meetups",
+          "Gib zuerst Wert — dann nimm"
+        ]
+      }
+    }
+  ]
 }
