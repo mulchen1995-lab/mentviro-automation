@@ -31,15 +31,16 @@ jobs:
 
       - name: Post reel
         env:
-          RUN_MODE:             reel
-          IG_USERNAME:          mentviro
-          IG_PASSWORD:          ${{ secrets.IG_PASSWORD }}
-          IG_SESSION:           ${{ secrets.IG_SESSION }}
-          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
-          PEXELS_API_KEY:       ${{ secrets.PEXELS_API_KEY }}
-          ELEVENLABS_API_KEY:   ${{ secrets.ELEVENLABS_API_KEY }}
-          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+          RUN_MODE:               reel
+          IG_USERNAME:            mentviro
+          COMPOSIO_API_KEY:       ${{ secrets.COMPOSIO_API_KEY }}
+          COMPOSIO_IG_ACCOUNT_ID: instagram_droppy-scheme
+          IG_USER_ID:             "27099223616375704"
+          GEMINI_API_KEY:         ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY:         ${{ secrets.PEXELS_API_KEY }}
+          ELEVENLABS_API_KEY:     ${{ secrets.ELEVENLABS_API_KEY }}
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python automation/daily_post.py
 
       - name: Commit plan + dashboard

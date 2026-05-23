@@ -491,41 +491,66 @@ def build_tips_story(story_data: dict):
 
 # ─── INSTAGRAM CLIENT ────────────────────────────────────────────────────────
 
-_ig_client = None
+# ─── COMPOSIO INSTAGRAM CLIENT ───────────────────────────────────────────────
 
-def get_ig_client():
-    global _ig_client
-    if _ig_client is not None:
-        return _ig_client
-    from instagrapi import Client
-    username = os.environ.get("IG_USERNAME", "mentviro")
-    password = os.environ.get("IG_PASSWORD")
-    if not password:
-        raise RuntimeError("IG_PASSWORD not set")
-    session_json = os.environ.get("IG_SESSION", "")
-    if session_json:
-        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
-            f.write(session_json)
-            tmp_path = f.name
-        cl = Client()
-        cl.delay_range = [1, 3]
-        cl.load_settings(tmp_path)
-        os.unlink(tmp_path)
-        print("  IG session loaded")
-        _ig_client = cl
-        return cl
-    cl = Client()
-    cl.delay_range = [1, 3]
-    cl.login(username, password)
-    print("  IG login OK")
-    _ig_client = cl
-    return cl
+COMPOSIO_KEY       = os.environ.get("COMPOSIO_API_KEY", "")
+COMPOSIO_IG_ACCT   = os.environ.get("COMPOSIO_IG_ACCOUNT_ID", "instagram_droppy-scheme")
+COMPOSIO_IG_USER   = os.environ.get("IG_USER_ID", "27099223616375704")
+_COMPOSIO_BASE     = "https://backend.composio.dev/api/v2/actions"
+
+def _composio(action: str, params: dict) -> dict:
+    if not COMPOSIO_KEY:
+        raise RuntimeError("COMPOSIO_API_KEY not set")
+    r = requests.post(
+        f"{_COMPOSIO_BASE}/{action}/execute",
+        headers={"x-api-key": COMPOSIO_KEY, "Content-Type": "application/json"},
+        json={"input": params, "connectedAccountId": COMPOSIO_IG_ACCT},
+        timeout=180,
+    )
+    r.raise_for_status()
+    return r.json()
+
+def _upload_image(img_bytes: bytes, filename: str) -> str:
+    """Upload image bytes to a public host; returns HTTPS URL."""
+    hosts = [
+        lambda: _upload_litterbox(img_bytes, filename),
+        lambda: _upload_0x0(img_bytes, filename),
+        lambda: _upload_composio_sl(img_bytes, filename),
+    ]
+    for fn in hosts:
+        try:
+            url = fn()
+            if url and url.startswith("https://"):
+                return url
+        except Exception as e:
+            print(f"    host failed: {e}")
+    raise RuntimeError(f"All image hosts failed for {filename}")
+
+def _upload_litterbox(img_bytes, filename):
+    r = requests.post("https://litterbox.catbox.moe/resources/internals/api.php",
+        data={"reqtype": "fileupload", "time": "72h"},
+        files={"fileToUpload": (filename, img_bytes, "image/jpeg")}, timeout=30)
+    return r.text.strip() if r.status_code == 200 and r.text.startswith("https://") else None
+
+def _upload_0x0(img_bytes, filename):
+    r = requests.post("https://0x0.st",
+        files={"file": (filename, img_bytes, "image/jpeg")}, timeout=30)
+    return r.text.strip() if r.status_code == 200 else None
+
+def _upload_composio_sl(img_bytes, filename):
+    r = requests.post(
+        "https://backend.composio.dev/api/v3/files/upload",
+        headers={"x-api-key": COMPOSIO_KEY},
+        files={"file": (filename, img_bytes, "image/jpeg")}, timeout=30)
+    if r.status_code == 200:
+        data = r.json()
+        return data.get("url") or data.get("data", {}).get("url")
+    return None
 
 # ─── ENGAGEMENT TRACKING ─────────────────────────────────────────────────────
 
 def fetch_and_store_insights(plan):
     updated = False
-    cl      = None
     cutoff  = (date.today() - timedelta(days=30)).isoformat()
     for post in plan["posts"]:
         if post.get("status") != "published" or not post.get("post_id"):
@@ -533,12 +558,14 @@ def fetch_and_store_insights(plan):
         if post.get("insights") or post.get("date", "9999") < cutoff:
             continue
         try:
-            if cl is None:
-                cl = get_ig_client()
-            info = cl.media_info(int(post["post_id"]))
+            res  = _composio("INSTAGRAM_GET_IG_MEDIA", {
+                "ig_media_id": post["post_id"],
+                "fields": "id,like_count,comments_count",
+            })
+            data = res.get("data", {})
             post["insights"] = {
-                "likes":    getattr(info, "like_count",    0),
-                "comments": getattr(info, "comment_count", 0),
+                "likes":    data.get("like_count",    0),
+                "comments": data.get("comments_count", 0),
             }
             score = post["insights"]["likes"] * 2 + post["insights"]["comments"] * 5
             print(f"  Insights Day {post['day']} ({post['type']}): "
@@ -795,30 +822,34 @@ Schema fuer jedes Objekt:
 def run_carousel(post, plan):
     print(f"Building carousel: {post['topic']}")
     pexels_queries = post.get("pexels_queries", [])
-    tmp_paths      = []
-    try:
-        for i, slide in enumerate(post["slides"]):
-            print(f"  Slide {i+1}/{len(post['slides'])}...", end=" ", flush=True)
-            bg_img = None
-            if not slide.get("is_cover") and pexels_queries:
-                bg_img = pexels_portrait(pexels_queries[min(i, len(pexels_queries)-1)])
-            img_bytes = build_carousel_slide(slide, bg_img)
-            path = f"{TMPDIR}/mentviro_d{post['day']}_s{i+1}.jpg"
-            with open(path, "wb") as f:
-                f.write(img_bytes)
-            tmp_paths.append(path)
-            print("ok")
-            time.sleep(0.4)
+    image_urls = []
+    for i, slide in enumerate(post["slides"]):
+        print(f"  Slide {i+1}/{len(post['slides'])}...", end=" ", flush=True)
+        bg_img = None
+        if not slide.get("is_cover") and pexels_queries:
+            bg_img = pexels_portrait(pexels_queries[min(i, len(pexels_queries)-1)])
+        img_bytes = build_carousel_slide(slide, bg_img)
+        url = _upload_image(img_bytes, f"mentviro_d{post['day']}_s{i+1}.jpg")
+        image_urls.append(url)
+        print(f"ok → {url[:50]}")
+        time.sleep(0.4)
 
-        print("  Uploading carousel...")
-        cl    = get_ig_client()
-        media = cl.album_upload(tmp_paths, caption=post["caption"])
-        print(f"  Carousel live! ID: {media.pk}")
-        return str(media.pk)
-    finally:
-        for p in tmp_paths:
-            try: os.unlink(p)
-            except Exception: pass
+    print("  Creating carousel container...")
+    res = _composio("INSTAGRAM_CREATE_CAROUSEL_CONTAINER", {
+        "ig_user_id": COMPOSIO_IG_USER,
+        "caption": post["caption"],
+        "child_image_urls": image_urls,
+    })
+    creation_id = res["data"]["id"]
+    print(f"  Publishing (container {creation_id})...")
+    pub = _composio("INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH", {
+        "ig_user_id": COMPOSIO_IG_USER,
+        "creation_id": creation_id,
+        "max_wait_seconds": 120,
+    })
+    media_id = pub["data"]["id"]
+    print(f"  Carousel live! ID: {media_id}")
+    return media_id
 
 # ─── REEL WORKFLOW ───────────────────────────────────────────────────────────
 
@@ -852,26 +883,31 @@ def _reel_as_carousel(post, plan):
                    "body":  ["Folge @mentviro", "fuer taeglich mehr."]})
 
     pq = post.get("pexels_video_query", "dark city cinematic night")
-    tmp_paths = []
-    try:
-        for i, slide in enumerate(slides):
-            print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
-            bg_img = None if slide.get("is_cover") else pexels_portrait(pq, target_w=SW, target_h=SH)
-            img_bytes = build_carousel_slide(slide, bg_img, w=SW, h=SH)
-            path = f"{TMPDIR}/mentviro_reel_fb_d{post['day']}_s{i+1}.jpg"
-            with open(path, "wb") as f:
-                f.write(img_bytes)
-            tmp_paths.append(path)
-            print("ok")
-            time.sleep(0.4)
-        cl    = get_ig_client()
-        media = cl.album_upload(tmp_paths, caption=post["caption"])
-        print(f"  Reel-Carousel live! ID: {media.pk}")
-        return str(media.pk)
-    finally:
-        for p in tmp_paths:
-            try: os.unlink(p)
-            except Exception: pass
+    image_urls = []
+    for i, slide in enumerate(slides):
+        print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
+        bg_img = None if slide.get("is_cover") else pexels_portrait(pq, target_w=SW, target_h=SH)
+        img_bytes = build_carousel_slide(slide, bg_img, w=SW, h=SH)
+        url = _upload_image(img_bytes, f"mentviro_reel_fb_d{post['day']}_s{i+1}.jpg")
+        image_urls.append(url)
+        print(f"ok → {url[:50]}")
+        time.sleep(0.4)
+
+    print("  Creating reel-carousel container...")
+    res = _composio("INSTAGRAM_CREATE_CAROUSEL_CONTAINER", {
+        "ig_user_id": COMPOSIO_IG_USER,
+        "caption": post["caption"],
+        "child_image_urls": image_urls,
+    })
+    creation_id = res["data"]["id"]
+    pub = _composio("INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH", {
+        "ig_user_id": COMPOSIO_IG_USER,
+        "creation_id": creation_id,
+        "max_wait_seconds": 120,
+    })
+    media_id = pub["data"]["id"]
+    print(f"  Reel-Carousel live! ID: {media_id}")
+    return media_id
 
 def run_reel(post, plan):
     import subprocess
@@ -932,13 +968,26 @@ def run_reel(post, plan):
         thumb_path  = None
 
     try:
-        cl    = get_ig_client()
-        media = cl.clip_upload(final_video, caption=post["caption"],
-                               thumbnail=thumb_path if thumb_path and os.path.exists(thumb_path) else None)
-        print(f"  Reel live! ID: {media.pk}")
-        return str(media.pk)
+        print("  Uploading reel video...")
+        video_url = _upload_image(open(final_video, "rb").read(),
+                                  f"mentviro_reel_d{post['day']}.mp4")
+        res = _composio("INSTAGRAM_POST_IG_USER_MEDIA", {
+            "ig_user_id": COMPOSIO_IG_USER,
+            "video_url": video_url,
+            "caption": post["caption"],
+            "media_type": "REELS",
+        })
+        creation_id = res["data"]["id"]
+        pub = _composio("INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH", {
+            "ig_user_id": COMPOSIO_IG_USER,
+            "creation_id": creation_id,
+            "max_wait_seconds": 180,
+        })
+        media_id = pub["data"]["id"]
+        print(f"  Reel live! ID: {media_id}")
+        return media_id
     except Exception as e:
-        print(f"  clip_upload failed ({type(e).__name__}): {e} — fallback")
+        print(f"  Reel upload failed ({type(e).__name__}): {e} — fallback to carousel")
         return _reel_as_carousel(post, plan)
     finally:
         for p in [raw_path, conv_path, thumb_path]:
@@ -952,28 +1001,25 @@ def run_attached_story(post):
     """Post the story that is attached to a carousel/reel."""
     print("  Posting attached story...")
     story_bytes = build_attached_story(post)
-    path = f"{TMPDIR}/mentviro_story_d{post['day']}.jpg"
-    with open(path, "wb") as f:
-        f.write(story_bytes)
     try:
-        cl = get_ig_client()
-        stickers = []
-        poll_q   = post.get("story_poll", "")
-        if poll_q:
-            try:
-                from instagrapi.types import StoryPoll
-                stickers = [StoryPoll(x=0.5, y=0.72, width=0.9, height=0.14,
-                                      question=poll_q,
-                                      tallies=[{"text": "Ja"}, {"text": "Nein"}])]
-            except Exception:
-                pass
-        media = cl.photo_upload_to_story(path, stickers=stickers) if stickers \
-            else cl.photo_upload_to_story(path)
-        print(f"  Story live! ID: {media.pk}")
-        return str(media.pk)
-    finally:
-        try: os.unlink(path)
-        except Exception: pass
+        url = _upload_image(story_bytes, f"mentviro_story_d{post['day']}.jpg")
+        res = _composio("INSTAGRAM_POST_IG_USER_MEDIA", {
+            "ig_user_id": COMPOSIO_IG_USER,
+            "image_url": url,
+            "media_type": "STORIES",
+        })
+        creation_id = res["data"]["id"]
+        pub = _composio("INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH", {
+            "ig_user_id": COMPOSIO_IG_USER,
+            "creation_id": creation_id,
+            "max_wait_seconds": 60,
+        })
+        media_id = pub["data"]["id"]
+        print(f"  Story live! ID: {media_id}")
+        return media_id
+    except Exception as e:
+        print(f"  Story failed: {e}")
+        return None
 
 def run_daily_stories(plan):
     """Post today's standalone quote story + tips story."""
@@ -983,20 +1029,26 @@ def run_daily_stories(plan):
         return None, None
 
     print(f"Building daily stories for: {sd.get('date')}")
-    cl = get_ig_client()
+    def _post_story(img_bytes, name):
+        url = _upload_image(img_bytes, name)
+        res = _composio("INSTAGRAM_POST_IG_USER_MEDIA", {
+            "ig_user_id": COMPOSIO_IG_USER,
+            "image_url": url,
+            "media_type": "STORIES",
+        })
+        pub = _composio("INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH", {
+            "ig_user_id": COMPOSIO_IG_USER,
+            "creation_id": res["data"]["id"],
+            "max_wait_seconds": 60,
+        })
+        return pub["data"]["id"]
 
     # Quote story
     print("  Quote story...", end=" ", flush=True)
     quote_id = None
     try:
-        qbytes = build_quote_story(sd)
-        qpath  = f"{TMPDIR}/mentviro_quote_{sd['day']}.jpg"
-        with open(qpath, "wb") as f:
-            f.write(qbytes)
-        media    = cl.photo_upload_to_story(qpath)
-        quote_id = str(media.pk)
+        quote_id = _post_story(build_quote_story(sd), f"mentviro_quote_{sd['day']}.jpg")
         print(f"ok (ID: {quote_id})")
-        os.unlink(qpath)
     except Exception as e:
         print(f"failed: {e}")
 
@@ -1006,14 +1058,8 @@ def run_daily_stories(plan):
     print("  Tips story...", end=" ", flush=True)
     tips_id = None
     try:
-        tbytes = build_tips_story(sd)
-        tpath  = f"{TMPDIR}/mentviro_tips_{sd['day']}.jpg"
-        with open(tpath, "wb") as f:
-            f.write(tbytes)
-        media   = cl.photo_upload_to_story(tpath)
-        tips_id = str(media.pk)
+        tips_id = _post_story(build_tips_story(sd), f"mentviro_tips_{sd['day']}.jpg")
         print(f"ok (ID: {tips_id})")
-        os.unlink(tpath)
     except Exception as e:
         print(f"failed: {e}")
 
