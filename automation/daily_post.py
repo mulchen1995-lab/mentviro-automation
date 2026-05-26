@@ -36,11 +36,11 @@ SCHEDULE = {"reel": "07:00", "stories": "12:00", "carousel": "18:00"}
 # ─── PLAN ────────────────────────────────────────────────────────────────────
 
 def load_plan():
-    with open(PLAN_FILE) as f:
+    with open(PLAN_FILE, encoding='utf-8') as f:
         return json.load(f)
 
 def save_plan(plan):
-    with open(PLAN_FILE, "w") as f:
+    with open(PLAN_FILE, "w", encoding='utf-8') as f:
         json.dump(plan, f, indent=2, ensure_ascii=False)
 
 def get_todays_post(plan, post_type: str):
