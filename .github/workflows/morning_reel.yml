@@ -52,10 +52,12 @@ jobs:
         run: python automation/daily_post.py
 
       - name: Commit plan + dashboard
-        shell: bash
+        shell: powershell -ExecutionPolicy Bypass -Command "& '{0}'"
         run: |
           git config user.name "mentviro-bot"
           git config user.email "bot@mentviro.com"
-          git add automation/content_plan.json docs/index.html || true
-          git diff --cached --quiet || git commit -m "chore: reel $(date +%Y-%m-%d)"
+          git add automation/content_plan.json docs/index.html 2>$null; $true
+          $today = Get-Date -Format "yyyy-MM-dd"
+          git diff --cached --quiet
+          if ($LASTEXITCODE -ne 0) { git commit -m "chore: reel $today" }
           git push
