@@ -16,7 +16,7 @@ jobs:
 
       - name: Install Montserrat (Windows)
         if: runner.os == 'Windows'
-        shell: powershell
+        shell: powershell -ExecutionPolicy Bypass -Command "& '{0}'"
         run: |
           foreach ($w in @("Regular","Bold")) {
             $d = "C:\Windows\Fonts\Montserrat-$w.ttf"
