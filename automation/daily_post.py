@@ -491,10 +491,14 @@ def build_tips_story(story_data: dict):
 
 # ─── INSTAGRAM CLIENT ────────────────────────────────────────────────────────
 
-_ig_client = None
+_ig_client      = None
+_ig_login_error = None   # Set once login fails — prevents repeated retry spam
 
 def get_ig_client():
-    global _ig_client
+    global _ig_client, _ig_login_error
+    # If we already know login is broken this run, raise immediately (no spam)
+    if _ig_login_error is not None:
+        raise _ig_login_error
     if _ig_client is not None:
         return _ig_client
     from instagrapi import Client
@@ -511,26 +515,43 @@ def get_ig_client():
         cl.delay_range = [1, 3]
         cl.load_settings(tmp_path)
         os.unlink(tmp_path)
-        # Validate the session — if it's dead, relogin
+        # Validate the session — if it's dead, try one relogin
         try:
             cl.get_timeline_feed()
             print("  IG session loaded + validated OK")
         except Exception as val_err:
-            print(f"  IG session stale ({val_err}) — doing full relogin...")
+            print(f"  IG session stale ({val_err}) — attempting relogin...")
             send_telegram(
-                "<b>mentviro-bot</b>: Session abgelaufen, versuche Relogin..."
+                "<b>mentviro-bot</b>: IG-Session abgelaufen — versuche Relogin...\n"
+                f"<code>{val_err}</code>"
             )
-            cl = Client()
-            cl.delay_range = [1, 3]
-            cl.login(username, password)
-            print("  IG relogin OK")
-            send_telegram("<b>mentviro-bot</b>: Relogin erfolgreich! ✅")
+            try:
+                cl = Client()
+                cl.delay_range = [1, 3]
+                cl.login(username, password)
+                print("  IG relogin OK")
+                send_telegram("<b>mentviro-bot</b>: Relogin erfolgreich! ✅")
+            except Exception as relogin_err:
+                msg = (
+                    "<b>mentviro-bot</b>: ⛔ Relogin fehlgeschlagen!\n"
+                    f"<code>{relogin_err}</code>\n\n"
+                    "Bitte Router neu starten (neue IP) und dann:\n"
+                    "<code>python \"D:\\Claude Council\\refresh_ig_session.py\"</code>"
+                )
+                send_telegram(msg)
+                print(f"  Relogin failed: {relogin_err}")
+                _ig_login_error = relogin_err
+                raise relogin_err
         _ig_client = cl
         return cl
     cl = Client()
     cl.delay_range = [1, 3]
-    cl.login(username, password)
-    print("  IG login OK")
+    try:
+        cl.login(username, password)
+        print("  IG login OK")
+    except Exception as login_err:
+        _ig_login_error = login_err
+        raise login_err
     _ig_client = cl
     return cl
 
