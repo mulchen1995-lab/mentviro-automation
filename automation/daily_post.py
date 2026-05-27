@@ -511,7 +511,20 @@ def get_ig_client():
         cl.delay_range = [1, 3]
         cl.load_settings(tmp_path)
         os.unlink(tmp_path)
-        print("  IG session loaded")
+        # Validate the session — if it's dead, relogin
+        try:
+            cl.get_timeline_feed()
+            print("  IG session loaded + validated OK")
+        except Exception as val_err:
+            print(f"  IG session stale ({val_err}) — doing full relogin...")
+            send_telegram(
+                "<b>mentviro-bot</b>: Session abgelaufen, versuche Relogin..."
+            )
+            cl = Client()
+            cl.delay_range = [1, 3]
+            cl.login(username, password)
+            print("  IG relogin OK")
+            send_telegram("<b>mentviro-bot</b>: Relogin erfolgreich! ✅")
         _ig_client = cl
         return cl
     cl = Client()
