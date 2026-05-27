@@ -182,6 +182,19 @@ def init_colors(plan):
 
 MARGIN = 90   # px — safe zone left & right, prevents text from touching edges
 
+# ─── DESIGN VARIANTS ─────────────────────────────────────────────────────────
+# Accent color alternates per post: silver (standard) vs gold (warm variant)
+STYLE_ACCENTS = {
+    "silver": (192, 192, 192),
+    "gold":   (201, 168,  76),   # warm gold #C9A84C
+}
+_build_accent = (192, 192, 192)  # current accent — set via set_build_accent()
+
+def set_build_accent(post_or_story):
+    global _build_accent
+    style = post_or_story.get("style", "silver") if isinstance(post_or_story, dict) else "silver"
+    _build_accent = STYLE_ACCENTS.get(style, STYLE_ACCENTS["silver"])
+
 def text_width(text, font_size, bold=False):
     return fnt(font_size, bold).getbbox(text)[2]
 
@@ -194,7 +207,7 @@ def fit_font_size(text, max_width, start_size, bold=False, min_size=28):
 
 def draw_base_frame(img_rgba, w=W, h=H, is_bw=False, slide_num=None, badge=None):
     d    = ImageDraw.Draw(img_rgba)
-    ACC  = COLORS["white"] if is_bw else COLORS["silver"]
+    ACC  = COLORS["white"] if is_bw else _build_accent
     BODY = (180, 180, 180) if is_bw else COLORS["dark"]
     d.rectangle([(0, 0), (w, 5)], fill=ACC)
     d.rectangle([(0, h-5), (w, h)], fill=ACC)
@@ -323,8 +336,7 @@ def build_attached_story(post):
         od.line([(0, y), (SW, y)], fill=(0, 0, 0, int(155 + (y / SH) * 80)))
     img = Image.alpha_composite(bg.convert("RGBA"), ov)
     d   = ImageDraw.Draw(img)
-    SIL = COLORS["silver"]
-
+    SIL = _build_accent
     d.rectangle([(0, 0), (SW, 7)], fill=SIL)
     d.text((MARGIN, 55), "@mentviro", font=fnt(40, True), fill=SIL)
     d.rectangle([(MARGIN, 108), (MARGIN + 140, 115)], fill=SIL)
@@ -365,7 +377,7 @@ def build_quote_story(story_data: dict):
         od.line([(0, y), (SW, y)], fill=(0, 0, 0, int(185 + (y / SH) * 50)))
     img = Image.alpha_composite(bg.convert("RGBA"), ov)
     d   = ImageDraw.Draw(img)
-    SIL = COLORS["silver"]
+    SIL = _build_accent
     WHT = COLORS["white"]
 
     # Top bar + badge
@@ -433,7 +445,7 @@ def build_tips_story(story_data: dict):
         od.line([(0, y), (SW, y)], fill=(0, 0, 0, int(190 + (y / SH) * 45)))
     img = Image.alpha_composite(bg.convert("RGBA"), ov)
     d   = ImageDraw.Draw(img)
-    SIL = COLORS["silver"]
+    SIL = _build_accent
     WHT = COLORS["white"]
 
     # Top bar
@@ -533,10 +545,10 @@ def get_ig_client():
                 send_telegram("<b>mentviro-bot</b>: Relogin erfolgreich! ✅")
             except Exception as relogin_err:
                 msg = (
-                    "<b>mentviro-bot</b>: ⛔ Relogin fehlgeschlagen!\n"
+                    "<b>mentviro-bot</b>: ⛔ Relogin fehlgeschlagen — IP geblockt!\n"
                     f"<code>{relogin_err}</code>\n\n"
-                    "Bitte Router neu starten (neue IP) und dann:\n"
-                    "<code>python \"D:\\Claude Council\\refresh_ig_session.py\"</code>"
+                    "Führe aus (reconnectet Fritz!Box + erneuert Session):\n"
+                    "<code>python \"D:\\Claude Council\\refresh_ig_session.py\" --fritz</code>"
                 )
                 send_telegram(msg)
                 print(f"  Relogin failed: {relogin_err}")
@@ -625,10 +637,18 @@ def update_posting_time_stats(plan):
         best = max(avg, key=avg.get)
         recommendations[post_type] = best
         scheduled_utc = {"reel": 5, "carousel": 16}.get(post_type, 16)
-        if best != scheduled_utc and len(hours) >= 5:
-            cet = best + 2
-            print(f"  Posting-time tip [{post_type}]: best avg at {best}:00 UTC ({cet}:00 CET), "
-                  f"currently {scheduled_utc}:00 UTC. Consider updating cron.")
+        total_posts = sum(len(v) for v in hours.values())
+        if best != scheduled_utc and total_posts >= 5:
+            cet_best = best + 2
+            cet_curr = scheduled_utc + 2
+            print(f"  Posting-time tip [{post_type}]: best avg at {best}:00 UTC ({cet_best}:00 CET), "
+                  f"currently {scheduled_utc}:00 UTC.")
+            send_telegram(
+                f"📊 <b>mentviro-bot</b>: Bessere Posting-Zeit für {post_type.upper()}\n"
+                f"Aktuell: {cet_curr}:00 Uhr CET\n"
+                f"Empfehlung: {cet_best}:00 Uhr CET\n"
+                f"(Basierend auf {total_posts} Posts)"
+            )
     plan["settings"]["posting_stats"] = recommendations
     save_plan(plan)
 
@@ -693,7 +713,17 @@ def check_and_refill_content(plan):
     pending_carousels = [p for p in plan["posts"] if p["status"]=="pending" and p.get("type")=="carousel"]
     pending_stories   = [s for s in plan.get("story_queue",[]) if s["status"]=="pending"]
 
-    if len(pending_reels) >= 3 and len(pending_carousels) >= 3 and len(pending_stories) >= 3:
+    # Date-based check: also refill if latest pending post is within 5 days
+    try:
+        latest_date = max(
+            date.fromisoformat(p["date"]) for p in plan["posts"] if p["status"] == "pending"
+        ) if any(p["status"] == "pending" for p in plan["posts"]) else date.today()
+        days_remaining = (latest_date - date.today()).days
+    except Exception:
+        days_remaining = 0
+
+    if (len(pending_reels) >= 3 and len(pending_carousels) >= 3 and
+            len(pending_stories) >= 3 and days_remaining >= 5):
         return
 
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -801,16 +831,18 @@ Schema fuer jedes Objekt:
             d = (start_date + timedelta(days=i)).isoformat()
             day_num = last_day + i + 1
 
+            style = "gold" if day_num % 2 == 0 else "silver"
+
             reel = pkg.get("reel", {})
-            reel.update({"day": day_num, "date": d, "type": "reel", "status": "pending"})
+            reel.update({"day": day_num, "date": d, "type": "reel", "status": "pending", "style": style})
             new_posts.append(reel)
 
             car = pkg.get("carousel", {})
-            car.update({"day": day_num, "date": d, "type": "carousel", "status": "pending"})
+            car.update({"day": day_num, "date": d, "type": "carousel", "status": "pending", "style": style})
             new_posts.append(car)
 
             stories = pkg.get("stories", {})
-            stories.update({"day": day_num, "date": d, "status": "pending"})
+            stories.update({"day": day_num, "date": d, "status": "pending", "style": style})
             new_stories.append(stories)
 
         plan["posts"].extend(new_posts)
@@ -827,6 +859,7 @@ Schema fuer jedes Objekt:
 # ─── CAROUSEL WORKFLOW ───────────────────────────────────────────────────────
 
 def run_carousel(post, plan):
+    set_build_accent(post)
     print(f"Building carousel: {post['topic']}")
     pexels_queries = post.get("pexels_queries", [])
     tmp_paths      = []
@@ -908,6 +941,7 @@ def _reel_as_carousel(post, plan):
             except Exception: pass
 
 def run_reel(post, plan):
+    set_build_accent(post)
     import subprocess
     print(f"Building reel: {post['topic']}")
 
@@ -1017,6 +1051,7 @@ def run_daily_stories(plan):
         print("No pending stories for today.")
         return None, None
 
+    set_build_accent(sd)
     print(f"Building daily stories for: {sd.get('date')}")
     cl = get_ig_client()
 
@@ -1152,6 +1187,15 @@ def main():
         if not post:
             print("No pending reel. Skipping.")
             return
+        today = date.today().isoformat()
+        if post["date"] < today:
+            days_late = (date.today() - date.fromisoformat(post["date"])).days
+            print(f"  Catching up: Day {post['day']} from {post['date']} ({days_late}d late)")
+            send_telegram(
+                f"♻️ <b>mentviro-bot</b>: Hole verpassten REEL nach\n"
+                f"Tag {post['day']} · {days_late} Tag(e) Verzögerung\n"
+                f"Thema: {post.get('topic','')}"
+            )
         print(f"Day {post['day']} REEL: {post['topic']}\n")
         try:
             media_id = run_reel(post, plan)
@@ -1175,6 +1219,15 @@ def main():
         if not post:
             print("No pending carousel. Skipping.")
             return
+        today = date.today().isoformat()
+        if post["date"] < today:
+            days_late = (date.today() - date.fromisoformat(post["date"])).days
+            print(f"  Catching up: Day {post['day']} from {post['date']} ({days_late}d late)")
+            send_telegram(
+                f"♻️ <b>mentviro-bot</b>: Hole verpassten CAROUSEL nach\n"
+                f"Tag {post['day']} · {days_late} Tag(e) Verzögerung\n"
+                f"Thema: {post.get('topic','')}"
+            )
         print(f"Day {post['day']} CAROUSEL: {post['topic']}\n")
         try:
             media_id = run_carousel(post, plan)
