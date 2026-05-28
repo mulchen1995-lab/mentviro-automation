@@ -44,8 +44,22 @@ def save_plan(plan):
         json.dump(plan, f, indent=2, ensure_ascii=False)
 
 def get_todays_post(plan, post_type: str):
-    """Return today's pending post of the given type, or next pending if none today."""
+    """Return today's pending post of the given type, or next pending if none today.
+    Guards against duplicate posting: skips posts published within last 6h."""
     today = date.today().isoformat()
+    # Hard guard: if today's post was already published recently, never re-post
+    for post in plan["posts"]:
+        if post["date"] == today and post.get("type") == post_type and post["status"] == "published":
+            pub = post.get("published_at", "")
+            if pub:
+                try:
+                    pub_dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
+                    age_h  = (datetime.now(pub_dt.tzinfo) - pub_dt).total_seconds() / 3600
+                    if age_h < 6:
+                        print(f"  {post_type} for {today} already published {age_h:.1f}h ago — skipping.")
+                        return None
+                except Exception:
+                    pass
     for post in plan["posts"]:
         if post["date"] == today and post["status"] == "pending" and post.get("type") == post_type:
             return post
@@ -55,9 +69,23 @@ def get_todays_post(plan, post_type: str):
     return None
 
 def get_todays_stories(plan):
-    """Return today's pending story-pair, or next pending if none today."""
+    """Return today's pending story-pair, or next pending if none today.
+    Guards against duplicate posting: skips stories published within last 6h."""
     today = date.today().isoformat()
     sq = plan.get("story_queue", [])
+    # Hard guard: if today's story was already published recently, never re-post
+    for s in sq:
+        if s["date"] == today and s["status"] == "published":
+            pub = s.get("published_at", "")
+            if pub:
+                try:
+                    pub_dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
+                    age_h  = (datetime.now(pub_dt.tzinfo) - pub_dt).total_seconds() / 3600
+                    if age_h < 6:
+                        print(f"  Stories for {today} already published {age_h:.1f}h ago — skipping.")
+                        return None
+                except Exception:
+                    pass
     for s in sq:
         if s["date"] == today and s["status"] == "pending":
             return s
