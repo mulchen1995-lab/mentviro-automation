@@ -772,7 +772,7 @@ def check_and_refill_content(plan):
     start_date = max(last_date, last_date_sq) + timedelta(days=1)
 
     DAYS = 3
-    prompt = f"""Du bist viraler Content Creator fuer @mentviro (Business Mindset, Instagram, Deutsch).
+    prompt = f"""Du bist Content Creator fuer @mentviro (Business Mindset, Finanzbildung, Instagram, Deutsch).
 
 Erstelle GENAU {DAYS} Tages-Pakete. Jedes Paket enthaelt:
   1. Ein REEL
@@ -782,14 +782,31 @@ Erstelle GENAU {DAYS} Tages-Pakete. Jedes Paket enthaelt:
 BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 {chr(10).join(f'- {t}' for t in existing_topics[-20:])}
 {trend_context}{engagement_context}
-REGELN:
-- Hooks: "Niemand redet darueber", "Das sagt dir kein Banker", "Bittere Wahrheit", "Hoer sofort damit auf"
-- Zahlen-Listicles, Curiosity-Gap, kontroverse Aussagen
-- Zielgruppe: 20-40 Jahre, Vermoegensaufbau, Deutschland
+⚠️ INSTAGRAM-RICHTLINIEN — PFLICHT (Verstoss fuehrt zu Account-Sperre):
+VERBOTEN:
+- Konkrete Rendite- oder Gewinnversprechen ("verdiene X Euro", "X% Rendite garantiert")
+- Passives-Einkommen-Formeln oder Schritt-fuer-Schritt-Anleitungen zum Geldverdienen
+- Steuer-Tricks oder Aussagen wie "Reiche zahlen weniger Steuern als du"
+- "10x mehr verdienen bei weniger Arbeit" oder aehnliche Get-rich-quick-Aussagen
+- FOMO-Taktiken ("nur heute", "letzte Chance", "du verlierst Geld wenn du jetzt nicht handelst")
+- Falsche Zitate oder nicht belegbare Behauptungen (kein Einstein-Compound-Zitat!)
+- Keine Links oder externe Weiterleitungen in Captions
+- Keine Finanzberatung oder konkrete Kaufempfehlungen fuer Produkte/Broker/Plattformen
+ERLAUBT:
+- Allgemeine Finanzbildung und bekannte Konzepte erklaeren (ETF, Zinseszins, Budgetregeln)
+- Mindset-Content ohne Geldversprechen
+- Historische/philosophische Perspektiven (Stoiker, bekannte Investoren-Zitate)
+- Fragen die zum Nachdenken anregen
+- Sachlicher, motivierender Ton ohne Uebertreibungen
+
+REGELN FUER CONTENT:
+- Hooks: sachlich neugierig, z.B. "Was steckt hinter dem Konzept X", "Wie funktioniert Y wirklich"
+- Kein Clickbait mit "99%", "alle machen diesen Fehler", "das sagen sie dir nicht"
+- Zielgruppe: 20-40 Jahre, Finanzbildung, Deutschland
 - PEXELS QUERIES: cinematic, dunkel, aesthetisch. NIEMALS: businessman, office, suit, handshake
-- Caption: emotional, provokant, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
-- Zitat: echtes oder passendes fiktives Zitat, max 25 Woerter, Business/Erfolg/Mindset-Thema
-- 3 Tipps: kurz, actionable, max 12 Woerter pro Tipp
+- Caption: informativ, reflektierend, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
+- Zitat: NUR echte, belegbare Zitate bekannter Personen. Kein "Einstein sagte..."
+- 3 Tipps: konkret, umsetzbar, max 12 Woerter pro Tipp, keine Geldversprechen
 - story_poll: kurze Ja/Nein oder Entweder/Oder Frage (max 35 Zeichen)
 
 Gib NUR ein JSON-Array mit {DAYS} Objekten aus. Kein Text davor/danach.
