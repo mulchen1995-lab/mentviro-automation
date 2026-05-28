@@ -482,8 +482,8 @@ def build_tips_story(story_data: dict):
     d.text((MARGIN, 62), "BUSINESS MINDSET", font=fnt(17), fill=COLORS["dark"])
     d.rectangle([(MARGIN, 96), (SW - MARGIN, 98)], fill=(70, 70, 70))
 
-    # "3 TIPPS" hero text
-    d.text((MARGIN, 160), "3", font=fnt(180, True), fill=(255, 255, 255, 20))
+    # "3 TIPPS" hero text — ghost-3 rechts oben als rein dekoratives Element
+    d.text((SW - 180, 80), "3", font=fnt(280, True), fill=(255, 255, 255, 12))
     d.text((MARGIN, 145), "3 TIPPS", font=fnt(90, True), fill=WHT)
 
     # Subtitle
@@ -973,7 +973,10 @@ def run_reel(post, plan):
     import subprocess
     print(f"Building reel: {post['topic']}")
 
+    # 1. Voiceover (ElevenLabs) — save to disk so ffmpeg can mix it in
     script_text = " ".join(post.get("script", [post.get("hook", "")]))
+    audio_path  = f"{TMPDIR}/mentviro_reel_d{post['day']}_voice.mp3"
+    audio_ok    = False
     try:
         el_key = os.environ.get("ELEVENLABS_API_KEY",
                                 "1071b6e53cb6e950c63d8e11a05dfa7b07764275cab9fda0ce63104a421c2d37")
@@ -983,10 +986,17 @@ def run_reel(post, plan):
             json={"text": script_text, "model_id": "eleven_multilingual_v2",
                   "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}},
             timeout=60)
-        print(f"  Voiceover: {'OK' if el_r.status_code==200 else el_r.status_code}")
+        if el_r.status_code == 200:
+            with open(audio_path, "wb") as af:
+                af.write(el_r.content)
+            audio_ok = True
+            print(f"  Voiceover: OK ({len(el_r.content)//1024} KB)")
+        else:
+            print(f"  Voiceover: {el_r.status_code}")
     except Exception as e:
         print(f"  Voiceover error: {e}")
 
+    # 2. Pexels video
     video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
     if not video_url:
         print("  No video found — fallback to 9:16 carousel")
@@ -1001,6 +1011,7 @@ def run_reel(post, plan):
         for chunk in r.iter_content(65536): f.write(chunk)
     print(f"  Downloaded: {os.path.getsize(raw_path)/1024/1024:.1f} MB")
 
+    # 3. ffmpeg: scale + loop + mix voiceover
     try:
         probe    = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                    "-of", "csv=p=0", raw_path],
@@ -1010,18 +1021,35 @@ def run_reel(post, plan):
         if duration < 5:
             loops     = max(1, int(20 / max(duration, 0.1)))
             loop_args = ["-stream_loop", str(loops)]
-        subprocess.run(
-            ["ffmpeg", "-y"] + loop_args + [
-                "-i", raw_path,
-                "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,"
-                       "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1",
-                "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-                "-c:a", "aac", "-b:a", "128k", "-t", "30", conv_path],
-            check=True, capture_output=True, timeout=240)
+
+        if audio_ok:
+            # Mix voiceover as audio track — video loops visually, audio plays once
+            subprocess.run(
+                ["ffmpeg", "-y"] + loop_args + [
+                    "-i", raw_path,
+                    "-i", audio_path,
+                    "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,"
+                           "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1",
+                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+                    "-map", "0:v:0", "-map", "1:a:0",
+                    "-c:a", "aac", "-b:a", "128k",
+                    "-shortest", "-t", "60", conv_path],
+                check=True, capture_output=True, timeout=240)
+        else:
+            # No audio — just scale/loop the video
+            subprocess.run(
+                ["ffmpeg", "-y"] + loop_args + [
+                    "-i", raw_path,
+                    "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,"
+                           "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1",
+                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+                    "-an", "-t", "30", conv_path],
+                check=True, capture_output=True, timeout=240)
+
         subprocess.run(
             ["ffmpeg", "-y", "-i", conv_path, "-ss", "0", "-vframes", "1", "-q:v", "2", thumb_path],
             check=True, capture_output=True, timeout=30)
-        print(f"  Re-encoded: {os.path.getsize(conv_path)/1024/1024:.1f} MB")
+        print(f"  Re-encoded: {os.path.getsize(conv_path)/1024/1024:.1f} MB (audio: {audio_ok})")
         final_video = conv_path
     except Exception as e:
         print(f"  ffmpeg failed: {e} — using raw")
@@ -1038,7 +1066,7 @@ def run_reel(post, plan):
         print(f"  clip_upload failed ({type(e).__name__}): {e} — fallback")
         return _reel_as_carousel(post, plan)
     finally:
-        for p in [raw_path, conv_path, thumb_path]:
+        for p in [raw_path, conv_path, thumb_path, audio_path]:
             try:
                 if p and os.path.exists(p): os.unlink(p)
             except Exception: pass
