@@ -35,7 +35,8 @@
         130,
         130
       ]
-    }
+    },
+    "posting_stats": {}
   },
   "posts": [
     {
@@ -814,7 +815,11 @@
       ],
       "post_id": "3907133101954889191",
       "story_id": "3907133512534292917",
-      "published_at": "2026-05-28T16:44:06Z"
+      "published_at": "2026-05-28T16:44:06Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "day": 13,
@@ -1109,7 +1114,7 @@
     {
       "day": 12,
       "date": "2026-05-28",
-      "status": "pending",
+      "status": "published",
       "topic": "dark abstract geometric light minimal cinematic",
       "quote": {
         "text": "Finanzielle Freiheit beginnt mit dem ersten systematischen Schritt.",
@@ -1122,7 +1127,10 @@
           "30% direkt investieren — immer",
           "20% für Wachstum und Erlebnisse"
         ]
-      }
+      },
+      "quote_id": "3907138119952109666",
+      "tips_id": "3907138409443004938",
+      "published_at": "2026-05-28T16:53:48Z"
     },
     {
       "day": 13,
