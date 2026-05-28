@@ -482,8 +482,7 @@ def build_tips_story(story_data: dict):
     d.text((MARGIN, 62), "BUSINESS MINDSET", font=fnt(17), fill=COLORS["dark"])
     d.rectangle([(MARGIN, 96), (SW - MARGIN, 98)], fill=(70, 70, 70))
 
-    # "3 TIPPS" hero text — ghost-3 rechts oben als rein dekoratives Element
-    d.text((SW - 180, 80), "3", font=fnt(280, True), fill=(255, 255, 255, 12))
+    # "3 TIPPS" hero text
     d.text((MARGIN, 145), "3 TIPPS", font=fnt(90, True), fill=WHT)
 
     # Subtitle
