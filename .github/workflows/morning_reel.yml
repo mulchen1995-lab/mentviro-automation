@@ -62,4 +62,5 @@ jobs:
           $today = Get-Date -Format "yyyy-MM-dd"
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) { git commit -m "chore: reel $today" }
+          git pull --rebase
           git push

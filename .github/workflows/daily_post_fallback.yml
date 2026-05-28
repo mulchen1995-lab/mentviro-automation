@@ -112,4 +112,5 @@ jobs:
           git config user.email "bot@mentviro.com"
           git add automation/content_plan.json docs/index.html || true
           git diff --cached --quiet || git commit -m "chore: fallback ${{ steps.mode.outputs.mode }} $(date +%Y-%m-%d)"
+          git pull --rebase
           git push
