@@ -793,7 +793,7 @@
       "date": "2026-05-28",
       "type": "reel",
       "topic": "Das 50-30-20 Prinzip",
-      "status": "pending",
+      "status": "published",
       "hook": "Die meisten wissen nicht wohin ihr Geld jeden Monat verschwindet.",
       "script": [
         "Du verdienst Geld. Und trotzdem bleibt nichts übrig.",
@@ -811,7 +811,10 @@
         "Das 50-30-20",
         "Prinzip für dein Geld",
         "→ Schau jetzt"
-      ]
+      ],
+      "post_id": "3907133101954889191",
+      "story_id": "3907133512534292917",
+      "published_at": "2026-05-28T16:44:06Z"
     },
     {
       "day": 13,
