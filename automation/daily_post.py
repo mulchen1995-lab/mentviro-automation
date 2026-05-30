@@ -391,7 +391,12 @@ def pexels_portrait(query, target_w=W, target_h=H):
             return None
         photo = random.choice(photos[:min(3, len(photos))])
         url   = photo["src"].get("portrait") or photo["src"].get("large2x") or photo["src"].get("large")
-        img_resp = requests.get(url, timeout=30)
+        # Force JPEG format to avoid WEBP compatibility issues on Ubuntu
+        if url and "?" not in url:
+            url += "?auto=compress&cs=tinysrgb&fit=crop&fm=jpg"
+        elif url:
+            url += "&fm=jpg"
+        img_resp = requests.get(url, timeout=30, headers={"Accept": "image/jpeg,image/*"})
         if img_resp.status_code != 200 or not img_resp.content:
             return None
         try:
