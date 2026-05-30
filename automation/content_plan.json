@@ -1,1175 +1,603 @@
 {
-  "account": {
-    "ig_user_id": "27099223616375704",
-    "composio_account": "instagram_droppy-scheme",
-    "pexels_account": "pexels_tierce-helply",
-    "elevenlabs_account": "elevenlabs_garten-divata",
-    "username": "mentviro"
-  },
-  "settings": {
-    "post_time_utc": "16:00",
-    "story_time_utc": "16:05",
-    "colors": {
-      "background": [
-        6,
-        6,
-        6
-      ],
-      "white": [
-        255,
-        255,
-        255
-      ],
-      "silver": [
-        192,
-        192,
-        192
-      ],
-      "light_silver": [
-        220,
-        220,
-        220
-      ],
-      "dark_silver": [
-        130,
-        130,
-        130
-      ]
-    },
-    "posting_stats": {}
-  },
-  "posts": [
-    {
-      "day": 1,
-      "date": "2026-05-17",
-      "type": "carousel",
-      "topic": "5 Denkfehler, die dich arm halten",
-      "status": "published",
-      "post_id": "17888772186377235",
-      "hook": "Du arbeitest 40h/Woche ? und kommst trotzdem nicht weiter.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Du arbeitest 40h/Woche ?",
-            "und kommst trotzdem",
-            "nicht weiter."
-          ],
-          "body": [
-            "Das ist kein Zufall.",
-            "Lies weiter. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "DENKFEHLER #1",
-          "num": "1 / 5",
-          "title": [
-            "Du tauschst",
-            "Zeit gegen Geld"
-          ],
-          "body": [
-            "Reiche bauen Systeme.",
-            "Sie verkaufen keine Zeit."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #2",
-          "num": "2 / 5",
-          "title": [
-            "Du denkst, Schulden",
-            "sind immer schlecht"
-          ],
-          "body": [
-            "Gute Schulden kaufen Assets.",
-            "Schlechte kaufen Konsum."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #3",
-          "num": "3 / 5",
-          "title": [
-            "Du sparst statt",
-            "zu investieren"
-          ],
-          "body": [
-            "Inflation frisst dein Erspartes.",
-            "Investitionen lassen es wachsen."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #4",
-          "num": "4 / 5",
-          "title": [
-            "Du wartest auf",
-            "den richtigen Moment"
-          ],
-          "body": [
-            "Der beste Zeitpunkt war gestern.",
-            "Der zweitbeste: JETZT."
-          ]
-        },
-        {
-          "badge": "DENKFEHLER #5",
-          "num": "5 / 5",
-          "title": [
-            "Du glaubst, das ist",
-            "nichts f?r dich"
-          ],
-          "body": [
-            "Das Mindset ist die",
-            "einzige Grenze, die z?hlt."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "T?gliches Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Die meisten Menschen arbeiten ihr Leben lang hart ? und fragen sich, warum sie nie vorankommen.\n\nDie Wahrheit: Es liegt nicht an der F?higkeit. Es liegt am Denken.\n\nDiese 5 Denkfehler halten 95% der Menschen davon ab, finanziell frei zu werden. ??\n\nWelcher trifft auf dich zu? Schreib's in die Kommentare! ??\n\n#mindset #finanziellefreiheit #richdadpoordad #gelddenken #passiveseinkommen #investieren #mentviro #reichtum #erfolg #motivation #wealthmindset #moneymindset #selbstentwicklung #entrepreneur #financialfreedom",
-      "pexels_queries": [
-        "dark empty road horizon night",
-        "chess king black dramatic",
-        "dark rainy city window",
-        "hourglass sand dark moody",
-        "fog forest dark minimal",
-        "neon city night aerial",
-        "dark mountain silhouette"
-      ],
-      "story_text": [
-        "NEU AUF MENTVIRO",
-        "5 Denkfehler,",
-        "die dich arm halten",
-        "? Sieh dir den Post an"
-      ]
-    },
-    {
-      "day": 2,
-      "date": "2026-05-18",
-      "type": "reel",
-      "topic": "Der Unterschied zwischen arm und reich",
-      "status": "pending",
-      "hook": "Der einzige Unterschied zwischen dir und einem Million?r ist nicht das Geld.",
-      "script": [
-        "Du glaubst, Reiche haben einfach mehr Gl?ck gehabt?",
-        "Falsch. Der einzige Unterschied ist ihr Denken.",
-        "Arme denken: 'Ich kann mir das nicht leisten.'",
-        "Reiche fragen: 'Wie kann ich mir das leisten?'",
-        "Eine Frage ver?ndert alles.",
-        "Folge @mentviro f?r t?gliche Mindset-Shifts."
-      ],
-      "caption": "Was unterscheidet Menschen, die Verm?gen aufbauen, von denen die es nicht tun?\n\nNicht Gl?ck. Nicht Herkunft. Nicht Bildungsabschluss.\n\nOft ist es die Frage, die sie sich stellen.\n\n'Ich kann mir das nicht leisten' ? schlie?t das Denken ab.\n'Wie k?nnte ich mir das leisten?' ? ?ffnet neue Wege.\n\nEin kleiner Shift. Gro?er Unterschied. ??\n\n#mindset #gelddenken #finanzbildung #mentviro #moneymindset #wealthmindset #motivation #erfolg #richdadpoordad #selbstentwicklung #businessmindset #entrepreneur #gewohnheiten #wachstum #denken",
-      "pexels_video_query": "cinematic dark city night aerial luxury",
-      "story_text": [
-        "NEUES REEL",
-        "Arm vs. Reich ?",
-        "der echte Unterschied",
-        "? Schau jetzt"
-      ]
-    },
-    {
-      "day": 3,
-      "date": "2026-05-19",
-      "type": "carousel",
-      "topic": "Cashflow vs. Gehalt ? Der Game Changer",
-      "status": "published",
-      "hook": "Dein Gehalt macht dich nicht reich. Cashflow schon.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Dein Gehalt macht",
-            "dich nicht reich.",
-            "Cashflow schon."
-          ],
-          "body": [
-            "Hier ist der Unterschied. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "GEHALT",
-          "num": "1 / 4",
-          "title": [
-            "Du arbeitest ?",
-            "du bekommst Geld"
-          ],
-          "body": [
-            "H?rst du auf zu arbeiten?",
-            "H?rt das Geld auf."
-          ]
-        },
-        {
-          "badge": "CASHFLOW",
-          "num": "2 / 4",
-          "title": [
-            "Dein Geld",
-            "arbeitet f?r dich"
-          ],
-          "body": [
-            "Miete. Dividenden.",
-            "Kurs-Gewinne. Immer."
-          ]
-        },
-        {
-          "badge": "DER SHIFT",
-          "num": "3 / 4",
-          "title": [
-            "Vom Angestellten",
-            "zum Investor"
-          ],
-          "body": [
-            "1. Gehalt sparen.",
-            "2. Assets kaufen.",
-            "3. Cashflow reinvestieren."
-          ]
-        },
-        {
-          "badge": "STARTE JETZT",
-          "num": "4 / 4",
-          "title": [
-            "Dein erster",
-            "Cashflow-Move"
-          ],
-          "body": [
-            "Auch mit 50?/Monat",
-            "kannst du starten."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Mehr Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Warum werden manche Menschen mit dem gleichen Gehalt reich ? und andere nicht?\n\nDas Geheimnis: Cashflow.\n\nDein Gehalt macht dich besch?ftigt. Cashflow macht dich frei. ??\n\nWie du den Shift machst ? in diesem Carousel. Swipe durch! ??\n\n#cashflow #passiveseinkommen #finanziellefreiheit #mentviro #investieren #richdadpoordad #moneymindset #wealthmindset #gelddenken #entrepreneur #erfolg #assets #dividenden #motivation #businessmindset",
-      "pexels_queries": [
-        "dark penthouse city view night",
-        "water flow river long exposure dark",
-        "dark abstract light tunnel",
-        "chess board minimal dark",
-        "dark clock time blur",
-        "dark minimal success"
-      ],
-      "story_text": [
-        "HEUTE AUF MENTVIRO",
-        "Cashflow vs. Gehalt ?",
-        "der Game Changer",
-        "? Swipe durch den Post"
-      ],
-      "post_id": "3905621723546759385",
-      "story_id": "3905621938388731232",
-      "published_at": "2026-05-26T14:40:51Z"
-    },
-    {
-      "day": 4,
-      "date": "2026-05-20",
-      "type": "reel",
-      "topic": "Wie Reiche Steuern nutzen (statt zahlen)",
-      "status": "pending",
-      "hook": "Reiche zahlen weniger Steuern als du. Und es ist v?llig legal.",
-      "script": [
-        "Reiche zahlen weniger Steuern als Angestellte.",
-        "Nicht weil das System unfair ist.",
-        "Sondern weil sie das System verstehen.",
-        "Angestellte: Verdienen ? Steuern ? Ausgaben",
-        "Reiche: Verdienen ? Ausgaben ? Steuern",
-        "Dieser Unterschied macht Millionen.",
-        "Folge @mentviro. Lern das System."
-      ],
-      "caption": "Reiche zahlen weniger Steuern als du ? und es ist 100% legal. ???\n\nDer Trick liegt nicht in der Steuerhinterziehung, sondern im System.\n\nAngestellte: Brutto ? Steuern ? Netto\nSelbst?ndige/Investoren: Brutto ? Ausgaben absetzen ? Steuern auf Gewinn\n\nRich Dad Poor Dad Lektion #3. Die wichtigste, die sie dir nie beibringen. ??\n\nSpeicher diesen Post.\n\n#steuern #steuertipps #finanziellefreiheit #mentviro #richdadpoordad #entrepreneur #selbst?ndig #gelddenken #investieren #wealthmindset #moneymindset #erfolg #businessmindset #passiveseinkommen #reichtum",
-      "pexels_video_query": "dark skyscraper glass reflection city",
-      "story_text": [
-        "NEUES REEL",
-        "Steuern wie die Reichen ?",
-        "v?llig legal",
-        "? Schau jetzt"
-      ]
-    },
-    {
-      "day": 5,
-      "date": "2026-05-21",
-      "type": "carousel",
-      "topic": "5 B?cher, die dein Gelddenken ver?ndern",
-      "status": "published",
-      "post_id": "auto-posted-run39",
-      "hook": "Diese 5 B?cher haben mehr Million?re geschaffen als jedes Studium.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Diese 5 B?cher",
-            "haben mehr Million?re",
-            "gemacht als jedes Studium."
-          ],
-          "body": [
-            "Lies sie. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "BUCH #1",
-          "num": "1 / 5",
-          "title": [
-            "Rich Dad",
-            "Poor Dad"
-          ],
-          "body": [
-            "Robert Kiyosaki.",
-            "Das Fundament allen Gelddenkens."
-          ]
-        },
-        {
-          "badge": "BUCH #2",
-          "num": "2 / 5",
-          "title": [
-            "Think and",
-            "Grow Rich"
-          ],
-          "body": [
-            "Napoleon Hill.",
-            "Mindset ist alles."
-          ]
-        },
-        {
-          "badge": "BUCH #3",
-          "num": "3 / 5",
-          "title": [
-            "The Millionaire",
-            "Fastlane"
-          ],
-          "body": [
-            "MJ DeMarco.",
-            "Der schnelle Weg zur Freiheit."
-          ]
-        },
-        {
-          "badge": "BUCH #4",
-          "num": "4 / 5",
-          "title": [
-            "Psychology",
-            "of Money"
-          ],
-          "body": [
-            "Morgan Housel.",
-            "Warum wir so falsch denken."
-          ]
-        },
-        {
-          "badge": "BUCH #5",
-          "num": "5 / 5",
-          "title": [
-            "Die Kunst des",
-            "klaren Denkens"
-          ],
-          "body": [
-            "Rolf Dobelli.",
-            "Denkfehler eliminieren."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Mehr Empfehlungen",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Ich habe hunderte B?cher gelesen. Diese 5 haben mich am meisten ver?ndert. ??\n\nNicht Schule. Nicht Ausbildung. B?cher.\n\nWelches davon hast du gelesen? Kommentar! ??\n\n#b?cher #lesen #richdadpoordad #finanziellefreiheit #mentviro #moneymindset #wealthmindset #motivation #erfolg #selfimprovement #pers?nlichkeitsentwicklung #entrepreneur #gelddenken #buchempfehlung #businessmindset",
-      "pexels_queries": [
-        "open book dark dramatic light",
-        "dark library candle dramatic",
-        "books shelf dark moody minimal",
-        "reading lamp night dark cozy",
-        "dark wooden desk books ink",
-        "minimal dark desk studying"
-      ],
-      "story_text": [
-        "HEUTE AUF MENTVIRO",
-        "5 B?cher f?r",
-        "Geld-Mindset",
-        "? Swipe durch den Post"
-      ]
-    },
-    {
-      "day": 6,
-      "date": "2026-05-22",
-      "type": "reel",
-      "topic": "Passives Einkommen ? So f?ngst du an",
-      "status": "pending",
-      "hook": "Passives Einkommen ist kein Mythos. Jeder kann damit anfangen.",
-      "script": [
-        "Passives Einkommen ist kein Mythos.",
-        "Aber es braucht aktive Arbeit am Anfang.",
-        "Schritt 1: Spare 10% deines Einkommens.",
-        "Schritt 2: Investiere es in ETFs oder Dividenden-Aktien.",
-        "Schritt 3: Reinvestiere alles.",
-        "In 10 Jahren schaust du zur?ck und bist froh.",
-        "Oder du f?ngst nie an.",
-        "Folge @mentviro f?r den Start."
-      ],
-      "caption": "Passives Einkommen aufbauen klingt kompliziert. Ist es nicht. ??\n\nDie einfachste Formel:\n1?? 10% sparen\n2?? In breit gestreute ETFs investieren\n3?? Alles reinvestieren\n4?? Zeit arbeiten lassen\n\nDer gr??te Fehler: Warten auf den 'richtigen Moment'.\n\nDer ist jetzt. ??\n\n#passiveseinkommen #etf #investieren #finanziellefreiheit #mentviro #geldanlage #dividenden #wealthmindset #moneymindset #entrepreneur #erfolg #motivation #richdadpoordad #businessmindset #reichtum",
-      "pexels_video_query": "ocean waves aerial drone dark cinematic",
-      "story_text": [
-        "NEUES REEL",
-        "Passives Einkommen ?",
-        "so f?ngst du an",
-        "? Schau jetzt"
-      ]
-    },
-    {
-      "day": 7,
-      "date": "2026-05-23",
-      "type": "carousel",
-      "topic": "Assets vs. Liabilities ? Rich Dad erkl?rt es dir",
-      "status": "published",
-      "post_id": "18178445323397711",
-      "published_at": "2026-05-23T19:30:00Z",
-      "hook": "Die meisten Menschen denken, ihr Haus ist ein Asset. Es ist keins.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Dein Haus ist",
-            "kein Asset.",
-            "Es ist eine Schuld."
-          ],
-          "body": [
-            "Rich Dad erkl?rt warum. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "DEFINITION",
-          "num": "1 / 4",
-          "title": [
-            "Asset =",
-            "Geld rein"
-          ],
-          "body": [
-            "Aktien. ETFs. Mietimmobilien.",
-            "Digitale Produkte."
-          ]
-        },
-        {
-          "badge": "DEFINITION",
-          "num": "2 / 4",
-          "title": [
-            "Liability =",
-            "Geld raus"
-          ],
-          "body": [
-            "Kredit. Leasingauto.",
-            "Konsumg?ter. Dein Haus?"
-          ]
-        },
-        {
-          "badge": "DER SCHOCK",
-          "num": "3 / 4",
-          "title": [
-            "Dein Haus nimmt",
-            "dir Geld weg"
-          ],
-          "body": [
-            "Zinsen. Reparaturen.",
-            "Nebenkosten. Steuern."
-          ]
-        },
-        {
-          "badge": "DIE L?SUNG",
-          "num": "4 / 4",
-          "title": [
-            "Kaufe Assets,",
-            "bevor du Luxus kaufst"
-          ],
-          "body": [
-            "Lass Assets deinen",
-            "Lifestyle zahlen."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "T?gliches Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Rich Dad Poor Dad Lektion #1: Der Unterschied zwischen Assets und Liabilities. ???\n\nDie meisten Menschen denken, ihr Eigenheim ist ihr gr??tes Asset.\n\nRobert Kiyosaki sagt: Es ist ihre gr??te Liability.\n\nWenn dein Haus dir jeden Monat Geld kostet ? ist es eine Schuld, kein Verm?gen.\n\nVersteht das. Ver?ndert alles. ??\n\n#assets #liabilities #richdadpoordad #finanziellefreiheit #mentviro #immobilien #investieren #gelddenken #moneymindset #wealthmindset #erfolg #motivation #entrepreneur #passiveseinkommen #businessmindset",
-      "pexels_queries": [
-        "dark luxury apartment interior night",
-        "abstract geometry dark minimal",
-        "dark gold metallic texture",
-        "aerial city night lights",
-        "dark hands holding keys close",
-        "dark chess board close up"
-      ],
-      "story_text": [
-        "HEUTE AUF MENTVIRO",
-        "Assets vs. Liabilities ?",
-        "der echte Unterschied",
-        "? Swipe durch den Post"
-      ]
-    },
-    {
-      "day": 8,
-      "date": "2026-05-24",
-      "type": "reel",
-      "topic": "Das Geheimnis des Compound-Effekts",
-      "status": "pending",
-      "hook": "1% besser jeden Tag. Nach einem Jahr bist du 37x st?rker.",
-      "script": [
-        "Du denkst Reichtum entsteht durch gro?e Spr?nge.",
-        "Falsch. Er entsteht durch kleine, t?gliche Entscheidungen.",
-        "1% besser jeden Tag = 37x besser in einem Jahr.",
-        "Das gilt f?r Geld. F?r Wissen. F?r Gewohnheiten.",
-        "Der Compound-Effekt schl?ft nie ? arbeitest du damit oder dagegen?",
-        "Folge @mentviro f?r t?gliche 1%-Moves."
-      ],
-      "caption": "Der Zinseszins-Effekt ist eines der m?chtigsten Konzepte im Verm?gensaufbau.\n\nNicht weil er spektakul?r ist ? sondern weil er leise arbeitet. ??\n\nWer fr?h anf?ngt und konsequent bleibt, profitiert ?berproportional davon.\nNicht durch Gl?ck. Durch Geduld und Kontinuit?t.\n\nKlein anfangen. T?glich dranbleiben. Zeit arbeiten lassen.\n\n#compoundeffekt #zinseszins #investieren #finanzbildung #mentviro #wealthmindset #moneymindset #etf #geldanlage #langfristinvestieren #erfolg #motivation #selbstentwicklung #businessmindset #wachstum",
-      "pexels_video_query": "dark spiral staircase aerial symmetry cinematic",
-      "story_text": [
-        "NEUES REEL",
-        "Compound-Effekt ?",
-        "37x st?rker in 1 Jahr",
-        "? Schau jetzt"
-      ]
-    },
-    {
-      "day": 9,
-      "date": "2026-05-25",
-      "type": "carousel",
-      "topic": "Leverage ? Warum Reiche weniger arbeiten",
-      "status": "published",
-      "hook": "Reiche arbeiten nicht h?rter. Sie nutzen Leverage.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Reiche arbeiten",
-            "nicht h?rter.",
-            "Sie nutzen Leverage."
-          ],
-          "body": [
-            "Hier ist der Unterschied. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "LEVERAGE #1",
-          "num": "1/4",
-          "title": [
-            "Kapital-Leverage"
-          ],
-          "body": [
-            "Geld arbeitet 24/7.",
-            "Du schl?fst ? es nicht."
-          ]
-        },
-        {
-          "badge": "LEVERAGE #2",
-          "num": "2/4",
-          "title": [
-            "Menschen-Leverage"
-          ],
-          "body": [
-            "Ein Team multipliziert",
-            "deine Zeit."
-          ]
-        },
-        {
-          "badge": "LEVERAGE #3",
-          "num": "3/4",
-          "title": [
-            "Content-Leverage"
-          ],
-          "body": [
-            "Ein Video. Millionen Aufrufe.",
-            "F?r immer online."
-          ]
-        },
-        {
-          "badge": "LEVERAGE #4",
-          "num": "4/4",
-          "title": [
-            "Wie du startest"
-          ],
-          "body": [
-            "Fang mit Kapital an.",
-            "Auch mit 50?/Monat."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Mehr Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Warum schaffen es manche Menschen, 10x mehr zu verdienen und dabei 10x weniger zu arbeiten?\n\nEin Wort: Leverage. ??\n\nDu hast 24 Stunden. Jeder hat 24 Stunden.\n\nDer Unterschied ist, wie viele andere Systeme parallel f?r dich arbeiten.\n\nSwipe durch ? und frag dich: Welchen Leverage nutzt du schon?\n\n#leverage #passiveseinkommen #finanziellefreiheit #mentviro #entrepreneur #wealthmindset #moneymindset #investieren #erfolg #motivation #businessmindset #richdadpoordad #reichtum #assets #gelddenken",
-      "pexels_queries": [
-        "dark gear mechanism industrial macro",
-        "dark skyscraper glass perspective aerial",
-        "dark silhouette team fog minimal",
-        "dark phone screen neon glow night",
-        "dark scale balance dramatic light",
-        "dark architect blueprint minimal monochrome"
-      ],
-      "story_text": [
-        "NEU AUF MENTVIRO",
-        "Leverage ?",
-        "weniger arbeiten, mehr verdienen",
-        "? Swipe durch den Post"
-      ],
-      "post_id": "18111922030857427",
-      "story_id": "18529139383075258",
-      "published_at": "2026-05-30T12:59:05Z"
-    },
-    {
-      "day": 10,
-      "date": "2026-05-26",
-      "type": "reel",
-      "topic": "3 Gewohnheiten die finanziell erfolgreiche Menschen t?glich haben",
-      "status": "pending",
-      "hook": "Der Unterschied zwischen dir und einem Million?r sind nicht Talente. Es sind Gewohnheiten.",
-      "script": [
-        "Million?re haben keine Superkr?fte.",
-        "Sie haben Systeme.",
-        "Gewohnheit 1: T?glich lesen. Mindestens 20 Minuten.",
-        "Gewohnheit 2: Geld tracken. Jeden. Einzigen. Tag.",
-        "Gewohnheit 3: Erst investieren, dann ausgeben.",
-        "Welche dieser drei f?ngst du heute an?",
-        "Folge @mentviro."
-      ],
-      "caption": "Drei Gewohnheiten, die finanziell erfolgreiche Menschen konsequent pflegen:\n\n1. Sie bilden sich t?glich weiter ? auch nur 15 Minuten. ??\n2. Sie ?berpr?fen regelm??ig ihre Finanzen.\n3. Sie handeln, bevor die Bedingungen perfekt sind.\n\nKeine Geheimnisse. Kein besonderes Talent.\nNur Disziplin, die sich ?ber Zeit auszahlt.\n\nWelche Gewohnheit fehlt dir noch? ??\n\n#gewohnheiten #habits #finanzbildung #mindset #mentviro #finanziellefreiheit #wealthmindset #disziplin #erfolg #motivation #selbstentwicklung #entrepreneur #moneymindset #businessmindset #wachstum",
-      "pexels_video_query": "dark morning aesthetic minimal desk lamp cinematic",
-      "story_text": [
-        "NEUES REEL",
-        "3 Gewohnheiten ?",
-        "die Million?re t?glich haben",
-        "? Schau jetzt"
-      ]
-    },
-    {
-      "day": 11,
-      "date": "2026-05-27",
-      "type": "carousel",
-      "topic": "Warum Verm?gensaufbau f?r viele Menschen schwierig bleibt",
-      "status": "pending",
-      "hook": "Es liegt nicht am Gehalt. Es liegt am System.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Es liegt nicht",
-            "am Gehalt.",
-            "Es liegt am System."
-          ],
-          "body": [
-            "Die 5 wahren Gr?nde. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "FEHLER #1",
-          "num": "1/5",
-          "title": [
-            "Sie denken linear"
-          ],
-          "body": [
-            "Arbeit = Geld.",
-            "Kein System = kein Wachstum."
-          ]
-        },
-        {
-          "badge": "FEHLER #2",
-          "num": "2/5",
-          "title": [
-            "Sie geben zuerst aus"
-          ],
-          "body": [
-            "Pay yourself first.",
-            "Nicht die Bank."
-          ]
-        },
-        {
-          "badge": "FEHLER #3",
-          "num": "3/5",
-          "title": [
-            "Sie meiden Risiko"
-          ],
-          "body": [
-            "Stillstand ist das",
-            "gr??te Risiko."
-          ]
-        },
-        {
-          "badge": "FEHLER #4",
-          "num": "4/5",
-          "title": [
-            "Sie suchen Sicherheit"
-          ],
-          "body": [
-            "Ein Gehalt ist sicher.",
-            "Bis es weg ist."
-          ]
-        },
-        {
-          "badge": "FEHLER #5",
-          "num": "5/5",
-          "title": [
-            "Sie warten auf",
-            "den Moment"
-          ],
-          "body": [
-            "Der Moment ist jetzt.",
-            "Immer."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "T?gliches Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Warum bleibt Verm?gensaufbau f?r viele schwieriger als erwartet ? obwohl Informationen frei verf?gbar sind?\n\nWeil Wissen allein nichts ver?ndert. Verhalten schon. ??\n\nF?nf h?ufige Muster, die Fortschritt bremsen ? bewusst oder unbewusst.\n\nWelches erkennst du bei dir? Kommentar gerne. ??\n\n#verm?gensaufbau #finanzbildung #mentviro #mindset #gelddenken #wealthmindset #moneymindset #investieren #erfolg #motivation #entrepreneur #businessmindset #selbstentwicklung #wachstum #finanziellefreiheit",
-      "pexels_queries": [
-        "dark crowd aerial silhouette fog dramatic",
-        "dark maze labyrinth aerial top view",
-        "dark cliff edge ocean wave dramatic",
-        "dark open cage door light minimal",
-        "dark compass rose minimal dramatic",
-        "dark path light end tunnel abstract"
-      ],
-      "story_text": [
-        "NEU AUF MENTVIRO",
-        "Warum 99%",
-        "kein Verm?gen aufbauen",
-        "? Swipe durch den Post"
-      ]
-    },
-    {
-      "day": 12,
-      "date": "2026-05-28",
-      "type": "reel",
-      "topic": "Das 50-30-20 Prinzip",
-      "status": "published",
-      "hook": "Die meisten wissen nicht wohin ihr Geld jeden Monat verschwindet.",
-      "script": [
-        "Du verdienst Geld. Und trotzdem bleibt nichts ?brig.",
-        "Das Problem: kein System.",
-        "50% f?r Lebenshaltungskosten ? Miete, Essen, Transport.",
-        "30% direkt investieren ? ETF, Aktien, Assets.",
-        "20% f?r dich ? Weiterbildung, Erlebnisse, Freiheit.",
-        "Nicht sparen f?r sp?ter. Investieren f?r immer.",
-        "Folge @mentviro ? t?glich kl?ger mit Geld."
-      ],
-      "caption": "Du musst kein Finanzgenie sein, um Verm?gen aufzubauen.\n\nDu brauchst ein System. ??\n\nDas 50-30-20 Prinzip:\n50% Lebenshaltung\n30% Investitionen\n20% Wachstum & Leben\n\nEinfach. Skalierbar. Wirkungsvoll.\n\nFang heute an ? auch mit 500? im Monat.\n\n#5030 #haushaltsbuch #finanzplan #mentviro #finanziellefreiheit #geldanlage #investieren #wealthmindset #moneymindset #etf #dividenden #erfolg #motivation #selbstentwicklung #businessmindset",
-      "pexels_video_query": "dark abstract geometric light minimal cinematic",
-      "story_text": [
-        "NEUES REEL",
-        "Das 50-30-20",
-        "Prinzip f?r dein Geld",
-        "? Schau jetzt"
-      ],
-      "post_id": "3907133101954889191",
-      "story_id": "3907133512534292917",
-      "published_at": "2026-05-28T16:44:06Z",
-      "insights": {
-        "likes": 0,
-        "comments": 0
-      }
-    },
-    {
-      "day": 13,
-      "date": "2026-05-29",
-      "type": "carousel",
-      "topic": "Was Stoiker ?ber Reichtum wissen",
-      "status": "pending",
-      "hook": "Marc Aurel war einer der m?chtigsten M?nner der Welt. Er lebte wie ein M?nch.",
-      "slides": [
-        {
-          "badge": null,
-          "num": null,
-          "title": [
-            "Marc Aurel.",
-            "Seneca. Epiktet.",
-            "Alle waren reich."
-          ],
-          "body": [
-            "Hier ist ihr Geheimnis. ?"
-          ],
-          "is_cover": true
-        },
-        {
-          "badge": "SENECA",
-          "num": "1/4",
-          "title": [
-            "'Die Zeit ist das",
-            "wahre Kapital'"
-          ],
-          "body": [
-            "Nicht Geld. Nicht Macht.",
-            "Zeit. Immer."
-          ]
-        },
-        {
-          "badge": "MARCUS AURELIUS",
-          "num": "2/4",
-          "title": [
-            "Konzentrier dich",
-            "auf das Kontrollierbare"
-          ],
-          "body": [
-            "Markt f?llt? Egal.",
-            "Dein System nicht."
-          ]
-        },
-        {
-          "badge": "EPIKTET",
-          "num": "3/4",
-          "title": [
-            "Begierde ist der",
-            "Feind des Reichtums"
-          ],
-          "body": [
-            "Wer wenig braucht,",
-            "hat immer genug."
-          ]
-        },
-        {
-          "badge": "STOIK + GELD",
-          "num": "4/4",
-          "title": [
-            "Investiere wie",
-            "ein Stoiker"
-          ],
-          "body": [
-            "Langfristig. Ruhig.",
-            "Diszipliniert."
-          ]
-        },
-        {
-          "badge": "FOLGE UNS",
-          "num": null,
-          "title": [
-            "Mehr Mindset",
-            "& Money Moves"
-          ],
-          "body": [
-            "Folge @mentviro",
-            "f?r t?glich mehr."
-          ]
-        }
-      ],
-      "caption": "Die Stoiker haben vor 2000 Jahren Prinzipien entwickelt, die heute noch die besten Investoren leiten. ??\n\nSeneca wusste: Zeit ist wertvoller als Gold.\nMarc Aurel wusste: Emotionen sind dein gr??ter Feind.\nEpiktet wusste: Weniger wollen bedeutet mehr haben.\n\nPhilosophie trifft Finance.\n\nWelches Zitat trifft dich am meisten? ??\n\n#stoizismus #stoic #seneca #marcaurel #philosophie #mentviro #finanziellefreiheit #mindset #wealthmindset #moneymindset #investieren #erfolg #motivation #selbstentwicklung #businessmindset",
-      "pexels_queries": [
-        "dark ancient marble statue dramatic light",
-        "dark philosophy book candle flame macro",
-        "dark roman columns architecture dramatic",
-        "dark meditation person fog silhouette",
-        "dark hourglass sand macro cinematic",
-        "dark minimal path philosophy aesthetic"
-      ],
-      "story_text": [
-        "NEU AUF MENTVIRO",
-        "Stoiker ?ber",
-        "Reichtum & Freiheit",
-        "? Swipe durch den Post"
-      ]
-    },
-    {
-      "day": 14,
-      "date": "2026-05-30",
-      "type": "reel",
-      "topic": "Warum dein Netzwerk dein Networth ist",
-      "status": "pending",
-      "hook": "Du bist der Durchschnitt der 5 Menschen, mit denen du am meisten Zeit verbringst.",
-      "script": [
-        "Jim Rohn sagte das vor 40 Jahren.",
-        "Es gilt heute mehr denn je.",
-        "Dein Netzwerk ?ffnet T?ren, die du nicht mal siehst.",
-        "Es bringt Deals. Wissen. Chancen.",
-        "Ein Upgrade deines Umfelds ist das beste Investment.",
-        "Mit wem verbringst du deine Zeit?",
-        "Folge @mentviro ? wir wachsen zusammen."
-      ],
-      "caption": "Dein Networth = Dein Network. ??\n\nDas ist keine Metapher. Das ist Statistik.\n\nDie erfolgreichsten Menschen der Welt investieren genauso in Beziehungen wie in Aktien.\n\nUnd wer bist du in 5 Jahren, wenn du dein Umfeld upgradeist?\n\nSchreib unten: Wer ist eine Person, die dich inspiriert? ??\n\n#netzwerk #network #mentviro #mindset #entrepreneur #finanziellefreiheit #wealthmindset #erfolg #motivation #selbstentwicklung #businessmindset #moneymindset #leadership #richdadpoordad #wachstum",
-      "pexels_video_query": "dark city aerial network lights connection cinematic",
-      "story_text": [
-        "NEUES REEL",
-        "Netzwerk =",
-        "dein Networth",
-        "? Schau jetzt"
-      ]
-    }
-  ],
-  "story_queue": [
-    {
-      "day": 2,
-      "date": "2026-05-18",
-      "status": "pending",
-      "topic": "dark empty road fog cinematic night",
-      "quote": {
-        "text": "Der Unterschied zwischen arm und reich liegt nicht im Geldbeutel, sondern im Denken.",
-        "author": "Robert Kiyosaki"
-      },
-      "tips": {
-        "title": "So denkst du wie Reiche",
-        "items": [
-          "Frag immer: Wie kann ich das?",
-          "Lerne t?glich 20 Min. ?ber Geld",
-          "Investiere bevor du ausgibst"
-        ]
-      }
-    },
-    {
-      "day": 3,
-      "date": "2026-05-19",
-      "status": "pending",
-      "topic": "dark flowing water river long exposure night",
-      "quote": {
-        "text": "Reiche kaufen zuerst Assets. Arme kaufen zuerst Konsum.",
-        "author": "Robert Kiyosaki"
-      },
-      "tips": {
-        "title": "Cashflow aufbauen in 3 Schritten",
-        "items": [
-          "Richte einen ETF-Sparplan ein",
-          "W?hle Dividenden-Aktien gezielt",
-          "Reinvestiere jeden Ertrag sofort"
-        ]
-      }
-    },
-    {
-      "day": 4,
-      "date": "2026-05-20",
-      "status": "pending",
-      "topic": "dark glass skyscraper reflection city night",
-      "quote": {
-        "text": "Es ist nicht wie viel du verdienst ? es ist wie viel du beh?ltst.",
-        "author": "Robert Kiyosaki"
-      },
-      "tips": {
-        "title": "Steuern legal optimieren",
-        "items": [
-          "Setze Betriebsausgaben ab",
-          "Gr?nde ein Gewerbe oder GbR",
-          "Lerne die Grundlagen des Steuerrechts"
-        ]
-      }
-    },
-    {
-      "day": 6,
-      "date": "2026-05-22",
-      "status": "pending",
-      "topic": "dark ocean waves aerial drone night cinematic",
-      "quote": {
-        "text": "Wenn du keinen Weg findest, im Schlaf Geld zu verdienen, arbeitest du bis du stirbst.",
-        "author": "Warren Buffett"
-      },
-      "tips": {
-        "title": "Passives Einkommen starten",
-        "items": [
-          "Spare sofort 10% deines Einkommens",
-          "Investiere in breit gestreute ETFs",
-          "Reinvestiere Dividenden konsequent"
-        ]
-      }
-    },
-    {
-      "day": 7,
-      "date": "2026-05-23",
-      "status": "pending",
-      "topic": "dark luxury apartment interior minimal night",
-      "quote": {
-        "text": "Reiche kaufen Assets. Arme kaufen Liabilities, die sie f?r Assets halten.",
-        "author": "Robert Kiyosaki"
-      },
-      "tips": {
-        "title": "Assets vs. Liabilities erkennen",
-        "items": [
-          "Liste deine Assets schriftlich auf",
-          "Trenne Konsum klar von Investment",
-          "Kaufe immer zuerst Verm?genswerte"
-        ]
-      }
-    },
-    {
-      "day": 8,
-      "date": "2026-05-24",
-      "status": "pending",
-      "topic": "dark spiral staircase symmetry cinematic minimal",
-      "quote": {
-        "text": "Der Zinseszins ist das achte Weltwunder. Wer ihn versteht, verdient ihn. Wer nicht, zahlt ihn.",
-        "author": "Albert Einstein"
-      },
-      "tips": {
-        "title": "Compound-Effekt nutzen",
-        "items": [
-          "Fange heute an, nicht morgen",
-          "Reinvestiere alle Ertr?ge sofort",
-          "Denke in Jahrzehnten, nicht Jahren"
-        ]
-      }
-    },
-    {
-      "day": 9,
-      "date": "2026-05-25",
-      "status": "pending",
-      "topic": "dark gear mechanism industrial macro cinematic",
-      "quote": {
-        "text": "Gib mir einen langen Hebel und einen festen Punkt ? und ich hebe die Welt aus den Angeln.",
-        "author": "Archimedes"
-      },
-      "tips": {
-        "title": "Leverage einsetzen ab heute",
-        "items": [
-          "Nutze Kapital als ersten Hebel",
-          "Baue Schritt f?r Schritt ein Team auf",
-          "Erstelle einmal skalierbaren Content"
-        ]
-      }
-    },
-    {
-      "day": 10,
-      "date": "2026-05-26",
-      "status": "pending",
-      "topic": "dark morning desk lamp book minimal aesthetic",
-      "quote": {
-        "text": "Qualit?t ist keine Handlung. Sie ist eine Gewohnheit.",
-        "author": "Aristoteles"
-      },
-      "tips": {
-        "title": "Million?rs-Gewohnheiten starten",
-        "items": [
-          "Lese t?glich mindestens 20 Minuten",
-          "Tracke jeden Tag deine Ausgaben",
-          "Investiere vor jedem Konsum"
-        ]
-      }
-    },
-    {
-      "day": 11,
-      "date": "2026-05-27",
-      "status": "published",
-      "topic": "dark crowd fog silhouette aerial dramatic",
-      "quote": {
-        "text": "Der gr??te Feind deines Reichtums bist du selbst.",
-        "author": "@mentviro"
-      },
-      "tips": {
-        "title": "Raus aus der 99%-Falle",
-        "items": [
-          "Denke in Systemen, nicht in Jobs",
-          "Zahle zuerst dir selbst",
-          "Handle heute, warte nie"
-        ]
-      },
-      "quote_id": null,
-      "tips_id": null,
-      "published_at": "2026-05-27T16:29:42Z"
-    },
-    {
-      "day": 12,
-      "date": "2026-05-28",
-      "status": "published",
-      "topic": "dark abstract geometric light minimal cinematic",
-      "quote": {
-        "text": "Finanzielle Freiheit beginnt mit dem ersten systematischen Schritt.",
-        "author": "@mentviro"
-      },
-      "tips": {
-        "title": "Das 50-30-20 Prinzip umsetzen",
-        "items": [
-          "50% max f?r Lebenshaltungskosten",
-          "30% direkt investieren ? immer",
-          "20% f?r Wachstum und Erlebnisse"
-        ]
-      },
-      "quote_id": "3907138119952109666",
-      "tips_id": "3907138409443004938",
-      "published_at": "2026-05-28T16:53:48Z"
-    },
-    {
-      "day": 13,
-      "date": "2026-05-29",
-      "status": "pending",
-      "topic": "dark ancient marble statue dramatic light",
-      "quote": {
-        "text": "Die gr??te Macht besitzt, wer die Kontrolle ?ber seine eigenen Gedanken hat.",
-        "author": "Marc Aurel"
-      },
-      "tips": {
-        "title": "Wie ein Stoiker investieren",
-        "items": [
-          "Fokussiere nur das Kontrollierbare",
-          "Lebe bewusst unter deinen M?glichkeiten",
-          "Investiere ruhig und langfristig"
-        ]
-      }
-    },
-    {
-      "day": 14,
-      "date": "2026-05-30",
-      "status": "pending",
-      "topic": "dark city network aerial lights connection night",
-      "quote": {
-        "text": "Du bist der Durchschnitt der f?nf Menschen, mit denen du die meiste Zeit verbringst.",
-        "author": "Jim Rohn"
-      },
-      "tips": {
-        "title": "Dein Netzwerk upgraden",
-        "items": [
-          "Umgib dich mit wachstumsorientierten Menschen",
-          "Geh auf Business-Events und Meetups",
-          "Gib zuerst Wert ? dann nimm"
-        ]
-      }
-    }
-  ]
+    "account":  {
+                    "ig_user_id":  "27099223616375704",
+                    "composio_account":  "instagram_droppy-scheme",
+                    "pexels_account":  "pexels_tierce-helply",
+                    "elevenlabs_account":  "elevenlabs_garten-divata",
+                    "username":  "mentviro"
+                },
+    "settings":  {
+                     "post_time_utc":  "16:00",
+                     "story_time_utc":  "16:05",
+                     "colors":  {
+                                    "background":  [
+                                                       6,
+                                                       6,
+                                                       6
+                                                   ],
+                                    "white":  [
+                                                  255,
+                                                  255,
+                                                  255
+                                              ],
+                                    "silver":  [
+                                                   192,
+                                                   192,
+                                                   192
+                                               ],
+                                    "light_silver":  [
+                                                         220,
+                                                         220,
+                                                         220
+                                                     ],
+                                    "dark_silver":  [
+                                                        130,
+                                                        130,
+                                                        130
+                                                    ]
+                                },
+                     "posting_stats":  {
+
+                                       }
+                 },
+    "posts":  [
+                  {
+                      "day":  1,
+                      "date":  "2026-05-17",
+                      "type":  "carousel",
+                      "topic":  "5 Denkfehler, die dich arm halten",
+                      "status":  "published",
+                      "post_id":  "17888772186377235",
+                      "hook":  "Du arbeitest 40h/Woche ? und kommst trotzdem nicht weiter.",
+                      "slides":  [
+                                     {
+                                         "badge":  null,
+                                         "num":  null,
+                                         "title":  [
+                                                       "Du arbeitest 40h/Woche ?",
+                                                       "und kommst trotzdem",
+                                                       "nicht weiter."
+                                                   ],
+                                         "body":  [
+                                                      "Das ist kein Zufall.",
+                                                      "Lies weiter. ?"
+                                                  ],
+                                         "is_cover":  true
+                                     },
+                                     {
+                                         "badge":  "DENKFEHLER #1",
+                                         "num":  "1 / 5",
+                                         "title":  [
+                                                       "Du tauschst",
+                                                       "Zeit gegen Geld"
+                                                   ],
+                                         "body":  [
+                                                      "Reiche bauen Systeme.",
+                                                      "Sie verkaufen keine Zeit."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DENKFEHLER #2",
+                                         "num":  "2 / 5",
+                                         "title":  [
+                                                       "Du denkst, Schulden",
+                                                       "sind immer schlecht"
+                                                   ],
+                                         "body":  [
+                                                      "Gute Schulden kaufen Assets.",
+                                                      "Schlechte kaufen Konsum."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DENKFEHLER #3",
+                                         "num":  "3 / 5",
+                                         "title":  [
+                                                       "Du sparst statt",
+                                                       "zu investieren"
+                                                   ],
+                                         "body":  [
+                                                      "Inflation frisst dein Erspartes.",
+                                                      "Investitionen lassen es wachsen."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DENKFEHLER #4",
+                                         "num":  "4 / 5",
+                                         "title":  [
+                                                       "Du wartest auf",
+                                                       "den richtigen Moment"
+                                                   ],
+                                         "body":  [
+                                                      "Der beste Zeitpunkt war gestern.",
+                                                      "Der zweitbeste: JETZT."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DENKFEHLER #5",
+                                         "num":  "5 / 5",
+                                         "title":  [
+                                                       "Du glaubst, das ist",
+                                                       "nichts f?r dich"
+                                                   ],
+                                         "body":  [
+                                                      "Das Mindset ist die",
+                                                      "einzige Grenze, die z?hlt."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "FOLGE UNS",
+                                         "num":  null,
+                                         "title":  [
+                                                       "T?gliches Mindset",
+                                                       "\u0026 Money Moves"
+                                                   ],
+                                         "body":  [
+                                                      "Folge @mentviro",
+                                                      "f?r t?glich mehr."
+                                                  ]
+                                     }
+                                 ],
+                      "caption":  "Die meisten Menschen arbeiten ihr Leben lang hart ? und fragen sich, warum sie nie vorankommen.\n\nDie Wahrheit: Es liegt nicht an der F?higkeit. Es liegt am Denken.\n\nDiese 5 Denkfehler halten 95% der Menschen davon ab, finanziell frei zu werden. ??\n\nWelcher trifft auf dich zu? Schreib\u0027s in die Kommentare! ??\n\n#mindset #finanziellefreiheit #richdadpoordad #gelddenken #passiveseinkommen #investieren #mentviro #reichtum #erfolg #motivation #wealthmindset #moneymindset #selbstentwicklung #entrepreneur #financialfreedom",
+                      "pexels_queries":  [
+                                             "dark empty road horizon night",
+                                             "chess king black dramatic",
+                                             "dark rainy city window",
+                                             "hourglass sand dark moody",
+                                             "fog forest dark minimal",
+                                             "neon city night aerial",
+                                             "dark mountain silhouette"
+                                         ],
+                      "story_text":  [
+                                         "NEU AUF MENTVIRO",
+                                         "5 Denkfehler,",
+                                         "die dich arm halten",
+                                         "? Sieh dir den Post an"
+                                     ]
+                  },
+                  {
+                      "day":  3,
+                      "date":  "2026-05-19",
+                      "type":  "carousel",
+                      "topic":  "Cashflow vs. Gehalt ? Der Game Changer",
+                      "status":  "published",
+                      "hook":  "Dein Gehalt macht dich nicht reich. Cashflow schon.",
+                      "slides":  [
+                                     {
+                                         "badge":  null,
+                                         "num":  null,
+                                         "title":  [
+                                                       "Dein Gehalt macht",
+                                                       "dich nicht reich.",
+                                                       "Cashflow schon."
+                                                   ],
+                                         "body":  [
+                                                      "Hier ist der Unterschied. ?"
+                                                  ],
+                                         "is_cover":  true
+                                     },
+                                     {
+                                         "badge":  "GEHALT",
+                                         "num":  "1 / 4",
+                                         "title":  [
+                                                       "Du arbeitest ?",
+                                                       "du bekommst Geld"
+                                                   ],
+                                         "body":  [
+                                                      "H?rst du auf zu arbeiten?",
+                                                      "H?rt das Geld auf."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "CASHFLOW",
+                                         "num":  "2 / 4",
+                                         "title":  [
+                                                       "Dein Geld",
+                                                       "arbeitet f?r dich"
+                                                   ],
+                                         "body":  [
+                                                      "Miete. Dividenden.",
+                                                      "Kurs-Gewinne. Immer."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DER SHIFT",
+                                         "num":  "3 / 4",
+                                         "title":  [
+                                                       "Vom Angestellten",
+                                                       "zum Investor"
+                                                   ],
+                                         "body":  [
+                                                      "1. Gehalt sparen.",
+                                                      "2. Assets kaufen.",
+                                                      "3. Cashflow reinvestieren."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "STARTE JETZT",
+                                         "num":  "4 / 4",
+                                         "title":  [
+                                                       "Dein erster",
+                                                       "Cashflow-Move"
+                                                   ],
+                                         "body":  [
+                                                      "Auch mit 50?/Monat",
+                                                      "kannst du starten."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "FOLGE UNS",
+                                         "num":  null,
+                                         "title":  [
+                                                       "Mehr Mindset",
+                                                       "\u0026 Money Moves"
+                                                   ],
+                                         "body":  [
+                                                      "Folge @mentviro",
+                                                      "f?r t?glich mehr."
+                                                  ]
+                                     }
+                                 ],
+                      "caption":  "Warum werden manche Menschen mit dem gleichen Gehalt reich ? und andere nicht?\n\nDas Geheimnis: Cashflow.\n\nDein Gehalt macht dich besch?ftigt. Cashflow macht dich frei. ??\n\nWie du den Shift machst ? in diesem Carousel. Swipe durch! ??\n\n#cashflow #passiveseinkommen #finanziellefreiheit #mentviro #investieren #richdadpoordad #moneymindset #wealthmindset #gelddenken #entrepreneur #erfolg #assets #dividenden #motivation #businessmindset",
+                      "pexels_queries":  [
+                                             "dark penthouse city view night",
+                                             "water flow river long exposure dark",
+                                             "dark abstract light tunnel",
+                                             "chess board minimal dark",
+                                             "dark clock time blur",
+                                             "dark minimal success"
+                                         ],
+                      "story_text":  [
+                                         "HEUTE AUF MENTVIRO",
+                                         "Cashflow vs. Gehalt ?",
+                                         "der Game Changer",
+                                         "? Swipe durch den Post"
+                                     ],
+                      "post_id":  "3905621723546759385",
+                      "story_id":  "3905621938388731232",
+                      "published_at":  "2026-05-26T14:40:51Z"
+                  },
+                  {
+                      "day":  5,
+                      "date":  "2026-05-21",
+                      "type":  "carousel",
+                      "topic":  "5 B?cher, die dein Gelddenken ver?ndern",
+                      "status":  "published",
+                      "post_id":  "auto-posted-run39",
+                      "hook":  "Diese 5 B?cher haben mehr Million?re geschaffen als jedes Studium.",
+                      "slides":  [
+                                     {
+                                         "badge":  null,
+                                         "num":  null,
+                                         "title":  [
+                                                       "Diese 5 B?cher",
+                                                       "haben mehr Million?re",
+                                                       "gemacht als jedes Studium."
+                                                   ],
+                                         "body":  [
+                                                      "Lies sie. ?"
+                                                  ],
+                                         "is_cover":  true
+                                     },
+                                     {
+                                         "badge":  "BUCH #1",
+                                         "num":  "1 / 5",
+                                         "title":  [
+                                                       "Rich Dad",
+                                                       "Poor Dad"
+                                                   ],
+                                         "body":  [
+                                                      "Robert Kiyosaki.",
+                                                      "Das Fundament allen Gelddenkens."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "BUCH #2",
+                                         "num":  "2 / 5",
+                                         "title":  [
+                                                       "Think and",
+                                                       "Grow Rich"
+                                                   ],
+                                         "body":  [
+                                                      "Napoleon Hill.",
+                                                      "Mindset ist alles."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "BUCH #3",
+                                         "num":  "3 / 5",
+                                         "title":  [
+                                                       "The Millionaire",
+                                                       "Fastlane"
+                                                   ],
+                                         "body":  [
+                                                      "MJ DeMarco.",
+                                                      "Der schnelle Weg zur Freiheit."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "BUCH #4",
+                                         "num":  "4 / 5",
+                                         "title":  [
+                                                       "Psychology",
+                                                       "of Money"
+                                                   ],
+                                         "body":  [
+                                                      "Morgan Housel.",
+                                                      "Warum wir so falsch denken."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "BUCH #5",
+                                         "num":  "5 / 5",
+                                         "title":  [
+                                                       "Die Kunst des",
+                                                       "klaren Denkens"
+                                                   ],
+                                         "body":  [
+                                                      "Rolf Dobelli.",
+                                                      "Denkfehler eliminieren."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "FOLGE UNS",
+                                         "num":  null,
+                                         "title":  [
+                                                       "Mehr Empfehlungen",
+                                                       "\u0026 Money Moves"
+                                                   ],
+                                         "body":  [
+                                                      "Folge @mentviro",
+                                                      "f?r t?glich mehr."
+                                                  ]
+                                     }
+                                 ],
+                      "caption":  "Ich habe hunderte B?cher gelesen. Diese 5 haben mich am meisten ver?ndert. ??\n\nNicht Schule. Nicht Ausbildung. B?cher.\n\nWelches davon hast du gelesen? Kommentar! ??\n\n#b?cher #lesen #richdadpoordad #finanziellefreiheit #mentviro #moneymindset #wealthmindset #motivation #erfolg #selfimprovement #pers?nlichkeitsentwicklung #entrepreneur #gelddenken #buchempfehlung #businessmindset",
+                      "pexels_queries":  [
+                                             "open book dark dramatic light",
+                                             "dark library candle dramatic",
+                                             "books shelf dark moody minimal",
+                                             "reading lamp night dark cozy",
+                                             "dark wooden desk books ink",
+                                             "minimal dark desk studying"
+                                         ],
+                      "story_text":  [
+                                         "HEUTE AUF MENTVIRO",
+                                         "5 B?cher f?r",
+                                         "Geld-Mindset",
+                                         "? Swipe durch den Post"
+                                     ]
+                  },
+                  {
+                      "day":  7,
+                      "date":  "2026-05-23",
+                      "type":  "carousel",
+                      "topic":  "Assets vs. Liabilities ? Rich Dad erkl?rt es dir",
+                      "status":  "published",
+                      "post_id":  "18178445323397711",
+                      "published_at":  "2026-05-23T19:30:00Z",
+                      "hook":  "Die meisten Menschen denken, ihr Haus ist ein Asset. Es ist keins.",
+                      "slides":  [
+                                     {
+                                         "badge":  null,
+                                         "num":  null,
+                                         "title":  [
+                                                       "Dein Haus ist",
+                                                       "kein Asset.",
+                                                       "Es ist eine Schuld."
+                                                   ],
+                                         "body":  [
+                                                      "Rich Dad erkl?rt warum. ?"
+                                                  ],
+                                         "is_cover":  true
+                                     },
+                                     {
+                                         "badge":  "DEFINITION",
+                                         "num":  "1 / 4",
+                                         "title":  [
+                                                       "Asset =",
+                                                       "Geld rein"
+                                                   ],
+                                         "body":  [
+                                                      "Aktien. ETFs. Mietimmobilien.",
+                                                      "Digitale Produkte."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DEFINITION",
+                                         "num":  "2 / 4",
+                                         "title":  [
+                                                       "Liability =",
+                                                       "Geld raus"
+                                                   ],
+                                         "body":  [
+                                                      "Kredit. Leasingauto.",
+                                                      "Konsumg?ter. Dein Haus?"
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DER SCHOCK",
+                                         "num":  "3 / 4",
+                                         "title":  [
+                                                       "Dein Haus nimmt",
+                                                       "dir Geld weg"
+                                                   ],
+                                         "body":  [
+                                                      "Zinsen. Reparaturen.",
+                                                      "Nebenkosten. Steuern."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "DIE L?SUNG",
+                                         "num":  "4 / 4",
+                                         "title":  [
+                                                       "Kaufe Assets,",
+                                                       "bevor du Luxus kaufst"
+                                                   ],
+                                         "body":  [
+                                                      "Lass Assets deinen",
+                                                      "Lifestyle zahlen."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "FOLGE UNS",
+                                         "num":  null,
+                                         "title":  [
+                                                       "T?gliches Mindset",
+                                                       "\u0026 Money Moves"
+                                                   ],
+                                         "body":  [
+                                                      "Folge @mentviro",
+                                                      "f?r t?glich mehr."
+                                                  ]
+                                     }
+                                 ],
+                      "caption":  "Rich Dad Poor Dad Lektion #1: Der Unterschied zwischen Assets und Liabilities. ???\n\nDie meisten Menschen denken, ihr Eigenheim ist ihr gr??tes Asset.\n\nRobert Kiyosaki sagt: Es ist ihre gr??te Liability.\n\nWenn dein Haus dir jeden Monat Geld kostet ? ist es eine Schuld, kein Verm?gen.\n\nVersteht das. Ver?ndert alles. ??\n\n#assets #liabilities #richdadpoordad #finanziellefreiheit #mentviro #immobilien #investieren #gelddenken #moneymindset #wealthmindset #erfolg #motivation #entrepreneur #passiveseinkommen #businessmindset",
+                      "pexels_queries":  [
+                                             "dark luxury apartment interior night",
+                                             "abstract geometry dark minimal",
+                                             "dark gold metallic texture",
+                                             "aerial city night lights",
+                                             "dark hands holding keys close",
+                                             "dark chess board close up"
+                                         ],
+                      "story_text":  [
+                                         "HEUTE AUF MENTVIRO",
+                                         "Assets vs. Liabilities ?",
+                                         "der echte Unterschied",
+                                         "? Swipe durch den Post"
+                                     ]
+                  },
+                  {
+                      "day":  9,
+                      "date":  "2026-05-25",
+                      "type":  "carousel",
+                      "topic":  "Leverage ? Warum Reiche weniger arbeiten",
+                      "status":  "published",
+                      "hook":  "Reiche arbeiten nicht h?rter. Sie nutzen Leverage.",
+                      "slides":  [
+                                     {
+                                         "badge":  null,
+                                         "num":  null,
+                                         "title":  [
+                                                       "Reiche arbeiten",
+                                                       "nicht h?rter.",
+                                                       "Sie nutzen Leverage."
+                                                   ],
+                                         "body":  [
+                                                      "Hier ist der Unterschied. ?"
+                                                  ],
+                                         "is_cover":  true
+                                     },
+                                     {
+                                         "badge":  "LEVERAGE #1",
+                                         "num":  "1/4",
+                                         "title":  [
+                                                       "Kapital-Leverage"
+                                                   ],
+                                         "body":  [
+                                                      "Geld arbeitet 24/7.",
+                                                      "Du schl?fst ? es nicht."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "LEVERAGE #2",
+                                         "num":  "2/4",
+                                         "title":  [
+                                                       "Menschen-Leverage"
+                                                   ],
+                                         "body":  [
+                                                      "Ein Team multipliziert",
+                                                      "deine Zeit."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "LEVERAGE #3",
+                                         "num":  "3/4",
+                                         "title":  [
+                                                       "Content-Leverage"
+                                                   ],
+                                         "body":  [
+                                                      "Ein Video. Millionen Aufrufe.",
+                                                      "F?r immer online."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "LEVERAGE #4",
+                                         "num":  "4/4",
+                                         "title":  [
+                                                       "Wie du startest"
+                                                   ],
+                                         "body":  [
+                                                      "Fang mit Kapital an.",
+                                                      "Auch mit 50?/Monat."
+                                                  ]
+                                     },
+                                     {
+                                         "badge":  "FOLGE UNS",
+                                         "num":  null,
+                                         "title":  [
+                                                       "Mehr Mindset",
+                                                       "\u0026 Money Moves"
+                                                   ],
+                                         "body":  [
+                                                      "Folge @mentviro",
+                                                      "f?r t?glich mehr."
+                                                  ]
+                                     }
+                                 ],
+                      "caption":  "Warum schaffen es manche Menschen, 10x mehr zu verdienen und dabei 10x weniger zu arbeiten?\n\nEin Wort: Leverage. ??\n\nDu hast 24 Stunden. Jeder hat 24 Stunden.\n\nDer Unterschied ist, wie viele andere Systeme parallel f?r dich arbeiten.\n\nSwipe durch ? und frag dich: Welchen Leverage nutzt du schon?\n\n#leverage #passiveseinkommen #finanziellefreiheit #mentviro #entrepreneur #wealthmindset #moneymindset #investieren #erfolg #motivation #businessmindset #richdadpoordad #reichtum #assets #gelddenken",
+                      "pexels_queries":  [
+                                             "dark gear mechanism industrial macro",
+                                             "dark skyscraper glass perspective aerial",
+                                             "dark silhouette team fog minimal",
+                                             "dark phone screen neon glow night",
+                                             "dark scale balance dramatic light",
+                                             "dark architect blueprint minimal monochrome"
+                                         ],
+                      "story_text":  [
+                                         "NEU AUF MENTVIRO",
+                                         "Leverage ?",
+                                         "weniger arbeiten, mehr verdienen",
+                                         "? Swipe durch den Post"
+                                     ],
+                      "post_id":  "18111922030857427",
+                      "story_id":  "18529139383075258",
+                      "published_at":  "2026-05-30T12:59:05Z"
+                  },
+                  {
+                      "day":  12,
+                      "date":  "2026-05-28",
+                      "type":  "reel",
+                      "topic":  "Das 50-30-20 Prinzip",
+                      "status":  "published",
+                      "hook":  "Die meisten wissen nicht wohin ihr Geld jeden Monat verschwindet.",
+                      "script":  [
+                                     "Du verdienst Geld. Und trotzdem bleibt nichts ?brig.",
+                                     "Das Problem: kein System.",
+                                     "50% f?r Lebenshaltungskosten ? Miete, Essen, Transport.",
+                                     "30% direkt investieren ? ETF, Aktien, Assets.",
+                                     "20% f?r dich ? Weiterbildung, Erlebnisse, Freiheit.",
+                                     "Nicht sparen f?r sp?ter. Investieren f?r immer.",
+                                     "Folge @mentviro ? t?glich kl?ger mit Geld."
+                                 ],
+                      "caption":  "Du musst kein Finanzgenie sein, um Verm?gen aufzubauen.\n\nDu brauchst ein System. ??\n\nDas 50-30-20 Prinzip:\n50% Lebenshaltung\n30% Investitionen\n20% Wachstum \u0026 Leben\n\nEinfach. Skalierbar. Wirkungsvoll.\n\nFang heute an ? auch mit 500? im Monat.\n\n#5030 #haushaltsbuch #finanzplan #mentviro #finanziellefreiheit #geldanlage #investieren #wealthmindset #moneymindset #etf #dividenden #erfolg #motivation #selbstentwicklung #businessmindset",
+                      "pexels_video_query":  "dark abstract geometric light minimal cinematic",
+                      "story_text":  [
+                                         "NEUES REEL",
+                                         "Das 50-30-20",
+                                         "Prinzip f?r dein Geld",
+                                         "? Schau jetzt"
+                                     ],
+                      "post_id":  "3907133101954889191",
+                      "story_id":  "3907133512534292917",
+                      "published_at":  "2026-05-28T16:44:06Z",
+                      "insights":  {
+                                       "likes":  0,
+                                       "comments":  0
+                                   }
+                  }
+              ],
+    "story_queue":  [
+
+                    ]
 }

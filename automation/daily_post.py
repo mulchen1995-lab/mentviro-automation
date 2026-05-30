@@ -833,9 +833,14 @@ def check_and_refill_content(plan):
     start_date = max(last_date, last_date_sq) + timedelta(days=1)
 
     DAYS = 3
-    prompt = f"""Du bist Content Creator fuer @mentviro (Business Mindset, Finanzbildung, Instagram, Deutsch).
+    prompt = f"""Du bist Content Creator für @mentviro (Business Mindset, Finanzbildung, Instagram, Deutsch).
 
-Erstelle GENAU {DAYS} Tages-Pakete. Jedes Paket enthaelt:
+WICHTIG — ZEICHENKODIERUNG:
+- Verwende IMMER echte deutsche Umlaute: ä, ö, ü, Ä, Ö, Ü, ß
+- Verwende IMMER echte Unicode-Emojis (z.B. 🔑 💡 📊 💰 🧠 ⚡ 🎯), NIEMALS ? als Platzhalter
+- Das JSON muss gültige UTF-8 Strings enthalten, keine Ersatzzeichen
+
+Erstelle GENAU {DAYS} Tages-Pakete. Jedes Paket enthält:
   1. Ein REEL
   2. Ein CAROUSEL
   3. Ein STORY-PAAR (Zitat + 3 Tipps)
@@ -843,36 +848,36 @@ Erstelle GENAU {DAYS} Tages-Pakete. Jedes Paket enthaelt:
 BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 {chr(10).join(f'- {t}' for t in existing_topics[-20:])}
 {trend_context}{engagement_context}
-⚠️ INSTAGRAM-RICHTLINIEN — PFLICHT (Verstoss fuehrt zu Account-Sperre):
+⚠️ INSTAGRAM-RICHTLINIEN — PFLICHT (Verstoß führt zu Account-Sperre):
 VERBOTEN:
 - Konkrete Rendite- oder Gewinnversprechen ("verdiene X Euro", "X% Rendite garantiert")
-- Passives-Einkommen-Formeln oder Schritt-fuer-Schritt-Anleitungen zum Geldverdienen
+- Passives-Einkommen-Formeln oder Schritt-für-Schritt-Anleitungen zum Geldverdienen
 - Steuer-Tricks oder Aussagen wie "Reiche zahlen weniger Steuern als du"
-- "10x mehr verdienen bei weniger Arbeit" oder aehnliche Get-rich-quick-Aussagen
+- "10x mehr verdienen bei weniger Arbeit" oder ähnliche Get-rich-quick-Aussagen
 - FOMO-Taktiken ("nur heute", "letzte Chance", "du verlierst Geld wenn du jetzt nicht handelst")
 - Falsche Zitate oder nicht belegbare Behauptungen (kein Einstein-Compound-Zitat!)
 - Keine Links oder externe Weiterleitungen in Captions
-- Keine Finanzberatung oder konkrete Kaufempfehlungen fuer Produkte/Broker/Plattformen
+- Keine Finanzberatung oder konkrete Kaufempfehlungen für Produkte/Broker/Plattformen
 ERLAUBT:
-- Allgemeine Finanzbildung und bekannte Konzepte erklaeren (ETF, Zinseszins, Budgetregeln)
+- Allgemeine Finanzbildung und bekannte Konzepte erklären (ETF, Zinseszins, Budgetregeln)
 - Mindset-Content ohne Geldversprechen
 - Historische/philosophische Perspektiven (Stoiker, bekannte Investoren-Zitate)
 - Fragen die zum Nachdenken anregen
-- Sachlicher, motivierender Ton ohne Uebertreibungen
+- Sachlicher, motivierender Ton ohne Übertreibungen
 
-REGELN FUER CONTENT:
+REGELN FÜR CONTENT:
 - Hooks: sachlich neugierig, z.B. "Was steckt hinter dem Konzept X", "Wie funktioniert Y wirklich"
 - Kein Clickbait mit "99%", "alle machen diesen Fehler", "das sagen sie dir nicht"
 - Zielgruppe: 20-40 Jahre, Finanzbildung, Deutschland
-- PEXELS QUERIES: cinematic, dunkel, aesthetisch. NIEMALS: businessman, office, suit, handshake
+- PEXELS QUERIES: cinematic, dunkel, ästhetisch. NIEMALS: businessman, office, suit, handshake
 - Caption: informativ, reflektierend, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
 - Zitat: NUR echte, belegbare Zitate bekannter Personen. Kein "Einstein sagte..."
-- 3 Tipps: konkret, umsetzbar, max 12 Woerter pro Tipp, keine Geldversprechen
+- 3 Tipps: konkret, umsetzbar, max 12 Wörter pro Tipp, keine Geldversprechen
 - story_poll: kurze Ja/Nein oder Entweder/Oder Frage (max 35 Zeichen)
 
 Gib NUR ein JSON-Array mit {DAYS} Objekten aus. Kein Text davor/danach.
 
-Schema fuer jedes Objekt:
+Schema für jedes Objekt:
 {{
   "day": {last_day+1},
   "date": "{(start_date).isoformat()}",
@@ -890,7 +895,7 @@ Schema fuer jedes Objekt:
       {{"badge":null,"num":null,"title":["..."],"body":["..."],"is_cover":true}},
       {{"badge":"PUNKT #1","num":"1 / N","title":["..."],"body":["..."]}},
       ...,
-      {{"badge":"FOLGE UNS","num":null,"title":["Mehr Mindset","& Money Moves"],"body":["Folge @mentviro","fuer taeglich mehr."]}}
+      {{"badge":"FOLGE UNS","num":null,"title":["Mehr Mindset","& Money Moves"],"body":["Folge @mentviro","für täglich mehr."]}}
     ],
     "caption": "... #mentviro ...",
     "pexels_queries": ["q1","q2","q3","q4","q5","q6"],
@@ -901,12 +906,12 @@ Schema fuer jedes Objekt:
     "status": "pending",
     "topic": "dark minimal cinematic pexels query",
     "quote": {{
-      "text": "Das Zitat hier. Max 25 Woerter.",
+      "text": "Das Zitat hier. Max 25 Wörter.",
       "author": "Name oder @mentviro"
     }},
     "tips": {{
-      "title": "Kurzer Titel fuer den Tag",
-      "items": ["Tipp 1 max 12 Woerter","Tipp 2 max 12 Woerter","Tipp 3 max 12 Woerter"]
+      "title": "Kurzer Titel für den Tag",
+      "items": ["Tipp 1 max 12 Wörter","Tipp 2 max 12 Wörter","Tipp 3 max 12 Wörter"]
     }}
   }}
 }}"""
