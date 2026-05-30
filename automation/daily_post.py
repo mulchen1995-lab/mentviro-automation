@@ -255,13 +255,17 @@ def fnt(size, bold=False):
         f"/usr/share/fonts/truetype/Montserrat-{weight}.ttf",
         f"/usr/local/share/fonts/Montserrat-{weight}.ttf",
         f"/usr/share/fonts/truetype/dejavu/DejaVuSans{'-Bold' if bold else ''}.ttf",
+        f"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",  # extra fallback sans bold
         f"C:/Windows/Fonts/Montserrat-{weight}.ttf",
         f"C:/Windows/Fonts/{'arialbd' if bold else 'arial'}.ttf",
         os.path.join(os.path.dirname(__file__), "assets", f"Montserrat-{weight}.ttf"),
     ]
     for p in candidates:
         if os.path.exists(p):
-            return ImageFont.truetype(p, size)
+            try:
+                return ImageFont.truetype(p, size)
+            except (OSError, IOError):
+                continue  # file exists but is invalid (e.g. failed download) — try next
     return ImageFont.load_default()
 
 # ─── LOGO ────────────────────────────────────────────────────────────────────

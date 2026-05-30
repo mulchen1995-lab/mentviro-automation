@@ -32,10 +32,20 @@ jobs:
       - name: Install Montserrat (Linux)
         if: runner.os == 'Linux'
         run: |
-          sudo apt-get install -y fonts-dejavu-core ffmpeg
+          sudo apt-get install -y fonts-dejavu-core ffmpeg libwebp7
           mkdir -p /usr/share/fonts/truetype
-          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Regular.ttf" -O /usr/share/fonts/truetype/Montserrat-Regular.ttf
-          wget -q "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-Bold.ttf" -O /usr/share/fonts/truetype/Montserrat-Bold.ttf
+          for weight in Regular Bold; do
+            DEST="/usr/share/fonts/truetype/Montserrat-${weight}.ttf"
+            curl -fsSL -H "Accept: application/octet-stream" \
+              "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-${weight}.ttf" \
+              -o "$DEST" || true
+            if [ -f "$DEST" ]; then
+              HEAD=$(head -c 4 "$DEST" | xxd -p 2>/dev/null || true)
+              if [ "$HEAD" != "00010000" ] && [ "${HEAD:0:8}" != "74727565" ]; then
+                echo "Montserrat-${weight}.ttf invalid, removing"; rm -f "$DEST"
+              fi
+            fi
+          done
           fc-cache -f
 
       - name: Install dependencies
