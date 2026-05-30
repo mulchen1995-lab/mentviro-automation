@@ -691,7 +691,11 @@
       "story_poll": "Nutzt du Zinseszins schon?",
       "post_id": "18078086621214703",
       "story_id": "18072474191334475",
-      "published_at": "2026-05-30T13:25:45Z"
+      "published_at": "2026-05-30T13:25:45Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "day": 14,
@@ -724,7 +728,7 @@
       "date": "2026-06-02",
       "type": "carousel",
       "topic": "5 Prinzipien die Warren Buffett reich machten",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "hook": "Warren Buffett ist nicht reich weil er klüger ist. Sondern weil er einfache Prinzipien konsequent anwendet. 🎯",
       "slides": [
@@ -826,7 +830,10 @@
         "5 die wirklich zählen",
         "➡️ Swipe durch den Post"
       ],
-      "story_poll": "Kennst du Buffetts Prinzipien?"
+      "story_poll": "Kennst du Buffetts Prinzipien?",
+      "post_id": "18018535226844183",
+      "story_id": "18142744609514958",
+      "published_at": "2026-05-30T17:12:53Z"
     }
   ],
   "story_queue": [
