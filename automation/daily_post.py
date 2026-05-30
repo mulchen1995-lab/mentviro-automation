@@ -110,29 +110,142 @@ def send_telegram(message: str):
     except Exception:
         pass
 
-# ─── SESSION AGE CHECK ───────────────────────────────────────────────────────
+# ─── META GRAPH API ──────────────────────────────────────────────────────────
+
+GRAPH_API  = "https://graph.facebook.com/v21.0"
+IG_USER_ID = os.environ.get("IG_USER_ID", "")
+IG_TOKEN   = os.environ.get("IG_ACCESS_TOKEN", "")
+CDN_CLOUD  = os.environ.get("CLOUDINARY_CLOUD_NAME", "")
+CDN_PRESET = os.environ.get("CLOUDINARY_UPLOAD_PRESET", "")
+
+def cloudinary_upload(data: bytes, resource_type: str = "image", suffix: str = ".jpg") -> str:
+    """Upload image/video bytes to Cloudinary. Returns public HTTPS URL."""
+    if not CDN_CLOUD or not CDN_PRESET:
+        raise RuntimeError("CLOUDINARY_CLOUD_NAME / CLOUDINARY_UPLOAD_PRESET nicht gesetzt")
+    mime  = "image/jpeg" if resource_type == "image" else "video/mp4"
+    fname = f"mentviro_{int(time.time())}{suffix}"
+    r = requests.post(
+        f"https://api.cloudinary.com/v1_1/{CDN_CLOUD}/{resource_type}/upload",
+        files={"file": (fname, data, mime)},
+        data={"upload_preset": CDN_PRESET, "folder": "mentviro"},
+        timeout=180,
+    )
+    if r.status_code != 200:
+        raise RuntimeError(f"Cloudinary upload failed: {r.status_code} {r.text[:300]}")
+    url = r.json().get("secure_url", "")
+    print(f"  CDN: {url.split('/')[-1]}")
+    return url
+
+def ig_create_container(*, image_url: str = None, video_url: str = None,
+                         caption: str = None, media_type: str = "IMAGE",
+                         is_carousel_item: bool = False) -> str:
+    """Create an IG media container. Returns container ID."""
+    if not IG_TOKEN or not IG_USER_ID:
+        raise RuntimeError("IG_ACCESS_TOKEN / IG_USER_ID nicht gesetzt")
+    params: dict = {"access_token": IG_TOKEN, "media_type": media_type}
+    if image_url:
+        params["image_url"] = image_url
+    if video_url:
+        params["video_url"] = video_url
+    if caption:
+        params["caption"] = caption
+    if is_carousel_item:
+        params["is_carousel_item"] = "true"
+    r = requests.post(f"{GRAPH_API}/{IG_USER_ID}/media", data=params, timeout=60)
+    if r.status_code != 200:
+        raise RuntimeError(f"ig_create_container ({media_type}): {r.status_code} {r.text}")
+    return r.json()["id"]
+
+def ig_create_carousel_container(child_ids: list, caption: str) -> str:
+    """Create a carousel parent container. Returns container ID."""
+    params = {
+        "access_token": IG_TOKEN,
+        "media_type":   "CAROUSEL",
+        "children":     ",".join(child_ids),
+        "caption":      caption,
+    }
+    r = requests.post(f"{GRAPH_API}/{IG_USER_ID}/media", data=params, timeout=60)
+    if r.status_code != 200:
+        raise RuntimeError(f"ig_create_carousel_container: {r.status_code} {r.text}")
+    return r.json()["id"]
+
+def ig_publish(container_id: str) -> str:
+    """Publish a media container. Returns the live media ID."""
+    r = requests.post(
+        f"{GRAPH_API}/{IG_USER_ID}/media_publish",
+        data={"access_token": IG_TOKEN, "creation_id": container_id},
+        timeout=60,
+    )
+    if r.status_code != 200:
+        raise RuntimeError(f"ig_publish: {r.status_code} {r.text}")
+    return r.json()["id"]
+
+def ig_wait_for_video(container_id: str, timeout_s: int = 300):
+    """Poll until a video container is ready to publish (status=FINISHED)."""
+    for _ in range(timeout_s // 10):
+        r = requests.get(
+            f"{GRAPH_API}/{container_id}",
+            params={"fields": "status_code", "access_token": IG_TOKEN},
+            timeout=30,
+        )
+        status = r.json().get("status_code", "IN_PROGRESS")
+        print(f"  Video container status: {status}")
+        if status == "FINISHED":
+            return
+        if status == "ERROR":
+            raise RuntimeError(f"Video container error: {r.json()}")
+        time.sleep(10)
+    raise TimeoutError("Video container processing timed out")
+
+def ig_get_insights(media_id: str) -> dict:
+    """Fetch like/comment counts via Graph API."""
+    r = requests.get(
+        f"{GRAPH_API}/{media_id}",
+        params={"fields": "like_count,comments_count", "access_token": IG_TOKEN},
+        timeout=30,
+    )
+    if r.status_code != 200:
+        return {}
+    d = r.json()
+    return {"likes": d.get("like_count", 0), "comments": d.get("comments_count", 0)}
 
 def check_session_age():
-    session_json = os.environ.get("IG_SESSION", "")
-    if not session_json:
+    """Check if the IG access token needs refreshing (warn when < 10 days left)."""
+    # Token expiry is stored locally after each refresh.
+    # Since we can't query expiry from the env token, we refresh proactively each run.
+    token = os.environ.get("IG_ACCESS_TOKEN", "")
+    if not token:
+        send_telegram(
+            "⚠️ <b>mentviro-bot</b>: IG_ACCESS_TOKEN nicht gesetzt!\n"
+            "Bitte Token über Meta Developer Console erneuern und als GitHub Secret hinterlegen."
+        )
         return
-    try:
-        data      = json.loads(session_json)
-        last_login = data.get("last_login", 0)
-        if not last_login:
-            return
-        age_days = (time.time() - last_login) / 86400
-        print(f"  IG session age: {age_days:.0f} days", end="")
-        if age_days > 45:
-            send_telegram(
-                f"<b>mentviro-bot</b>: IG-Session ist <b>{age_days:.0f} Tage</b> alt!\n"
-                "Bitte <code>refresh_ig_session.py</code> ausfuehren."
-            )
-            print(" — ALERT sent")
+    # Attempt a lightweight API call to verify token is valid
+    r = requests.get(
+        f"{GRAPH_API}/{IG_USER_ID}",
+        params={"fields": "id,name", "access_token": token},
+        timeout=15,
+    )
+    if r.status_code == 200:
+        print(f"  IG token valid — account: {r.json().get('name','?')}")
+        # Proactively refresh to extend 60-day window
+        ref = requests.get(
+            "https://graph.facebook.com/oauth/access_token",
+            params={"grant_type": "ig_refresh_token", "access_token": token},
+            timeout=15,
+        )
+        if ref.status_code == 200:
+            print("  IG token refreshed (60-day window extended)")
         else:
-            print(" — OK")
-    except Exception as e:
-        print(f"\n  Session-age check failed: {e}")
+            print(f"  Token refresh skipped: {ref.status_code}")
+    else:
+        err = r.json().get("error", {})
+        send_telegram(
+            f"⛔ <b>mentviro-bot</b>: IG Access Token ungültig!\n"
+            f"<code>{err.get('message','?')}</code>\n"
+            "Bitte neuen Token generieren: developers.facebook.com → Graph API Explorer"
+        )
+        print(f"  IG token check FAILED: {r.status_code} {r.text[:200]}")
 
 # ─── FONT ────────────────────────────────────────────────────────────────────
 
@@ -528,77 +641,12 @@ def build_tips_story(story_data: dict):
     buf.seek(0)
     return buf.read()
 
-# ─── INSTAGRAM CLIENT ────────────────────────────────────────────────────────
-
-_ig_client      = None
-_ig_login_error = None   # Set once login fails — prevents repeated retry spam
-
-def get_ig_client():
-    global _ig_client, _ig_login_error
-    # If we already know login is broken this run, raise immediately (no spam)
-    if _ig_login_error is not None:
-        raise _ig_login_error
-    if _ig_client is not None:
-        return _ig_client
-    from instagrapi import Client
-    username = os.environ.get("IG_USERNAME", "mentviro")
-    password = os.environ.get("IG_PASSWORD")
-    if not password:
-        raise RuntimeError("IG_PASSWORD not set")
-    session_json = os.environ.get("IG_SESSION", "")
-    if session_json:
-        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
-            f.write(session_json)
-            tmp_path = f.name
-        cl = Client()
-        cl.delay_range = [1, 3]
-        cl.load_settings(tmp_path)
-        os.unlink(tmp_path)
-        # Validate the session — if it's dead, try one relogin
-        try:
-            cl.get_timeline_feed()
-            print("  IG session loaded + validated OK")
-        except Exception as val_err:
-            print(f"  IG session stale ({val_err}) — attempting relogin...")
-            send_telegram(
-                "<b>mentviro-bot</b>: IG-Session abgelaufen — versuche Relogin...\n"
-                f"<code>{val_err}</code>"
-            )
-            try:
-                cl = Client()
-                cl.delay_range = [1, 3]
-                cl.login(username, password)
-                print("  IG relogin OK")
-                send_telegram("<b>mentviro-bot</b>: Relogin erfolgreich! ✅")
-            except Exception as relogin_err:
-                msg = (
-                    "<b>mentviro-bot</b>: ⛔ Relogin fehlgeschlagen — IP geblockt!\n"
-                    f"<code>{relogin_err}</code>\n\n"
-                    "Führe aus (reconnectet Fritz!Box + erneuert Session):\n"
-                    "<code>python \"D:\\Claude Council\\refresh_ig_session.py\" --fritz</code>"
-                )
-                send_telegram(msg)
-                print(f"  Relogin failed: {relogin_err}")
-                _ig_login_error = relogin_err
-                raise relogin_err
-        _ig_client = cl
-        return cl
-    cl = Client()
-    cl.delay_range = [1, 3]
-    try:
-        cl.login(username, password)
-        print("  IG login OK")
-    except Exception as login_err:
-        _ig_login_error = login_err
-        raise login_err
-    _ig_client = cl
-    return cl
+# (instagrapi removed — posting via official Meta Graph API)
 
 # ─── ENGAGEMENT TRACKING ─────────────────────────────────────────────────────
 
 def fetch_and_store_insights(plan):
     updated = False
-    cl      = None
     cutoff  = (date.today() - timedelta(days=30)).isoformat()
     for post in plan["posts"]:
         if post.get("status") != "published" or not post.get("post_id"):
@@ -606,16 +654,13 @@ def fetch_and_store_insights(plan):
         if post.get("insights") or post.get("date", "9999") < cutoff:
             continue
         try:
-            if cl is None:
-                cl = get_ig_client()
-            info = cl.media_info(int(post["post_id"]))
-            post["insights"] = {
-                "likes":    getattr(info, "like_count",    0),
-                "comments": getattr(info, "comment_count", 0),
-            }
-            score = post["insights"]["likes"] * 2 + post["insights"]["comments"] * 5
+            ins = ig_get_insights(post["post_id"])
+            if not ins:
+                continue
+            post["insights"] = ins
+            score = ins.get("likes", 0) * 2 + ins.get("comments", 0) * 5
             print(f"  Insights Day {post['day']} ({post['type']}): "
-                  f"{post['insights']['likes']}L {post['insights']['comments']}C score={score}")
+                  f"{ins.get('likes',0)}L {ins.get('comments',0)}C score={score}")
             updated = True
         except Exception as e:
             print(f"  Insights Day {post['day']}: {e}")
@@ -906,7 +951,7 @@ def run_carousel(post, plan):
     set_build_accent(post)
     print(f"Building carousel: {post['topic']}")
     pexels_queries = post.get("pexels_queries", [])
-    tmp_paths      = []
+    child_ids: list = []
     try:
         for i, slide in enumerate(post["slides"]):
             print(f"  Slide {i+1}/{len(post['slides'])}...", end=" ", flush=True)
@@ -914,22 +959,21 @@ def run_carousel(post, plan):
             if not slide.get("is_cover") and pexels_queries:
                 bg_img = pexels_portrait(pexels_queries[min(i, len(pexels_queries)-1)])
             img_bytes = build_carousel_slide(slide, bg_img)
-            path = f"{TMPDIR}/mentviro_d{post['day']}_s{i+1}.jpg"
-            with open(path, "wb") as f:
-                f.write(img_bytes)
-            tmp_paths.append(path)
-            print("ok")
-            time.sleep(0.4)
+            img_url   = cloudinary_upload(img_bytes)
+            child_id  = ig_create_container(image_url=img_url, is_carousel_item=True)
+            child_ids.append(child_id)
+            print(f"ok (container {child_id})")
+            time.sleep(1)
 
-        print("  Uploading carousel...")
-        cl    = get_ig_client()
-        media = cl.album_upload(tmp_paths, caption=post["caption"])
-        print(f"  Carousel live! ID: {media.pk}")
-        return str(media.pk)
-    finally:
-        for p in tmp_paths:
-            try: os.unlink(p)
-            except Exception: pass
+        print("  Creating carousel container...")
+        carousel_id = ig_create_carousel_container(child_ids, post["caption"])
+        time.sleep(3)
+        print("  Publishing...")
+        media_id = ig_publish(carousel_id)
+        print(f"  Carousel live! ID: {media_id}")
+        return media_id
+    except Exception:
+        raise
 
 # ─── REEL WORKFLOW ───────────────────────────────────────────────────────────
 
@@ -949,6 +993,7 @@ def _wrap_title(text, max_len=26):
     return lines[:3]
 
 def _reel_as_carousel(post, plan):
+    """Fallback: post reel script as a 9:16 carousel via Graph API."""
     print("  Building 9:16 carousel from reel script...")
     script = post.get("script", [post.get("hook", post["topic"])])
     slides = [{"badge": None, "num": None, "is_cover": True,
@@ -963,26 +1008,21 @@ def _reel_as_carousel(post, plan):
                    "body":  ["Folge @mentviro", "fuer taeglich mehr."]})
 
     pq = post.get("pexels_video_query", "dark city cinematic night")
-    tmp_paths = []
-    try:
-        for i, slide in enumerate(slides):
-            print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
-            bg_img = None if slide.get("is_cover") else pexels_portrait(pq, target_w=SW, target_h=SH)
-            img_bytes = build_carousel_slide(slide, bg_img, w=SW, h=SH)
-            path = f"{TMPDIR}/mentviro_reel_fb_d{post['day']}_s{i+1}.jpg"
-            with open(path, "wb") as f:
-                f.write(img_bytes)
-            tmp_paths.append(path)
-            print("ok")
-            time.sleep(0.4)
-        cl    = get_ig_client()
-        media = cl.album_upload(tmp_paths, caption=post["caption"])
-        print(f"  Reel-Carousel live! ID: {media.pk}")
-        return str(media.pk)
-    finally:
-        for p in tmp_paths:
-            try: os.unlink(p)
-            except Exception: pass
+    child_ids: list = []
+    for i, slide in enumerate(slides):
+        print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
+        bg_img    = None if slide.get("is_cover") else pexels_portrait(pq, target_w=SW, target_h=SH)
+        img_bytes = build_carousel_slide(slide, bg_img, w=SW, h=SH)
+        img_url   = cloudinary_upload(img_bytes)
+        child_id  = ig_create_container(image_url=img_url, is_carousel_item=True)
+        child_ids.append(child_id)
+        print(f"ok (container {child_id})")
+        time.sleep(1)
+    carousel_id = ig_create_carousel_container(child_ids, post["caption"])
+    time.sleep(3)
+    media_id = ig_publish(carousel_id)
+    print(f"  Reel-Carousel live! ID: {media_id}")
+    return media_id
 
 def run_reel(post, plan):
     set_build_accent(post)
@@ -1073,13 +1113,22 @@ def run_reel(post, plan):
         thumb_path  = None
 
     try:
-        cl    = get_ig_client()
-        media = cl.clip_upload(final_video, caption=post["caption"],
-                               thumbnail=thumb_path if thumb_path and os.path.exists(thumb_path) else None)
-        print(f"  Reel live! ID: {media.pk}")
-        return str(media.pk)
+        print("  Uploading video to Cloudinary...")
+        with open(final_video, "rb") as vf:
+            video_url = cloudinary_upload(vf.read(), resource_type="video", suffix=".mp4")
+        print("  Creating REELS container...")
+        container_id = ig_create_container(
+            video_url=video_url,
+            caption=post["caption"],
+            media_type="REELS",
+        )
+        ig_wait_for_video(container_id, timeout_s=300)
+        print("  Publishing reel...")
+        media_id = ig_publish(container_id)
+        print(f"  Reel live! ID: {media_id}")
+        return media_id
     except Exception as e:
-        print(f"  clip_upload failed ({type(e).__name__}): {e} — fallback")
+        print(f"  Reel upload failed ({type(e).__name__}): {e} — fallback to carousel")
         return _reel_as_carousel(post, plan)
     finally:
         for p in [raw_path, conv_path, thumb_path, audio_path]:
@@ -1090,31 +1139,15 @@ def run_reel(post, plan):
 # ─── STORY WORKFLOWS ─────────────────────────────────────────────────────────
 
 def run_attached_story(post):
-    """Post the story that is attached to a carousel/reel."""
+    """Post the story attached to a carousel/reel via Graph API."""
     print("  Posting attached story...")
     story_bytes = build_attached_story(post)
-    path = f"{TMPDIR}/mentviro_story_d{post['day']}.jpg"
-    with open(path, "wb") as f:
-        f.write(story_bytes)
-    try:
-        cl = get_ig_client()
-        stickers = []
-        poll_q   = post.get("story_poll", "")
-        if poll_q:
-            try:
-                from instagrapi.types import StoryPoll
-                stickers = [StoryPoll(x=0.5, y=0.72, width=0.9, height=0.14,
-                                      question=poll_q,
-                                      tallies=[{"text": "Ja"}, {"text": "Nein"}])]
-            except Exception:
-                pass
-        media = cl.photo_upload_to_story(path, stickers=stickers) if stickers \
-            else cl.photo_upload_to_story(path)
-        print(f"  Story live! ID: {media.pk}")
-        return str(media.pk)
-    finally:
-        try: os.unlink(path)
-        except Exception: pass
+    img_url     = cloudinary_upload(story_bytes)
+    container   = ig_create_container(image_url=img_url, media_type="STORIES")
+    time.sleep(2)
+    media_id    = ig_publish(container)
+    print(f"  Story live! ID: {media_id}")
+    return media_id
 
 def run_daily_stories(plan):
     """Post today's standalone quote story + tips story."""
@@ -1125,20 +1158,16 @@ def run_daily_stories(plan):
 
     set_build_accent(sd)
     print(f"Building daily stories for: {sd.get('date')}")
-    cl = get_ig_client()
 
     # Quote story
     print("  Quote story...", end=" ", flush=True)
     quote_id = None
     try:
-        qbytes = build_quote_story(sd)
-        qpath  = f"{TMPDIR}/mentviro_quote_{sd['day']}.jpg"
-        with open(qpath, "wb") as f:
-            f.write(qbytes)
-        media    = cl.photo_upload_to_story(qpath)
-        quote_id = str(media.pk)
+        qbytes      = build_quote_story(sd)
+        img_url     = cloudinary_upload(qbytes)
+        container   = ig_create_container(image_url=img_url, media_type="STORIES")
+        quote_id    = ig_publish(container)
         print(f"ok (ID: {quote_id})")
-        os.unlink(qpath)
     except Exception as e:
         print(f"failed: {e}")
 
@@ -1148,14 +1177,11 @@ def run_daily_stories(plan):
     print("  Tips story...", end=" ", flush=True)
     tips_id = None
     try:
-        tbytes = build_tips_story(sd)
-        tpath  = f"{TMPDIR}/mentviro_tips_{sd['day']}.jpg"
-        with open(tpath, "wb") as f:
-            f.write(tbytes)
-        media   = cl.photo_upload_to_story(tpath)
-        tips_id = str(media.pk)
+        tbytes      = build_tips_story(sd)
+        img_url     = cloudinary_upload(tbytes)
+        container   = ig_create_container(image_url=img_url, media_type="STORIES")
+        tips_id     = ig_publish(container)
         print(f"ok (ID: {tips_id})")
-        os.unlink(tpath)
     except Exception as e:
         print(f"failed: {e}")
 
