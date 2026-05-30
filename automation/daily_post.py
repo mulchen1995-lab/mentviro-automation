@@ -36,7 +36,7 @@ SCHEDULE = {"reel": "07:00", "stories": "12:00", "carousel": "18:00"}
 # ─── PLAN ────────────────────────────────────────────────────────────────────
 
 def load_plan():
-    with open(PLAN_FILE, encoding='utf-8') as f:
+    with open(PLAN_FILE, encoding='utf-8-sig') as f:  # utf-8-sig handles BOM transparently
         return json.load(f)
 
 def save_plan(plan):
