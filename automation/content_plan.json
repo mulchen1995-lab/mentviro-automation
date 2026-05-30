@@ -569,7 +569,7 @@
       "date": "2026-05-25",
       "type": "carousel",
       "topic": "Leverage ? Warum Reiche weniger arbeiten",
-      "status": "pending",
+      "status": "published",
       "hook": "Reiche arbeiten nicht h?rter. Sie nutzen Leverage.",
       "slides": [
         {
@@ -656,7 +656,10 @@
         "Leverage ?",
         "weniger arbeiten, mehr verdienen",
         "? Swipe durch den Post"
-      ]
+      ],
+      "post_id": "18111922030857427",
+      "story_id": "18529139383075258",
+      "published_at": "2026-05-30T12:59:05Z"
     },
     {
       "day": 10,
