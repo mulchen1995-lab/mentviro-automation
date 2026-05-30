@@ -112,7 +112,7 @@ def send_telegram(message: str):
 
 # ─── META GRAPH API ──────────────────────────────────────────────────────────
 
-GRAPH_API  = "https://graph.facebook.com/v21.0"
+GRAPH_API  = "https://graph.instagram.com/v21.0"
 IG_USER_ID = os.environ.get("IG_USER_ID", "")
 IG_TOKEN   = os.environ.get("IG_ACCESS_TOKEN", "")
 CDN_CLOUD  = os.environ.get("CLOUDINARY_CLOUD_NAME", "")
@@ -230,7 +230,7 @@ def check_session_age():
         print(f"  IG token valid — account: {r.json().get('name','?')}")
         # Proactively refresh to extend 60-day window
         ref = requests.get(
-            "https://graph.facebook.com/oauth/access_token",
+            "https://graph.instagram.com/refresh_access_token",
             params={"grant_type": "ig_refresh_token", "access_token": token},
             timeout=15,
         )
@@ -391,7 +391,14 @@ def pexels_portrait(query, target_w=W, target_h=H):
             return None
         photo = random.choice(photos[:min(3, len(photos))])
         url   = photo["src"].get("portrait") or photo["src"].get("large2x") or photo["src"].get("large")
-        img   = Image.open(io.BytesIO(requests.get(url, timeout=30).content)).convert("RGB")
+        img_resp = requests.get(url, timeout=30)
+        if img_resp.status_code != 200 or not img_resp.content:
+            return None
+        try:
+            img = Image.open(io.BytesIO(img_resp.content)).convert("RGB")
+        except Exception as e:
+            print(f"  Pexels image decode error: {e}")
+            return None
         sw, sh = img.size
         tr = target_w / target_h
         sr = sw / sh
@@ -897,7 +904,7 @@ Schema fuer jedes Objekt:
 
     try:
         r = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}",
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}",
             headers={"content-type": "application/json"},
             json={"contents": [{"parts": [{"text": prompt}]}],
                   "generationConfig": {"maxOutputTokens": 10000, "temperature": 0.9}},
