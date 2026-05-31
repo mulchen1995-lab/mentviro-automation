@@ -702,7 +702,7 @@
       "date": "2026-06-01",
       "type": "reel",
       "topic": "Die 3 Säulen des Vermögensaufbaus",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "hook": "Warum bauen manche Menschen Vermögen auf — und andere nicht?",
       "script": [
@@ -721,7 +721,10 @@
         "des Vermögensaufbaus",
         "Jetzt anschauen"
       ],
-      "story_poll": "Welche Säule fehlt dir?"
+      "story_poll": "Welche Säule fehlt dir?",
+      "post_id": "18162532168401565",
+      "story_id": "18076185704409779",
+      "published_at": "2026-05-31T08:19:37Z"
     },
     {
       "day": 15,
@@ -833,7 +836,11 @@
       "story_poll": "Kennst du Buffetts Prinzipien?",
       "post_id": "18018535226844183",
       "story_id": "18142744609514958",
-      "published_at": "2026-05-30T17:12:53Z"
+      "published_at": "2026-05-30T17:12:53Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     }
   ],
   "story_queue": [
