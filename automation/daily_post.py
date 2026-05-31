@@ -420,7 +420,8 @@ def pexels_portrait(query, target_w=W, target_h=H):
         print(f"  Pexels error: {e}")
         return None
 
-def pexels_video(query):
+def pexels_video(query, pick_random=True):
+    """Return a portrait MP4 URL from Pexels. pick_random=True returns a random result."""
     key = os.environ.get("PEXELS_API_KEY", "")
     if not key:
         return None
@@ -428,12 +429,22 @@ def pexels_video(query):
         r = requests.get(
             "https://api.pexels.com/videos/search",
             headers={"Authorization": key},
-            params={"query": query, "per_page": 5, "orientation": "portrait"},
+            params={"query": query, "per_page": 8, "orientation": "portrait"},
             timeout=30)
+        candidates = []
         for v in r.json().get("videos", []):
-            for vf in v.get("video_files", []):
+            # Prefer HD portrait files
+            best = None
+            for vf in sorted(v.get("video_files", []),
+                             key=lambda x: x.get("height", 0), reverse=True):
                 if "mp4" in vf.get("file_type", ""):
-                    return vf["link"]
+                    best = vf["link"]
+                    break
+            if best:
+                candidates.append(best)
+        if not candidates:
+            return None
+        return random.choice(candidates) if pick_random else candidates[0]
     except Exception as e:
         print(f"  Pexels video error: {e}")
     return None
@@ -1045,101 +1056,266 @@ def _reel_as_carousel(post, plan):
     print(f"  Reel-Carousel live! ID: {media_id}")
     return media_id
 
+# ─── REEL HELPERS ────────────────────────────────────────────────────────────
+
+def _reel_find_font():
+    """Return path to best available bold TTF font, or None."""
+    candidates = [
+        "/usr/share/fonts/truetype/Montserrat-Bold.ttf",
+        "/usr/local/share/fonts/Montserrat-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "C:/Windows/Fonts/Montserrat-Bold.ttf",
+        "C:/Windows/Fonts/arialbd.ttf",
+        os.path.join(os.path.dirname(__file__), "assets", "Montserrat-Bold.ttf"),
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            try:
+                ImageFont.truetype(p, 20)
+                return p
+            except (OSError, IOError):
+                continue
+    return None
+
+def _reel_wrap_text(text, max_chars=26):
+    """Split sentence into lines of max_chars each."""
+    import textwrap
+    return textwrap.wrap(text, width=max_chars) or [text]
+
+def _reel_sentence_queries(post):
+    """Return a Pexels query per script sentence — topic-matched."""
+    script = post.get("script", [post.get("hook", "")])
+    base   = post.get("pexels_video_query", "cinematic dark abstract")
+    # Build per-sentence query from keywords + cinematic style
+    stopwords = {"und","die","der","das","ein","eine","in","ist","es","du","ich",
+                 "wir","sie","mir","dir","von","mit","für","auf","an","bei","dass",
+                 "nicht","aber","auch","noch","wie","was","als","so","nur","schon",
+                 "the","a","an","is","it","in","of","to","and","or","for","with"}
+    queries = []
+    for sent in script:
+        words = [w.strip(".,!?:;\"'").lower() for w in sent.split() if len(w) > 4]
+        kw    = [w for w in words if w not in stopwords][:2]
+        q     = " ".join(kw) + " dark cinematic" if kw else base
+        queries.append(q)
+    return queries
+
+def _reel_probe_duration(path):
+    """Return video duration in seconds via ffprobe."""
+    import subprocess
+    try:
+        p = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "csv=p=0", path],
+            capture_output=True, text=True, timeout=20)
+        return float(p.stdout.strip().split("\n")[0] or "0")
+    except Exception:
+        return 0.0
+
+def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx):
+    """
+    Build one 1080×1920 clip with:
+    - background video (looped/trimmed to `duration` seconds)
+    - dark overlay for readability
+    - centered bold white text (sentence), written via textfile to avoid escaping issues
+    """
+    import subprocess
+    lines    = _reel_wrap_text(sentence, max_chars=24)
+    n_lines  = len(lines)
+    font_sz  = 88 if n_lines == 1 else (80 if n_lines == 2 else 72)
+    line_h   = font_sz + 18
+
+    # Write lines to a temp text file (avoids all ffmpeg escaping issues)
+    txt_path = f"{TMPDIR}/reel_{day}_clip{idx}_text.txt"
+    with open(txt_path, "w", encoding="utf-8") as tf:
+        tf.write("\n".join(lines))
+
+    font_arg = f":fontfile={font_path}" if font_path else ""
+
+    # Build one drawtext filter per line — vertical center block
+    total_h  = n_lines * line_h
+    dt_parts = []
+    for i, line in enumerate(lines):
+        # Write individual line file
+        line_file = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
+        with open(line_file, "w", encoding="utf-8") as lf:
+            lf.write(line)
+        y_expr = f"(h-{total_h})/2+{i*line_h}"
+        dt_parts.append(
+            f"drawtext=textfile='{line_file}'{font_arg}"
+            f":fontcolor=white:fontsize={font_sz}"
+            f":x=(w-text_w)/2:y={y_expr}"
+            f":box=1:boxcolor=0x00000099:boxborderw=24"
+        )
+    drawtext_chain = ",".join(dt_parts)
+
+    # Video filter: crop to 9:16, dark overlay, then text
+    vf = (
+        "scale=1080:1920:force_original_aspect_ratio=increase,"
+        "crop=1080:1920:(iw-1080)/2:(ih-1920)/2,"
+        "setsar=1,"
+        "eq=brightness=-0.35:contrast=1.05,"
+        f"{drawtext_chain}"
+    )
+
+    raw_dur   = _reel_probe_duration(raw_video) if raw_video else 0
+    loop_args = ["-stream_loop", "-1"] if raw_dur > 0 and raw_dur < duration * 1.1 else []
+
+    try:
+        if raw_video and os.path.exists(raw_video):
+            subprocess.run(
+                ["ffmpeg", "-y"] + loop_args + [
+                    "-i", raw_video,
+                    "-vf", vf,
+                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+                    "-an", "-t", str(round(duration, 2)), out_path],
+                check=True, capture_output=True, timeout=180)
+        else:
+            raise FileNotFoundError("no raw video")
+    except Exception:
+        # Fallback: black background + text
+        subprocess.run(
+            ["ffmpeg", "-y",
+             "-f", "lavfi", "-i", f"color=black:size=1080x1920:rate=30",
+             "-vf", drawtext_chain,
+             "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+             "-an", "-t", str(round(duration, 2)), out_path],
+            check=True, capture_output=True, timeout=60)
+
+    # Clean up line text files
+    for i in range(n_lines):
+        p = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
+        try: os.unlink(p)
+        except: pass
+
 def run_reel(post, plan):
     set_build_accent(post)
     import subprocess
     print(f"Building reel: {post['topic']}")
 
-    # 1. Voiceover (ElevenLabs) — save to disk so ffmpeg can mix it in
-    script_text = " ".join(post.get("script", [post.get("hook", "")]))
-    audio_path  = f"{TMPDIR}/mentviro_reel_d{post['day']}_voice.mp3"
-    audio_ok    = False
+    script  = post.get("script", [post.get("hook", "")])
+    day     = post["day"]
+    cleanup = []
+
+    # ── Step 1: TTS for full script ──────────────────────────────────────────
+    audio_path = f"{TMPDIR}/reel_{day}_voice.mp3"
+    audio_ok   = False
+    audio_dur  = 0.0
     try:
         el_key = os.environ.get("ELEVENLABS_API_KEY",
                                 "1071b6e53cb6e950c63d8e11a05dfa7b07764275cab9fda0ce63104a421c2d37")
         el_r = requests.post(
             "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB",
             headers={"xi-api-key": el_key, "Content-Type": "application/json"},
-            json={"text": script_text, "model_id": "eleven_multilingual_v2",
+            json={"text": " ".join(script),
+                  "model_id": "eleven_multilingual_v2",
                   "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}},
-            timeout=60)
+            timeout=90)
         if el_r.status_code == 200:
             with open(audio_path, "wb") as af:
                 af.write(el_r.content)
-            audio_ok = True
-            print(f"  Voiceover: OK ({len(el_r.content)//1024} KB)")
+            audio_ok  = True
+            audio_dur = _reel_probe_duration(audio_path)
+            cleanup.append(audio_path)
+            print(f"  Voiceover: OK ({len(el_r.content)//1024} KB, {audio_dur:.1f}s)")
         else:
-            print(f"  Voiceover: {el_r.status_code}")
+            print(f"  Voiceover: {el_r.status_code} — {el_r.text[:100]}")
     except Exception as e:
         print(f"  Voiceover error: {e}")
 
-    # 2. Pexels video
-    video_url = pexels_video(post.get("pexels_video_query", "cinematic dark city night"))
-    if not video_url:
-        print("  No video found — fallback to 9:16 carousel")
+    if audio_dur < 1:
+        # Fallback estimate: ~75ms per character
+        audio_dur = sum(len(s) for s in script) * 0.075
+
+    # ── Step 2: Per-sentence duration (proportional to char count) ───────────
+    char_counts = [max(len(s), 10) for s in script]
+    total_chars = sum(char_counts)
+    durations   = [audio_dur * (c / total_chars) for c in char_counts]
+    print(f"  Script: {len(script)} sentences, total ~{audio_dur:.1f}s")
+
+    # ── Step 3: Download one Pexels video per sentence ───────────────────────
+    font_path   = _reel_find_font()
+    vid_queries = _reel_sentence_queries(post)
+    raw_videos  = []
+    for i, (sent, query) in enumerate(zip(script, vid_queries)):
+        url = pexels_video(query, pick_random=True)
+        raw = f"{TMPDIR}/reel_{day}_raw{i}.mp4"
+        if url:
+            try:
+                resp = requests.get(url, timeout=90, stream=True)
+                with open(raw, "wb") as f:
+                    for chunk in resp.iter_content(65536): f.write(chunk)
+                raw_videos.append(raw)
+                cleanup.append(raw)
+                print(f"  Video {i+1}/{len(script)}: '{query[:40]}' → {os.path.getsize(raw)/1024:.0f} KB")
+            except Exception as e:
+                print(f"  Video {i+1} download error: {e}")
+                raw_videos.append(None)
+        else:
+            print(f"  Video {i+1}: no result for '{query[:40]}' — black bg")
+            raw_videos.append(None)
+
+    # ── Step 4: Build per-sentence clips ────────────────────────────────────
+    clip_paths = []
+    for i, (sentence, raw, dur) in enumerate(zip(script, raw_videos, durations)):
+        clip_out = f"{TMPDIR}/reel_{day}_clip{i}.mp4"
+        try:
+            _reel_make_clip(clip_out, raw, sentence, max(dur, 1.5), font_path, day, i)
+            clip_paths.append(clip_out)
+            cleanup.append(clip_out)
+            print(f"  Clip {i+1}: '{sentence[:40]}' ({dur:.1f}s)")
+        except Exception as e:
+            print(f"  Clip {i+1} failed: {e}")
+
+    if not clip_paths:
+        print("  No clips built — fallback to carousel")
         return _reel_as_carousel(post, plan)
 
-    raw_path   = f"{TMPDIR}/mentviro_reel_d{post['day']}_raw.mp4"
-    conv_path  = f"{TMPDIR}/mentviro_reel_d{post['day']}.mp4"
-    thumb_path = conv_path + ".jpg"
-
-    r = requests.get(video_url, timeout=120, stream=True)
-    with open(raw_path, "wb") as f:
-        for chunk in r.iter_content(65536): f.write(chunk)
-    print(f"  Downloaded: {os.path.getsize(raw_path)/1024/1024:.1f} MB")
-
-    # 3. ffmpeg: scale + loop + mix voiceover
+    # ── Step 5: Concatenate clips ────────────────────────────────────────────
+    concat_list = f"{TMPDIR}/reel_{day}_concat.txt"
+    concat_path = f"{TMPDIR}/reel_{day}_concat.mp4"
+    with open(concat_list, "w") as f:
+        for cp in clip_paths:
+            f.write(f"file '{cp}'\n")
+    cleanup += [concat_list, concat_path]
     try:
-        probe    = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                                   "-of", "csv=p=0", raw_path],
-                                  capture_output=True, text=True, timeout=30)
-        duration = float((probe.stdout.strip().split("\n")[0]) or "0")
-        loop_args = []
-        if duration < 5:
-            loops     = max(1, int(20 / max(duration, 0.1)))
-            loop_args = ["-stream_loop", str(loops)]
-
-        if audio_ok:
-            # Mix voiceover as audio track — video loops visually, audio plays once
-            subprocess.run(
-                ["ffmpeg", "-y"] + loop_args + [
-                    "-i", raw_path,
-                    "-i", audio_path,
-                    "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,"
-                           "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1",
-                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-                    "-map", "0:v:0", "-map", "1:a:0",
-                    "-c:a", "aac", "-b:a", "128k",
-                    "-shortest", "-t", "60", conv_path],
-                check=True, capture_output=True, timeout=240)
-        else:
-            # No audio — just scale/loop the video
-            subprocess.run(
-                ["ffmpeg", "-y"] + loop_args + [
-                    "-i", raw_path,
-                    "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,"
-                           "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1",
-                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-                    "-an", "-t", "30", conv_path],
-                check=True, capture_output=True, timeout=240)
-
         subprocess.run(
-            ["ffmpeg", "-y", "-i", conv_path, "-ss", "0", "-vframes", "1", "-q:v", "2", thumb_path],
-            check=True, capture_output=True, timeout=30)
-        print(f"  Re-encoded: {os.path.getsize(conv_path)/1024/1024:.1f} MB (audio: {audio_ok})")
-        final_video = conv_path
-    except Exception as e:
-        print(f"  ffmpeg failed: {e} — using raw")
-        final_video = raw_path
-        thumb_path  = None
+            ["ffmpeg", "-y", "-f", "concat", "-safe", "0",
+             "-i", concat_list, "-c", "copy", concat_path],
+            check=True, capture_output=True, timeout=180)
+        print(f"  Concatenated: {len(clip_paths)} clips → {os.path.getsize(concat_path)/1024/1024:.1f} MB")
+    except subprocess.CalledProcessError as e:
+        print(f"  Concat failed: {e.stderr[-300:]} — fallback carousel")
+        return _reel_as_carousel(post, plan)
 
+    # ── Step 6: Mix voiceover ────────────────────────────────────────────────
+    final_path = f"{TMPDIR}/reel_{day}_final.mp4"
+    cleanup.append(final_path)
+    if audio_ok and os.path.exists(audio_path):
+        try:
+            subprocess.run(
+                ["ffmpeg", "-y",
+                 "-i", concat_path,
+                 "-i", audio_path,
+                 "-map", "0:v:0", "-map", "1:a:0",
+                 "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+                 "-shortest", final_path],
+                check=True, capture_output=True, timeout=180)
+            print(f"  Final with audio: {os.path.getsize(final_path)/1024/1024:.1f} MB")
+        except Exception as e:
+            print(f"  Audio mix failed: {e} — using silent video")
+            final_path = concat_path
+    else:
+        final_path = concat_path
+
+    # ── Step 7: Upload & publish ─────────────────────────────────────────────
     try:
-        print("  Uploading video to Cloudinary...")
-        with open(final_video, "rb") as vf:
-            video_url = cloudinary_upload(vf.read(), resource_type="video", suffix=".mp4")
+        print("  Uploading to Cloudinary...")
+        with open(final_path, "rb") as vf:
+            cdn_url = cloudinary_upload(vf.read(), resource_type="video", suffix=".mp4")
         print("  Creating REELS container...")
         container_id = ig_create_container(
-            video_url=video_url,
+            video_url=cdn_url,
             caption=post["caption"],
             media_type="REELS",
         )
@@ -1149,13 +1325,14 @@ def run_reel(post, plan):
         print(f"  Reel live! ID: {media_id}")
         return media_id
     except Exception as e:
-        print(f"  Reel upload failed ({type(e).__name__}): {e} — fallback to carousel")
+        print(f"  Reel upload failed ({type(e).__name__}): {e} — fallback carousel")
         return _reel_as_carousel(post, plan)
     finally:
-        for p in [raw_path, conv_path, thumb_path, audio_path]:
+        for p in cleanup:
             try:
                 if p and os.path.exists(p): os.unlink(p)
-            except Exception: pass
+            except Exception:
+                pass
 
 # ─── STORY WORKFLOWS ─────────────────────────────────────────────────────────
 
