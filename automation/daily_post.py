@@ -1059,7 +1059,12 @@ def run_carousel(post, plan):
         for i, slide in enumerate(post["slides"]):
             print(f"  Slide {i+1}/{len(post['slides'])}...", end=" ", flush=True)
             bg_img = None
-            if not slide.get("is_cover") and pexels_queries:
+            if slide.get("is_cover"):
+                # Cover always gets a B&W Pexels photo (converted in build_carousel_slide)
+                cover_query = (pexels_queries[0] if pexels_queries
+                               else post.get("pexels_video_query", "dark minimal abstract cinematic"))
+                bg_img = pexels_portrait(cover_query)
+            elif pexels_queries:
                 bg_img = pexels_portrait(pexels_queries[min(i, len(pexels_queries)-1)])
             img_bytes = build_carousel_slide(slide, bg_img)
             img_url   = cloudinary_upload(img_bytes)
@@ -1114,7 +1119,10 @@ def _reel_as_carousel(post, plan):
     child_ids: list = []
     for i, slide in enumerate(slides):
         print(f"  Slide {i+1}/{len(slides)}...", end=" ", flush=True)
-        bg_img    = None if slide.get("is_cover") else pexels_portrait(pq, target_w=SW, target_h=SH)
+        # Cover → B&W photo; others → colour photo
+        bg_img = (pexels_portrait(pq, target_w=SW, target_h=SH)
+                  if True  # fetch for all slides; is_cover triggers B&W in build_carousel_slide
+                  else None)
         img_bytes = build_carousel_slide(slide, bg_img, w=SW, h=SH)
         img_url   = cloudinary_upload(img_bytes)
         child_id  = ig_create_container(image_url=img_url, is_carousel_item=True)
