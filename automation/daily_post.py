@@ -844,47 +844,112 @@ def check_and_refill_content(plan):
     start_date = max(last_date, last_date_sq) + timedelta(days=1)
 
     DAYS = 3
-    prompt = f"""Du bist Content Creator für @mentviro (Business Mindset, Finanzbildung, Instagram, Deutsch).
+
+    # ── Content-Pillar-Zuteilung ─────────────────────────────────────────────
+    # Zyklus: Educational(Ed) 60 % · Entertaining(En) 25 % · Emotional(Em) 15 %
+    # Pro 7 Tage ≈ 4× Ed, 2× En, 1× Em
+    # Wir ermitteln, wie viele Posts jedes Pillars schon existieren, und füllen auf.
+    PILLAR_CYCLE = ["educational", "educational", "entertaining",
+                    "educational", "educational", "entertaining", "emotional"]
+    existing_pillars = [p.get("content_pillar","educational") for p in plan["posts"]]
+    ed_count  = existing_pillars.count("educational")
+    en_count  = existing_pillars.count("entertaining")
+    em_count  = existing_pillars.count("emotional")
+    total     = ed_count + en_count + em_count
+    # Next DAYS pillars from the cycle
+    day_pillars = [PILLAR_CYCLE[(total + i) % len(PILLAR_CYCLE)] for i in range(DAYS)]
+
+    # Per-pillar instructions for the prompt
+    PILLAR_GUIDE = {
+        "educational": """PILLAR: EDUCATIONAL 📚
+Ziel: Echten Mehrwert liefern — Konzepte erklären, Wissen aufbauen.
+Ton: klar, strukturiert, sachlich-motivierend
+Themen: Finanzkonzepte (ETF, Zinseszins, Budgetregel, Cashflow), Business-Strategien,
+        Mindset-Hacks, historische Wirtschafts-Lektionen, „Wie funktioniert X wirklich"
+Hook-Stil: neugierig-sachlich, z.B. „Was steckt hinter X?", „Warum funktioniert Y so?"
+Carousel: nummerierte Punkte, klare Struktur, Lerneffekt pro Slide
+Reel-Script: erklärender Aufbau, jeder Satz baut auf dem vorherigen auf""",
+
+        "entertaining": """PILLAR: ENTERTAINING 😄
+Ziel: Hohe Shares & Saves durch Unterhaltung mit Mehrwert (Edutainment).
+Ton: locker, witzig, relatable — aber mit echtem Insight am Ende
+Themen: Relatable Money-Momente, lustige aber lehrreiche Vergleiche,
+        „POV: Du...", „Zeichen dass du...", „5 Dinge die X aber nicht Y tun",
+        Vergleiche arm vs. reich OHNE Versprechen, überraschende Fakten,
+        Lifestyle-Mindset (nicht nur Geld), Produktivität, Gewohnheiten
+Hook-Stil: direkt, provokant-freundlich, Schmunzel-Faktor
+Carousel: Chart/Liste-Style, visuelle Kontraste, jeder Slide ein Aha-Moment
+Reel-Script: kurze Sätze, Rhythmus, überraschende Wendung am Ende
+Pexels: lebhafter, kontrastreicher — z.B. neon, urban, energetisch""",
+
+        "emotional": """PILLAR: EMOTIONAL ❤️
+Ziel: Tiefe Verbindung aufbauen, Kommentare & Saves durch Resonanz auslösen.
+Ton: persönlich, authentisch, verletzlich — KEINE Geldversprechen
+Themen: persönliche Wachstumsgeschichten (ohne Eigenlob), Lebensweisheiten,
+        Rückschläge und was man daraus lernt, Brief-an-mein-18-jähriges-Ich-Stil,
+        Werte statt Zahlen, Warum Geld NICHT das einzige Ziel ist,
+        Dankbarkeit, Geduld, der Weg (nicht das Ziel)
+Hook-Stil: Story-Opener, z.B. „Es gab einen Moment, der alles veränderte.",
+           „Ich hätte das früher wissen müssen.", „Niemand redet darüber, aber..."
+Carousel: stimmungsvolle Bilder, poetischere Texte, weniger Bullet-Points
+Reel-Script: storytelling-Aufbau, emotional peak in der Mitte, ruhiger Abschluss
+Pexels: stimmungsvoll, warm, natürlich — z.B. sunrise, forest, ocean, rain"""
+    }
+
+    # Build per-day pillar block for the prompt
+    day_pillar_block = "\n".join(
+        f"  Tag {i+1} ({(start_date + timedelta(days=i)).isoformat()}): "
+        f"{day_pillars[i].upper()} — {PILLAR_GUIDE[day_pillars[i]].splitlines()[0]}"
+        for i in range(DAYS)
+    )
+
+    prompt = f"""Du bist Content Creator für @mentviro (Business Mindset, Finanzbildung, Lifestyle, Instagram, Deutsch).
 
 WICHTIG — ZEICHENKODIERUNG:
 - Verwende IMMER echte deutsche Umlaute: ä, ö, ü, Ä, Ö, Ü, ß
-- Verwende IMMER echte Unicode-Emojis (z.B. 🔑 💡 📊 💰 🧠 ⚡ 🎯), NIEMALS ? als Platzhalter
+- Verwende IMMER echte Unicode-Emojis (z.B. 🔑 💡 📊 💰 🧠 ⚡ 🎯 😄 ❤️), NIEMALS ? als Platzhalter
 - Das JSON muss gültige UTF-8 Strings enthalten, keine Ersatzzeichen
 
-Erstelle GENAU {DAYS} Tages-Pakete. Jedes Paket enthält:
-  1. Ein REEL
-  2. Ein CAROUSEL
-  3. Ein STORY-PAAR (Zitat + 3 Tipps)
+═══ CONTENT-STRATEGIE ════════════════════════════════════════════════════════
+@mentviro postet DREI Content-Pillars im Wechsel:
+{PILLAR_GUIDE["educational"]}
+
+{PILLAR_GUIDE["entertaining"]}
+
+{PILLAR_GUIDE["emotional"]}
+
+═══ AUFGABE ══════════════════════════════════════════════════════════════════
+Erstelle GENAU {DAYS} Tages-Pakete mit folgender Pillar-Zuteilung:
+{day_pillar_block}
+
+Jedes Paket enthält: 1 REEL + 1 CAROUSEL + 1 STORY-PAAR
+Reel und Carousel eines Tages teilen denselben Pillar und ergänzen sich thematisch.
 
 BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 {chr(10).join(f'- {t}' for t in existing_topics[-20:])}
 {trend_context}{engagement_context}
-⚠️ INSTAGRAM-RICHTLINIEN — PFLICHT (Verstoß führt zu Account-Sperre):
+═══ INSTAGRAM-RICHTLINIEN — PFLICHT ══════════════════════════════════════════
 VERBOTEN:
 - Konkrete Rendite- oder Gewinnversprechen ("verdiene X Euro", "X% Rendite garantiert")
 - Passives-Einkommen-Formeln oder Schritt-für-Schritt-Anleitungen zum Geldverdienen
-- Steuer-Tricks oder Aussagen wie "Reiche zahlen weniger Steuern als du"
 - "10x mehr verdienen bei weniger Arbeit" oder ähnliche Get-rich-quick-Aussagen
-- FOMO-Taktiken ("nur heute", "letzte Chance", "du verlierst Geld wenn du jetzt nicht handelst")
-- Falsche Zitate oder nicht belegbare Behauptungen (kein Einstein-Compound-Zitat!)
-- Keine Links oder externe Weiterleitungen in Captions
-- Keine Finanzberatung oder konkrete Kaufempfehlungen für Produkte/Broker/Plattformen
+- FOMO-Taktiken ("nur heute", "letzte Chance")
+- Falsche oder nicht belegbare Zitate
+- Keine Links in Captions
+- Keine konkreten Produkt-/Broker-/Plattform-Empfehlungen
 ERLAUBT:
-- Allgemeine Finanzbildung und bekannte Konzepte erklären (ETF, Zinseszins, Budgetregeln)
-- Mindset-Content ohne Geldversprechen
-- Historische/philosophische Perspektiven (Stoiker, bekannte Investoren-Zitate)
-- Fragen die zum Nachdenken anregen
-- Sachlicher, motivierender Ton ohne Übertreibungen
+- Allgemeine Finanzbildung, bekannte Konzepte erklären
+- Mindset, Lifestyle, persönliche Entwicklung
+- Echte belegbare Zitate bekannter Personen
+- Sachlicher, motivierender Ton
 
-REGELN FÜR CONTENT:
-- Hooks: sachlich neugierig, z.B. "Was steckt hinter dem Konzept X", "Wie funktioniert Y wirklich"
-- Kein Clickbait mit "99%", "alle machen diesen Fehler", "das sagen sie dir nicht"
-- Zielgruppe: 20-40 Jahre, Finanzbildung, Deutschland
-- PEXELS QUERIES: cinematic, dunkel, ästhetisch. NIEMALS: businessman, office, suit, handshake
-- Caption: informativ, reflektierend, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
-- Zitat: NUR echte, belegbare Zitate bekannter Personen. Kein "Einstein sagte..."
-- 3 Tipps: konkret, umsetzbar, max 12 Wörter pro Tipp, keine Geldversprechen
-- story_poll: kurze Ja/Nein oder Entweder/Oder Frage (max 35 Zeichen)
+═══ FORMAT-REGELN ════════════════════════════════════════════════════════════
+- Zielgruppe: 20-40 Jahre, Deutschland, Interesse an Finanzen & Persönlichkeitsentwicklung
+- PEXELS QUERIES: zum Pillar passend (Ed: dunkel/minimalistisch · En: energetisch/urban · Em: warm/stimmungsvoll). NIEMALS: businessman, office, suit, handshake
+- Caption: zum Pillar passender Ton, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
+- Zitat: NUR echte, belegbare Zitate. Kein "Einstein sagte..."
+- 3 Tipps: konkret, umsetzbar, max 12 Wörter pro Tipp
+- story_poll: Ja/Nein oder Entweder/Oder, max 35 Zeichen
 
 Gib NUR ein JSON-Array mit {DAYS} Objekten aus. Kein Text davor/danach.
 
@@ -892,11 +957,12 @@ Schema für jedes Objekt:
 {{
   "day": {last_day+1},
   "date": "{(start_date).isoformat()}",
+  "content_pillar": "educational|entertaining|emotional",
   "reel": {{
     "topic": "...", "status": "pending", "hook": "...",
     "script": ["Satz 1","Satz 2","Satz 3","Satz 4","Satz 5","Folge @mentviro."],
     "caption": "... #mentviro ...",
-    "pexels_video_query": "dark cinematic query",
+    "pexels_video_query": "passende dark cinematic query",
     "story_text": ["NEUES REEL","Zeile 1","Zeile 2","Jetzt anschauen"],
     "story_poll": "Kurze Frage?"
   }},
@@ -917,11 +983,11 @@ Schema für jedes Objekt:
     "status": "pending",
     "topic": "dark minimal cinematic pexels query",
     "quote": {{
-      "text": "Das Zitat hier. Max 25 Wörter.",
-      "author": "Name oder @mentviro"
+      "text": "Echtes Zitat. Max 25 Wörter.",
+      "author": "Name"
     }},
     "tips": {{
-      "title": "Kurzer Titel für den Tag",
+      "title": "Kurzer Titel",
       "items": ["Tipp 1 max 12 Wörter","Tipp 2 max 12 Wörter","Tipp 3 max 12 Wörter"]
     }}
   }}
@@ -949,21 +1015,26 @@ Schema für jedes Objekt:
         new_stories = []
 
         for i, pkg in enumerate(packages):
-            d = (start_date + timedelta(days=i)).isoformat()
+            d       = (start_date + timedelta(days=i)).isoformat()
             day_num = last_day + i + 1
+            pillar  = pkg.get("content_pillar", day_pillars[i])
 
-            style = "gold" if day_num % 2 == 0 else "silver"
+            # Visual style: emotional → gold (warm), entertaining → gold, educational → silver
+            style = "gold" if pillar in ("emotional", "entertaining") else "silver"
 
             reel = pkg.get("reel", {})
-            reel.update({"day": day_num, "date": d, "type": "reel", "status": "pending", "style": style})
+            reel.update({"day": day_num, "date": d, "type": "reel",
+                         "status": "pending", "style": style, "content_pillar": pillar})
             new_posts.append(reel)
 
             car = pkg.get("carousel", {})
-            car.update({"day": day_num, "date": d, "type": "carousel", "status": "pending", "style": style})
+            car.update({"day": day_num, "date": d, "type": "carousel",
+                        "status": "pending", "style": style, "content_pillar": pillar})
             new_posts.append(car)
 
             stories = pkg.get("stories", {})
-            stories.update({"day": day_num, "date": d, "status": "pending", "style": style})
+            stories.update({"day": day_num, "date": d,
+                            "status": "pending", "style": style, "content_pillar": pillar})
             new_stories.append(stories)
 
         plan["posts"].extend(new_posts)
