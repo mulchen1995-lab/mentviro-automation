@@ -872,7 +872,7 @@
     },
     {
       "date": "2026-06-01",
-      "status": "pending",
+      "status": "published",
       "type": "stories",
       "topic": "dark silhouette sunrise mountain cinematic",
       "quote": {
@@ -888,7 +888,10 @@
         ]
       },
       "story_poll": "Zahlst du dich selbst zuerst?",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": "18015876992848083",
+      "tips_id": null,
+      "published_at": "2026-06-01T12:32:21Z"
     },
     {
       "date": "2026-06-02",
