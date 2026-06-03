@@ -272,6 +272,20 @@ def fnt(size, bold=False):
 
 _logo_cache = None
 
+def _strip_white_bg(img_rgba, threshold=230):
+    """Make near-white pixels transparent so logos without alpha channel look clean."""
+    r, g, b, a = img_rgba.split()
+    # Pixel is considered background if R, G, B all above threshold
+    from PIL import ImageChops
+    mask_r = r.point(lambda v: 255 if v > threshold else 0)
+    mask_g = g.point(lambda v: 255 if v > threshold else 0)
+    mask_b = b.point(lambda v: 255 if v > threshold else 0)
+    white_mask = ImageChops.multiply(ImageChops.multiply(mask_r, mask_g), mask_b)
+    # Invert: white areas become transparent, logo stays opaque
+    new_alpha = ImageChops.subtract(Image.new("L", img_rgba.size, 255), white_mask)
+    img_rgba.putalpha(new_alpha)
+    return img_rgba
+
 def get_logo_asset(size=90):
     global _logo_cache
     if _logo_cache and _logo_cache[0] == size:
@@ -284,6 +298,10 @@ def get_logo_asset(size=90):
         try:
             logo = src()
             if logo:
+                # If image has no transparency (JPEG or opaque PNG) → strip white background
+                r, g, b, a = logo.split()
+                if a.getextrema()[0] == 255:   # all pixels fully opaque = no real alpha
+                    logo = _strip_white_bg(logo)
                 logo.thumbnail((size, size), Image.LANCZOS)
                 _logo_cache = (size, logo)
                 return logo
@@ -903,12 +921,43 @@ Pexels: stimmungsvoll, warm, natürlich — z.B. sunrise, forest, ocean, rain"""
         for i in range(DAYS)
     )
 
-    prompt = f"""Du bist Content Creator für @mentviro (Business Mindset, Finanzbildung, Lifestyle, Instagram, Deutsch).
+    prompt = f"""Du bist Content Creator für @mentviro — ein deutschsprachiger Instagram-Account über Mindset, persönliche Entwicklung, Lifestyle und Erfolg. Finanzen sind NUR EIN Thema von vielen.
 
 WICHTIG — ZEICHENKODIERUNG:
 - Verwende IMMER echte deutsche Umlaute: ä, ö, ü, Ä, Ö, Ü, ß
-- Verwende IMMER echte Unicode-Emojis (z.B. 🔑 💡 📊 💰 🧠 ⚡ 🎯 😄 ❤️), NIEMALS ? als Platzhalter
+- Verwende IMMER echte Unicode-Emojis (z.B. 🔑 💡 📊 🧠 ⚡ 🎯 😄 ❤️ 🌱 🔥 💪 ✨), NIEMALS ? als Platzhalter
 - Das JSON muss gültige UTF-8 Strings enthalten, keine Ersatzzeichen
+
+═══ THEMEN-UNIVERSUM (ABWECHSLUNG IST PFLICHT) ═══════════════════════════════
+Wähle Themen aus ALLEN dieser Kategorien — nicht nur Finanzen:
+
+💡 MINDSET & PSYCHOLOGIE
+Gewohnheiten, Denkfehler, kognitive Verzerrungen, Resilienz, Fokus, Prokrastination,
+Entscheidungen treffen, Selbstsabotage überwinden, Wachstumsdenken
+
+🌱 PERSÖNLICHE ENTWICKLUNG
+Disziplin, Morgenroutinen, Deep Work, Lernen lernen, Komfortzone, Selbstreflexion,
+Identität & Werte, persönliche Vision, Lebensphilosophie
+
+💪 PRODUKTIVITÄT & LIFESTYLE
+Zeit-Management, Energie-Management, digitale Minimalismus, Work-Life-Integration,
+Schlaf & Performance, Sport als Mindset-Tool, Nein sagen, Priorisierung
+
+🤝 BEZIEHUNGEN & KOMMUNIKATION
+Netzwerken authentisch, Kommunikation, Einfluss & Überzeugung, Mentoren finden,
+Umfeld gestalten, toxische vs. förderliche Beziehungen
+
+🚀 UNTERNEHMERDENKEN & KREATIVITÄT
+Ideen entwickeln, Risiko & Sicherheit, Scheitern & lernen, Side Projects,
+kreatives Denken, Innovation, von Angestellten- zu Unternehmermindset
+
+💰 FINANZEN & WIRTSCHAFT (maximal 30% der Posts!)
+Grundkonzepte (ETF, Zinseszins, Budgetierung) — KEINE Kaufempfehlungen,
+KEINE Renditeversprechen. Nur allgemeine Finanzbildung.
+
+📚 WISSEN & PERSPEKTIVEN
+Philosophie (Stoiker, etc.), Geschichte von Erfolg, Psychologie-Studien,
+überraschende Fakten über Erfolg/Misserfolg, Buchempfehlungen-Stil
 
 ═══ CONTENT-STRATEGIE ════════════════════════════════════════════════════════
 @mentviro postet DREI Content-Pillars im Wechsel:
@@ -924,6 +973,7 @@ Erstelle GENAU {DAYS} Tages-Pakete mit folgender Pillar-Zuteilung:
 
 Jedes Paket enthält: 1 REEL + 1 CAROUSEL + 1 STORY-PAAR
 Reel und Carousel eines Tages teilen denselben Pillar und ergänzen sich thematisch.
+WICHTIG: Wähle für jeden Tag ein anderes Themengebiet — Abwechslung zwischen den Kategorien oben.
 
 BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 {chr(10).join(f'- {t}' for t in existing_topics[-20:])}
@@ -931,23 +981,24 @@ BEREITS BEHANDELTE THEMEN (NICHT wiederholen):
 ═══ INSTAGRAM-RICHTLINIEN — PFLICHT ══════════════════════════════════════════
 VERBOTEN:
 - Konkrete Rendite- oder Gewinnversprechen ("verdiene X Euro", "X% Rendite garantiert")
-- Passives-Einkommen-Formeln oder Schritt-für-Schritt-Anleitungen zum Geldverdienen
-- "10x mehr verdienen bei weniger Arbeit" oder ähnliche Get-rich-quick-Aussagen
+- Passives-Einkommen-Formeln oder Anleitungen zum Geldverdienen
+- Get-rich-quick-Aussagen
 - FOMO-Taktiken ("nur heute", "letzte Chance")
 - Falsche oder nicht belegbare Zitate
 - Keine Links in Captions
 - Keine konkreten Produkt-/Broker-/Plattform-Empfehlungen
 ERLAUBT:
-- Allgemeine Finanzbildung, bekannte Konzepte erklären
-- Mindset, Lifestyle, persönliche Entwicklung
+- Alle Themen aus dem Themen-Universum oben
+- Mindset, Lifestyle, persönliche Entwicklung (BEVORZUGT)
+- Allgemeine Finanzbildung (max 30%)
 - Echte belegbare Zitate bekannter Personen
-- Sachlicher, motivierender Ton
+- Humorvoller, authentischer, motivierender Ton
 
 ═══ FORMAT-REGELN ════════════════════════════════════════════════════════════
-- Zielgruppe: 20-40 Jahre, Deutschland, Interesse an Finanzen & Persönlichkeitsentwicklung
+- Zielgruppe: 18-35 Jahre, Deutschland, ambitioniert, an persönlichem Wachstum interessiert
 - PEXELS QUERIES: zum Pillar passend (Ed: dunkel/minimalistisch · En: energetisch/urban · Em: warm/stimmungsvoll). NIEMALS: businessman, office, suit, handshake
 - Caption: zum Pillar passender Ton, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
-- Zitat: NUR echte, belegbare Zitate. Kein "Einstein sagte..."
+- Zitat: NUR echte, belegbare Zitate bekannter Personen
 - 3 Tipps: konkret, umsetzbar, max 12 Wörter pro Tipp
 - story_poll: Ja/Nein oder Entweder/Oder, max 35 Zeichen
 
@@ -1224,7 +1275,7 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
             f"drawtext=textfile='{line_file}'{font_arg}"
             f":fontcolor=white:fontsize={font_sz}"
             f":x=(w-text_w)/2:y={y_expr}"
-            f":box=1:boxcolor=0x00000099:boxborderw=24"
+            f":shadowx=3:shadowy=3:shadowcolor=black@0.8"
         )
     drawtext_chain = ",".join(dt_parts)
 
