@@ -384,7 +384,9 @@ def draw_base_frame(img_rgba, w=W, h=H, is_bw=False, slide_num=None, badge=None)
         d.text((w - MARGIN - (bb[2]-bb[0]), 124), slide_num, font=fnt(26), fill=BODY)
     d.rectangle([(MARGIN, h-120), (w-MARGIN, h-116)], fill=(60, 60, 60))
     d.text((MARGIN, h-100), "@mentviro", font=fnt(30, True), fill=COLORS["white"])
-    paste_logo(img_rgba, w - MARGIN + 10, h - 78, size=80)
+    # Logo nur auf Cover (is_bw=True) — auf Content-Slides weglassen um weißes Rechteck zu vermeiden
+    if is_bw:
+        paste_logo(img_rgba, w - MARGIN + 10, h - 78, size=80)
 
 def dark_overlay(base_rgb, w=W, h=H, strength=195):
     ov = Image.new("RGBA", (w, h))
