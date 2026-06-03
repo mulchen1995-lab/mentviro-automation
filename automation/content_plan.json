@@ -37,7 +37,7 @@
       ]
     },
     "posting_stats": {
-      "carousel": 17
+      "carousel": 11
     }
   },
   "posts": [
@@ -1239,7 +1239,11 @@
       "story_poll": "Erkennst du dich darin?",
       "post_id": "17864609865687949",
       "story_id": "18105630700974471",
-      "published_at": "2026-06-03T11:53:09Z"
+      "published_at": "2026-06-03T11:53:09Z",
+      "insights": {
+        "likes": 2,
+        "comments": 3
+      }
     },
     {
       "day": 19,
@@ -1479,7 +1483,7 @@
     },
     {
       "date": "2026-06-03",
-      "status": "pending",
+      "status": "published",
       "type": "stories",
       "content_pillar": "entertaining",
       "topic": "dark neon urban energy night",
@@ -1495,7 +1499,10 @@
           "Mach Sparen zum Spiel, nicht zur Pflicht."
         ]
       },
-      "story_poll": "Machst du Sparen zum Spaß?"
+      "story_poll": "Machst du Sparen zum Spaß?",
+      "quote_id": "17854134612680273",
+      "tips_id": "18093826478205997",
+      "published_at": "2026-06-03T14:22:50Z"
     },
     {
       "date": "2026-06-04",
