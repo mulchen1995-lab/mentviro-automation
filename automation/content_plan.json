@@ -36,7 +36,9 @@
         130
       ]
     },
-    "posting_stats": {}
+    "posting_stats": {
+      "carousel": 17
+    }
   },
   "posts": [
     {
@@ -942,7 +944,11 @@
       "story_poll": "Hast du passives Einkommen?",
       "post_id": "18100603598125401",
       "story_id": "18122387557646287",
-      "published_at": "2026-06-01T19:00:32Z"
+      "published_at": "2026-06-01T19:00:32Z",
+      "insights": {
+        "likes": 4,
+        "comments": 0
+      }
     },
     {
       "day": 16,
@@ -1127,7 +1133,7 @@
       "day": 18,
       "date": "2026-06-03",
       "type": "carousel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
       "topic": "Zeichen dass du finanziell auf dem richtigen Weg bist",
@@ -1230,7 +1236,10 @@
         "5 Zeichen die es beweisen",
         "➡️ Swipe durch den Post"
       ],
-      "story_poll": "Erkennst du dich darin?"
+      "story_poll": "Erkennst du dich darin?",
+      "post_id": "17864609865687949",
+      "story_id": "18105630700974471",
+      "published_at": "2026-06-03T11:53:09Z"
     },
     {
       "day": 19,
