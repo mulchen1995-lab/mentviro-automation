@@ -1103,7 +1103,11 @@
       "story_poll": "Nutzt du ein Budget-System?",
       "post_id": "18015109328702339",
       "story_id": "18074786525313369",
-      "published_at": "2026-06-03T19:44:28Z"
+      "published_at": "2026-06-03T19:44:28Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "day": 18,
@@ -1279,7 +1283,7 @@
       "day": 19,
       "date": "2026-06-04",
       "type": "carousel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "emotional",
       "topic": "Was ich mir mit 18 gewünscht hätte zu wissen",
@@ -1374,7 +1378,10 @@
         "4 Lektionen die zählen",
         "➡️ Swipe durch den Post"
       ],
-      "story_poll": "Was würdest du dir sagen?"
+      "story_poll": "Was würdest du dir sagen?",
+      "post_id": "18164111230433021",
+      "story_id": "17888153019556746",
+      "published_at": "2026-06-04T14:56:38Z"
     }
   ],
   "story_queue": [
