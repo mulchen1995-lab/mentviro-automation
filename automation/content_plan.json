@@ -37,7 +37,7 @@
       ]
     },
     "posting_stats": {
-      "carousel": 11
+      "carousel": 14
     }
   },
   "posts": [
@@ -1381,7 +1381,11 @@
       "story_poll": "Was würdest du dir sagen?",
       "post_id": "18164111230433021",
       "story_id": "17888153019556746",
-      "published_at": "2026-06-04T14:56:38Z"
+      "published_at": "2026-06-04T14:56:38Z",
+      "insights": {
+        "likes": 4,
+        "comments": 3
+      }
     }
   ],
   "story_queue": [
