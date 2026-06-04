@@ -272,20 +272,6 @@ def fnt(size, bold=False):
 
 _logo_cache = None
 
-def _strip_white_bg(img_rgba, threshold=230):
-    """Make near-white pixels transparent so logos without alpha channel look clean."""
-    r, g, b, a = img_rgba.split()
-    # Pixel is considered background if R, G, B all above threshold
-    from PIL import ImageChops
-    mask_r = r.point(lambda v: 255 if v > threshold else 0)
-    mask_g = g.point(lambda v: 255 if v > threshold else 0)
-    mask_b = b.point(lambda v: 255 if v > threshold else 0)
-    white_mask = ImageChops.multiply(ImageChops.multiply(mask_r, mask_g), mask_b)
-    # Invert: white areas become transparent, logo stays opaque
-    new_alpha = ImageChops.subtract(Image.new("L", img_rgba.size, 255), white_mask)
-    img_rgba.putalpha(new_alpha)
-    return img_rgba
-
 def get_logo_asset(size=90):
     global _logo_cache
     if _logo_cache and _logo_cache[0] == size:
@@ -298,10 +284,6 @@ def get_logo_asset(size=90):
         try:
             logo = src()
             if logo:
-                # If image has no transparency (JPEG or opaque PNG) → strip white background
-                r, g, b, a = logo.split()
-                if a.getextrema()[0] == 255:   # all pixels fully opaque = no real alpha
-                    logo = _strip_white_bg(logo)
                 logo.thumbnail((size, size), Image.LANCZOS)
                 _logo_cache = (size, logo)
                 return logo
