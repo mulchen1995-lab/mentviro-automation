@@ -954,7 +954,7 @@
       "day": 16,
       "date": "2026-06-01",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "topic": "Warum dein Gehalt dich nicht reich macht",
@@ -975,7 +975,10 @@
         "der Unterschied",
         "Jetzt anschauen"
       ],
-      "story_poll": "Denkst du ans Investieren?"
+      "story_poll": "Denkst du ans Investieren?",
+      "post_id": "17947180218079590",
+      "story_id": "18212479825336545",
+      "published_at": "2026-06-05T10:19:19Z"
     },
     {
       "day": 17,
