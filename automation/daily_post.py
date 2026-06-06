@@ -588,8 +588,7 @@ def build_quote_story(story_data: dict):
         y += 24
         d.text((80, y), f"— {author}", font=fnt(38), fill=SIL)
 
-    # Logo + footer
-    paste_logo(img, SW // 2, SH - 160, size=90)
+    # Footer (Logo weggelassen — kollidiert mit @mentviro-Text und erzeugt weisses Viereck)
     d.text((SW // 2 - 90, SH - 100), "@mentviro", font=fnt(30, True), fill=SIL)
     d.rectangle([(0, SH-7), (SW, SH)], fill=SIL)
 
@@ -660,8 +659,7 @@ def build_tips_story(story_data: dict):
             y += (bb[3] - bb[1]) + 8
         y += 50  # gap between tips
 
-    # Logo + footer
-    paste_logo(img, SW // 2, SH - 160, size=90)
+    # Footer (Logo weggelassen — kollidiert mit @mentviro-Text und erzeugt weisses Viereck)
     d.text((SW // 2 - 90, SH - 100), "@mentviro", font=fnt(30, True), fill=SIL)
     d.rectangle([(0, SH-7), (SW, SH)], fill=SIL)
 
@@ -848,11 +846,12 @@ def check_and_refill_content(plan):
     DAYS = 3
 
     # ── Content-Pillar-Zuteilung ─────────────────────────────────────────────
-    # Zyklus: Educational(Ed) 60 % · Entertaining(En) 25 % · Emotional(Em) 15 %
-    # Pro 7 Tage ≈ 4× Ed, 2× En, 1× Em
-    # Wir ermitteln, wie viele Posts jedes Pillars schon existieren, und füllen auf.
-    PILLAR_CYCLE = ["educational", "educational", "entertaining",
-                    "educational", "educational", "entertaining", "emotional"]
+    # MINDSET-FOKUS (alle 3 Pillars sind jetzt Mindset-orientiert, kein Finanz-Schwerpunkt).
+    # Ausgewogenerer Mix für persönlicheren Content wie früher (vor der Automation):
+    # Educational(Ed) ~43 % · Entertaining(En) ~28 % · Emotional(Em) ~28 %
+    # Pro 7 Tage = 3× Ed, 2× En, 2× Em
+    PILLAR_CYCLE = ["educational", "entertaining", "emotional",
+                    "educational", "entertaining", "educational", "emotional"]
     existing_pillars = [p.get("content_pillar","educational") for p in plan["posts"]]
     ed_count  = existing_pillars.count("educational")
     en_count  = existing_pillars.count("entertaining")
@@ -863,22 +862,28 @@ def check_and_refill_content(plan):
 
     # Per-pillar instructions for the prompt
     PILLAR_GUIDE = {
-        "educational": """PILLAR: EDUCATIONAL 📚
-Ziel: Echten Mehrwert liefern — Konzepte erklären, Wissen aufbauen.
+        "educational": """PILLAR: EDUCATIONAL 📚 (FOKUS: MINDSET & PERSÖNLICHKEITSENTWICKLUNG)
+Ziel: Echten Mehrwert liefern — Denkweisen, Gewohnheiten und mentale Konzepte erklären.
 Ton: klar, strukturiert, sachlich-motivierend
-Themen: Finanzkonzepte (ETF, Zinseszins, Budgetregel, Cashflow), Business-Strategien,
-        Mindset-Hacks, historische Wirtschafts-Lektionen, „Wie funktioniert X wirklich"
-Hook-Stil: neugierig-sachlich, z.B. „Was steckt hinter X?", „Warum funktioniert Y so?"
+Themen: MINDSET & Selbstentwicklung im Zentrum — Disziplin, Fokus, Gewohnheiten,
+        mentale Modelle, Selbstvertrauen, Umgang mit Rückschlägen, Zielsetzung,
+        Prokrastination überwinden, Stoizismus/Gelassenheit, Selbstdisziplin,
+        Produktivität, Klarheit, der eigene Weg. Gern auch ein starkes belegbares Zitat
+        oder eine treffende Metapher. NUR SEHR SELTEN Geld-Mindset als Bildungsthema
+        (Denkweise über Geld, Sparen als Disziplin) — kein Schwerpunkt. NIE konkrete
+        Finanzprodukte/ETF-Namen, Kaufempfehlungen oder Renditeversprechen.
+Hook-Stil: neugierig-sachlich, z.B. „Warum gewinnen disziplinierte Menschen?", „Was steckt hinter mentaler Stärke?"
 Carousel: nummerierte Punkte, klare Struktur, Lerneffekt pro Slide
 Reel-Script: erklärender Aufbau, jeder Satz baut auf dem vorherigen auf""",
 
-        "entertaining": """PILLAR: ENTERTAINING 😄
+        "entertaining": """PILLAR: ENTERTAINING 😄 (FOKUS: MINDSET & LIFESTYLE)
 Ziel: Hohe Shares & Saves durch Unterhaltung mit Mehrwert (Edutainment).
 Ton: locker, witzig, relatable — aber mit echtem Insight am Ende
-Themen: Relatable Money-Momente, lustige aber lehrreiche Vergleiche,
-        „POV: Du...", „Zeichen dass du...", „5 Dinge die X aber nicht Y tun",
-        Vergleiche arm vs. reich OHNE Versprechen, überraschende Fakten,
-        Lifestyle-Mindset (nicht nur Geld), Produktivität, Gewohnheiten
+Themen: Mindset & Lifestyle relatable verpackt — „POV: Du...", „Zeichen dass du mental wächst",
+        „5 Dinge die disziplinierte Menschen anders machen", „Gewohnheiten die dein Leben ändern",
+        Produktivität, Fokus, Selbstdisziplin, mentale Stärke im Alltag, Vergleiche
+        diszipliniert vs. undiszipliniert / Macher vs. Träumer (OHNE Geld-/Renditeversprechen),
+        überraschende psychologische Fakten. KEINE arm-vs-reich oder Money-Vergleiche mehr.
 Hook-Stil: direkt, provokant-freundlich, Schmunzel-Faktor
 Carousel: Chart/Liste-Style, visuelle Kontraste, jeder Slide ein Aha-Moment
 Reel-Script: kurze Sätze, Rhythmus, überraschende Wendung am Ende
@@ -935,9 +940,19 @@ Umfeld gestalten, toxische vs. förderliche Beziehungen
 Ideen entwickeln, Risiko & Sicherheit, Scheitern & lernen, Side Projects,
 kreatives Denken, Innovation, von Angestellten- zu Unternehmermindset
 
-💰 FINANZEN & WIRTSCHAFT (maximal 30% der Posts!)
-Grundkonzepte (ETF, Zinseszins, Budgetierung) — KEINE Kaufempfehlungen,
-KEINE Renditeversprechen. Nur allgemeine Finanzbildung.
+💰 FINANZEN & GELD-MINDSET (SEHR SELTEN — höchstens ca. 1 von 10 Posts)
+Nur ganz gelegentlich Geld als MINDSET-Thema: Denkweise über Geld, Geduld beim
+Vermögensaufbau, Sparen als Disziplin, langfristiges Denken. Kein Schwerpunkt, fällt
+kaum auf. NIEMALS konkrete Produkte/Broker/ETF-Namen, Kaufempfehlungen, Renditeversprechen
+oder "verdiene X Euro". Der Account hat eine aktive Einschränkung wegen Finanz-/Scam-
+Verdacht — Finanz IMMER als Bildung/Mindset framen, im Zweifel lieber weglassen.
+
+💬 ZITATE & METAPHERN (Trend-Format — gern öfter)
+Kurze, kraftvolle Zitate bekannter, BELEGBARER Personen (Stoiker, Unternehmer, Denker)
+oder eigene prägnante Metaphern/Analogien. Im Trend: ästhetische Zitat-Posts, "ein Satz
+der hängenbleibt", Metaphern die ein Konzept auf den Punkt bringen. Reel: Zitat langsam
+aufbauen + kurz erklären, warum es trifft. Carousel: 1 starkes Zitat groß + Kontext.
+NUR echte, belegbare Zitate — keine erfundenen.
 
 📚 WISSEN & PERSPEKTIVEN
 Philosophie (Stoiker, etc.), Geschichte von Erfolg, Psychologie-Studien,
@@ -973,14 +988,15 @@ VERBOTEN:
 - Keine konkreten Produkt-/Broker-/Plattform-Empfehlungen
 ERLAUBT:
 - Alle Themen aus dem Themen-Universum oben
-- Mindset, Lifestyle, persönliche Entwicklung (BEVORZUGT)
-- Allgemeine Finanzbildung (max 30%)
-- Echte belegbare Zitate bekannter Personen
+- Mindset, Lifestyle, persönliche Entwicklung (SCHWERPUNKT — die Mehrheit der Posts)
+- Geld-Mindset/Finanzbildung SEHR SELTEN (max ~1 von 10, immer als Bildung/Mindset framen)
+- Zitate & Metaphern als Trend-Format (gern öfter — nur echte, belegbare Zitate)
 - Humorvoller, authentischer, motivierender Ton
 
 ═══ FORMAT-REGELN ════════════════════════════════════════════════════════════
 - Zielgruppe: 18-35 Jahre, Deutschland, ambitioniert, an persönlichem Wachstum interessiert
 - PEXELS QUERIES: zum Pillar passend (Ed: dunkel/minimalistisch · En: energetisch/urban · Em: warm/stimmungsvoll). NIEMALS: businessman, office, suit, handshake
+- Themen-Schwerpunkt: MINDSET & persönliche Entwicklung (wie ein authentischer Creator, der seine eigene Reise teilt). Geld-Mindset nur SEHR SELTEN (~1 von 10). Zitate/Metaphern gern als Trend-Format einstreuen.
 - Caption: zum Pillar passender Ton, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
 - Zitat: NUR echte, belegbare Zitate bekannter Personen
 - 3 Tipps: konkret, umsetzbar, max 12 Wörter pro Tipp
