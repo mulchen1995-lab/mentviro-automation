@@ -37,6 +37,7 @@
       ]
     },
     "posting_stats": {
+      "reel": 11,
       "carousel": 14
     }
   },
@@ -1012,7 +1013,11 @@
       "story_poll": "Investierst du schon in ETFs?",
       "post_id": "18001391153941307",
       "story_id": "18123147859654896",
-      "published_at": "2026-06-06T11:36:05Z"
+      "published_at": "2026-06-06T11:36:05Z",
+      "insights": {
+        "likes": 4,
+        "comments": 0
+      }
     },
     {
       "day": 17,
