@@ -704,7 +704,7 @@ def get_engagement_context(plan):
         scored.append((score, p))
     if not scored:
         return ""
-    scored.sort(reverse=True)
+    scored.sort(key=lambda x: x[0], reverse=True)
     lines = ["\nPERFORMANCE LETZTER POSTS (Engagement-Score):"]
     for score, p in scored[:6]:
         ins = p["insights"]
