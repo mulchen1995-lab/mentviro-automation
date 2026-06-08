@@ -1128,7 +1128,7 @@
       "day": 18,
       "date": "2026-06-03",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
       "topic": "Arm vs. Reich — die 5 größten Unterschiede im Alltag",
@@ -1149,7 +1149,10 @@
         "5 echte Unterschiede",
         "Jetzt anschauen"
       ],
-      "story_poll": "Welche Gewohnheit änderst du?"
+      "story_poll": "Welche Gewohnheit änderst du?",
+      "post_id": "18057805229506430",
+      "story_id": "18092816015351055",
+      "published_at": "2026-06-08T15:09:34Z"
     },
     {
       "day": 18,
