@@ -1152,7 +1152,11 @@
       "story_poll": "Welche Gewohnheit änderst du?",
       "post_id": "18057805229506430",
       "story_id": "18092816015351055",
-      "published_at": "2026-06-08T15:09:34Z"
+      "published_at": "2026-06-08T15:09:34Z",
+      "insights": {
+        "likes": 0,
+        "comments": 1
+      }
     },
     {
       "day": 18,
