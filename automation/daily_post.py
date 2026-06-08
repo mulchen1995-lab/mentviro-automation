@@ -366,9 +366,7 @@ def draw_base_frame(img_rgba, w=W, h=H, is_bw=False, slide_num=None, badge=None)
         d.text((w - MARGIN - (bb[2]-bb[0]), 124), slide_num, font=fnt(26), fill=BODY)
     d.rectangle([(MARGIN, h-120), (w-MARGIN, h-116)], fill=(60, 60, 60))
     d.text((MARGIN, h-100), "@mentviro", font=fnt(30, True), fill=COLORS["white"])
-    # Logo nur auf Cover (is_bw=True) — auf Content-Slides weglassen um weißes Rechteck zu vermeiden
-    if is_bw:
-        paste_logo(img_rgba, w - MARGIN + 10, h - 78, size=80)
+    # Logo komplett entfernt — Logo-PNG hat opaken Hintergrund → weißes Viereck auf allen Slides
 
 def dark_overlay(base_rgb, w=W, h=H, strength=195):
     ov = Image.new("RGBA", (w, h))
@@ -470,23 +468,49 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     max_text_w = w - MARGIN * 2        # safe text width (never touch edges)
     content_top = 165 + (30 if slide.get("badge") else 0)
     if is_cover:
-        paste_logo(img, w // 2, int(h * 0.23), size=200)
+        # Kein Logo auf Slides (Logo-PNG hat opaken Hintergrund → weißes Viereck)
         content_top = int(h * 0.42)
 
+    def _render_line(text, start_sz, bold, fill, max_y_limit):
+        """Render text — auto-wraps if too wide at min_size to prevent clipping."""
+        nonlocal y
+        sz = fit_font_size(text, max_text_w, start_sz, bold=bold)
+        if text_width(text, sz, bold) <= max_text_w:
+            # Fits on one line
+            if y < max_y_limit:
+                d.text((MARGIN, y), text, font=fnt(sz, bold), fill=fill)
+            bb = fnt(sz, bold).getbbox(text)
+            y += (bb[3] - bb[1]) + (14 if bold else 12)
+        else:
+            # Still too wide — split at spaces and render sub-lines
+            words = text.split()
+            current = []
+            for word in words:
+                test = " ".join(current + [word])
+                if text_width(test, sz, bold) > max_text_w and current:
+                    sub = " ".join(current)
+                    if y < max_y_limit:
+                        d.text((MARGIN, y), sub, font=fnt(sz, bold), fill=fill)
+                    bb = fnt(sz, bold).getbbox(sub)
+                    y += (bb[3] - bb[1]) + (14 if bold else 12)
+                    current = [word]
+                else:
+                    current.append(word)
+            if current:
+                sub = " ".join(current)
+                if y < max_y_limit:
+                    d.text((MARGIN, y), sub, font=fnt(sz, bold), fill=fill)
+                bb = fnt(sz, bold).getbbox(sub)
+                y += (bb[3] - bb[1]) + (14 if bold else 12)
+
     y = content_top + 30
+    bottom_safe = h - 130    # stop before footer separator line
     base_title_sz = 74 if not is_cover else 68
     for line in slide.get("title", []):
-        # Auto-shrink font until line fits within safe area
-        sz = fit_font_size(line, max_text_w, base_title_sz, bold=True)
-        d.text((MARGIN, y), line, font=fnt(sz, True), fill=COLORS["white"])
-        bb = fnt(sz, True).getbbox(line)
-        y += (bb[3] - bb[1]) + 14
+        _render_line(line, base_title_sz, bold=True, fill=COLORS["white"], max_y_limit=bottom_safe)
     y += 36
     for line in slide.get("body", []):
-        sz = fit_font_size(line, max_text_w, 40, bold=False)
-        d.text((MARGIN, y), line, font=fnt(sz), fill=BODY)
-        bb = fnt(sz).getbbox(line)
-        y += (bb[3] - bb[1]) + 12
+        _render_line(line, 40, bold=False, fill=BODY, max_y_limit=bottom_safe)
 
     buf = io.BytesIO()
     img.convert("RGB").save(buf, "JPEG", quality=93)

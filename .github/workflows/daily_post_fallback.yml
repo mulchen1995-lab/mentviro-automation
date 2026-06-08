@@ -78,9 +78,11 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y fonts-dejavu-core ffmpeg libwebp7
           mkdir -p /usr/share/fonts/truetype
-          # Download Montserrat — validate it's a real TTF (starts with 0x00010000 or "true")
+          # Download Montserrat — try JSDelivr CDN (reliable), fallback to raw GitHub
           for weight in Regular Bold; do
             DEST="/usr/share/fonts/truetype/Montserrat-${weight}.ttf"
+            curl -fsSL "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/montserrat/static/Montserrat-${weight}.ttf" \
+              -o "$DEST" || \
             curl -fsSL -H "Accept: application/octet-stream" \
               "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-${weight}.ttf" \
               -o "$DEST" || true
