@@ -1667,13 +1667,17 @@
       ],
       "post_id": "17896483953333317",
       "story_id": "17905231677263246",
-      "published_at": "2026-06-09T10:32:23Z"
+      "published_at": "2026-06-09T10:32:23Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "day": 24,
       "date": "2026-06-09",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
       "topic": "Zeichen dass du mental stärker wirst",
@@ -1694,7 +1698,10 @@
         "Mental stärker 💪",
         "5 Zeichen die zeigen...",
         "Jetzt anschauen"
-      ]
+      ],
+      "post_id": "18427734583134859",
+      "story_id": "17924173074359005",
+      "published_at": "2026-06-09T13:19:51Z"
     },
     {
       "day": 25,
