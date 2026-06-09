@@ -506,8 +506,13 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     y = content_top + 30
     bottom_safe = h - 130    # stop before footer separator line
     base_title_sz = 74 if not is_cover else 68
-    for line in slide.get("title", []):
-        _render_line(line, base_title_sz, bold=True, fill=COLORS["white"], max_y_limit=bottom_safe)
+    # Uniform font size for ALL title lines on this slide — avoids size-jumping effect
+    title_lines = slide.get("title", [])
+    uniform_title_sz = base_title_sz
+    for line in title_lines:
+        uniform_title_sz = min(uniform_title_sz, fit_font_size(line, max_text_w, base_title_sz, bold=True))
+    for line in title_lines:
+        _render_line(line, uniform_title_sz, bold=True, fill=COLORS["white"], max_y_limit=bottom_safe)
     y += 36
     for line in slide.get("body", []):
         _render_line(line, 40, bold=False, fill=BODY, max_y_limit=bottom_safe)
@@ -1232,27 +1237,20 @@ def _reel_find_font():
                 continue
     return None
 
-def _reel_wrap_text(text, max_chars=26):
-    """Split sentence into lines of max_chars each."""
+def _reel_wrap_text(text, max_chars=16):
+    """Split sentence into lines of max_chars each (conservative — avoids overflow at fontsize 68)."""
     import textwrap
     return textwrap.wrap(text, width=max_chars) or [text]
 
 def _reel_sentence_queries(post):
-    """Return a Pexels query per script sentence — topic-matched."""
+    """Return a Pexels query per script sentence.
+    Uses the post's pexels_video_query as base for consistent aesthetics.
+    Varies by clip index so each clip fetches a different video."""
     script = post.get("script", [post.get("hook", "")])
-    base   = post.get("pexels_video_query", "cinematic dark abstract")
-    # Build per-sentence query from keywords + cinematic style
-    stopwords = {"und","die","der","das","ein","eine","in","ist","es","du","ich",
-                 "wir","sie","mir","dir","von","mit","für","auf","an","bei","dass",
-                 "nicht","aber","auch","noch","wie","was","als","so","nur","schon",
-                 "the","a","an","is","it","in","of","to","and","or","for","with"}
-    queries = []
-    for sent in script:
-        words = [w.strip(".,!?:;\"'").lower() for w in sent.split() if len(w) > 4]
-        kw    = [w for w in words if w not in stopwords][:2]
-        q     = " ".join(kw) + " dark cinematic" if kw else base
-        queries.append(q)
-    return queries
+    base   = post.get("pexels_video_query", "dark cinematic minimal person")
+    # Keep the base aesthetic query for all clips — pick_random=True in pexels_video()
+    # already gives variety. Per-sentence keyword extraction produced off-topic results.
+    return [base for _ in script]
 
 def _reel_probe_duration(path):
     """Return video duration in seconds via ffprobe."""
@@ -1274,10 +1272,11 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
     - centered bold white text (sentence), written via textfile to avoid escaping issues
     """
     import subprocess
-    lines    = _reel_wrap_text(sentence, max_chars=24)
+    lines    = _reel_wrap_text(sentence, max_chars=16)
     n_lines  = len(lines)
-    font_sz  = 88 if n_lines == 1 else (80 if n_lines == 2 else 72)
-    line_h   = font_sz + 18
+    # Conservative font sizes — tested safe up to 16 chars per line at 1080px width
+    font_sz  = 72 if n_lines == 1 else (64 if n_lines == 2 else 56)
+    line_h   = font_sz + 20
 
     # Write lines to a temp text file (avoids all ffmpeg escaping issues)
     txt_path = f"{TMPDIR}/reel_{day}_clip{idx}_text.txt"
@@ -1299,7 +1298,8 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
             f"drawtext=textfile='{line_file}'{font_arg}"
             f":fontcolor=white:fontsize={font_sz}"
             f":x=(w-text_w)/2:y={y_expr}"
-            f":shadowx=3:shadowy=3:shadowcolor=black@0.8"
+            f":shadowx=4:shadowy=4:shadowcolor=black@0.9"
+            f":fix_bounds=1"
         )
     drawtext_chain = ",".join(dt_parts)
 
@@ -1413,13 +1413,27 @@ def run_reel(post, plan):
     clip_paths = []
     for i, (sentence, raw, dur) in enumerate(zip(script, raw_videos, durations)):
         clip_out = f"{TMPDIR}/reel_{day}_clip{i}.mp4"
+        clip_dur = max(dur, 2.0)  # minimum 2s per clip
         try:
-            _reel_make_clip(clip_out, raw, sentence, max(dur, 1.5), font_path, day, i)
+            _reel_make_clip(clip_out, raw, sentence, clip_dur, font_path, day, i)
             clip_paths.append(clip_out)
             cleanup.append(clip_out)
-            print(f"  Clip {i+1}: '{sentence[:40]}' ({dur:.1f}s)")
+            print(f"  Clip {i+1}: '{sentence[:40]}' ({clip_dur:.1f}s)")
         except Exception as e:
-            print(f"  Clip {i+1} failed: {e}")
+            print(f"  Clip {i+1} failed ({e}) — building black fallback")
+            # Always build a fallback so total duration matches audio
+            try:
+                import subprocess as _sp
+                _sp.run(
+                    ["ffmpeg", "-y", "-f", "lavfi",
+                     "-i", f"color=black:size=1080x1920:rate=30",
+                     "-t", str(round(clip_dur, 2)), "-c:v", "libx264",
+                     "-preset", "fast", "-crf", "28", "-an", clip_out],
+                    check=True, capture_output=True, timeout=60)
+                clip_paths.append(clip_out)
+                cleanup.append(clip_out)
+            except Exception as e2:
+                print(f"  Fallback clip also failed: {e2}")
 
     if not clip_paths:
         print("  No clips built — fallback to carousel")
@@ -1447,13 +1461,17 @@ def run_reel(post, plan):
     cleanup.append(final_path)
     if audio_ok and os.path.exists(audio_path):
         try:
+            video_dur = _reel_probe_duration(concat_path)
+            # If video is shorter than audio, loop last frame to fill gap
+            # Use -t audio_dur so video exactly matches voiceover length
+            mix_t = max(audio_dur, video_dur)
             subprocess.run(
                 ["ffmpeg", "-y",
                  "-i", concat_path,
                  "-i", audio_path,
                  "-map", "0:v:0", "-map", "1:a:0",
                  "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
-                 "-shortest", final_path],
+                 "-t", str(round(mix_t, 2)), final_path],
                 check=True, capture_output=True, timeout=180)
             print(f"  Final with audio: {os.path.getsize(final_path)/1024/1024:.1f} MB")
         except Exception as e:
