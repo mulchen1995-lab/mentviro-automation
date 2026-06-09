@@ -378,7 +378,7 @@ def dark_overlay(base_rgb, w=W, h=H, strength=195):
 
 # ─── PEXELS ──────────────────────────────────────────────────────────────────
 
-def pexels_portrait(query, target_w=W, target_h=H):
+def pexels_portrait(query, target_w=W, target_h=H, exclude_ids: set = None):
     key = os.environ.get("PEXELS_API_KEY", "")
     if not key:
         return None
@@ -386,14 +386,20 @@ def pexels_portrait(query, target_w=W, target_h=H):
         r = requests.get(
             "https://api.pexels.com/v1/search",
             headers={"Authorization": key},
-            params={"query": query, "orientation": "portrait", "per_page": 5, "size": "large"},
+            params={"query": query, "orientation": "portrait", "per_page": 15, "size": "large"},
             timeout=30)
         if r.status_code != 200:
             return None
         photos = r.json().get("photos", [])
         if not photos:
             return None
-        photo = random.choice(photos[:min(3, len(photos))])
+        # Exclude already-used photos to avoid duplicates within the same carousel
+        if exclude_ids:
+            photos = [p for p in photos if p["id"] not in exclude_ids] or photos
+        photo = random.choice(photos[:min(5, len(photos))])
+        # Register this photo ID as used so subsequent calls skip it
+        if exclude_ids is not None:
+            exclude_ids.add(photo["id"])
         url   = photo["src"].get("portrait") or photo["src"].get("large2x") or photo["src"].get("large")
         # Force JPEG format to avoid WEBP compatibility issues on Ubuntu
         if url and "?" not in url:
@@ -1134,18 +1140,21 @@ def run_carousel(post, plan):
     set_build_accent(post)
     print(f"Building carousel: {post['topic']}")
     pexels_queries = post.get("pexels_queries", [])
+    used_photo_ids: set = set()   # Track used Pexels IDs — prevents duplicate photos
     child_ids: list = []
     try:
         for i, slide in enumerate(post["slides"]):
             print(f"  Slide {i+1}/{len(post['slides'])}...", end=" ", flush=True)
             bg_img = None
             if slide.get("is_cover"):
-                # Cover always gets a B&W Pexels photo (converted in build_carousel_slide)
+                # Cover gets a B&W Pexels photo (grayscale applied in build_carousel_slide)
                 cover_query = (pexels_queries[0] if pexels_queries
                                else post.get("pexels_video_query", "dark minimal abstract cinematic"))
-                bg_img = pexels_portrait(cover_query)
+                bg_img = pexels_portrait(cover_query, exclude_ids=used_photo_ids)
             elif pexels_queries:
-                bg_img = pexels_portrait(pexels_queries[min(i, len(pexels_queries)-1)])
+                # Cycle through queries (% len) so they never repeat the same query back-to-back
+                q = pexels_queries[i % len(pexels_queries)]
+                bg_img = pexels_portrait(q, exclude_ids=used_photo_ids)
             img_bytes = build_carousel_slide(slide, bg_img)
             img_url   = cloudinary_upload(img_bytes)
             child_id  = ig_create_container(image_url=img_url, is_carousel_item=True)
