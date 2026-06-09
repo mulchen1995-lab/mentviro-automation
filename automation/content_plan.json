@@ -1563,7 +1563,7 @@
       "day": 24,
       "date": "2026-06-09",
       "type": "carousel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
       "topic": "POV: Du bist plötzlich die disziplinierteste Person im Raum",
@@ -1664,7 +1664,10 @@
             "Weil du es einfach tust."
           ]
         }
-      ]
+      ],
+      "post_id": "17896483953333317",
+      "story_id": "17905231677263246",
+      "published_at": "2026-06-09T10:32:23Z"
     },
     {
       "day": 24,
