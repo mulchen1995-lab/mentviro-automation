@@ -1707,7 +1707,7 @@
       "day": 25,
       "date": "2026-06-10",
       "type": "carousel",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "emotional",
       "topic": "Ein Brief an mein jüngeres Ich",
@@ -1807,7 +1807,10 @@
             "Kommentar unten. 💛 @mentviro"
           ]
         }
-      ]
+      ],
+      "post_id": "17946318720017949",
+      "story_id": "18069494927361401",
+      "published_at": "2026-06-09T17:55:30Z"
     },
     {
       "day": 25,
