@@ -340,8 +340,18 @@ def set_build_accent(post_or_story):
     style = post_or_story.get("style", "silver") if isinstance(post_or_story, dict) else "silver"
     _build_accent = STYLE_ACCENTS.get(style, STYLE_ACCENTS["silver"])
 
+def _strip_emoji(text: str) -> str:
+    """Remove emoji and symbols outside Basic Multilingual Plane — fonts can't render them,
+    Pillow draws a □ placeholder instead which looks like a white/black rectangle."""
+    import re
+    # Remove characters outside BMP (U+10000 and above — most emoji like 💛🔥🎯)
+    text = re.sub(r'[^ -￿]', '', text)
+    # Also remove common problematic BMP symbols that aren't in Latin fonts
+    text = re.sub(r'[☀-➿︀-️‍]', '', text)
+    return text.strip()
+
 def text_width(text, font_size, bold=False):
-    return fnt(font_size, bold).getbbox(text)[2]
+    return fnt(font_size, bold).getbbox(_strip_emoji(text))[2]
 
 def fit_font_size(text, max_width, start_size, bold=False, min_size=28):
     """Reduce font size until text fits within max_width pixels."""
@@ -478,8 +488,11 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
         content_top = int(h * 0.42)
 
     def _render_line(text, start_sz, bold, fill, max_y_limit):
-        """Render text — auto-wraps if too wide at min_size to prevent clipping."""
+        """Render text — strips emoji (no font support) and auto-wraps if too wide."""
         nonlocal y
+        text = _strip_emoji(text)
+        if not text:
+            return
         sz = fit_font_size(text, max_text_w, start_sz, bold=bold)
         if text_width(text, sz, bold) <= max_text_w:
             # Fits on one line
@@ -1281,7 +1294,7 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
     - centered bold white text (sentence), written via textfile to avoid escaping issues
     """
     import subprocess
-    lines    = _reel_wrap_text(sentence, max_chars=16)
+    lines    = _reel_wrap_text(_strip_emoji(sentence), max_chars=16)
     n_lines  = len(lines)
     # Conservative font sizes — tested safe up to 16 chars per line at 1080px width
     font_sz  = 72 if n_lines == 1 else (64 if n_lines == 2 else 56)
