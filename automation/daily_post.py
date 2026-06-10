@@ -559,7 +559,6 @@ def build_attached_story(post):
     d.rectangle([(0, 0), (SW, 7)], fill=SIL)
     d.text((MARGIN, 55), "@mentviro", font=fnt(40, True), fill=SIL)
     d.rectangle([(MARGIN, 108), (MARGIN + 140, 115)], fill=SIL)
-    paste_logo(img, SW // 2, SH // 2 - 260, size=200)
 
     texts = post.get("story_text", ["NEU", post.get("topic", ""), "Jetzt ansehen"])
     max_text_w = SW - MARGIN * 2
@@ -1335,7 +1334,7 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920:(iw-1080)/2:(ih-1920)/2,"
         "setsar=1,"
-        "eq=brightness=-0.35:contrast=1.05,"
+        "eq=brightness=-0.15:contrast=1.0,"
         f"{drawtext_chain}"
     )
 
