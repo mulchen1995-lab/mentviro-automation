@@ -1243,12 +1243,15 @@ def _reel_as_carousel(post, plan):
 def _reel_find_font():
     """Return path to best available bold TTF font, or None."""
     candidates = [
+        "/usr/share/fonts/truetype/Montserrat-Regular.ttf",
+        "/usr/local/share/fonts/Montserrat-Regular.ttf",
+        "C:/Windows/Fonts/Montserrat-Regular.ttf",
+        os.path.join(os.path.dirname(__file__), "assets", "Montserrat-Regular.ttf"),
         "/usr/share/fonts/truetype/Montserrat-Bold.ttf",
         "/usr/local/share/fonts/Montserrat-Bold.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
         "C:/Windows/Fonts/Montserrat-Bold.ttf",
-        "C:/Windows/Fonts/arialbd.ttf",
+        "C:/Windows/Fonts/arial.ttf",
         os.path.join(os.path.dirname(__file__), "assets", "Montserrat-Bold.ttf"),
     ]
     for p in candidates:
@@ -1260,8 +1263,8 @@ def _reel_find_font():
                 continue
     return None
 
-def _reel_wrap_text(text, max_chars=16):
-    """Split sentence into lines of max_chars each (conservative — avoids overflow at fontsize 68)."""
+def _reel_wrap_text(text, max_chars=20):
+    """Split sentence into lines of max_chars each (safe up to 20 chars at subtitle fontsize 54)."""
     import textwrap
     return textwrap.wrap(text, width=max_chars) or [text]
 
@@ -1295,11 +1298,11 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
     - centered bold white text (sentence), written via textfile to avoid escaping issues
     """
     import subprocess
-    lines    = _reel_wrap_text(_strip_emoji(sentence), max_chars=16)
+    lines    = _reel_wrap_text(_strip_emoji(sentence), max_chars=20)
     n_lines  = len(lines)
-    # Conservative font sizes — tested safe up to 16 chars per line at 1080px width
-    font_sz  = 72 if n_lines == 1 else (64 if n_lines == 2 else 56)
-    line_h   = font_sz + 20
+    # Subtitle-style sizes — clean at 20 chars/line, 1080px width
+    font_sz  = 54 if n_lines == 1 else (48 if n_lines == 2 else 42)
+    line_h   = font_sz + 14
 
     # Write lines to a temp text file (avoids all ffmpeg escaping issues)
     txt_path = f"{TMPDIR}/reel_{day}_clip{idx}_text.txt"
@@ -1316,12 +1319,13 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
         line_file = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
         with open(line_file, "w", encoding="utf-8") as lf:
             lf.write(line)
-        y_expr = f"(h-{total_h})/2+{i*line_h}"
+        # Lower-third subtitle position with semi-transparent box
+        y_expr = f"h*80/100-{total_h//2}+{i*line_h}"
         dt_parts.append(
             f"drawtext=textfile='{line_file}'{font_arg}"
             f":fontcolor=white:fontsize={font_sz}"
             f":x=(w-text_w)/2:y={y_expr}"
-            f":shadowx=4:shadowy=4:shadowcolor=black@0.9"
+            f":box=1:boxcolor=black@0.55:boxborderw=14"
             f":fix_bounds=1"
         )
     drawtext_chain = ",".join(dt_parts)
@@ -1386,7 +1390,7 @@ def run_reel(post, plan):
             headers={"xi-api-key": el_key, "Content-Type": "application/json"},
             json={"text": " ".join(script),
                   "model_id": "eleven_multilingual_v2",
-                  "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}},
+                  "voice_settings": {"stability": 0.75, "similarity_boost": 0.55, "style": 0.2, "use_speaker_boost": False}},
             timeout=90)
         if el_r.status_code == 200:
             with open(audio_path, "wb") as af:
@@ -1403,6 +1407,23 @@ def run_reel(post, plan):
     if audio_dur < 1:
         # Fallback estimate: ~75ms per character
         audio_dur = sum(len(s) for s in script) * 0.075
+
+    # ── Step 1b: Background music (optional — set BACKGROUND_MUSIC_URL secret) ─
+    bg_music_path = None
+    bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", "")
+    if bg_music_url:
+        try:
+            bm_r = requests.get(bg_music_url, timeout=30)
+            if bm_r.status_code == 200:
+                bg_music_path = f"{TMPDIR}/reel_{day}_bgmusic.mp3"
+                with open(bg_music_path, "wb") as bf:
+                    bf.write(bm_r.content)
+                cleanup.append(bg_music_path)
+                print(f"  BG music: OK ({len(bm_r.content)//1024} KB)")
+            else:
+                print(f"  BG music: {bm_r.status_code} — skipped")
+        except Exception as e:
+            print(f"  BG music download failed: {e} — skipped")
 
     # ── Step 2: Per-sentence duration (proportional to char count) ───────────
     char_counts = [max(len(s), 10) for s in script]
@@ -1488,14 +1509,29 @@ def run_reel(post, plan):
             # If video is shorter than audio, loop last frame to fill gap
             # Use -t audio_dur so video exactly matches voiceover length
             mix_t = max(audio_dur, video_dur)
-            subprocess.run(
-                ["ffmpeg", "-y",
-                 "-i", concat_path,
-                 "-i", audio_path,
-                 "-map", "0:v:0", "-map", "1:a:0",
-                 "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
-                 "-t", str(round(mix_t, 2)), final_path],
-                check=True, capture_output=True, timeout=180)
+            if bg_music_path and os.path.exists(bg_music_path):
+                # Voiceover + looped background music at 10% volume
+                subprocess.run(
+                    ["ffmpeg", "-y",
+                     "-i", concat_path,
+                     "-i", audio_path,
+                     "-stream_loop", "-1", "-i", bg_music_path,
+                     "-filter_complex",
+                     f"[2:a]volume=0.10,atrim=duration={round(mix_t, 2)}[bg];"
+                     f"[1:a][bg]amix=inputs=2:duration=first:weights=1 1[aout]",
+                     "-map", "0:v:0", "-map", "[aout]",
+                     "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+                     "-t", str(round(mix_t, 2)), final_path],
+                    check=True, capture_output=True, timeout=180)
+            else:
+                subprocess.run(
+                    ["ffmpeg", "-y",
+                     "-i", concat_path,
+                     "-i", audio_path,
+                     "-map", "0:v:0", "-map", "1:a:0",
+                     "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+                     "-t", str(round(mix_t, 2)), final_path],
+                    check=True, capture_output=True, timeout=180)
             print(f"  Final with audio: {os.path.getsize(final_path)/1024/1024:.1f} MB")
         except Exception as e:
             print(f"  Audio mix failed: {e} — using silent video")
