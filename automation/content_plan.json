@@ -1810,7 +1810,11 @@
       ],
       "post_id": "17946318720017949",
       "story_id": "18069494927361401",
-      "published_at": "2026-06-09T17:55:30Z"
+      "published_at": "2026-06-09T17:55:30Z",
+      "insights": {
+        "likes": 3,
+        "comments": 0
+      }
     },
     {
       "day": 25,
@@ -2191,7 +2195,7 @@
     },
     {
       "date": "2026-06-10",
-      "status": "pending",
+      "status": "published",
       "type": "stories",
       "content_pillar": "emotional",
       "topic": "dark warm light candlelight cinematic introspection",
@@ -2207,7 +2211,10 @@
           "Feiere kleine Fortschritte bewusst und laut."
         ]
       },
-      "story_poll": "Bist du heute stolz auf dich?"
+      "story_poll": "Bist du heute stolz auf dich?",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-10T19:25:09Z"
     },
     {
       "date": "2026-06-11",
