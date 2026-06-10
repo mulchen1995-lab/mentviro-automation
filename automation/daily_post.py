@@ -341,13 +341,14 @@ def set_build_accent(post_or_story):
     _build_accent = STYLE_ACCENTS.get(style, STYLE_ACCENTS["silver"])
 
 def _strip_emoji(text: str) -> str:
-    """Remove emoji and symbols outside Basic Multilingual Plane — fonts can't render them,
-    Pillow draws a □ placeholder instead which looks like a white/black rectangle."""
+    """Remove emoji/symbols fonts cannot render — Pillow draws box placeholders
+    (white/black rectangles) for them."""
     import re
-    # Remove characters outside BMP (U+10000 and above — most emoji like 💛🔥🎯)
-    text = re.sub(r'[^ -￿]', '', text)
-    # Also remove common problematic BMP symbols that aren't in Latin fonts
-    text = re.sub(r'[☀-➿︀-️‍]', '', text)
+    # Remove characters outside BMP (U+10000+ — most emoji)
+    text = re.sub("[\U00010000-\U0010FFFF]", "", text)
+    # Remove BMP symbol blocks not in Latin fonts: Misc Symbols, Dingbats,
+    # arrows/shapes, variation selectors, zero-width joiner
+    text = re.sub("[\u2600-\u27BF\u2B00-\u2BFF\uFE00-\uFE0F\u200D]", "", text)
     return text.strip()
 
 def text_width(text, font_size, bold=False):
