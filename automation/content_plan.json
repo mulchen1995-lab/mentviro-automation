@@ -1936,7 +1936,11 @@
       ],
       "post_id": "18097818545324000",
       "story_id": "17965628247087286",
-      "published_at": "2026-06-11T11:20:19Z"
+      "published_at": "2026-06-11T11:20:19Z",
+      "insights": {
+        "likes": 3,
+        "comments": 4
+      }
     },
     {
       "day": 26,
@@ -2221,7 +2225,7 @@
     },
     {
       "date": "2026-06-11",
-      "status": "pending",
+      "status": "published",
       "type": "stories",
       "content_pillar": "educational",
       "topic": "dark minimal focus light beam",
@@ -2237,7 +2241,10 @@
           "Eine Aufgabe zur Zeit — Multitasking ist eine Illusion."
         ]
       },
-      "story_poll": "Wie fokussiert bist du aktuell?"
+      "story_poll": "Wie fokussiert bist du aktuell?",
+      "quote_id": "17886026025578931",
+      "tips_id": "18143638033518894",
+      "published_at": "2026-06-11T15:06:55Z"
     },
     {
       "date": "2026-06-12",
