@@ -1407,9 +1407,11 @@ def run_reel(post, plan):
         # Fallback estimate: ~75ms per character
         audio_dur = sum(len(s) for s in script) * 0.075
 
-    # ── Step 1b: Background music (optional — set BACKGROUND_MUSIC_URL secret) ─
+    # ── Step 1b: Background music ─────────────────────────────────────────────
+    # Default: "Serene View" by Mixkit (CC0, royalty-free)
+    _DEFAULT_BG = "https://assets.mixkit.co/music/443/443.mp3"
     bg_music_path = None
-    bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", "")
+    bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", _DEFAULT_BG)
     if bg_music_url:
         try:
             bm_r = requests.get(bg_music_url, timeout=30)
