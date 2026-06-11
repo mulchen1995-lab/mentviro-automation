@@ -13,6 +13,7 @@ jobs:
       contents: write
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v4
 
@@ -25,7 +26,15 @@ jobs:
           foreach ($w in @("Regular","Bold")) {
             $d = "C:\Windows\Fonts\Montserrat-$w.ttf"
             if (-not (Test-Path $d)) {
-              Invoke-WebRequest "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-$w.ttf" -OutFile $d -UseBasicParsing
+              try {
+                Invoke-WebRequest "https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/montserrat/static/Montserrat-$w.ttf" -OutFile $d -UseBasicParsing -ErrorAction Stop
+              } catch {
+                try {
+                  Invoke-WebRequest "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-$w.ttf" -OutFile $d -UseBasicParsing -ErrorAction Stop
+                } catch {
+                  Write-Host "Montserrat-$w download failed — will use system font"
+                }
+              }
             }
           }
 

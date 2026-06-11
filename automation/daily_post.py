@@ -16,6 +16,13 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
+# Windows cp1252 stdout breaks on non-ASCII characters (arrows, umlauts in log lines).
+# Force UTF-8 output so print() never crashes the whole script.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 # Cross-platform temp dir
 TMPDIR   = tempfile.gettempdir()
 RUN_MODE = os.getenv("RUN_MODE", "carousel")   # carousel | reel | stories
@@ -1318,10 +1325,12 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
         line_file = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
         with open(line_file, "w", encoding="utf-8") as lf:
             lf.write(line)
+        # ffmpeg drawtext needs forward slashes on Windows — backslashes break the filter
+        line_file_ffmpeg = line_file.replace("\\", "/")
         # Lower-third subtitle position with semi-transparent box
         y_expr = f"h*80/100-{total_h//2}+{i*line_h}"
         dt_parts.append(
-            f"drawtext=textfile='{line_file}'{font_arg}"
+            f"drawtext=textfile='{line_file_ffmpeg}'{font_arg}"
             f":fontcolor=white:fontsize={font_sz}"
             f":x=(w-text_w)/2:y={y_expr}"
             f":box=1:boxcolor=black@0.55:boxborderw=14"
@@ -1446,7 +1455,7 @@ def run_reel(post, plan):
                     for chunk in resp.iter_content(65536): f.write(chunk)
                 raw_videos.append(raw)
                 cleanup.append(raw)
-                print(f"  Video {i+1}/{len(script)}: '{query[:40]}' → {os.path.getsize(raw)/1024:.0f} KB")
+                print(f"  Video {i+1}/{len(script)}: '{query[:40]}' -> {os.path.getsize(raw)/1024:.0f} KB")
             except Exception as e:
                 print(f"  Video {i+1} download error: {e}")
                 raw_videos.append(None)
@@ -1496,7 +1505,7 @@ def run_reel(post, plan):
             ["ffmpeg", "-y", "-f", "concat", "-safe", "0",
              "-i", concat_list, "-c", "copy", concat_path],
             check=True, capture_output=True, timeout=180)
-        print(f"  Concatenated: {len(clip_paths)} clips → {os.path.getsize(concat_path)/1024/1024:.1f} MB")
+        print(f"  Concatenated: {len(clip_paths)} clips -> {os.path.getsize(concat_path)/1024/1024:.1f} MB")
     except subprocess.CalledProcessError as e:
         print(f"  Concat failed: {e.stderr[-300:]} — fallback carousel")
         return _reel_as_carousel(post, plan)
