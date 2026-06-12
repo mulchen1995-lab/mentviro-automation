@@ -1325,57 +1325,72 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
         line_file = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
         with open(line_file, "w", encoding="utf-8") as lf:
             lf.write(line)
-        # ffmpeg drawtext needs forward slashes on Windows — backslashes break the filter
+        # ffmpeg drawtext needs forward slashes on Windows
         line_file_ffmpeg = line_file.replace("\\", "/")
-        # Lower-third subtitle position with semi-transparent box
-        y_expr = f"h*80/100-{total_h//2}+{i*line_h}"
+        # Lower-third position: fixed offset from bottom (avoids h*80/100 integer-division=0 on some builds)
+        y_expr = f"h-{total_h + 180}+{i * line_h}"
         dt_parts.append(
             f"drawtext=textfile='{line_file_ffmpeg}'{font_arg}"
             f":fontcolor=white:fontsize={font_sz}"
             f":x=(w-text_w)/2:y={y_expr}"
-            f":box=1:boxcolor=black@0.55:boxborderw=14"
+            f":borderw=3:bordercolor=black"   # outline — universally supported, avoids box@alpha EINVAL
             f":fix_bounds=1"
         )
     drawtext_chain = ",".join(dt_parts)
 
-    # Video filter: crop to 9:16, dark overlay, then text
-    vf = (
+    scale_crop = (
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920:(iw-1080)/2:(ih-1920)/2,"
         "setsar=1,"
-        "eq=brightness=-0.15:contrast=1.0,"
-        f"{drawtext_chain}"
+        "eq=brightness=-0.15:contrast=1.0"
     )
+    vf_with_text    = f"{scale_crop},{drawtext_chain}"
+    vf_without_text = scale_crop   # fallback if drawtext still fails
 
     raw_dur   = _reel_probe_duration(raw_video) if raw_video else 0
     loop_args = ["-stream_loop", "-1"] if raw_dur > 0 and raw_dur < duration * 1.1 else []
 
-    try:
-        if raw_video and os.path.exists(raw_video):
+    t = str(round(duration, 2))
+
+    if raw_video and os.path.exists(raw_video):
+        # Attempt 1: real video + text
+        try:
             subprocess.run(
                 ["ffmpeg", "-y"] + loop_args + [
-                    "-i", raw_video,
-                    "-vf", vf,
+                    "-i", raw_video, "-vf", vf_with_text,
                     "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-                    "-an", "-t", str(round(duration, 2)), out_path],
+                    "-an", "-t", t, out_path],
                 check=True, capture_output=True, timeout=180)
-        else:
-            raise FileNotFoundError("no raw video")
-    except Exception:
-        # Fallback: black background + text
+            return
+        except Exception:
+            pass
+        # Attempt 2: real video without text (drawtext broken on this ffmpeg build)
+        try:
+            subprocess.run(
+                ["ffmpeg", "-y"] + loop_args + [
+                    "-i", raw_video, "-vf", vf_without_text,
+                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+                    "-an", "-t", t, out_path],
+                check=True, capture_output=True, timeout=180)
+            return
+        except Exception:
+            pass
+
+    # Attempt 3: black background + text
+    try:
         subprocess.run(
             ["ffmpeg", "-y",
-             "-f", "lavfi", "-i", f"color=black:size=1080x1920:rate=30",
+             "-f", "lavfi", "-i", "color=black:size=1080x1920:rate=30",
              "-vf", drawtext_chain,
              "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-             "-an", "-t", str(round(duration, 2)), out_path],
+             "-an", "-t", t, out_path],
             check=True, capture_output=True, timeout=60)
+        return
+    except Exception:
+        pass
 
-    # Clean up line text files
-    for i in range(n_lines):
-        p = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
-        try: os.unlink(p)
-        except: pass
+    # All attempts failed — raise so caller builds a plain black clip
+    raise RuntimeError("all _reel_make_clip attempts failed")
 
 def run_reel(post, plan):
     set_build_accent(post)
