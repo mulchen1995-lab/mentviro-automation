@@ -2063,13 +2063,17 @@
       ],
       "post_id": "18128783218611565",
       "story_id": "18068063234705277",
-      "published_at": "2026-06-11T18:43:35Z"
+      "published_at": "2026-06-11T18:43:35Z",
+      "insights": {
+        "likes": 1,
+        "comments": 1
+      }
     },
     {
       "day": 27,
       "date": "2026-06-12",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
       "topic": "5 Zeichen dass du mental wächst",
@@ -2090,7 +2094,10 @@
         "Du wächst 🌱",
         "5 unsichtbare Zeichen",
         "Jetzt anschauen"
-      ]
+      ],
+      "post_id": "17864433051587521",
+      "story_id": "17894176257350912",
+      "published_at": "2026-06-12T13:12:34Z"
     }
   ],
   "story_queue": [
