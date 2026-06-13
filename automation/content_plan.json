@@ -1278,7 +1278,7 @@
       "day": 19,
       "date": "2026-06-04",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "emotional",
       "topic": "Warum ich aufgehört habe, mich mit anderen zu vergleichen",
@@ -1299,7 +1299,10 @@
         "mein ehrlichster Moment",
         "Jetzt anschauen"
       ],
-      "story_poll": "Vergleichst du dich noch?"
+      "story_poll": "Vergleichst du dich noch?",
+      "post_id": "18593524660005788",
+      "story_id": "18223665712317278",
+      "published_at": "2026-06-13T14:43:37Z"
     },
     {
       "day": 19,
