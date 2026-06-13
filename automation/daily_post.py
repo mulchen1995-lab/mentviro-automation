@@ -1246,6 +1246,43 @@ def _reel_as_carousel(post, plan):
 
 # ─── REEL HELPERS ────────────────────────────────────────────────────────────
 
+def _parse_word_timings(alignment: dict) -> list:
+    """Extract [(word, start_s, end_s)] from ElevenLabs alignment data."""
+    chars  = alignment.get("characters", [])
+    starts = alignment.get("character_start_times_seconds", [])
+    ends   = alignment.get("character_end_times_seconds", [])
+    words, cur, word_start = [], "", 0.0
+    for c, s, e in zip(chars, starts, ends):
+        if c in (" ", "\n", "\t"):
+            if cur.strip():
+                words.append((cur.strip(), word_start, e))
+            cur = ""
+        else:
+            if not cur:
+                word_start = s
+            cur += c
+    if cur.strip():
+        words.append((cur.strip(), word_start, ends[-1] if ends else 0.0))
+    return words
+
+
+def _words_to_subtitle_chunks(words: list, max_chars: int = 24) -> list:
+    """Group words into [(text, start_s, end_s)] chunks of max_chars each."""
+    chunks, cur_words, cur_len = [], [], 0
+    for word, start, end in words:
+        needed = len(word) + (1 if cur_words else 0)
+        if cur_len + needed > max_chars and cur_words:
+            text = " ".join(w[0] for w in cur_words)
+            chunks.append((text, cur_words[0][1], cur_words[-1][2]))
+            cur_words, cur_len = [(word, start, end)], len(word)
+        else:
+            cur_words.append((word, start, end))
+            cur_len += needed
+    if cur_words:
+        chunks.append((" ".join(w[0] for w in cur_words), cur_words[0][1], cur_words[-1][2]))
+    return chunks
+
+
 def _reel_find_font():
     """Return path to best available bold TTF font, or None."""
     candidates = [
@@ -1296,79 +1333,24 @@ def _reel_probe_duration(path):
     except Exception:
         return 0.0
 
-def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx):
-    """
-    Build one 1080×1920 clip with:
-    - background video (looped/trimmed to `duration` seconds)
-    - dark overlay for readability
-    - centered bold white text (sentence), written via textfile to avoid escaping issues
-    """
+def _reel_make_clip(out_path, raw_video, duration, day, idx):
+    """Build one 1080x1920 video clip — no text overlay (subtitles added later as separate pass)."""
     import subprocess
-    lines    = _reel_wrap_text(_strip_emoji(sentence), max_chars=20)
-    n_lines  = len(lines)
-    # Subtitle-style sizes — clean at 20 chars/line, 1080px width
-    font_sz  = 54 if n_lines == 1 else (48 if n_lines == 2 else 42)
-    line_h   = font_sz + 14
-
-    # Write lines to a temp text file (avoids all ffmpeg escaping issues)
-    txt_path = f"{TMPDIR}/reel_{day}_clip{idx}_text.txt"
-    with open(txt_path, "w", encoding="utf-8") as tf:
-        tf.write("\n".join(lines))
-
-    font_arg = f":fontfile={font_path}" if font_path else ""
-
-    # Build one drawtext filter per line — vertical center block
-    total_h  = n_lines * line_h
-    dt_parts = []
-    for i, line in enumerate(lines):
-        # Write individual line file
-        line_file = f"{TMPDIR}/reel_{day}_clip{idx}_line{i}.txt"
-        with open(line_file, "w", encoding="utf-8") as lf:
-            lf.write(line)
-        # ffmpeg drawtext needs forward slashes on Windows
-        line_file_ffmpeg = line_file.replace("\\", "/")
-        # Lower-third position: fixed offset from bottom (avoids h*80/100 integer-division=0 on some builds)
-        y_expr = f"h-{total_h + 180}+{i * line_h}"
-        dt_parts.append(
-            f"drawtext=textfile='{line_file_ffmpeg}'{font_arg}"
-            f":fontcolor=white:fontsize={font_sz}"
-            f":x=(w-text_w)/2:y={y_expr}"
-            f":borderw=3:bordercolor=black"   # outline — universally supported, avoids box@alpha EINVAL
-            f":fix_bounds=1"
-        )
-    drawtext_chain = ",".join(dt_parts)
-
     scale_crop = (
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920:(iw-1080)/2:(ih-1920)/2,"
         "setsar=1,"
         "eq=brightness=-0.15:contrast=1.0"
     )
-    vf_with_text    = f"{scale_crop},{drawtext_chain}"
-    vf_without_text = scale_crop   # fallback if drawtext still fails
-
+    t = str(round(duration, 2))
     raw_dur   = _reel_probe_duration(raw_video) if raw_video else 0
     loop_args = ["-stream_loop", "-1"] if raw_dur > 0 and raw_dur < duration * 1.1 else []
 
-    t = str(round(duration, 2))
-
     if raw_video and os.path.exists(raw_video):
-        # Attempt 1: real video + text
         try:
             subprocess.run(
                 ["ffmpeg", "-y"] + loop_args + [
-                    "-i", raw_video, "-vf", vf_with_text,
-                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-                    "-an", "-t", t, out_path],
-                check=True, capture_output=True, timeout=180)
-            return
-        except Exception:
-            pass
-        # Attempt 2: real video without text (drawtext broken on this ffmpeg build)
-        try:
-            subprocess.run(
-                ["ffmpeg", "-y"] + loop_args + [
-                    "-i", raw_video, "-vf", vf_without_text,
+                    "-i", raw_video, "-vf", scale_crop,
                     "-c:v", "libx264", "-preset", "fast", "-crf", "23",
                     "-an", "-t", t, out_path],
                 check=True, capture_output=True, timeout=180)
@@ -1376,21 +1358,56 @@ def _reel_make_clip(out_path, raw_video, sentence, duration, font_path, day, idx
         except Exception:
             pass
 
-    # Attempt 3: black background + text
+    # Fallback: plain black background
+    subprocess.run(
+        ["ffmpeg", "-y",
+         "-f", "lavfi", "-i", "color=black:size=1080x1920:rate=30",
+         "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+         "-an", "-t", t, out_path],
+        check=True, capture_output=True, timeout=60)
+
+
+def _reel_overlay_subtitles(concat_path, out_path, sub_chunks, day, font_path):
+    """Burn timed word-chunks as drawtext enable-expressions onto the full video."""
+    import subprocess
+    if not sub_chunks:
+        return concat_path
+
+    font_arg = f":fontfile={font_path.replace(chr(92), '/')}" if font_path else ""
+    dt_parts = []
+    tmp_files = []
+    for i, (text, start, end) in enumerate(sub_chunks):
+        txt = f"{TMPDIR}/reel_{day}_sub{i}.txt"
+        tmp_files.append(txt)
+        with open(txt, "w", encoding="utf-8") as f:
+            f.write(_strip_emoji(text))
+        txt_ffmpeg = txt.replace("\\", "/")
+        dt_parts.append(
+            f"drawtext=textfile='{txt_ffmpeg}'{font_arg}"
+            f":enable='between(t,{start:.3f},{end:.3f})'"
+            f":fontcolor=white:fontsize=54"
+            f":x=(w-text_w)/2:y=h-220"
+            f":borderw=3:bordercolor=black"
+            f":fix_bounds=1"
+        )
+
+    vf = ",".join(dt_parts)
     try:
         subprocess.run(
-            ["ffmpeg", "-y",
-             "-f", "lavfi", "-i", "color=black:size=1080x1920:rate=30",
-             "-vf", drawtext_chain,
+            ["ffmpeg", "-y", "-i", concat_path,
+             "-vf", vf,
              "-c:v", "libx264", "-preset", "fast", "-crf", "23",
-             "-an", "-t", t, out_path],
-            check=True, capture_output=True, timeout=60)
-        return
-    except Exception:
-        pass
-
-    # All attempts failed — raise so caller builds a plain black clip
-    raise RuntimeError("all _reel_make_clip attempts failed")
+             "-an", out_path],
+            check=True, capture_output=True, timeout=300)
+        print(f"  Subtitles burned: {len(sub_chunks)} chunks")
+        return out_path
+    except Exception as e:
+        print(f"  Subtitle overlay failed: {e} — continuing without text")
+        return concat_path
+    finally:
+        for f in tmp_files:
+            try: os.unlink(f)
+            except: pass
 
 def run_reel(post, plan):
     set_build_accent(post)
@@ -1401,27 +1418,34 @@ def run_reel(post, plan):
     day     = post["day"]
     cleanup = []
 
-    # ── Step 1: TTS for full script ──────────────────────────────────────────
+    # ── Step 1: TTS with word-level timestamps ────────────────────────────────
     audio_path = f"{TMPDIR}/reel_{day}_voice.mp3"
     audio_ok   = False
     audio_dur  = 0.0
+    sub_chunks = []   # [(text, start_s, end_s)] for subtitle overlay
     try:
         el_key = os.environ.get("ELEVENLABS_API_KEY",
                                 "1071b6e53cb6e950c63d8e11a05dfa7b07764275cab9fda0ce63104a421c2d37")
         el_r = requests.post(
-            "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB",
+            "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB/with-timestamps",
             headers={"xi-api-key": el_key, "Content-Type": "application/json"},
             json={"text": " ".join(script),
                   "model_id": "eleven_multilingual_v2",
                   "voice_settings": {"stability": 0.75, "similarity_boost": 0.55, "style": 0.2, "use_speaker_boost": False}},
             timeout=90)
         if el_r.status_code == 200:
+            ts_data    = el_r.json()
+            audio_bytes = base64.b64decode(ts_data.get("audio_base64", ""))
             with open(audio_path, "wb") as af:
-                af.write(el_r.content)
+                af.write(audio_bytes)
             audio_ok  = True
             audio_dur = _reel_probe_duration(audio_path)
             cleanup.append(audio_path)
-            print(f"  Voiceover: OK ({len(el_r.content)//1024} KB, {audio_dur:.1f}s)")
+            # Parse word-level timing for synced subtitles
+            alignment  = ts_data.get("alignment", {})
+            word_times = _parse_word_timings(alignment)
+            sub_chunks = _words_to_subtitle_chunks(word_times, max_chars=24)
+            print(f"  Voiceover: OK ({len(audio_bytes)//1024} KB, {audio_dur:.1f}s, {len(sub_chunks)} subtitle chunks)")
         else:
             print(f"  Voiceover: {el_r.status_code} — {el_r.text[:100]}")
     except Exception as e:
@@ -1457,7 +1481,7 @@ def run_reel(post, plan):
     print(f"  Script: {len(script)} sentences, total ~{audio_dur:.1f}s")
 
     # ── Step 3: Download one Pexels video per sentence ───────────────────────
-    font_path   = _reel_find_font()
+    font_path   = _reel_find_font()   # still needed for subtitle overlay
     vid_queries = _reel_sentence_queries(post)
     raw_videos  = []
     for i, (sent, query) in enumerate(zip(script, vid_queries)):
@@ -1484,7 +1508,7 @@ def run_reel(post, plan):
         clip_out = f"{TMPDIR}/reel_{day}_clip{i}.mp4"
         clip_dur = max(dur, 2.0)  # minimum 2s per clip
         try:
-            _reel_make_clip(clip_out, raw, sentence, clip_dur, font_path, day, i)
+            _reel_make_clip(clip_out, raw, clip_dur, day, i)
             clip_paths.append(clip_out)
             cleanup.append(clip_out)
             print(f"  Clip {i+1}: '{sentence[:40]}' ({clip_dur:.1f}s)")
@@ -1524,6 +1548,11 @@ def run_reel(post, plan):
     except subprocess.CalledProcessError as e:
         print(f"  Concat failed: {e.stderr[-300:]} — fallback carousel")
         return _reel_as_carousel(post, plan)
+
+    # ── Step 5b: Burn synced subtitles onto concatenated video ───────────────
+    subtitled_path = f"{TMPDIR}/reel_{day}_subtitled.mp4"
+    cleanup.append(subtitled_path)
+    concat_path = _reel_overlay_subtitles(concat_path, subtitled_path, sub_chunks, day, font_path)
 
     # ── Step 6: Mix voiceover ────────────────────────────────────────────────
     final_path = f"{TMPDIR}/reel_{day}_final.mp4"
