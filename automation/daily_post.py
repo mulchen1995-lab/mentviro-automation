@@ -571,6 +571,7 @@ def build_attached_story(post):
     max_text_w = SW - MARGIN * 2
     y = SH // 2 - 60
     for j, line in enumerate(texts):
+        line = _strip_emoji(line)
         sz   = 34 if j == 0 else (84 if j < len(texts)-1 else 46)
         bold = j > 0
         col  = SIL if j == 0 else (COLORS["white"] if j < len(texts)-1 else SIL)
@@ -591,8 +592,8 @@ def build_quote_story(story_data: dict):
     story_data = {"quote": {"text": "...", "author": "..."}, ...}
     """
     q_data = story_data.get("quote", {})
-    text   = q_data.get("text", "")
-    author = q_data.get("author", "")
+    text   = _strip_emoji(q_data.get("text", ""))
+    author = _strip_emoji(q_data.get("author", ""))
     topic  = story_data.get("topic", "dark minimal")
 
     bg = pexels_portrait(topic, target_w=SW, target_h=SH) or Image.new("RGB", (SW, SH), (0,0,0))
@@ -658,8 +659,8 @@ def build_tips_story(story_data: dict):
     story_data = {"tips": {"title": "...", "items": ["tip1", "tip2", "tip3"]}, ...}
     """
     t_data = story_data.get("tips", {})
-    title  = t_data.get("title", "3 Tipps")
-    items  = t_data.get("items", ["", "", ""])[:3]
+    title  = _strip_emoji(t_data.get("title", "3 Tipps"))
+    items  = [_strip_emoji(it) for it in t_data.get("items", ["", "", ""])[:3]]
     topic  = story_data.get("topic", "dark minimal abstract")
 
     bg = pexels_portrait(topic, target_w=SW, target_h=SH) or Image.new("RGB", (SW, SH), (0,0,0))
