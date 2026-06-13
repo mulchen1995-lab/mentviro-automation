@@ -1544,7 +1544,7 @@
       "day": 23,
       "date": "2026-06-08",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "topic": "Die 5 Gewohnheiten disziplinierter Menschen",
@@ -1564,7 +1564,10 @@
         "Disziplin erklärt 🧠",
         "was wirklich dahintersteckt",
         "Jetzt anschauen"
-      ]
+      ],
+      "post_id": "18093395240210704",
+      "story_id": "18094830323353588",
+      "published_at": "2026-06-13T21:48:23Z"
     },
     {
       "day": 24,
