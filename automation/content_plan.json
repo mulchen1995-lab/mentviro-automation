@@ -1302,7 +1302,11 @@
       "story_poll": "Vergleichst du dich noch?",
       "post_id": "18593524660005788",
       "story_id": "18223665712317278",
-      "published_at": "2026-06-13T14:43:37Z"
+      "published_at": "2026-06-13T14:43:37Z",
+      "insights": {
+        "likes": 3,
+        "comments": 0
+      }
     },
     {
       "day": 19,
