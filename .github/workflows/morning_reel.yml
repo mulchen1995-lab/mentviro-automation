@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 5 * * *'   # 07:00 CET / 06:00 CEST
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Nur Vorschau rendern (Cloudinary-Link in Telegram), NICHT auf Instagram posten'
+        type: boolean
+        default: false
 
 jobs:
   reel:
@@ -56,6 +61,7 @@ jobs:
       - name: Post reel
         env:
           RUN_MODE:                    reel
+          DRY_RUN:                     ${{ inputs.dry_run }}
           IG_USER_ID:                  ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN:             ${{ secrets.IG_ACCESS_TOKEN }}
           CLOUDINARY_CLOUD_NAME:       ${{ secrets.CLOUDINARY_CLOUD_NAME }}

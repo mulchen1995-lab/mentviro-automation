@@ -26,6 +26,9 @@ if hasattr(sys.stderr, "reconfigure"):
 # Cross-platform temp dir
 TMPDIR   = tempfile.gettempdir()
 RUN_MODE = os.getenv("RUN_MODE", "carousel")   # carousel | reel | stories
+# DRY_RUN: rendert + lädt zur Vorschau auf Cloudinary hoch, postet aber NICHT auf
+# Instagram und markiert den Post NICHT als 'published'. Für sichere Test-Reels.
+DRY_RUN  = os.getenv("DRY_RUN", "").strip().lower() in ("1", "true", "yes", "on")
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 PLAN_FILE = os.path.join(os.path.dirname(__file__), "content_plan.json")
@@ -1337,12 +1340,19 @@ def _reel_probe_duration(path):
 def _reel_make_clip(out_path, raw_video, duration, day, idx):
     """Build one 1080x1920 video clip — no text overlay (subtitles added later as separate pass)."""
     import subprocess
+    # fps=30 + format=yuv420p erzwingen einheitliche Framerate/Pixelformat über ALLE
+    # Clips. Sonst haben Pexels-Clips gemischte fps (24/25/30/60) und der spätere
+    # concat -c copy bekommt Timestamp-Sprünge → Clip friert am Ende ein, nächster
+    # startet verzögert.
     scale_crop = (
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920:(iw-1080)/2:(ih-1920)/2,"
-        "setsar=1,"
+        "setsar=1,fps=30,format=yuv420p,"
         "eq=brightness=-0.15:contrast=1.0"
     )
+    # Einheitliche Encoding-Parameter für sauberen concat -c copy (gleiche fps + timebase)
+    enc = ["-c:v", "libx264", "-preset", "fast", "-crf", "23",
+           "-r", "30", "-pix_fmt", "yuv420p", "-video_track_timescale", "90000"]
     t = str(round(duration, 2))
     raw_dur   = _reel_probe_duration(raw_video) if raw_video else 0
     loop_args = ["-stream_loop", "-1"] if raw_dur > 0 and raw_dur < duration * 1.1 else []
@@ -1351,40 +1361,59 @@ def _reel_make_clip(out_path, raw_video, duration, day, idx):
         try:
             subprocess.run(
                 ["ffmpeg", "-y"] + loop_args + [
-                    "-i", raw_video, "-vf", scale_crop,
-                    "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+                    "-i", raw_video, "-vf", scale_crop] + enc + [
                     "-an", "-t", t, out_path],
                 check=True, capture_output=True, timeout=180)
             return
         except Exception:
             pass
 
-    # Fallback: plain black background
+    # Fallback: plain black background (gleiche Encoding-Parameter)
     subprocess.run(
         ["ffmpeg", "-y",
-         "-f", "lavfi", "-i", "color=black:size=1080x1920:rate=30",
-         "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+         "-f", "lavfi", "-i", "color=black:size=1080x1920:rate=30"] + enc + [
          "-an", "-t", t, out_path],
         check=True, capture_output=True, timeout=60)
 
 
 def _reel_overlay_subtitles(concat_path, out_path, sub_chunks, day, font_path):
-    """Burn timed word-chunks as drawtext enable-expressions onto the full video."""
-    import subprocess
+    """Burn timed word-chunks as drawtext enable-expressions onto the full video.
+
+    Windows-Falle: im ffmpeg-Filtergraph ist ':' der Options-Trenner. Ein absoluter
+    Pfad wie textfile='C:/Users/...' oder fontfile=C:/Windows/Fonts/arial.ttf enthält
+    Doppelpunkte → der drawtext-Filter bricht ab (exit 4294967274), Reel ging bisher
+    OHNE Untertitel raus. Fix: ffmpeg mit cwd=TMPDIR ausführen und Textdateien + Font
+    NUR über bare Dateinamen (ohne Laufwerk/Pfad) referenzieren → kein Doppelpunkt im
+    Filtergraph. Der Filtergraph wird zusätzlich in eine Datei geschrieben
+    (-filter_script:v) statt als Riesen-Argument, um das Windows-Kommandozeilenlimit
+    zu umgehen, wenn viele Untertitel-Chunks verkettet sind.
+    """
+    import subprocess, shutil
     if not sub_chunks:
         return concat_path
 
-    font_arg = f":fontfile={font_path.replace(chr(92), '/')}" if font_path else ""
-    dt_parts = []
     tmp_files = []
+
+    # Font in TMPDIR unter bare Namen kopieren (kein Doppelpunkt im Filtergraph)
+    font_name = ""
+    if font_path and os.path.exists(font_path):
+        font_name = f"reel_{day}_font.ttf"
+        try:
+            shutil.copyfile(font_path, os.path.join(TMPDIR, font_name))
+            tmp_files.append(os.path.join(TMPDIR, font_name))
+        except Exception:
+            font_name = ""
+
+    dt_parts = []
     for i, (text, start, end) in enumerate(sub_chunks):
-        txt = f"{TMPDIR}/reel_{day}_sub{i}.txt"
-        tmp_files.append(txt)
-        with open(txt, "w", encoding="utf-8") as f:
+        txt_name = f"reel_{day}_sub{i}.txt"            # bare name, liegt in TMPDIR
+        txt_path = os.path.join(TMPDIR, txt_name)
+        tmp_files.append(txt_path)
+        with open(txt_path, "w", encoding="utf-8") as f:
             f.write(_strip_emoji(text))
-        txt_ffmpeg = txt.replace("\\", "/")
+        font_arg = f":fontfile={font_name}" if font_name else ""
         dt_parts.append(
-            f"drawtext=textfile='{txt_ffmpeg}'{font_arg}"
+            f"drawtext=textfile={txt_name}{font_arg}"
             f":enable='between(t,{start:.3f},{end:.3f})'"
             f":fontcolor=white:fontsize=54"
             f":x=(w-text_w)/2:y=h-220"
@@ -1392,18 +1421,28 @@ def _reel_overlay_subtitles(concat_path, out_path, sub_chunks, day, font_path):
             f":fix_bounds=1"
         )
 
-    vf = ",".join(dt_parts)
+    # Filtergraph in Datei schreiben (bare name, in TMPDIR)
+    filter_name = f"reel_{day}_filter.txt"
+    filter_path = os.path.join(TMPDIR, filter_name)
+    with open(filter_path, "w", encoding="utf-8") as f:
+        f.write(",".join(dt_parts))
+    tmp_files.append(filter_path)
+
     try:
         subprocess.run(
             ["ffmpeg", "-y", "-i", concat_path,
-             "-vf", vf,
+             "-filter_script:v", filter_name,
              "-c:v", "libx264", "-preset", "fast", "-crf", "23",
+             "-r", "30", "-pix_fmt", "yuv420p", "-video_track_timescale", "90000",
              "-an", out_path],
-            check=True, capture_output=True, timeout=300)
+            check=True, capture_output=True, timeout=300, cwd=TMPDIR)
         print(f"  Subtitles burned: {len(sub_chunks)} chunks")
         return out_path
     except Exception as e:
-        print(f"  Subtitle overlay failed: {e} — continuing without text")
+        err = getattr(e, "stderr", b"")
+        if isinstance(err, bytes):
+            err = err.decode("utf-8", "replace")
+        print(f"  Subtitle overlay failed: {e} — {err[-300:]} — continuing without text")
         return concat_path
     finally:
         for f in tmp_files:
@@ -1522,7 +1561,9 @@ def run_reel(post, plan):
                     ["ffmpeg", "-y", "-f", "lavfi",
                      "-i", f"color=black:size=1080x1920:rate=30",
                      "-t", str(round(clip_dur, 2)), "-c:v", "libx264",
-                     "-preset", "fast", "-crf", "28", "-an", clip_out],
+                     "-preset", "fast", "-crf", "28",
+                     "-r", "30", "-pix_fmt", "yuv420p", "-video_track_timescale", "90000",
+                     "-an", clip_out],
                     check=True, capture_output=True, timeout=60)
                 clip_paths.append(clip_out)
                 cleanup.append(clip_out)
@@ -1599,6 +1640,18 @@ def run_reel(post, plan):
         print("  Uploading to Cloudinary...")
         with open(final_path, "rb") as vf:
             cdn_url = cloudinary_upload(vf.read(), resource_type="video", suffix=".mp4")
+
+        # DRY_RUN: nur Vorschau hochladen, NICHT auf Instagram posten
+        if DRY_RUN:
+            print(f"  DRY_RUN aktiv — KEIN Instagram-Post. Vorschau-Link: {cdn_url}")
+            send_telegram(
+                f"🧪 <b>mentviro DRY_RUN</b> — Reel-Vorschau (NICHT gepostet)\n"
+                f"Tag {post['day']}: {post.get('topic','')}\n"
+                f"Untertitel-Chunks: {len(sub_chunks)} · Audio: {'ja' if audio_ok else 'nein'}\n"
+                f'<a href="{cdn_url}">▶ Vorschau ansehen</a>'
+            )
+            return None
+
         print("  Creating REELS container...")
         container_id = ig_create_container(
             video_url=cdn_url,
@@ -1781,6 +1834,10 @@ def main():
         print(f"Day {post['day']} REEL: {post['topic']}\n")
         try:
             media_id = run_reel(post, plan)
+            if DRY_RUN:
+                print("\nDRY_RUN: Reel-Vorschau erstellt, NICHTS gepostet. "
+                      f"Post Tag {post['day']} bleibt 'pending'.")
+                return
             story_id = run_attached_story(post)
             post["status"]       = "published"
             post["post_id"]      = media_id
