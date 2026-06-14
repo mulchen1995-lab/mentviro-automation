@@ -1518,6 +1518,11 @@ def run_reel(post, plan):
     char_counts = [max(len(s), 10) for s in script]
     total_chars = sum(char_counts)
     durations   = [audio_dur * (c / total_chars) for c in char_counts]
+    # Buffer the last clip so the concatenated video always *exceeds* the voiceover.
+    # The final mux trims back to exactly audio_dur, so the spoken audio is the master
+    # clock: no footage runs on (or loops) after the voice has finished.
+    if durations:
+        durations[-1] += 0.8
     print(f"  Script: {len(script)} sentences, total ~{audio_dur:.1f}s")
 
     # ── Step 3: Download one Pexels video per sentence ───────────────────────
@@ -1602,9 +1607,10 @@ def run_reel(post, plan):
     if audio_ok and os.path.exists(audio_path):
         try:
             video_dur = _reel_probe_duration(concat_path)
-            # If video is shorter than audio, loop last frame to fill gap
-            # Use -t audio_dur so video exactly matches voiceover length
-            mix_t = max(audio_dur, video_dur)
+            # Voice is the master clock: trim to the voiceover length so footage never
+            # runs past (or loops after) the spoken audio. The last clip was buffered
+            # (+0.8s) so the video reliably covers the full voiceover before trimming.
+            mix_t = audio_dur if audio_dur > 1 else max(audio_dur, video_dur)
             if bg_music_path and os.path.exists(bg_music_path):
                 # Voiceover + looped background music at 10% volume
                 subprocess.run(
