@@ -80,22 +80,25 @@ def get_todays_post(plan, post_type: str):
 
 def get_todays_stories(plan):
     """Return today's pending story-pair, or next pending if none today.
-    Guards against duplicate posting: skips stories published within last 6h."""
+
+    Duplicate guard is TIME-based, not date-based: if ANY story-pair was published
+    in the last ~11h, skip — regardless of that entry's queue date. The old guard
+    only checked entries dated == today, so a backlog entry (e.g. 2026-06-08 posted
+    on 2026-06-14) slipped past it and the cloud fallback re-posted it 2h later."""
     today = date.today().isoformat()
     sq = plan.get("story_queue", [])
-    # Hard guard: if today's story was already published recently, never re-post
+    # Hard guard: never post a second story-pair within the same ~half-day.
     for s in sq:
-        if s["date"] == today and s["status"] == "published":
-            pub = s.get("published_at", "")
-            if pub:
-                try:
-                    pub_dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
-                    age_h  = (datetime.now(pub_dt.tzinfo) - pub_dt).total_seconds() / 3600
-                    if age_h < 6:
-                        print(f"  Stories for {today} already published {age_h:.1f}h ago — skipping.")
-                        return None
-                except Exception:
-                    pass
+        if s.get("status") == "published" and s.get("published_at"):
+            try:
+                pub_dt = datetime.fromisoformat(s["published_at"].replace("Z", "+00:00"))
+                age_h  = (datetime.now(pub_dt.tzinfo) - pub_dt).total_seconds() / 3600
+                if 0 <= age_h < 11:
+                    print(f"  A story-pair was already published {age_h:.1f}h ago "
+                          f"(queue date {s.get('date')}) — skipping to avoid duplicates.")
+                    return None
+            except Exception:
+                pass
     for s in sq:
         if s["date"] == today and s["status"] == "pending":
             return s
@@ -1728,8 +1731,11 @@ def run_daily_stories(plan):
     except Exception as e:
         print(f"failed: {e}")
 
-    # Mark as published
+    # Mark as published. Re-stamp the queue date to today: backlog entries are posted
+    # "now", so dating them today keeps the dashboard honest and the date-based guards
+    # coherent for any later run on the same day.
     sd["status"]      = "published"
+    sd["date"]        = date.today().isoformat()
     sd["quote_id"]    = quote_id
     sd["tips_id"]     = tips_id
     sd["published_at"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")

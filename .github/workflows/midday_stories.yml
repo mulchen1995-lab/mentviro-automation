@@ -32,7 +32,7 @@ jobs:
                 try {
                   Invoke-WebRequest "https://github.com/google/fonts/raw/main/ofl/montserrat/static/Montserrat-$w.ttf" -OutFile $d -UseBasicParsing -ErrorAction Stop
                 } catch {
-                  Write-Host "Montserrat-$w download failed — will use system font"
+                  Write-Host "Montserrat-$w download failed - will use system font"
                 }
               }
             }
@@ -74,6 +74,18 @@ jobs:
           git add automation/content_plan.json docs/index.html 2>$null; $true
           $today = Get-Date -Format "yyyy-MM-dd"
           git diff --cached --quiet
-          if ($LASTEXITCODE -ne 0) { git commit -m "chore: stories $today" }
-          git pull --rebase
-          git push
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "chore: stories $today"
+            # Robust push: the published-status MUST land in the repo, otherwise the
+            # cloud fallback sees the story as still pending 2h later and re-posts it
+            # (duplicate stories). Retry fetch+merge (prefer our plan on conflict)+push.
+            $pushed = $false
+            for ($i = 1; $i -le 6; $i++) {
+              git fetch origin main
+              git merge -X ours --no-edit origin/main
+              git push
+              if ($LASTEXITCODE -eq 0) { $pushed = $true; break }
+              Start-Sleep -Seconds 4
+            }
+            if (-not $pushed) { Write-Host "::warning::Push of published status FAILED after 6 tries — fallback may duplicate" }
+          }

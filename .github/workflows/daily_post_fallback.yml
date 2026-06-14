@@ -130,6 +130,15 @@ jobs:
           git config user.name "mentviro-bot"
           git config user.email "bot@mentviro.com"
           git add automation/content_plan.json docs/index.html || true
-          git diff --cached --quiet || git commit -m "chore: fallback ${{ steps.mode.outputs.mode }} $(date +%Y-%m-%d)"
-          git pull --rebase
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: fallback ${{ steps.mode.outputs.mode }} $(date +%Y-%m-%d)"
+            # Robust push: published status MUST persist, else the next run re-posts.
+            pushed=0
+            for i in $(seq 1 6); do
+              git fetch origin main
+              git merge -X ours --no-edit origin/main || true
+              if git push; then pushed=1; break; fi
+              sleep 4
+            done
+            [ "$pushed" = "1" ] || echo "::warning::Push of published status FAILED after 6 tries"
+          fi
