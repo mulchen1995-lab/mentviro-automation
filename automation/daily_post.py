@@ -867,6 +867,53 @@ def get_trending_context():
 
 # ─── CONTENT GENERATION ──────────────────────────────────────────────────────
 
+def _seed_from_evergreen(plan, n_days=4):
+    """Top up the plan from the evergreen pool when Gemini is unavailable and the
+    buffer is empty — so the account never goes dark. Rotates through the pool via a
+    cursor so the same packages don't repeat back-to-back. Entries are tagged
+    source=evergreen and mirror the exact Gemini package schema."""
+    try:
+        try:
+            from evergreen_pool import EVERGREEN_PACKAGES
+        except Exception:
+            from automation.evergreen_pool import EVERGREEN_PACKAGES
+    except Exception as e:
+        print(f"  Evergreen-Pool nicht ladbar: {e}")
+        return
+    if not EVERGREEN_PACKAGES:
+        return
+
+    last_day  = max((p["day"] for p in plan["posts"]), default=0)
+    last_date = max((date.fromisoformat(p["date"]) for p in plan["posts"]),
+                    default=date.today())
+    last_sq   = max((date.fromisoformat(s["date"]) for s in plan.get("story_queue", [])),
+                    default=date.today())
+    start_date = max(last_date, last_sq, date.today()) + timedelta(days=1)
+    cursor = plan.get("evergreen_cursor", 0)
+
+    new_posts, new_stories = [], []
+    for i in range(n_days):
+        pkg     = EVERGREEN_PACKAGES[(cursor + i) % len(EVERGREEN_PACKAGES)]
+        d       = (start_date + timedelta(days=i)).isoformat()
+        day_num = last_day + i + 1
+        pillar  = pkg.get("content_pillar", "educational")
+        style   = "gold" if pillar in ("emotional", "entertaining") else "silver"
+        common  = {"date": d, "status": "pending", "style": style,
+                   "content_pillar": pillar, "source": "evergreen"}
+        reel = dict(pkg["reel"]);     reel.update({"day": day_num, "type": "reel", **common})
+        car  = dict(pkg["carousel"]); car.update({"day": day_num, "type": "carousel", **common})
+        st   = dict(pkg["stories"]);  st.update({"day": day_num, **common})
+        new_posts += [reel, car]
+        new_stories.append(st)
+
+    plan["posts"].extend(new_posts)
+    plan.setdefault("story_queue", []).extend(new_stories)
+    plan["evergreen_cursor"] = (cursor + n_days) % len(EVERGREEN_PACKAGES)
+    save_plan(plan)
+    print(f"  Evergreen-Pool: {n_days} Tage nachgefüllt "
+          f"({len(new_posts)} Posts + {len(new_stories)} Stories) — Gemini nicht verfügbar.")
+
+
 def check_and_refill_content(plan):
     """Generate content when queue runs low. Always creates PAIRS: 1 reel + 1 carousel per day,
     plus a story_queue entry for each day."""
@@ -887,9 +934,16 @@ def check_and_refill_content(plan):
             len(pending_stories) >= 3 and days_remaining >= 5):
         return
 
+    # Critical = a content type has run completely dry → the account risks going dark.
+    # In that case any Gemini failure routes to the evergreen pool instead of giving up.
+    critical = (len(pending_reels) == 0 or len(pending_carousels) == 0
+                or len(pending_stories) == 0)
+
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("GEMINI_API_KEY not set — skipping generation")
+        if critical:
+            _seed_from_evergreen(plan)
         return
 
     print("Generating new content pairs via Gemini...")
@@ -1115,12 +1169,16 @@ Schema für jedes Objekt:
             timeout=120)
         if r.status_code != 200:
             print(f"Gemini error {r.status_code}: {r.text[:300]}")
+            if critical:
+                _seed_from_evergreen(plan)
             return
         text  = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
         start = text.find("[")
         end   = text.rfind("]") + 1
         if start == -1 or end == 0:
             print("No JSON array in Gemini response")
+            if critical:
+                _seed_from_evergreen(plan)
             return
 
         packages = json.loads(text[start:end])
@@ -1160,6 +1218,8 @@ Schema für jedes Objekt:
         import traceback
         print(f"Generation failed: {e}")
         traceback.print_exc()
+        if critical:
+            _seed_from_evergreen(plan)
 
 # ─── CAROUSEL WORKFLOW ───────────────────────────────────────────────────────
 
