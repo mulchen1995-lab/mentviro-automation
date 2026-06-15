@@ -1959,7 +1959,7 @@
       "day": 26,
       "date": "2026-06-11",
       "type": "reel",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "topic": "Warum du keinen Fokus hast — und wie du ihn zurückbekommst",
@@ -1980,7 +1980,10 @@
         "Fokus zurück 🎯",
         "warum du ihn verlierst",
         "Jetzt anschauen"
-      ]
+      ],
+      "post_id": "18125022373725194",
+      "story_id": "18118521274775472",
+      "published_at": "2026-06-15T15:21:48Z"
     },
     {
       "day": 27,
