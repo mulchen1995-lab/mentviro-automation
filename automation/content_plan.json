@@ -2236,7 +2236,11 @@
       "source": "evergreen",
       "post_id": "18141925876524059",
       "story_id": "17936527200070564",
-      "published_at": "2026-06-15T17:13:23Z"
+      "published_at": "2026-06-15T17:13:23Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Klarheit vor Tempo",
@@ -2349,10 +2353,13 @@
       "day": 29,
       "type": "carousel",
       "date": "2026-06-17",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
-      "source": "evergreen"
+      "source": "evergreen",
+      "post_id": "18191610655332141",
+      "story_id": "17989547306995394",
+      "published_at": "2026-06-15T20:45:58Z"
     },
     {
       "topic": "Der Vergleich stiehlt deine Ruhe",
