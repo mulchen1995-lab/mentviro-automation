@@ -1,8 +1,9 @@
-name: mentviro Morning Reel (07:00 CET)
+name: mentviro Morning Reel (self-hosted, manuell)
 
+# Zeitplan deaktiviert: Reels laufen jetzt cloud-first über "mentviro Cloud Poster"
+# (PC-unabhängig). Dieser self-hosted Job ist nur noch für manuelle Läufe vom PC aus
+# (z. B. DRY_RUN-Vorschau), damit er nicht ewig 'queued' hängt wenn der PC aus ist.
 on:
-  schedule:
-    - cron: '0 5 * * *'   # 07:00 CET / 06:00 CEST
   workflow_dispatch:
     inputs:
       dry_run:

@@ -1,8 +1,8 @@
-name: mentviro Evening Carousel (18:00 CET)
+name: mentviro Evening Carousel (self-hosted, manuell)
 
+# Zeitplan deaktiviert: Carousels laufen jetzt cloud-first über "mentviro Cloud Poster"
+# (PC-unabhängig). Dieser self-hosted Job ist nur noch für manuelle Läufe vom PC aus.
 on:
-  schedule:
-    - cron: '0 16 * * *'   # 18:00 CET / 17:00 CEST
   workflow_dispatch:
 
 jobs:

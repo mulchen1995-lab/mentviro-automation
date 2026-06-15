@@ -1,13 +1,18 @@
-name: mentviro Fallbacks (Cloud — wenn PC aus)
+name: mentviro Cloud Poster (primär)
 
-# Runs 2h after each primary workflow on ubuntu-latest.
-# Skips automatically if self-hosted runner already posted.
+# PRIMÄRE Postingquelle — läuft cloud-seitig (ubuntu-latest), unabhängig davon ob
+# Julians PC an ist. Jeder Modus hat zwei Cron-Zeiten (primär + Retry), weil GitHub
+# geplante Crons gern droppt/verzögert. Der "already posted"-Check + zeitbasierte
+# Guards verhindern Doppel-Posts beim Retry.
 
 on:
   schedule:
-    - cron: '0 7 * * *'    # 09:00 CET — reel fallback
-    - cron: '0 12 * * *'   # 14:00 CET — stories fallback
-    - cron: '0 18 * * *'   # 20:00 CET — carousel fallback
+    - cron: '0 5 * * *'    # 07:00 CET — reel
+    - cron: '0 7 * * *'    # 09:00 CET — reel (Retry)
+    - cron: '0 10 * * *'   # 12:00 CET — stories
+    - cron: '0 12 * * *'   # 14:00 CET — stories (Retry)
+    - cron: '0 16 * * *'   # 18:00 CET — carousel
+    - cron: '0 18 * * *'   # 20:00 CET — carousel (Retry)
   workflow_dispatch:
     inputs:
       mode:
@@ -33,16 +38,17 @@ jobs:
           if [ -n "${{ github.event.inputs.mode }}" ]; then
             MODE="${{ github.event.inputs.mode }}"
           else
-            HOUR=$(date -u +%H)
-            case $HOUR in
-              07) MODE="reel" ;;
-              12) MODE="stories" ;;
-              18) MODE="carousel" ;;
-              *) MODE="carousel" ;;
-            esac
+            # Delay-tolerant windows: GitHub often fires crons up to ~1h late, which
+            # broke the old exact-hour mapping (a late 10:00 cron ran at 13:00 and
+            # posted carousel instead of stories). Wide windows map the right mode.
+            HOUR=$((10#$(date -u +%H)))
+            if   [ "$HOUR" -ge 5 ]  && [ "$HOUR" -le 9 ];  then MODE="reel"
+            elif [ "$HOUR" -ge 10 ] && [ "$HOUR" -le 15 ]; then MODE="stories"
+            else MODE="carousel"
+            fi
           fi
           echo "mode=$MODE" >> $GITHUB_OUTPUT
-          echo "Running fallback: $MODE"
+          echo "Running cloud post: $MODE"
 
       - name: Check if already posted today
         id: check
