@@ -1478,9 +1478,9 @@ def _reel_overlay_subtitles(concat_path, out_path, sub_chunks, day, font_path):
         dt_parts.append(
             f"drawtext=textfile={txt_name}{font_arg}"
             f":enable='between(t,{start:.3f},{end:.3f})'"
-            f":fontcolor=white:fontsize=54"
-            f":x=(w-text_w)/2:y=h-220"
-            f":borderw=3:bordercolor=black"
+            f":fontcolor=white:fontsize=88"
+            f":x=(w-text_w)/2:y=(h-text_h)/2"
+            f":borderw=6:bordercolor=black"
             f":fix_bounds=1"
         )
 
@@ -1532,7 +1532,9 @@ def run_reel(post, plan):
         el_r = requests.post(
             "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB/with-timestamps",
             headers={"xi-api-key": el_key, "Content-Type": "application/json"},
-            json={"text": " ".join(script),
+            # Drop the "@" so TTS doesn't pronounce "@mentviro" as "a mentviro".
+            # Subtitles derive from this same text's alignment, so they stay in sync.
+            json={"text": " ".join(script).replace("@", ""),
                   "model_id": "eleven_multilingual_v2",
                   "voice_settings": {"stability": 0.75, "similarity_boost": 0.55, "style": 0.2, "use_speaker_boost": False}},
             timeout=90)
@@ -1547,7 +1549,7 @@ def run_reel(post, plan):
             # Parse word-level timing for synced subtitles
             alignment  = ts_data.get("alignment", {})
             word_times = _parse_word_timings(alignment)
-            sub_chunks = _words_to_subtitle_chunks(word_times, max_chars=24)
+            sub_chunks = _words_to_subtitle_chunks(word_times, max_chars=16)
             print(f"  Voiceover: OK ({len(audio_bytes)//1024} KB, {audio_dur:.1f}s, {len(sub_chunks)} subtitle chunks)")
         else:
             print(f"  Voiceover: {el_r.status_code} — {el_r.text[:100]}")
