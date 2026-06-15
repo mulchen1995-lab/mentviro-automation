@@ -1407,11 +1407,15 @@ def _reel_make_clip(out_path, raw_video, duration, day, idx):
     # Clips. Sonst haben Pexels-Clips gemischte fps (24/25/30/60) und der spätere
     # concat -c copy bekommt Timestamp-Sprünge → Clip friert am Ende ein, nächster
     # startet verzögert.
+    # Das erste Bild des Reels ist immer deutlich dunkler — gibt dem Einstieg einen
+    # ruhigen, cinematischen Look und macht den (jetzt zentrierten) Hook-Untertitel
+    # gut lesbar. Folgeclips nur leicht abgedunkelt.
+    brightness = -0.45 if idx == 0 else -0.15
     scale_crop = (
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920:(iw-1080)/2:(ih-1920)/2,"
         "setsar=1,fps=30,format=yuv420p,"
-        "eq=brightness=-0.15:contrast=1.0"
+        f"eq=brightness={brightness}:contrast=1.0"
     )
     # Einheitliche Encoding-Parameter für sauberen concat -c copy (gleiche fps + timebase)
     enc = ["-c:v", "libx264", "-preset", "fast", "-crf", "23",
