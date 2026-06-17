@@ -2264,10 +2264,13 @@
       "day": 29,
       "type": "reel",
       "date": "2026-06-17",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
-      "source": "evergreen"
+      "source": "evergreen",
+      "post_id": "17894819838499229",
+      "story_id": "18116379805867821",
+      "published_at": "2026-06-17T09:31:49Z"
     },
     {
       "topic": "Fokus in einer lauten Welt",
