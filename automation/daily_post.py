@@ -31,8 +31,9 @@ RUN_MODE = os.getenv("RUN_MODE", "carousel")   # carousel | reel | stories
 DRY_RUN  = os.getenv("DRY_RUN", "").strip().lower() in ("1", "true", "yes", "on")
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
-PLAN_FILE = os.path.join(os.path.dirname(__file__), "content_plan.json")
-LOGO_FILE = os.path.join(os.path.dirname(__file__), "assets", "mentviro_logo.png")
+PLAN_FILE      = os.path.join(os.path.dirname(__file__), "content_plan.json")
+LOGO_FILE      = os.path.join(os.path.dirname(__file__), "assets", "mentviro_logo.png")
+BG_MUSIC_FILE  = os.path.join(os.path.dirname(__file__), "assets", "bg_music.mp3")
 LOGO_URL  = os.getenv("MENTVIRO_LOGO_URL", "")
 _LOGO_B64 = ""
 
@@ -1631,11 +1632,14 @@ def run_reel(post, plan):
         audio_dur = sum(len(s) for s in script) * 0.075
 
     # ── Step 1b: Background music ─────────────────────────────────────────────
-    # Default: "Serene View" by Mixkit (CC0, royalty-free)
-    _DEFAULT_BG = "https://assets.mixkit.co/music/443/443.mp3"
+    # Primary: committed CC0 ambient track (automation/assets/bg_music.mp3)
+    # Override: BACKGROUND_MUSIC_URL env var (URL to any MP3)
     bg_music_path = None
-    bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", _DEFAULT_BG)
-    if bg_music_url:
+    bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", "")
+    if os.path.exists(BG_MUSIC_FILE) and not bg_music_url:
+        bg_music_path = BG_MUSIC_FILE
+        print(f"  BG music: repo asset ({os.path.getsize(BG_MUSIC_FILE)//1024} KB)")
+    elif bg_music_url:
         try:
             bm_r = requests.get(bg_music_url, timeout=30)
             if bm_r.status_code == 200:
@@ -1643,11 +1647,13 @@ def run_reel(post, plan):
                 with open(bg_music_path, "wb") as bf:
                     bf.write(bm_r.content)
                 cleanup.append(bg_music_path)
-                print(f"  BG music: OK ({len(bm_r.content)//1024} KB)")
+                print(f"  BG music: URL ({len(bm_r.content)//1024} KB)")
             else:
-                print(f"  BG music: {bm_r.status_code} — skipped")
+                print(f"  BG music URL: {bm_r.status_code} — skipped")
         except Exception as e:
             print(f"  BG music download failed: {e} — skipped")
+    else:
+        print("  BG music: no asset found — skipped")
 
     # ── Step 2: Per-sentence duration (proportional to char count) ───────────
     char_counts = [max(len(s), 10) for s in script]
