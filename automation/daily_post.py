@@ -151,7 +151,7 @@ def cloudinary_upload(data: bytes, resource_type: str = "image", suffix: str = "
 
 def ig_create_container(*, image_url: str = None, video_url: str = None,
                          caption: str = None, media_type: str = "IMAGE",
-                         is_carousel_item: bool = False) -> str:
+                         is_carousel_item: bool = False, cover_url: str = None) -> str:
     """Create an IG media container. Returns container ID."""
     if not IG_TOKEN or not IG_USER_ID:
         raise RuntimeError("IG_ACCESS_TOKEN / IG_USER_ID nicht gesetzt")
@@ -162,6 +162,8 @@ def ig_create_container(*, image_url: str = None, video_url: str = None,
         params["video_url"] = video_url
     if caption:
         params["caption"] = caption
+    if cover_url:
+        params["cover_url"] = cover_url          # eigenes Reel-Thumbnail (Markentitelbild)
     if is_carousel_item:
         params["is_carousel_item"] = "true"
     r = requests.post(f"{GRAPH_API}/{IG_USER_ID}/media", data=params, timeout=60)
@@ -320,6 +322,66 @@ def get_logo_asset(size=90):
 def paste_logo(img_rgba, x, y, size=90):
     logo = get_logo_asset(size)
     img_rgba.alpha_composite(logo, (x - size // 2, y - size // 2))
+
+# ─── EINHEITLICHES TITELBILD (Cover) ─────────────────────────────────────────
+
+def _logo_keyed(target_w):
+    """Logo nahtlos auf Schwarz: Luminanz als Alpha — das helle Chrome-Symbol +
+    der Schriftzug bleiben, der dunkle Logo-Hintergrund samt Spotlight wird
+    transparent. Voll automatisch, kein freigestelltes PNG nötig."""
+    base = get_logo_asset(1024)                 # gecached, RGBA
+    rgb  = base.convert("RGB")
+    lum  = rgb.convert("L")
+    # Kurve: schwacher Spotlight (<30) komplett raus, helles Logo bleibt
+    lut   = [0 if i < 30 else min(255, int((i - 30) * 1.4)) for i in range(256)]
+    keyed = rgb.convert("RGBA")
+    keyed.putalpha(lum.point(lut))
+    hh = max(1, int(keyed.height * target_w / keyed.width))
+    return keyed.resize((target_w, hh), Image.LANCZOS)
+
+def _cover_wrap(draw, text, font_obj, maxw):
+    words, lines, cur = text.split(), [], []
+    for wd in words:
+        if draw.textlength(" ".join(cur + [wd]), font=font_obj) > maxw and cur:
+            lines.append(" ".join(cur)); cur = [wd]
+        else:
+            cur.append(wd)
+    if cur:
+        lines.append(" ".join(cur))
+    return lines or [""]
+
+def build_cover_image(hook, w, h, bottom_hint="@mentviro"):
+    """Einheitliches schwarzes Markentitelbild: freigestelltes Logo oben + zentrierter
+    Hook + Silber-Akzent. Identisches Design für Reel-Cover (9:16) und Carousel-Slide-1
+    (4:5). Schwarz + Chrome-Silber = die Logofarben."""
+    SILVER = (205, 205, 205)
+    img = Image.new("RGB", (w, h), (8, 8, 8))
+    d   = ImageDraw.Draw(img)
+    # Logo (freigestellt) oben mittig
+    logo_w = int(w * 0.46)
+    logo   = _logo_keyed(logo_w)
+    img.paste(logo, ((w - logo_w) // 2, int(h * 0.07)), logo)
+    # Hook zentriert, weiß, fett — bei zu vielen Zeilen automatisch kleiner
+    hook = _strip_emoji(hook or "")
+    sz   = int(w * 0.085)
+    fb   = fnt(sz, True)
+    lines = _cover_wrap(d, hook, fb, w - 150)
+    while len(lines) > 4 and sz > 48:
+        sz -= 6; fb = fnt(sz, True); lines = _cover_wrap(d, hook, fb, w - 150)
+    line_h = int(sz * 1.14)
+    y = int(h * 0.54) - (len(lines) * line_h) // 2
+    for ln in lines:
+        tw = d.textlength(ln, font=fb)
+        d.text(((w - tw) / 2, y), ln, font=fb, fill=(245, 245, 245))
+        y += line_h
+    # Silber-Akzentlinie
+    d.rectangle([w // 2 - 70, y + 16, w // 2 + 70, y + 22], fill=SILVER)
+    # Bottom-Hinweis
+    if bottom_hint:
+        bf = fnt(int(w * 0.037), False)
+        bw = d.textlength(bottom_hint, font=bf)
+        d.text(((w - bw) / 2, h - int(h * 0.085)), bottom_hint, font=bf, fill=(190, 190, 190))
+    return img
 
 # ─── COLORS ──────────────────────────────────────────────────────────────────
 
@@ -483,6 +545,10 @@ def pexels_video(query, pick_random=True):
 
 def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     is_cover = slide.get("is_cover", False)
+    # Cover = einheitliches schwarzes Markentitelbild (Logo + Hook), kein Pexels-Foto.
+    if is_cover:
+        hook = " ".join(slide.get("title", [])) or slide.get("topic", "")
+        return build_cover_image(hook, w, h, bottom_hint="Weiterwischen  ›").convert("RGBA")
     if bg_img is not None:
         bg  = bg_img.convert("L").convert("RGB") if is_cover else bg_img
         img = dark_overlay(bg, w=w, h=h, strength=198)
@@ -1727,11 +1793,24 @@ def run_reel(post, plan):
             )
             return None
 
+        # Einheitliches schwarzes Markentitelbild als Reel-Cover (Thumbnail im Feed/Grid).
+        # Über cover_url gesetzt -> kein Eingriff ins Video-Timing, Untertitel bleiben synchron.
+        cover_url = None
+        try:
+            hook_text = post.get("hook") or (script[0] if script else post.get("topic", ""))
+            cov = build_cover_image(hook_text, SW, SH, bottom_hint="@mentviro")
+            cbuf = io.BytesIO(); cov.save(cbuf, "JPEG", quality=92); cbuf.seek(0)
+            cover_url = cloudinary_upload(cbuf.read(), resource_type="image", suffix=".jpg")
+            print("  Cover-Bild (Titelbild) hochgeladen.")
+        except Exception as e:
+            print(f"  Cover-Bild fehlgeschlagen: {e} — Reel ohne eigenes Cover")
+
         print("  Creating REELS container...")
         container_id = ig_create_container(
             video_url=cdn_url,
             caption=post["caption"],
             media_type="REELS",
+            cover_url=cover_url,
         )
         ig_wait_for_video(container_id, timeout_s=300)
         print("  Publishing reel...")
