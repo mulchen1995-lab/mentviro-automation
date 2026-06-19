@@ -2508,10 +2508,13 @@
       "day": 31,
       "type": "reel",
       "date": "2026-06-19",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
-      "source": "evergreen"
+      "source": "evergreen",
+      "post_id": "17866199700630360",
+      "story_id": "18118178683823003",
+      "published_at": "2026-06-19T09:29:00Z"
     },
     {
       "topic": "Warum du jetzt anfangen solltest",
