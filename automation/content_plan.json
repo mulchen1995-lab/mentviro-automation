@@ -2514,7 +2514,11 @@
       "source": "evergreen",
       "post_id": "17866199700630360",
       "story_id": "18118178683823003",
-      "published_at": "2026-06-19T09:29:00Z"
+      "published_at": "2026-06-19T09:29:00Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Warum du jetzt anfangen solltest",
@@ -3580,10 +3584,13 @@
       },
       "day": 31,
       "date": "2026-06-19",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
       "content_pillar": "entertaining",
-      "source": "evergreen"
+      "source": "evergreen",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-19T11:15:49Z"
     },
     {
       "status": "pending",
