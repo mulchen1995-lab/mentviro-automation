@@ -2608,7 +2608,7 @@
     },
     {
       "topic": "Mentale Resilienz aufbauen",
-      "status": "pending",
+      "status": "published",
       "hook": "Was tun, wenn das Leben zuschlägt?",
       "script": [
         "Jeder von uns kennt Rückschläge.",
@@ -2631,7 +2631,10 @@
       "date": "2026-06-20",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18122271382671159",
+      "story_id": "18326654986286398",
+      "published_at": "2026-06-20T08:22:55Z"
     },
     {
       "topic": "Die 3 Säulen mentaler Stärke",
