@@ -2642,7 +2642,7 @@
     },
     {
       "topic": "Die 3 Säulen mentaler Stärke",
-      "status": "pending",
+      "status": "published",
       "hook": "Nicht jeder zerbricht unter Druck.",
       "slides": [
         {
@@ -2720,7 +2720,10 @@
       "date": "2026-06-20",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18077158886278398",
+      "story_id": "17861202810639980",
+      "published_at": "2026-06-20T17:41:53Z"
     },
     {
       "topic": "Die Kunst des 'Nein Sagens'",
