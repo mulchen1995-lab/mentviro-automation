@@ -2634,7 +2634,11 @@
       "content_pillar": "educational",
       "post_id": "18122271382671159",
       "story_id": "18326654986286398",
-      "published_at": "2026-06-20T08:22:55Z"
+      "published_at": "2026-06-20T08:22:55Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Die 3 Säulen mentaler Stärke",
@@ -3596,7 +3600,7 @@
       "published_at": "2026-06-19T11:15:49Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic",
       "quote": {
         "text": "Was dich nicht umbringt, macht dich stärker.",
@@ -3613,7 +3617,10 @@
       "day": 32,
       "date": "2026-06-20",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": "18396914617081194",
+      "tips_id": null,
+      "published_at": "2026-06-20T11:53:35Z"
     },
     {
       "day": 33,
