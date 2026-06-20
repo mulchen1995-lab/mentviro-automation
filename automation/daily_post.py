@@ -549,7 +549,11 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     # Cover = einheitliches schwarzes Markentitelbild (Logo + Hook), kein Pexels-Foto.
     if is_cover:
         hook = " ".join(slide.get("title", [])) or slide.get("topic", "")
-        return build_cover_image(hook, w, h, bottom_hint="Weiterwischen  ›").convert("RGBA")
+        cover_img = build_cover_image(hook, w, h, bottom_hint="Weiterwischen  ›")
+        cbuf = io.BytesIO()
+        cover_img.convert("RGB").save(cbuf, "JPEG", quality=93)
+        cbuf.seek(0)
+        return cbuf.read()
     if bg_img is not None:
         bg  = bg_img.convert("L").convert("RGB") if is_cover else bg_img
         img = dark_overlay(bg, w=w, h=h, strength=198)
@@ -1632,14 +1636,12 @@ def run_reel(post, plan):
         audio_dur = sum(len(s) for s in script) * 0.075
 
     # ── Step 1b: Background music ─────────────────────────────────────────────
-    # Primary: committed CC0 ambient track (automation/assets/bg_music.mp3)
-    # Override: BACKGROUND_MUSIC_URL env var (URL to any MP3)
+    # BACKGROUND_MUSIC_URL is an optional override; if it's unset, unreachable, or
+    # stale (e.g. a dead CDN link), we ALWAYS fall back to the committed CC0 asset
+    # below — that asset must never depend on a network call to be available.
     bg_music_path = None
     bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", "")
-    if os.path.exists(BG_MUSIC_FILE) and not bg_music_url:
-        bg_music_path = BG_MUSIC_FILE
-        print(f"  BG music: repo asset ({os.path.getsize(BG_MUSIC_FILE)//1024} KB)")
-    elif bg_music_url:
+    if bg_music_url:
         try:
             bm_r = requests.get(bg_music_url, timeout=30)
             if bm_r.status_code == 200:
@@ -1647,13 +1649,16 @@ def run_reel(post, plan):
                 with open(bg_music_path, "wb") as bf:
                     bf.write(bm_r.content)
                 cleanup.append(bg_music_path)
-                print(f"  BG music: URL ({len(bm_r.content)//1024} KB)")
+                print(f"  BG music: URL override ({len(bm_r.content)//1024} KB)")
             else:
-                print(f"  BG music URL: {bm_r.status_code} — skipped")
+                print(f"  BG music URL: {bm_r.status_code} — falling back to repo asset")
         except Exception as e:
-            print(f"  BG music download failed: {e} — skipped")
-    else:
-        print("  BG music: no asset found — skipped")
+            print(f"  BG music URL failed: {e} — falling back to repo asset")
+    if not bg_music_path and os.path.exists(BG_MUSIC_FILE):
+        bg_music_path = BG_MUSIC_FILE
+        print(f"  BG music: repo asset ({os.path.getsize(BG_MUSIC_FILE)//1024} KB)")
+    if not bg_music_path:
+        print("  BG music: no asset available — skipped")
 
     # ── Step 2: Per-sentence duration (proportional to char count) ───────────
     char_counts = [max(len(s), 10) for s in script]
