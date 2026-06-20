@@ -351,16 +351,22 @@ def _cover_wrap(draw, text, font_obj, maxw):
         lines.append(" ".join(cur))
     return lines or [""]
 
-def build_cover_image(hook, w, h, bottom_hint="@mentviro"):
-    """Einheitliches schwarzes Markentitelbild: freigestelltes Logo oben + zentrierter
-    Hook + Silber-Akzent. Identisches Design für Reel-Cover (9:16) und Carousel-Slide-1
-    (4:5). Schwarz + Chrome-Silber = die Logofarben."""
+def build_cover_image(hook, w, h, bottom_hint="@mentviro", bg_img=None):
+    """Markentitelbild: zentrierter Hook + Silber-Akzent, oben das Logo.
+    Ohne bg_img (Reel-Cover): schwarzer Hintergrund + freigestelltes Logo (Luminanz-Keying).
+    Mit bg_img (Carousel-Slide-1): S/W-Pexels-Foto als Hintergrund + Logo direkt als
+    Quadrat-Badge eingesetzt (die PNG hat einen opaken schwarzen Hintergrund — genau das
+    ist hier gewollt, kein Freistellen nötig)."""
     SILVER = (205, 205, 205)
-    img = Image.new("RGB", (w, h), (8, 8, 8))
+    if bg_img is not None:
+        bg  = bg_img.convert("L").convert("RGB")
+        img = dark_overlay(bg, w=w, h=h, strength=198).convert("RGB")
+    else:
+        img = Image.new("RGB", (w, h), (8, 8, 8))
     d   = ImageDraw.Draw(img)
-    # Logo (freigestellt) oben mittig
+    # Logo oben mittig
     logo_w = int(w * 0.46)
-    logo   = _logo_keyed(logo_w)
+    logo   = get_logo_asset(logo_w) if bg_img is not None else _logo_keyed(logo_w)
     img.paste(logo, ((w - logo_w) // 2, int(h * 0.07)), logo)
     # Hook zentriert, weiß, fett — bei zu vielen Zeilen automatisch kleiner
     hook = _strip_emoji(hook or "")
@@ -549,7 +555,7 @@ def build_carousel_slide(slide, bg_img=None, w=W, h=H):
     # Cover = einheitliches schwarzes Markentitelbild (Logo + Hook), kein Pexels-Foto.
     if is_cover:
         hook = " ".join(slide.get("title", [])) or slide.get("topic", "")
-        cover_img = build_cover_image(hook, w, h, bottom_hint="Weiterwischen  ›")
+        cover_img = build_cover_image(hook, w, h, bottom_hint="Weiterwischen  ›", bg_img=bg_img)
         cbuf = io.BytesIO()
         cover_img.convert("RGB").save(cbuf, "JPEG", quality=93)
         cbuf.seek(0)
