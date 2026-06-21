@@ -2757,7 +2757,11 @@
       "content_pillar": "entertaining",
       "post_id": "18081117206219616",
       "story_id": "18113779229494087",
-      "published_at": "2026-06-21T08:58:51Z"
+      "published_at": "2026-06-21T08:58:51Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Die 5 Schritte zum souveränen 'Nein'",
@@ -3997,9 +4001,12 @@
     {
       "day": 33,
       "date": "2026-06-21",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-21T10:26:44Z"
     },
     {
       "status": "pending",
