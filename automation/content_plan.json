@@ -2765,7 +2765,7 @@
     },
     {
       "topic": "Die 5 Schritte zum souveränen 'Nein'",
-      "status": "pending",
+      "status": "published",
       "hook": "Sag Ja zu dir selbst, indem du öfter Nein sagst.",
       "slides": [
         {
@@ -2863,7 +2863,10 @@
       "date": "2026-06-21",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18086342444633895",
+      "story_id": "17956645860148991",
+      "published_at": "2026-06-21T17:46:15Z"
     },
     {
       "topic": "Die wahre Erfüllung liegt im Prozess",
