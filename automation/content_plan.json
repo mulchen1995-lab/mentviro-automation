@@ -2723,11 +2723,15 @@
       "content_pillar": "educational",
       "post_id": "18077158886278398",
       "story_id": "17861202810639980",
-      "published_at": "2026-06-20T17:41:53Z"
+      "published_at": "2026-06-20T17:41:53Z",
+      "insights": {
+        "likes": 3,
+        "comments": 0
+      }
     },
     {
       "topic": "Die Kunst des 'Nein Sagens'",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Kalender platzt aus allen Nähten?",
       "script": [
         "POV: Dein Chef fragt nach einem 'kleinen' Extra.",
@@ -2750,7 +2754,10 @@
       "date": "2026-06-21",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18081117206219616",
+      "story_id": "18113779229494087",
+      "published_at": "2026-06-21T08:58:51Z"
     },
     {
       "topic": "Die 5 Schritte zum souveränen 'Nein'",
@@ -3328,6 +3335,368 @@
       "type": "carousel",
       "style": "gold",
       "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Wachstumsdenken entwickeln",
+      "status": "pending",
+      "hook": "Was steckt hinter echtem Wachstumsdenken?",
+      "script": [
+        "Jeder von uns hat zwei Denkweisen: die starre und die des Wachstums.",
+        "Die starre glaubt, Fähigkeiten sind fix – du bist, wie du bist.",
+        "Doch Wachstumsdenken sieht Potenzial in jeder Herausforderung.",
+        "Es verwandelt Fehler in Lektionen und Anstrengung in Fortschritt.",
+        "Dieser Shift öffnet Türen zu ungeahnten Möglichkeiten und Stärke.",
+        "Folge @mentviro."
+      ],
+      "caption": "Deine Denkweise ist der Kompass deines Lebens. Mit einem Wachstumsdenken verwandelst du Hindernisse in Treibstoff für deine Entwicklung. Es ist die Überzeugung, dass du lernen, dich anpassen und wachsen kannst – egal, was kommt. Beginne heute, deine Perspektive zu hinterfragen und entdecke dein wahres Potenzial. 💪🌱 #mentviro #motivation #successmindset #zielsetzung #mentaltraining #persönlicheentwicklung #wachstum #mindset #gewohnheiten #erfolg #selbstverbesserung #disziplin #lebensqualität #lernen #entwicklung",
+      "pexels_video_query": "dark cinematic growth mindset development",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Mindset",
+        "entscheidet alles.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Hast du ein Wachstumsdenken?",
+      "day": 38,
+      "date": "2026-06-26",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Wege zum Wachstumsdenken",
+      "status": "pending",
+      "hook": "Dein Mindset entscheidet über alles.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Wege,",
+            "wie du ein",
+            "Wachstumsdenken",
+            "entwickelst."
+          ],
+          "body": [
+            "Dein Mindset ist dein stärkstes Werkzeug.",
+            "Lerne, wie du es optimal nutzt."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 4",
+          "title": [
+            "Fehler als",
+            "Lektionen sehen"
+          ],
+          "body": [
+            "Betrachte Rückschläge nicht als Scheitern,",
+            "sondern als wertvolle Gelegenheiten",
+            "zu lernen und besser zu werden."
+          ],
+          "image_query": "minimal dark abstract failure lesson"
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 4",
+          "title": [
+            "Herausforderungen",
+            "annehmen"
+          ],
+          "body": [
+            "Vermeide Komfortzonen. Suche bewusst Aufgaben,",
+            "die dich fordern und dein Potenzial freisetzen."
+          ],
+          "image_query": "dark abstract challenge growth"
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 4",
+          "title": [
+            "Anstrengung",
+            "würdigen"
+          ],
+          "body": [
+            "Erkenne an, dass Fortschritt durch harte Arbeit",
+            "und beharrliches Üben entsteht, nicht durch Talent allein."
+          ],
+          "image_query": "minimal dark effort progress"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Erfolg"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ],
+          "image_query": "dark cinematic follow us"
+        }
+      ],
+      "caption": "Ein Wachstumsdenken ist der Schlüssel, um dein volles Potenzial zu entfalten. Es ermöglicht dir, Herausforderungen zu lieben, aus Fehlern zu lernen und dich ständig weiterzuentwickeln. Implementiere diese Wege in dein Leben und beobachte, wie du über dich hinauswächst. Es ist eine Reise, die sich lohnt! ✨ #mentviro #motivation #successmindset #zielsetzung #mentaltraining #persönlicheentwicklung #wachstum #mindset #gewohnheiten #erfolg #selbstverbesserung #disziplin #lebensqualität #lernen #entwicklung",
+      "pexels_queries": [
+        "dark cinematic growth mindset",
+        "minimal dark abstract failure lesson",
+        "dark abstract challenge growth",
+        "minimal dark effort progress",
+        "dark cinematic follow us"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Wachstumsdenken:",
+        "Dein Schlüssel zum Erfolg.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Starres vs. Wachstumsdenken?",
+      "day": 38,
+      "date": "2026-06-26",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Dein Umfeld formt dich",
+      "status": "pending",
+      "hook": "Dein Umfeld – unsichtbarer Architekt deines Lebens.",
+      "script": [
+        "Hast du dich je gefragt, warum manche Ziele so schwer fallen?",
+        "Oft liegt es nicht an dir, sondern an den Stimmen um dich herum.",
+        "Dein Umfeld ist dein stärkster – oder schwächster – Einfluss.",
+        "Es formt deine Gedanken, deine Gewohnheiten, deine Überzeugungen.",
+        "Wähle weise, wer deine Energie teilt, denn es prägt deinen Weg.",
+        "Folge @mentviro."
+      ],
+      "caption": "Die Menschen, mit denen wir uns umgeben, sind nicht nur Begleiter, sondern auch Architekten unserer Realität. Sie können uns anheben, inspirieren und herausfordern oder uns unbewusst zurückhalten. Nimm dir einen Moment Zeit, um dein Umfeld zu reflektieren. Ist es ein Ort, der dich wachsen lässt? 🌱❤️ #mentviro #motivation #successmindset #mentaltraining #persönlicheentwicklung #wachstum #mindset #beziehungen #umfeld #selbstverbesserung #lebensqualität #authentizität #verbundenheit #werte #kommunikation",
+      "pexels_video_query": "warm natural connection friends",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Umfeld",
+        "ist dein Spiegel.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Spiegelt dein Umfeld dich?",
+      "day": 39,
+      "date": "2026-06-27",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "3 Schritte zu einem förderlichen Umfeld",
+      "status": "pending",
+      "hook": "Dein Umfeld ist dein größter Coach – oder Bremser.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Schritte",
+            "zu einem",
+            "förderlichen Umfeld."
+          ],
+          "body": [
+            "Die richtigen Menschen können",
+            "dein Potenzial freisetzen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SCHRITT #1",
+          "num": "1 / 4",
+          "title": [
+            "Toxisches",
+            "erkennen & loslassen"
+          ],
+          "body": [
+            "Identifiziere Beziehungen, die dich Energie kosten.",
+            "Setze gesunde Grenzen oder reduziere den Kontakt."
+          ],
+          "image_query": "warm natural toxic relationship"
+        },
+        {
+          "badge": "SCHRITT #2",
+          "num": "2 / 4",
+          "title": [
+            "Gleichgesinnte",
+            "aktiv suchen"
+          ],
+          "body": [
+            "Finde Menschen mit ähnlichen Werten und Zielen.",
+            "Online-Communities, Workshops oder Meetups."
+          ],
+          "image_query": "warm natural community connection"
+        },
+        {
+          "badge": "SCHRITT #3",
+          "num": "3 / 4",
+          "title": [
+            "Qualität vor",
+            "Quantität wählen"
+          ],
+          "body": [
+            "Investiere Zeit und Energie in tiefe,",
+            "bedeutungsvolle Beziehungen statt in oberflächliche."
+          ],
+          "image_query": "warm natural deep conversation"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Herz"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ],
+          "image_query": "warm natural follow us"
+        }
+      ],
+      "caption": "Ein inspirierendes Umfeld ist kein Zufall, sondern das Ergebnis bewusster Entscheidungen. Es ist dein sicherer Hafen, deine Quelle der Motivation und dein Spiegel für persönliches Wachstum. Nimm die Zügel in die Hand und gestalte es aktiv. Du verdienst ein Umfeld, das dich auf deinem Weg unterstützt und stärkt! ❤️🤝 #mentviro #motivation #successmindset #mentaltraining #persönlicheentwicklung #wachstum #mindset #beziehungen #umfeld #selbstverbesserung #lebensqualität #authentizität #verbundenheit #werte #kommunikation",
+      "pexels_queries": [
+        "warm natural connection",
+        "warm natural toxic relationship",
+        "warm natural community connection",
+        "warm natural deep conversation",
+        "warm natural follow us"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Gestalte dein Umfeld",
+        "bewusst & positiv.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Hast du ein förderliches Umfeld?",
+      "day": 39,
+      "date": "2026-06-27",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Die Macht von Deep Work",
+      "status": "pending",
+      "hook": "In einer lauten Welt – die wahre Macht von Deep Work.",
+      "script": [
+        "Ständige Ablenkung zerstückelt unsere Konzentration.",
+        "Das führt zu oberflächlicher Arbeit und mittelmäßigen Ergebnissen.",
+        "Deep Work ist die Fähigkeit, sich ohne Ablenkung zu konzentrieren.",
+        "Es ermöglicht dir, komplexe Aufgaben effizient zu meistern und Wert zu schaffen.",
+        "Es ist die Superkraft in einer immer lauter werdenden Welt.",
+        "Folge @mentviro."
+      ],
+      "caption": "In unserer hypervernetzten Welt ist Deep Work ein Luxus – und eine Notwendigkeit. Es ist die bewusste Entscheidung, sich von äußeren Reizen abzuschotten, um in einen Zustand tiefer Konzentration einzutauchen. Nur so kannst du wirklich anspruchsvolle Aufgaben meistern und einen Unterschied machen. Lerne, diese Superkraft zu nutzen! ⚡️🧠 #mentviro #motivation #successmindset #zielsetzung #mentaltraining #persönlicheentwicklung #produktivität #mindset #gewohnheiten #erfolg #selbstverbesserung #disziplin #fokus #deepwork #zeitmanagement",
+      "pexels_video_query": "dark cinematic deep work focused concentration",
+      "story_text": [
+        "NEUES REEL",
+        "Meistere tiefe",
+        "Konzentration.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir Deep Work schwer?",
+      "day": 40,
+      "date": "2026-06-28",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Prinzipien für Deep Work",
+      "status": "pending",
+      "hook": "Meistere Ablenkungen – schaffe Meisterwerke.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Prinzipien",
+            "für effektives",
+            "Deep Work."
+          ],
+          "body": [
+            "Entfessle deine maximale Produktivität",
+            "durch tiefe Konzentration."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PRINZIP #1",
+          "num": "1 / 4",
+          "title": [
+            "Ablenkungen",
+            "systematisch eliminieren"
+          ],
+          "body": [
+            "Schalte Benachrichtigungen aus, schließe unnötige Tabs.",
+            "Schaffe eine ungestörte Arbeitsumgebung."
+          ],
+          "image_query": "minimal dark digital detox"
+        },
+        {
+          "badge": "PRINZIP #2",
+          "num": "2 / 4",
+          "title": [
+            "Blockzeiten",
+            "für Fokus schaffen"
+          ],
+          "body": [
+            "Plane feste Blöcke für Deep Work ein.",
+            "Behandle sie wie wichtige Termine, die nicht verschoben werden."
+          ],
+          "image_query": "dark cinematic focused work block"
+        },
+        {
+          "badge": "PRINZIP #3",
+          "num": "3 / 4",
+          "title": [
+            "Regeneration",
+            "aktiv einplanen"
+          ],
+          "body": [
+            "Intensive Konzentration braucht Ausgleich.",
+            "Sorge für bewusste Pausen und Erholung, um frisch zu bleiben."
+          ],
+          "image_query": "minimal dark relaxation nature"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Produktivität"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ],
+          "image_query": "dark cinematic follow us"
+        }
+      ],
+      "caption": "Deep Work ist keine Magie, sondern eine trainierbare Fähigkeit. Diese drei Prinzipien helfen dir, Ablenkungen zu minimieren und deine Konzentrationsphasen zu maximieren. Das Ergebnis? Höherwertige Arbeit in kürzerer Zeit und ein Gefühl echter Erfüllung. Beginne heute, Deep Work in deinen Alltag zu integrieren! 🎯💡 #mentviro #motivation #successmindset #zielsetzung #mentaltraining #persönlicheentwicklung #produktivität #mindset #gewohnheiten #erfolg #selbstverbesserung #disziplin #fokus #deepwork #zeitmanagement",
+      "pexels_queries": [
+        "dark cinematic deep work",
+        "minimal dark digital detox",
+        "dark cinematic focused work block",
+        "minimal dark relaxation nature",
+        "dark cinematic follow us"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "So klappt's mit",
+        "Deep Work.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Deep Work vs. Multitasking?",
+      "day": 40,
+      "date": "2026-06-28",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -3711,6 +4080,66 @@
       "date": "2026-06-25",
       "style": "gold",
       "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Schwierigkeiten stärken den Geist, so wie Arbeit den Körper stärkt.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Stärke dein Wachstumsdenken",
+        "items": [
+          "Sehe Rückschläge als Lernchancen.",
+          "Übe dich in positiver Selbstreflexion.",
+          "Feiere kleine Fortschritte bewusst."
+        ]
+      },
+      "day": 38,
+      "date": "2026-06-26",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural scenic pexels query",
+      "quote": {
+        "text": "Wähle deine Gesellschaft sorgfältig aus, denn schlechte Freunde verderben gute Sitten.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Umfeld verbessern",
+        "items": [
+          "Umgib dich mit positiven Menschen.",
+          "Verringere Kontakt zu Energievampiren.",
+          "Sei selbst ein guter Einfluss."
+        ]
+      },
+      "day": 39,
+      "date": "2026-06-27",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Wenn du deine Zeit nicht verwaltest, verwaltet sie dich.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Starte dein Deep Work",
+        "items": [
+          "Beginne mit 25 Minuten Fokus.",
+          "Schalte alle Ablenkungen aus.",
+          "Belohne dich nach der Session."
+        ]
+      },
+      "day": 40,
+      "date": "2026-06-28",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0
