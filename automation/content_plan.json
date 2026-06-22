@@ -2866,7 +2866,11 @@
       "content_pillar": "entertaining",
       "post_id": "18086342444633895",
       "story_id": "17956645860148991",
-      "published_at": "2026-06-21T17:46:15Z"
+      "published_at": "2026-06-21T17:46:15Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Die wahre Erfüllung liegt im Prozess",
@@ -4012,7 +4016,7 @@
       "published_at": "2026-06-21T10:26:44Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "warm natural landscape",
       "quote": {
         "text": "Es ist nicht der Berg, den wir bezwingen, sondern uns selbst.",
@@ -4029,7 +4033,10 @@
       "day": 34,
       "date": "2026-06-22",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-22T10:36:26Z"
     },
     {
       "status": "pending",
