@@ -2901,7 +2901,7 @@
     },
     {
       "topic": "Warum der Prozess wichtiger ist als das Ziel",
-      "status": "pending",
+      "status": "published",
       "hook": "Wir leben in einer Welt, die nur Ergebnisse feiert.",
       "slides": [
         {
@@ -2979,7 +2979,10 @@
       "date": "2026-06-22",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18086135735427219",
+      "story_id": "17867478957629263",
+      "published_at": "2026-06-22T16:54:12Z"
     },
     {
       "topic": "Selbstzweifel überwinden",
