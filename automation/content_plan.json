@@ -3016,7 +3016,11 @@
       "content_pillar": "emotional",
       "post_id": "18123751870680553",
       "story_id": "18167951743437787",
-      "published_at": "2026-06-23T08:29:54Z"
+      "published_at": "2026-06-23T08:29:54Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Inneren Kritiker zum Schweigen bringen",
@@ -4049,7 +4053,7 @@
       "published_at": "2026-06-22T10:36:26Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "calm morning light inner peace",
       "quote": {
         "text": "Es ist nicht das, was wir durchmachen, sondern wie wir darauf reagieren, was uns definiert.",
@@ -4066,7 +4070,10 @@
       "day": 35,
       "date": "2026-06-23",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": "18094009550608057",
+      "tips_id": null,
+      "published_at": "2026-06-23T10:31:42Z"
     },
     {
       "status": "pending",
