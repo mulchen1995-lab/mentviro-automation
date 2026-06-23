@@ -3024,7 +3024,7 @@
     },
     {
       "topic": "Inneren Kritiker zum Schweigen bringen",
-      "status": "pending",
+      "status": "published",
       "hook": "So bringst du deinen inneren Kritiker zum Schweigen 🤫",
       "slides": [
         {
@@ -3111,7 +3111,10 @@
       "date": "2026-06-23",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18323646079286267",
+      "story_id": "18118815571696662",
+      "published_at": "2026-06-23T18:06:14Z"
     },
     {
       "topic": "Entscheidungen treffen",
