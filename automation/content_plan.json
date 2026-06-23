@@ -38,7 +38,7 @@
     },
     "posting_stats": {
       "reel": 11,
-      "carousel": 14
+      "carousel": 16
     }
   },
   "posts": [
@@ -2982,11 +2982,15 @@
       "content_pillar": "emotional",
       "post_id": "18086135735427219",
       "story_id": "17867478957629263",
-      "published_at": "2026-06-22T16:54:12Z"
+      "published_at": "2026-06-22T16:54:12Z",
+      "insights": {
+        "likes": 5,
+        "comments": 4
+      }
     },
     {
       "topic": "Selbstzweifel überwinden",
-      "status": "pending",
+      "status": "published",
       "hook": "Niemand spricht darüber, aber fast jeder kennt es...",
       "script": [
         "Dieser kleine Zweifel in deinem Kopf?",
@@ -3009,7 +3013,10 @@
       "date": "2026-06-23",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18123751870680553",
+      "story_id": "18167951743437787",
+      "published_at": "2026-06-23T08:29:54Z"
     },
     {
       "topic": "Inneren Kritiker zum Schweigen bringen",
