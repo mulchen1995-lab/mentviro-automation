@@ -364,9 +364,14 @@ def build_cover_image(hook, w, h, bottom_hint="@mentviro", bg_img=None):
     else:
         img = Image.new("RGB", (w, h), (8, 8, 8))
     d   = ImageDraw.Draw(img)
-    # Logo oben mittig
-    logo_w = int(w * 0.46)
-    logo   = get_logo_asset(logo_w) if bg_img is not None else _logo_keyed(logo_w)
+    # Logo oben mittig — Quadrat-Badge auf Karussell-Fotos bewusst kleiner als das
+    # freigestellte Logo auf dem schwarzen Reel-Cover.
+    if bg_img is not None:
+        logo_w = int(w * 0.28)
+        logo   = get_logo_asset(logo_w)
+    else:
+        logo_w = int(w * 0.46)
+        logo   = _logo_keyed(logo_w)
     img.paste(logo, ((w - logo_w) // 2, int(h * 0.07)), logo)
     # Hook zentriert, weiß, fett — bei zu vielen Zeilen automatisch kleiner
     hook = _strip_emoji(hook or "")
@@ -974,7 +979,7 @@ def _seed_from_evergreen(plan, n_days=4):
         d       = (start_date + timedelta(days=i)).isoformat()
         day_num = last_day + i + 1
         pillar  = pkg.get("content_pillar", "educational")
-        style   = "gold" if pillar in ("emotional", "entertaining") else "silver"
+        style   = "gold" if pillar == "emotional" else "silver"  # mehr Silber als Gold
         common  = {"date": d, "status": "pending", "style": style,
                    "content_pillar": pillar, "source": "evergreen"}
         reel = dict(pkg["reel"]);     reel.update({"day": day_num, "type": "reel", **common})
@@ -1267,8 +1272,8 @@ Schema für jedes Objekt:
             day_num = last_day + i + 1
             pillar  = pkg.get("content_pillar", day_pillars[i])
 
-            # Visual style: emotional → gold (warm), entertaining → gold, educational → silver
-            style = "gold" if pillar in ("emotional", "entertaining") else "silver"
+            # Visual style: emotional → gold (warm), educational/entertaining → silver (mehr Silber als Gold)
+            style = "gold" if pillar == "emotional" else "silver"
 
             reel = pkg.get("reel", {})
             reel.update({"day": day_num, "date": d, "type": "reel",
