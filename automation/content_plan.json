@@ -3148,7 +3148,11 @@
       "content_pillar": "educational",
       "post_id": "18131994220608374",
       "story_id": "18108446731760717",
-      "published_at": "2026-06-24T08:22:40Z"
+      "published_at": "2026-06-24T08:22:40Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Analyse-Paralyse überwinden",
@@ -4086,7 +4090,7 @@
       "published_at": "2026-06-23T10:31:42Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark focused workspace",
       "quote": {
         "text": "Es gibt keine schlechten Winde, nur schlechte Segel.",
@@ -4103,7 +4107,10 @@
       "day": 36,
       "date": "2026-06-24",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-24T10:16:34Z"
     },
     {
       "status": "pending",
