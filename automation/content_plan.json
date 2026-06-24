@@ -3114,11 +3114,15 @@
       "content_pillar": "emotional",
       "post_id": "18323646079286267",
       "story_id": "18118815571696662",
-      "published_at": "2026-06-23T18:06:14Z"
+      "published_at": "2026-06-23T18:06:14Z",
+      "insights": {
+        "likes": 4,
+        "comments": 1
+      }
     },
     {
       "topic": "Entscheidungen treffen",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum manche Menschen IMMER die richtigen Entscheidungen treffen...",
       "script": [
         "Du stehst vor einer wichtigen Wahl?",
@@ -3141,7 +3145,10 @@
       "date": "2026-06-24",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18131994220608374",
+      "story_id": "18108446731760717",
+      "published_at": "2026-06-24T08:22:40Z"
     },
     {
       "topic": "Analyse-Paralyse überwinden",
