@@ -3156,7 +3156,7 @@
     },
     {
       "topic": "Analyse-Paralyse überwinden",
-      "status": "pending",
+      "status": "published",
       "hook": "Analyse-Paralyse? 3 Schritte zur KLAREN Entscheidung 🎯",
       "slides": [
         {
@@ -3244,7 +3244,10 @@
       "date": "2026-06-24",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18115346242875181",
+      "story_id": "18601858945012180",
+      "published_at": "2026-06-24T18:03:20Z"
     },
     {
       "topic": "Prokrastination austricksen",
