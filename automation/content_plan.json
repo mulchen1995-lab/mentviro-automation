@@ -3247,11 +3247,15 @@
       "content_pillar": "educational",
       "post_id": "18115346242875181",
       "story_id": "18601858945012180",
-      "published_at": "2026-06-24T18:03:20Z"
+      "published_at": "2026-06-24T18:03:20Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Prokrastination austricksen",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Gehirn, wenn du heute anfangen willst 😂",
       "script": [
         "Du sitzt da, die Aufgabe vor dir...",
@@ -3274,7 +3278,10 @@
       "date": "2026-06-25",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18064828568706306",
+      "story_id": "18075706037315598",
+      "published_at": "2026-06-25T08:25:36Z"
     },
     {
       "topic": "Hacks gegen Aufschieberitis",
