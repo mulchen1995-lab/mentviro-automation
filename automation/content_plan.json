@@ -3289,7 +3289,7 @@
     },
     {
       "topic": "Hacks gegen Aufschieberitis",
-      "status": "pending",
+      "status": "published",
       "hook": "5 Hacks gegen Aufschieberitis, die WIRKLICH wirken ⚡",
       "slides": [
         {
@@ -3387,7 +3387,10 @@
       "date": "2026-06-25",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18120361729684231",
+      "story_id": "18105314624068262",
+      "published_at": "2026-06-25T18:21:36Z"
     },
     {
       "topic": "Wachstumsdenken entwickeln",
@@ -3750,6 +3753,380 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "Digitale Ablenkung & Fokus",
+      "status": "pending",
+      "hook": "POV: Dein Handy klaut dir heimlich deine Zeit.",
+      "script": [
+        "Du scrollst nur kurz durch Social Media.",
+        "Eine Minute wird zu zehn, zehn zu dreißig.",
+        "Plötzlich ist der Vormittag vorbei.",
+        "Deine Ziele? Auf morgen verschoben.",
+        "Die größte Falle ist, sie nicht zu sehen.",
+        "Folge @mentviro."
+      ],
+      "caption": "Erkennst du dich wieder? Die digitale Welt ist voller kleiner Fallen, die uns Stück für Stück unsere wertvolle Zeit und unseren Fokus rauben. Es ist nicht immer die große Prokrastination, manchmal sind es nur die 'kurzen Blicke', die sich summieren. Sei dir bewusst, wo deine Zeit hingeht, und gewinne sie zurück. Mach kleine Schritte für mehr digitale Freiheit! 💪✨\n\n#mindset #successmindset #erfolgsmentalität #erfolgreich #unternehmertum #businessmindset #entrepreneur #wohlstand #wealthbuilding #finanziellefreiheit #investieren #moneyminds #passiveseinkommen #geldanlage #mentviro",
+      "pexels_video_query": "urban neon night digital distraction person looking at phone",
+      "story_text": [
+        "NEUES REEL",
+        "Wirst du abgelenkt?",
+        "So klaut dir dein Handy Zeit!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Handy vs. Fokus: Wer gewinnt?",
+      "day": 41,
+      "date": "2026-06-29",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Digitale Gewohnheiten für mehr Fokus",
+      "status": "pending",
+      "hook": "Willst du mehr Zeit für dich? Dann lies das.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "5 Gewohnheiten,",
+            "die dich digital",
+            "unabhängiger machen."
+          ],
+          "body": [
+            "Entkomme der ständigen Ablenkung.",
+            "Gewinne deinen Fokus zurück."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "GEWOHNHEIT #1",
+          "num": "1 / 5",
+          "title": [
+            "Feste Social-Media-Zeiten."
+          ],
+          "body": [
+            "Lege 2-3 kurze Blöcke am Tag fest.",
+            "Vermeide spontanes Scrollen."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #2",
+          "num": "2 / 5",
+          "title": [
+            "Benachrichtigungen stummschalten."
+          ],
+          "body": [
+            "Deaktiviere alle nicht-essenziellen Notifications.",
+            "Bleibe ungestört."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #3",
+          "num": "3 / 5",
+          "title": [
+            "Handy-freie Zonen schaffen."
+          ],
+          "body": [
+            "Kein Smartphone im Schlafzimmer oder beim Essen.",
+            "Präsenter sein."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #4",
+          "num": "4 / 5",
+          "title": [
+            "Digital Detox Tage einlegen."
+          ],
+          "body": [
+            "Plane regelmäßige Stunden oder Tage offline.",
+            "Energie tanken."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #5",
+          "num": "5 / 5",
+          "title": [
+            "Apps bewusst nutzen."
+          ],
+          "body": [
+            "Frage dich: Dient diese App meinem Ziel?",
+            "Lösche Zeitfresser."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle-Hacks."
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Deine digitale Umgebung zu gestalten, ist ein Akt der Selbstachtung. Mit diesen 5 Gewohnheiten kannst du deinen Fokus schärfen, Ablenkungen minimieren und mehr Kontrolle über deine Zeit gewinnen. Es geht nicht darum, das Digitale komplett zu meiden, sondern es bewusst und zielgerichtet zu nutzen. Starte heute! 🚀💡\n\n#mindset #successmindset #erfolgsmentalität #erfolgreich #unternehmertum #businessmindset #entrepreneur #wohlstand #wealthbuilding #finanziellefreiheit #investieren #moneyminds #passiveseinkommen #geldanlage #mentviro",
+      "pexels_queries": [
+        "digital detox neon",
+        "minimalist tech focus",
+        "focused work urban",
+        "nature escape phone",
+        "sunrise city",
+        "person disconnecting tech"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "5 Wege für mehr",
+        "digitale Freiheit!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Digital Detox: Ja oder Nein?",
+      "day": 41,
+      "date": "2026-06-29",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Effektives Lernen & Wissenserhalt",
+      "status": "pending",
+      "hook": "Lernst du noch oder vergisst du schon?",
+      "script": [
+        "Du liest ein Buch, schaust ein Tutorial.",
+        "Fühlst dich schlau, kurz danach leer.",
+        "Warum bleibt so wenig hängen?",
+        "Dein Gehirn braucht mehr als nur Input.",
+        "Es braucht bewusste Verarbeitung, sonst ist es weg.",
+        "Folge @mentviro."
+      ],
+      "caption": "Viele von uns verbringen Stunden mit Lernen, nur um festzustellen, dass das meiste Wissen schnell wieder verpufft. Der Schlüssel liegt nicht nur im 'Wie viel' du lernst, sondern im 'Wie' du es verarbeitest. Dein Gehirn ist kein passiver Speicher. Entdecke, wie du wirklich lernst und Wissen dauerhaft verankerst. 🧠💡\n\n#mindset #successmindset #erfolgsmentalität #erfolgreich #unternehmertum #businessmindset #entrepreneur #wohlstand #wealthbuilding #finanziellefreiheit #investieren #moneyminds #passiveseinkommen #geldanlage #mentviro",
+      "pexels_video_query": "dark cinematic learning knowledge retention brain",
+      "story_text": [
+        "NEUES REEL",
+        "Lernst du falsch?",
+        "So bleibt Wissen haften!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Memorierst du genug?",
+      "day": 42,
+      "date": "2026-06-30",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Bewährte Methoden, um WIRKLICH zu lernen",
+      "status": "pending",
+      "hook": "Maximiere dein Wissen: So behältst du Gelerntes dauerhaft.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 bewährte Methoden,",
+            "um WIRKLICH zu lernen."
+          ],
+          "body": [
+            "Verstehe, nicht nur auswendig lernen.",
+            "Wende Wissen aktiv an."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "METHODE #1",
+          "num": "1 / 3",
+          "title": [
+            "Aktives Abrufen (Recall)."
+          ],
+          "body": [
+            "Versuche, Gelerntes ohne Notizen zu rekapitulieren.",
+            "Stärkt Gedächtnispfade."
+          ]
+        },
+        {
+          "badge": "METHODE #2",
+          "num": "2 / 3",
+          "title": [
+            "Spaced Repetition (Wiederholung)."
+          ],
+          "body": [
+            "Wiederhole Inhalte in wachsenden Zeitabständen.",
+            "Optimiert Langzeitgedächtnis."
+          ]
+        },
+        {
+          "badge": "METHODE #3",
+          "num": "3 / 3",
+          "title": [
+            "Elaboratives Denken (Verknüpfen)."
+          ],
+          "body": [
+            "Verbinde neues Wissen mit Bekanntem.",
+            "Erkläre es in eigenen Worten."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lern-Hacks."
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Effektives Lernen ist eine Fähigkeit, die jeder entwickeln kann. Diese drei Methoden sind wissenschaftlich erprobt und helfen dir, Wissen tiefer zu verarbeiten und dauerhaft zu speichern. Es ist Zeit, deine Lernstrategie zu optimieren und dein volles Potenzial zu entfalten! 📚🚀\n\n#mindset #successmindset #erfolgsmentalität #erfolgreich #unternehmertum #businessmindset #entrepreneur #wohlstand #wealthbuilding #finanziellefreiheit #investieren #moneyminds #passiveseinkommen #geldanlage #mentviro",
+      "pexels_queries": [
+        "effective learning dark",
+        "knowledge retention minimal",
+        "mind map concept",
+        "focused study deep",
+        "brain power abstract",
+        "book reading dark"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "3 Lern-Hacks,",
+        "die wirklich wirken!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Lernst du aktiv oder passiv?",
+      "day": 42,
+      "date": "2026-06-30",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Authentizität und der eigene Weg",
+      "status": "pending",
+      "hook": "Niemand redet darüber, aber...",
+      "script": [
+        "Der Druck, jemand zu sein, der du nicht bist, ist enorm.",
+        "Die Erwartungen anderer, die vorgezeichneten Pfade.",
+        "Doch dein wahres Glück findest du nur in dir.",
+        "Im Mut, den eigenen Weg zu gehen, auch wenn er einsam scheint.",
+        "Im Wissen, dass Authentizität mehr zählt als jeder Applaus.",
+        "Folge @mentviro."
+      ],
+      "caption": "Es ist eine leise Wahrheit, die oft übersehen wird: Der Weg zur Erfüllung ist selten der, den die Gesellschaft für dich vorgesehen hat. Es braucht Mut, die eigene Melodie zu hören und zu tanzen, selbst wenn andere einen anderen Rhythmus vorgeben. Bleib dir selbst treu. Dein authentischer Weg ist dein größtes Vermächtnis. ❤️🌱\n\n#mindset #successmindset #erfolgsmentalität #erfolgreich #unternehmertum #businessmindset #entrepreneur #wohlstand #wealthbuilding #finanziellefreiheit #investieren #moneyminds #passiveseinkommen #geldanlage #mentviro",
+      "pexels_video_query": "sunrise forest walk alone person nature reflective",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Weg ist einzigartig.",
+        "Finde deine innere Stimme!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Gehst du deinen eigenen Weg?",
+      "day": 43,
+      "date": "2026-07-01",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Zeichen, dass du deinen authentischen Weg gehst",
+      "status": "pending",
+      "hook": "Fühlst du dich manchmal verloren? Das hier hilft dir, deinen inneren Kompass zu finden.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "4 Zeichen, dass du",
+            "deinen authentischen",
+            "Weg gehst."
+          ],
+          "body": [
+            "Mehr Klarheit, weniger Zweifel.",
+            "Dein innerer Kompass führt dich."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 4",
+          "title": [
+            "Du hörst auf deine Intuition."
+          ],
+          "body": [
+            "Innere Stimme wird lauter als äußere Erwartungen.",
+            "Vertraust dir selbst."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 4",
+          "title": [
+            "Du brauchst weniger Bestätigung."
+          ],
+          "body": [
+            "Dein Wert kommt von innen, nicht von außen.",
+            "Frei von Meinungen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 4",
+          "title": [
+            "Dein Handeln stimmt mit Werten überein."
+          ],
+          "body": [
+            "Kein Widerspruch zwischen Denken, Fühlen, Tun.",
+            "Integrierte Persönlichkeit."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #4",
+          "num": "4 / 4",
+          "title": [
+            "Du findest Freude im Prozess."
+          ],
+          "body": [
+            "Der Weg ist das Ziel, nicht nur das Ergebnis.",
+            "Achtsamkeit & Dankbarkeit."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Herz-Insights."
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Den authentischen Weg zu gehen, bedeutet, im Einklang mit sich selbst zu leben. Es ist eine Reise der Selbstfindung und des Mutes, die dich zu einem erfüllteren Leben führt. Wenn du diese Zeichen bei dir entdeckst, bist du auf dem richtigen Pfad – dem deines wahren Ichs. ✨❤️\n\n#mindset #successmindset #erfolgsmentalität #erfolgreich #unternehmertum #businessmindset #entrepreneur #wohlstand #wealthbuilding #finanziellefreiheit #investieren #moneyminds #passiveseinkommen #geldanlage #mentviro",
+      "pexels_queries": [
+        "path in forest sunrise",
+        "ocean meditation warm",
+        "person meditating nature serene",
+        "authentic self concept",
+        "inner peace zen",
+        "values integrity symbol"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Bist du authentisch?",
+        "Finde deinen wahren Weg!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Authentizität: Einfach oder schwer?",
+      "day": 43,
+      "date": "2026-07-01",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -4208,6 +4585,66 @@
       "date": "2026-06-28",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "urban neon digital focus",
+      "quote": {
+        "text": "Die wahre Disziplin besteht darin, sich auf das Wesentliche zu konzentrieren und das Unwesentliche zu ignorieren.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "3x Fokus-Boost:",
+        "items": [
+          "1. Handy weglegen (außer Reichweite).",
+          "2. Eine Sache nach der anderen machen.",
+          "3. 5 Minuten tief atmen vor der Aufgabe."
+        ]
+      },
+      "day": 41,
+      "date": "2026-06-29",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic learning",
+      "quote": {
+        "text": "Bildung ist das, was übrig bleibt, wenn man vergessen hat, was man gelernt hat.",
+        "author": "Albert Einstein"
+      },
+      "tips": {
+        "title": "3x Besser Lernen:",
+        "items": [
+          "1. Erkläre es jemand anderem.",
+          "2. Mache Zusammenfassungen in eigenen Worten.",
+          "3. Teste dich selbst regelmäßig ab."
+        ]
+      },
+      "day": 42,
+      "date": "2026-06-30",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural forest path",
+      "quote": {
+        "text": "Sei du selbst die Veränderung, die du dir wünschst für diese Welt.",
+        "author": "Mahatma Gandhi"
+      },
+      "tips": {
+        "title": "3x Authentischer werden:",
+        "items": [
+          "1. Werte klären und danach handeln.",
+          "2. Weniger vergleichen, mehr fühlen.",
+          "3. Zeit allein verbringen zur Selbstreflexion."
+        ]
+      },
+      "day": 43,
+      "date": "2026-07-01",
+      "style": "gold",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0
