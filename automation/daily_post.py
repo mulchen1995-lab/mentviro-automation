@@ -34,6 +34,13 @@ DRY_RUN  = os.getenv("DRY_RUN", "").strip().lower() in ("1", "true", "yes", "on"
 PLAN_FILE      = os.path.join(os.path.dirname(__file__), "content_plan.json")
 LOGO_FILE      = os.path.join(os.path.dirname(__file__), "assets", "mentviro_logo.png")
 BG_MUSIC_FILE  = os.path.join(os.path.dirname(__file__), "assets", "bg_music.mp3")
+# Stimmungsabhängige Tracks (eines pro content_pillar) — passender als ein Track für alle.
+BG_MUSIC_DIR   = os.path.join(os.path.dirname(__file__), "assets", "music")
+BG_MUSIC_BY_PILLAR = {
+    "educational":  os.path.join(BG_MUSIC_DIR, "bg_educational.mp3"),
+    "entertaining": os.path.join(BG_MUSIC_DIR, "bg_entertaining.mp3"),
+    "emotional":    os.path.join(BG_MUSIC_DIR, "bg_emotional.mp3"),
+}
 LOGO_URL  = os.getenv("MENTVIRO_LOGO_URL", "")
 _LOGO_B64 = ""
 
@@ -1665,9 +1672,15 @@ def run_reel(post, plan):
                 print(f"  BG music URL: {bm_r.status_code} — falling back to repo asset")
         except Exception as e:
             print(f"  BG music URL failed: {e} — falling back to repo asset")
+    if not bg_music_path:
+        pillar = post.get("content_pillar", "educational")
+        pillar_file = BG_MUSIC_BY_PILLAR.get(pillar)
+        if pillar_file and os.path.exists(pillar_file):
+            bg_music_path = pillar_file
+            print(f"  BG music: '{pillar}' mood track ({os.path.getsize(pillar_file)//1024} KB)")
     if not bg_music_path and os.path.exists(BG_MUSIC_FILE):
         bg_music_path = BG_MUSIC_FILE
-        print(f"  BG music: repo asset ({os.path.getsize(BG_MUSIC_FILE)//1024} KB)")
+        print(f"  BG music: generic repo asset ({os.path.getsize(BG_MUSIC_FILE)//1024} KB)")
     if not bg_music_path:
         print("  BG music: no asset available — skipped")
 
