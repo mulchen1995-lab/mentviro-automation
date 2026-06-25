@@ -3281,7 +3281,11 @@
       "content_pillar": "entertaining",
       "post_id": "18064828568706306",
       "story_id": "18075706037315598",
-      "published_at": "2026-06-25T08:25:36Z"
+      "published_at": "2026-06-25T08:25:36Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Hacks gegen Aufschieberitis",
@@ -4123,7 +4127,7 @@
       "published_at": "2026-06-24T10:16:34Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic vibrant urban",
       "quote": {
         "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie selbst zu gestalten.",
@@ -4140,7 +4144,10 @@
       "day": 37,
       "date": "2026-06-25",
       "style": "gold",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-25T10:13:39Z"
     },
     {
       "status": "pending",
