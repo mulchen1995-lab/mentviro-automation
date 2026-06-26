@@ -3424,7 +3424,11 @@
       "content_pillar": "educational",
       "post_id": "17877797523488158",
       "story_id": "18107819749930926",
-      "published_at": "2026-06-26T08:31:06Z"
+      "published_at": "2026-06-26T08:31:06Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Wege zum Wachstumsdenken",
@@ -4534,7 +4538,7 @@
       "published_at": "2026-06-25T10:13:39Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Schwierigkeiten stärken den Geist, so wie Arbeit den Körper stärkt.",
@@ -4551,7 +4555,10 @@
       "day": 38,
       "date": "2026-06-26",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-26T10:18:02Z"
     },
     {
       "status": "pending",
