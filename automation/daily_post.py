@@ -41,6 +41,11 @@ BG_MUSIC_BY_PILLAR = {
     "entertaining": os.path.join(BG_MUSIC_DIR, "bg_entertaining.mp3"),
     "emotional":    os.path.join(BG_MUSIC_DIR, "bg_emotional.mp3"),
 }
+# Die Pillar-Tracks sind echte Kevin-MacLeod-Instrumentals unter CC BY 4.0 — die
+# Lizenz verlangt Namensnennung dort, wo das Werk veröffentlicht wird (= Caption).
+# Bewusst ohne URL (mentviro-Richtlinie: keine Links in Captions); Autor + Lizenz
+# genügen für CC-BY. Quelle/Lizenz dokumentiert in assets/music/CREDITS.md.
+MUSIC_CREDIT = "\n\n🎵 Musik: Kevin MacLeod – CC BY 4.0"
 LOGO_URL  = os.getenv("MENTVIRO_LOGO_URL", "")
 _LOGO_B64 = ""
 
@@ -1658,6 +1663,7 @@ def run_reel(post, plan):
     # stale (e.g. a dead CDN link), we ALWAYS fall back to the committed CC0 asset
     # below — that asset must never depend on a network call to be available.
     bg_music_path = None
+    bg_music_needs_credit = False   # True, sobald ein CC-BY-Pillar-Track gewählt wird
     bg_music_url  = os.environ.get("BACKGROUND_MUSIC_URL", "")
     if bg_music_url:
         try:
@@ -1677,6 +1683,7 @@ def run_reel(post, plan):
         pillar_file = BG_MUSIC_BY_PILLAR.get(pillar)
         if pillar_file and os.path.exists(pillar_file):
             bg_music_path = pillar_file
+            bg_music_needs_credit = True
             print(f"  BG music: '{pillar}' mood track ({os.path.getsize(pillar_file)//1024} KB)")
     if not bg_music_path and os.path.exists(BG_MUSIC_FILE):
         bg_music_path = BG_MUSIC_FILE
@@ -1841,9 +1848,10 @@ def run_reel(post, plan):
             print(f"  Cover-Bild fehlgeschlagen: {e} — Reel ohne eigenes Cover")
 
         print("  Creating REELS container...")
+        reel_caption = post["caption"] + (MUSIC_CREDIT if bg_music_needs_credit else "")
         container_id = ig_create_container(
             video_url=cdn_url,
-            caption=post["caption"],
+            caption=reel_caption,
             media_type="REELS",
             cover_url=cover_url,
         )
