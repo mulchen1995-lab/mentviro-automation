@@ -3432,7 +3432,7 @@
     },
     {
       "topic": "3 Wege zum Wachstumsdenken",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Mindset entscheidet über alles.",
       "slides": [
         {
@@ -3523,7 +3523,10 @@
       "date": "2026-06-26",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18062314505716047",
+      "story_id": "17875923978504247",
+      "published_at": "2026-06-26T17:58:08Z"
     },
     {
       "topic": "Dein Umfeld formt dich",
