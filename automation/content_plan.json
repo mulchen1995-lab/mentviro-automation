@@ -3390,11 +3390,15 @@
       "content_pillar": "entertaining",
       "post_id": "18120361729684231",
       "story_id": "18105314624068262",
-      "published_at": "2026-06-25T18:21:36Z"
+      "published_at": "2026-06-25T18:21:36Z",
+      "insights": {
+        "likes": 3,
+        "comments": 0
+      }
     },
     {
       "topic": "Wachstumsdenken entwickeln",
-      "status": "pending",
+      "status": "published",
       "hook": "Was steckt hinter echtem Wachstumsdenken?",
       "script": [
         "Jeder von uns hat zwei Denkweisen: die starre und die des Wachstums.",
@@ -3417,7 +3421,10 @@
       "date": "2026-06-26",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17877797523488158",
+      "story_id": "18107819749930926",
+      "published_at": "2026-06-26T08:31:06Z"
     },
     {
       "topic": "3 Wege zum Wachstumsdenken",
