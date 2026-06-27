@@ -3526,11 +3526,15 @@
       "content_pillar": "educational",
       "post_id": "18062314505716047",
       "story_id": "17875923978504247",
-      "published_at": "2026-06-26T17:58:08Z"
+      "published_at": "2026-06-26T17:58:08Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Dein Umfeld formt dich",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Umfeld – unsichtbarer Architekt deines Lebens.",
       "script": [
         "Hast du dich je gefragt, warum manche Ziele so schwer fallen?",
@@ -3553,7 +3557,10 @@
       "date": "2026-06-27",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18199005538367569",
+      "story_id": "18078999254250013",
+      "published_at": "2026-06-27T07:50:45Z"
     },
     {
       "topic": "3 Schritte zu einem förderlichen Umfeld",
@@ -4141,6 +4148,422 @@
       "type": "carousel",
       "style": "gold",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Die Macht des Nein-Sagens: Schütze deine Energie & Zeit",
+      "status": "pending",
+      "hook": "Warum 'Nein' dein mächtigstes Werkzeug für Erfolg ist.",
+      "script": [
+        "In einer Welt voller Ablenkungen ist Fokus dein größtes Gut.",
+        "Doch oft fällt es schwer, Grenzen zu setzen.",
+        "Jedes 'Ja' zu einer Bitte, ist ein 'Nein' zu deiner eigenen Priorität.",
+        "Lerne, bewusst 'Nein' zu sagen, um deine Zeit und Energie zu schützen.",
+        "Es ist nicht egoistisch, sondern essenziell für dein Wachstum.",
+        "Folge @mentviro für mehr Mindset-Tipps."
+      ],
+      "caption": "Deine Zeit, deine Energie, deine Prioritäten. Lerne, dein mächtigstes Werkzeug einzusetzen: das bewusste 'Nein'. Es ist der Schlüssel zu mehr Fokus, weniger Überforderung und echtem Fortschritt. Schütze, was dir wichtig ist, und sag 'Ja' zu dir selbst. 💪 #mentviro #mindset #successmindset #erfolgsmentalität #erfolgreich #wohlstand #selbstständig #finanzbildung #passiveseinkommen #investieren #moneyminds #wealthbuilding #sparplan #geldanlage #aktien",
+      "pexels_video_query": "dark cinematic minimal focus time",
+      "story_text": [
+        "NEUES REEL",
+        "Deine Zeit",
+        "deine Power",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir Nein-Sagen schwer?",
+      "day": 44,
+      "date": "2026-07-02",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die Kunst des Neinsagens: Setze klare Grenzen",
+      "status": "pending",
+      "hook": "Sag 'Nein' zu mehr 'Ja' zu dir selbst.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Sag 'Nein' zu mehr 'Ja' zu dir selbst."
+          ],
+          "body": [
+            "Deine Zeit ist dein wertvollstes Gut.",
+            "Lerne, es zu schützen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 6",
+          "title": [
+            "Warum 'Nein' so schwerfällt"
+          ],
+          "body": [
+            "Angst vor Ablehnung oder Konflikten.",
+            "Der Wunsch, gemocht zu werden.",
+            "Die Gewohnheit, immer zuzusagen."
+          ]
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 6",
+          "title": [
+            "Die wahren Kosten eines 'Ja'"
+          ],
+          "body": [
+            "Überforderung & Stress.",
+            "Mangel an Zeit für eigene Ziele.",
+            "Verlust von Energie & Fokus."
+          ]
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 6",
+          "title": [
+            "Dein 'Nein' als Prioritätenschutz"
+          ],
+          "body": [
+            "Schütze deine wertvolle Zeit.",
+            "Erlaube dir, auf dich zu achten.",
+            "Fokussiere auf das, was zählt."
+          ]
+        },
+        {
+          "badge": "PUNKT #4",
+          "num": "4 / 6",
+          "title": [
+            "3 Schritte zum selbstbewussten 'Nein'"
+          ],
+          "body": [
+            "1. Sei klar & direkt.",
+            "2. Begründe kurz & freundlich.",
+            "3. Biete ggf. Alternativen an."
+          ]
+        },
+        {
+          "badge": "PUNKT #5",
+          "num": "5 / 6",
+          "title": [
+            "Die Freiheit, die ein 'Nein' schafft"
+          ],
+          "body": [
+            "Mehr Energie für deine Leidenschaften.",
+            "Klarheit in deinen Zielen.",
+            "Echtes Selbstvertrauen."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Erfolg"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Das 'Nein' ist kein Zeichen von Schwäche, sondern von Stärke. Es ist die klare Grenze, die du ziehst, um deine Energie, deine Zeit und deine Ziele zu schützen. Lerne, diese Macht zu nutzen und befreie dich von unnötigem Ballast. 🚀 #mentviro #mindset #successmindset #erfolgsmentalität #erfolgreich #wohlstand #selbstständig #finanzbildung #passiveseinkommen #investieren #moneyminds #wealthbuilding #sparplan #geldanlage #aktien",
+      "pexels_queries": [
+        "minimalistic dark office",
+        "time clock focus",
+        "person saying no",
+        "clear boundaries",
+        "free calm person",
+        "dark structured background"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Grenzen setzen",
+        "Wichtiger denn je",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Setzt du genug Grenzen? Ja/Nein",
+      "day": 44,
+      "date": "2026-07-02",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Komfortzone verlassen: Dein Leben beginnt jetzt!",
+      "status": "pending",
+      "hook": "POV: Dein Leben beginnt, wo deine Komfortzone endet.",
+      "script": [
+        "Du liebst deine Routinen? Dein warmes, sicheres Nest?",
+        "Das ist deine Komfortzone. Sie ist gemütlich, aber da passiert nichts Neues.",
+        "Du willst wachsen? Dann musst du einen Schritt raus wagen.",
+        "Fühl das Kribbeln, die Unsicherheit – das ist das Zeichen.",
+        "Dort draußen warten deine größten Erfolge und Abenteuer.",
+        "Folge @mentviro für den Push, den du brauchst!"
+      ],
+      "caption": "Die Komfortzone ist wie ein gemütliches Sofa – bequem, aber du kommst nicht vorwärts. 🛋️ Dein wahres Potenzial entfaltet sich erst, wenn du dich traust, einen Schritt ins Ungewisse zu wagen. Wo wirst du heute deine Komfortzone verlassen? Sag es uns in den Kommentaren! 👇 #mentviro #mindset #successmindset #erfolgsmentalität #erfolgreich #wohlstand #selbstständig #finanzbildung #passiveseinkommen #investieren #moneyminds #wealthbuilding #sparplan #geldanlage #aktien",
+      "pexels_video_query": "energetic urban challenge growth",
+      "story_text": [
+        "NEUES REEL",
+        "Wachstum wartet",
+        "Jenseits des Bekannten",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Bist du ein Gewohnheitstier? Ja/Nein",
+      "day": 45,
+      "date": "2026-07-03",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Komfortzone vs. Wachstum: Wo stehst du?",
+      "status": "pending",
+      "hook": "Die Komfortzone: Dein Freund oder dein Gefängnis?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die Komfortzone:",
+            "Dein Freund oder dein Gefängnis?"
+          ],
+          "body": [
+            "Der sichere Hafen, der dich festhält.",
+            "Wähle Wachstum statt Stillstand."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DILEMMA #1",
+          "num": "1 / 6",
+          "title": [
+            "Die Anziehungskraft"
+          ],
+          "body": [
+            "Sicherheit, Routine, keine Überraschungen.",
+            "Das Gehirn liebt Effizienz."
+          ]
+        },
+        {
+          "badge": "DILEMMA #2",
+          "num": "2 / 6",
+          "title": [
+            "Das Problem"
+          ],
+          "body": [
+            "Kein Wachstum, keine neuen Erfahrungen.",
+            "Potenzial bleibt ungenutzt.",
+            "Stillstand ist Rückschritt."
+          ]
+        },
+        {
+          "badge": "CHANCE #3",
+          "num": "3 / 6",
+          "title": [
+            "Die Angst vor dem Unbekannten"
+          ],
+          "body": [
+            "Widerstand ist normal.",
+            "Unsicherheit ist der Preis für Freiheit.",
+            "Mut belohnt."
+          ]
+        },
+        {
+          "badge": "CHANCE #4",
+          "num": "4 / 6",
+          "title": [
+            "Kleine Schritte, große Wirkung"
+          ],
+          "body": [
+            "Beginne mit Mikro-Herausforderungen.",
+            "Jeder Schritt zählt.",
+            "Baue Vertrauen auf."
+          ]
+        },
+        {
+          "badge": "CHANCE #5",
+          "num": "5 / 6",
+          "title": [
+            "Die Belohnung"
+          ],
+          "body": [
+            "Neue Fähigkeiten entwickeln.",
+            "Selbstvertrauen stärken.",
+            "Dein wahres Potenzial entdecken."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Die Komfortzone ist tückisch – sie verspricht Sicherheit, raubt dir aber dein Wachstum. Zeit, das Sofa zu verlassen und zu entdecken, was wirklich in dir steckt! Was ist deine nächste kleine Herausforderung? Erzähl es uns! 👇 #mentviro #mindset #successmindset #erfolgsmentalität #erfolgreich #wohlstand #selbstständig #finanzbildung #passiveseinkommen #investieren #moneyminds #wealthbuilding #sparplan #geldanlage #aktien",
+      "pexels_queries": [
+        "urban dynamic light",
+        "person standing at edge",
+        "challenge concept",
+        "growth path forward",
+        "energetic city life",
+        "contrast light dark"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Raus aus deiner Zone",
+        "Für echtes Wachstum",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Komfort oder Wachstum?",
+      "day": 45,
+      "date": "2026-07-03",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Resilienz entwickeln: Unbeugsam durch jede Krise",
+      "status": "pending",
+      "hook": "Was ist der wahre Schlüssel zu unaufhaltsamer Stärke?",
+      "script": [
+        "Jeder Mensch erlebt Rückschläge, das ist unvermeidlich.",
+        "Doch wie du damit umgehst, entscheidet über deinen Erfolg.",
+        "Resilienz ist die Fähigkeit, gestärkt aus Krisen hervorzugehen.",
+        "Es ist ein mentaler Muskel, den du trainieren kannst und musst.",
+        "Werde unbesiegbar, indem du Widerstände als Wachstum siehst.",
+        "Folge @mentviro für deine mentale Stärke."
+      ],
+      "caption": "Resilienz ist mehr als nur 'durchhalten'. Es ist die Kunst, sich anzupassen, zu lernen und aus jeder Herausforderung gestärkt hervorzugehen. Baue diese innere Stärke auf und werde unaufhaltsam. 🔑 #mentviro #mindset #successmindset #erfolgsmentalität #erfolgreich #wohlstand #selbstständig #finanzbildung #passiveseinkommen #investieren #moneyminds #wealthbuilding #sparplan #geldanlage #aktien",
+      "pexels_video_query": "dark cinematic resilience strength",
+      "story_text": [
+        "NEUES REEL",
+        "Mentale Stärke",
+        "Für jede Krise",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fühlst du dich resilient? Ja/Nein",
+      "day": 46,
+      "date": "2026-07-04",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Resilienz: Dein mentaler Muskel für jede Krise",
+      "status": "pending",
+      "hook": "Baue mentale Stärke auf, die dich durch ALLES trägt.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Resilienz: Dein mentaler Muskel",
+            "für jede Krise."
+          ],
+          "body": [
+            "Werde unbesiegbar im Angesicht von Herausforderungen.",
+            "Deine innere Stärke ist trainierbar."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WISSEN #1",
+          "num": "1 / 6",
+          "title": [
+            "Was Resilienz wirklich bedeutet"
+          ],
+          "body": [
+            "Die Fähigkeit, nach Rückschlägen zurückzukommen.",
+            "Widerstandsfähigkeit gegen Stress & Krisen."
+          ]
+        },
+        {
+          "badge": "WISSEN #2",
+          "num": "2 / 6",
+          "title": [
+            "Die 7 Säulen der Resilienz"
+          ],
+          "body": [
+            "Optimismus, Akzeptanz, Lösungsorientierung.",
+            "Selbstwirksamkeit, Verantwortung, Netzwerk, Zukunftsplanung."
+          ]
+        },
+        {
+          "badge": "UMSETZUNG #3",
+          "num": "3 / 6",
+          "title": [
+            "Rückschläge als Lernchance"
+          ],
+          "body": [
+            "Jeder Misserfolg ist ein wertvoller Lehrer.",
+            "Analysiere, lerne, passe dich an.",
+            "Wachse über dich hinaus."
+          ]
+        },
+        {
+          "badge": "UMSETZUNG #4",
+          "num": "4 / 6",
+          "title": [
+            "Dein Mindset macht den Unterschied"
+          ],
+          "body": [
+            "Sieh Herausforderungen als Möglichkeiten.",
+            "Fokussiere auf das, was du beeinflussen kannst.",
+            "Positive Selbstgespräche."
+          ]
+        },
+        {
+          "badge": "UMSETZUNG #5",
+          "num": "5 / 6",
+          "title": [
+            "3 Wege, deine Resilienz zu stärken"
+          ],
+          "body": [
+            "1. Achtsamkeit praktizieren.",
+            "2. Starke soziale Bindungen pflegen.",
+            "3. Kleine Erfolge bewusst feiern."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Stärke"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Resilienz ist die Superkraft, die dich durch jede Lebenslage trägt. Sie ist trainierbar und essenziell für dein Wohlbefinden und deinen Erfolg. Beginne noch heute, deinen mentalen Muskel zu stärken! 🧠 #mentviro #mindset #successmindset #erfolgsmentalität #erfolgreich #wohlstand #selbstständig #finanzbildung #passiveseinkommen #investieren #moneyminds #wealthbuilding #sparplan #geldanlage #aktien",
+      "pexels_queries": [
+        "cinematic dark strength",
+        "resilience concept",
+        "inner power growth",
+        "strong mind abstract",
+        "overcoming adversity",
+        "dark structured texture"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deine innere Stärke",
+        "Unbeugsam werden",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fühlst du dich stark genug? Ja/Nein",
+      "day": 46,
+      "date": "2026-07-04",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -4662,6 +5085,66 @@
       "date": "2026-07-01",
       "style": "gold",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Es ist nicht so, dass wir zu wenig Zeit haben, sondern dass wir zu viel davon verschwenden.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "3 Tipps zum Nein-Sagen",
+        "items": [
+          "Fokus auf deine Prioritäten legen.",
+          "Nicht sofort antworten, kurz nachdenken.",
+          "Alternativen vorschlagen, wenn passend."
+        ]
+      },
+      "day": 44,
+      "date": "2026-07-02",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban challenge pexels query",
+      "quote": {
+        "text": "Das Leben beginnt am Ende deiner Komfortzone.",
+        "author": "Neale Donald Walsch"
+      },
+      "tips": {
+        "title": "3 Wege aus der Zone",
+        "items": [
+          "Eine neue Fähigkeit lernen.",
+          "Sprich Fremde bewusst an.",
+          "Mach Sport, den du hasst."
+        ]
+      },
+      "day": 45,
+      "date": "2026-07-03",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark cinematic resilience pexels query",
+      "quote": {
+        "text": "Schmerz ist vorübergehend. Er kann eine Minute, eine Stunde, einen Tag oder ein Jahr dauern, aber irgendwann wird er nachlassen und etwas anderes wird seinen Platz einnehmen.",
+        "author": "Lance Armstrong"
+      },
+      "tips": {
+        "title": "3 Tipps für Resilienz",
+        "items": [
+          "Fokus auf das Hier & Jetzt.",
+          "Netzwerk aus Unterstützung aufbauen.",
+          "Aus Fehlern aktiv lernen."
+        ]
+      },
+      "day": 46,
+      "date": "2026-07-04",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0
