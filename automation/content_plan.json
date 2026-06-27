@@ -3560,7 +3560,11 @@
       "content_pillar": "emotional",
       "post_id": "18199005538367569",
       "story_id": "18078999254250013",
-      "published_at": "2026-06-27T07:50:45Z"
+      "published_at": "2026-06-27T07:50:45Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Schritte zu einem förderlichen Umfeld",
@@ -4987,7 +4991,7 @@
       "published_at": "2026-06-26T10:18:02Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "warm natural scenic pexels query",
       "quote": {
         "text": "Wähle deine Gesellschaft sorgfältig aus, denn schlechte Freunde verderben gute Sitten.",
@@ -5004,7 +5008,10 @@
       "day": 39,
       "date": "2026-06-27",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": "18023070197842498",
+      "published_at": "2026-06-27T11:24:12Z"
     },
     {
       "status": "pending",
