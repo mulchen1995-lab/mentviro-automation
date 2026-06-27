@@ -3568,7 +3568,7 @@
     },
     {
       "topic": "3 Schritte zu einem förderlichen Umfeld",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Umfeld ist dein größter Coach – oder Bremser.",
       "slides": [
         {
@@ -3657,7 +3657,10 @@
       "date": "2026-06-27",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18078192683460884",
+      "story_id": "18337334440223285",
+      "published_at": "2026-06-27T17:19:34Z"
     },
     {
       "topic": "Die Macht von Deep Work",
