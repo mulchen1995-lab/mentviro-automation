@@ -3694,7 +3694,11 @@
       "content_pillar": "educational",
       "post_id": "18111750958872849",
       "story_id": "18107135950791944",
-      "published_at": "2026-06-28T08:21:44Z"
+      "published_at": "2026-06-28T08:21:44Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Prinzipien für Deep Work",
@@ -5024,7 +5028,7 @@
       "published_at": "2026-06-27T11:24:12Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Wenn du deine Zeit nicht verwaltest, verwaltet sie dich.",
@@ -5041,7 +5045,10 @@
       "day": 40,
       "date": "2026-06-28",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": "18141256348554019",
+      "tips_id": null,
+      "published_at": "2026-06-28T11:44:37Z"
     },
     {
       "status": "pending",
