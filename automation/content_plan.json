@@ -3702,7 +3702,7 @@
     },
     {
       "topic": "3 Prinzipien für Deep Work",
-      "status": "pending",
+      "status": "published",
       "hook": "Meistere Ablenkungen – schaffe Meisterwerke.",
       "slides": [
         {
@@ -3791,7 +3791,10 @@
       "date": "2026-06-28",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18087445091111381",
+      "story_id": "18107711116963647",
+      "published_at": "2026-06-28T17:21:36Z"
     },
     {
       "topic": "Digitale Ablenkung & Fokus",
