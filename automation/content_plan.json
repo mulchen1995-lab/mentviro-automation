@@ -3828,7 +3828,11 @@
       "content_pillar": "entertaining",
       "post_id": "17936961924267433",
       "story_id": "18471395170111780",
-      "published_at": "2026-06-29T09:27:26Z"
+      "published_at": "2026-06-29T09:27:26Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Digitale Gewohnheiten für mehr Fokus",
@@ -5061,7 +5065,7 @@
       "published_at": "2026-06-28T11:44:37Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "urban neon digital focus",
       "quote": {
         "text": "Die wahre Disziplin besteht darin, sich auf das Wesentliche zu konzentrieren und das Unwesentliche zu ignorieren.",
@@ -5078,7 +5082,10 @@
       "day": 41,
       "date": "2026-06-29",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": "18099036983335275",
+      "tips_id": null,
+      "published_at": "2026-06-29T11:54:29Z"
     },
     {
       "status": "pending",
