@@ -3794,11 +3794,15 @@
       "content_pillar": "educational",
       "post_id": "18087445091111381",
       "story_id": "18107711116963647",
-      "published_at": "2026-06-28T17:21:36Z"
+      "published_at": "2026-06-28T17:21:36Z",
+      "insights": {
+        "likes": 3,
+        "comments": 0
+      }
     },
     {
       "topic": "Digitale Ablenkung & Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Handy klaut dir heimlich deine Zeit.",
       "script": [
         "Du scrollst nur kurz durch Social Media.",
@@ -3821,7 +3825,10 @@
       "date": "2026-06-29",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17936961924267433",
+      "story_id": "18471395170111780",
+      "published_at": "2026-06-29T09:27:26Z"
     },
     {
       "topic": "Digitale Gewohnheiten für mehr Fokus",
