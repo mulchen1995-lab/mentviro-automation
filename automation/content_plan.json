@@ -3836,7 +3836,7 @@
     },
     {
       "topic": "Digitale Gewohnheiten für mehr Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "Willst du mehr Zeit für dich? Dann lies das.",
       "slides": [
         {
@@ -3941,7 +3941,10 @@
       "date": "2026-06-29",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18134089159597676",
+      "story_id": "18177247054413824",
+      "published_at": "2026-06-29T18:14:05Z"
     },
     {
       "topic": "Effektives Lernen & Wissenserhalt",
