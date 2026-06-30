@@ -3944,11 +3944,15 @@
       "content_pillar": "entertaining",
       "post_id": "18134089159597676",
       "story_id": "18177247054413824",
-      "published_at": "2026-06-29T18:14:05Z"
+      "published_at": "2026-06-29T18:14:05Z",
+      "insights": {
+        "likes": 3,
+        "comments": 3
+      }
     },
     {
       "topic": "Effektives Lernen & Wissenserhalt",
-      "status": "pending",
+      "status": "published",
       "hook": "Lernst du noch oder vergisst du schon?",
       "script": [
         "Du liest ein Buch, schaust ein Tutorial.",
@@ -3971,7 +3975,10 @@
       "date": "2026-06-30",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18083623043345873",
+      "story_id": "17918437197184163",
+      "published_at": "2026-06-30T08:31:20Z"
     },
     {
       "topic": "Bewährte Methoden, um WIRKLICH zu lernen",
