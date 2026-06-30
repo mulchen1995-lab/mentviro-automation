@@ -3978,7 +3978,11 @@
       "content_pillar": "educational",
       "post_id": "18083623043345873",
       "story_id": "17918437197184163",
-      "published_at": "2026-06-30T08:31:20Z"
+      "published_at": "2026-06-30T08:31:20Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Bewährte Methoden, um WIRKLICH zu lernen",
@@ -5098,7 +5102,7 @@
       "published_at": "2026-06-29T11:54:29Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic learning",
       "quote": {
         "text": "Bildung ist das, was übrig bleibt, wenn man vergessen hat, was man gelernt hat.",
@@ -5115,7 +5119,10 @@
       "day": 42,
       "date": "2026-06-30",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-06-30T10:30:12Z"
     },
     {
       "status": "pending",
