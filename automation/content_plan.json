@@ -3986,7 +3986,7 @@
     },
     {
       "topic": "Bewährte Methoden, um WIRKLICH zu lernen",
-      "status": "pending",
+      "status": "published",
       "hook": "Maximiere dein Wissen: So behältst du Gelerntes dauerhaft.",
       "slides": [
         {
@@ -4068,7 +4068,10 @@
       "date": "2026-06-30",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18103783273924482",
+      "story_id": "18122531119634073",
+      "published_at": "2026-06-30T18:05:38Z"
     },
     {
       "topic": "Authentizität und der eigene Weg",
@@ -4610,6 +4613,365 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "Die wahre Bedeutung von innerem Reichtum",
+      "status": "pending",
+      "hook": "Manchmal ist das größte Wachstum unsichtbar. 🔑",
+      "script": [
+        "Jeder jagt nach mehr, aber was, wenn 'mehr' schon da ist?",
+        "Der wahre Reichtum liegt nicht auf deinem Konto.",
+        "Er liegt in der Stille, die du findest.",
+        "In der Dankbarkeit für das, was du hast.",
+        "Im Frieden, der dich umgibt, wenn du innehältst.",
+        "Folge @mentviro für mehr innere Stärke. ✨"
+      ],
+      "caption": "In einer Welt, die ständig nach außen drängt, vergessen wir oft den wertvollsten Ort für Wachstum: unser Inneres. Es ist die Qualität unserer Gedanken, die Tiefe unserer Beziehungen und die Fähigkeit, im Hier und Jetzt präsent zu sein, die unser Leben wirklich bereichern. Nimm dir heute einen Moment, um in dich zu gehen. Was bedeutet wahrer Reichtum für dich? ❤️\n\n#mentviro #erfolgsmentalität #successmindset #mindset #persönlicheentwicklung #wachstum #lebensweisheiten #innererfrieden #achtsamkeit #balance #derwegistdasziel #geduld #selbstreflexion #werte #glück",
+      "pexels_video_query": "peaceful sunrise forest meditation nature cinematic",
+      "story_text": [
+        "NEUES REEL",
+        "Was wirklich zählt?",
+        "Entdecke deinen inneren Reichtum.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fühlst du dich reich?",
+      "day": 47,
+      "date": "2026-07-05",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Der Wert von Ruhe im Lärm des Alltags",
+      "status": "pending",
+      "hook": "Warum das Innehalten dein größter Game Changer ist.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Der Wert von Ruhe",
+            "im Lärm des Alltags"
+          ],
+          "body": [
+            "In einer lauten Welt ist Stille ein Luxus – und eine Superkraft."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 4",
+          "title": [
+            "Klarheit schaffen"
+          ],
+          "body": [
+            "Ruhephasen sind der Nährboden für klare Gedanken und Visionen."
+          ]
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 4",
+          "title": [
+            "Energie tanken"
+          ],
+          "body": [
+            "Echte Erholung kommt aus innerer Ruhe, nicht nur aus Schlaf."
+          ]
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 4",
+          "title": [
+            "Präsenz stärken"
+          ],
+          "body": [
+            "Wer still ist, nimmt das Hier und Jetzt intensiver wahr."
+          ]
+        },
+        {
+          "badge": "PUNKT #4",
+          "num": "4 / 4",
+          "title": [
+            "Entscheidungen verbessern"
+          ],
+          "body": [
+            "Die besten Entscheidungen reifen oft in Momenten der Ruhe heran."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lebensweisheiten"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "In einer Welt, die immer schneller wird, ist das bewusste Innehalten keine Schwäche, sondern eine strategische Stärke. Es ermöglicht uns, den Fokus neu auszurichten, unsere Energie zu regenerieren und mit mehr Präsenz und Klarheit durch den Tag zu gehen. Mach Stille zu einem Teil deiner Routine. 🧘‍♂️\n\n#mentviro #erfolgsmentalität #mindset #selbstständig #businesstips #persönlicheentwicklung #wachstum #lebensweisheiten #innererfrieden #achtsamkeit #balance #derwegistdasziel #geduld #selbstreflexion #fokus",
+      "pexels_queries": [
+        "serene lake sunrise",
+        "forest path mist",
+        "minimalist home window rain",
+        "person meditating nature",
+        "quiet library sunbeam",
+        "calm ocean waves"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Warum Ruhe so wertvoll ist.",
+        "Finde deine Stille.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fällt dir Ruhe leicht?",
+      "day": 47,
+      "date": "2026-07-05",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Effektive Entscheidungsfindung unter Unsicherheit",
+      "status": "pending",
+      "hook": "Warum deine besten Entscheidungen oft unbequem sind. 💡",
+      "script": [
+        "Die meisten zögern, wenn der Weg unklar ist.",
+        "Doch gerade dort liegen die größten Chancen.",
+        "Akzeptiere Unsicherheit als Teil des Prozesses.",
+        "Fokussiere auf die nächste kleine, logische Aktion.",
+        "Lerne aus jeder Entscheidung, egal wie sie ausgeht.",
+        "Folge @mentviro für mehr mentale Stärke. 🧠"
+      ],
+      "caption": "In einer Welt voller Komplexität und Unvorhersehbarkeit ist die Fähigkeit, gute Entscheidungen unter Unsicherheit zu treffen, entscheidend für persönlichen und beruflichen Erfolg. Es geht nicht darum, alle Antworten zu haben, sondern darum, mit Ungewissheit umzugehen und handlungsfähig zu bleiben. Was ist dein Ansatz, wenn du vor einer schwierigen Wahl stehst? 👇\n\n#mentviro #erfolgsmentalität #successmindset #mindset #selbstständig #businesstips #entscheidungen #klarheit #persönlicheentwicklung #wachstum #fokus #strategie #denkweise #selbstführung #produktivität",
+      "pexels_video_query": "dark minimalist decision making path",
+      "story_text": [
+        "NEUES REEL",
+        "Entscheidungen treffen",
+        "Auch wenn der Weg unklar ist.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Entscheidest du schnell?",
+      "day": 48,
+      "date": "2026-07-06",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Klarheit schaffen: 3 Prinzipien für bessere Entscheidungen",
+      "status": "pending",
+      "hook": "So triffst du klare Entscheidungen, wenn alles unklar ist. 📊",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Klarheit schaffen:",
+            "3 Prinzipien für",
+            "bessere Entscheidungen"
+          ],
+          "body": [
+            "Lerne, wie du auch in komplexen Situationen den richtigen Weg findest."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PRINZIP #1",
+          "num": "1 / 4",
+          "title": [
+            "Definiere deine Werte"
+          ],
+          "body": [
+            "Entscheidungen, die mit deinen Kernwerten übereinstimmen, fühlen sich richtig an."
+          ]
+        },
+        {
+          "badge": "PRINZIP #2",
+          "num": "2 / 4",
+          "title": [
+            "Informiere dich, aber handle"
+          ],
+          "body": [
+            "Sammle Infos, aber lass Perfektionismus dich nicht lähmen. Ein Schritt ist besser als keiner."
+          ]
+        },
+        {
+          "badge": "PRINZIP #3",
+          "num": "3 / 4",
+          "title": [
+            "Akzeptiere das 'Unbekannte'"
+          ],
+          "body": [
+            "Nicht jede Variable lässt sich kontrollieren. Vertraue auf deine Fähigkeit, dich anzupassen."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Klarheit"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Entscheidungen sind der Kern unseres Fortschritts. Doch oft lassen wir uns von Komplexität und Angst lähmen. Mit diesen drei Prinzipien kannst du deinen Entscheidungsprozess strukturieren und mit mehr Zuversicht handeln. Welche Strategie hilft dir am meisten, wenn es ernst wird? Teile deine Gedanken! 👇\n\n#mentviro #erfolgsmentalität #successmindset #mindset #selbstständig #businesstips #entscheidungen #klarheit #persönlicheentwicklung #wachstum #fokus #strategie #denkweise #selbstführung #produktivität",
+      "pexels_queries": [
+        "dark abstract geometric",
+        "minimalist white room light",
+        "binary code data stream",
+        "person thinking silhouette",
+        "complex network connections",
+        "modern architecture lines"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Entscheide dich smarter.",
+        "3 Prinzipien für Klarheit.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Sicherheit > Risiko?",
+      "day": 48,
+      "date": "2026-07-06",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Dein Energielevel als Performance-Hebel",
+      "status": "pending",
+      "hook": "POV: Dein Energielevel ist dein größter Hebel. ⚡",
+      "script": [
+        "Du startest motiviert, aber die Puste geht aus.",
+        "Das Problem ist nicht deine Disziplin, sondern dein Energie-Management.",
+        "Wer seine Energie klug einsetzt, gewinnt.",
+        "Fühlst du dich oft müde, obwohl du 'nichts' getan hast?",
+        "Es sind die kleinen Dinge, die deinen Tank leeren oder füllen.",
+        "Folge @mentviro für mehr Power. 💪"
+      ],
+      "caption": "Dein Energielevel ist wie dein persönlicher Treibstoff für Erfolg und Wohlbefinden. Ohne ein intelligentes Management wirst du schnell auf der Strecke bleiben, egal wie gut deine Pläne sind. Es geht darum, bewusst zu tanken und Lecks zu stopfen. Wie lädst du deine Batterien am liebsten auf? Erzähl's uns! 👇\n\n#mentviro #erfolgsmentalität #successmindset #mindset #selbstständig #businesstips #energiemanagement #produktivität #lifestyle #fokus #disziplin #gewohnheiten #performance #alltag #selbstoptimierung",
+      "pexels_video_query": "urban neon energy vibrant",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Energielevel?",
+        "Der wahre Game Changer!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fühlst du dich fit?",
+      "day": 49,
+      "date": "2026-07-07",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Die 5 größten Energie-Killer, die du ignorierst",
+      "status": "pending",
+      "hook": "Das sind die wahren Energie-Booster, die du ignorierst. 💥",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die 5 größten",
+            "Energie-Killer,",
+            "die du ignorierst"
+          ],
+          "body": [
+            "Warum du dich oft ausgelaugt fühlst und was du ändern kannst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "KILLER #1",
+          "num": "1 / 4",
+          "title": [
+            "Konstanter Online-Konsum"
+          ],
+          "body": [
+            "Non-stop scrollen überfordert dein Gehirn – Pausen sind Pflicht!"
+          ]
+        },
+        {
+          "badge": "KILLER #2",
+          "num": "2 / 4",
+          "title": [
+            "Zu wenig echtes Licht"
+          ],
+          "body": [
+            "Indoor-Leben stört den Schlaf-Wach-Rhythmus. Raus an die frische Luft!"
+          ]
+        },
+        {
+          "badge": "KILLER #3",
+          "num": "3 / 4",
+          "title": [
+            "Unerledigte To-Dos"
+          ],
+          "body": [
+            "Das mentale Gewicht offener Aufgaben raubt dir unbemerkt Energie."
+          ]
+        },
+        {
+          "badge": "KILLER #4",
+          "num": "4 / 4",
+          "title": [
+            "Mangel an Bewegung"
+          ],
+          "body": [
+            "Bewegung ist kein Energie-Verbraucher, sondern ein -Lieferant!"
+          ]
+        },
+        {
+          "badge": "KILLER #5",
+          "num": "5 / 4",
+          "title": [
+            "Schlechte Ernährung"
+          ],
+          "body": [
+            "Zucker-Crash und ungesunde Fette sind deine Energie-Feinde Nummer 1."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Power Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Fühlst du dich oft müde, obwohl du scheinbar genug schläfst? Dann könnten diese versteckten Energie-Killer die Ursache sein! Es sind oft die kleinen, unscheinbaren Gewohnheiten, die unseren Energiespeicher leeren. Welcher dieser Punkte trifft bei dir am meisten zu? Lass es uns in den Kommentaren wissen! 👇\n\n#mentviro #erfolgsmentalität #successmindset #mindset #selbstständig #businesstips #energiemanagement #produktivität #lifestyle #fokus #disziplin #gewohnheiten #performance #alltag #selbstoptimierung",
+      "pexels_queries": [
+        "energetic city lights",
+        "person running urban",
+        "digital overload phone",
+        "tired person desk",
+        "healthy food plate",
+        "sunlight window contrast"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deine Energie-Killer?",
+        "Check, was dich auslaugt!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Handy vs. Natur?",
+      "day": 49,
+      "date": "2026-07-07",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "story_queue": [
@@ -5203,6 +5565,66 @@
       "date": "2026-07-04",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "calm meditation morning light",
+      "quote": {
+        "text": "Glück und Freiheit beginnen mit dem Verständnis, dass manche Dinge unter unserer Kontrolle stehen und manche nicht.",
+        "author": "Epiktet"
+      },
+      "tips": {
+        "title": "3 Wege zur inneren Ruhe",
+        "items": [
+          "5 Min. Atemübung täglich",
+          "Digital Detox: Pausen einlegen",
+          "Natur bewusst erleben"
+        ]
+      },
+      "day": 47,
+      "date": "2026-07-05",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "minimalist desk laptop focused",
+      "quote": {
+        "text": "Wenn du etwas tun musst, tu es mit der Überzeugung, dass du es tun kannst.",
+        "author": "Epiktet"
+      },
+      "tips": {
+        "title": "3 Tipps für Entscheidungen",
+        "items": [
+          "Pro & Contra Liste nutzen",
+          "Bauchgefühl nicht ignorieren",
+          "Kleine Schritte wagen"
+        ]
+      },
+      "day": 48,
+      "date": "2026-07-06",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "urban neon night energy",
+      "quote": {
+        "text": "Es ist nicht die Last, die dich bricht, sondern die Art, wie du sie trägst.",
+        "author": "Lou Holtz"
+      },
+      "tips": {
+        "title": "3 schnelle Energie-Booster",
+        "items": [
+          "5 Min Power-Nap",
+          "Kurzer Spaziergang",
+          "Großes Glas Wasser"
+        ]
+      },
+      "day": 49,
+      "date": "2026-07-07",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "evergreen_cursor": 0
