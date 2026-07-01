@@ -4105,7 +4105,11 @@
       "content_pillar": "emotional",
       "post_id": "17985833471843806",
       "story_id": "18117246781885642",
-      "published_at": "2026-07-01T08:50:05Z"
+      "published_at": "2026-07-01T08:50:05Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Zeichen, dass du deinen authentischen Weg gehst",
@@ -5494,7 +5498,7 @@
       "published_at": "2026-06-30T10:30:12Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "warm natural forest path",
       "quote": {
         "text": "Sei du selbst die Veränderung, die du dir wünschst für diese Welt.",
@@ -5511,7 +5515,10 @@
       "day": 43,
       "date": "2026-07-01",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": "18108996283753349",
+      "published_at": "2026-07-01T10:38:39Z"
     },
     {
       "status": "pending",
