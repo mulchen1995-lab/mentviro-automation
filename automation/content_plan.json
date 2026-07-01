@@ -4071,11 +4071,15 @@
       "content_pillar": "educational",
       "post_id": "18103783273924482",
       "story_id": "18122531119634073",
-      "published_at": "2026-06-30T18:05:38Z"
+      "published_at": "2026-06-30T18:05:38Z",
+      "insights": {
+        "likes": 4,
+        "comments": 2
+      }
     },
     {
       "topic": "Authentizität und der eigene Weg",
-      "status": "pending",
+      "status": "published",
       "hook": "Niemand redet darüber, aber...",
       "script": [
         "Der Druck, jemand zu sein, der du nicht bist, ist enorm.",
@@ -4098,7 +4102,10 @@
       "date": "2026-07-01",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17985833471843806",
+      "story_id": "18117246781885642",
+      "published_at": "2026-07-01T08:50:05Z"
     },
     {
       "topic": "Zeichen, dass du deinen authentischen Weg gehst",
