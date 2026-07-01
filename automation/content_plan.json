@@ -4113,7 +4113,7 @@
     },
     {
       "topic": "Zeichen, dass du deinen authentischen Weg gehst",
-      "status": "pending",
+      "status": "published",
       "hook": "Fühlst du dich manchmal verloren? Das hier hilft dir, deinen inneren Kompass zu finden.",
       "slides": [
         {
@@ -4207,7 +4207,10 @@
       "date": "2026-07-01",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18017786456852768",
+      "story_id": "17994382748969575",
+      "published_at": "2026-07-01T18:05:39Z"
     },
     {
       "topic": "Die Macht des Nein-Sagens: Schütze deine Energie & Zeit",
