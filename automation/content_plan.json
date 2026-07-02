@@ -4252,7 +4252,7 @@
     },
     {
       "topic": "Die Kunst des Neinsagens: Setze klare Grenzen",
-      "status": "pending",
+      "status": "published",
       "hook": "Sag 'Nein' zu mehr 'Ja' zu dir selbst.",
       "slides": [
         {
@@ -4360,7 +4360,10 @@
       "date": "2026-07-02",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18102441674152566",
+      "story_id": "18107306246072366",
+      "published_at": "2026-07-02T17:58:20Z"
     },
     {
       "topic": "Komfortzone verlassen: Dein Leben beginnt jetzt!",
