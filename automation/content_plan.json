@@ -4244,7 +4244,11 @@
       "content_pillar": "educational",
       "post_id": "18086235965124208",
       "story_id": "17886517749604775",
-      "published_at": "2026-07-02T08:12:45Z"
+      "published_at": "2026-07-02T08:12:45Z",
+      "insights": {
+        "likes": 4,
+        "comments": 1
+      }
     },
     {
       "topic": "Die Kunst des Neinsagens: Setze klare Grenzen",
@@ -5531,7 +5535,7 @@
       "published_at": "2026-07-01T10:38:39Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Es ist nicht so, dass wir zu wenig Zeit haben, sondern dass wir zu viel davon verschwenden.",
@@ -5548,7 +5552,10 @@
       "day": 44,
       "date": "2026-07-02",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": "18358493827242996",
+      "tips_id": null,
+      "published_at": "2026-07-02T12:06:18Z"
     },
     {
       "status": "pending",
