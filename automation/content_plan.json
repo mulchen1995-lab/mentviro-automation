@@ -4210,11 +4210,15 @@
       "content_pillar": "emotional",
       "post_id": "18017786456852768",
       "story_id": "17994382748969575",
-      "published_at": "2026-07-01T18:05:39Z"
+      "published_at": "2026-07-01T18:05:39Z",
+      "insights": {
+        "likes": 3,
+        "comments": 3
+      }
     },
     {
       "topic": "Die Macht des Nein-Sagens: Schütze deine Energie & Zeit",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum 'Nein' dein mächtigstes Werkzeug für Erfolg ist.",
       "script": [
         "In einer Welt voller Ablenkungen ist Fokus dein größtes Gut.",
@@ -4237,7 +4241,10 @@
       "date": "2026-07-02",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18086235965124208",
+      "story_id": "17886517749604775",
+      "published_at": "2026-07-02T08:12:45Z"
     },
     {
       "topic": "Die Kunst des Neinsagens: Setze klare Grenzen",
