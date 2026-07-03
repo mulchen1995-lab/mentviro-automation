@@ -4397,7 +4397,11 @@
       "content_pillar": "entertaining",
       "post_id": "18132957346526296",
       "story_id": "18064892393718231",
-      "published_at": "2026-07-03T08:10:56Z"
+      "published_at": "2026-07-03T08:10:56Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Komfortzone vs. Wachstum: Wo stehst du?",
@@ -5953,7 +5957,7 @@
       "published_at": "2026-07-02T12:06:18Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban challenge pexels query",
       "quote": {
         "text": "Das Leben beginnt am Ende deiner Komfortzone.",
@@ -5970,7 +5974,10 @@
       "day": 45,
       "date": "2026-07-03",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-03T12:05:19Z"
     },
     {
       "status": "pending",
