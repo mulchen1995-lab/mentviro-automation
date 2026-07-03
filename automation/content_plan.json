@@ -4363,11 +4363,15 @@
       "content_pillar": "educational",
       "post_id": "18102441674152566",
       "story_id": "18107306246072366",
-      "published_at": "2026-07-02T17:58:20Z"
+      "published_at": "2026-07-02T17:58:20Z",
+      "insights": {
+        "likes": 3,
+        "comments": 1
+      }
     },
     {
       "topic": "Komfortzone verlassen: Dein Leben beginnt jetzt!",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Leben beginnt, wo deine Komfortzone endet.",
       "script": [
         "Du liebst deine Routinen? Dein warmes, sicheres Nest?",
@@ -4390,7 +4394,10 @@
       "date": "2026-07-03",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18132957346526296",
+      "story_id": "18064892393718231",
+      "published_at": "2026-07-03T08:10:56Z"
     },
     {
       "topic": "Komfortzone vs. Wachstum: Wo stehst du?",
@@ -5000,6 +5007,391 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Denkfallen, die dich sabotieren",
+      "status": "pending",
+      "hook": "POV: Dein Hirn sabotiert dich (und du merkst es nicht).",
+      "script": [
+        "Jeder hat sie: die kleinen Denkfehler, die dein Potenzial blockieren.",
+        "Du glaubst, du bist objektiv? Denkste! Dein Gehirn spielt dir Streiche.",
+        "Der Bestätigungsfehler lässt dich nur sehen, was du sehen willst.",
+        "Die Verlustaversion hält dich in deiner Komfortzone gefangen.",
+        "Aber das Gute ist: Erkennen ist der erste Schritt zur Veränderung.",
+        "Folge @mentviro."
+      ],
+      "caption": "Erkennst du dich wieder? 😉 Unsere Köpfe sind Meister im Selbst-Sabotieren. Doch wer diese Denkfallen kennt, kann sie umgehen und sein volles Potenzial entfalten. Es ist Zeit, die Regie über dein Denken zu übernehmen! 💪 #mentviro #mindset #motivation #erfolgreich #successmindset #zielsetzung #businessmindset #unternehmertum #selbstständig #businesstips #wohlstand #reichtum #entrepreneur #vermögensaufbau #finanziellefreiheit",
+      "pexels_video_query": "urban neon lights energetic city",
+      "story_text": [
+        "NEUES REEL",
+        "Deine Denkfallen",
+        "erkennen & überwinden.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir das schwer? 🤔",
+      "day": 50,
+      "date": "2026-07-08",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Denkfehler, die dein Potenzial blockieren",
+      "status": "pending",
+      "hook": "Diese 5 Denkfehler sabotieren dich – und du merkst es nicht!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "5 Denkfehler,",
+            "die dein Potenzial blockieren"
+          ],
+          "body": [
+            "Entdecke, wie dein Gehirn dich",
+            "manchmal austrickst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DENKFEHLER #1",
+          "num": "1 / 5",
+          "title": [
+            "Bestätigungsfehler"
+          ],
+          "body": [
+            "Du suchst & interpretierst",
+            "Infos, die deine Ansichten",
+            "bestätigen. Alles andere",
+            "wird ignoriert."
+          ]
+        },
+        {
+          "badge": "DENKFEHLER #2",
+          "num": "2 / 5",
+          "title": [
+            "Verlustaversion"
+          ],
+          "body": [
+            "Der Schmerz eines Verlusts",
+            "wiegt schwerer als die",
+            "Freude eines Gewinns. Das",
+            "hält dich oft zurück."
+          ]
+        },
+        {
+          "badge": "DENKFEHLER #3",
+          "num": "3 / 5",
+          "title": [
+            "Ankereffekt"
+          ],
+          "body": [
+            "Deine Entscheidungen werden",
+            "stark von der ersten Info",
+            "beeinflusst, die du hörst.",
+            "Sei kritisch!"
+          ]
+        },
+        {
+          "badge": "DENKFEHLER #4",
+          "num": "4 / 5",
+          "title": [
+            "Verfügbarkeitsheuristik"
+          ],
+          "body": [
+            "Du bewertest die Wahrscheinlichkeit",
+            "von Ereignissen nach ihrer",
+            "leichten Abrufbarkeit aus",
+            "dem Gedächtnis."
+          ]
+        },
+        {
+          "badge": "DENKFEHLER #5",
+          "num": "5 / 5",
+          "title": [
+            "Selbstüberschätzung"
+          ],
+          "body": [
+            "Du schätzt deine eigenen",
+            "Fähigkeiten & Chancen zu",
+            "positiv ein. Realismus",
+            "spart dir Fehler."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& klare Gedanken"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Erkennst du diese kognitiven Verzerrungen in deinem Alltag? Sie sind Meister der Tarnung und beeinflussen unbewusst unsere Entscheidungen, unser Wachstum und unseren Erfolg. Der erste Schritt, um sie zu überwinden, ist, sie beim Namen zu nennen. Welcher Denkfehler bremst dich am meisten aus? Lass uns drüber reden! 👇 #mentviro #mindset #motivation #erfolgreich #successmindset #zielsetzung #businessmindset #unternehmertum #selbstständig #businesstips #wohlstand #reichtum #entrepreneur #vermögensaufbau #finanziellefreiheit",
+      "pexels_queries": [
+        "abstract neural network",
+        "human brain puzzle",
+        "mind trap concept",
+        "thought labyrinth",
+        "decision crossroads",
+        "thinking challenge"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deine Denkfehler",
+        "aufgedeckt!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Kennst du alle? 🤔",
+      "day": 50,
+      "date": "2026-07-08",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Warum der Weg wichtiger ist als das Ziel",
+      "status": "pending",
+      "hook": "Niemand redet darüber, aber der wahre Wert liegt im Prozess.",
+      "script": [
+        "Wir jagen Zielen hinterher, vergessen aber oft das Wichtigste.",
+        "Der wahre Schatz liegt nicht im Erreichen, sondern im Entdecken.",
+        "Jeder Rückschlag formt dich, jede Hürde lehrt dich eine Lektion.",
+        "Es sind die kleinen Schritte, die Ausdauer, die dich wachsen lassen.",
+        "Das Ziel mag verlockend sein, aber der Weg ist deine wahre Reise.",
+        "Folge @mentviro."
+      ],
+      "caption": "Wie oft konzentrieren wir uns nur auf das Ende, anstatt die Schönheit und die Lektionen des Weges zu erkennen? Der Prozess ist nicht nur Mittel zum Zweck, sondern die Essenz deines Wachstums. Er formt dich, stärkt dich und macht dich zu der Person, die du sein sollst. ❤️ Was war deine wichtigste Lektion auf dem Weg? #mentviro #mindset #motivation #erfolgreich #successmindset #zielsetzung #businessmindset #unternehmertum #selbstständig #businesstips #wohlstand #reichtum #entrepreneur #vermögensaufbau #finanziellefreiheit",
+      "pexels_video_query": "forest path sunrise cinematic",
+      "story_text": [
+        "NEUES REEL",
+        "Der Weg ist das Ziel.",
+        "Finde deinen Flow.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Liebst du den Weg? Ja/Nein",
+      "day": 51,
+      "date": "2026-07-09",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "3 Lektionen, die ich auf meinem Weg gelernt habe",
+      "status": "pending",
+      "hook": "Ich hätte das früher wissen müssen: 3 Lektionen für deinen Weg.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Lektionen,",
+            "die ich auf meinem",
+            "Weg gelernt habe"
+          ],
+          "body": [
+            "Ein Blick zurück, der dich",
+            "nach vorne bringt."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "LEKTION #1",
+          "num": "1 / 3",
+          "title": [
+            "Geduld ist Gold"
+          ],
+          "body": [
+            "Große Dinge brauchen Zeit.",
+            "Vertraue dem Prozess, lass",
+            "dich nicht entmutigen, wenn",
+            "Ergebnisse auf sich warten lassen."
+          ]
+        },
+        {
+          "badge": "LEKTION #2",
+          "num": "2 / 3",
+          "title": [
+            "Rückschläge sind Lehrer"
+          ],
+          "body": [
+            "Jeder Stolperstein birgt",
+            "eine Chance. Scheitern ist",
+            "nicht das Ende, sondern",
+            "der Startpunkt für Wachstum."
+          ]
+        },
+        {
+          "badge": "LEKTION #3",
+          "num": "3 / 3",
+          "title": [
+            "Werte über Zahlen"
+          ],
+          "body": [
+            "Wahre Erfüllung kommt nicht",
+            "durch materielle Güter. Finde",
+            "deine inneren Werte & lebe",
+            "danach. Das ist Reichtum."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Weisheit",
+            "& tiefe Einblicke"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Jeder Weg ist einzigartig, voller Höhen und Tiefen. Diese drei Lektionen haben meinen eigenen Weg nachhaltig geprägt und mir geholfen, nicht nur Ziele zu erreichen, sondern auch zu wachsen. Welcher dieser Punkte resoniert am meisten mit dir? Teile deine Gedanken in den Kommentaren! 👇 #mentviro #mindset #motivation #erfolgreich #successmindset #zielsetzung #businessmindset #unternehmertum #selbstständig #businesstips #wohlstand #reichtum #entrepreneur #vermögensaufbau #finanziellefreiheit",
+      "pexels_queries": [
+        "calm ocean sunset",
+        "foggy forest path",
+        "mountain view contemplation",
+        "person walking alone",
+        "autumn leaves reflective",
+        "golden hour nature"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "3 Lektionen fürs Leben",
+        "Deine Reise zählt.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Welche ist die wichtigste? 🤔",
+      "day": 51,
+      "date": "2026-07-09",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Warum Disziplin keine Strafe ist, sondern Freiheit",
+      "status": "pending",
+      "hook": "Warum gewinnen disziplinierte Menschen? Es ist kein Zufall.",
+      "script": [
+        "Viele sehen Disziplin als Zwang, als Einschränkung.",
+        "Doch Disziplin ist der Schlüssel zu echter Freiheit und Selbstbestimmung.",
+        "Sie befreit dich von Impulsen, Prokrastination und schlechten Gewohnheiten.",
+        "Durch konsequentes Handeln baust du Momentum und Selbstvertrauen auf.",
+        "Deine Ziele rücken näher, dein Potenzial wird sichtbar, dein Leben gehört dir.",
+        "Folge @mentviro."
+      ],
+      "caption": "Disziplin ist nicht das Gegenteil von Freiheit, sondern ihre Voraussetzung. Sie gibt dir die Macht, deine Entscheidungen bewusst zu treffen und deinen Weg zu gestalten, statt dich von äußeren Umständen oder inneren Schwächen steuern zu lassen. Was bedeutet Disziplin für dich? Lass uns diskutieren! 💡 #mentviro #mindset #motivation #erfolgreich #successmindset #zielsetzung #businessmindset #unternehmertum #selbstständig #businesstips #wohlstand #reichtum #entrepreneur #vermögensaufbau #finanziellefreiheit",
+      "pexels_video_query": "dark minimalist future geometric",
+      "story_text": [
+        "NEUES REEL",
+        "Disziplin = Freiheit?",
+        "Deine Meinung zählt!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Stimmst du zu? Ja/Nein",
+      "day": 52,
+      "date": "2026-07-10",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Wege, wie du echte Disziplin aufbaust",
+      "status": "pending",
+      "hook": "Was steckt hinter mentaler Stärke? 3 Prinzipien der Disziplin.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Wege, wie du",
+            "echte Disziplin",
+            "aufbaust"
+          ],
+          "body": [
+            "Meistere dich selbst,",
+            "Schritt für Schritt."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 3",
+          "title": [
+            "Starte klein"
+          ],
+          "body": [
+            "Beginne mit einer winzigen",
+            "Gewohnheit (z.B. 5 Min",
+            "Lesen). Konsistenz ist",
+            "wichtiger als Intensität."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 3",
+          "title": [
+            "Schaffe Routine"
+          ],
+          "body": [
+            "Integriere neue Gewohnheiten",
+            "in deinen Tagesablauf. Feste",
+            "Zeiten & Auslöser helfen",
+            "deinem Gehirn."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 3",
+          "title": [
+            "Visualisiere Erfolg"
+          ],
+          "body": [
+            "Stelle dir vor, wie du dein",
+            "Ziel erreichst. Die mentale",
+            "Vorbereitung stärkt deine",
+            "Motivation & Durchhaltevermögen."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& klare Strategien"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Disziplin ist kein Naturtalent, sondern ein Muskel, den du trainieren kannst. Diese drei Wege helfen dir, eine unerschütterliche Selbstdisziplin zu entwickeln, die dich deinen Zielen näherbringt. Es ist einfacher, als du denkst – fang heute an! 🚀 Welchen Tipp probierst du zuerst aus? #mentviro #mindset #motivation #erfolgreich #successmindset #zielsetzung #businessmindset #unternehmertum #selbstständig #businesstips #wohlstand #reichtum #entrepreneur #vermögensaufbau #finanziellefreiheit",
+      "pexels_queries": [
+        "minimalist dark grid",
+        "geometric abstract lines",
+        "focused person thinking",
+        "clean desk setup",
+        "disciplined workout dark",
+        "mental clarity architecture"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Disziplin meistern.",
+        "Dein Guide zum Erfolg.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Welcher Weg passt zu dir?",
+      "day": 52,
+      "date": "2026-07-10",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -5659,6 +6051,40 @@
       "date": "2026-07-07",
       "style": "silver",
       "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban thinking",
+      "quote": {
+        "text": "Es ist einfacher, einen Atomkern zu spalten, als ein Vorurteil.",
+        "author": "Albert Einstein"
+      },
+      "tips": {
+        "title": "3 Tipps gegen Denkfallen",
+        "items": [
+          "Hinterfrage deine ersten Impulse.",
+          "Suche aktiv nach Gegenargumenten.",
+          "Diskutiere mit Menschen anderer Meinung."
+        ]
+      },
+      "day": 50,
+      "date": "2026-07-08",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "day": 51,
+      "date": "2026-07-09",
+      "status": "pending",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "day": 52,
+      "date": "2026-07-10",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0
