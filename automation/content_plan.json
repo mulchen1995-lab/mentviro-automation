@@ -4405,7 +4405,7 @@
     },
     {
       "topic": "Komfortzone vs. Wachstum: Wo stehst du?",
-      "status": "pending",
+      "status": "published",
       "hook": "Die Komfortzone: Dein Freund oder dein Gefängnis?",
       "slides": [
         {
@@ -4513,7 +4513,10 @@
       "date": "2026-07-03",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18103816625163638",
+      "story_id": "17967109172935624",
+      "published_at": "2026-07-03T17:41:46Z"
     },
     {
       "topic": "Resilienz entwickeln: Unbeugsam durch jede Krise",
