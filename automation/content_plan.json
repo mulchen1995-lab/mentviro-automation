@@ -4516,11 +4516,15 @@
       "content_pillar": "entertaining",
       "post_id": "18103816625163638",
       "story_id": "17967109172935624",
-      "published_at": "2026-07-03T17:41:46Z"
+      "published_at": "2026-07-03T17:41:46Z",
+      "insights": {
+        "likes": 6,
+        "comments": 2
+      }
     },
     {
       "topic": "Resilienz entwickeln: Unbeugsam durch jede Krise",
-      "status": "pending",
+      "status": "published",
       "hook": "Was ist der wahre Schlüssel zu unaufhaltsamer Stärke?",
       "script": [
         "Jeder Mensch erlebt Rückschläge, das ist unvermeidlich.",
@@ -4543,7 +4547,10 @@
       "date": "2026-07-04",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18334877875271990",
+      "story_id": "18117105956494778",
+      "published_at": "2026-07-04T07:46:22Z"
     },
     {
       "topic": "Resilienz: Dein mentaler Muskel für jede Krise",
