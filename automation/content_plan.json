@@ -4558,7 +4558,7 @@
     },
     {
       "topic": "Resilienz: Dein mentaler Muskel für jede Krise",
-      "status": "pending",
+      "status": "published",
       "hook": "Baue mentale Stärke auf, die dich durch ALLES trägt.",
       "slides": [
         {
@@ -4665,7 +4665,10 @@
       "date": "2026-07-04",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17937755319271610",
+      "story_id": "18088534988648970",
+      "published_at": "2026-07-04T17:14:40Z"
     },
     {
       "topic": "Die wahre Bedeutung von innerem Reichtum",
