@@ -4550,7 +4550,11 @@
       "content_pillar": "educational",
       "post_id": "18334877875271990",
       "story_id": "18117105956494778",
-      "published_at": "2026-07-04T07:46:22Z"
+      "published_at": "2026-07-04T07:46:22Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Resilienz: Dein mentaler Muskel für jede Krise",
@@ -5990,7 +5994,7 @@
       "published_at": "2026-07-03T12:05:19Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark cinematic resilience pexels query",
       "quote": {
         "text": "Schmerz ist vorübergehend. Er kann eine Minute, eine Stunde, einen Tag oder ein Jahr dauern, aber irgendwann wird er nachlassen und etwas anderes wird seinen Platz einnehmen.",
@@ -6007,7 +6011,10 @@
       "day": 46,
       "date": "2026-07-04",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-04T11:21:53Z"
     },
     {
       "status": "pending",
