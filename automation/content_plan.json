@@ -4710,7 +4710,7 @@
     },
     {
       "topic": "Der Wert von Ruhe im Lärm des Alltags",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum das Innehalten dein größter Game Changer ist.",
       "slides": [
         {
@@ -4798,7 +4798,10 @@
       "date": "2026-07-05",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18081562418225446",
+      "story_id": "18063792611543181",
+      "published_at": "2026-07-05T17:20:33Z"
     },
     {
       "topic": "Effektive Entscheidungsfindung unter Unsicherheit",
