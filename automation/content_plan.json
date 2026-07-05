@@ -4668,11 +4668,15 @@
       "content_pillar": "educational",
       "post_id": "17937755319271610",
       "story_id": "18088534988648970",
-      "published_at": "2026-07-04T17:14:40Z"
+      "published_at": "2026-07-04T17:14:40Z",
+      "insights": {
+        "likes": 7,
+        "comments": 3
+      }
     },
     {
       "topic": "Die wahre Bedeutung von innerem Reichtum",
-      "status": "pending",
+      "status": "published",
       "hook": "Manchmal ist das größte Wachstum unsichtbar. 🔑",
       "script": [
         "Jeder jagt nach mehr, aber was, wenn 'mehr' schon da ist?",
@@ -4695,7 +4699,10 @@
       "date": "2026-07-05",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18089767964575571",
+      "story_id": "17918420034403504",
+      "published_at": "2026-07-05T07:56:55Z"
     },
     {
       "topic": "Der Wert von Ruhe im Lärm des Alltags",
