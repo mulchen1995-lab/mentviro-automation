@@ -4702,7 +4702,11 @@
       "content_pillar": "emotional",
       "post_id": "18089767964575571",
       "story_id": "17918420034403504",
-      "published_at": "2026-07-05T07:56:55Z"
+      "published_at": "2026-07-05T07:56:55Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Der Wert von Ruhe im Lärm des Alltags",
@@ -6027,7 +6031,7 @@
       "published_at": "2026-07-04T11:21:53Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "calm meditation morning light",
       "quote": {
         "text": "Glück und Freiheit beginnen mit dem Verständnis, dass manche Dinge unter unserer Kontrolle stehen und manche nicht.",
@@ -6044,7 +6048,10 @@
       "day": 47,
       "date": "2026-07-05",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": "18071600393359047",
+      "tips_id": "18227791597317050",
+      "published_at": "2026-07-05T11:26:40Z"
     },
     {
       "status": "pending",
