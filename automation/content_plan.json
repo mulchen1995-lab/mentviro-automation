@@ -4835,7 +4835,11 @@
       "content_pillar": "educational",
       "post_id": "17948781804195093",
       "story_id": "18176816689412151",
-      "published_at": "2026-07-06T09:01:47Z"
+      "published_at": "2026-07-06T09:01:47Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Klarheit schaffen: 3 Prinzipien für bessere Entscheidungen",
@@ -6403,7 +6407,7 @@
       "published_at": "2026-07-05T11:26:40Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "minimalist desk laptop focused",
       "quote": {
         "text": "Wenn du etwas tun musst, tu es mit der Überzeugung, dass du es tun kannst.",
@@ -6420,7 +6424,10 @@
       "day": 48,
       "date": "2026-07-06",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-06T11:24:17Z"
     },
     {
       "status": "pending",
