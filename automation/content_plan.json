@@ -4801,11 +4801,15 @@
       "content_pillar": "emotional",
       "post_id": "18081562418225446",
       "story_id": "18063792611543181",
-      "published_at": "2026-07-05T17:20:33Z"
+      "published_at": "2026-07-05T17:20:33Z",
+      "insights": {
+        "likes": 6,
+        "comments": 5
+      }
     },
     {
       "topic": "Effektive Entscheidungsfindung unter Unsicherheit",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum deine besten Entscheidungen oft unbequem sind. 💡",
       "script": [
         "Die meisten zögern, wenn der Weg unklar ist.",
@@ -4828,7 +4832,10 @@
       "date": "2026-07-06",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17948781804195093",
+      "story_id": "18176816689412151",
+      "published_at": "2026-07-06T09:01:47Z"
     },
     {
       "topic": "Klarheit schaffen: 3 Prinzipien für bessere Entscheidungen",
@@ -5427,6 +5434,345 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "Die Kraft des Wachstumsdenkens",
+      "status": "pending",
+      "hook": "Warum manche Menschen aus jeder Niederlage stärker hervorgehen.",
+      "script": [
+        "Hast du ein fixes oder ein Wachstumsdenken?",
+        "Das fixe Mindset glaubt, Fähigkeiten sind angeboren und unveränderlich.",
+        "Das Wachstumsdenken sieht Potenzial in jeder Herausforderung.",
+        "Fehler werden zu Lernchancen, Anstrengung wird zum Weg der Meisterschaft.",
+        "Es ist die Basis für unbegrenzte Entwicklung und Resilienz.",
+        "Folge @mentviro."
+      ],
+      "caption": "Dein Mindset ist der Motor deines Fortschritts. Ein Wachstumsdenken öffnet Türen, wo andere nur Mauern sehen. Es befähigt dich, aus jedem Rückschlag zu lernen und dich kontinuierlich weiterzuentwickeln. Wo siehst du bei dir noch Potenzial zum Wachsen? Lass es uns wissen! 👇\n#mentviro #motivation #mentaltraining #erfolgsmentalität #erfolgreich #successmindset #selbstständig #entrepreneur #businesstips #reichtum #vermögensaufbau #finanzbildung #finanziellefreiheit #sparplan #finanztipps",
+      "pexels_video_query": "abstract growth cinematic dark minimal light breaking through",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Mindset",
+        "entscheidet alles.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fixes oder Wachstumsdenken?",
+      "day": 53,
+      "date": "2026-07-11",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Wege, um dein Wachstumsdenken zu stärken",
+      "status": "pending",
+      "hook": "Dein Mindset entscheidet über deinen Erfolg. So trainierst du es!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Wege, um dein",
+            "Wachstumsdenken",
+            "zu stärken"
+          ],
+          "body": [
+            "Entfalte dein volles Potenzial."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 4",
+          "title": [
+            "Umarme Herausforderungen"
+          ],
+          "body": [
+            "Sie sind Chancen, dich zu beweisen.",
+            "Nicht Hindernisse, die dich stoppen."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 4",
+          "title": [
+            "Lerne aus Kritik"
+          ],
+          "body": [
+            "Sie ist Feedback für dein Wachstum.",
+            "Kein persönlicher Angriff."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 4",
+          "title": [
+            "Feiere Anstrengung"
+          ],
+          "body": [
+            "Der Weg ist wichtiger als das Talent.",
+            "Hingabe führt zur Meisterschaft."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Erfolg"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Ein starkes Wachstumsdenken ist keine angeborene Eigenschaft, sondern ein Muskel, den du trainieren kannst. Beginne heute damit, Herausforderungen als Möglichkeiten zu sehen und Feedback als Sprungbrett. Jeder Schritt zählt! 💪 Welcher dieser Wege spricht dich am meisten an?\n#mentviro #motivation #mentaltraining #erfolgsmentalität #erfolgreich #successmindset #selbstständig #entrepreneur #businesstips #reichtum #vermögensaufbau #finanzbildung #finanziellefreiheit #sparplan #finanztipps",
+      "pexels_queries": [
+        "growth mindset abstract",
+        "challenge overcome",
+        "learning from feedback",
+        "effort success path",
+        "dark cinematic minimalist",
+        "mindset development"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Wachstum",
+        "beginnt jetzt.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Trainierst du dein Mindset?",
+      "day": 53,
+      "date": "2026-07-11",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Dein Umfeld formt dich mehr, als du denkst",
+      "status": "pending",
+      "hook": "Bist du der Durchschnitt der 5 Menschen, mit denen du die meiste Zeit verbringst?",
+      "script": [
+        "Man sagt, du bist der Durchschnitt der 5 Menschen...",
+        "Und es steckt mehr Wahrheit dahinter, als du denkst.",
+        "Dein Umfeld beeinflusst deine Gedanken, deine Energie, deine Ziele.",
+        "Unbewusst passen wir uns an die Norm unseres Kreises an.",
+        "Wähle weise, denn dein Umfeld ist dein ungeschriebenes Schicksal.",
+        "Folge @mentviro."
+      ],
+      "caption": "Dein Umfeld ist nicht nur Kulisse, sondern aktiver Gestalter deines Lebens. Es pusht dich hoch oder zieht dich runter – oft unmerklich. Nimm dir einen Moment und überlege: Wer prägt dich wirklich? Ist es Zeit für einen 'Umfeld-Check'? 🤔\n#mentviro #motivation #mentaltraining #erfolgsmentalität #erfolgreich #successmindset #selbstständig #entrepreneur #businesstips #reichtum #vermögensaufbau #finanzbildung #finanziellefreiheit #sparplan #finanztipps",
+      "pexels_video_query": "energetic urban friends diverse group laughing city",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Umfeld",
+        "dein Erfolg?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Beeinflusst dich dein Umfeld stark?",
+      "day": 54,
+      "date": "2026-07-12",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "3 Typen von Menschen, die du in deinem Umfeld brauchst",
+      "status": "pending",
+      "hook": "Dein Erfolg hängt auch von deinem Tribe ab. Hast du die richtigen Leute um dich?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Typen von Menschen,",
+            "die du in",
+            "deinem Umfeld brauchst"
+          ],
+          "body": [
+            "Dein Schlüssel zu mehr Wachstum."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "TYP #1",
+          "num": "1 / 4",
+          "title": [
+            "Der Mentor"
+          ],
+          "body": [
+            "Gibt dir Orientierung, teilt Weisheit.",
+            "Zeigt dir den nächsten Schritt."
+          ]
+        },
+        {
+          "badge": "TYP #2",
+          "num": "2 / 4",
+          "title": [
+            "Der Challenger"
+          ],
+          "body": [
+            "Fordert dich heraus, bringt dich weiter.",
+            "Lässt dich nicht stagnieren."
+          ]
+        },
+        {
+          "badge": "TYP #3",
+          "num": "3 / 4",
+          "title": [
+            "Der Supporter"
+          ],
+          "body": [
+            "Glaubt an dich, wenn du zweifelst.",
+            "Gibt dir Kraft und Rückhalt."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Baue dir ein Umfeld, das dich trägt, herausfordert und inspiriert. Diese drei Typen von Menschen sind entscheidend für dein persönliches und berufliches Wachstum. Wer ist schon Teil deines 'Dream-Teams' und wer fehlt noch? Markiere jemanden, der ein Supporter für dich ist! 👇\n#mentviro #motivation #mentaltraining #erfolgsmentalität #erfolgreich #successmindset #selbstständig #entrepreneur #businesstips #reichtum #vermögensaufbau #finanzbildung #finanziellefreiheit #sparplan #finanztipps",
+      "pexels_queries": [
+        "diverse friends laughing city vibrant",
+        "inspiring mentor conversation",
+        "challenging workout partners",
+        "supportive community happy",
+        "urban neon energetic",
+        "social network connection"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Umfeld",
+        "deine Power.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Hast du einen Mentor?",
+      "day": 54,
+      "date": "2026-07-12",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Warum Verletzlichkeit deine größte Stärke ist",
+      "status": "pending",
+      "hook": "Niemand redet darüber, aber deine größte Schwäche könnte dein größter Vorteil sein.",
+      "script": [
+        "Wir verstecken unsere Unsicherheiten, unsere Ängste.",
+        "Wir glauben, Verletzlichkeit macht uns schwach und angreifbar.",
+        "Doch genau das Gegenteil ist der Fall.",
+        "Wahre Verbindung entsteht, wenn wir uns ehrlich zeigen.",
+        "Deine Verletzlichkeit ist der Mut, authentisch zu sein – deine größte Stärke.",
+        "Folge @mentviro."
+      ],
+      "caption": "In einer Welt, die oft Perfektion verlangt, ist Verletzlichkeit eine revolutionäre Kraft. Sie erfordert Mut, öffnet aber die Tür zu echten Beziehungen und tiefem Selbstverständnis. Trau dich, dich zu zeigen – du bist stärker, als du denkst. ❤️ Wann hast du dich zuletzt verletzlich gezeigt?\n#mentviro #motivation #mentaltraining #erfolgsmentalität #erfolgreich #successmindset #selbstständig #entrepreneur #businesstips #reichtum #vermögensaufbau #finanzbildung #finanziellefreiheit #sparplan #finanztipps",
+      "pexels_video_query": "person alone thoughtful light through trees calm ocean sunset",
+      "story_text": [
+        "NEUES REEL",
+        "Zeig dich",
+        "in deiner Stärke.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Ist Verletzlichkeit eine Stärke?",
+      "day": 55,
+      "date": "2026-07-13",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "3 Wege, wie du mit emotionaler Verletzlichkeit wächst",
+      "status": "pending",
+      "hook": "Die Angst vor dem Zeigen, wer du wirklich bist, hält dich zurück. Überwinde sie!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Wege, wie du mit",
+            "emotionaler",
+            "Verletzlichkeit wächst"
+          ],
+          "body": [
+            "Finde deine wahre Stärke darin."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 4",
+          "title": [
+            "Akzeptiere deine Ängste"
+          ],
+          "body": [
+            "Fühle sie, statt sie zu verstecken.",
+            "Sie sind Teil deiner Menschlichkeit."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 4",
+          "title": [
+            "Kommuniziere deine Bedürfnisse"
+          ],
+          "body": [
+            "Sprich offen über Gefühle.",
+            "Schaffe Raum für Empathie."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 4",
+          "title": [
+            "Setze gesunde Grenzen"
+          ],
+          "body": [
+            "Schütze dich selbst, ohne dich zu verschließen.",
+            "Verletzlichkeit braucht Schutz."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Gefühl"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Verletzlichkeit ist kein Zeichen von Schwäche, sondern ein Akt des größten Mutes. Indem wir lernen, uns unseren Ängsten zu stellen und unsere wahren Gefühle zu kommunizieren, schaffen wir tiefere Verbindungen und wachsen als Menschen. Wer inspiriert dich, verletzlich zu sein? 💖\n#mentviro #motivation #mentaltraining #erfolgsmentalität #erfolgreich #successmindset #selbstständig #entrepreneur #businesstips #reichtum #vermögensaufbau #finanzbildung #finanziellefreiheit #sparplan #finanztipps",
+      "pexels_queries": [
+        "deep forest path sunrise",
+        "calm morning light nature",
+        "hands reaching out connection",
+        "emotional honesty trust",
+        "stimmungsvoll warm naturlich",
+        "ocean rain reflection"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deine größte",
+        "Stärke.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fällt es dir leicht, dich zu zeigen?",
+      "day": 55,
+      "date": "2026-07-13",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -6129,6 +6475,66 @@
       "status": "pending",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "The view you adopt for yourself profoundly affects the way you lead your life.",
+        "author": "Carol Dweck"
+      },
+      "tips": {
+        "title": "Wachstumsdenken Tipps:",
+        "items": [
+          "Erkenne feste Gedankenmuster.",
+          "Fokus auf den Lernprozess.",
+          "Betrachte Fehler als Chance."
+        ]
+      },
+      "day": 53,
+      "date": "2026-07-11",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban friends diverse group laughing city pexels query",
+      "quote": {
+        "text": "You are the average of the five people you spend the most time with.",
+        "author": "Jim Rohn"
+      },
+      "tips": {
+        "title": "Umfeld gestalten Tipps:",
+        "items": [
+          "Identifiziere deine 5 wichtigsten Personen.",
+          "Suche aktiv Mentoren & Challenger.",
+          "Vermeide negative Einflüsse."
+        ]
+      },
+      "day": 54,
+      "date": "2026-07-12",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "stimmungsvoll warm naturlich forest sunrise ocean rain pexels query",
+      "quote": {
+        "text": "Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome.",
+        "author": "Brené Brown"
+      },
+      "tips": {
+        "title": "Verletzlichkeit meistern:",
+        "items": [
+          "Übe aktives Zuhören.",
+          "Teile ehrliche Gefühle.",
+          "Sei geduldig mit dir selbst."
+        ]
+      },
+      "day": 55,
+      "date": "2026-07-13",
+      "style": "gold",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0
