@@ -4843,7 +4843,7 @@
     },
     {
       "topic": "Klarheit schaffen: 3 Prinzipien für bessere Entscheidungen",
-      "status": "pending",
+      "status": "published",
       "hook": "So triffst du klare Entscheidungen, wenn alles unklar ist. 📊",
       "slides": [
         {
@@ -4922,7 +4922,10 @@
       "date": "2026-07-06",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18107433922811229",
+      "story_id": "17879093478612834",
+      "published_at": "2026-07-06T18:17:02Z"
     },
     {
       "topic": "Dein Energielevel als Performance-Hebel",
