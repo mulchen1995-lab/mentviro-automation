@@ -4925,11 +4925,15 @@
       "content_pillar": "educational",
       "post_id": "18107433922811229",
       "story_id": "17879093478612834",
-      "published_at": "2026-07-06T18:17:02Z"
+      "published_at": "2026-07-06T18:17:02Z",
+      "insights": {
+        "likes": 3,
+        "comments": 3
+      }
     },
     {
       "topic": "Dein Energielevel als Performance-Hebel",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Energielevel ist dein größter Hebel. ⚡",
       "script": [
         "Du startest motiviert, aber die Puste geht aus.",
@@ -4952,7 +4956,10 @@
       "date": "2026-07-07",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18226287817319294",
+      "story_id": "18014384495872730",
+      "published_at": "2026-07-07T08:23:18Z"
     },
     {
       "topic": "Die 5 größten Energie-Killer, die du ignorierst",
