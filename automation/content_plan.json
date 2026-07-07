@@ -4959,7 +4959,11 @@
       "content_pillar": "entertaining",
       "post_id": "18226287817319294",
       "story_id": "18014384495872730",
-      "published_at": "2026-07-07T08:23:18Z"
+      "published_at": "2026-07-07T08:23:18Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Die 5 größten Energie-Killer, die du ignorierst",
@@ -6440,7 +6444,7 @@
       "published_at": "2026-07-06T11:24:17Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "urban neon night energy",
       "quote": {
         "text": "Es ist nicht die Last, die dich bricht, sondern die Art, wie du sie trägst.",
@@ -6457,7 +6461,10 @@
       "day": 49,
       "date": "2026-07-07",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": "18460166629115815",
+      "published_at": "2026-07-07T10:20:23Z"
     },
     {
       "status": "pending",
