@@ -4967,7 +4967,7 @@
     },
     {
       "topic": "Die 5 größten Energie-Killer, die du ignorierst",
-      "status": "pending",
+      "status": "published",
       "hook": "Das sind die wahren Energie-Booster, die du ignorierst. 💥",
       "slides": [
         {
@@ -5066,7 +5066,10 @@
       "date": "2026-07-07",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18103869352875742",
+      "story_id": "17995673795986765",
+      "published_at": "2026-07-07T18:07:08Z"
     },
     {
       "topic": "5 Denkfallen, die dich sabotieren",
