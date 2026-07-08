@@ -5069,11 +5069,15 @@
       "content_pillar": "entertaining",
       "post_id": "18103869352875742",
       "story_id": "17995673795986765",
-      "published_at": "2026-07-07T18:07:08Z"
+      "published_at": "2026-07-07T18:07:08Z",
+      "insights": {
+        "likes": 3,
+        "comments": 1
+      }
     },
     {
       "topic": "5 Denkfallen, die dich sabotieren",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Hirn sabotiert dich (und du merkst es nicht).",
       "script": [
         "Jeder hat sie: die kleinen Denkfehler, die dein Potenzial blockieren.",
@@ -5096,7 +5100,10 @@
       "date": "2026-07-08",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17955871680186471",
+      "story_id": "18108438200104040",
+      "published_at": "2026-07-08T07:28:39Z"
     },
     {
       "topic": "5 Denkfehler, die dein Potenzial blockieren",
