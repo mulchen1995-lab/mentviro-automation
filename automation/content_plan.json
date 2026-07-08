@@ -5111,7 +5111,7 @@
     },
     {
       "topic": "5 Denkfehler, die dein Potenzial blockieren",
-      "status": "pending",
+      "status": "published",
       "hook": "Diese 5 Denkfehler sabotieren dich – und du merkst es nicht!",
       "slides": [
         {
@@ -5225,7 +5225,10 @@
       "date": "2026-07-08",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17896939773481831",
+      "story_id": "18095317730251044",
+      "published_at": "2026-07-08T17:46:23Z"
     },
     {
       "topic": "Warum der Weg wichtiger ist als das Ziel",
