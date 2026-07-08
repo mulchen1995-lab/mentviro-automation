@@ -5103,7 +5103,11 @@
       "content_pillar": "entertaining",
       "post_id": "17955871680186471",
       "story_id": "18108438200104040",
-      "published_at": "2026-07-08T07:28:39Z"
+      "published_at": "2026-07-08T07:28:39Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Denkfehler, die dein Potenzial blockieren",
@@ -6477,7 +6481,7 @@
       "published_at": "2026-07-07T10:20:23Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban thinking",
       "quote": {
         "text": "Es ist einfacher, einen Atomkern zu spalten, als ein Vorurteil.",
@@ -6494,7 +6498,10 @@
       "day": 50,
       "date": "2026-07-08",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-08T11:44:02Z"
     },
     {
       "day": 51,
