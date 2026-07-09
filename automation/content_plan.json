@@ -5228,11 +5228,15 @@
       "content_pillar": "entertaining",
       "post_id": "17896939773481831",
       "story_id": "18095317730251044",
-      "published_at": "2026-07-08T17:46:23Z"
+      "published_at": "2026-07-08T17:46:23Z",
+      "insights": {
+        "likes": 4,
+        "comments": 3
+      }
     },
     {
       "topic": "Warum der Weg wichtiger ist als das Ziel",
-      "status": "pending",
+      "status": "published",
       "hook": "Niemand redet darüber, aber der wahre Wert liegt im Prozess.",
       "script": [
         "Wir jagen Zielen hinterher, vergessen aber oft das Wichtigste.",
@@ -5255,7 +5259,10 @@
       "date": "2026-07-09",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18014246603857137",
+      "story_id": "17956877642983210",
+      "published_at": "2026-07-09T08:28:01Z"
     },
     {
       "topic": "3 Lektionen, die ich auf meinem Weg gelernt habe",
