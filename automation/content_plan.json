@@ -5270,7 +5270,7 @@
     },
     {
       "topic": "3 Lektionen, die ich auf meinem Weg gelernt habe",
-      "status": "pending",
+      "status": "published",
       "hook": "Ich hätte das früher wissen müssen: 3 Lektionen für deinen Weg.",
       "slides": [
         {
@@ -5359,7 +5359,10 @@
       "date": "2026-07-09",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18122919490773890",
+      "story_id": "18097574576256573",
+      "published_at": "2026-07-09T18:03:42Z"
     },
     {
       "topic": "Warum Disziplin keine Strafe ist, sondern Freiheit",
