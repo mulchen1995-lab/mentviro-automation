@@ -5262,7 +5262,11 @@
       "content_pillar": "emotional",
       "post_id": "18014246603857137",
       "story_id": "17956877642983210",
-      "published_at": "2026-07-09T08:28:01Z"
+      "published_at": "2026-07-09T08:28:01Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Lektionen, die ich auf meinem Weg gelernt habe",
@@ -5815,6 +5819,333 @@
       "type": "carousel",
       "style": "gold",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Geduld als Superkraft für langfristigen Erfolg",
+      "status": "pending",
+      "hook": "Warum die schnellste Abkürzung zum Erfolg die Geduld ist? ⏳",
+      "script": [
+        "In einer Welt, die Schnelligkeit feiert, wird Geduld oft unterschätzt.",
+        "Doch wahre Größe und nachhaltiger Erfolg entstehen selten über Nacht.",
+        "Jeder Baum, der Schatten spendet, war einst ein kleiner Samen.",
+        "Jeder Meister hat unzählige Stunden in seinen Weg investiert.",
+        "Geduld ist die leise Zutat, die Träume in Realität verwandelt.",
+        "Folge @mentviro für mehr tiefe Einblicke."
+      ],
+      "caption": "In unserer schnelllebigen Welt verlieren wir oft den Blick für das, was wirklich zählt: Geduld. Die Fähigkeit, auf den richtigen Moment zu warten, den Prozess zu ehren und Rückschläge als Teil des Weges zu akzeptieren, ist eine wahre Superkraft. Sie ist der Schlüssel zu nachhaltigem Wachstum und innerem Frieden. 🔑 Übe dich in Geduld, und du wirst feststellen, dass die größten Belohnungen jene sind, die Zeit brauchen. ❤️ #mentviro #mindset #persönlicheentwicklung #wachstum #erfolg #geduld #lebensweisheiten #selbstreflexion #innereStärke #motivation #ziele #gelassenheit #successmindset #achtsamkeit #innererfrieden",
+      "pexels_video_query": "slow motion sunrise forest warm light cinematic",
+      "story_text": [
+        "NEUES REEL",
+        "Die stille Kraft der Geduld",
+        "Dein Weg zu wahrem Erfolg",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir Geduld schwer?",
+      "day": 56,
+      "date": "2026-07-14",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Die stille Kraft der Geduld: 3 Wege, wie du sie entwickelst.",
+      "status": "pending",
+      "hook": "Geduld ist nicht nur eine Tugend – sie ist eine Superkraft für deinen Erfolg. ✨",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die stille Kraft",
+            "der Geduld"
+          ],
+          "body": [
+            "3 Wege, wie du diese Superkraft entwickelst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 4",
+          "title": [
+            "Den Prozess lieben"
+          ],
+          "body": [
+            "Fokus auf den Weg, nicht nur das Ziel. Jeder kleine Schritt zählt. Genieße das Lernen und Wachsen auf deiner Reise."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 4",
+          "title": [
+            "Kleine Fortschritte feiern"
+          ],
+          "body": [
+            "Erkenne und würdige jeden noch so kleinen Erfolg. Das stärkt deine Motivation und zeigt dir, dass du auf dem richtigen Weg bist."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 4",
+          "title": [
+            "Misserfolge als Feedback sehen"
+          ],
+          "body": [
+            "Jeder Rückschlag ist eine Lernchance, kein Scheitern. Analysiere, passe an und gehe gestärkt weiter. Bleibe hartnäckig."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lebenstipps"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Geduld ist die geheime Zutat, die deine Ambitionen in Realität verwandelt. In einer Welt, die sofortige Ergebnisse verlangt, ist die Fähigkeit, langfristig zu denken und den Prozess zu schätzen, ein echter Game Changer. ❤️ Baue diese innere Stärke auf und beobachte, wie deine Visionen Gestalt annehmen. Was ist dein größter Lernprozess in Sachen Geduld? 👇 #mentviro #mindset #persönlicheentwicklung #wachstum #erfolg #geduld #lebensweisheiten #selbstreflexion #innereStärke #motivation #ziele #gelassenheit #successmindset #achtsamkeit #innererfrieden",
+      "pexels_queries": [
+        "calm serene landscape",
+        "forest path sunlight",
+        "growth plant sprout",
+        "ocean sunset tranquil",
+        "rainy window cozy",
+        "mountain peak foggy"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Geduld: Deine Superkraft",
+        "3 Wege zum Erfolg",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Bist du geduldig genug?",
+      "day": 56,
+      "date": "2026-07-14",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Selbstsabotage überwinden",
+      "status": "pending",
+      "hook": "Hast du dich jemals selbst blockiert, obwohl du es besser wusstest? 🧠",
+      "script": [
+        "Wir alle kennen das: Du hast große Ziele, aber etwas hält dich zurück.",
+        "Oft ist es nicht die Außenwelt, sondern ein innerer Widerstand: Selbstsabotage.",
+        "Es sind die Ausreden, die Prokrastination, der Perfektionismus, der dich lähmt.",
+        "Der erste Schritt ist, diese Muster zu erkennen und ihre Ursache zu verstehen.",
+        "Nur wenn du die Wurzel packst, kannst du dein volles Potenzial entfalten.",
+        "Folge @mentviro für mehr mentale Stärke."
+      ],
+      "caption": "Selbstsabotage ist der heimliche Feind deines Erfolgs. Es ist das Muster, das dich davon abhält, dein volles Potenzial zu erreichen, obwohl du genau weißt, was zu tun wäre. Von Prokrastination bis zu negativen Selbstgesprächen – diese Verhaltensweisen blockieren dich. Doch die gute Nachricht ist: Du kannst sie überwinden! Erkenne die Muster, hinterfrage die Ursachen und beginne, neue, unterstützende Gewohnheiten zu etablieren. Du hast die Macht, dich selbst zu befreien. 💪 #mentviro #mindset #persönlicheentwicklung #selbstentwicklung #erfolg #produktivität #fokus #gewohnheiten #mentaltraining #selbstbeherrschung #wachstumsdenken #blockadenlösen #ziele #motivation #successmindset",
+      "pexels_video_query": "dark minimal geometric movement abstract",
+      "story_text": [
+        "NEUES REEL",
+        "Dein größter Feind",
+        "Selbstsabotage besiegen",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt es dir schwer, anzufangen?",
+      "day": 57,
+      "date": "2026-07-15",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Selbstsabotage stoppen: 3 Schritte zu deinem wahren Potenzial.",
+      "status": "pending",
+      "hook": "Hör auf, dich selbst zu blockieren! 🛑 3 Schritte zu deinem wahren Potenzial.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Selbstsabotage",
+            "stoppen"
+          ],
+          "body": [
+            "3 Schritte zu deinem wahren Potenzial."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SCHRITT #1",
+          "num": "1 / 4",
+          "title": [
+            "Muster erkennen"
+          ],
+          "body": [
+            "Beobachte, wann und wie du dich selbst sabotierst. Sind es Ausreden, Perfektionismus oder Prokrastination? Werde dir deiner Muster bewusst."
+          ]
+        },
+        {
+          "badge": "SCHRITT #2",
+          "num": "2 / 4",
+          "title": [
+            "Ursachen verstehen"
+          ],
+          "body": [
+            "Was steckt dahinter? Oft sind es Angst vor Erfolg, Misserfolg oder unbewusste Glaubenssätze. Verstehe die psychologischen Wurzeln."
+          ]
+        },
+        {
+          "badge": "SCHRITT #3",
+          "num": "3 / 4",
+          "title": [
+            "Neue Routinen etablieren"
+          ],
+          "body": [
+            "Ersetze sabotierende Gewohnheiten durch förderliche Rituale. Beginne klein, sei konsequent und stärke dein Selbstvertrauen Schritt für Schritt."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Mentale Stärke"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Der größte Kampf findet oft in deinem Kopf statt. Selbstsabotage ist subtil, aber mächtig. Sie hindert dich daran, das Leben zu führen, das du dir wünschst. Doch du bist nicht machtlos! Mit diesen 3 Schritten kannst du die Ketten sprengen und dein volles Potenzial entfalten. Es ist Zeit, dein eigener Verbündeter zu werden. 🚀 Welches sabotierende Muster willst du zuerst durchbrechen? #mentviro #mindset #persönlicheentwicklung #selbstentwicklung #erfolg #produktivität #fokus #gewohnheiten #mentaltraining #selbstbeherrschung #wachstumsdenken #blockadenlösen #ziele #motivation #successmindset",
+      "pexels_queries": [
+        "minimal dark contrast",
+        "abstract light shadow",
+        "focused concentration",
+        "new beginning path",
+        "breaking chains concept",
+        "clean desk success"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Selbstsabotage stoppen",
+        "3 Schritte für dein Potenzial",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Sabotierst du dich selbst?",
+      "day": 57,
+      "date": "2026-07-15",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die Kunst des Nein-Sagens",
+      "status": "pending",
+      "hook": "POV: Dein Kalender explodiert, weil du nie Nein sagst. 🤯",
+      "script": [
+        "Stell dir vor: Jemand fragt, du sagst ja, obwohl du keine Zeit hast.",
+        "Dein Kalender ist voll, deine Energie am Limit, aber du willst niemanden enttäuschen.",
+        "Das ständige Ja zu anderen ist oft ein Nein zu dir selbst und deinen Zielen.",
+        "Die Kunst des Nein-Sagens befreit dich, schafft Raum für das, was dir wichtig ist.",
+        "Dein 'Nein' zu Unwichtigem ist ein 'Ja' zu deiner Priorität. Teste es!",
+        "Folge @mentviro für mehr Lifehacks."
+      ],
+      "caption": "Wir alle kennen es: Aus Höflichkeit, aus Angst vor Ablehnung oder einfach, weil wir helfen wollen, sagen wir 'Ja', wo wir eigentlich 'Nein' meinen. Doch jedes 'Ja' zu einer unwichtigen Bitte ist ein 'Nein' zu deinen eigenen Zielen, deiner Erholung oder deiner eigentlichen Priorität. 🤷‍♀️ Lerne die Kunst des Nein-Sagens – es ist keine Ablehnung der Person, sondern eine Priorisierung deiner Zeit und Energie. Es ist dein Schlüssel zu mehr Fokus und Freiheit. ✨ Wann hast du das letzte Mal bewusst Nein gesagt? 👇 #mentviro #mindset #produktivität #selbstmanagement #zeitmanagement #grenzensetzen #lifestyle #selbstentwicklung #fokus #erfolg #motivation #disziplin #mentalestärke #worklifebalance #priorisierung",
+      "pexels_video_query": "fast paced city life overwhelmed neon lights",
+      "story_text": [
+        "NEUES REEL",
+        "Nein sagen lernen",
+        "Dein Schlüssel zur Freiheit",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir Nein sagen schwer?",
+      "day": 58,
+      "date": "2026-07-16",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Das 'Nein', das dein Leben verändert: 3 Wege, um Grenzen zu setzen.",
+      "status": "pending",
+      "hook": "Dein 'Ja' zu jedem ist ein 'Nein' zu dir. 🤯 Setze Grenzen mit diesen 3 Wegen.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Das 'Nein', das",
+            "dein Leben verändert"
+          ],
+          "body": [
+            "3 Wege, um gesunde Grenzen zu setzen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 4",
+          "title": [
+            "Prioritäten klar benennen"
+          ],
+          "body": [
+            "Bevor du zustimmst, frage dich: Passt das zu meinen Zielen? Dein 'Nein' ist ein 'Ja' zu dem, was dir wirklich wichtig ist."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 4",
+          "title": [
+            "Alternativen vorschlagen"
+          ],
+          "body": [
+            "Ein 'Nein' muss nicht abrupt sein. Biete, wenn möglich, eine andere Lösung oder einen späteren Zeitpunkt an. \"Ich kann X nicht tun, aber Y.\""
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 4",
+          "title": [
+            "Deine Zeit schützen"
+          ],
+          "body": [
+            "Betrachte deine Zeit und Energie als kostbare Ressourcen. Lerne, sie zu verteidigen. \"Ich habe dafür aktuell keine Kapazität.\" ist ein vollständiger Satz."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Produktivität"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Ein kleines Wort mit großer Wirkung: 'Nein'. Viele scheuen es, doch es ist einer der mächtigsten Hebel für deine Produktivität, dein Wohlbefinden und deine mentale Stärke. 🙌 Indem du lernst, klare Grenzen zu setzen, schaffst du Raum für das, was dir Energie gibt und dich voranbringt. Es ist Zeit, dein eigener Manager zu werden. 💪 Wie oft sagst du Nein? #mentviro #mindset #produktivität #selbstmanagement #zeitmanagement #grenzensetzen #lifestyle #selbstentwicklung #fokus #erfolg #motivation #disziplin #mentalestärke #worklifebalance #priorisierung",
+      "pexels_queries": [
+        "energetic urban neon",
+        "person saying no hand gesture",
+        "time management clock",
+        "clear path future",
+        "work life balance concept",
+        "boundaries personal space"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Das 'Nein' das alles ändert",
+        "3 Wege für mehr Freiheit",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fühlst du dich überfordert?",
+      "day": 58,
+      "date": "2026-07-16",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "story_queue": [
@@ -6516,9 +6847,12 @@
     {
       "day": 51,
       "date": "2026-07-09",
-      "status": "pending",
+      "status": "published",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-09T10:20:19Z"
     },
     {
       "day": 52,
@@ -6586,6 +6920,40 @@
       "date": "2026-07-13",
       "style": "gold",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "calm serene landscape",
+      "quote": {
+        "text": "„Wer die Natur verstehen will, muss Geduld haben. Wer sich selbst verstehen will, noch mehr.“",
+        "author": "Lucius Annaeus Seneca"
+      },
+      "tips": {
+        "title": "Geduld üben im Alltag",
+        "items": [
+          "1 Minute meditieren.",
+          "Warten statt sofort reagieren.",
+          "Ein Hobby langsam lernen."
+        ]
+      },
+      "day": 56,
+      "date": "2026-07-14",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "day": 57,
+      "date": "2026-07-15",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "day": 58,
+      "date": "2026-07-16",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "evergreen_cursor": 0
