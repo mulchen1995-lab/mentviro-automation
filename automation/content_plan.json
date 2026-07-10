@@ -5404,7 +5404,7 @@
     },
     {
       "topic": "3 Wege, wie du echte Disziplin aufbaust",
-      "status": "pending",
+      "status": "published",
       "hook": "Was steckt hinter mentaler Stärke? 3 Prinzipien der Disziplin.",
       "slides": [
         {
@@ -5493,7 +5493,10 @@
       "date": "2026-07-10",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17884998864436790",
+      "story_id": "17938280007273735",
+      "published_at": "2026-07-10T17:52:34Z"
     },
     {
       "topic": "Die Kraft des Wachstumsdenkens",
