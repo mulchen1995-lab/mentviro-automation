@@ -5362,11 +5362,15 @@
       "content_pillar": "emotional",
       "post_id": "18122919490773890",
       "story_id": "18097574576256573",
-      "published_at": "2026-07-09T18:03:42Z"
+      "published_at": "2026-07-09T18:03:42Z",
+      "insights": {
+        "likes": 3,
+        "comments": 3
+      }
     },
     {
       "topic": "Warum Disziplin keine Strafe ist, sondern Freiheit",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum gewinnen disziplinierte Menschen? Es ist kein Zufall.",
       "script": [
         "Viele sehen Disziplin als Zwang, als Einschränkung.",
@@ -5389,7 +5393,10 @@
       "date": "2026-07-10",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18178665877406726",
+      "story_id": "17887520754415588",
+      "published_at": "2026-07-10T08:22:43Z"
     },
     {
       "topic": "3 Wege, wie du echte Disziplin aufbaust",
