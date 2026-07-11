@@ -5538,7 +5538,7 @@
     },
     {
       "topic": "3 Wege, um dein Wachstumsdenken zu stärken",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Mindset entscheidet über deinen Erfolg. So trainierst du es!",
       "slides": [
         {
@@ -5620,7 +5620,10 @@
       "date": "2026-07-11",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18474793681096762",
+      "story_id": "18133675384525172",
+      "published_at": "2026-07-11T17:05:19Z"
     },
     {
       "topic": "Dein Umfeld formt dich mehr, als du denkst",
