@@ -5530,7 +5530,11 @@
       "content_pillar": "educational",
       "post_id": "17882433222608212",
       "story_id": "18119115700801999",
-      "published_at": "2026-07-11T07:11:46Z"
+      "published_at": "2026-07-11T07:11:46Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Wege, um dein Wachstumsdenken zu stärken",
@@ -6889,7 +6893,7 @@
       "published_at": "2026-07-10T10:17:47Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "The view you adopt for yourself profoundly affects the way you lead your life.",
@@ -6906,7 +6910,10 @@
       "day": 53,
       "date": "2026-07-11",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-11T10:58:41Z"
     },
     {
       "status": "pending",
