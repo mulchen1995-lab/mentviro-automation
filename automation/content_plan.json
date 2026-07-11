@@ -5496,11 +5496,15 @@
       "content_pillar": "educational",
       "post_id": "17884998864436790",
       "story_id": "17938280007273735",
-      "published_at": "2026-07-10T17:52:34Z"
+      "published_at": "2026-07-10T17:52:34Z",
+      "insights": {
+        "likes": 2,
+        "comments": 3
+      }
     },
     {
       "topic": "Die Kraft des Wachstumsdenkens",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum manche Menschen aus jeder Niederlage stärker hervorgehen.",
       "script": [
         "Hast du ein fixes oder ein Wachstumsdenken?",
@@ -5523,7 +5527,10 @@
       "date": "2026-07-11",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17882433222608212",
+      "story_id": "18119115700801999",
+      "published_at": "2026-07-11T07:11:46Z"
     },
     {
       "topic": "3 Wege, um dein Wachstumsdenken zu stärken",
