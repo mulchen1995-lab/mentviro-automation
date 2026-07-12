@@ -5665,7 +5665,7 @@
     },
     {
       "topic": "3 Typen von Menschen, die du in deinem Umfeld brauchst",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Erfolg hängt auch von deinem Tribe ab. Hast du die richtigen Leute um dich?",
       "slides": [
         {
@@ -5747,7 +5747,10 @@
       "date": "2026-07-12",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17869805868562293",
+      "story_id": "18096231623592943",
+      "published_at": "2026-07-12T17:07:29Z"
     },
     {
       "topic": "Warum Verletzlichkeit deine größte Stärke ist",
