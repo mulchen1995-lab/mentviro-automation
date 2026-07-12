@@ -5623,11 +5623,15 @@
       "content_pillar": "educational",
       "post_id": "18474793681096762",
       "story_id": "18133675384525172",
-      "published_at": "2026-07-11T17:05:19Z"
+      "published_at": "2026-07-11T17:05:19Z",
+      "insights": {
+        "likes": 1,
+        "comments": 1
+      }
     },
     {
       "topic": "Dein Umfeld formt dich mehr, als du denkst",
-      "status": "pending",
+      "status": "published",
       "hook": "Bist du der Durchschnitt der 5 Menschen, mit denen du die meiste Zeit verbringst?",
       "script": [
         "Man sagt, du bist der Durchschnitt der 5 Menschen...",
@@ -5650,7 +5654,10 @@
       "date": "2026-07-12",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18117169510861874",
+      "story_id": "17896273911515221",
+      "published_at": "2026-07-12T07:29:50Z"
     },
     {
       "topic": "3 Typen von Menschen, die du in deinem Umfeld brauchst",
@@ -6177,6 +6184,381 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Die Kunst der klaren Entscheidung: Wie du mentale Blockaden überwindest.",
+      "status": "pending",
+      "hook": "Warum fällt uns das Treffen wichtiger Entscheidungen oft so schwer? 🤔",
+      "script": [
+        "Jeder von uns kennt diesen Moment: Du stehst vor einer wichtigen Entscheidung.",
+        "Der Kopf ist voll mit 'Was wäre, wenn...' und die Angst vor Fehlern lähmt dich.",
+        "Doch oft liegt das Problem nicht bei der Entscheidung selbst, sondern bei deinem Mindset.",
+        "Lerne, wie du deine Gedanken ordnest und mentale Blockaden gezielt auflöst.",
+        "Klarheit führt zu Taten, und jede gute Entscheidung beginnt mit einem klaren Kopf.",
+        "Folge @mentviro für mehr mentale Stärke. 💡"
+      ],
+      "caption": "Oft ist nicht die Komplexität der Entscheidung das Problem, sondern die mentale Blockade, die wir selbst aufbauen. Indem wir lernen, unsere Gedanken zu strukturieren und Ängste zu erkennen, öffnen wir den Weg für klare, selbstbewusste Entscheidungen. Mach Schluss mit Entscheidungsparalyse. 💪\n\n#mindset #erfolgsmentalität #zielsetzung #motivation #successmindset #erfolgreich #businessmindset #produktivität #persönlicheentwicklung #wachstumsdenken #fokus #selbstentwicklung #klarheit #entscheidungen #mentviro",
+      "pexels_video_query": "dark cinematic decision making",
+      "story_text": [
+        "NEUES REEL",
+        "Klarheit finden:",
+        "Bessere Entscheidungen",
+        "Jetzt anschauen 🚀"
+      ],
+      "story_poll": "Fällt dir Entscheiden schwer?",
+      "day": 59,
+      "date": "2026-07-17",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 mentale Modelle für deine besten Entscheidungen.",
+      "status": "pending",
+      "hook": "Nie wieder Entscheidungsparalyse! 🙅‍♀️ Lerne, wie Top-Performer denken.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 MENTALE MODELLE",
+            "FÜR DEINE BESTEN",
+            "ENTSCHEIDUNGEN"
+          ],
+          "body": [
+            "Entscheidungen zu treffen kann lähmend sein.",
+            "Doch mit den richtigen Denkrahmen wird es klarer."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "MODELL #1",
+          "num": "1 / 4",
+          "title": [
+            "OPPORTUNITÄTS-KOSTEN"
+          ],
+          "body": [
+            "Jede Entscheidung bedeutet,",
+            "eine andere Option aufzugeben.",
+            "Frag dich: Was verliere ich,",
+            "wenn ich DIESEN Weg wähle?",
+            "Macht der Gewinn das wert?"
+          ],
+          "image_query": "minimalist abstract opportunity"
+        },
+        {
+          "badge": "MODELL #2",
+          "num": "2 / 4",
+          "title": [
+            "BEDAUERN MINIMIEREN"
+          ],
+          "body": [
+            "Stell dir vor, du bist 80 Jahre alt.",
+            "Welche Entscheidung würdest du am meisten",
+            "bereuen, nicht getroffen zu haben?",
+            "Wähle den Weg, der dir langfristig",
+            "das geringste Bedauern beschert."
+          ],
+          "image_query": "dark minimal regret"
+        },
+        {
+          "badge": "MODELL #3",
+          "num": "3 / 4",
+          "title": [
+            "FIRST PRINCIPLES"
+          ],
+          "body": [
+            "Zerlege das Problem in seine",
+            "grundlegendsten Wahrheiten.",
+            "Was sind die absoluten Fakten,",
+            "ohne Annahmen oder Vergleiche?",
+            "Baue deine Lösung von Grund auf neu."
+          ],
+          "image_query": "minimalist geometric logic"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Erfolgstools"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ],
+          "image_query": "dark futuristic success"
+        }
+      ],
+      "caption": "Gute Entscheidungen sind kein Zufall, sondern das Ergebnis eines klaren Denkprozesses. Mit diesen drei mentalen Modellen rüstest du dich für jede Herausforderung und findest den Weg, der wirklich zu dir passt. Welches Modell wendest du am liebsten an? 👇\n\n#mindset #erfolgsmentalität #zielsetzung #motivation #successmindset #erfolgreich #businessmindset #produktivität #persönlicheentwicklung #wachstumsdenken #fokus #selbstentwicklung #klarheit #entscheidungen #mentviro",
+      "pexels_queries": [
+        "dark minimal decision making",
+        "minimalist abstract opportunity",
+        "dark minimal regret",
+        "minimalist geometric logic",
+        "dark futuristic success"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "3 Modelle für",
+        "bessere Entscheidungen",
+        "Jetzt ansehen 💡"
+      ],
+      "story_poll": "Welches Modell hilft dir?",
+      "day": 59,
+      "date": "2026-07-17",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Der stille Anker: Wie du inmitten des Sturms Ruhe findest.",
+      "status": "pending",
+      "hook": "Es gab einen Moment, da war mein Kopf voller Lärm... 🌪️",
+      "script": [
+        "Jeder von uns kennt Phasen, in denen der Alltag überfordert.",
+        "Der Druck wächst, die Gedanken rasen, innere Unruhe macht sich breit.",
+        "Ich erinnere mich an Zeiten, da schien es keinen Ausweg zu geben.",
+        "Doch ich habe gelernt: Wahre Ruhe findest du nicht im Außen, sondern in dir.",
+        "Entdecke, wie du deinen eigenen stillen Anker wirfst und Gelassenheit kultivierst.",
+        "Folge @mentviro für innere Balance. ❤️"
+      ],
+      "caption": "In unserer lauten Welt ist es leicht, den Kontakt zu unserer inneren Ruhe zu verlieren. Doch genau diese Ruhe ist unser Anker, wenn der Sturm des Lebens tobt. Es ist ein Prozess, sie zu finden und zu bewahren, aber jeder Schritt lohnt sich. Was hilft dir, zur Ruhe zu kommen? 👇\n\n#mindset #erfolgsmentalität #motivation #successmindset #erfolgreich #persönlicheentwicklung #selbstreflexion #innerefrieden #achtsamkeit #balance #resilienz #lebensweisheit #ruhe #wachstum #mentviro",
+      "pexels_video_query": "calm nature sunrise peaceful",
+      "story_text": [
+        "NEUES REEL",
+        "Finde deine Mitte:",
+        "Innere Ruhe entdecken",
+        "Jetzt anschauen 💖"
+      ],
+      "story_poll": "Fühlst du dich oft gestresst?",
+      "day": 60,
+      "date": "2026-07-18",
+      "type": "reel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "3 kleine Rituale für tiefere innere Ruhe.",
+      "status": "pending",
+      "hook": "Dein Alltag ist ein Sturm? Finde deine Oase. 🏖️ Mit diesen Ritualen.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 RITUALE",
+            "FÜR TIEFERE",
+            "INNERE RUHE"
+          ],
+          "body": [
+            "Finde Gelassenheit, wenn die Welt laut wird.",
+            "Kleine Gewohnheiten machen den Unterschied."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "RITUAL #1",
+          "num": "1 / 4",
+          "title": [
+            "MINDFUL BREATHING"
+          ],
+          "body": [
+            "Nimm dir 5 Minuten.",
+            "Schließe die Augen.",
+            "Atme 4 Sekunden ein, halte 4,",
+            "atme 6 Sekunden aus.",
+            "Fühle, wie die Anspannung weicht."
+          ],
+          "image_query": "warm sunlight breathing"
+        },
+        {
+          "badge": "RITUAL #2",
+          "num": "2 / 4",
+          "title": [
+            "DIGITAL DETOX MOMENT"
+          ],
+          "body": [
+            "Lege das Handy für 30 Minuten weg.",
+            "Schalte Benachrichtigungen aus.",
+            "Nutze die Zeit für dich:",
+            "ein Buch, ein Spaziergang, Stille."
+          ],
+          "image_query": "cozy home no phone"
+        },
+        {
+          "badge": "RITUAL #3",
+          "num": "3 / 4",
+          "title": [
+            "NATURE WALK"
+          ],
+          "body": [
+            "Verbringe täglich 15 Minuten",
+            "bewusst in der Natur.",
+            "Lausche den Geräuschen,",
+            "fühle den Wind, atme tief ein.",
+            "Die Natur erdet dich sofort."
+          ],
+          "image_query": "peaceful forest path morning"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Inspiration",
+            "für dein Wachstum"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ],
+          "image_query": "calm ocean sunset"
+        }
+      ],
+      "caption": "Innere Ruhe ist kein Luxus, sondern eine Notwendigkeit für ein erfülltes Leben. Diese einfachen Rituale helfen dir, im Alltag Momente der Stille zu finden und deine Batterien aufzuladen. Probier sie aus und spüre den Unterschied! Welches Ritual spricht dich am meisten an? ✨\n\n#mindset #erfolgsmentalität #motivation #successmindset #erfolgreich #persönlicheentwicklung #selbstreflexion #innerefrieden #achtsamkeit #balance #resilienz #lebensweisheit #ruhe #wachstum #mentviro",
+      "pexels_queries": [
+        "calm nature sunrise",
+        "warm sunlight breathing",
+        "cozy home no phone",
+        "peaceful forest path morning",
+        "calm ocean sunset"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Rituale für",
+        "Innere Ruhe",
+        "Jetzt ansehen 🧘‍♀️"
+      ],
+      "story_poll": "Brauchst du mehr Ruhe?",
+      "day": 60,
+      "date": "2026-07-18",
+      "type": "carousel",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Der Spiegel der Seele: Warum Selbstreflexion dein Wachstum beschleunigt.",
+      "status": "pending",
+      "hook": "Kennst du deine blinden Flecken? 👀 Selbstreflexion ist der Schlüssel!",
+      "script": [
+        "Die meisten Menschen leben ihr Leben, ohne je wirklich innezuhalten.",
+        "Sie jagen Zielen hinterher, ohne zu wissen, warum oder ob es die richtigen sind.",
+        "Doch wahres Wachstum beginnt mit einem Blick nach innen: der Selbstreflexion.",
+        "Sie deckt Denkfehler auf, stärkt deine Stärken und zeigt dir deinen wahren Weg.",
+        "Lerne, wie du diesen mächtigen Spiegel nutzt, um dein volles Potenzial zu entfalten.",
+        "Folge @mentviro für tiefere Einsichten. 🧠"
+      ],
+      "caption": "Selbstreflexion ist wie ein mentaler Muskel: Je öfter du ihn trainierst, desto stärker und klarer wird dein Blick auf dich selbst und deine Umwelt. Sie ist der Katalysator für persönliches Wachstum und hilft dir, bewusste Entscheidungen zu treffen. Wann nimmst du dir Zeit für dich? 👇\n\n#mindset #erfolgsmentalität #zielsetzung #motivation #successmindset #erfolgreich #persönlicheentwicklung #selbstreflexion #wachstumsdenken #klarheit #fokus #identität #disziplin #lernen #mentviro",
+      "pexels_video_query": "dark minimal thinking self reflection",
+      "story_text": [
+        "NEUES REEL",
+        "Wachstum durch",
+        "Selbstreflexion",
+        "Jetzt anschauen 🚀"
+      ],
+      "story_poll": "Reflektierst du regelmäßig?",
+      "day": 61,
+      "date": "2026-07-19",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Fragen, die jede Selbstreflexion transformieren.",
+      "status": "pending",
+      "hook": "Stell dir die richtigen Fragen, um zu wachsen. 📈 Es ist einfacher, als du denkst!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 FRAGEN, DIE JEDE",
+            "SELBSTREFLEXION",
+            "TRANSFORMIEREN"
+          ],
+          "body": [
+            "Tiefere Erkenntnisse, klarere Ziele, schnelleres Wachstum.",
+            "Dein Turbo für die persönliche Entwicklung."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "FRAGE #1",
+          "num": "1 / 4",
+          "title": [
+            "WAS LIEF WIRKLICH GUT",
+            "(UND WARUM)? WAS NICHT?"
+          ],
+          "body": [
+            "Analysiere Erfolge und Misserfolge objektiv.",
+            "Verstehe die Ursachen, nicht nur die Ergebnisse.",
+            "Lerne aus beidem für die Zukunft."
+          ],
+          "image_query": "minimalist abstract success failure"
+        },
+        {
+          "badge": "FRAGE #2",
+          "num": "2 / 4",
+          "title": [
+            "WOFÜR BIN ICH HEUTE",
+            "(ODER ALLGEMEIN) DANKBAR?"
+          ],
+          "body": [
+            "Fokus auf Positives verschiebt deine Perspektive.",
+            "Es stärkt Resilienz und Zufriedenheit.",
+            "Erkenne den Wert im Kleinen."
+          ],
+          "image_query": "dark minimal gratitude"
+        },
+        {
+          "badge": "FRAGE #3",
+          "num": "3 / 4",
+          "title": [
+            "WAS KANN ICH MORGEN",
+            "(ODER NÄCHSTES MAL)",
+            "ANDERES MACHEN?"
+          ],
+          "body": [
+            "Identifiziere konkrete Handlungsfelder.",
+            "Vermeide Wiederholung gleicher Fehler.",
+            "Setze einen kleinen, umsetzbaren Schritt."
+          ],
+          "image_query": "minimalist clear path change"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Erfolgstools"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ],
+          "image_query": "dark futuristic growth"
+        }
+      ],
+      "caption": "Selbstreflexion ist der Kompass für dein Leben. Mit diesen drei Fragen kannst du jede Erfahrung in eine wertvolle Lektion verwandeln und dein persönliches Wachstum beschleunigen. Nimm dir heute 10 Minuten Zeit und probiere es aus! Welche Frage stellst du dir zuerst? 🤔\n\n#mindset #erfolgsmentalität #zielsetzung #motivation #successmindset #erfolgreich #persönlicheentwicklung #selbstreflexion #wachstumsdenken #klarheit #fokus #identität #disziplin #lernen #mentviro",
+      "pexels_queries": [
+        "dark minimal self reflection",
+        "minimalist abstract success failure",
+        "dark minimal gratitude",
+        "minimalist clear path change",
+        "dark futuristic growth"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "3 Fragen für",
+        "dein Wachstum",
+        "Jetzt ansehen 💡"
+      ],
+      "story_poll": "Reflektierst du mit Fragen?",
+      "day": 61,
+      "date": "2026-07-19",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -6991,6 +7373,66 @@
       "status": "pending",
       "style": "silver",
       "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Nicht die Dinge selbst beunruhigen die Menschen, sondern ihre Meinungen über die Dinge.",
+        "author": "Epiktet"
+      },
+      "tips": {
+        "title": "3 Tipps für Entscheidungen",
+        "items": [
+          "Fakten von Meinungen trennen",
+          "Pro & Contra klar aufschreiben",
+          "Langfristige Folgen bedenken"
+        ]
+      },
+      "day": 59,
+      "date": "2026-07-17",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "calm nature warm pexels query",
+      "quote": {
+        "text": "Die Stille ist der Raum, in dem wir uns selbst begegnen können.",
+        "author": "Eckhart Tolle"
+      },
+      "tips": {
+        "title": "3 Wege zu mehr Ruhe",
+        "items": [
+          "Digitale Auszeiten einplanen",
+          "Achtsamkeit im Alltag üben",
+          "Regelmäßig in die Natur"
+        ]
+      },
+      "day": 60,
+      "date": "2026-07-18",
+      "style": "gold",
+      "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Das unerforschte Leben ist es nicht wert, gelebt zu werden.",
+        "author": "Sokrates"
+      },
+      "tips": {
+        "title": "3 Tipps für Reflexion",
+        "items": [
+          "Feste Reflexionszeit einplanen",
+          "Tagebuch schreiben (digital/analog)",
+          "Ehrliche Fragen an dich stellen"
+        ]
+      },
+      "day": 61,
+      "date": "2026-07-19",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0
