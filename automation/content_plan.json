@@ -5657,7 +5657,11 @@
       "content_pillar": "entertaining",
       "post_id": "18117169510861874",
       "story_id": "17896273911515221",
-      "published_at": "2026-07-12T07:29:50Z"
+      "published_at": "2026-07-12T07:29:50Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Typen von Menschen, die du in deinem Umfeld brauchst",
@@ -7301,7 +7305,7 @@
       "published_at": "2026-07-11T10:58:41Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban friends diverse group laughing city pexels query",
       "quote": {
         "text": "You are the average of the five people you spend the most time with.",
@@ -7318,7 +7322,10 @@
       "day": 54,
       "date": "2026-07-12",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-12T11:07:12Z"
     },
     {
       "status": "pending",
