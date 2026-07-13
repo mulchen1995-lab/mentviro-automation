@@ -5784,7 +5784,11 @@
       "content_pillar": "emotional",
       "post_id": "17897426733541695",
       "story_id": "17897526735517732",
-      "published_at": "2026-07-13T08:17:32Z"
+      "published_at": "2026-07-13T08:17:32Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Wege, wie du mit emotionaler Verletzlichkeit wächst",
@@ -7338,7 +7342,7 @@
       "published_at": "2026-07-12T11:07:12Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "stimmungsvoll warm naturlich forest sunrise ocean rain pexels query",
       "quote": {
         "text": "Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome.",
@@ -7355,7 +7359,10 @@
       "day": 55,
       "date": "2026-07-13",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-13T10:18:14Z"
     },
     {
       "status": "pending",
