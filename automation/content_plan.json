@@ -5750,11 +5750,15 @@
       "content_pillar": "entertaining",
       "post_id": "17869805868562293",
       "story_id": "18096231623592943",
-      "published_at": "2026-07-12T17:07:29Z"
+      "published_at": "2026-07-12T17:07:29Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Warum Verletzlichkeit deine größte Stärke ist",
-      "status": "pending",
+      "status": "published",
       "hook": "Niemand redet darüber, aber deine größte Schwäche könnte dein größter Vorteil sein.",
       "script": [
         "Wir verstecken unsere Unsicherheiten, unsere Ängste.",
@@ -5777,7 +5781,10 @@
       "date": "2026-07-13",
       "type": "reel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17897426733541695",
+      "story_id": "17897526735517732",
+      "published_at": "2026-07-13T08:17:32Z"
     },
     {
       "topic": "3 Wege, wie du mit emotionaler Verletzlichkeit wächst",
