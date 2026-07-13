@@ -5792,7 +5792,7 @@
     },
     {
       "topic": "3 Wege, wie du mit emotionaler Verletzlichkeit wächst",
-      "status": "pending",
+      "status": "published",
       "hook": "Die Angst vor dem Zeigen, wer du wirklich bist, hält dich zurück. Überwinde sie!",
       "slides": [
         {
@@ -5874,7 +5874,10 @@
       "date": "2026-07-13",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18192405547346107",
+      "story_id": "17917271385408225",
+      "published_at": "2026-07-13T18:01:08Z"
     },
     {
       "topic": "Geduld als Superkraft für langfristigen Erfolg",
