@@ -2395,7 +2395,7 @@
       "type": "reel",
       "date": "2026-06-18",
       "status": "pending",
-      "style": "gold",
+      "style": "silver",
       "content_pillar": "emotional",
       "source": "evergreen"
     },
@@ -2482,7 +2482,7 @@
       "type": "carousel",
       "date": "2026-06-18",
       "status": "pending",
-      "style": "gold",
+      "style": "silver",
       "content_pillar": "emotional",
       "source": "evergreen"
     },
@@ -2602,7 +2602,7 @@
       "type": "carousel",
       "date": "2026-06-19",
       "status": "pending",
-      "style": "gold",
+      "style": "silver",
       "content_pillar": "entertaining",
       "source": "evergreen"
     },
@@ -2896,7 +2896,7 @@
       "day": 34,
       "date": "2026-06-22",
       "type": "reel",
-      "style": "gold",
+      "style": "silver",
       "content_pillar": "emotional"
     },
     {
@@ -6370,7 +6370,7 @@
       "day": 60,
       "date": "2026-07-18",
       "type": "reel",
-      "style": "gold",
+      "style": "silver",
       "content_pillar": "emotional"
     },
     {
@@ -6468,7 +6468,7 @@
       "day": 60,
       "date": "2026-07-18",
       "type": "carousel",
-      "style": "gold",
+      "style": "silver",
       "content_pillar": "emotional"
     },
     {
