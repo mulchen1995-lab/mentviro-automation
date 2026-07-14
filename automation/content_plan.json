@@ -5911,7 +5911,11 @@
       "content_pillar": "emotional",
       "post_id": "17928002757359668",
       "story_id": "18021126887890965",
-      "published_at": "2026-07-14T07:12:13Z"
+      "published_at": "2026-07-14T07:12:13Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Die stille Kraft der Geduld: 3 Wege, wie du sie entwickelst.",
@@ -7375,7 +7379,7 @@
       "published_at": "2026-07-13T10:18:14Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "calm serene landscape",
       "quote": {
         "text": "„Wer die Natur verstehen will, muss Geduld haben. Wer sich selbst verstehen will, noch mehr.“",
@@ -7392,7 +7396,10 @@
       "day": 56,
       "date": "2026-07-14",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-14T11:21:37Z"
     },
     {
       "day": 57,
