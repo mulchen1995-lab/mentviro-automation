@@ -1,23 +1,20 @@
 # Hintergrundmusik — Quellen & Lizenz
 
-Die stimmungsabhängigen Reel-Tracks sind echte Instrumentals von **Kevin MacLeod**
-(incompetech.com), bezogen über das Internet Archive
-(<https://archive.org/details/KevinMacLeod_2019-04_Discography>).
+Die stimmungsabhängigen Reel-Tracks sind moderne, royaltyfreie Instrumentals von
+**Pixabay** (<https://pixabay.com/music/>).
 
-**Lizenz: Creative Commons Attribution 4.0 (CC BY 4.0)**
-<https://creativecommons.org/licenses/by/4.0/>
+**Lizenz: Pixabay Content License**
+<https://pixabay.com/service/license-summary/>
+Frei für kommerzielle Nutzung, **keine Namensnennung erforderlich**. Deshalb hängt die
+Pipeline auch keinen Musik-Credit an die Captions (anders als bei der früheren
+CC-BY-Quelle). Erlaubt ist die Nutzung als Hintergrundmusik im Video; nicht erlaubt
+wäre der Weiterverkauf der Tracks als solche.
 
-Die Lizenz verlangt Namensnennung dort, wo das Werk veröffentlicht wird. Das erledigt
-die Pipeline automatisch: Bei jedem Reel mit einem dieser Tracks wird
-`🎵 Musik: Kevin MacLeod – CC BY 4.0` an die Caption angehängt
-(`MUSIC_CREDIT` in `daily_post.py`). Bewusst ohne URL — mentviro-Richtlinie erlaubt
-keine Links in Captions; Autor + Lizenzname genügen für CC-BY.
-
-| Datei | Stimmung (content_pillar) | Original-Track |
+| Datei | Stimmung (content_pillar) | Pixabay-Track (Artist) |
 |---|---|---|
-| `bg_educational.mp3`  | educational (ruhig/fokussiert)   | "Private Reflection" |
-| `bg_entertaining.mp3` | entertaining (treibend/positiv)  | "Carefree" |
-| `bg_emotional.mp3`    | emotional (warm/gefühlvoll)      | "Heartwarming" |
+| `bg_educational.mp3`  | educational (ruhig/fokussiert)  | "Calm Ambient Dreamscape" (morgan-ambient), ID 529861 |
+| `bg_entertaining.mp3` | entertaining (treibend/positiv) | "Upbeat Motivational / Corporate" (The_Mountain), ID 199145 |
+| `bg_emotional.mp3`    | emotional (warm/gefühlvoll)     | "Inspiring / Orchestral" (leberch), ID 511351 |
 
 Jeder Track wurde aus einem stabilen Mittelteil des Originals auf 60 s geschnitten,
 per `loudnorm` auf einheitliche Lautheit gebracht und mit kurzen Rand-Fades versehen
@@ -26,5 +23,4 @@ per `loudnorm` auf einheitliche Lautheit gebracht und mit kurzen Rand-Fades vers
 ## Fallback
 
 `../bg_music.mp3` (synthetischer, lizenzfreier Am-Drone, CC0/Eigenproduktion) bleibt als
-letzter Fallback im Code erhalten, falls ein Pillar-Track fehlt — dieser braucht **keine**
-Namensnennung.
+letzter Fallback im Code erhalten, falls ein Pillar-Track fehlt.
