@@ -5919,7 +5919,7 @@
     },
     {
       "topic": "Die stille Kraft der Geduld: 3 Wege, wie du sie entwickelst.",
-      "status": "pending",
+      "status": "published",
       "hook": "Geduld ist nicht nur eine Tugend – sie ist eine Superkraft für deinen Erfolg. ✨",
       "slides": [
         {
@@ -5997,7 +5997,10 @@
       "date": "2026-07-14",
       "type": "carousel",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18216813382338646",
+      "story_id": "18610576300022490",
+      "published_at": "2026-07-14T17:22:16Z"
     },
     {
       "topic": "Selbstsabotage überwinden",
