@@ -991,7 +991,7 @@ def _seed_from_evergreen(plan, n_days=4):
         d       = (start_date + timedelta(days=i)).isoformat()
         day_num = last_day + i + 1
         pillar  = pkg.get("content_pillar", "educational")
-        style   = "gold" if pillar == "emotional" else "silver"  # mehr Silber als Gold
+        style   = "silver"  # Julian will ausschliesslich Silber, kein Gold mehr
         common  = {"date": d, "status": "pending", "style": style,
                    "content_pillar": pillar, "source": "evergreen"}
         reel = dict(pkg["reel"]);     reel.update({"day": day_num, "type": "reel", **common})
@@ -1284,8 +1284,8 @@ Schema für jedes Objekt:
             day_num = last_day + i + 1
             pillar  = pkg.get("content_pillar", day_pillars[i])
 
-            # Visual style: emotional → gold (warm), educational/entertaining → silver (mehr Silber als Gold)
-            style = "gold" if pillar == "emotional" else "silver"
+            # Visual style: ausschliesslich Silber — Julian will kein Gold mehr in den Posts
+            style = "silver"
 
             reel = pkg.get("reel", {})
             reel.update({"day": day_num, "date": d, "type": "reel",
