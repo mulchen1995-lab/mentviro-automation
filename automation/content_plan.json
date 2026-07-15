@@ -6042,7 +6042,7 @@
     },
     {
       "topic": "Selbstsabotage stoppen: 3 Schritte zu deinem wahren Potenzial.",
-      "status": "pending",
+      "status": "published",
       "hook": "Hör auf, dich selbst zu blockieren! 🛑 3 Schritte zu deinem wahren Potenzial.",
       "slides": [
         {
@@ -6120,7 +6120,10 @@
       "date": "2026-07-15",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17965422726126862",
+      "story_id": "18102534218177148",
+      "published_at": "2026-07-15T17:24:43Z"
     },
     {
       "topic": "Die Kunst des Nein-Sagens",
