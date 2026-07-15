@@ -6034,7 +6034,11 @@
       "content_pillar": "educational",
       "post_id": "18326348893285946",
       "story_id": "17919882519185101",
-      "published_at": "2026-07-15T07:16:32Z"
+      "published_at": "2026-07-15T07:16:32Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Selbstsabotage stoppen: 3 Schritte zu deinem wahren Potenzial.",
@@ -7764,9 +7768,12 @@
     {
       "day": 57,
       "date": "2026-07-15",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-15T11:25:23Z"
     },
     {
       "day": 58,
