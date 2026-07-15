@@ -6000,11 +6000,15 @@
       "content_pillar": "emotional",
       "post_id": "18216813382338646",
       "story_id": "18610576300022490",
-      "published_at": "2026-07-14T17:22:16Z"
+      "published_at": "2026-07-14T17:22:16Z",
+      "insights": {
+        "likes": 5,
+        "comments": 5
+      }
     },
     {
       "topic": "Selbstsabotage überwinden",
-      "status": "pending",
+      "status": "published",
       "hook": "Hast du dich jemals selbst blockiert, obwohl du es besser wusstest? 🧠",
       "script": [
         "Wir alle kennen das: Du hast große Ziele, aber etwas hält dich zurück.",
@@ -6027,7 +6031,10 @@
       "date": "2026-07-15",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18326348893285946",
+      "story_id": "17919882519185101",
+      "published_at": "2026-07-15T07:16:32Z"
     },
     {
       "topic": "Selbstsabotage stoppen: 3 Schritte zu deinem wahren Potenzial.",
@@ -6594,6 +6601,356 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "Digitaler Fokus vs. Ablenkung",
+      "status": "pending",
+      "hook": "POV: Dein Handy hat mehr von deiner Aufmerksamkeit als deine Träume.",
+      "script": [
+        "Ständig dieses Ping, diese neue Benachrichtigung.",
+        "Dein Gehirn ist im Dauer-Alert, immer online.",
+        "Aber deine Ziele brauchen Fokus, echte Präsenz.",
+        "Was wäre, wenn du die Macht zurückeroberst?",
+        "Eine Stunde ohne Ablenkung kann mehr wert sein als ein ganzer Tag voller Scrollen.",
+        "Folge @mentviro."
+      ],
+      "caption": "Jeder Klick, jede Benachrichtigung raubt dir einen Bruchteil deines kostbarsten Gutes: deine Aufmerksamkeit. 🧠 Es ist Zeit, die Kontrolle zurückzuerobern. Dein Fokus ist dein Superpower – lass ihn nicht verpuffen. Wie oft checkst du dein Handy am Tag? Sei ehrlich. 👇 #mentviro #produktivität #fokus #digitalermindset #zeitmanagement #selbstdisziplin #erfolgreich #motivation #mentaltraining #zielsetzung #businessmindset #entrepreneur #worklifeintegration #lifestyle #achtsamkeit",
+      "pexels_video_query": "energetic city street",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Handy lenkt ab?",
+        "Fokus zurückerobern!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fühlst du dich oft abgelenkt?",
+      "day": 62,
+      "date": "2026-07-20",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Gewohnheiten für digitalen Fokus",
+      "status": "pending",
+      "hook": "Du scrollst noch? Sie bauen ihre Träume auf.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Du scrollst noch?",
+            "Sie bauen ihre Träume auf."
+          ],
+          "body": [
+            "5 Gewohnheiten für digitalen Fokus"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "GEWOHNHEIT #1",
+          "num": "1 / 5",
+          "title": [
+            "Digital Detox-Stunden"
+          ],
+          "body": [
+            "Plane feste Zeiten, in denen dein Handy stumm bleibt. Für Deep Work oder einfach nur dich."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #2",
+          "num": "2 / 5",
+          "title": [
+            "Benachrichtigungen minimieren"
+          ],
+          "body": [
+            "Deaktiviere alles, was nicht absolut essenziell ist. Hol dir deine Ruhe zurück."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #3",
+          "num": "3 / 5",
+          "title": [
+            "Homescreen aufräumen"
+          ],
+          "body": [
+            "Nur die wichtigsten Apps auf der ersten Seite. Reduziere visuelle Reize."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #4",
+          "num": "4 / 5",
+          "title": [
+            "Ein Gerät pro Aufgabe"
+          ],
+          "body": [
+            "Nutze Laptop für Arbeit, Handy für Kommunikation. Multitasking ist ein Mythos."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #5",
+          "num": "5 / 5",
+          "title": [
+            "Bildschirmzeiten prüfen"
+          ],
+          "body": [
+            "Sei ehrlich zu dir. Wo versickerst du Zeit? Dann handle und optimiere."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle Power"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "In einer Welt voller digitaler Sirenen ist Fokus deine Superkraft. Werde zum Architekten deiner Aufmerksamkeit und nicht zum Sklaven deiner Benachrichtigungen. 🔥 Welche dieser Gewohnheiten setzt du schon um? Teile es uns mit! 👇 #mentviro #produktivität #digitalermindset #zeitmanagement #fokus #selbstdisziplin #erfolgreich #mindset #motivation #zielsetzung #mentaltraining #lifestyle #worklifeintegration #entrepreneur #businessmindset",
+      "pexels_queries": [
+        "urban night life",
+        "neon light bokeh",
+        "person meditating city",
+        "futuristic digital art",
+        "clean workspace minimal",
+        "person with phone looking distracted"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Fokus zurück?",
+        "So geht's!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Schwer, nicht zu scrollen?",
+      "day": 62,
+      "date": "2026-07-20",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Kognitive Verzerrungen",
+      "status": "pending",
+      "hook": "Warum du oft nicht siehst, was du nicht sehen willst.",
+      "script": [
+        "Dein Gehirn ist ein Meister der Abkürzungen.",
+        "Manchmal leider auch der Selbsttäuschung.",
+        "Der Bestätigungsfehler: Du suchst nur, was deine Meinung stützt.",
+        "Das führt zu engen Perspektiven, zu verpassten Chancen.",
+        "Lerne, deine eigenen Denkfallen zu erkennen. Das ist wahre Stärke.",
+        "Folge @mentviro."
+      ],
+      "caption": "Kognitive Verzerrungen sind die unsichtbaren Fallen unseres Denkens. Sie verzerren unsere Realität und beeinflussen Entscheidungen, ohne dass wir es merken. Erkennen ist der erste Schritt zur mentalen Freiheit. 💡 Welchen Denkfehler hast du schon bei dir bemerkt? Erzähl uns davon! #mentviro #mindset #psychologie #denkfehler #kognitiveverzerrung #wachstumsdenken #selbstreflexion #mentaltraining #erfolgsmentalität #motivation #zielsetzung #lernenlernen #persönlicheentwicklung #fokus #disziplin",
+      "pexels_video_query": "dark minimal cinematic",
+      "story_text": [
+        "NEUES REEL",
+        "Deine Denkfallen?",
+        "Erkenne sie jetzt!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt es dir schwer, objektiv zu bleiben?",
+      "day": 63,
+      "date": "2026-07-21",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 kognitive Verzerrungen, die dein Wachstum blockieren",
+      "status": "pending",
+      "hook": "Deine größte Bremse sitzt im Kopf.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Deine größte Bremse",
+            "sitzt im Kopf. 🧠"
+          ],
+          "body": [
+            "Erkennst du diese 3 kognitiven Verzerrungen?"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 3",
+          "title": [
+            "Der Bestätigungsfehler"
+          ],
+          "body": [
+            "Wir suchen und interpretieren Informationen so, dass sie unsere bestehenden Überzeugungen bestätigen."
+          ]
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 3",
+          "title": [
+            "Der Ankereffekt"
+          ],
+          "body": [
+            "Eine erste Information (der 'Anker') beeinflusst unsere späteren Urteile und Entscheidungen stark."
+          ]
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 3",
+          "title": [
+            "Die Verfügbarkeitsheuristik"
+          ],
+          "body": [
+            "Wir überschätzen die Wahrscheinlichkeit von Ereignissen, die uns leicht einfallen oder präsent sind."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Wachstum"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Dein Gehirn ist unglaublich, aber es nimmt auch Abkürzungen – die kognitiven Verzerrungen. Diese mentalen Fallen können dein Wachstum sabotieren und dich davon abhalten, klare Entscheidungen zu treffen. Lerne, sie zu durchschauen! 💡 Welche dieser Verzerrungen kennst du von dir selbst am besten? #mentviro #mindset #psychologie #denkfehler #kognitiveverzerrungen #selbstreflexion #wachstumsdenken #lernenlernen #mentaltraining #persönlicheentwicklung #erfolgsmentalität #disziplin #fokus #entscheidungen #klarheit",
+      "pexels_queries": [
+        "abstract mind geometric",
+        "brain labyrinth",
+        "question mark dark",
+        "puzzle pieces light",
+        "confused person dark",
+        "clear thinking minimal"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Denkfehler entlarven",
+        "Blockaden lösen!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Erkennst du Denkfehler bei dir?",
+      "day": 63,
+      "date": "2026-07-21",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Identität & Authentizität",
+      "status": "pending",
+      "hook": "Der Moment, in dem du merkst, dass du jemand anderes lebst.",
+      "script": [
+        "Wir alle jagen etwas, was wir glauben, sein zu müssen.",
+        "Eine Rolle, die die Gesellschaft uns zuschreibt, nicht unser Herz.",
+        "Doch tief in dir spürst du eine leise Stimme, die nach Authentizität ruft.",
+        "Es ist der Mut, deine wahren Werte zu leben, der dich frei macht.",
+        "Dein wahrstes Ich ist dein größtes Geschenk an die Welt. Lebe es.",
+        "Folge @mentviro."
+      ],
+      "caption": "Es ist eine leise Erkenntnis, die oft wehtut: Wir leben nicht unser wahres Ich, sondern eine Rolle, die andere von uns erwarten. Doch in dieser Erkenntnis liegt die Kraft zur Veränderung. Dein Weg zu Authentizität beginnt mit dem Mut, deine eigenen Werte zu erkennen und zu leben. ❤️ Wann hast du zuletzt gespürt, dass du nicht ganz du selbst bist? #mentviro #authentizität #selbstfindung #werte #identität #persönlicheentwicklung #lebensphilosophie #motivation #wachstum #selbstliebe #klarheit #derwegistdasziel #emotionen #mindset #innerestärke",
+      "pexels_video_query": "sunrise forest path",
+      "story_text": [
+        "NEUES REEL",
+        "Deine wahre Identität?",
+        "Finde sie jetzt!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Lebst du dein wahres Ich?",
+      "day": 64,
+      "date": "2026-07-22",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Finde deine wahre Identität: 3 Fragen, die alles ändern.",
+      "status": "pending",
+      "hook": "Hör auf, die Erwartungen anderer zu erfüllen.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Hör auf, die Erwartungen",
+            "anderer zu erfüllen."
+          ],
+          "body": [
+            "Finde deine wahre Identität. ❤️"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "FRAGE #1",
+          "num": "1 / 3",
+          "title": [
+            "Was würdest du tun,",
+            "wenn dich niemand bewertet?"
+          ],
+          "body": [
+            "Wenn alle Erwartungen wegfielen, was wäre dein tiefster Wunsch, deine wahre Leidenschaft?"
+          ]
+        },
+        {
+          "badge": "FRAGE #2",
+          "num": "2 / 3",
+          "title": [
+            "Wofür stehst du",
+            "wirklich ein?"
+          ],
+          "body": [
+            "Welche Werte sind so unerschütterlich, dass du bereit wärst, dafür unbequem zu sein?"
+          ]
+        },
+        {
+          "badge": "FRAGE #3",
+          "num": "3 / 3",
+          "title": [
+            "Was gibt dir",
+            "echte Energie?"
+          ],
+          "body": [
+            "Nicht, was dich kurz ablenkt, sondern was dich nährt und erfüllt. Folge diesem Gefühl."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Tiefgang",
+            "& Wachstum"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Deine wahre Identität ist kein Ziel, das du erreichst, sondern ein Weg, den du gehst. Es erfordert Mut, Ehrlichkeit und die Bereitschaft, dich von alten Rollen zu lösen. Beginne heute, die Fragen zu stellen, die dein Herz wirklich bewegen. ✨ Welche Frage hat dich am meisten berührt? #mentviro #identität #selbstfindung #werte #persönlicheentwicklung #authentizität #lebensphilosophie #wachstum #mindset #selbstliebe #klarheit #motivation #derwegistdasziel #emotionen #innerestärke",
+      "pexels_queries": [
+        "ocean waves sunset",
+        "person walking beach sunrise",
+        "calm forest light",
+        "meditation nature light",
+        "deep reflection water",
+        "authentic self portrait"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Wahre Identität",
+        "3 Fragen für dich!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Kennst du deine Kernwerte?",
+      "day": 64,
+      "date": "2026-07-22",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -7477,6 +7834,66 @@
       "date": "2026-07-19",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "digital focus minimal",
+      "quote": {
+        "text": "Simplicity is the ultimate sophistication.",
+        "author": "Leonardo da Vinci"
+      },
+      "tips": {
+        "title": "3 Tipps für mehr Fokus",
+        "items": [
+          "Handy aus dem Schlafzimmer verbannen.",
+          "Feste Zeiten für E-Mails setzen.",
+          "Unnötige Apps deinstallieren."
+        ]
+      },
+      "day": 62,
+      "date": "2026-07-20",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "cognitive bias dark",
+      "quote": {
+        "text": "The unexamined life is not worth living.",
+        "author": "Socrates"
+      },
+      "tips": {
+        "title": "Denkfehler überwinden",
+        "items": [
+          "Hinterfrage deine ersten Eindrücke.",
+          "Suche aktiv nach Gegenargumenten.",
+          "Frage nach anderen Perspektiven."
+        ]
+      },
+      "day": 63,
+      "date": "2026-07-21",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "authentic self nature",
+      "quote": {
+        "text": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+        "author": "Ralph Waldo Emerson"
+      },
+      "tips": {
+        "title": "Wahre Identität finden",
+        "items": [
+          "Schreibe deine 3 wichtigsten Werte auf.",
+          "Verbringe Zeit allein in Stille.",
+          "Praktiziere ehrliche Selbstreflexion."
+        ]
+      },
+      "day": 64,
+      "date": "2026-07-22",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0
