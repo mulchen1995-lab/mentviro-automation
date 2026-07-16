@@ -6165,7 +6165,7 @@
     },
     {
       "topic": "Das 'Nein', das dein Leben verändert: 3 Wege, um Grenzen zu setzen.",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein 'Ja' zu jedem ist ein 'Nein' zu dir. 🤯 Setze Grenzen mit diesen 3 Wegen.",
       "slides": [
         {
@@ -6243,7 +6243,10 @@
       "date": "2026-07-16",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18122100856744740",
+      "story_id": "18104560546959115",
+      "published_at": "2026-07-16T17:26:16Z"
     },
     {
       "topic": "Die Kunst der klaren Entscheidung: Wie du mentale Blockaden überwindest.",
