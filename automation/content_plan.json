@@ -6157,7 +6157,11 @@
       "content_pillar": "entertaining",
       "post_id": "18082372163223485",
       "story_id": "18023679155850987",
-      "published_at": "2026-07-16T07:23:26Z"
+      "published_at": "2026-07-16T07:23:26Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Das 'Nein', das dein Leben verändert: 3 Wege, um Grenzen zu setzen.",
@@ -7788,9 +7792,12 @@
     {
       "day": 58,
       "date": "2026-07-16",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-16T11:29:06Z"
     },
     {
       "status": "pending",
