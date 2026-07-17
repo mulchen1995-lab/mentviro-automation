@@ -6246,11 +6246,15 @@
       "content_pillar": "entertaining",
       "post_id": "18122100856744740",
       "story_id": "18104560546959115",
-      "published_at": "2026-07-16T17:26:16Z"
+      "published_at": "2026-07-16T17:26:16Z",
+      "insights": {
+        "likes": 6,
+        "comments": 5
+      }
     },
     {
       "topic": "Die Kunst der klaren Entscheidung: Wie du mentale Blockaden überwindest.",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum fällt uns das Treffen wichtiger Entscheidungen oft so schwer? 🤔",
       "script": [
         "Jeder von uns kennt diesen Moment: Du stehst vor einer wichtigen Entscheidung.",
@@ -6273,7 +6277,10 @@
       "date": "2026-07-17",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18104128019158602",
+      "story_id": "17910461265432634",
+      "published_at": "2026-07-17T07:16:05Z"
     },
     {
       "topic": "3 mentale Modelle für deine besten Entscheidungen.",
