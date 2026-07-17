@@ -6280,7 +6280,11 @@
       "content_pillar": "educational",
       "post_id": "18104128019158602",
       "story_id": "17910461265432634",
-      "published_at": "2026-07-17T07:16:05Z"
+      "published_at": "2026-07-17T07:16:05Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 mentale Modelle für deine besten Entscheidungen.",
@@ -7810,7 +7814,7 @@
       "published_at": "2026-07-16T11:29:06Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Nicht die Dinge selbst beunruhigen die Menschen, sondern ihre Meinungen über die Dinge.",
@@ -7827,7 +7831,10 @@
       "day": 59,
       "date": "2026-07-17",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": "18070429790413865",
+      "tips_id": null,
+      "published_at": "2026-07-17T11:18:33Z"
     },
     {
       "status": "pending",
