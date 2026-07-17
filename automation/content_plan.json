@@ -6288,7 +6288,7 @@
     },
     {
       "topic": "3 mentale Modelle für deine besten Entscheidungen.",
-      "status": "pending",
+      "status": "published",
       "hook": "Nie wieder Entscheidungsparalyse! 🙅‍♀️ Lerne, wie Top-Performer denken.",
       "slides": [
         {
@@ -6383,7 +6383,10 @@
       "date": "2026-07-17",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18611212882000341",
+      "story_id": "17943056034083364",
+      "published_at": "2026-07-17T17:19:21Z"
     },
     {
       "topic": "Der stille Anker: Wie du inmitten des Sturms Ruhe findest.",
