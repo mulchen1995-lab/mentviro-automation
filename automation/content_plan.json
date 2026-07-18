@@ -6428,7 +6428,7 @@
     },
     {
       "topic": "3 kleine Rituale für tiefere innere Ruhe.",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Alltag ist ein Sturm? Finde deine Oase. 🏖️ Mit diesen Ritualen.",
       "slides": [
         {
@@ -6522,7 +6522,10 @@
       "date": "2026-07-18",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18180221701408413",
+      "story_id": "18100197386239115",
+      "published_at": "2026-07-18T17:04:07Z"
     },
     {
       "topic": "Der Spiegel der Seele: Warum Selbstreflexion dein Wachstum beschleunigt.",
