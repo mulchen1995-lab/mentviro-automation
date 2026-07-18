@@ -6420,7 +6420,11 @@
       "content_pillar": "emotional",
       "post_id": "18126338923662549",
       "story_id": "18088546037552668",
-      "published_at": "2026-07-18T07:02:03Z"
+      "published_at": "2026-07-18T07:02:03Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 kleine Rituale für tiefere innere Ruhe.",
@@ -8200,7 +8204,7 @@
       "published_at": "2026-07-17T11:18:33Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "calm nature warm pexels query",
       "quote": {
         "text": "Die Stille ist der Raum, in dem wir uns selbst begegnen können.",
@@ -8217,7 +8221,10 @@
       "day": 60,
       "date": "2026-07-18",
       "style": "gold",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": "18098853284524068",
+      "published_at": "2026-07-18T10:57:22Z"
     },
     {
       "status": "pending",
