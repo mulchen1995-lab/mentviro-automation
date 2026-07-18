@@ -6386,11 +6386,15 @@
       "content_pillar": "educational",
       "post_id": "18611212882000341",
       "story_id": "17943056034083364",
-      "published_at": "2026-07-17T17:19:21Z"
+      "published_at": "2026-07-17T17:19:21Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Der stille Anker: Wie du inmitten des Sturms Ruhe findest.",
-      "status": "pending",
+      "status": "published",
       "hook": "Es gab einen Moment, da war mein Kopf voller Lärm... 🌪️",
       "script": [
         "Jeder von uns kennt Phasen, in denen der Alltag überfordert.",
@@ -6413,7 +6417,10 @@
       "date": "2026-07-18",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18126338923662549",
+      "story_id": "18088546037552668",
+      "published_at": "2026-07-18T07:02:03Z"
     },
     {
       "topic": "3 kleine Rituale für tiefere innere Ruhe.",
@@ -6986,6 +6993,359 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Wachstumsdenken kultivieren",
+      "status": "pending",
+      "hook": "Warum deine Überzeugungen über deine Fähigkeiten alles verändern.",
+      "script": [
+        "Jeder hat ein Potenzial, das darauf wartet, entfesselt zu werden.",
+        "Doch oft halten uns unsere eigenen Denkweisen zurück.",
+        "Ein fixes Mindset sagt: 'Ich kann das nicht. Meine Talente sind begrenzt.'",
+        "Ein Wachstumsdenken hingegen sieht Herausforderungen als Chancen.",
+        "Es glaubt, dass Fähigkeiten durch Anstrengung und Lernen wachsen.",
+        "Folge @mentviro."
+      ],
+      "caption": "Dein Mindset ist der größte Hebel für dein Wachstum. Ein Wachstumsdenken (Growth Mindset) öffnet Türen, die ein fixes Mindset verschlossen hält. Es geht nicht darum, perfekt zu sein, sondern darum, besser zu werden – jeden Tag. Erlaube dir selbst, zu lernen, zu fallen und wieder aufzustehen. Dein Potenzial ist grenzenlos, wenn du es zulässt. Starte heute damit, deine Überzeugungen zu hinterfragen und die unendlichen Möglichkeiten des Wachstums zu entdecken. #mindset #motivation #erfolgsmentalität #zielsetzung #businessmindset #unternehmertum #selbstständig #entrepreneur #wohlstand #wealthbuilding #persönlicheentwicklung #produktivität #wachstum #lifestyle #mentviro",
+      "pexels_video_query": "dark cinematic growth mindset development future mind brain",
+      "story_text": [
+        "NEUES REEL",
+        "Entdecke die Kraft",
+        "deines Wachstumsdenkens!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fixed oder Growth?",
+      "day": 65,
+      "date": "2026-07-23",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Schritte zum Wachstumsdenken",
+      "status": "pending",
+      "hook": "3 Schritte zu einem unaufhaltsamen Wachstumsdenken.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Wachstums-",
+            "Denken"
+          ],
+          "body": [
+            "Dein Schlüssel",
+            "zu unbegrenztem",
+            "Potenzial."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SCHRITT #1",
+          "num": "1 / 4",
+          "title": [
+            "Fehler neu definieren"
+          ],
+          "body": [
+            "Betrachte Fehler nicht als Scheitern, sondern als wertvolle Lernchancen. Jede Herausforderung birgt eine Lektion."
+          ]
+        },
+        {
+          "badge": "SCHRITT #2",
+          "num": "2 / 4",
+          "title": [
+            "Anstrengung feiern"
+          ],
+          "body": [
+            "Erkenne an, dass Fähigkeiten durch harte Arbeit und Ausdauer wachsen. Der Weg ist das Ziel."
+          ]
+        },
+        {
+          "badge": "SCHRITT #3",
+          "num": "3 / 4",
+          "title": [
+            "Herausforderungen suchen"
+          ],
+          "body": [
+            "Verlasse deine Komfortzone bewusst. Neue Erfahrungen stärken deine mentalen Muskeln enorm."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Wachstum"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Ein Wachstumsdenken zu entwickeln ist kein Zufall, sondern eine bewusste Entscheidung. Es ist die Überzeugung, dass du deine Fähigkeiten kontinuierlich verbessern kannst – egal, wo du stehst. Stell dir vor, du könntest jede Hürde als Chance sehen, zu wachsen und stärker zu werden. Diese 3 Schritte helfen dir, dieses kraftvolle Mindset in deinem Alltag zu verankern und dein volles Potenzial freizusetzen. Welche dieser Schritte fühlst du am stärksten? #mindset #motivation #erfolgsmentalität #zielsetzung #businessmindset #unternehmertum #selbstständig #entrepreneur #wohlstand #wealthbuilding #persönlicheentwicklung #produktivität #wachstum #lifestyle #mentviro",
+      "pexels_queries": [
+        "dark minimal abstract growth mindset",
+        "growth mindset learning path",
+        "effort development progress",
+        "challenge comfort zone breakthrough",
+        "growth mindset success",
+        "mentviro growth mindset"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Mindset",
+        "formt deine Zukunft!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Wachstum oder Stillstand?",
+      "day": 65,
+      "date": "2026-07-23",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Priorisierung im Alltag",
+      "status": "pending",
+      "hook": "POV: Dein Tag ist ein Chaos, bis du DAS verstehst.",
+      "script": [
+        "Du startest den Tag voller guter Vorsätze.",
+        "Aber dann klingelt das Telefon, E-Mails fliegen rein.",
+        "Jede Kleinigkeit fühlt sich plötzlich dringend an.",
+        "Und am Ende des Tages? Nichts Wichtiges wirklich erledigt.",
+        "Der Trick: Priorisiere nicht, was auf dich zukommt. Priorisiere, was dich voranbringt.",
+        "Folge @mentviro."
+      ],
+      "caption": "Fühlst du dich manchmal, als würde dein Tag dich leben – statt umgekehrt? Das Chaos der vielen Aufgaben kann lähmend sein. Doch der Schlüssel zu echter Produktivität liegt nicht im „mehr machen“, sondern im „das Richtige machen“. Lerne, die Spreu vom Weizen zu trennen und deine Energie auf die Aufgaben zu lenken, die wirklich einen Unterschied machen. Dein Erfolg ist eine Frage der Prioritäten, nicht der Stunden, die du arbeitest. #mindset #motivation #erfolgsmentalität #zielsetzung #businessmindset #unternehmertum #selbstständig #entrepreneur #wohlstand #wealthbuilding #persönlicheentwicklung #produktivität #wachstum #lifestyle #mentviro",
+      "pexels_video_query": "energetic urban productivity chaos focus city time",
+      "story_text": [
+        "NEUES REEL",
+        "Werde Herr",
+        "deiner Prioritäten!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Prokrastinierst du oft?",
+      "day": 66,
+      "date": "2026-07-24",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Zeichen für falsche Prioritäten",
+      "status": "pending",
+      "hook": "5 Anzeichen, dass deine Prioritäten ein Durcheinander sind (und wie du Klarheit schaffst).",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Prioritäten",
+            "Chaos"
+          ],
+          "body": [
+            "So erkennst du, dass",
+            "deine Fokus falsch sitzt",
+            "und was zu tun ist."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ANZEICHEN #1",
+          "num": "1 / 6",
+          "title": [
+            "Termine platzen"
+          ],
+          "body": [
+            "Du verschiebst ständig wichtige Dinge, weil 'dringendere' Aufgaben dazwischenkommen."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #2",
+          "num": "2 / 6",
+          "title": [
+            "Erschöpfung"
+          ],
+          "body": [
+            "Du arbeitest viel, fühlst dich aber selten erfüllt oder siehst echten Fortschritt."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #3",
+          "num": "3 / 6",
+          "title": [
+            "Reaktiver Modus"
+          ],
+          "body": [
+            "Du reagierst mehr auf andere als dass du deine eigene Agenda aktiv gestaltest."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #4",
+          "num": "4 / 6",
+          "title": [
+            "Unerreichte Ziele"
+          ],
+          "body": [
+            "Deine großen Ziele rücken nicht näher, obwohl du 'beschäftigt' bist."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #5",
+          "num": "5 / 6",
+          "title": [
+            "Ablenkung siegt"
+          ],
+          "body": [
+            "Social Media oder unwichtige Tasks fressen deine wertvolle Zeit auf."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Fokus",
+            "& Klarheit"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Kennst du das Gefühl, ständig beschäftigt zu sein, aber am Ende des Tages kaum etwas Relevantes geschafft zu haben? Das ist ein klassisches Zeichen für falsche Prioritäten. Wir lassen uns von Dringlichkeiten leiten, anstatt uns auf das wirklich Wichtige zu konzentrieren. Wenn du dich in diesen Anzeichen wiederfindest, ist es Zeit für einen Reset! Beginne damit, deine Aufgaben bewusst zu filtern und nur das zu priorisieren, was dich deinen Zielen näherbringt. #mindset #motivation #erfolgsmentalität #zielsetzung #businessmindset #unternehmertum #selbstständig #entrepreneur #wohlstand #wealthbuilding #persönlicheentwicklung #produktivität #wachstum #lifestyle #mentviro",
+      "pexels_queries": [
+        "energetic contrast urban productivity",
+        "time management chaos",
+        "overwhelmed busy person",
+        "focus distraction smartphone",
+        "achieve goals progress",
+        "mentviro productivity focus"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Falsche Prioritäten?",
+        "Finde deinen Fokus!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Reaktiv oder Proaktiv?",
+      "day": 66,
+      "date": "2026-07-24",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Stoizismus: Scheitern als Lernchance",
+      "status": "pending",
+      "hook": "Was Stoiker über Misserfolge wissen, das du nicht weißt.",
+      "script": [
+        "Jeder von uns erlebt Rückschläge und Enttäuschungen.",
+        "Die meisten sehen darin ein Ende, ein Scheitern.",
+        "Aber die Stoiker lehrten uns eine andere Perspektive.",
+        "Sie sahen in jedem Hindernis eine Chance zum Wachstum.",
+        "Denn wir können nicht kontrollieren, was passiert, aber wie wir reagieren.",
+        "Folge @mentviro."
+      ],
+      "caption": "Scheitern ist kein Schicksal, sondern eine Entscheidung – die Entscheidung, es als Ende oder als Neubeginn zu sehen. Die Stoiker wussten, dass wahre Stärke darin liegt, unsere innere Einstellung zu dem zu ändern, was uns widerfährt. Jede Hürde, jeder Misserfolg ist eine Möglichkeit, Resilienz zu entwickeln, zu lernen und weiser zu werden. Es ist Zeit, die Kontrolle über deine Reaktion zurückzugewinnen und Misserfolge als deine besten Lehrer zu umarmen. #mindset #motivation #erfolgsmentalität #zielsetzung #businessmindset #unternehmertum #selbstständig #entrepreneur #wohlstand #wealthbuilding #persönlicheentwicklung #produktivität #wachstum #lifestyle #mentviro",
+      "pexels_video_query": "dark cinematic stoic ancient resilience overcoming challenge",
+      "story_text": [
+        "NEUES REEL",
+        "Werde unbesiegbar",
+        "mit Stoizismus!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Wie gehst du mit Fehlern um?",
+      "day": 67,
+      "date": "2026-07-25",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Stoizismus-Prinzipien gegen Rückschläge",
+      "status": "pending",
+      "hook": "3 zeitlose Weisheiten der Stoiker, um aus jedem Scheitern zu lernen.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Stoizismus",
+            "Meistere Rückschläge"
+          ],
+          "body": [
+            "Lerne von den Alten,",
+            "wie du jede Hürde",
+            "in Stärke verwandelst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PRINZIP #1",
+          "num": "1 / 4",
+          "title": [
+            "Dich auf das Kontrollierbare konzentrieren"
+          ],
+          "body": [
+            "Akzeptiere, was du nicht ändern kannst. Konzentriere dich auf deine Reaktion, nicht auf das Ereignis selbst."
+          ]
+        },
+        {
+          "badge": "PRINZIP #2",
+          "num": "2 / 4",
+          "title": [
+            "Amor Fati: Liebe dein Schicksal"
+          ],
+          "body": [
+            "Umarme alles, was geschieht – auch Rückschläge. Sie sind Teil deines Weges und formen dich."
+          ]
+        },
+        {
+          "badge": "PRINZIP #3",
+          "num": "3 / 4",
+          "title": [
+            "Reflexion statt Reaktion"
+          ],
+          "body": [
+            "Nimm dir Zeit, aus Misserfolgen zu lernen. Frage dich: Was kann ich daraus mitnehmen?"
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Weisheit",
+            "& Resilienz"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Die Stoiker gaben uns nicht nur eine Philosophie, sondern eine Anleitung zum Leben. Besonders im Umgang mit Rückschlägen und dem, was wir als Scheitern wahrnehmen. Es ist nicht das Ereignis selbst, das uns schadet, sondern unsere Bewertung dessen. Wenn wir lernen, unsere Perspektive zu ändern und diese Prinzipien anzuwenden, wird jede Herausforderung zu einem Katalysator für unser Wachstum. Welches Prinzip spricht dich am meisten an? #mindset #motivation #erfolgsmentalität #zielsetzung #businessmindset #unternehmertum #selbstständig #entrepreneur #wohlstand #wealthbuilding #persönlicheentwicklung #produktivität #wachstum #lifestyle #mentviro",
+      "pexels_queries": [
+        "dark minimal ancient stoic wisdom",
+        "overcome challenge strength",
+        "acceptance fate destiny",
+        "reflection learning insight",
+        "resilience mental strength",
+        "mentviro stoic wisdom"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Stoizismus für",
+        "deine innere Stärke!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Umarme dein Schicksal?",
+      "day": 67,
+      "date": "2026-07-25",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -7938,6 +8298,66 @@
       "date": "2026-07-22",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic growth development mind",
+      "quote": {
+        "text": "Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Wachstums-Mindset",
+        "items": [
+          "Fehler als Lektion sehen",
+          "Herausforderungen aktiv suchen",
+          "Lernbereitschaft stärken"
+        ]
+      },
+      "day": 65,
+      "date": "2026-07-23",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban productivity focus",
+      "quote": {
+        "text": "Was wirklich wichtig ist, selten zu tun, ist wichtiger, als was unwichtig ist, oft zu tun.",
+        "author": "Johann Wolfgang von Goethe"
+      },
+      "tips": {
+        "title": "Prioritäten-Check",
+        "items": [
+          "1 wichtigste Aufgabe zuerst",
+          "Unwichtiges rigoros streichen",
+          "Fokus auf Langfristiges legen"
+        ]
+      },
+      "day": 66,
+      "date": "2026-07-24",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal ancient stoic wisdom",
+      "quote": {
+        "text": "Wir leiden oft mehr in der Vorstellung als in der Realität.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Stoizismus im Alltag",
+        "items": [
+          "Kontrolliere nur deine Reaktion",
+          "Betrachte Hürden als Training",
+          "Akzeptiere, was du nicht ändern kannst"
+        ]
+      },
+      "day": 67,
+      "date": "2026-07-25",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0
