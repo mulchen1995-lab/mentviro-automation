@@ -26,9 +26,6 @@ EVERGREEN_PACKAGES = [
             "script": [
                 "Nicht das eine große Ding verändert dein Leben.",
                 "Sondern das kleine Ding, das du jeden Tag tust.",
-                "Motivation bringt dich an den Start.",
-                "Routine bringt dich ins Ziel.",
-                "Zehn Minuten täglich schlagen zehn Stunden einmal im Monat.",
                 "Fang heute klein an und bleib dran.",
             ],
             "pexels_video_query": "person walking sunrise calm cinematic",
@@ -85,10 +82,7 @@ EVERGREEN_PACKAGES = [
             "hook": "Beschäftigt sein ist nicht das Gleiche wie produktiv sein.",
             "script": [
                 "Beschäftigt sein ist nicht das Gleiche wie produktiv sein.",
-                "Du kannst den ganzen Tag rennen und nirgendwo ankommen.",
                 "Frag dich morgens: Was ist heute das eine Wichtige?",
-                "Mach das zuerst, bevor die Welt dich ablenkt.",
-                "Fokus ist Nein sagen zu hundert guten Ideen.",
                 "Weniger, aber richtig.",
             ],
             "pexels_video_query": "focused work desk minimal morning light",
@@ -145,10 +139,7 @@ EVERGREEN_PACKAGES = [
             "hook": "Hör auf, dein Kapitel 1 mit dem Kapitel 20 anderer zu vergleichen.",
             "script": [
                 "Hör auf, dein Kapitel 1 mit dem Kapitel 20 anderer zu vergleichen.",
-                "Jeder zeigt dir das Ergebnis, nie die Jahre davor.",
-                "Dein Weg muss nicht aussehen wie der von jemand anderem.",
                 "Vergleich dich mit dem, der du gestern warst.",
-                "Ein bisschen weiter als gestern reicht völlig.",
                 "Bleib auf deiner Bahn.",
             ],
             "pexels_video_query": "person alone calm reflection nature cinematic",
@@ -206,11 +197,8 @@ EVERGREEN_PACKAGES = [
             "hook": "Der perfekte Moment kommt nie. Den gibt es nicht.",
             "script": [
                 "Der perfekte Moment kommt nie. Den gibt es nicht.",
-                "Du wartest auf Sicherheit, die erst durch das Tun entsteht.",
                 "Eine schlechte erste Version schlägt eine perfekte Idee im Kopf.",
-                "Du kannst nur korrigieren, was schon existiert.",
                 "Fang unfertig an. Werd dabei besser.",
-                "Heute ist ein guter Tag, um zu starten.",
             ],
             "pexels_video_query": "person starting morning determined cinematic",
             "caption": ("Perfektionismus ist oft nur Angst in einem schönen "
