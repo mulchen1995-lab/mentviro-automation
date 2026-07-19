@@ -1082,7 +1082,7 @@ Themen: MINDSET & Selbstentwicklung im Zentrum — Disziplin, Fokus, Gewohnheite
         Finanzprodukte/ETF-Namen, Kaufempfehlungen oder Renditeversprechen.
 Hook-Stil: neugierig-sachlich, z.B. „Warum gewinnen disziplinierte Menschen?", „Was steckt hinter mentaler Stärke?"
 Carousel: nummerierte Punkte, klare Struktur, Lerneffekt pro Slide
-Reel-Script: erklärender Aufbau, jeder Satz baut auf dem vorherigen auf""",
+Reel-Script: KOMPAKT — 3 kurze Sätze + „Folge @mentviro." (Ziel ~15-20s). Erklärender Aufbau, jeder Satz baut auf dem vorherigen auf, KEINE Füllsätze""",
 
         "entertaining": """PILLAR: ENTERTAINING 😄 (FOKUS: MINDSET & LIFESTYLE)
 Ziel: Hohe Shares & Saves durch Unterhaltung mit Mehrwert (Edutainment).
@@ -1094,7 +1094,7 @@ Themen: Mindset & Lifestyle relatable verpackt — „POV: Du...", „Zeichen da
         überraschende psychologische Fakten. KEINE arm-vs-reich oder Money-Vergleiche mehr.
 Hook-Stil: direkt, provokant-freundlich, Schmunzel-Faktor
 Carousel: Chart/Liste-Style, visuelle Kontraste, jeder Slide ein Aha-Moment
-Reel-Script: kurze Sätze, Rhythmus, überraschende Wendung am Ende
+Reel-Script: SEHR KURZ — 2 knackige Sätze + „Folge @mentviro." (Ziel ~8-14s). Hook sofort im 1. Satz, Pointe/Wendung im 2. — kein Aufwärmen
 Pexels: lebhafter, kontrastreicher — z.B. neon, urban, energetisch""",
 
         "emotional": """PILLAR: EMOTIONAL ❤️
@@ -1107,7 +1107,7 @@ Themen: persönliche Wachstumsgeschichten (ohne Eigenlob), Lebensweisheiten,
 Hook-Stil: Story-Opener, z.B. „Es gab einen Moment, der alles veränderte.",
            „Ich hätte das früher wissen müssen.", „Niemand redet darüber, aber..."
 Carousel: stimmungsvolle Bilder, poetischere Texte, weniger Bullet-Points
-Reel-Script: storytelling-Aufbau, emotional peak in der Mitte, ruhiger Abschluss
+Reel-Script: KOMPAKT — 3 Sätze + „Folge @mentviro." (Ziel ~15-20s). Story auf den Punkt, emotional peak im 2. Satz, ruhiger Abschluss — keine langen Vorreden
 Pexels: stimmungsvoll, warm, natürlich — z.B. sunrise, forest, ocean, rain"""
     }
 
@@ -1203,6 +1203,7 @@ ERLAUBT:
 
 ═══ FORMAT-REGELN ════════════════════════════════════════════════════════════
 - Zielgruppe: 18-35 Jahre, Deutschland, ambitioniert, an persönlichem Wachstum interessiert
+- REEL-LÄNGE (WICHTIG — kurze Aufmerksamkeitsspanne!): So KURZ wie möglich. entertaining = 2 Sätze + „Folge @mentviro." (~8-14s), educational/emotional = 3 Sätze + „Folge @mentviro." (~15-20s). Jeder Satz kurz & gesprochen unter ~3s. Lieber eine starke Idee scharf als fünf Sätze verwässert. NIE mehr Sätze als vorgegeben.
 - PEXELS QUERIES: zum Pillar passend (Ed: dunkel/minimalistisch · En: energetisch/urban · Em: warm/stimmungsvoll). NIEMALS: businessman, office, suit, handshake
 - Themen-Schwerpunkt: MINDSET & persönliche Entwicklung (wie ein authentischer Creator, der seine eigene Reise teilt). Geld-Mindset nur SEHR SELTEN (~1 von 10). Zitate/Metaphern gern als Trend-Format einstreuen.
 - Caption: zum Pillar passender Ton, exakt 15 Hashtags aus: {' '.join(hashtag_sample)} plus immer #mentviro
@@ -1219,7 +1220,7 @@ Schema für jedes Objekt:
   "content_pillar": "educational|entertaining|emotional",
   "reel": {{
     "topic": "...", "status": "pending", "hook": "...",
-    "script": ["Satz 1","Satz 2","Satz 3","Satz 4","Satz 5","Folge @mentviro."],
+    "script": ["Satz 1","Satz 2","Folge @mentviro."],
     "caption": "... #mentviro ...",
     "pexels_video_query": "passende dark cinematic query",
     "story_text": ["NEUES REEL","Zeile 1","Zeile 2","Jetzt anschauen"],
