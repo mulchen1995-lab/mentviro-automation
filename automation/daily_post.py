@@ -1006,9 +1006,81 @@ def _seed_from_evergreen(plan, n_days=4):
           f"({len(new_posts)} Posts + {len(new_stories)} Stories) — Gemini nicht verfügbar.")
 
 
+def _seed_book_series(plan, spacing_days=4):
+    """Schleust regelmäßig eine Folge der Buch-Serie 'mentviro liest' ein.
+
+    Selbstbegrenzend: fügt nur nach, wenn KEINE ungepostete Buch-Folge mehr in der
+    Pipeline liegt UND die letzte Buch-Folge >= spacing_days her ist — ergibt grob
+    1-2 Folgen/Woche, ohne den restlichen Content zu verdrängen. Kann in jedem
+    Refill-Lauf gefahrlos aufgerufen werden. Die Episoden-Nummer (#N) läuft über
+    den fortlaufenden Cursor hoch, das Buch rotiert durch die Bank."""
+    try:
+        try:
+            from book_series import BOOK_SERIES
+        except Exception:
+            from automation.book_series import BOOK_SERIES
+    except Exception as e:
+        print(f"  Buch-Serie nicht ladbar: {e}")
+        return
+    if not BOOK_SERIES:
+        return
+
+    posts = plan.get("posts", [])
+    # Schon eine ungepostete Buch-Folge eingeplant? Dann nicht doppeln.
+    if any(p.get("series") == "book" and p.get("status") == "pending" for p in posts):
+        return
+
+    # Mindestabstand zur letzten (auch bereits veröffentlichten) Buch-Folge wahren.
+    book_dates = [date.fromisoformat(p["date"]) for p in posts if p.get("series") == "book"]
+    last_book_date = max(book_dates, default=None)
+    earliest = date.today()
+    if last_book_date:
+        earliest = max(earliest, last_book_date + timedelta(days=spacing_days))
+
+    last_day  = max((p["day"] for p in posts), default=0)
+    last_date = max((date.fromisoformat(p["date"]) for p in posts), default=date.today())
+    last_sq   = max((date.fromisoformat(s["date"]) for s in plan.get("story_queue", [])),
+                    default=date.today())
+    start_date = max(last_date, last_sq, earliest) + timedelta(days=1)
+
+    cursor  = plan.get("book_series_cursor", 0)   # fortlaufend, NICHT umgebrochen
+    episode = cursor + 1
+    pkg     = BOOK_SERIES[cursor % len(BOOK_SERIES)]
+
+    d       = start_date.isoformat()
+    day_num = last_day + 1
+    ident   = f"📚 mentviro liest #{episode} · {pkg['book_title']}"
+    common  = {"date": d, "status": "pending", "style": "silver",
+               "content_pillar": pkg.get("content_pillar", "educational"),
+               "source": "book_series", "series": "book", "book_episode": episode}
+
+    reel = dict(pkg["reel"])
+    reel.update({"day": day_num, "type": "reel", **common})
+    reel["caption"]    = ident + "\n\n" + reel.get("caption", "")
+    reel["story_text"] = [f"MENTVIRO LIEST #{episode}"] + list(reel.get("story_text", []))[1:]
+
+    car = dict(pkg["carousel"])
+    car.update({"day": day_num, "type": "carousel", **common})
+    car["caption"]    = ident + "\n\n" + car.get("caption", "")
+    car["story_text"] = [f"MENTVIRO LIEST #{episode}"] + list(car.get("story_text", []))[1:]
+
+    st = dict(pkg["stories"])
+    st.update({"day": day_num, **common})
+
+    plan["posts"].extend([reel, car])
+    plan.setdefault("story_queue", []).append(st)
+    plan["book_series_cursor"] = cursor + 1
+    save_plan(plan)
+    print(f"  Buch-Serie: Folge #{episode} '{pkg['book_title']}' für {d} eingeplant.")
+
+
 def check_and_refill_content(plan):
     """Generate content when queue runs low. Always creates PAIRS: 1 reel + 1 carousel per day,
     plus a story_queue entry for each day."""
+    # Serien-Content zuerst: taktet die Buch-Serie 'mentviro liest' ein (selbst-
+    # begrenzend, ~1-2 Folgen/Woche) — unabhängig davon, ob sonst nachgefüllt wird.
+    _seed_book_series(plan)
+
     pending_reels     = [p for p in plan["posts"] if p["status"]=="pending" and p.get("type")=="reel"]
     pending_carousels = [p for p in plan["posts"] if p["status"]=="pending" and p.get("type")=="carousel"]
     pending_stories   = [s for s in plan.get("story_queue",[]) if s["status"]=="pending"]
