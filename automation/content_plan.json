@@ -6567,7 +6567,7 @@
     },
     {
       "topic": "3 Fragen, die jede Selbstreflexion transformieren.",
-      "status": "pending",
+      "status": "published",
       "hook": "Stell dir die richtigen Fragen, um zu wachsen. 📈 Es ist einfacher, als du denkst!",
       "slides": [
         {
@@ -6660,7 +6660,10 @@
       "date": "2026-07-19",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17891142351577424",
+      "story_id": "18229105684316140",
+      "published_at": "2026-07-19T17:06:18Z"
     },
     {
       "topic": "Digitaler Fokus vs. Ablenkung",
@@ -7364,6 +7367,113 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "mentviro liest: Atomic Habits",
+      "hook": "Du steigst nicht auf das Niveau deiner Ziele.",
+      "script": [
+        "Du steigst nicht auf das Niveau deiner Ziele.",
+        "Du fällst auf das Niveau deiner Systeme.",
+        "Bau das System — das Ziel folgt von allein.",
+        "Folge @mentviro."
+      ],
+      "pexels_video_query": "minimal desk morning routine calm cinematic dark",
+      "caption": "📚 mentviro liest #1 · Atomic Habits\n\nJames Clear bringt es auf den Punkt: nicht Motivation formt dich, sondern deine täglichen Systeme.\n\n1 % besser pro Tag klingt nach nichts — nach einem Jahr bist du ein anderer Mensch.\n\nWelches winzige System baust du ab heute?\n\n#atomichabits #jamesclear #gewohnheiten #mindset #disziplin #selbstentwicklung #1prozent #routine #fokus #buchtipp #persönlichkeitsentwicklung #wachstum #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #1",
+        "Atomic Habits",
+        "Systeme schlagen Ziele",
+        "Jetzt ansehen"
+      ],
+      "day": 68,
+      "type": "reel",
+      "date": "2026-07-26",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 1
+    },
+    {
+      "topic": "mentviro liest: Atomic Habits",
+      "hook": "3 Ideen aus Atomic Habits",
+      "pexels_queries": [
+        "minimal desk focus dark",
+        "stairs climbing light",
+        "notebook writing hands",
+        "sunrise horizon calm",
+        "path forest direction",
+        "morning routine calm"
+      ],
+      "slides": [
+        {
+          "is_cover": true,
+          "title": [
+            "Atomic Habits",
+            "in 3 Ideen"
+          ],
+          "body": [
+            "Das Buch, das Gewohnheiten",
+            "endlich erklärt.",
+            "Weiterwischen ›"
+          ]
+        },
+        {
+          "title": [
+            "1 · Systeme > Ziele"
+          ],
+          "body": [
+            "Ziele geben die Richtung.",
+            "Systeme bringen dich hin."
+          ]
+        },
+        {
+          "title": [
+            "2 · 1 % pro Tag"
+          ],
+          "body": [
+            "Kleine Schritte summieren sich.",
+            "Konsistenz schlägt Intensität."
+          ]
+        },
+        {
+          "title": [
+            "3 · Identität zuerst"
+          ],
+          "body": [
+            "Nicht 'ich will laufen'.",
+            "Sondern 'ich bin jemand,",
+            "der läuft'."
+          ]
+        },
+        {
+          "title": [
+            "Dein Zug"
+          ],
+          "body": [
+            "Welche eine Gewohnheit",
+            "baust du ab heute?",
+            "Speicher dir das ›"
+          ]
+        }
+      ],
+      "caption": "📚 mentviro liest #1 · Atomic Habits\n\nAtomic Habits von James Clear — drei Ideen, die hängenbleiben.\n\nDu wirst nicht durch den großen Sprung besser, sondern durch das, was du jeden Tag wiederholst.\n\nSpeicher dir den Post für die Tage ohne Motivation.\n\n#atomichabits #gewohnheiten #mindset #disziplin #selbstentwicklung #buchtipp #routine #fokus #wachstum #klarheit #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #1",
+        "Atomic Habits",
+        "3 Ideen",
+        "Jetzt ansehen"
+      ],
+      "day": 68,
+      "type": "carousel",
+      "date": "2026-07-26",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 1
     }
   ],
   "story_queue": [
@@ -8382,7 +8492,31 @@
       "date": "2026-07-25",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "discipline habits focus calm dark",
+      "quote": {
+        "text": "Du wirst nie das Niveau deiner Ziele erreichen. Du fällst auf das Niveau deiner Systeme.",
+        "author": "James Clear"
+      },
+      "tips": {
+        "title": "System statt Willenskraft",
+        "items": [
+          "Mach den ersten Schritt lächerlich klein.",
+          "Häng die neue Gewohnheit an eine alte.",
+          "Miss Dranbleiben, nicht Perfektion."
+        ]
+      },
+      "day": 68,
+      "date": "2026-07-26",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 1
     }
   ],
-  "evergreen_cursor": 0
+  "evergreen_cursor": 0,
+  "book_series_cursor": 1
 }
