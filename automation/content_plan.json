@@ -6559,7 +6559,11 @@
       "content_pillar": "educational",
       "post_id": "17898891513485399",
       "story_id": "18012839417729237",
-      "published_at": "2026-07-19T07:27:19Z"
+      "published_at": "2026-07-19T07:27:19Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Fragen, die jede Selbstreflexion transformieren.",
@@ -8237,7 +8241,7 @@
       "published_at": "2026-07-18T10:57:22Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Das unerforschte Leben ist es nicht wert, gelebt zu werden.",
@@ -8254,7 +8258,10 @@
       "day": 61,
       "date": "2026-07-19",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-19T11:06:53Z"
     },
     {
       "status": "pending",
