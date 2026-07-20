@@ -6697,7 +6697,11 @@
       "content_pillar": "entertaining",
       "post_id": "18009866159919470",
       "story_id": "18123392626689755",
-      "published_at": "2026-07-20T07:57:50Z"
+      "published_at": "2026-07-20T07:57:50Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Gewohnheiten für digitalen Fokus",
@@ -8381,7 +8385,7 @@
       "published_at": "2026-07-19T11:06:53Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "digital focus minimal",
       "quote": {
         "text": "Simplicity is the ultimate sophistication.",
@@ -8398,7 +8402,10 @@
       "day": 62,
       "date": "2026-07-20",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-20T12:12:25Z"
     },
     {
       "status": "pending",
