@@ -6663,11 +6663,15 @@
       "content_pillar": "educational",
       "post_id": "17891142351577424",
       "story_id": "18229105684316140",
-      "published_at": "2026-07-19T17:06:18Z"
+      "published_at": "2026-07-19T17:06:18Z",
+      "insights": {
+        "likes": 3,
+        "comments": 3
+      }
     },
     {
       "topic": "Digitaler Fokus vs. Ablenkung",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Handy hat mehr von deiner Aufmerksamkeit als deine Träume.",
       "script": [
         "Ständig dieses Ping, diese neue Benachrichtigung.",
@@ -6690,7 +6694,10 @@
       "date": "2026-07-20",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18009866159919470",
+      "story_id": "18123392626689755",
+      "published_at": "2026-07-20T07:57:50Z"
     },
     {
       "topic": "5 Gewohnheiten für digitalen Fokus",
