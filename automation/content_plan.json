@@ -6705,7 +6705,7 @@
     },
     {
       "topic": "5 Gewohnheiten für digitalen Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "Du scrollst noch? Sie bauen ihre Träume auf.",
       "slides": [
         {
@@ -6803,7 +6803,10 @@
       "date": "2026-07-20",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18082856678235369",
+      "story_id": "18621895690043660",
+      "published_at": "2026-07-20T18:12:10Z"
     },
     {
       "topic": "Kognitive Verzerrungen",
