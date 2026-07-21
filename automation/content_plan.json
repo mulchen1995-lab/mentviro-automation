@@ -6848,7 +6848,7 @@
     },
     {
       "topic": "3 kognitive Verzerrungen, die dein Wachstum blockieren",
-      "status": "pending",
+      "status": "published",
       "hook": "Deine größte Bremse sitzt im Kopf.",
       "slides": [
         {
@@ -6926,7 +6926,10 @@
       "date": "2026-07-21",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17890447941598581",
+      "story_id": "17890415070405680",
+      "published_at": "2026-07-21T17:36:31Z"
     },
     {
       "topic": "Identität & Authentizität",
