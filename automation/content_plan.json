@@ -6840,7 +6840,11 @@
       "content_pillar": "educational",
       "post_id": "17894708493376130",
       "story_id": "18130831945559333",
-      "published_at": "2026-07-21T07:32:39Z"
+      "published_at": "2026-07-21T07:32:39Z",
+      "insights": {
+        "likes": 4,
+        "comments": 0
+      }
     },
     {
       "topic": "3 kognitive Verzerrungen, die dein Wachstum blockieren",
@@ -8418,7 +8422,7 @@
       "published_at": "2026-07-20T12:12:25Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "cognitive bias dark",
       "quote": {
         "text": "The unexamined life is not worth living.",
@@ -8435,7 +8439,10 @@
       "day": 63,
       "date": "2026-07-21",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-21T11:44:08Z"
     },
     {
       "status": "pending",
