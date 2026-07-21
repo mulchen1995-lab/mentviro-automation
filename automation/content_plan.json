@@ -6806,11 +6806,15 @@
       "content_pillar": "entertaining",
       "post_id": "18082856678235369",
       "story_id": "18621895690043660",
-      "published_at": "2026-07-20T18:12:10Z"
+      "published_at": "2026-07-20T18:12:10Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Kognitive Verzerrungen",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum du oft nicht siehst, was du nicht sehen willst.",
       "script": [
         "Dein Gehirn ist ein Meister der Abkürzungen.",
@@ -6833,7 +6837,10 @@
       "date": "2026-07-21",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17894708493376130",
+      "story_id": "18130831945559333",
+      "published_at": "2026-07-21T07:32:39Z"
     },
     {
       "topic": "3 kognitive Verzerrungen, die dein Wachstum blockieren",
