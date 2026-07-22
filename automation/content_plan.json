@@ -6929,11 +6929,15 @@
       "content_pillar": "educational",
       "post_id": "17890447941598581",
       "story_id": "17890415070405680",
-      "published_at": "2026-07-21T17:36:31Z"
+      "published_at": "2026-07-21T17:36:31Z",
+      "insights": {
+        "likes": 5,
+        "comments": 3
+      }
     },
     {
       "topic": "Identität & Authentizität",
-      "status": "pending",
+      "status": "published",
       "hook": "Der Moment, in dem du merkst, dass du jemand anderes lebst.",
       "script": [
         "Wir alle jagen etwas, was wir glauben, sein zu müssen.",
@@ -6956,7 +6960,10 @@
       "date": "2026-07-22",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17976432147100774",
+      "story_id": "18095019497359179",
+      "published_at": "2026-07-22T07:35:00Z"
     },
     {
       "topic": "Finde deine wahre Identität: 3 Fragen, die alles ändern.",
@@ -7502,6 +7509,353 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 1
+    },
+    {
+      "topic": "Prokrastination humorvoll überwinden",
+      "status": "pending",
+      "hook": "POV: Dein Hirn, wenn die Deadline naht.",
+      "script": [
+        "Jeder kennt diesen Moment, wenn die To-Do-Liste schreit, aber dein Gehirn „später“ flüstert.",
+        "Der Trick? Fang einfach an – auch wenn’s nur 5 Minuten sind. Der Rest kommt von selbst.",
+        "Folge @mentviro."
+      ],
+      "caption": "Schluss mit dem ewigen Aufschieben! Mach den ersten kleinen Schritt und beobachte, wie der Rest folgt. Deine Produktivität wird es dir danken. 💪 #mentviro #produktivität #mindset #selbstdisziplin #zielsetzung #zeitmanagement #erfolg #gewohnheiten #wachstumsdenken #fokus #motivation #persönlicheentwicklung #deepwork #lifestyle #gewohnheiten",
+      "pexels_video_query": "urban energetic neon light city fast motion",
+      "story_text": [
+        "NEUES REEL",
+        "Kampf gegen die",
+        "Prokrastination?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Prokrastinierst du oft?",
+      "day": 69,
+      "date": "2026-07-27",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Zeichen, dass du Prokrastination meisterst",
+      "status": "pending",
+      "hook": "Du bist ein Meister der Prokrastination? Nicht mehr lange!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Dein Gehirn",
+            "Sagt 'SPÄTER'?"
+          ],
+          "body": [
+            "5 Zeichen, dass du die Prokrastination bald meisterst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 6",
+          "title": [
+            "Du startest",
+            "mit Mikro-Schritten."
+          ],
+          "body": [
+            "Anstatt überwältigt zu sein, brichst du Aufgaben auf minimale Anfänge herunter. 'Nur 5 Minuten' ist dein Mantra."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 6",
+          "title": [
+            "Du kennst",
+            "deine Produktiv-Peaks."
+          ],
+          "body": [
+            "Du weißt, wann du am leistungsfähigsten bist, und planst wichtige Aufgaben für diese Zeiten ein."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 6",
+          "title": [
+            "Du belohnst",
+            "dich für Erfolge."
+          ],
+          "body": [
+            "Nach erledigten Aufgaben gönnst du dir eine bewusste Pause oder eine kleine Belohnung, was dich motiviert."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #4",
+          "num": "4 / 6",
+          "title": [
+            "Du schaffst",
+            "ablenkungsfreie Zonen."
+          ],
+          "body": [
+            "Du eliminierst Störfaktoren wie Handy-Benachrichtigungen oder Social Media, um ungestört zu arbeiten."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #5",
+          "num": "5 / 6",
+          "title": [
+            "Du reflektierst",
+            "statt zu verurteilen."
+          ],
+          "body": [
+            "Wenn du doch prokrastinierst, analysierst du die Ursache, statt dich selbst zu kritisieren."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Erkennst du dich wieder? Die Prokrastination zu überwinden, ist eine Reise, kein Ziel. Jeder kleine Schritt zählt! Welche Strategie hilft dir am meisten? Schreib's in die Kommentare! 👇 #mentviro #produktivität #selbstdisziplin #zeitmanagement #fokus #mindset #gewohnheiten #persönlicheentwicklung #erfolg #lifestyle #wachstumsdenken #zielsetzung #disziplin #motivation #deepwork",
+      "pexels_queries": [
+        "neon city lights",
+        "person starting to work",
+        "sunrise working",
+        "happy person relaxing",
+        "minimal desk setup",
+        "person reflecting"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Meisterst du die",
+        "Prokrastination?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Ja, ich kenne das!",
+      "day": 69,
+      "date": "2026-07-27",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Komfortzone verlassen",
+      "status": "pending",
+      "hook": "Warum das Verlassen der Komfortzone unverzichtbar ist.",
+      "script": [
+        "Wachstum beginnt immer außerhalb deiner Komfortzone, dort, wo das Unbekannte auf dich wartet.",
+        "Indem du dich neuen Herausforderungen stellst, stärkst du deine Resilienz und entdeckst dein wahres Potenzial.",
+        "Folge @mentviro."
+      ],
+      "caption": "Deine Komfortzone ist gemütlich, aber kein Ort für echtes Wachstum. Trau dich, neue Wege zu gehen – dort wartet die Magie. ✨ #mentviro #wachstumsdenken #komfortzone #persönlicheentwicklung #mindset #resilienz #herausforderung #mut #selbstvertrauen #zielsetzung #fokus #disziplin #lernenlernen #erfolg #motivation",
+      "pexels_video_query": "dark cinematic mountain adventure fog",
+      "story_text": [
+        "NEUES REEL",
+        "Verlasse deine",
+        "Komfortzone!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Warst du schon mal dort?",
+      "day": 70,
+      "date": "2026-07-28",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Strategien, um deine Komfortzone zu verlassen",
+      "status": "pending",
+      "hook": "Deine Komfortzone ist dein größter Gegner beim persönlichen Wachstum.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Deine Komfortzone",
+            "ist dein Gefängnis."
+          ],
+          "body": [
+            "3 Strategien, um dich davon zu befreien und zu wachsen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "STRATEGIE #1",
+          "num": "1 / 4",
+          "title": [
+            "Beginne klein,",
+            "skaliere dann."
+          ],
+          "body": [
+            "Identifiziere eine kleine Sache, die dich verunsichert, und tu sie. Steigere dich dann schrittweise."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #2",
+          "num": "2 / 4",
+          "title": [
+            "Akzeptiere",
+            "das Unbehagen."
+          ],
+          "body": [
+            "Wachstum ist oft unangenehm. Sieh Unbehagen als Zeichen, dass du auf dem richtigen Weg bist."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #3",
+          "num": "3 / 4",
+          "title": [
+            "Suche aktiv",
+            "nach neuen Erfahrungen."
+          ],
+          "body": [
+            "Probiere neue Hobbys, triff neue Leute, lerne neue Fähigkeiten. Erweitere ständig deinen Horizont."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Persönlichkeit"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Nur wenn du die Grenzen des Bekannten überschreitest, entdeckst du, wozu du wirklich fähig bist. Welche Strategie sprich dich am meisten an? Teile deine Gedanken! 👇 #mentviro #komfortzone #wachstumsdenken #persönlicheentwicklung #mindset #resilienz #herausforderung #mut #selbstvertrauen #lernenlernen #disziplin #zielsetzung #fokus #erfolg #motivation",
+      "pexels_queries": [
+        "dark cinematic path through fog",
+        "person taking first step",
+        "person facing fear",
+        "person trying new things",
+        "dark minimal abstract"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Verlasse deine",
+        "Komfortzone!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Traust du dich?",
+      "day": 70,
+      "date": "2026-07-28",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die Macht deines Umfelds",
+      "status": "pending",
+      "hook": "Niemand redet darüber, aber dein Umfeld ist alles.",
+      "script": [
+        "Die Menschen um dich herum formen, wer du bist – ob du es merkst oder nicht.",
+        "Wähle bewusst dein Umfeld; es sollte dich anheben, nicht herunterziehen. Dein Wachstum hängt davon ab.",
+        "Folge @mentviro."
+      ],
+      "caption": "Dein Umfeld ist der Spiegel deiner Zukunft. Umgib dich mit Menschen, die dich inspirieren und an dein Potenzial glauben. ❤️ #mentviro #umfeldgestalten #beziehungen #persönlicheentwicklung #mindset #kommunikation #wachstumsdenken #motivation #authentisch #werte #resilienz #selbstreflexion #inspiration #positiveenergie #lebensphilosophie",
+      "pexels_video_query": "warm cinematic sunrise forest friends",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Umfeld:",
+        "Deine Zukunft?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Hat dein Umfeld Einfluss?",
+      "day": 71,
+      "date": "2026-07-29",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Umfeld gestalten: Wer dich wirklich stärkt",
+      "status": "pending",
+      "hook": "Es gab einen Moment, der alles veränderte: Ich begann mein Umfeld bewusst zu wählen.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Dein Umfeld",
+            "ist dein Echo."
+          ],
+          "body": [
+            "Wähle weise, wer deine Melodie des Lebens beeinflusst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DER STIMULUS",
+          "num": "1 / 4",
+          "title": [
+            "Umgib dich",
+            "mit Visionären."
+          ],
+          "body": [
+            "Menschen, die groß denken, inspirieren dich, über deine eigenen Grenzen hinauszuwachsen."
+          ]
+        },
+        {
+          "badge": "DER ANKER",
+          "num": "2 / 4",
+          "title": [
+            "Suche Menschen",
+            "mit Integrität."
+          ],
+          "body": [
+            "Vertrauen und Authentizität sind das Fundament für tiefe, förderliche Beziehungen."
+          ]
+        },
+        {
+          "badge": "DER SPARK",
+          "num": "3 / 4",
+          "title": [
+            "Schätze die,",
+            "die dich herausfordern."
+          ],
+          "body": [
+            "Konstruktive Kritik und ehrliches Feedback sind Katalysatoren für persönliches Wachstum."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lebensweisheit"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Manchmal müssen wir loslassen, um Platz für das zu schaffen, was uns wirklich nährt. Dein innerer Kreis ist ein Segen – pflege ihn sorgfältig. Wer ist dein größter Support? Teile es uns mit. 👇 #mentviro #umfeldgestalten #beziehungen #persönlicheentwicklung #mindset #kommunikation #wachstumsdenken #inspiration #motivation #authentisch #werte #selbstreflexion #positiveenergie #lebensphilosophie #mentaltraining",
+      "pexels_queries": [
+        "warm cinematic sunset friends talking",
+        "group of people brainstorming",
+        "honest conversation",
+        "friends hiking together",
+        "warm nature sunrise"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Umfeld:",
+        "Dein Wachstum?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Umfeld wichtig: Ja/Nein?",
+      "day": 71,
+      "date": "2026-07-29",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -8549,6 +8903,66 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 1
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban street life",
+      "quote": {
+        "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie zu gestalten.",
+        "author": "Peter Drucker"
+      },
+      "tips": {
+        "title": "Produktivität steigern",
+        "items": [
+          "1. 'Pomodoro'-Technik anwenden: 25 Min. Arbeit, 5 Min. Pause.",
+          "2. Wichtigste Aufgabe zuerst erledigen – 'Eat the Frog'.",
+          "3. Ablenkungen minimieren: Handy außer Reichweite legen."
+        ]
+      },
+      "day": 69,
+      "date": "2026-07-27",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic abstract",
+      "quote": {
+        "text": "Ein Schiff ist sicher im Hafen, aber dafür werden Schiffe nicht gebaut.",
+        "author": "William G.T. Shedd"
+      },
+      "tips": {
+        "title": "Komfortzone erweitern",
+        "items": [
+          "1. Sprich eine fremde Person an – einfach nur 'Hallo'.",
+          "2. Probiere ein komplett neues Hobby aus, das dich reizt.",
+          "3. Nimm eine neue Route zur Arbeit oder zum Einkaufen."
+        ]
+      },
+      "day": 70,
+      "date": "2026-07-28",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural light forest",
+      "quote": {
+        "text": "Du bist der Durchschnitt der fünf Menschen, mit denen du die meiste Zeit verbringst.",
+        "author": "Jim Rohn"
+      },
+      "tips": {
+        "title": "Umfeld bewusst wählen",
+        "items": [
+          "1. Identifiziere 3 Menschen, die dich wirklich inspirieren.",
+          "2. Reduziere Kontakt zu Menschen, die dir Energie rauben.",
+          "3. Suche aktiv Mentoren oder Gleichgesinnte online/offline."
+        ]
+      },
+      "day": 71,
+      "date": "2026-07-29",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0,
