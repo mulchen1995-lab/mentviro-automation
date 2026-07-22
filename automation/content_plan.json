@@ -6971,7 +6971,7 @@
     },
     {
       "topic": "Finde deine wahre Identität: 3 Fragen, die alles ändern.",
-      "status": "pending",
+      "status": "published",
       "hook": "Hör auf, die Erwartungen anderer zu erfüllen.",
       "slides": [
         {
@@ -7052,7 +7052,10 @@
       "date": "2026-07-22",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17986708737009637",
+      "story_id": "18089126801109328",
+      "published_at": "2026-07-22T17:27:05Z"
     },
     {
       "topic": "Wachstumsdenken kultivieren",
