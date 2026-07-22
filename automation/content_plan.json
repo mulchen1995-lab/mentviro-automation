@@ -6963,7 +6963,11 @@
       "content_pillar": "emotional",
       "post_id": "17976432147100774",
       "story_id": "18095019497359179",
-      "published_at": "2026-07-22T07:35:00Z"
+      "published_at": "2026-07-22T07:35:00Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Finde deine wahre Identität: 3 Fragen, die alles ändern.",
@@ -8802,7 +8806,7 @@
       "published_at": "2026-07-21T11:44:08Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "authentic self nature",
       "quote": {
         "text": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
@@ -8819,7 +8823,10 @@
       "day": 64,
       "date": "2026-07-22",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-22T11:45:39Z"
     },
     {
       "status": "pending",
