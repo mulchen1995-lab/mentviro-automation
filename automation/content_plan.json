@@ -7097,7 +7097,7 @@
     },
     {
       "topic": "3 Schritte zum Wachstumsdenken",
-      "status": "pending",
+      "status": "published",
       "hook": "3 Schritte zu einem unaufhaltsamen Wachstumsdenken.",
       "slides": [
         {
@@ -7177,7 +7177,10 @@
       "date": "2026-07-23",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18131956027621928",
+      "story_id": "17888519517665965",
+      "published_at": "2026-07-23T17:38:09Z"
     },
     {
       "topic": "Priorisierung im Alltag",
