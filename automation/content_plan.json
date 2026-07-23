@@ -7089,7 +7089,11 @@
       "content_pillar": "educational",
       "post_id": "18097088420621598",
       "story_id": "17874301335625311",
-      "published_at": "2026-07-23T07:32:43Z"
+      "published_at": "2026-07-23T07:32:43Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Schritte zum Wachstumsdenken",
@@ -8839,7 +8843,7 @@
       "published_at": "2026-07-22T11:45:39Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic growth development mind",
       "quote": {
         "text": "Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.",
@@ -8856,7 +8860,10 @@
       "day": 65,
       "date": "2026-07-23",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-23T11:48:17Z"
     },
     {
       "status": "pending",
