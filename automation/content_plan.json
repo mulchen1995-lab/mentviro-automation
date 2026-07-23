@@ -7055,11 +7055,15 @@
       "content_pillar": "emotional",
       "post_id": "17986708737009637",
       "story_id": "18089126801109328",
-      "published_at": "2026-07-22T17:27:05Z"
+      "published_at": "2026-07-22T17:27:05Z",
+      "insights": {
+        "likes": 4,
+        "comments": 3
+      }
     },
     {
       "topic": "Wachstumsdenken kultivieren",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum deine Überzeugungen über deine Fähigkeiten alles verändern.",
       "script": [
         "Jeder hat ein Potenzial, das darauf wartet, entfesselt zu werden.",
@@ -7082,7 +7086,10 @@
       "date": "2026-07-23",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18097088420621598",
+      "story_id": "17874301335625311",
+      "published_at": "2026-07-23T07:32:43Z"
     },
     {
       "topic": "3 Schritte zum Wachstumsdenken",
