@@ -7214,7 +7214,11 @@
       "content_pillar": "entertaining",
       "post_id": "18106819834932504",
       "story_id": "17974816167118638",
-      "published_at": "2026-07-24T07:31:28Z"
+      "published_at": "2026-07-24T07:31:28Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Zeichen für falsche Prioritäten",
@@ -8876,7 +8880,7 @@
       "published_at": "2026-07-23T11:48:17Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban productivity focus",
       "quote": {
         "text": "Was wirklich wichtig ist, selten zu tun, ist wichtiger, als was unwichtig ist, oft zu tun.",
@@ -8893,7 +8897,10 @@
       "day": 66,
       "date": "2026-07-24",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": "18070490954407436",
+      "tips_id": null,
+      "published_at": "2026-07-24T11:38:23Z"
     },
     {
       "status": "pending",
