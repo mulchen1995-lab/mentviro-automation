@@ -7222,7 +7222,7 @@
     },
     {
       "topic": "Zeichen für falsche Prioritäten",
-      "status": "pending",
+      "status": "published",
       "hook": "5 Anzeichen, dass deine Prioritäten ein Durcheinander sind (und wie du Klarheit schaffst).",
       "slides": [
         {
@@ -7322,7 +7322,10 @@
       "date": "2026-07-24",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17905518813453306",
+      "story_id": "18168970846440070",
+      "published_at": "2026-07-24T17:45:20Z"
     },
     {
       "topic": "Stoizismus: Scheitern als Lernchance",
