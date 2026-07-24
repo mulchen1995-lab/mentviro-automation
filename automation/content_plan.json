@@ -7180,11 +7180,15 @@
       "content_pillar": "educational",
       "post_id": "18131956027621928",
       "story_id": "17888519517665965",
-      "published_at": "2026-07-23T17:38:09Z"
+      "published_at": "2026-07-23T17:38:09Z",
+      "insights": {
+        "likes": 4,
+        "comments": 2
+      }
     },
     {
       "topic": "Priorisierung im Alltag",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Tag ist ein Chaos, bis du DAS verstehst.",
       "script": [
         "Du startest den Tag voller guter Vorsätze.",
@@ -7207,7 +7211,10 @@
       "date": "2026-07-24",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18106819834932504",
+      "story_id": "17974816167118638",
+      "published_at": "2026-07-24T07:31:28Z"
     },
     {
       "topic": "Zeichen für falsche Prioritäten",
