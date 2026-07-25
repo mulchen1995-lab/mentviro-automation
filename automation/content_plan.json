@@ -7367,7 +7367,7 @@
     },
     {
       "topic": "3 Stoizismus-Prinzipien gegen Rückschläge",
-      "status": "pending",
+      "status": "published",
       "hook": "3 zeitlose Weisheiten der Stoiker, um aus jedem Scheitern zu lernen.",
       "slides": [
         {
@@ -7447,7 +7447,10 @@
       "date": "2026-07-25",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18109139440999799",
+      "story_id": "17969817875932873",
+      "published_at": "2026-07-25T17:07:48Z"
     },
     {
       "topic": "mentviro liest: Atomic Habits",
