@@ -7359,7 +7359,11 @@
       "content_pillar": "educational",
       "post_id": "18111443404759938",
       "story_id": "18018854750912916",
-      "published_at": "2026-07-25T07:15:44Z"
+      "published_at": "2026-07-25T07:15:44Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Stoizismus-Prinzipien gegen Rückschläge",
@@ -9258,7 +9262,7 @@
       "published_at": "2026-07-24T11:38:23Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal ancient stoic wisdom",
       "quote": {
         "text": "Wir leiden oft mehr in der Vorstellung als in der Realität.",
@@ -9275,7 +9279,10 @@
       "day": 67,
       "date": "2026-07-25",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-25T11:04:52Z"
     },
     {
       "topic": "discipline habits focus calm dark",
