@@ -7325,11 +7325,15 @@
       "content_pillar": "entertaining",
       "post_id": "17905518813453306",
       "story_id": "18168970846440070",
-      "published_at": "2026-07-24T17:45:20Z"
+      "published_at": "2026-07-24T17:45:20Z",
+      "insights": {
+        "likes": 3,
+        "comments": 2
+      }
     },
     {
       "topic": "Stoizismus: Scheitern als Lernchance",
-      "status": "pending",
+      "status": "published",
       "hook": "Was Stoiker über Misserfolge wissen, das du nicht weißt.",
       "script": [
         "Jeder von uns erlebt Rückschläge und Enttäuschungen.",
@@ -7352,7 +7356,10 @@
       "date": "2026-07-25",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18111443404759938",
+      "story_id": "18018854750912916",
+      "published_at": "2026-07-25T07:15:44Z"
     },
     {
       "topic": "3 Stoizismus-Prinzipien gegen Rückschläge",
@@ -7891,6 +7898,351 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Entscheidungen treffen",
+      "status": "pending",
+      "hook": "Was steckt hinter wirklich guten Entscheidungen?",
+      "script": [
+        "Jede große Veränderung beginnt mit einer bewussten Entscheidung.",
+        "Lerne, wie du Klarheit findest und mutig deinen Weg wählst.",
+        "Warte nicht auf den perfekten Moment – gestalte ihn selbst.",
+        "Folge @mentviro."
+      ],
+      "caption": "Entscheidungen formen unser Schicksal. Sie sind der Schlüssel zu persönlichem Wachstum und Erfolg. Doch oft zögern wir, aus Angst vor Fehlern. Wahre Stärke liegt darin, trotz Unsicherheit zu handeln und aus jedem Ausgang zu lernen. Wie triffst du deine wichtigsten Entscheidungen? Teile deine Strategie in den Kommentaren! #motivation #mentaltraining #entrepreneur #erfolgsmentalität #successmindset #unternehmertum #persönlicheentwicklung #gewohnheiten #mindsetpower #fokus #zielsetzung #resilienz #wachstumsdenken #selbstvertrauen #mentviro",
+      "pexels_video_query": "dark cinematic minimal decision making",
+      "story_text": [
+        "NEUES REEL",
+        "Wegweiser für dein Leben",
+        "Klarheit in jeder Wahl",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Spontan oder geplant?",
+      "day": 72,
+      "date": "2026-07-30",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Entscheidungen treffen",
+      "status": "pending",
+      "hook": "3 Schritte für unaufhaltbare Entscheidungen",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Schritte",
+            "Für unaufhaltbare",
+            "Entscheidungen"
+          ],
+          "body": [
+            "Meistere die Kunst der klaren Wahl."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 3",
+          "title": [
+            "Verstehe deine Werte"
+          ],
+          "body": [
+            "Was ist dir wirklich wichtig? Deine Grundwerte sind dein Kompass."
+          ]
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 3",
+          "title": [
+            "Sammle Fakten, nicht Ängste"
+          ],
+          "body": [
+            "Informiere dich objektiv, lass dich nicht von irrationalen Ängsten leiten."
+          ]
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 3",
+          "title": [
+            "Vertraue deiner Intuition"
+          ],
+          "body": [
+            "Manchmal weiß dein Bauch mehr. Höre auf deine innere Stimme nach den Fakten."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& klare Entscheidungen"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Große Entscheidungen können überwältigend sein. Doch mit der richtigen Strategie wird jede Wahl zu einer Chance für Wachstum. Diese 3 Schritte helfen dir, mit Klarheit und Selbstvertrauen voranzugehen. Worauf achtest du am meisten bei wichtigen Entscheidungen? #motivation #mentaltraining #entrepreneur #erfolgsmentalität #successmindset #unternehmertum #persönlicheentwicklung #gewohnheiten #mindsetpower #fokus #zielsetzung #resilienz #wachstumsdenken #selbstvertrauen #mentviro",
+      "pexels_queries": [
+        "dark cinematic minimalist thinking",
+        "abstract decision making",
+        "clear path choices",
+        "inner compass light",
+        "data facts visualization",
+        "intuitive feeling"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Klarheit, nicht Zögern",
+        "Deine beste Wahl",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Zögerst du oft?",
+      "day": 72,
+      "date": "2026-07-30",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Deep Work",
+      "status": "pending",
+      "hook": "POV: Dein Chef denkt, du bist ein Genie.",
+      "script": [
+        "Du schottest dich ab, blockst alles – und lieferst Ergebnisse, die beeindrucken.",
+        "Das Geheimnis? Deep Work. Ohne Ablenkung, mit maximaler Power.",
+        "Folge @mentviro."
+      ],
+      "caption": "Erlebe die Magie von Deep Work! Wenn du wirklich ungestört arbeiten kannst, explodiert deine Produktivität. Weniger Zeit, bessere Ergebnisse. Wie oft gönnst du dir Deep Work-Phasen? 👇 #motivation #produktivität #fokus #deepwork #zeitmanagement #lifestyle #erfolgsmentalität #successmindset #mentaltraining #gewohnheiten #disziplin #digitalermindset #worklifeintegration #energie #mentviro",
+      "pexels_video_query": "urban neon productive focus",
+      "story_text": [
+        "NEUES REEL",
+        "Deine Produktivitäts-Hack",
+        "Arbeite smarter, nicht härter",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Deep Work = Gamechanger?",
+      "day": 73,
+      "date": "2026-07-31",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Deep Work",
+      "status": "pending",
+      "hook": "5 Zeichen, dass du den Deep Work Modus beherrschst",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "5 Zeichen,",
+            "Dass du den",
+            "Deep Work Modus",
+            "Beherrschst"
+          ],
+          "body": [
+            "Produktivität auf einem neuen Level."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 5",
+          "title": [
+            "Du ignorierst Benachrichtigungen"
+          ],
+          "body": [
+            "Dein Handy ist stumm, Social Media tabu. Dein Fokus ist unerschütterlich."
+          ]
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 5",
+          "title": [
+            "Du planst Fokus-Slots"
+          ],
+          "body": [
+            "Deep Work ist kein Zufall, sondern fest in deinem Kalender verankert."
+          ]
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 5",
+          "title": [
+            "Du tauchst tief in Aufgaben ein"
+          ],
+          "body": [
+            "Stunden vergehen wie Minuten, wenn du vollkommen konzentriert bist."
+          ]
+        },
+        {
+          "badge": "PUNKT #4",
+          "num": "4 / 5",
+          "title": [
+            "Deine Ergebnisse sprechen Bände"
+          ],
+          "body": [
+            "Du lieferst Qualität und Effizienz, die andere staunen lässt."
+          ]
+        },
+        {
+          "badge": "PUNKT #5",
+          "num": "5 / 5",
+          "title": [
+            "Du bist danach mental erschöpft"
+          ],
+          "body": [
+            "Echte Deep Work kostet Energie. Du hast dein Gehirn maximal genutzt."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Produktivität"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Deep Work ist die Superkraft der Gegenwart. In einer Welt voller Ablenkungen ist die Fähigkeit, sich tief zu konzentrieren, Gold wert. Erkennst du dich in diesen Zeichen wieder? Teile deine Deep Work Erfahrungen! #motivation #produktivität #fokus #deepwork #zeitmanagement #lifestyle #erfolgsmentalität #successmindset #mentaltraining #gewohnheiten #disziplin #digitalermindset #worklifeintegration #energie #mentviro",
+      "pexels_queries": [
+        "urban neon productive focus",
+        "person ignoring phone",
+        "calendar planning focus",
+        "deep concentration tunnel",
+        "high quality results",
+        "mental exhaustion relief"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Fokus wie ein Laser",
+        "Dein Produktivitäts-Boost",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Ablenkungen dein Feind?",
+      "day": 73,
+      "date": "2026-07-31",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Kreatives Denken",
+      "status": "pending",
+      "hook": "Was, wenn deine besten Ideen noch nicht da sind?",
+      "script": [
+        "Kreativität ist keine Gabe, sondern eine Fähigkeit, die jeder lernen kann.",
+        "Entdecke Techniken, die dein Denken beflügeln und neue Lösungen schaffen.",
+        "Lass alte Muster los und öffne dich für bahnbrechende Gedanken.",
+        "Folge @mentviro."
+      ],
+      "caption": "Kreatives Denken ist der Motor für Innovation und persönliches Wachstum. Es geht darum, Probleme neu zu sehen und unkonventionelle Wege zu gehen. Welche Technik hilft dir, kreativ zu sein? Teile es in den Kommentaren! #motivation #kreativität #ideenentwicklung #unternehmertum #erfolgsmentalität #successmindset #mentaltraining #innovation #problemlösung #persönlicheentwicklung #mindset #wachstumsdenken #inspiration #denken #mentviro",
+      "pexels_video_query": "dark cinematic minimal creative thinking",
+      "story_text": [
+        "NEUES REEL",
+        "Ideen-Turbo zünden",
+        "Dein kreatives Potenzial",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Bist du kreativ?",
+      "day": 74,
+      "date": "2026-08-01",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Kreatives Denken",
+      "status": "pending",
+      "hook": "3 Wege, dein kreatives Denken zu entfesseln",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Wege,",
+            "Dein kreatives",
+            "Denken zu",
+            "Entfesseln"
+          ],
+          "body": [
+            "Innovation beginnt im Kopf."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 3",
+          "title": [
+            "Denke in Gegensätzen"
+          ],
+          "body": [
+            "Was ist das genaue Gegenteil deines Problems? Finde neue Ansätze."
+          ]
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 3",
+          "title": [
+            "Wechsle die Perspektive"
+          ],
+          "body": [
+            "Wie würde ein Kind, ein Experte oder dein Idol das Problem sehen?"
+          ]
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 3",
+          "title": [
+            "Gib deinem Gehirn Pausen"
+          ],
+          "body": [
+            "Die besten Ideen kommen oft, wenn du entspannt bist oder schläfst."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Innovation"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Kreativität ist der Schlüssel zu unbegrenzten Möglichkeiten. Wenn du lernst, dein Denken gezielt zu beflügeln, öffnen sich Türen, die vorher verschlossen schienen. Probiere diese Wege aus und staune über die Ergebnisse! #motivation #kreativität #ideenentwicklung #unternehmertum #erfolgsmentalität #successmindset #mentaltraining #innovation #problemlösung #persönlicheentwicklung #mindset #wachstumsdenken #inspiration #denken #mentviro",
+      "pexels_queries": [
+        "dark cinematic minimal creativity",
+        "brainstorming opposite ideas",
+        "different perspectives view",
+        "relaxing mind break",
+        "innovative thinking",
+        "abstract idea generation"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Unlock deine Ideen",
+        "Frischer Wind für dein Hirn",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Brainstormst du oft?",
+      "day": 74,
+      "date": "2026-08-01",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -9007,6 +9359,66 @@
       "date": "2026-07-29",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie selbst zu gestalten.",
+        "author": "Peter Drucker"
+      },
+      "tips": {
+        "title": "Schneller entscheiden",
+        "items": [
+          "Setze dir ein Zeitlimit.",
+          "Frage: Was ist das Worst-Case?",
+          "Starte mit kleinen Schritten."
+        ]
+      },
+      "day": 72,
+      "date": "2026-07-30",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban contrasting pexels query",
+      "quote": {
+        "text": "Konzentration ist der Schlüssel, der die Tür zu den Geheimnissen des Universums öffnet.",
+        "author": "Swami Vivekananda"
+      },
+      "tips": {
+        "title": "Deep Work starten",
+        "items": [
+          "Wähle eine feste Zeit.",
+          "Schalte alle Ablenkungen aus.",
+          "Arbeite 45-90 Minuten ununterbrochen."
+        ]
+      },
+      "day": 73,
+      "date": "2026-07-31",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Kreativität ist Intelligenz, die Spaß hat.",
+        "author": "Albert Einstein"
+      },
+      "tips": {
+        "title": "Kreativ-Block lösen",
+        "items": [
+          "Gehe spazieren in Natur.",
+          "Schreibe alles ungefiltert auf.",
+          "Arbeite an einem anderen Projekt."
+        ]
+      },
+      "day": 74,
+      "date": "2026-08-01",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0,
