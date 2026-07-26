@@ -7484,7 +7484,11 @@
       "book_episode": 1,
       "post_id": "18070640135516066",
       "story_id": "18081833120252514",
-      "published_at": "2026-07-26T07:35:08Z"
+      "published_at": "2026-07-26T07:35:08Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "mentviro liest: Atomic Habits",
@@ -9310,12 +9314,15 @@
       },
       "day": 68,
       "date": "2026-07-26",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 1
+      "book_episode": 1,
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-26T11:15:59Z"
     },
     {
       "status": "pending",
