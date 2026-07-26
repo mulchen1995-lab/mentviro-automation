@@ -7563,12 +7563,15 @@
       "day": 68,
       "type": "carousel",
       "date": "2026-07-26",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 1
+      "book_episode": 1,
+      "post_id": "17863530753647358",
+      "story_id": "18331406980282140",
+      "published_at": "2026-07-26T17:09:52Z"
     },
     {
       "topic": "Prokrastination humorvoll überwinden",
