@@ -7602,7 +7602,11 @@
       "content_pillar": "entertaining",
       "post_id": "18094746332633510",
       "story_id": "18123253189744893",
-      "published_at": "2026-07-27T08:30:42Z"
+      "published_at": "2026-07-27T08:30:42Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Zeichen, dass du Prokrastination meisterst",
@@ -9444,7 +9448,7 @@
       "published_at": "2026-07-26T11:15:59Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban street life",
       "quote": {
         "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie zu gestalten.",
@@ -9461,7 +9465,10 @@
       "day": 69,
       "date": "2026-07-27",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-27T10:35:31Z"
     },
     {
       "status": "pending",
