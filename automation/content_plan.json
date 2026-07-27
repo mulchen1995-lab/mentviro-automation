@@ -7610,7 +7610,7 @@
     },
     {
       "topic": "5 Zeichen, dass du Prokrastination meisterst",
-      "status": "pending",
+      "status": "published",
       "hook": "Du bist ein Meister der Prokrastination? Nicht mehr lange!",
       "slides": [
         {
@@ -7713,7 +7713,10 @@
       "date": "2026-07-27",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17930448015125871",
+      "story_id": "18115581616902765",
+      "published_at": "2026-07-27T17:49:04Z"
     },
     {
       "topic": "Komfortzone verlassen",
