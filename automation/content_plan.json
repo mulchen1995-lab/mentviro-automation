@@ -7571,11 +7571,15 @@
       "book_episode": 1,
       "post_id": "17863530753647358",
       "story_id": "18331406980282140",
-      "published_at": "2026-07-26T17:09:52Z"
+      "published_at": "2026-07-26T17:09:52Z",
+      "insights": {
+        "likes": 4,
+        "comments": 4
+      }
     },
     {
       "topic": "Prokrastination humorvoll überwinden",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Hirn, wenn die Deadline naht.",
       "script": [
         "Jeder kennt diesen Moment, wenn die To-Do-Liste schreit, aber dein Gehirn „später“ flüstert.",
@@ -7595,7 +7599,10 @@
       "date": "2026-07-27",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18094746332633510",
+      "story_id": "18123253189744893",
+      "published_at": "2026-07-27T08:30:42Z"
     },
     {
       "topic": "5 Zeichen, dass du Prokrastination meisterst",
@@ -8264,6 +8271,115 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "mentviro liest: Deep Work",
+      "hook": "Fokus ist die neue Superkraft.",
+      "script": [
+        "Fokus ist die neue Superkraft.",
+        "Wer ungestört tief arbeiten kann, schlägt die, die nur beschäftigt sind.",
+        "Schütze deine Konzentration wie dein wertvollstes Gut.",
+        "Folge @mentviro."
+      ],
+      "pexels_video_query": "focused work desk lamp night minimal cinematic",
+      "caption": "📚 mentviro liest #2 · Deep Work\n\nCal Newport nennt es Deep Work: die Fähigkeit, ohne Ablenkung an einer schweren Sache zu arbeiten.\n\nIn einer Welt voller Benachrichtigungen ist genau das selten — und deshalb so wertvoll.\n\nWann hattest du zuletzt 90 Minuten echten Fokus?\n\n#deepwork #calnewport #fokus #produktivität #konzentration #mindset #disziplin #selbstentwicklung #deeplife #buchtipp #lesen #klarheit #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #2",
+        "Deep Work",
+        "Fokus ist Superkraft",
+        "Jetzt ansehen"
+      ],
+      "day": 75,
+      "type": "reel",
+      "date": "2026-08-02",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 2
+    },
+    {
+      "topic": "mentviro liest: Deep Work",
+      "hook": "3 Ideen aus Deep Work",
+      "pexels_queries": [
+        "focused desk lamp night",
+        "phone face down minimal",
+        "clock time calm",
+        "notebook plan hands",
+        "quiet room window light",
+        "mountain focus horizon"
+      ],
+      "slides": [
+        {
+          "is_cover": true,
+          "title": [
+            "Deep Work",
+            "in 3 Ideen"
+          ],
+          "body": [
+            "Warum Fokus dein größter",
+            "Vorteil ist.",
+            "Weiterwischen ›"
+          ]
+        },
+        {
+          "title": [
+            "1 · Tief statt breit"
+          ],
+          "body": [
+            "Eine Sache mit voller",
+            "Aufmerksamkeit schlägt zehn",
+            "halb erledigte."
+          ]
+        },
+        {
+          "title": [
+            "2 · Ablenkung kostet"
+          ],
+          "body": [
+            "Jeder Blick aufs Handy",
+            "reißt dich raus.",
+            "Zurück dauert Minuten."
+          ]
+        },
+        {
+          "title": [
+            "3 · Feste Fokus-Blöcke"
+          ],
+          "body": [
+            "Plane Zeit, in der du",
+            "unerreichbar bist.",
+            "Behandle sie wie einen Termin."
+          ]
+        },
+        {
+          "title": [
+            "Dein Zug"
+          ],
+          "body": [
+            "Wann ist dein nächster",
+            "90-Minuten-Fokus-Block?",
+            "Speicher dir das ›"
+          ]
+        }
+      ],
+      "caption": "📚 mentviro liest #2 · Deep Work\n\nDeep Work von Cal Newport — drei Ideen, die deinen Arbeitstag verändern.\n\nNicht mehr Stunden gewinnen das Spiel, sondern tiefere Stunden.\n\nSpeicher dir den Post für deinen nächsten Fokus-Block.\n\n#deepwork #fokus #produktivität #konzentration #mindset #disziplin #selbstentwicklung #buchtipp #klarheit #zeitmanagement #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #2",
+        "Deep Work",
+        "3 Ideen",
+        "Jetzt ansehen"
+      ],
+      "day": 75,
+      "type": "carousel",
+      "date": "2026-08-02",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 2
     }
   ],
   "story_queue": [
@@ -9446,8 +9562,31 @@
       "date": "2026-08-01",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "focus deep work calm night desk",
+      "quote": {
+        "text": "Klarheit über das Wesentliche entsteht nur, wenn man die Ablenkung wegräumt.",
+        "author": "Cal Newport"
+      },
+      "tips": {
+        "title": "Fokus schützen",
+        "items": [
+          "Handy in einen anderen Raum legen.",
+          "Einen festen Fokus-Block pro Tag planen.",
+          "Nach der Arbeit klar abschalten."
+        ]
+      },
+      "day": 75,
+      "date": "2026-08-02",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 2
     }
   ],
   "evergreen_cursor": 0,
-  "book_series_cursor": 1
+  "book_series_cursor": 2
 }
