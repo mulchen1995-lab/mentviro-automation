@@ -7755,7 +7755,7 @@
     },
     {
       "topic": "3 Strategien, um deine Komfortzone zu verlassen",
-      "status": "pending",
+      "status": "published",
       "hook": "Deine Komfortzone ist dein größter Gegner beim persönlichen Wachstum.",
       "slides": [
         {
@@ -7835,7 +7835,10 @@
       "date": "2026-07-28",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17912668059243252",
+      "story_id": "17965517046135183",
+      "published_at": "2026-07-28T17:41:16Z"
     },
     {
       "topic": "Die Macht deines Umfelds",
