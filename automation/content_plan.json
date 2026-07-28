@@ -7747,7 +7747,11 @@
       "content_pillar": "educational",
       "post_id": "17870642601631331",
       "story_id": "18107783600044674",
-      "published_at": "2026-07-28T07:39:17Z"
+      "published_at": "2026-07-28T07:39:17Z",
+      "insights": {
+        "likes": 6,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Strategien, um deine Komfortzone zu verlassen",
@@ -9481,7 +9485,7 @@
       "published_at": "2026-07-27T10:35:31Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic abstract",
       "quote": {
         "text": "Ein Schiff ist sicher im Hafen, aber dafür werden Schiffe nicht gebaut.",
@@ -9498,7 +9502,10 @@
       "day": 70,
       "date": "2026-07-28",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-28T11:52:52Z"
     },
     {
       "status": "pending",
