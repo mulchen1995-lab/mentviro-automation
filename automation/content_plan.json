@@ -7716,11 +7716,15 @@
       "content_pillar": "entertaining",
       "post_id": "17930448015125871",
       "story_id": "18115581616902765",
-      "published_at": "2026-07-27T17:49:04Z"
+      "published_at": "2026-07-27T17:49:04Z",
+      "insights": {
+        "likes": 4,
+        "comments": 1
+      }
     },
     {
       "topic": "Komfortzone verlassen",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum das Verlassen der Komfortzone unverzichtbar ist.",
       "script": [
         "Wachstum beginnt immer außerhalb deiner Komfortzone, dort, wo das Unbekannte auf dich wartet.",
@@ -7740,7 +7744,10 @@
       "date": "2026-07-28",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17870642601631331",
+      "story_id": "18107783600044674",
+      "published_at": "2026-07-28T07:39:17Z"
     },
     {
       "topic": "3 Strategien, um deine Komfortzone zu verlassen",
