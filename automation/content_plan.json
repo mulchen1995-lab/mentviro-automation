@@ -7838,11 +7838,15 @@
       "content_pillar": "educational",
       "post_id": "17912668059243252",
       "story_id": "17965517046135183",
-      "published_at": "2026-07-28T17:41:16Z"
+      "published_at": "2026-07-28T17:41:16Z",
+      "insights": {
+        "likes": 3,
+        "comments": 3
+      }
     },
     {
       "topic": "Die Macht deines Umfelds",
-      "status": "pending",
+      "status": "published",
       "hook": "Niemand redet darüber, aber dein Umfeld ist alles.",
       "script": [
         "Die Menschen um dich herum formen, wer du bist – ob du es merkst oder nicht.",
@@ -7862,7 +7866,10 @@
       "date": "2026-07-29",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18110176226285060",
+      "story_id": "17934189045343808",
+      "published_at": "2026-07-29T07:43:50Z"
     },
     {
       "topic": "Umfeld gestalten: Wer dich wirklich stärkt",
