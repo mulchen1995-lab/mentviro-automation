@@ -7877,7 +7877,7 @@
     },
     {
       "topic": "Umfeld gestalten: Wer dich wirklich stärkt",
-      "status": "pending",
+      "status": "published",
       "hook": "Es gab einen Moment, der alles veränderte: Ich begann mein Umfeld bewusst zu wählen.",
       "slides": [
         {
@@ -7957,7 +7957,10 @@
       "date": "2026-07-29",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18210408157357082",
+      "story_id": "18371749927236521",
+      "published_at": "2026-07-29T17:22:12Z"
     },
     {
       "topic": "Entscheidungen treffen",
