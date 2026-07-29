@@ -7869,7 +7869,11 @@
       "content_pillar": "emotional",
       "post_id": "18110176226285060",
       "story_id": "17934189045343808",
-      "published_at": "2026-07-29T07:43:50Z"
+      "published_at": "2026-07-29T07:43:50Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Umfeld gestalten: Wer dich wirklich stärkt",
@@ -8408,6 +8412,403 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 2
+    },
+    {
+      "topic": "Digitale Ablenkung & Fokus",
+      "status": "pending",
+      "hook": "Dein Handy stiehlt deine Zeit? So holst du sie zurück.",
+      "script": [
+        "POV: Du willst produktiv sein, aber dein Handy hat andere Pläne.",
+        "Dein Fokus ist die Währung der Zukunft – schütz ihn!",
+        "Folge @mentviro."
+      ],
+      "caption": "Erkennst du dich wieder? Wir alle lieben unser Smartphone, aber es kann ein echter Produktivitätskiller sein. Schütze deine wertvollste Ressource: deinen Fokus! Weniger Ablenkung bedeutet mehr Zeit für das, was wirklich zählt. Kleine Änderungen können Großes bewirken. Lass uns gemeinsam den digitalen Dschungel lichten und unsere Konzentration zurückerobern. Dein Fortschritt wird es dir danken! 💪 #successmindset #erfolgreich #businessmindset #motivation #mindset #entrepreneur #mentaltraining #erfolgsmentalität #zielsetzung #businesstips #produktivität #fokus #digitalminimalismus #lifestyle #mentviro",
+      "pexels_video_query": "urban neon fast cuts energetic",
+      "story_text": [
+        "NEUES REEL",
+        "Handy vs. Fokus",
+        "Wer gewinnt?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Handy in Sichtweite beim Arbeiten?",
+      "day": 76,
+      "date": "2026-08-03",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Digitaler Fokus & Produktivität",
+      "status": "pending",
+      "hook": "Dein Handy stiehlt deine Zeit? So holst du sie zurück.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Dein Handy stiehlt deine Zeit?",
+            "So holst du sie zurück."
+          ],
+          "body": [
+            "5 Gewohnheiten für ungestörten Fokus."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "GEWOHNHEIT #1",
+          "num": "1 / 5",
+          "title": [
+            "Schaffe physische Distanz"
+          ],
+          "body": [
+            "Lege dein Handy in einen anderen Raum oder außer Sichtweite."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #2",
+          "num": "2 / 5",
+          "title": [
+            "Deaktiviere Benachrichtigungen"
+          ],
+          "body": [
+            "Nur die wichtigsten Anrufe zulassen. Alles andere stumm schalten."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #3",
+          "num": "3 / 5",
+          "title": [
+            "Nutze Fokus-Apps"
+          ],
+          "body": [
+            "Apps wie Forest oder Freedom blocken Ablenkungen effizient."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #4",
+          "num": "4 / 5",
+          "title": [
+            "Plane digitale Detox-Zeiten"
+          ],
+          "body": [
+            "Feste Zeiten ohne Bildschirm festlegen (z.B. vor dem Schlaf)."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #5",
+          "num": "5 / 5",
+          "title": [
+            "Praktiziere Single-Tasking"
+          ],
+          "body": [
+            "Konzentriere dich nur auf eine Aufgabe, ohne Apps zu wechseln."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle-Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Digitale Ablenkung ist der größte Produktivitätskiller unserer Zeit. Dein Smartphone ist ein mächtiges Werkzeug, aber es kann auch ein Meister der Verzögerung sein. Mit diesen 5 einfachen Gewohnheiten kannst du deinen Fokus zurückerobern und deine Ziele schneller erreichen. Starte noch heute und erlebe, wie viel du schaffen kannst, wenn du wirklich konzentriert bist. Welchen Tipp setzt du sofort um? Schreib es in die Kommentare! 👇 #successmindset #erfolgreich #businessmindset #motivation #mindset #entrepreneur #mentaltraining #erfolgsmentalität #zielsetzung #businesstips #produktivität #fokus #digitalminimalismus #lifestyle #mentviro",
+      "pexels_queries": [
+        "phone addiction urban",
+        "focused person working",
+        "minimal desk phone",
+        "notifications off",
+        "person meditating digital detox",
+        "single tasking focused"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Fokus-Hacks für",
+        "deinen Alltag!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Du vs. Handy: Wer gewinnt?",
+      "day": 76,
+      "date": "2026-08-03",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Wachstumsdenken (Growth Mindset)",
+      "status": "pending",
+      "hook": "Entfessle dein wahres Potenzial mit dieser Denkweise.",
+      "script": [
+        "Dein Potenzial ist nicht fix – es wächst mit dir.",
+        "Die Überzeugung, dass du Fähigkeiten entwickeln kannst, ist der Schlüssel zum Erfolg.",
+        "Wähle Wachstumsdenken und unlocke dein wahres Ich. Folge @mentviro."
+      ],
+      "caption": "Das Konzept des Wachstumsdenkens (Growth Mindset) von Carol Dweck ist ein Game Changer. Es besagt, dass unsere Fähigkeiten und Intelligenz nicht statisch sind, sondern durch harte Arbeit, Engagement und die richtige Strategie entwickelt werden können. Das Gegenteil ist das starre Denken (Fixed Mindset), das davon ausgeht, dass unsere Talente angeboren und unveränderlich sind. Werde zum Gestalter deines Potenzials! 🧠 #successmindset #erfolgreich #businessmindset #motivation #mindset #entrepreneur #mentaltraining #erfolgsmentalität #zielsetzung #persönlichkeitsentwicklung #wachstumsdenken #psychologie #lernen #selbstentwicklung #mentviro",
+      "pexels_video_query": "dark minimal cinematic abstract evolution",
+      "story_text": [
+        "NEUES REEL",
+        "Deine Denkweise",
+        "formt dein Schicksal!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Glaubst du an dein Wachstum?",
+      "day": 77,
+      "date": "2026-08-04",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Wachstumsdenken vs. Starres Denken",
+      "status": "pending",
+      "hook": "Wachstumsdenken: Die Basis für grenzenloses Potenzial.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Wachstumsdenken:",
+            "Basis grenzenlosen Potenzials."
+          ],
+          "body": [
+            "Der Unterschied, der dein Leben verändert."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DEFINITION",
+          "num": "1 / 6",
+          "title": [
+            "Growth Mindset vs. Fixed Mindset"
+          ],
+          "body": [
+            "Das Growth Mindset glaubt an entwickelbare Fähigkeiten."
+          ]
+        },
+        {
+          "badge": "HERAUSFORDERUNGEN",
+          "num": "2 / 6",
+          "title": [
+            "Growth: Chance",
+            "Fixed: Bedrohung"
+          ],
+          "body": [
+            "Growth: Möglichkeiten zum Lernen.",
+            "Fixed: Angst vor Scheitern."
+          ]
+        },
+        {
+          "badge": "ANSTRENGUNG",
+          "num": "3 / 6",
+          "title": [
+            "Growth: Weg",
+            "Fixed: Sinnlos"
+          ],
+          "body": [
+            "Growth: Essentiell für Meisterschaft.",
+            "Fixed: Talent braucht keine Mühe."
+          ]
+        },
+        {
+          "badge": "KRITIK",
+          "num": "4 / 6",
+          "title": [
+            "Growth: Feedback",
+            "Fixed: Angriff"
+          ],
+          "body": [
+            "Growth: Nützlich zur Verbesserung.",
+            "Fixed: Persönliche Abwertung."
+          ]
+        },
+        {
+          "badge": "ERFOLG ANDERER",
+          "num": "5 / 6",
+          "title": [
+            "Growth: Inspiration",
+            "Fixed: Konkurrenz"
+          ],
+          "body": [
+            "Growth: Quelle der Motivation.",
+            "Fixed: Bedrohung des eigenen Status."
+          ]
+        },
+        {
+          "badge": "FAZIT",
+          "num": "6 / 6",
+          "title": [
+            "Wähle deine Perspektive!"
+          ],
+          "body": [
+            "Dein Mindset formt deine Realität und dein Wachstum."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Entwicklungstipps"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Dein Mindset ist der Motor deines Fortschritts. Verstehst du den Unterschied zwischen Wachstumsdenken und starrem Denken, erkennst du, wie du dein Potenzial wirklich entfalten kannst. Jede Herausforderung, jede Anstrengung, jede Kritik wird zu einer Chance, wenn du die richtige Perspektive wählst. Welches Mindset dominiert bei dir noch? Lass uns in den Kommentaren darüber sprechen! 👇 #successmindset #erfolgreich #businessmindset #motivation #mindset #entrepreneur #mentaltraining #erfolgsmentalität #zielsetzung #persönlichkeitsentwicklung #wachstumsdenken #psychologie #lernen #selbstentwicklung #mentviro",
+      "pexels_queries": [
+        "growth mindset abstract",
+        "challenge opportunity",
+        "effort hard work",
+        "feedback learning",
+        "inspiration achievement",
+        "perspective growth",
+        "mindset transformation"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Mindset",
+        "ist entscheidend!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Growth Mindset: Ja oder Nein?",
+      "day": 77,
+      "date": "2026-08-04",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Wahre Erfüllung & Werte",
+      "status": "pending",
+      "hook": "Das, was wirklich zählt, ist oft unsichtbar.",
+      "script": [
+        "Niemand redet darüber, aber wahre Erfüllung findest du nicht im Außen.",
+        "Es ist die Stille, die Dankbarkeit, die kleinen Siege auf dem Weg, die zählen.",
+        "Finde deinen inneren Kompass und lebe ein Leben voller Sinn. Folge @mentviro."
+      ],
+      "caption": "Wir jagen oft externen Zielen hinterher und vergessen dabei, dass die tiefste Erfüllung aus uns selbst kommt. Es ist die Qualität unserer Beziehungen, die Dankbarkeit für das Hier und Jetzt und das Gefühl, auf dem richtigen Weg zu sein, das zählt. Was gibt deinem Leben wirklich Sinn? Teile deine Gedanken mit uns. ❤️ #successmindset #erfolgreich #motivation #mindset #mentaltraining #erfolgsmentalität #zielsetzung #lebensweisheiten #werte #dankbarkeit #sinnsuche #persönlicheentwicklung #mindfulness #authentizität #mentviro",
+      "pexels_video_query": "warm natural sunrise forest ocean calm",
+      "story_text": [
+        "NEUES REEL",
+        "Die Wahrheit über",
+        "wahre Erfüllung",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Sinn vs. Erfolg: Was ist dir wichtiger?",
+      "day": 78,
+      "date": "2026-08-05",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Wahre Erfüllung – Der innere Kompass",
+      "status": "pending",
+      "hook": "Mehr als nur Erfolg: Finde deine wahre Erfüllung.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Mehr als nur Erfolg:",
+            "Finde deine wahre Erfüllung."
+          ],
+          "body": [
+            "Was wirklich zählt, wenn der Lärm verstummt."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WERTE",
+          "num": "1 / 5",
+          "title": [
+            "Werte über Materielles"
+          ],
+          "body": [
+            "Dein innerer Reichtum ist unbezahlbar und nachhaltig."
+          ]
+        },
+        {
+          "badge": "DANKBARKEIT",
+          "num": "2 / 5",
+          "title": [
+            "Dankbarkeit im Alltag"
+          ],
+          "body": [
+            "Die kleinen Dinge schätzen, die oft übersehen werden."
+          ]
+        },
+        {
+          "badge": "STILLE",
+          "num": "3 / 5",
+          "title": [
+            "Die Macht der Stille"
+          ],
+          "body": [
+            "Finde Ruhe, um deine innere Stimme zu hören und zu wachsen."
+          ]
+        },
+        {
+          "badge": "BEZIEHUNGEN",
+          "num": "4 / 5",
+          "title": [
+            "Bedeutung in Beziehungen"
+          ],
+          "body": [
+            "Authentische Verbindungen nähren die Seele tiefgreifend."
+          ]
+        },
+        {
+          "badge": "DER WEG",
+          "num": "5 / 5",
+          "title": [
+            "Der Weg ist das Ziel"
+          ],
+          "body": [
+            "Schätze den Prozess und die persönliche Entwicklung."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Tiefgang",
+            "& Persönliches Wachstum"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "In unserer schnelllebigen Welt ist es leicht, sich in der Jagd nach externen Erfolgen zu verlieren. Doch die wahre Erfüllung liegt oft in den stillen Momenten, in tiefen Verbindungen und in der Dankbarkeit für das, was wir haben. Was nährt deine Seele wirklich? Teile deine Gedanken dazu in den Kommentaren. Lass uns gemeinsam auf die Suche nach dem Inneren gehen! ✨ #successmindset #erfolgreich #motivation #mindset #mentaltraining #erfolgsmentalität #zielsetzung #lebensweisheiten #werte #dankbarkeit #sinnsuche #persönlicheentwicklung #mindfulness #authentizität #mentviro",
+      "pexels_queries": [
+        "inner peace nature",
+        "values abstract",
+        "gratitude sunrise",
+        "meditation quiet",
+        "meaningful connection",
+        "journey path forest"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Was wirklich zählt:",
+        "Dein innerer Kompass",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Folge deinem Herzen oder dem Hype?",
+      "day": 78,
+      "date": "2026-08-05",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -9518,7 +9919,7 @@
       "published_at": "2026-07-28T11:52:52Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "warm natural light forest",
       "quote": {
         "text": "Du bist der Durchschnitt der fünf Menschen, mit denen du die meiste Zeit verbringst.",
@@ -9535,7 +9936,10 @@
       "day": 71,
       "date": "2026-07-29",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-29T11:57:44Z"
     },
     {
       "status": "pending",
@@ -9619,6 +10023,66 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 2
+    },
+    {
+      "status": "pending",
+      "topic": "urban neon street night",
+      "quote": {
+        "text": "Die größte Gefahr ist nicht, dass wir zu hoch zielen und es verfehlen, sondern dass wir zu niedrig zielen und es erreichen.",
+        "author": "Michelangelo"
+      },
+      "tips": {
+        "title": "Sofort mehr Fokus",
+        "items": [
+          "Handy stumm schalten, außer Reichweite legen",
+          "Einen Timer auf 25 Minuten stellen und arbeiten",
+          "Eine einzige, wichtige Aufgabe starten"
+        ]
+      },
+      "day": 76,
+      "date": "2026-08-03",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal geometric pattern",
+      "quote": {
+        "text": "Es ist nicht, was dir passiert, sondern wie du darauf reagierst, das zählt.",
+        "author": "Epiktet"
+      },
+      "tips": {
+        "title": "Growth Mindset stärken",
+        "items": [
+          "Herausforderungen als Lernchance sehen",
+          "Anstrengung als Weg zur Meisterschaft schätzen",
+          "Feedback als Geschenk zur Entwicklung nutzen"
+        ]
+      },
+      "day": 77,
+      "date": "2026-08-04",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural cozy light",
+      "quote": {
+        "text": "Das Glück deines Lebens hängt von der Beschaffenheit deiner Gedanken ab.",
+        "author": "Marc Aurel"
+      },
+      "tips": {
+        "title": "Für mehr Erfüllung",
+        "items": [
+          "Tägliche Dankbarkeits-Übung",
+          "Zeit für Stille & Reflexion nehmen",
+          "Echte Gespräche mit Vertrauten führen"
+        ]
+      },
+      "day": 78,
+      "date": "2026-08-05",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0,
