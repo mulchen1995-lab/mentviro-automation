@@ -7960,11 +7960,15 @@
       "content_pillar": "emotional",
       "post_id": "18210408157357082",
       "story_id": "18371749927236521",
-      "published_at": "2026-07-29T17:22:12Z"
+      "published_at": "2026-07-29T17:22:12Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Entscheidungen treffen",
-      "status": "pending",
+      "status": "published",
       "hook": "Was steckt hinter wirklich guten Entscheidungen?",
       "script": [
         "Jede große Veränderung beginnt mit einer bewussten Entscheidung.",
@@ -7985,7 +7989,10 @@
       "date": "2026-07-30",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18130167181636591",
+      "story_id": "17987966826009585",
+      "published_at": "2026-07-30T07:33:53Z"
     },
     {
       "topic": "Entscheidungen treffen",
