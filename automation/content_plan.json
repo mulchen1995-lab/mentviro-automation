@@ -7992,7 +7992,11 @@
       "content_pillar": "educational",
       "post_id": "18130167181636591",
       "story_id": "17987966826009585",
-      "published_at": "2026-07-30T07:33:53Z"
+      "published_at": "2026-07-30T07:33:53Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Entscheidungen treffen",
@@ -9952,7 +9956,7 @@
       "published_at": "2026-07-29T11:57:44Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie selbst zu gestalten.",
@@ -9969,7 +9973,10 @@
       "day": 72,
       "date": "2026-07-30",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-30T11:47:33Z"
     },
     {
       "status": "pending",
