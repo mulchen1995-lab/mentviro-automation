@@ -8082,11 +8082,15 @@
       "content_pillar": "educational",
       "post_id": "18128394007633654",
       "story_id": "17947632324039079",
-      "published_at": "2026-07-30T17:42:44Z"
+      "published_at": "2026-07-30T17:42:44Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Deep Work",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Dein Chef denkt, du bist ein Genie.",
       "script": [
         "Du schottest dich ab, blockst alles – und lieferst Ergebnisse, die beeindrucken.",
@@ -8106,7 +8110,10 @@
       "date": "2026-07-31",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18005299466957006",
+      "story_id": "18000350975970249",
+      "published_at": "2026-07-31T07:49:48Z"
     },
     {
       "topic": "Deep Work",
