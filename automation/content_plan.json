@@ -8121,7 +8121,7 @@
     },
     {
       "topic": "Deep Work",
-      "status": "pending",
+      "status": "published",
       "hook": "5 Zeichen, dass du den Deep Work Modus beherrschst",
       "slides": [
         {
@@ -8221,7 +8221,10 @@
       "date": "2026-07-31",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17925739245384517",
+      "story_id": "18004276517771456",
+      "published_at": "2026-07-31T17:47:21Z"
     },
     {
       "topic": "Kreatives Denken",
