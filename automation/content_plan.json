@@ -8113,7 +8113,11 @@
       "content_pillar": "entertaining",
       "post_id": "18005299466957006",
       "story_id": "18000350975970249",
-      "published_at": "2026-07-31T07:49:48Z"
+      "published_at": "2026-07-31T07:49:48Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Deep Work",
@@ -9989,7 +9993,7 @@
       "published_at": "2026-07-30T11:47:33Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban contrasting pexels query",
       "quote": {
         "text": "Konzentration ist der Schlüssel, der die Tür zu den Geheimnissen des Universums öffnet.",
@@ -10006,7 +10010,10 @@
       "day": 73,
       "date": "2026-07-31",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-07-31T11:54:17Z"
     },
     {
       "status": "pending",
