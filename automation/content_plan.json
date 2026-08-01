@@ -8256,7 +8256,11 @@
       "content_pillar": "educational",
       "post_id": "18611597119020845",
       "story_id": "18103522589237212",
-      "published_at": "2026-08-01T07:27:37Z"
+      "published_at": "2026-08-01T07:27:37Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Kreatives Denken",
@@ -10382,7 +10386,7 @@
       "published_at": "2026-07-31T11:54:17Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Kreativität ist Intelligenz, die Spaß hat.",
@@ -10399,7 +10403,10 @@
       "day": 74,
       "date": "2026-08-01",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-01T11:13:00Z"
     },
     {
       "topic": "focus deep work calm night desk",
