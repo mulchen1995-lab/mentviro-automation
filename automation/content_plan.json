@@ -8264,7 +8264,7 @@
     },
     {
       "topic": "Kreatives Denken",
-      "status": "pending",
+      "status": "published",
       "hook": "3 Wege, dein kreatives Denken zu entfesseln",
       "slides": [
         {
@@ -8344,7 +8344,10 @@
       "date": "2026-08-01",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18121492561630932",
+      "story_id": "18119990179845421",
+      "published_at": "2026-08-01T17:08:14Z"
     },
     {
       "topic": "mentviro liest: Deep Work",
