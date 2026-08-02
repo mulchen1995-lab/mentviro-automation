@@ -8381,7 +8381,11 @@
       "book_episode": 2,
       "post_id": "18070962776423739",
       "story_id": "18089082902339696",
-      "published_at": "2026-08-02T07:31:58Z"
+      "published_at": "2026-08-02T07:31:58Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "mentviro liest: Deep Work",
@@ -10434,12 +10438,15 @@
       },
       "day": 75,
       "date": "2026-08-02",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 2
+      "book_episode": 2,
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-02T11:13:04Z"
     },
     {
       "status": "pending",
