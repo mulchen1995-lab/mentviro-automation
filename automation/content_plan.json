@@ -8462,12 +8462,15 @@
       "day": 75,
       "type": "carousel",
       "date": "2026-08-02",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 2
+      "book_episode": 2,
+      "post_id": "18426382993177442",
+      "story_id": "18099580619194611",
+      "published_at": "2026-08-02T17:08:28Z"
     },
     {
       "topic": "Digitale Ablenkung & Fokus",
