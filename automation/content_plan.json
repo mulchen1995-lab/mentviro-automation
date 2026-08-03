@@ -8470,11 +8470,15 @@
       "book_episode": 2,
       "post_id": "18426382993177442",
       "story_id": "18099580619194611",
-      "published_at": "2026-08-02T17:08:28Z"
+      "published_at": "2026-08-02T17:08:28Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Digitale Ablenkung & Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Handy stiehlt deine Zeit? So holst du sie zurück.",
       "script": [
         "POV: Du willst produktiv sein, aber dein Handy hat andere Pläne.",
@@ -8494,7 +8498,10 @@
       "date": "2026-08-03",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18105664319140616",
+      "story_id": "18145756984481729",
+      "published_at": "2026-08-03T08:27:44Z"
     },
     {
       "topic": "Digitaler Fokus & Produktivität",
@@ -9224,6 +9231,112 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "mentviro liest: Ego is the Enemy",
+      "hook": "Dein größter Gegner trägt dein Gesicht.",
+      "script": [
+        "Dein größter Gegner trägt dein Gesicht.",
+        "Das Ego will Applaus — Wachstum will Wahrheit.",
+        "Bleib Schüler, auch wenn alle dich Meister nennen.",
+        "Folge @mentviro."
+      ],
+      "pexels_video_query": "solitary figure calm nature reflective warm cinematic",
+      "caption": "📚 mentviro liest #3 · Ego is the Enemy\n\nRyan Holiday zeigt in Ego is the Enemy: nicht die Konkurrenz bremst dich am meisten — dein eigenes Ego tut es.\n\nWer immer recht haben will, hört auf zu lernen.\n\nWo stand dir dein Ego zuletzt im Weg?\n\n#egoistheenemy #ryanholiday #stoizismus #demut #mindset #selbstreflexion #wachstum #persönlichkeitsentwicklung #lernen #buchtipp #lesen #charakter #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #3",
+        "Ego is the Enemy",
+        "Bleib Schüler",
+        "Jetzt ansehen"
+      ],
+      "day": 82,
+      "type": "reel",
+      "date": "2026-08-09",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "emotional",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 3
+    },
+    {
+      "topic": "mentviro liest: Ego is the Enemy",
+      "hook": "3 Ideen aus Ego is the Enemy",
+      "pexels_queries": [
+        "solitary figure nature warm",
+        "mirror reflection calm",
+        "sunrise humble horizon",
+        "hands open light",
+        "path uphill quiet",
+        "ocean vast perspective"
+      ],
+      "slides": [
+        {
+          "is_cover": true,
+          "title": [
+            "Ego is the Enemy",
+            "in 3 Ideen"
+          ],
+          "body": [
+            "Warum dein Ego dich",
+            "kleiner hält als du denkst.",
+            "Weiterwischen ›"
+          ]
+        },
+        {
+          "title": [
+            "1 · Bleib Schüler"
+          ],
+          "body": [
+            "Wer glaubt, es zu wissen,",
+            "hört auf zu lernen."
+          ]
+        },
+        {
+          "title": [
+            "2 · Arbeit vor Applaus"
+          ],
+          "body": [
+            "Verliebe dich in die Arbeit,",
+            "nicht in die Anerkennung."
+          ]
+        },
+        {
+          "title": [
+            "3 · Ruhe statt Beweisen"
+          ],
+          "body": [
+            "Du musst nicht jedem",
+            "zeigen, dass du recht hast."
+          ]
+        },
+        {
+          "title": [
+            "Dein Zug"
+          ],
+          "body": [
+            "Wo darf dein Ego",
+            "heute mal leiser sein?",
+            "Speicher dir das ›"
+          ]
+        }
+      ],
+      "caption": "📚 mentviro liest #3 · Ego is the Enemy\n\nEgo is the Enemy von Ryan Holiday — drei Ideen über Demut und Wachstum.\n\nSelbstvertrauen baut auf. Ego blendet. Der Unterschied entscheidet, wie weit du kommst.\n\nSpeicher dir den Post als Erinnerung.\n\n#egoistheenemy #stoizismus #demut #mindset #selbstreflexion #wachstum #charakter #buchtipp #persönlichkeitsentwicklung #lernen #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #3",
+        "Ego is the Enemy",
+        "3 Ideen",
+        "Jetzt ansehen"
+      ],
+      "day": 82,
+      "type": "carousel",
+      "date": "2026-08-09",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "emotional",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 3
     }
   ],
   "story_queue": [
@@ -10570,8 +10683,31 @@
       "date": "2026-08-08",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "humility calm nature warm reflective",
+      "quote": {
+        "text": "Der Weg zu allem Großen führt durch das, was man nicht sein will: bescheiden.",
+        "author": "Ryan Holiday"
+      },
+      "tips": {
+        "title": "Ego im Zaum halten",
+        "items": [
+          "Hör mehr zu, als du redest.",
+          "Feiere den Fortschritt anderer ehrlich.",
+          "Frag dich: will ich recht haben oder wachsen?"
+        ]
+      },
+      "day": 82,
+      "date": "2026-08-09",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "emotional",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 3
     }
   ],
   "evergreen_cursor": 0,
-  "book_series_cursor": 2
+  "book_series_cursor": 3
 }
