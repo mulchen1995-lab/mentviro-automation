@@ -8509,7 +8509,7 @@
     },
     {
       "topic": "Digitaler Fokus & Produktivität",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Handy stiehlt deine Zeit? So holst du sie zurück.",
       "slides": [
         {
@@ -8607,7 +8607,10 @@
       "date": "2026-08-03",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18199561888365715",
+      "story_id": "18133811929619620",
+      "published_at": "2026-08-03T17:58:43Z"
     },
     {
       "topic": "Wachstumsdenken (Growth Mindset)",
