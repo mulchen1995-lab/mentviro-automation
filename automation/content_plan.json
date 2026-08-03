@@ -8501,7 +8501,11 @@
       "content_pillar": "entertaining",
       "post_id": "18105664319140616",
       "story_id": "18145756984481729",
-      "published_at": "2026-08-03T08:27:44Z"
+      "published_at": "2026-08-03T08:27:44Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "Digitaler Fokus & Produktivität",
@@ -10565,7 +10569,7 @@
       "published_at": "2026-08-02T11:13:04Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "urban neon street night",
       "quote": {
         "text": "Die größte Gefahr ist nicht, dass wir zu hoch zielen und es verfehlen, sondern dass wir zu niedrig zielen und es erreichen.",
@@ -10582,7 +10586,10 @@
       "day": 76,
       "date": "2026-08-03",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-03T10:35:29Z"
     },
     {
       "status": "pending",
