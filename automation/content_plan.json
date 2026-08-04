@@ -8649,7 +8649,7 @@
     },
     {
       "topic": "Wachstumsdenken vs. Starres Denken",
-      "status": "pending",
+      "status": "published",
       "hook": "Wachstumsdenken: Die Basis für grenzenloses Potenzial.",
       "slides": [
         {
@@ -8766,7 +8766,10 @@
       "date": "2026-08-04",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18133214173626316",
+      "story_id": "18081111944313438",
+      "published_at": "2026-08-04T17:56:05Z"
     },
     {
       "topic": "Wahre Erfüllung & Werte",
