@@ -8610,11 +8610,15 @@
       "content_pillar": "entertaining",
       "post_id": "18199561888365715",
       "story_id": "18133811929619620",
-      "published_at": "2026-08-03T17:58:43Z"
+      "published_at": "2026-08-03T17:58:43Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Wachstumsdenken (Growth Mindset)",
-      "status": "pending",
+      "status": "published",
       "hook": "Entfessle dein wahres Potenzial mit dieser Denkweise.",
       "script": [
         "Dein Potenzial ist nicht fix – es wächst mit dir.",
@@ -8634,7 +8638,10 @@
       "date": "2026-08-04",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17975939445076072",
+      "story_id": "18115787932930880",
+      "published_at": "2026-08-04T07:37:44Z"
     },
     {
       "topic": "Wachstumsdenken vs. Starres Denken",
