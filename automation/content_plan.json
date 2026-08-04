@@ -8641,7 +8641,11 @@
       "content_pillar": "educational",
       "post_id": "17975939445076072",
       "story_id": "18115787932930880",
-      "published_at": "2026-08-04T07:37:44Z"
+      "published_at": "2026-08-04T07:37:44Z",
+      "insights": {
+        "likes": 3,
+        "comments": 0
+      }
     },
     {
       "topic": "Wachstumsdenken vs. Starres Denken",
@@ -10602,7 +10606,7 @@
       "published_at": "2026-08-03T10:35:29Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal geometric pattern",
       "quote": {
         "text": "Es ist nicht, was dir passiert, sondern wie du darauf reagierst, das zählt.",
@@ -10619,7 +10623,10 @@
       "day": 77,
       "date": "2026-08-04",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-04T11:59:24Z"
     },
     {
       "status": "pending",
