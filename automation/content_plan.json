@@ -8808,7 +8808,7 @@
     },
     {
       "topic": "Wahre Erfüllung – Der innere Kompass",
-      "status": "pending",
+      "status": "published",
       "hook": "Mehr als nur Erfolg: Finde deine wahre Erfüllung.",
       "slides": [
         {
@@ -8906,7 +8906,10 @@
       "date": "2026-08-05",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18084413456226480",
+      "story_id": "18079544876693038",
+      "published_at": "2026-08-05T17:47:48Z"
     },
     {
       "topic": "Die wahre Essenz von Disziplin",
