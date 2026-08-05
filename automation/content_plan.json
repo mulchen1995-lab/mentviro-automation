@@ -8800,7 +8800,11 @@
       "content_pillar": "emotional",
       "post_id": "17895929181373674",
       "story_id": "17879412120683124",
-      "published_at": "2026-08-05T07:38:22Z"
+      "published_at": "2026-08-05T07:38:22Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Wahre Erfüllung – Der innere Kompass",
@@ -9365,6 +9369,366 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 3
+    },
+    {
+      "topic": "Die Kunst des Neinsagens für mehr Freiheit.",
+      "status": "pending",
+      "hook": "Dein Kalender platzt, deine Energie schwindet?",
+      "script": [
+        "Dein Kalender platzt, deine Energie schwindet?",
+        "Ein klares NEIN ist dein Turbo für mehr Freiheit und Fokus.",
+        "Folge @mentviro."
+      ],
+      "caption": "Schluss mit dem Ja-Sagen aus Gewohnheit! 👋 Lerne, deine Grenzen zu setzen und beobachte, wie dein Leben mehr Raum für das Wesentliche bekommt. Weniger ist oft mehr – besonders wenn es um deine Zeit und Energie geht. Werde zum Meister deines eigenen Kalenders. 💪 #erfolgsmentalität #motivation #zielsetzung #mentaltraining #unternehmertum #selbstständig #businesstips #entrepreneur #wealthbuilding #reichtum #finanziellefreiheit #finanzbildung #moneyminds #vermögensaufbau #mentviro",
+      "pexels_video_query": "urban neon street energy",
+      "story_text": [
+        "NEUES REEL",
+        "Mehr Freiheit",
+        "durch ein NEIN!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir Nein-Sagen schwer?",
+      "day": 83,
+      "date": "2026-08-10",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Zeichen, dass du das 'Nein' meisterst.",
+      "status": "pending",
+      "hook": "Bevor du 'Ja' sagst, lies das hier. 👇",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die Macht des",
+            "klaren NEINS."
+          ],
+          "body": [
+            "Mehr Zeit, mehr Fokus, mehr du."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 5",
+          "title": [
+            "Du hast mehr",
+            "Zeit für dich."
+          ],
+          "body": [
+            "Dein Kalender ist nicht überladen, sondern reflektiert deine Prioritäten. Du schaffst Räume für das, was dir wirklich wichtig ist, ohne dich ständig von externen Anforderungen zerreißen zu lassen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 5",
+          "title": [
+            "Dein Selbstwert",
+            "wächst spürbar."
+          ],
+          "body": [
+            "Du erkennst, dass deine Zeit und Energie wertvoll sind. Das 'Nein' ist keine Ablehnung anderer, sondern eine Bestätigung deiner eigenen Bedürfnisse und Grenzen. Du stehst selbstbewusst zu dir."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 5",
+          "title": [
+            "Du bist weniger",
+            "gestresst & müde."
+          ],
+          "body": [
+            "Das ständige Gefühl, zu viel zu tun zu müssen, weicht einer inneren Ruhe. Du schützt deine mentale und physische Energie aktiv, indem du Überforderung vermeidest und bewusst Pausen einplanst."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #4",
+          "num": "4 / 5",
+          "title": [
+            "Deine Beziehungen",
+            "werden ehrlicher."
+          ],
+          "body": [
+            "Indem du klare Grenzen setzt, schaffst du authentischere Verbindungen. Freunde und Kollegen respektieren deine Entscheidungen, weil sie wissen, wo sie bei dir stehen. Keine Missverständnisse."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #5",
+          "num": "5 / 5",
+          "title": [
+            "Du erreichst deine",
+            "Ziele schneller."
+          ],
+          "body": [
+            "Fokus ist der Schlüssel. Indem du Ablenkungen und unwichtige Anfragen ablehnst, bündelst du deine gesamte Energie auf deine wichtigsten Ziele. Das beschleunigt deinen Fortschritt enorm."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& klare Schritte"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Ein klares 'Nein' zu dem, was dich ablenkt, ist ein 'Ja' zu dem, was dich wirklich weiterbringt. 🙌 Wie oft sagst du 'Ja', obwohl du 'Nein' meinst? Es ist Zeit für mehr Selbstbestimmung! 🌱 #erfolgsmentalität #motivation #zielsetzung #mentaltraining #unternehmertum #selbstständig #businesstips #entrepreneur #wealthbuilding #reichtum #finanziellefreiheit #finanzbildung #moneyminds #vermögensaufbau #mentviro",
+      "pexels_queries": [
+        "energetic city lights contrast",
+        "powerful urban scene",
+        "vibrant neon lines",
+        "dynamic motion blur",
+        "focused bright light",
+        "strong silhouette contrast"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Meistere das",
+        "Nein-Sagen!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Dein Leben – Ja oder Nein?",
+      "day": 83,
+      "date": "2026-08-10",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Der wahre Grund für Prokrastination.",
+      "status": "pending",
+      "hook": "Fühlst du dich oft gelähmt, bevor du startest?",
+      "script": [
+        "Fühlst du dich oft gelähmt, bevor du startest?",
+        "Prokrastination ist selten Faulheit, sondern oft Angst vor Versagen oder Perfektionismus.",
+        "Starte klein, setze klare Deadlines und belohne dich für Fortschritte. Folge @mentviro."
+      ],
+      "caption": "Prokrastination ist mehr als nur Aufschieben – es ist ein komplexes Zusammenspiel aus Angst, Unsicherheit und Perfektionsdrang. 🧠 Verstehe die Wurzeln, um sie zu überwinden. Beginne heute mit dem ersten kleinen Schritt. 🚀 #erfolgsmentalität #motivation #zielsetzung #mentaltraining #unternehmertum #selbstständig #businesstips #entrepreneur #wealthbuilding #reichtum #finanziellefreiheit #finanzbildung #moneyminds #vermögensaufbau #mentviro",
+      "pexels_video_query": "minimalistic dark study light",
+      "story_text": [
+        "NEUES REEL",
+        "Prokrastination",
+        "endlich verstehen!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Schiebst du Dinge auf?",
+      "day": 84,
+      "date": "2026-08-11",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 effektive Strategien gegen Prokrastination.",
+      "status": "pending",
+      "hook": "Die Macht über deine Aufschieberitis.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Schluss mit",
+            "Aufschieberei!"
+          ],
+          "body": [
+            "3 Wege, Prokrastination zu besiegen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "STRATEGIE #1",
+          "num": "1 / 3",
+          "title": [
+            "Die 2-Minuten-Regel",
+            "anwenden."
+          ],
+          "body": [
+            "Wenn eine Aufgabe weniger als zwei Minuten dauert, erledige sie sofort. Dies bricht den Widerstand und schafft Momentum, selbst für größere Projekte. Starte klein und baue darauf auf."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #2",
+          "num": "2 / 3",
+          "title": [
+            "Aufgaben in",
+            "Mini-Schritte zerlegen."
+          ],
+          "body": [
+            "Eine große Aufgabe wirkt oft überwältigend. Teile sie in winzige, leicht handhabbare Schritte auf. Jeder abgeschlossene Mini-Schritt gibt dir ein Erfolgserlebnis und treibt dich voran."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #3",
+          "num": "3 / 3",
+          "title": [
+            "Den „Warum“-Faktor",
+            "verstehen."
+          ],
+          "body": [
+            "Erinnere dich bewusst daran, *warum* diese Aufgabe wichtig ist. Welche langfristigen Ziele oder Werte sind damit verbunden? Eine klare Motivation ist ein starker Antrieb gegen Aufschieberei."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& klare Schritte"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Prokrastination muss nicht dein Meister sein! 🎯 Mit diesen einfachen, aber effektiven Strategien kannst du deine Produktivität steigern und endlich das anpacken, was dir wichtig ist. Welchen Tipp probierst du zuerst aus? 👇 #erfolgsmentalität #motivation #zielsetzung #mentaltraining #unternehmertum #selbstständig #businesstips #entrepreneur #wealthbuilding #reichtum #finanziellefreiheit #finanzbildung #moneyminds #vermögensaufbau #mentviro",
+      "pexels_queries": [
+        "dark abstract geometric",
+        "minimalist desk organization",
+        "focused workspace night",
+        "thoughtful reflection light",
+        "structured lines dark",
+        "clear path future"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "3 Tipps gegen",
+        "Prokrastination!",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Bereit für mehr Fokus?",
+      "day": 84,
+      "date": "2026-08-11",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Scheitern als dein größter Lehrer.",
+      "status": "pending",
+      "hook": "Es gab einen Moment, da schien alles verloren.",
+      "script": [
+        "Es gab einen Moment, da schien alles verloren.",
+        "Doch genau in dieser Tiefe fand ich die Kraft, neu zu definieren, wer ich bin.",
+        "Jeder Rückschlag ist eine Chance, tiefer zu graben und stärker zu werden. Folge @mentviro."
+      ],
+      "caption": "Manchmal sind die größten Stolpersteine die Treppenstufen zu unserem wahren Potenzial. ❤️ Scheitern ist nicht das Ende, sondern oft der Beginn einer viel bedeutenderen Reise. Lass dich nicht entmutigen, lerne und wachse. ✨ #erfolgsmentalität #motivation #zielsetzung #mentaltraining #unternehmertum #selbstständig #businesstips #entrepreneur #wealthbuilding #reichtum #finanziellefreiheit #finanzbildung #moneyminds #vermögensaufbau #mentviro",
+      "pexels_video_query": "forest path sunrise cinematic",
+      "story_text": [
+        "NEUES REEL",
+        "Scheitern ist",
+        "nicht das Ende.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Angst vor dem Scheitern?",
+      "day": 85,
+      "date": "2026-08-12",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "4 Lehren, die dich Scheitern stärker machen lassen.",
+      "status": "pending",
+      "hook": "Was ich über Scheitern gelernt habe, das niemand erzählt.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die stille Kraft",
+            "des Scheiterns."
+          ],
+          "body": [
+            "Wachse an dem, was dich herausfordert."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "LEHRE #1",
+          "num": "1 / 4",
+          "title": [
+            "Es zeigt dir deine",
+            "wahren Grenzen."
+          ],
+          "body": [
+            "Scheitern zwingt dich dazu, deine Annahmen und Strategien zu hinterfragen. Du lernst, wo deine Kapazitäten liegen und wie du sie erweitern kannst – eine unschätzbare Selbsterkenntnis."
+          ]
+        },
+        {
+          "badge": "LEHRE #2",
+          "num": "2 / 4",
+          "title": [
+            "Es formt deinen",
+            "Charakter tiefgreifend."
+          ],
+          "body": [
+            "Die Erfahrungen des Scheiterns härten dich ab und machen dich widerstandsfähiger. Du entwickelst Geduld, Demut und eine tiefere Empathie für andere, die ebenfalls kämpfen."
+          ]
+        },
+        {
+          "badge": "LEHRE #3",
+          "num": "3 / 4",
+          "title": [
+            "Es lehrt dich",
+            "wahre Resilienz."
+          ],
+          "body": [
+            "Nach einem Rückschlag wieder aufzustehen, ist die ultimative Lektion in Resilienz. Du lernst, dich anzupassen, neue Wege zu finden und deine innere Stärke zu aktivieren, selbst wenn alles dagegen spricht."
+          ]
+        },
+        {
+          "badge": "LEHRE #4",
+          "num": "4 / 4",
+          "title": [
+            "Es ebnet den Weg",
+            "für echten Erfolg."
+          ],
+          "body": [
+            "Viele große Erfolge sind aus einer Kette von Misserfolgen entstanden. Jedes Scheitern ist eine Lektion, die dich näher an die Lösung bringt. Es ist der notwendige Weg, nicht das Ende."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& tiefe Insights"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Jeder Stolperstein ist eine Chance, die Richtung neu zu justieren. 🧭 Lass dich von Rückschlägen nicht definieren, sondern nutze sie als Brennstoff für deine nächste Etappe. Dein Weg ist einzigartig! 💪 #erfolgsmentalität #motivation #zielsetzung #mentaltraining #unternehmertum #selbstständig #businesstips #entrepreneur #wealthbuilding #reichtum #finanziellefreiheit #finanzbildung #moneyminds #vermögensaufbau #mentviro",
+      "pexels_queries": [
+        "calm ocean sunset",
+        "misty mountain sunrise",
+        "contemplative forest path",
+        "rainy window view cozy",
+        "peaceful lake reflection",
+        "warm nature light"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Scheitern als",
+        "Chance sehen.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Scheitern = Wachstum?",
+      "day": 85,
+      "date": "2026-08-12",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -10639,7 +11003,7 @@
       "published_at": "2026-08-04T11:59:24Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "warm natural cozy light",
       "quote": {
         "text": "Das Glück deines Lebens hängt von der Beschaffenheit deiner Gedanken ab.",
@@ -10656,7 +11020,10 @@
       "day": 78,
       "date": "2026-08-05",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-05T14:03:43Z"
     },
     {
       "status": "pending",
@@ -10740,6 +11107,66 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 3
+    },
+    {
+      "status": "pending",
+      "topic": "vibrant street lights urban",
+      "quote": {
+        "text": "Die Differenz zwischen erfolgreichen Menschen und sehr erfolgreichen Menschen ist, dass sehr erfolgreiche Menschen fast zu allem 'Nein' sagen.",
+        "author": "Warren Buffett"
+      },
+      "tips": {
+        "title": "Grenzen setzen",
+        "items": [
+          "Priorisiere deine eigenen Bedürfnisse bewusst.",
+          "Übe ein klares, freundliches 'Nein' sagen.",
+          "Reflektiere, wozu du wirklich 'Ja' sagst."
+        ]
+      },
+      "day": 83,
+      "date": "2026-08-10",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic study",
+      "quote": {
+        "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie selbst zu gestalten.",
+        "author": "Peter Drucker"
+      },
+      "tips": {
+        "title": "Prokrastination überwinden",
+        "items": [
+          "Starte jeden Tag mit der schwersten Aufgabe.",
+          "Nutze Timer für fokussierte Arbeitsblöcke.",
+          "Visualisiere dein Ziel klar und deutlich."
+        ]
+      },
+      "day": 84,
+      "date": "2026-08-11",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural light reflection",
+      "quote": {
+        "text": "Wer einen Grund zum Leben hat, hält fast jedes Wie aus.",
+        "author": "Friedrich Nietzsche"
+      },
+      "tips": {
+        "title": "Umgang mit Rückschlägen",
+        "items": [
+          "Akzeptiere Rückschläge als Teil des Weges.",
+          "Reflektiere, was du daraus lernen kannst.",
+          "Stehe wieder auf und gehe einen neuen Weg."
+        ]
+      },
+      "day": 85,
+      "date": "2026-08-12",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0,
