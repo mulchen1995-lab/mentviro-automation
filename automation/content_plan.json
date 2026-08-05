@@ -8769,11 +8769,15 @@
       "content_pillar": "educational",
       "post_id": "18133214173626316",
       "story_id": "18081111944313438",
-      "published_at": "2026-08-04T17:56:05Z"
+      "published_at": "2026-08-04T17:56:05Z",
+      "insights": {
+        "likes": 1,
+        "comments": 1
+      }
     },
     {
       "topic": "Wahre Erfüllung & Werte",
-      "status": "pending",
+      "status": "published",
       "hook": "Das, was wirklich zählt, ist oft unsichtbar.",
       "script": [
         "Niemand redet darüber, aber wahre Erfüllung findest du nicht im Außen.",
@@ -8793,7 +8797,10 @@
       "date": "2026-08-05",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17895929181373674",
+      "story_id": "17879412120683124",
+      "published_at": "2026-08-05T07:38:22Z"
     },
     {
       "topic": "Wahre Erfüllung – Der innere Kompass",
