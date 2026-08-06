@@ -8909,11 +8909,15 @@
       "content_pillar": "emotional",
       "post_id": "18084413456226480",
       "story_id": "18079544876693038",
-      "published_at": "2026-08-05T17:47:48Z"
+      "published_at": "2026-08-05T17:47:48Z",
+      "insights": {
+        "likes": 2,
+        "comments": 2
+      }
     },
     {
       "topic": "Die wahre Essenz von Disziplin",
-      "status": "pending",
+      "status": "published",
       "hook": "Was ist der wahre Kern von Disziplin?",
       "script": [
         "Disziplin ist nicht Strafe, sondern Freiheit, die wir uns selbst schenken.",
@@ -8934,7 +8938,10 @@
       "date": "2026-08-06",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17999213864793214",
+      "story_id": "17956829079010318",
+      "published_at": "2026-08-06T07:38:37Z"
     },
     {
       "topic": "3 Wege, deine Disziplin zu stärken",
