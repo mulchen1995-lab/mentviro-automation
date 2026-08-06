@@ -8949,7 +8949,7 @@
     },
     {
       "topic": "3 Wege, deine Disziplin zu stärken",
-      "status": "pending",
+      "status": "published",
       "hook": "Disziplin ist kein Talent, sondern eine Fähigkeit, die jeder lernen kann.",
       "slides": [
         {
@@ -9032,7 +9032,10 @@
       "date": "2026-08-06",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18337554250187082",
+      "story_id": "17907860697451835",
+      "published_at": "2026-08-06T23:50:52Z"
     },
     {
       "topic": "Morgenroutinen für deinen Erfolg",
