@@ -8941,7 +8941,11 @@
       "content_pillar": "educational",
       "post_id": "17999213864793214",
       "story_id": "17956829079010318",
-      "published_at": "2026-08-06T07:38:37Z"
+      "published_at": "2026-08-06T07:38:37Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Wege, deine Disziplin zu stärken",
@@ -11036,7 +11040,7 @@
       "published_at": "2026-08-05T14:03:43Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic reflection",
       "quote": {
         "text": "Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.",
@@ -11053,7 +11057,10 @@
       "day": 79,
       "date": "2026-08-06",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-06T11:59:15Z"
     },
     {
       "status": "pending",
