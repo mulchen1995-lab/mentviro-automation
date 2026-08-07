@@ -9035,11 +9035,15 @@
       "content_pillar": "educational",
       "post_id": "18337554250187082",
       "story_id": "17907860697451835",
-      "published_at": "2026-08-06T23:50:52Z"
+      "published_at": "2026-08-06T23:50:52Z",
+      "insights": {
+        "likes": 1,
+        "comments": 1
+      }
     },
     {
       "topic": "Morgenroutinen für deinen Erfolg",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Morgen entscheidet über deinen ganzen Tag.",
       "script": [
         "Verlierst du morgens Zeit oder gewinnst du sie?",
@@ -9059,7 +9063,10 @@
       "date": "2026-08-07",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17928867846375197",
+      "story_id": "18164878879460394",
+      "published_at": "2026-08-07T06:09:32Z"
     },
     {
       "topic": "5 Morgen-Gewohnheiten, die dein Leben ändern",
