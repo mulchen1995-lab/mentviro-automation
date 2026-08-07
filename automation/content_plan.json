@@ -9074,7 +9074,7 @@
     },
     {
       "topic": "5 Morgen-Gewohnheiten, die dein Leben ändern",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Du wachst auf und fühlst dich schon bereit für den Tag.",
       "slides": [
         {
@@ -9178,7 +9178,10 @@
       "date": "2026-08-07",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18139129549604963",
+      "story_id": "18046419833800344",
+      "published_at": "2026-08-07T16:59:49Z"
     },
     {
       "topic": "Resilienz: Wachse an Herausforderungen",
