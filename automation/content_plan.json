@@ -9066,7 +9066,11 @@
       "content_pillar": "entertaining",
       "post_id": "17928867846375197",
       "story_id": "18164878879460394",
-      "published_at": "2026-08-07T06:09:32Z"
+      "published_at": "2026-08-07T06:09:32Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Morgen-Gewohnheiten, die dein Leben ändern",
@@ -11073,7 +11077,7 @@
       "published_at": "2026-08-06T11:59:15Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban morning routine",
       "quote": {
         "text": "Der beste Weg, die Zukunft vorauszusagen, ist, sie selbst zu gestalten.",
@@ -11090,7 +11094,10 @@
       "day": 80,
       "date": "2026-08-07",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": "18102187771932492",
+      "tips_id": null,
+      "published_at": "2026-08-07T10:45:36Z"
     },
     {
       "status": "pending",
