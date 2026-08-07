@@ -1696,8 +1696,9 @@ def run_reel(post, plan):
     audio_dur  = 0.0
     sub_chunks = []   # [(text, start_s, end_s)] for subtitle overlay
     try:
-        el_key = os.environ.get("ELEVENLABS_API_KEY",
-                                "1071b6e53cb6e950c63d8e11a05dfa7b07764275cab9fda0ce63104a421c2d37")
+        el_key = os.environ.get("ELEVENLABS_API_KEY", "")
+        if not el_key:
+            raise RuntimeError("ELEVENLABS_API_KEY nicht gesetzt (Workflow-Secret fehlt)")
         el_r = requests.post(
             "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB/with-timestamps",
             headers={"xi-api-key": el_key, "Content-Type": "application/json"},
@@ -1728,6 +1729,20 @@ def run_reel(post, plan):
     if audio_dur < 1:
         # Fallback estimate: ~75ms per character
         audio_dur = sum(len(s) for s in script) * 0.075
+
+    # Ohne Stimme gibt's auch keine Untertitel (beide haengen an derselben
+    # ElevenLabs-Antwort). Bisher lief das komplett stumm durch bis zum Post -
+    # kein Alarm, nur ein Konsolen-Log, das nie jemand liest. Jetzt auch fuer
+    # echte (Nicht-DRY_RUN) Posts eine Telegram-Warnung, sofort beim Auftreten,
+    # nicht erst wenn jemand zufaellig das Reel anschaut.
+    if not audio_ok and not DRY_RUN:
+        send_telegram(
+            f"⚠️ <b>mentviro Reel OHNE Ton/Untertitel</b>\n"
+            f"Tag {post['day']}: {post.get('topic','')}\n"
+            f"ElevenLabs-TTS ist fehlgeschlagen (Key fehlt/ungueltig/Kontingent?). "
+            f"Reel wird trotzdem gepostet (Account soll nie dunkel bleiben) - "
+            f"bitte ELEVENLABS_API_KEY und Zeichen-Kontingent pruefen."
+        )
 
     # ── Step 1b: Background music ─────────────────────────────────────────────
     # BACKGROUND_MUSIC_URL is an optional override; if it's unset, unreachable, or
