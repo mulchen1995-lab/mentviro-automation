@@ -38,7 +38,7 @@
     },
     "posting_stats": {
       "reel": 11,
-      "carousel": 16
+      "carousel": 14
     }
   },
   "posts": [
@@ -9181,11 +9181,15 @@
       "content_pillar": "entertaining",
       "post_id": "18139129549604963",
       "story_id": "18046419833800344",
-      "published_at": "2026-08-07T16:59:49Z"
+      "published_at": "2026-08-07T16:59:49Z",
+      "insights": {
+        "likes": 1,
+        "comments": 1
+      }
     },
     {
       "topic": "Resilienz: Wachse an Herausforderungen",
-      "status": "pending",
+      "status": "published",
       "hook": "Wie du Krisen nicht nur überstehst, sondern daran wächst.",
       "script": [
         "Resilienz ist deine mentale Fähigkeit, Rückschläge zu überwinden.",
@@ -9206,7 +9210,10 @@
       "date": "2026-08-08",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17890274889417277",
+      "story_id": "18001490735992000",
+      "published_at": "2026-08-08T05:41:53Z"
     },
     {
       "topic": "Resilienz: Dein innerer Kompass in stürmischen Zeiten",
@@ -9760,6 +9767,401 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Die Kunst, RICHTIGE Entscheidungen zu treffen",
+      "status": "pending",
+      "hook": "Warum manche Menschen intuitiv bessere Entscheidungen treffen als andere.",
+      "script": [
+        "Oft liegt es nicht an Intelligenz, sondern an der Methode.",
+        "Lerne, Entscheidungen nicht emotional, sondern strukturiert zu fällen.",
+        "So schaffst du Klarheit und vermeidest Reue. Folge @mentviro."
+      ],
+      "caption": "Deine Zukunft wird durch deine Entscheidungen geformt. Es ist entscheidend, wie du sie triffst. Lerne, Emotionen zu parken und Fakten zu priorisieren, um mit Klarheit und Zuversicht deinen Weg zu gehen. 💪✨ #mentviro #motivation #erfolgreich #mentaltraining #businessmindset #zielsetzung #successmindset #unternehmertum #erfolgsmentalität #wachstumsdenken #persönlichkeitsentwicklung #mindsetfürerfolg #entscheidungen #klarheit #fokus",
+      "pexels_video_query": "dark abstract thinking, minimalist decision making, deep contemplation",
+      "story_text": [
+        "NEUES REEL",
+        "Triffst du Entscheidungen",
+        "intuitiv oder rational?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Triffst du Entscheidungen schnell?",
+      "day": 86,
+      "date": "2026-08-13",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die 3 Säulen klarer Entscheidungen",
+      "status": "pending",
+      "hook": "Triffst du Entscheidungen aus dem Bauch heraus oder mit klarem Kopf?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die Kunst, RICHTIGE",
+            "Entscheidungen zu treffen"
+          ],
+          "body": [
+            "Dein Weg zum Erfolg beginnt mit klugen Wahlen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SÄULE #1",
+          "num": "1 / 4",
+          "title": [
+            "Daten sammeln",
+            "& Fakten prüfen"
+          ],
+          "body": [
+            "Emotionen parken, objektive Informationen sammeln."
+          ],
+          "image_query": "dark abstract data analysis, minimalist research"
+        },
+        {
+          "badge": "SÄULE #2",
+          "num": "2 / 4",
+          "title": [
+            "Szenarien visualisieren",
+            "& Konsequenzen abwägen"
+          ],
+          "body": [
+            "Stell dir vor, was passiert, wenn du A oder B wählst."
+          ],
+          "image_query": "dark abstract future visualization, minimalist foresight"
+        },
+        {
+          "badge": "SÄULE #3",
+          "num": "3 / 4",
+          "title": [
+            "Werte abgleichen",
+            "& Intuition hören"
+          ],
+          "body": [
+            "Passt die Entscheidung zu deinen tiefsten Überzeugungen?"
+          ],
+          "image_query": "dark abstract values alignment, minimalist inner compass"
+        },
+        {
+          "badge": null,
+          "num": "4 / 4",
+          "title": [
+            "Entscheide bewusst,",
+            "Lebe konsequent."
+          ],
+          "body": [
+            "Deine besten Entscheidungen entstehen aus Klarheit und Mut."
+          ],
+          "image_query": "dark abstract clear path, minimalist purposeful"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& persönliche Stärke"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Jede große Reise beginnt mit einer einzigen Entscheidung. Mach sie bewusst und fundiert. ✨ Entdecke, wie du mit diesen Säulen mehr Klarheit und weniger Reue in dein Leben bringst. Dein Erfolg ist eine Summe deiner klugen Entscheidungen. #mentviro #mindset #entscheidungsfindung #persönlichkeitsentwicklung #erfolgsmentalität #klarheit #fokus #mentaltraining #zielsetzung #wachstumsdenken #selbstverbesserung #businessmindset #unternehmertum #strategie #motivation",
+      "pexels_queries": [
+        "dark abstract geometric pattern",
+        "minimalist contemplation",
+        "dark abstract data visualization",
+        "minimalist decision path",
+        "dark abstract future vision",
+        "minimalist inner wisdom"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Die Formel für",
+        "bessere Entscheidungen",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fällt dir das Entscheiden schwer?",
+      "day": 86,
+      "date": "2026-08-13",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Schlaf: Dein größter Cheatcode für Erfolg",
+      "status": "pending",
+      "hook": "POV: Du denkst, Schlafmangel macht dich zum Macher...",
+      "script": [
+        "POV: Du denkst, Schlafmangel macht dich zum Macher, aber in Wahrheit sabotiert er deine Performance.",
+        "Deine beste Version beginnt im Bett – unterschätze niemals die Kraft einer guten Nacht. Folge @mentviro."
+      ],
+      "caption": "Der heimliche Superpower, den viele ignorieren! 😴 Es ist an der Zeit, Schlaf nicht als Luxus, sondern als Performance-Upgrade zu sehen. Wer wirklich abliefern will, investiert in seine Regeneration. Was ist deine Schlafroutine? 👇 #mentviro #produktivität #lifestyle #erfolgreich #energiebooster #gesundheit #mindset #schlaf #performance #gewohnheiten #dailyhacks #selbstverbesserung #fokus #lebensqualität #inspiration",
+      "pexels_video_query": "urban neon night sleep, energetic morning routine, city sunrise",
+      "story_text": [
+        "NEUES REEL",
+        "Dein größter",
+        "Erfolgs-Cheatcode",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Opferst du Schlaf für Produktivität?",
+      "day": 87,
+      "date": "2026-08-14",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Schlaf: Dein größter Cheatcode für Erfolg",
+      "status": "pending",
+      "hook": "SCHLAF: Dein größter Cheatcode für Erfolg, den du ignorierst?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "SCHLAF: Der unfaire",
+            "Vorteil, den du ignorierst"
+          ],
+          "body": [
+            "Dein Gamechanger für Mindset & Performance."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WENIG SCHLAF:",
+          "num": "1 / 5",
+          "title": [
+            "Kurzfristig mehr Zeit?",
+            "Langfristig weniger Leistung!"
+          ],
+          "body": [
+            "Du opferst Fokus, Kreativität & Gesundheit."
+          ],
+          "image_query": "dark urban stressed, neon tired person"
+        },
+        {
+          "badge": "GUTER SCHLAF:",
+          "num": "2 / 5",
+          "title": [
+            "Mehr Fokus",
+            "& Klarheit!"
+          ],
+          "body": [
+            "Dein Gehirn ist auf Höchstleistung programmiert."
+          ],
+          "image_query": "energetic morning light, urban clear mind"
+        },
+        {
+          "badge": "WENIG SCHLAF:",
+          "num": "3 / 5",
+          "title": [
+            "Schnell gereizt?",
+            "Schlechte Entscheidungen!"
+          ],
+          "body": [
+            "Dein emotionales Gleichgewicht leidet enorm."
+          ],
+          "image_query": "dark urban frustrated, neon overwhelmed"
+        },
+        {
+          "badge": "GUTER SCHLAF:",
+          "num": "4 / 5",
+          "title": [
+            "Gelassener",
+            "& resilienter!"
+          ],
+          "body": [
+            "Du meisterst Herausforderungen mit Leichtigkeit."
+          ],
+          "image_query": "energetic urban calm, neon resilient person"
+        },
+        {
+          "badge": null,
+          "num": "5 / 5",
+          "title": [
+            "Werde unschlagbar.",
+            "Starte im Bett."
+          ],
+          "body": [
+            "Dein Erfolg ist nur eine Nacht entfernt."
+          ],
+          "image_query": "energetic urban sunrise, neon success"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle-Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Schlaf ist kein Luxus, sondern die Basis für deine beste Version! 🚀 Wer wirklich abliefern will, priorisiert Regeneration. Entdecke, wie guter Schlaf dich zu deinem unfairen Vorteil macht. Teile, wie viele Stunden du schläfst! 👇 #mentviro #schlaf #produktivität #mentalestärke #lifestyle #gesundheit #erfolgreich #mindsethacks #energie #fokus #gewohnheiten #selbstverbesserung #inspiration #dailyroutine #powernap",
+      "pexels_queries": [
+        "urban neon night city",
+        "energetic morning routine",
+        "urban stressed person",
+        "energetic calm person",
+        "urban frustrated person",
+        "energetic resilient person"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Schlaf: Dein größter",
+        "Erfolgs-Cheatcode?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Wie viele Stunden schläfst du?",
+      "day": 87,
+      "date": "2026-08-14",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Energie-Management für nachhaltige Produktivität",
+      "status": "pending",
+      "hook": "Du managst deine Zeit, aber managst du auch deine Energie?",
+      "script": [
+        "Zeit ist endlich, Energie erneuerbar. Das ist der wahre Unterschied.",
+        "Lerne, deine Energiequellen bewusst zu nutzen und wieder aufzuladen.",
+        "Das ist der Schlüssel zu nachhaltiger Produktivität und wahrem Erfolg. Folge @mentviro."
+      ],
+      "caption": "Zeit-Management ist nur die halbe Miete! 💡 Dein Energielevel entscheidet, wie effektiv du diese Zeit nutzt. Entdecke, wie du deine Energie bewusst steuerst, um dauerhaft Höchstleistungen zu erzielen, ohne auszubrennen. 🔥 Was sind deine Energie-Booster? 👇 #mentviro #energiemanagement #produktivität #mindset #erfolgreich #fokus #selbstmanagement #worklifeintegration #balance #leistung #gewohnheiten #persönlicheentwicklung #motivation #zielsetzung #businessmindset",
+      "pexels_video_query": "dark cinematic energy flow, minimalist focus power, abstract light movement",
+      "story_text": [
+        "NEUES REEL",
+        "Energie managen,",
+        "nicht nur Zeit!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fühlst du dich oft energielos?",
+      "day": 88,
+      "date": "2026-08-15",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Energie-Management: Dein geheimer Produktivitäts-Booster",
+      "status": "pending",
+      "hook": "Fühlst du dich oft müde, obwohl du genug schläfst?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Energie managen, nicht nur Zeit:",
+            "Dein Schlüssel zu MEHR Leistung"
+          ],
+          "body": [
+            "Optimiere deine Energie, maximiere deinen Output."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PUNKT #1",
+          "num": "1 / 5",
+          "title": [
+            "Energiequellen erkennen:",
+            "Was gibt dir wirklich Kraft?"
+          ],
+          "body": [
+            "Natur, Hobbys, bestimmte Menschen, Ruhe."
+          ],
+          "image_query": "dark abstract energy source, minimalist nature light"
+        },
+        {
+          "badge": "PUNKT #2",
+          "num": "2 / 5",
+          "title": [
+            "Energiefresser eliminieren:",
+            "Was raubt dir die Kraft?"
+          ],
+          "body": [
+            "Digitale Ablenkung, toxische Beziehungen, Perfektionismus."
+          ],
+          "image_query": "dark abstract energy drain, minimalist digital noise"
+        },
+        {
+          "badge": "PUNKT #3",
+          "num": "3 / 5",
+          "title": [
+            "Regelmäßig aufladen:",
+            "Finde deine Rituale"
+          ],
+          "body": [
+            "Meditation, Sport, kreative Pausen, Deep Breathing."
+          ],
+          "image_query": "dark abstract recharging, minimalist calm space"
+        },
+        {
+          "badge": "PUNKT #4",
+          "num": "4 / 5",
+          "title": [
+            "Spitzenzeiten nutzen:",
+            "Wann bist du am leistungsfähigsten?"
+          ],
+          "body": [
+            "Plane deine wichtigsten Aufgaben in diesen Slots ein."
+          ],
+          "image_query": "dark abstract peak performance, minimalist focus light"
+        },
+        {
+          "badge": "PUNKT #5",
+          "num": "5 / 5",
+          "title": [
+            "Grenzen setzen:",
+            "Lerne Nein zu sagen"
+          ],
+          "body": [
+            "Schütze deine Energie vor unnötigen Anforderungen."
+          ],
+          "image_query": "dark abstract boundaries, minimalist protective shield"
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Maximiere deine Wirkung.",
+            "Maximiere deine Energie."
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Du kannst nicht aus einem leeren Glas einschenken! 🔋 Dein Energielevel ist entscheidend für deine Produktivität und dein Wohlbefinden. Lerne, deine Energie bewusst zu managen und nicht nur deine Zeit. Dein Schlüssel zu nachhaltigem Erfolg liegt hier verborgen. Was machst du, um deine Energie aufzuladen? 👇 #mentviro #energiemanagement #produktivitätstipps #mindsetcoach #erfolgsstrategien #fokusmodus #selbstmanagementtools #worklifebalance #energiebooster #gewohnheitenändern #persönlicheswachstum #motivationmonday #zielerreichen #businessgrowth #mentaleslimit",
+      "pexels_queries": [
+        "dark abstract energy grid",
+        "minimalist natural light",
+        "dark abstract energy depletion",
+        "minimalist digital distraction",
+        "dark abstract energy refill",
+        "minimalist meditation space"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Guide zu",
+        "mehr Energie & Fokus",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Hast du Energie-Routinen?",
+      "day": 88,
+      "date": "2026-08-15",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -11204,6 +11606,66 @@
       "date": "2026-08-12",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Es sind nicht die Umstände, die den Menschen formen, sondern seine Entscheidungen.",
+        "author": "Viktor Frankl"
+      },
+      "tips": {
+        "title": "3 Wege zu besseren Entscheidungen",
+        "items": [
+          "Schreibe Pros & Contras auf",
+          "Hole eine neutrale Zweitmeinung ein",
+          "Warte 24 Stunden vor dem Urteil"
+        ]
+      },
+      "day": 86,
+      "date": "2026-08-13",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban night sleep",
+      "quote": {
+        "text": "Schlaf ist die goldene Kette, die unsere Gesundheit und unsere Körper verbindet.",
+        "author": "Thomas Dekker"
+      },
+      "tips": {
+        "title": "3 Tipps für besseren Schlaf",
+        "items": [
+          "Feste Schlafzeiten einhalten (auch am WE)",
+          "Bildschirme 1h vor Bettzeit aus",
+          "Leichtes Abendessen bevorzugen"
+        ]
+      },
+      "day": 87,
+      "date": "2026-08-14",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic energy focus",
+      "quote": {
+        "text": "Wo deine Aufmerksamkeit hingeht, da fließt deine Energie.",
+        "author": "James Redfield"
+      },
+      "tips": {
+        "title": "3 schnelle Energie-Hacks",
+        "items": [
+          "5 Min. an die frische Luft",
+          "Kurze Dehnübung am Schreibtisch",
+          "Ein großes Glas Wasser trinken"
+        ]
+      },
+      "day": 88,
+      "date": "2026-08-15",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0,
