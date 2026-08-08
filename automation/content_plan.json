@@ -9213,7 +9213,11 @@
       "content_pillar": "educational",
       "post_id": "17890274889417277",
       "story_id": "18001490735992000",
-      "published_at": "2026-08-08T05:41:53Z"
+      "published_at": "2026-08-08T05:41:53Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Resilienz: Dein innerer Kompass in stürmischen Zeiten",
@@ -11505,7 +11509,7 @@
       "published_at": "2026-08-07T10:45:36Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic resilience",
       "quote": {
         "text": "Was uns nicht umbringt, macht uns stärker.",
@@ -11522,7 +11526,10 @@
       "day": 81,
       "date": "2026-08-08",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-08T10:25:20Z"
     },
     {
       "topic": "humility calm nature warm reflective",
