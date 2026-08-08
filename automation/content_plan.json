@@ -9221,7 +9221,7 @@
     },
     {
       "topic": "Resilienz: Dein innerer Kompass in stürmischen Zeiten",
-      "status": "pending",
+      "status": "published",
       "hook": "Jeder steht irgendwann vor Herausforderungen. Deine Reaktion macht den Unterschied.",
       "slides": [
         {
@@ -9304,7 +9304,10 @@
       "date": "2026-08-08",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17938283886320919",
+      "story_id": "18112164791054498",
+      "published_at": "2026-08-08T16:42:04Z"
     },
     {
       "topic": "mentviro liest: Ego is the Enemy",
