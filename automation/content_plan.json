@@ -9427,11 +9427,15 @@
       "book_episode": 3,
       "post_id": "18098405303204872",
       "story_id": "17990706684040646",
-      "published_at": "2026-08-09T16:43:14Z"
+      "published_at": "2026-08-09T16:43:14Z",
+      "insights": {
+        "likes": 5,
+        "comments": 5
+      }
     },
     {
       "topic": "Die Kunst des Neinsagens für mehr Freiheit.",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Kalender platzt, deine Energie schwindet?",
       "script": [
         "Dein Kalender platzt, deine Energie schwindet?",
@@ -9451,7 +9455,10 @@
       "date": "2026-08-10",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17898067464562111",
+      "story_id": "18110087732021962",
+      "published_at": "2026-08-10T06:10:37Z"
     },
     {
       "topic": "5 Zeichen, dass du das 'Nein' meisterst.",
@@ -10183,6 +10190,115 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "mentviro liest: Rich Dad Poor Dad",
+      "hook": "Die teuerste Lektion? Für Geld zu arbeiten, statt zu lernen.",
+      "script": [
+        "Die teuerste Lektion? Für Geld zu arbeiten, statt zu lernen.",
+        "Kiyosaki sagt: nimm den Job, der dich am meisten lehrt.",
+        "Investiere zuerst in dein Wissen — der Rest folgt.",
+        "Folge @mentviro."
+      ],
+      "pexels_video_query": "person reading book lamp calm minimal cinematic dark",
+      "caption": "📚 mentviro liest #4 · Rich Dad Poor Dad\n\nRich Dad Poor Dad wird oft aufs Geld reduziert — dabei ist die stärkste Lektion eine Denkweise:\n\nArbeite am Anfang für Fähigkeiten, nicht nur für Gehalt. Wissen ist das Fundament, auf dem alles andere steht.\n\nKein Finanzrat — nur Bildung. In welche Fähigkeit investierst du gerade?\n\n#richdadpoordad #mindset #finanziellebildung #lernen #disziplin #selbstentwicklung #fähigkeiten #wachstum #buchtipp #klarheit #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #4",
+        "Rich Dad Poor Dad",
+        "Lernen vor Verdienen",
+        "Jetzt ansehen"
+      ],
+      "day": 89,
+      "type": "reel",
+      "date": "2026-08-16",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 4
+    },
+    {
+      "topic": "mentviro liest: Rich Dad Poor Dad",
+      "hook": "3 Mindset-Ideen aus Rich Dad Poor Dad",
+      "pexels_queries": [
+        "person reading book calm dark",
+        "stairs growth light",
+        "notebook learning hands",
+        "sunrise path calm",
+        "library books focus",
+        "mountain climb perspective"
+      ],
+      "slides": [
+        {
+          "is_cover": true,
+          "title": [
+            "Rich Dad Poor Dad",
+            "— 3 Mindset-Ideen"
+          ],
+          "body": [
+            "Nicht übers Geld.",
+            "Über die Denkweise dahinter.",
+            "Weiterwischen ›"
+          ]
+        },
+        {
+          "title": [
+            "1 · Lernen vor Verdienen"
+          ],
+          "body": [
+            "Nimm die Aufgabe, die dich",
+            "am meisten lehrt —",
+            "am Anfang zählt das mehr."
+          ]
+        },
+        {
+          "title": [
+            "2 · Wissen zuerst"
+          ],
+          "body": [
+            "Bücher, Mentoren, Erfahrung.",
+            "Deine Sichtweise ändert sich —",
+            "und damit dein Handeln."
+          ]
+        },
+        {
+          "title": [
+            "3 · Angst & Faulheit"
+          ],
+          "body": [
+            "Kiyosaki nennt die Hürden:",
+            "Angst, Zynismus, Faulheit,",
+            "Arroganz. Erkennst du eine?"
+          ]
+        },
+        {
+          "title": [
+            "Dein Zug"
+          ],
+          "body": [
+            "Kein Finanzrat — nur Bildung.",
+            "In welche Fähigkeit",
+            "investierst du? Speicher ›"
+          ]
+        }
+      ],
+      "caption": "📚 mentviro liest #4 · Rich Dad Poor Dad\n\nRich Dad Poor Dad von Robert Kiyosaki — bewusst die MINDSET-Ideen, nicht die Zahlen.\n\nDie wichtigste Botschaft ist eine Haltung: lerne, bevor du verdienst, und hör nie auf, in dich zu investieren.\n\nKein Finanzrat — nur Bildung. Speicher dir den Post.\n\n#richdadpoordad #mindset #finanziellebildung #lernen #selbstentwicklung #disziplin #fähigkeiten #wachstum #buchtipp #klarheit #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #4",
+        "Rich Dad Poor Dad",
+        "3 Mindset-Ideen",
+        "Jetzt ansehen"
+      ],
+      "day": 89,
+      "type": "carousel",
+      "date": "2026-08-16",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 4
     }
   ],
   "story_queue": [
@@ -11693,8 +11809,31 @@
       "date": "2026-08-15",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "learning books discipline calm dark",
+      "quote": {
+        "text": "Arbeite, um zu lernen — nicht nur, um zu verdienen.",
+        "author": "Robert Kiyosaki"
+      },
+      "tips": {
+        "title": "In dich investieren",
+        "items": [
+          "Wähle Aufgaben nach dem, was sie dich lehren.",
+          "Lies das eine Buch, das du aufschiebst.",
+          "Erkenne deine größte Hürde: Angst oder Faulheit?"
+        ]
+      },
+      "day": 89,
+      "date": "2026-08-16",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 4
     }
   ],
   "evergreen_cursor": 0,
-  "book_series_cursor": 3
+  "book_series_cursor": 4
 }
