@@ -9466,7 +9466,7 @@
     },
     {
       "topic": "5 Zeichen, dass du das 'Nein' meisterst.",
-      "status": "pending",
+      "status": "published",
       "hook": "Bevor du 'Ja' sagst, lies das hier. 👇",
       "slides": [
         {
@@ -9569,7 +9569,10 @@
       "date": "2026-08-10",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18105234752143953",
+      "story_id": "17963395488140906",
+      "published_at": "2026-08-10T17:00:19Z"
     },
     {
       "topic": "Der wahre Grund für Prokrastination.",
