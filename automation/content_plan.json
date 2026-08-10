@@ -9458,7 +9458,11 @@
       "content_pillar": "entertaining",
       "post_id": "17898067464562111",
       "story_id": "18110087732021962",
-      "published_at": "2026-08-10T06:10:37Z"
+      "published_at": "2026-08-10T06:10:37Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Zeichen, dass du das 'Nein' meisterst.",
@@ -11691,7 +11695,7 @@
       "published_at": "2026-08-09T10:26:51Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "vibrant street lights urban",
       "quote": {
         "text": "Die Differenz zwischen erfolgreichen Menschen und sehr erfolgreichen Menschen ist, dass sehr erfolgreiche Menschen fast zu allem 'Nein' sagen.",
@@ -11708,7 +11712,10 @@
       "day": 83,
       "date": "2026-08-10",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-10T11:02:14Z"
     },
     {
       "status": "pending",
