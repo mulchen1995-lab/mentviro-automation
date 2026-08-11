@@ -9611,7 +9611,7 @@
     },
     {
       "topic": "3 effektive Strategien gegen Prokrastination.",
-      "status": "pending",
+      "status": "published",
       "hook": "Die Macht über deine Aufschieberitis.",
       "slides": [
         {
@@ -9692,7 +9692,10 @@
       "date": "2026-08-11",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17894629302597707",
+      "story_id": "18200042710373344",
+      "published_at": "2026-08-11T17:05:01Z"
     },
     {
       "topic": "Scheitern als dein größter Lehrer.",
