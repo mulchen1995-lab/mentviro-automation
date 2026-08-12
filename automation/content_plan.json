@@ -9695,11 +9695,15 @@
       "content_pillar": "educational",
       "post_id": "17894629302597707",
       "story_id": "18200042710373344",
-      "published_at": "2026-08-11T17:05:01Z"
+      "published_at": "2026-08-11T17:05:01Z",
+      "insights": {
+        "likes": 1,
+        "comments": 1
+      }
     },
     {
       "topic": "Scheitern als dein größter Lehrer.",
-      "status": "pending",
+      "status": "published",
       "hook": "Es gab einen Moment, da schien alles verloren.",
       "script": [
         "Es gab einen Moment, da schien alles verloren.",
@@ -9719,7 +9723,10 @@
       "date": "2026-08-12",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18092962973333322",
+      "story_id": "18115334144293152",
+      "published_at": "2026-08-12T06:13:31Z"
     },
     {
       "topic": "4 Lehren, die dich Scheitern stärker machen lassen.",
@@ -10320,6 +10327,382 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 4
+    },
+    {
+      "topic": "Overthinking vs. Action",
+      "status": "pending",
+      "hook": "Du zerdenkst alles, statt einfach zu tun?",
+      "script": [
+        "Du zerdenkst alles, statt einfach zu tun?",
+        "Dabei ist der erste Schritt oft die einzige Lösung.",
+        "Folge @mentviro."
+      ],
+      "caption": "Wer kennt's? 🤔 Manchmal ist unser größter Feind die eigene Gedankenspirale. Statt zu handeln, analysieren wir uns in die Prokrastination. Doch der wahre Fortschritt beginnt, wenn wir den ersten, unperfekten Schritt wagen. Weniger Grübeln, mehr Machen! 💪 Wie gehst du damit um? #mentviro #erfolgsmentalität #successmindset #motivation #zielsetzung #produktivität #mindset #gewohnheiten #persönlicheentwicklung #fokus #selbstdisziplin #wachstumsdenken #erfolgreich #lifestyle #inspiration",
+      "pexels_video_query": "urban neon energetic thinking action",
+      "story_text": [
+        "NEUES REEL",
+        "Stopp die Gedanken-",
+        "Spirale!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Zerdenkst du oft alles?",
+      "day": 90,
+      "date": "2026-08-17",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Anzeichen, dass du zu viel nachdenkst & wie du es änderst",
+      "status": "pending",
+      "hook": "Zerdenkst du zu viel? 🧠 So erkennst du es!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Zerdenkst du zu viel?",
+            "🧠 So erkennst du es!"
+          ],
+          "body": [
+            "Entdecke die Anzeichen",
+            "und finde den Weg ins Handeln."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ANZEICHEN #1",
+          "num": "1 / 5",
+          "title": [
+            "Endlose Analyse"
+          ],
+          "body": [
+            "Jede kleine Entscheidung",
+            "wird zum Mammutprojekt."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #2",
+          "num": "2 / 5",
+          "title": [
+            "Handlungslähmung"
+          ],
+          "body": [
+            "Du weißt, was zu tun ist,",
+            "kommst aber nicht ins Machen."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #3",
+          "num": "3 / 5",
+          "title": [
+            "Schlechte Laune"
+          ],
+          "body": [
+            "Dein Kopfkino raubt dir",
+            "Energie und Motivation."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #4",
+          "num": "4 / 5",
+          "title": [
+            "Verpasste Chancen"
+          ],
+          "body": [
+            "Du wartest auf den perfekten Moment,",
+            "der nie kommt."
+          ]
+        },
+        {
+          "badge": "ANZEICHEN #5",
+          "num": "5 / 5",
+          "title": [
+            "Ständiger Zweifel"
+          ],
+          "body": [
+            "Selbst nach einer Entscheidung",
+            "nagst du an der Unsicherheit."
+          ]
+        },
+        {
+          "badge": "JETZT HANDELN",
+          "num": null,
+          "title": [
+            "Die Lösung"
+          ],
+          "body": [
+            "Der erste Schritt muss nicht perfekt sein.",
+            "Er muss nur gemacht werden. Fang an!"
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Kennst du das Gefühl? Dein Kopf ist voll, aber du kommst nicht voran? 🤯 Übermäßiges Nachdenken kann uns lähmen und gute Gelegenheiten kosten. Aber es gibt einen Ausweg! Erkenn die Zeichen und lerne, wieder ins Handeln zu kommen. Was ist dein Go-to-Trick gegen Overthinking? Lass es uns in den Kommentaren wissen! 👇 #mentviro #mindset #produktivität #fokus #selbstdisziplin #wachstumsdenken #erfolgsmentalität #motivation #zielsetzung #lifestyle #persönlicheentwicklung #gewohnheiten #denkfehler #mentalestärke #inspiration",
+      "pexels_queries": [
+        "energetic urban neon",
+        "stressed thinking urban",
+        "action running city",
+        "focused urban light",
+        "neon creative mind",
+        "city night life motion"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Stopp Overthinking!",
+        "5 Zeichen & Lösungen",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Oft am Nachdenken? Ja/Nein",
+      "day": 90,
+      "date": "2026-08-17",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Der Schlüssel zum Wachstumsdenken",
+      "status": "pending",
+      "hook": "Du glaubst, Fähigkeiten sind fix?",
+      "script": [
+        "Du glaubst, deine Fähigkeiten sind fix und unveränderlich?",
+        "Wachstumsdenken zeigt dir, dass jede Herausforderung eine Chance zum Lernen ist.",
+        "Umarme den Prozess und entdecke dein volles Potenzial.",
+        "Folge @mentviro."
+      ],
+      "caption": "Viele glauben, Intelligenz oder Talent seien angeboren und unveränderlich. Doch das Konzept des Wachstumsdenkens (Growth Mindset) lehrt uns, dass wir uns ständig entwickeln können! 💪 Jede Anstrengung, jeder Fehler ist eine Lektion. Entfalte dein wahres Potenzial, indem du diesen Gedanken verinnerlichst. #mentviro #wachstumsdenken #growthmindset #persönlicheentwicklung #mindset #erfolgsmentalität #motivation #zielsetzung #selbstdisziplin #lernenlernen #fokus #gewohnheiten #erfolgreich #potentialentfalten #inspiration",
+      "pexels_video_query": "dark minimalist cinematic growth light",
+      "story_text": [
+        "NEUES REEL",
+        "Wachstums-",
+        "Denken verstehen",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fixed vs Growth Mindset?",
+      "day": 91,
+      "date": "2026-08-18",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Wachstumsdenken: 3 Wege, wie du dich mental stärkst",
+      "status": "pending",
+      "hook": "Entfessle dein Potenzial: Die Macht des Wachstumsdenkens!",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Entfessle dein Potenzial:",
+            "Die Macht des Wachstumsdenkens!"
+          ],
+          "body": [
+            "3 Wege, wie du dich",
+            "mental stärkst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 3",
+          "title": [
+            "Fehler als Lehrer sehen"
+          ],
+          "body": [
+            "Jeder Rückschlag ist eine Lektion.",
+            "Lerne und gehe gestärkt daraus hervor."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 3",
+          "title": [
+            "Herausforderungen lieben"
+          ],
+          "body": [
+            "Sieh Schwierigkeiten als Chance,",
+            "neue Fähigkeiten zu entwickeln."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 3",
+          "title": [
+            "Anstrengung schätzen"
+          ],
+          "body": [
+            "Der Prozess und die Mühe sind",
+            "entscheidend für dein Wachstum."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Entwicklung"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Ein Wachstumsdenken ist der Turbo für deine persönliche Entwicklung. Es geht darum, Schwierigkeiten nicht als Ende, sondern als Startpunkt für Neues zu sehen. 🚀 Wer diese Denkweise verinnerlicht, ist mental stärker und resilienter. Probier diese Wege aus und spür den Unterschied! Welcher Tipp spricht dich am meisten an? #mentviro #wachstumsdenken #mindset #persönlicheentwicklung #erfolgsmentalität #lernen #herausforderungen #entwicklung #motivation #zielsetzung #selbstdisziplin #fokus #gewohnheiten #mentaleStärke #innovation",
+      "pexels_queries": [
+        "dark minimalist cinematic",
+        "growth light learning",
+        "mindset progress abstract",
+        "futuristic pathway",
+        "conceptual achievement",
+        "minimal education success"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Growth Mindset",
+        "3 Schlüssel-Wege",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Wachstums- vs. Starre?",
+      "day": 91,
+      "date": "2026-08-18",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Der wahre Wert der Gelassenheit",
+      "status": "pending",
+      "hook": "Wir jagen oft dem nächsten Ziel hinterher...",
+      "script": [
+        "Wir jagen oft dem nächsten Ziel hinterher und vergessen dabei, im Hier und Jetzt zu sein.",
+        "Doch wahre Stärke liegt darin, auch inmitten des Sturms innere Ruhe zu finden.",
+        "Diese Gelassenheit ist der Kompass für ein erfülltes Leben, nicht nur für den Erfolg.",
+        "Folge @mentviro."
+      ],
+      "caption": "Im Strudel des Alltags verlieren wir manchmal den Blick für das Wesentliche. Die ständige Jagd nach 'mehr' kann uns die innere Ruhe rauben. Doch wahre Erfüllung und nachhaltiger Erfolg entspringen oft einem Zustand der Gelassenheit. ✨ Nimm dir bewusst Zeit, um innezuhalten und diese Kraft in dir zu entdecken. #mentviro #gelassenheit #innereRuhe #lebensphilosophie #achtsamkeit #persönlicheentwicklung #mindset #werte #erfüllung #inspiration #motivation #selbstreflexion #wohlbefinden #authentisch #wachstum",
+      "pexels_video_query": "warm natural sunrise ocean forest calm",
+      "story_text": [
+        "NEUES REEL",
+        "Finde deine",
+        "innere Ruhe!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Findest du Ruhe?",
+      "day": 92,
+      "date": "2026-08-19",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Warum wahre Stärke in Gelassenheit liegt",
+      "status": "pending",
+      "hook": "Ständig in Bewegung? 🌊 Warum Innehalten der wahre Game Changer ist.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Ständig in Bewegung? 🌊",
+            "Warum Innehalten der wahre Game Changer ist."
+          ],
+          "body": [
+            "Entdecke die Kraft",
+            "der Gelassenheit."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DER WEG",
+          "num": "1 / 4",
+          "title": [
+            "Der ewige Druck"
+          ],
+          "body": [
+            "Wir sind oft gefangen",
+            "im Rad des 'Müssens'. Das zehrt."
+          ]
+        },
+        {
+          "badge": "DIE WAHRHEIT",
+          "num": "2 / 4",
+          "title": [
+            "Stärke in der Ruhe"
+          ],
+          "body": [
+            "Es braucht Mut, innezuhalten.",
+            "Wahre Kraft zeigt sich auch in Gelassenheit."
+          ]
+        },
+        {
+          "badge": "DEIN ANKER",
+          "num": "3 / 4",
+          "title": [
+            "Klarheit finden"
+          ],
+          "body": [
+            "In der Stille entstehen",
+            "die besten Ideen. Finde deinen Weg."
+          ]
+        },
+        {
+          "badge": "DEINE REISE",
+          "num": "4 / 4",
+          "title": [
+            "Nachhaltiges Wachstum"
+          ],
+          "body": [
+            "Gelassenheit ist die Basis",
+            "für nachhaltigen Erfolg und Wohlbefinden."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Tiefgang",
+            "& Impulse"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "In einer Welt, die immer schneller wird, ist Gelassenheit keine passive Haltung, sondern eine aktive Entscheidung. ❤️ Sie ist der Anker, der uns Halt gibt, wenn der Sturm tobt. Nur wer zur Ruhe kommt, kann klar sehen und seinen eigenen, authentischen Weg gehen. Was bedeutet Gelassenheit für dich? #mentviro #gelassenheit #innereStärke #achtsamkeit #persönlicheentwicklung #mindset #emotional #authentizität #selbstreflexion #lebensweisheit #ruhe #balance #inspiration #wachstum #wohlbefinden",
+      "pexels_queries": [
+        "warm natural ocean",
+        "forest contemplative sunset",
+        "serene landscape rain",
+        "calm water reflection",
+        "peaceful moment light",
+        "nature meditation harmony"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Gelassenheit finden",
+        "Wahre Stärke",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Eher Ruhe oder Action?",
+      "day": 92,
+      "date": "2026-08-19",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -11859,6 +12242,66 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 4
+    },
+    {
+      "status": "pending",
+      "topic": "overthinking urban neon",
+      "quote": {
+        "text": "Der beste Weg, um etwas zu beginnen, ist aufzuhören zu reden und anzufangen zu tun.",
+        "author": "Walt Disney"
+      },
+      "tips": {
+        "title": "Stopp Overthinking",
+        "items": [
+          "Starte mit 5-Minuten-Regel",
+          "Setze dir eine Deadline",
+          "Feiere kleine Fortschritte"
+        ]
+      },
+      "day": 90,
+      "date": "2026-08-17",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "growth mindset learning minimalist",
+      "quote": {
+        "text": "Es ist nicht die stärkste Spezies, die überlebt, noch die intelligenteste, sondern diejenige, die am anpassungsfähigsten ist.",
+        "author": "Charles Darwin"
+      },
+      "tips": {
+        "title": "Growth Mindset Boost",
+        "items": [
+          "Reflektiere deine Rückschläge",
+          "Setze Lernziele, keine Ergebnisziele",
+          "Umgib dich mit Optimisten"
+        ]
+      },
+      "day": 91,
+      "date": "2026-08-18",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "calm serene nature warm",
+      "quote": {
+        "text": "Wir können das, was uns begegnet, nicht kontrollieren, aber wir können kontrollieren, wie wir darauf reagieren.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Mehr Gelassenheit",
+        "items": [
+          "Starte mit 5 Minuten Stille",
+          "Atme bewusst durch",
+          "Finde dein tägliches Ritual"
+        ]
+      },
+      "day": 92,
+      "date": "2026-08-19",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0,
