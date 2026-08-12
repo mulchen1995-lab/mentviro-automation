@@ -9734,7 +9734,7 @@
     },
     {
       "topic": "4 Lehren, die dich Scheitern stärker machen lassen.",
-      "status": "pending",
+      "status": "published",
       "hook": "Was ich über Scheitern gelernt habe, das niemand erzählt.",
       "slides": [
         {
@@ -9826,7 +9826,10 @@
       "date": "2026-08-12",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18102318641185274",
+      "story_id": "18067203851736825",
+      "published_at": "2026-08-12T17:03:07Z"
     },
     {
       "topic": "Die Kunst, RICHTIGE Entscheidungen zu treffen",
