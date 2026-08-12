@@ -9726,7 +9726,11 @@
       "content_pillar": "emotional",
       "post_id": "18092962973333322",
       "story_id": "18115334144293152",
-      "published_at": "2026-08-12T06:13:31Z"
+      "published_at": "2026-08-12T06:13:31Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "4 Lehren, die dich Scheitern stärker machen lassen.",
@@ -12141,7 +12145,7 @@
       "published_at": "2026-08-11T10:44:33Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "warm natural light reflection",
       "quote": {
         "text": "Wer einen Grund zum Leben hat, hält fast jedes Wie aus.",
@@ -12158,7 +12162,10 @@
       "day": 85,
       "date": "2026-08-12",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-12T10:56:09Z"
     },
     {
       "status": "pending",
