@@ -9868,7 +9868,7 @@
     },
     {
       "topic": "Die 3 Säulen klarer Entscheidungen",
-      "status": "pending",
+      "status": "published",
       "hook": "Triffst du Entscheidungen aus dem Bauch heraus oder mit klarem Kopf?",
       "slides": [
         {
@@ -9964,7 +9964,10 @@
       "date": "2026-08-13",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17971196912928804",
+      "story_id": "18083461853669542",
+      "published_at": "2026-08-13T17:02:54Z"
     },
     {
       "topic": "Schlaf: Dein größter Cheatcode für Erfolg",
