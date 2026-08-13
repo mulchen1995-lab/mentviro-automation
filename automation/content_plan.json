@@ -9860,7 +9860,11 @@
       "content_pillar": "educational",
       "post_id": "18085349558455583",
       "story_id": "18064424975737451",
-      "published_at": "2026-08-13T06:15:36Z"
+      "published_at": "2026-08-13T06:15:36Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Die 3 Säulen klarer Entscheidungen",
@@ -12178,7 +12182,7 @@
       "published_at": "2026-08-12T10:56:09Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Es sind nicht die Umstände, die den Menschen formen, sondern seine Entscheidungen.",
@@ -12195,7 +12199,10 @@
       "day": 86,
       "date": "2026-08-13",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": "18112573112075490",
+      "published_at": "2026-08-13T10:57:10Z"
     },
     {
       "status": "pending",
