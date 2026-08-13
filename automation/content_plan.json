@@ -9829,11 +9829,15 @@
       "content_pillar": "emotional",
       "post_id": "18102318641185274",
       "story_id": "18067203851736825",
-      "published_at": "2026-08-12T17:03:07Z"
+      "published_at": "2026-08-12T17:03:07Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Die Kunst, RICHTIGE Entscheidungen zu treffen",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum manche Menschen intuitiv bessere Entscheidungen treffen als andere.",
       "script": [
         "Oft liegt es nicht an Intelligenz, sondern an der Methode.",
@@ -9853,7 +9857,10 @@
       "date": "2026-08-13",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18085349558455583",
+      "story_id": "18064424975737451",
+      "published_at": "2026-08-13T06:15:36Z"
     },
     {
       "topic": "Die 3 Säulen klarer Entscheidungen",
