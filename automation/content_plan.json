@@ -10005,7 +10005,7 @@
     },
     {
       "topic": "Schlaf: Dein größter Cheatcode für Erfolg",
-      "status": "pending",
+      "status": "published",
       "hook": "SCHLAF: Dein größter Cheatcode für Erfolg, den du ignorierst?",
       "slides": [
         {
@@ -10113,7 +10113,10 @@
       "date": "2026-08-14",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18064525346740894",
+      "story_id": "18108845978587339",
+      "published_at": "2026-08-14T16:49:57Z"
     },
     {
       "topic": "Energie-Management für nachhaltige Produktivität",
