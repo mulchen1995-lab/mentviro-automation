@@ -9967,11 +9967,15 @@
       "content_pillar": "educational",
       "post_id": "17971196912928804",
       "story_id": "18083461853669542",
-      "published_at": "2026-08-13T17:02:54Z"
+      "published_at": "2026-08-13T17:02:54Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Schlaf: Dein größter Cheatcode für Erfolg",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Du denkst, Schlafmangel macht dich zum Macher...",
       "script": [
         "POV: Du denkst, Schlafmangel macht dich zum Macher, aber in Wahrheit sabotiert er deine Performance.",
@@ -9990,7 +9994,10 @@
       "date": "2026-08-14",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17949325467033203",
+      "story_id": "18125906215684465",
+      "published_at": "2026-08-14T06:15:15Z"
     },
     {
       "topic": "Schlaf: Dein größter Cheatcode für Erfolg",
