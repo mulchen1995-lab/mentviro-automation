@@ -10147,7 +10147,11 @@
       "content_pillar": "educational",
       "post_id": "18130705873641772",
       "story_id": "17981028354100080",
-      "published_at": "2026-08-15T05:25:30Z"
+      "published_at": "2026-08-15T05:25:30Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Energie-Management: Dein geheimer Produktivitäts-Booster",
@@ -12589,7 +12593,7 @@
       "published_at": "2026-08-14T11:02:06Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic energy focus",
       "quote": {
         "text": "Wo deine Aufmerksamkeit hingeht, da fließt deine Energie.",
@@ -12606,7 +12610,10 @@
       "day": 88,
       "date": "2026-08-15",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-15T10:28:51Z"
     },
     {
       "topic": "learning books discipline calm dark",
