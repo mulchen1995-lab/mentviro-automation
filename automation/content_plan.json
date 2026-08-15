@@ -10155,7 +10155,7 @@
     },
     {
       "topic": "Energie-Management: Dein geheimer Produktivitäts-Booster",
-      "status": "pending",
+      "status": "published",
       "hook": "Fühlst du dich oft müde, obwohl du genug schläfst?",
       "slides": [
         {
@@ -10263,7 +10263,10 @@
       "date": "2026-08-15",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18189224596351797",
+      "story_id": "18033525095664082",
+      "published_at": "2026-08-15T16:22:27Z"
     },
     {
       "topic": "mentviro liest: Rich Dad Poor Dad",
