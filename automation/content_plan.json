@@ -10116,11 +10116,15 @@
       "content_pillar": "entertaining",
       "post_id": "18064525346740894",
       "story_id": "18108845978587339",
-      "published_at": "2026-08-14T16:49:57Z"
+      "published_at": "2026-08-14T16:49:57Z",
+      "insights": {
+        "likes": 3,
+        "comments": 1
+      }
     },
     {
       "topic": "Energie-Management für nachhaltige Produktivität",
-      "status": "pending",
+      "status": "published",
       "hook": "Du managst deine Zeit, aber managst du auch deine Energie?",
       "script": [
         "Zeit ist endlich, Energie erneuerbar. Das ist der wahre Unterschied.",
@@ -10140,7 +10144,10 @@
       "date": "2026-08-15",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18130705873641772",
+      "story_id": "17981028354100080",
+      "published_at": "2026-08-15T05:25:30Z"
     },
     {
       "topic": "Energie-Management: Dein geheimer Produktivitäts-Booster",
@@ -10738,6 +10745,343 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Deep Work für mehr Fokus",
+      "status": "pending",
+      "hook": "Warum deine beste Arbeit oft ungestört entsteht.",
+      "script": [
+        "Echte Konzentration ist die Währung des 21. Jahrhunderts.",
+        "Schaffe dir Zeitblöcke für ungestörte, tiefgehende Arbeit.",
+        "So entfesselst du dein wahres Potenzial und erreichst mehr mit weniger Aufwand.",
+        "Folge @mentviro."
+      ],
+      "caption": "In unserer lauten Welt ist Deep Work ein Superpower. 🧠 Es geht darum, dich bewusst von Ablenkungen abzuschirmen und dich voll und ganz einer Aufgabe zu widmen. Die Ergebnisse? Weniger Stress, höhere Qualität und ein tiefes Gefühl der Erfüllung. Probier es aus und spüre den Unterschied! #mentviro #mentaltraining #businessmindset #zielsetzung #mindset #unternehmertum #successmindset #produktivität #fokus #deepwork #selbstdisziplin #wachstum #lernenfürsleben #persönlicheentwicklung #gewohnheiten #klarheit",
+      "pexels_video_query": "dark minimalist focused deep work",
+      "story_text": [
+        "NEUES REEL",
+        "Meistere Deep Work",
+        "Für wahre Produktivität",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Arbeitest du fokussiert?",
+      "day": 93,
+      "date": "2026-08-20",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Methoden für Deep Work",
+      "status": "pending",
+      "hook": "3 Methoden, um deine Fokus-Fähigkeit zu meistern.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Deep Work meistern"
+          ],
+          "body": [
+            "Die Kunst der ungestörten Konzentration"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "METHODE #1",
+          "num": "1 / 3",
+          "title": [
+            "Eliminiere Ablenkungen"
+          ],
+          "body": [
+            "Schalte Benachrichtigungen aus und schließe unnötige Tabs."
+          ]
+        },
+        {
+          "badge": "METHODE #2",
+          "num": "2 / 3",
+          "title": [
+            "Feste Fokus-Blöcke"
+          ],
+          "body": [
+            "Plane 60-90 Minuten ununterbrochene Arbeitszeit fest ein."
+          ]
+        },
+        {
+          "badge": "METHODE #3",
+          "num": "3 / 3",
+          "title": [
+            "Eine Aufgabe nach der anderen"
+          ],
+          "body": [
+            "Widme dich nur einem Projekt, bis es fertig ist."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& persönliche Entwicklung"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Deep Work ist mehr als nur 'hart arbeiten' – es ist eine bewusste Entscheidung für Qualität und Effizienz. 💡 Mit diesen Methoden trainierst du deinen mentalen Muskel und erzielst Ergebnisse, die dich wirklich voranbringen. Welchen Tipp setzt du zuerst um? Schreib's in die Kommentare! 👇 #mentviro #produktivität #fokus #mindset #deepwork #konzentration #persönlicheentwicklung #erfolg #selbstdisziplin #gewohnheiten #lernenfürsleben #klarheit #businessmindset #mentaltraining #zielsetzung #wachstum",
+      "pexels_queries": [
+        "dark minimalist concentration",
+        "focused study table",
+        "uninterrupted work desk",
+        "single task focus",
+        "minimalist productivity",
+        "deep work environment"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Fokus-Booster",
+        "Werde unschlagbar",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Kennst du Deep Work?",
+      "day": 93,
+      "date": "2026-08-20",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Komfortzone verlassen",
+      "status": "pending",
+      "hook": "POV: Du verlässt deine Komfortzone und merkst...",
+      "script": [
+        "POV: Du hast Angst, aber machst es trotzdem.",
+        "Plötzlich merkst du: Wachstum beginnt da, wo die Angst endet.",
+        "Folge @mentviro."
+      ],
+      "caption": "Der Moment, wenn du merkst, dass das Unbequeme eigentlich das Tor zu deinem nächsten Level ist. 💪 Wer kennt's? Lass ein ❤️ da, wenn du dich traust! #mentviro #mentaltraining #mindset #lifestyle #persönlicheentwicklung #wachstum #komfortzone #herausforderung #mut #selbstreflexion #erfolg #inspiration #motivation #neuanfang #entfaltung #grenzenlos",
+      "pexels_video_query": "energetic urban person overcoming challenge",
+      "story_text": [
+        "NEUES REEL",
+        "Wachstum ist unbequem",
+        "Aber so wertvoll!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Schon mal gewachsen?",
+      "day": 94,
+      "date": "2026-08-21",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Zeichen, dass du mental wächst",
+      "status": "pending",
+      "hook": "5 Zeichen, dass du mental wächst – oft unbemerkt.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Du wächst, wenn..."
+          ],
+          "body": [
+            "5 unbemerkte Zeichen deines Fortschritts"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 5",
+          "title": [
+            "Neue Dinge probieren"
+          ],
+          "body": [
+            "Du sagst öfter 'Ja' zu Unbekanntem."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 5",
+          "title": [
+            "Rückschläge akzeptieren"
+          ],
+          "body": [
+            "Fehler sind Lektionen, keine Niederlagen mehr."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 5",
+          "title": [
+            "Kritik annehmen"
+          ],
+          "body": [
+            "Du hörst zu und lernst, statt dich zu verteidigen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #4",
+          "num": "4 / 5",
+          "title": [
+            "Unbehagen suchen"
+          ],
+          "body": [
+            "Du suchst bewusst Situationen, die dich herausfordern."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #5",
+          "num": "5 / 5",
+          "title": [
+            "Selbstreflexion leben"
+          ],
+          "body": [
+            "Du hinterfragst dich und deine Motive regelmäßig."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Wachstum passiert oft leise und unbemerkt. Es sind die kleinen Verschiebungen in deiner Denkweise und deinen Handlungen, die den größten Unterschied machen. Erkennst du dich in diesen Zeichen wieder? Teile es uns in den Kommentaren mit! 👇 #mentviro #mindset #wachstum #persönlicheentwicklung #lifestyle #komfortzone #erfolg #motivation #inspiration #selbstreflexion #mut #herausforderung #gewohnheiten #mentaltraining #fortschritt #entfaltung",
+      "pexels_queries": [
+        "energetic urban contrast growth",
+        "person trying new things",
+        "learning from mistakes",
+        "accepting criticism",
+        "stepping out comfort zone",
+        "self reflection city"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deine Wachstums-Signs",
+        "Erkennst du dich?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Verlässt du die Zone?",
+      "day": 94,
+      "date": "2026-08-21",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Resilienz – Deine innere Stärke",
+      "status": "pending",
+      "hook": "Was steckt hinter mentaler Stärke in Krisen?",
+      "script": [
+        "Resilienz ist die Fähigkeit, aus Rückschlägen stärker hervorzugehen.",
+        "Sie ist kein Talent, sondern eine erlernbare Haltung zum Leben.",
+        "Stärke dich mental, um jede Herausforderung zu meistern.",
+        "Folge @mentviro."
+      ],
+      "caption": "In stürmischen Zeiten ist Resilienz dein Anker. ⚓️ Es ist die mentale Widerstandsfähigkeit, die dich nicht zerbrechen lässt, sondern wachsen. Lerne, Krisen als Chance zu sehen und deine innere Stärke aufzubauen. #mentviro #mentaltraining #mindset #resilienz #innereStärke #rückschläge #wachstum #persönlicheentwicklung #selbstdisziplin #lebensweisheiten #stärke #gelassenheit #herausforderungen #erfolg #fokus #bewusstsein",
+      "pexels_video_query": "dark minimalist resilient strength",
+      "story_text": [
+        "NEUES REEL",
+        "Deine innere Stärke",
+        "Lerne Resilienz!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fühlst du dich resilient?",
+      "day": 95,
+      "date": "2026-08-22",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die 3 Säulen der Resilienz",
+      "status": "pending",
+      "hook": "Die 3 Säulen, auf denen mentale Stärke ruht.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Baue deine Resilienz"
+          ],
+          "body": [
+            "Die 3 Säulen mentaler Stärke"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SÄULE #1",
+          "num": "1 / 3",
+          "title": [
+            "Akzeptanz der Realität"
+          ],
+          "body": [
+            "Lerne, unkontrollierbare Dinge anzunehmen, wie sie sind."
+          ]
+        },
+        {
+          "badge": "SÄULE #2",
+          "num": "2 / 3",
+          "title": [
+            "Sinn im Unglück finden"
+          ],
+          "body": [
+            "Finde die Lektion oder den Zweck in schwierigen Phasen."
+          ]
+        },
+        {
+          "badge": "SÄULE #3",
+          "num": "3 / 3",
+          "title": [
+            "Die Macht der Anpassung"
+          ],
+          "body": [
+            "Sei flexibel und finde neue Wege, wenn alte versperrt sind."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& psychologisches Wissen"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Resilienz ist dein Schutzschild gegen die Unwägbarkeiten des Lebens. Indem du diese 3 Säulen stärkst, entwickelst du eine unerschütterliche mentale Robustheit. Welche Säule möchtest du als Nächstes stärken? Teile deine Gedanken in den Kommentaren! 👇 #mentviro #resilienz #mindset #mentaltraining #innereStärke #persönlicheentwicklung #wachstum #gelassenheit #herausforderungen #rückschläge #psychologie #erfolg #bewusstsein #selbstdisziplin #lebensweisheiten #fokus",
+      "pexels_queries": [
+        "dark minimalist mental strength",
+        "acceptance of reality",
+        "finding meaning in adversity",
+        "adaptability and change",
+        "resilient mindset",
+        "inner peace dark"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Stärke deine Seele",
+        "Resilienz meistern",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Welche Säule stärkst du?",
+      "day": 95,
+      "date": "2026-08-22",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -12346,6 +12690,66 @@
       "date": "2026-08-19",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimalist cinematic focus",
+      "quote": {
+        "text": "Where focus goes, energy flows.",
+        "author": "Tony Robbins"
+      },
+      "tips": {
+        "title": "3 Schritte zu mehr Fokus",
+        "items": [
+          "Morgenroutine festlegen",
+          "Digital Detox planen",
+          "Eine Sache Priorität geben"
+        ]
+      },
+      "day": 93,
+      "date": "2026-08-20",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban personal growth",
+      "quote": {
+        "text": "Life begins at the end of your comfort zone.",
+        "author": "Neale Donald Walsch"
+      },
+      "tips": {
+        "title": "3 Schritte raus aus der Zone",
+        "items": [
+          "Kleine Schritte wagen",
+          "Angst als Signal sehen",
+          "Erfolge feiern"
+        ]
+      },
+      "day": 94,
+      "date": "2026-08-21",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic resilience",
+      "quote": {
+        "text": "It is not the strongest of the species that survives, but the most adaptable.",
+        "author": "Charles Darwin"
+      },
+      "tips": {
+        "title": "3 Wege zu mehr Resilienz",
+        "items": [
+          "Achtsamkeit praktizieren",
+          "Soziale Netze stärken",
+          "Positive Denkweise kultivieren"
+        ]
+      },
+      "day": 95,
+      "date": "2026-08-22",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0,
