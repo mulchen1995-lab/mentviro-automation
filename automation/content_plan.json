@@ -10266,7 +10266,11 @@
       "content_pillar": "educational",
       "post_id": "18189224596351797",
       "story_id": "18033525095664082",
-      "published_at": "2026-08-15T16:22:27Z"
+      "published_at": "2026-08-15T16:22:27Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "mentviro liest: Rich Dad Poor Dad",
@@ -10288,12 +10292,15 @@
       "day": 89,
       "type": "reel",
       "date": "2026-08-16",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 4
+      "book_episode": 4,
+      "post_id": "18138955060590482",
+      "story_id": "18093799589319837",
+      "published_at": "2026-08-16T05:28:55Z"
     },
     {
       "topic": "mentviro liest: Rich Dad Poor Dad",
