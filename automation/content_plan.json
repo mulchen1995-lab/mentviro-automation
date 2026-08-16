@@ -10381,12 +10381,15 @@
       "day": 89,
       "type": "carousel",
       "date": "2026-08-16",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 4
+      "book_episode": 4,
+      "post_id": "17977737359898838",
+      "story_id": "18113246404979612",
+      "published_at": "2026-08-16T16:22:27Z"
     },
     {
       "topic": "Overthinking vs. Action",
