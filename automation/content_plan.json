@@ -10420,7 +10420,11 @@
       "content_pillar": "entertaining",
       "post_id": "18146617273487835",
       "story_id": "18007558163781843",
-      "published_at": "2026-08-17T05:36:18Z"
+      "published_at": "2026-08-17T05:36:18Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Anzeichen, dass du zu viel nachdenkst & wie du es änderst",
@@ -12773,7 +12777,7 @@
       "published_at": "2026-08-16T10:29:23Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "overthinking urban neon",
       "quote": {
         "text": "Der beste Weg, um etwas zu beginnen, ist aufzuhören zu reden und anzufangen zu tun.",
@@ -12790,7 +12794,10 @@
       "day": 90,
       "date": "2026-08-17",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-17T10:37:30Z"
     },
     {
       "status": "pending",
