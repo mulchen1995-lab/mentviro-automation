@@ -10389,11 +10389,15 @@
       "book_episode": 4,
       "post_id": "17977737359898838",
       "story_id": "18113246404979612",
-      "published_at": "2026-08-16T16:22:27Z"
+      "published_at": "2026-08-16T16:22:27Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Overthinking vs. Action",
-      "status": "pending",
+      "status": "published",
       "hook": "Du zerdenkst alles, statt einfach zu tun?",
       "script": [
         "Du zerdenkst alles, statt einfach zu tun?",
@@ -10413,7 +10417,10 @@
       "date": "2026-08-17",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18146617273487835",
+      "story_id": "18007558163781843",
+      "published_at": "2026-08-17T05:36:18Z"
     },
     {
       "topic": "5 Anzeichen, dass du zu viel nachdenkst & wie du es änderst",
@@ -11103,6 +11110,113 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "mentviro liest: Mindset",
+      "hook": "Zwei Wörter entscheiden, ob du wächst: 'noch nicht'.",
+      "script": [
+        "Zwei Wörter entscheiden, ob du wächst: 'noch nicht'.",
+        "Nicht 'ich kann das nicht' — sondern 'ich kann das noch nicht'.",
+        "Talent ist der Start. Haltung ist der Weg.",
+        "Folge @mentviro."
+      ],
+      "pexels_video_query": "person learning practice growth calm cinematic dark",
+      "caption": "📚 mentviro liest #5 · Mindset\n\nCarol Dweck unterscheidet zwei Denkweisen: das starre und das wachstumsorientierte Mindset.\n\nWer glaubt, Fähigkeiten seien fest, gibt bei Widerstand auf. Wer glaubt, man kann wachsen, sieht im Scheitern eine Etappe.\n\nWo sagst du ab heute 'noch nicht'?\n\n#mindset #caroldweck #growthmindset #wachstumsdenken #lernen #disziplin #selbstentwicklung #persönlichkeitsentwicklung #resilienz #buchtipp #lesen #motivation #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #5",
+        "Mindset",
+        "Sag: noch nicht",
+        "Jetzt ansehen"
+      ],
+      "day": 96,
+      "type": "reel",
+      "date": "2026-08-23",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 5
+    },
+    {
+      "topic": "mentviro liest: Mindset",
+      "hook": "3 Ideen aus Mindset",
+      "pexels_queries": [
+        "person practice learning dark",
+        "seedling growth light",
+        "stairs climbing calm",
+        "notebook progress hands",
+        "sunrise path forward",
+        "mountain climb perspective"
+      ],
+      "slides": [
+        {
+          "is_cover": true,
+          "title": [
+            "Mindset",
+            "in 3 Ideen"
+          ],
+          "body": [
+            "Warum deine Haltung",
+            "über dein Wachstum entscheidet.",
+            "Weiterwischen ›"
+          ]
+        },
+        {
+          "title": [
+            "1 · Fest vs. wachsend"
+          ],
+          "body": [
+            "'Ich bin so' bremst.",
+            "'Ich kann werden' öffnet."
+          ]
+        },
+        {
+          "title": [
+            "2 · Scheitern = Daten"
+          ],
+          "body": [
+            "Ein Rückschlag ist keine",
+            "Bewertung deiner Person —",
+            "nur Feedback."
+          ]
+        },
+        {
+          "title": [
+            "3 · Das Wort 'noch'"
+          ],
+          "body": [
+            "'Ich kann das noch nicht'",
+            "hält die Tür offen."
+          ]
+        },
+        {
+          "title": [
+            "Dein Zug"
+          ],
+          "body": [
+            "Wo tauschst du 'nicht'",
+            "gegen 'noch nicht'?",
+            "Speicher dir das ›"
+          ]
+        }
+      ],
+      "caption": "📚 mentviro liest #5 · Mindset\n\nMindset von Carol Dweck — drei Ideen über die Haltung, die Wachstum erst möglich macht.\n\nNicht was du kannst, entscheidet — sondern ob du glaubst, dass du dich entwickeln kannst.\n\nSpeicher dir den Post.\n\n#mindset #growthmindset #wachstumsdenken #lernen #resilienz #disziplin #selbstentwicklung #buchtipp #klarheit #motivation #lesen #mentviro",
+      "story_text": [
+        "MENTVIRO LIEST #5",
+        "Mindset",
+        "3 Ideen",
+        "Jetzt ansehen"
+      ],
+      "day": 96,
+      "type": "carousel",
+      "date": "2026-08-23",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 5
     }
   ],
   "story_queue": [
@@ -12777,8 +12891,31 @@
       "date": "2026-08-22",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "growth learning practice calm dark",
+      "quote": {
+        "text": "Wird man durch Anstrengung nicht schlauer, hat man die falsche Anstrengung gewählt.",
+        "author": "Carol Dweck"
+      },
+      "tips": {
+        "title": "Wachstums-Mindset üben",
+        "items": [
+          "Häng ein 'noch' an jedes 'ich kann nicht'.",
+          "Frag nach Feedback, nicht nach Lob.",
+          "Feiere Anstrengung, nicht nur Ergebnis."
+        ]
+      },
+      "day": 96,
+      "date": "2026-08-23",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "educational",
+      "source": "book_series",
+      "series": "book",
+      "book_episode": 5
     }
   ],
   "evergreen_cursor": 0,
-  "book_series_cursor": 4
+  "book_series_cursor": 5
 }
