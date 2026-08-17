@@ -10428,7 +10428,7 @@
     },
     {
       "topic": "5 Anzeichen, dass du zu viel nachdenkst & wie du es änderst",
-      "status": "pending",
+      "status": "published",
       "hook": "Zerdenkst du zu viel? 🧠 So erkennst du es!",
       "slides": [
         {
@@ -10543,7 +10543,10 @@
       "date": "2026-08-17",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18082572857680643",
+      "story_id": "17942612067310702",
+      "published_at": "2026-08-17T16:25:42Z"
     },
     {
       "topic": "Der Schlüssel zum Wachstumsdenken",
