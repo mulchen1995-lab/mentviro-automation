@@ -10546,11 +10546,15 @@
       "content_pillar": "entertaining",
       "post_id": "18082572857680643",
       "story_id": "17942612067310702",
-      "published_at": "2026-08-17T16:25:42Z"
+      "published_at": "2026-08-17T16:25:42Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Der Schlüssel zum Wachstumsdenken",
-      "status": "pending",
+      "status": "published",
       "hook": "Du glaubst, Fähigkeiten sind fix?",
       "script": [
         "Du glaubst, deine Fähigkeiten sind fix und unveränderlich?",
@@ -10571,7 +10575,10 @@
       "date": "2026-08-18",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18123647155841022",
+      "story_id": "18108294448869028",
+      "published_at": "2026-08-18T05:30:19Z"
     },
     {
       "topic": "Wachstumsdenken: 3 Wege, wie du dich mental stärkst",
