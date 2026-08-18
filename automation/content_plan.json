@@ -10582,7 +10582,7 @@
     },
     {
       "topic": "Wachstumsdenken: 3 Wege, wie du dich mental stärkst",
-      "status": "pending",
+      "status": "published",
       "hook": "Entfessle dein Potenzial: Die Macht des Wachstumsdenkens!",
       "slides": [
         {
@@ -10664,7 +10664,10 @@
       "date": "2026-08-18",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18437612644120365",
+      "story_id": "17902704150507936",
+      "published_at": "2026-08-18T16:37:50Z"
     },
     {
       "topic": "Der wahre Wert der Gelassenheit",
