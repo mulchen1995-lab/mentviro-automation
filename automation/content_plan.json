@@ -12810,7 +12810,7 @@
       "published_at": "2026-08-17T10:37:30Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "growth mindset learning minimalist",
       "quote": {
         "text": "Es ist nicht die stärkste Spezies, die überlebt, noch die intelligenteste, sondern diejenige, die am anpassungsfähigsten ist.",
@@ -12827,7 +12827,10 @@
       "day": 91,
       "date": "2026-08-18",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-18T10:35:13Z"
     },
     {
       "status": "pending",
