@@ -10667,11 +10667,15 @@
       "content_pillar": "educational",
       "post_id": "18437612644120365",
       "story_id": "17902704150507936",
-      "published_at": "2026-08-18T16:37:50Z"
+      "published_at": "2026-08-18T16:37:50Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Der wahre Wert der Gelassenheit",
-      "status": "pending",
+      "status": "published",
       "hook": "Wir jagen oft dem nächsten Ziel hinterher...",
       "script": [
         "Wir jagen oft dem nächsten Ziel hinterher und vergessen dabei, im Hier und Jetzt zu sein.",
@@ -10692,7 +10696,10 @@
       "date": "2026-08-19",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18090370436146413",
+      "story_id": "17879662212653157",
+      "published_at": "2026-08-19T05:36:18Z"
     },
     {
       "topic": "Warum wahre Stärke in Gelassenheit liegt",
@@ -11234,6 +11241,370 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 5
+    },
+    {
+      "topic": "Umfeld gestalten",
+      "status": "pending",
+      "hook": "POV: Du realisierst, dass dein Umfeld deine Ambitionen bremst.",
+      "script": [
+        "POV: Du realisierst, dass dein engstes Umfeld deine Ambitionen bremst.",
+        "Deine Energie ist endlich – wähle weise, mit wem du sie teilst.",
+        "Folge @mentviro."
+      ],
+      "caption": "Dein Umfeld formt dich mehr, als du denkst. Bist du von Menschen umgeben, die dich aufbauen, oder von solchen, die dich ausbremsen? Es ist Zeit, bewusst zu wählen, wem du deine wertvolle Energie schenkst. Dein Wachstum hängt auch davon ab, wer an deiner Seite steht. ✨ #mentviro #erfolgreich #erfolgsmentalität #successmindset #motivation #businesstips #businessmindset #zielsetzung #persönlicheentwicklung #mindsetchange #positivevibes #inspiration #selbstfindung #wachstum #lifestyle",
+      "pexels_video_query": "energetic urban neon crowd walking",
+      "story_text": [
+        "NEUES REEL",
+        "WIE DEIN UMFELD",
+        "DEINEN ERFOLG BEEINFLUSST",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Bremst dich dein Umfeld aus?",
+      "day": 97,
+      "date": "2026-08-24",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Zeichen, dass dein Umfeld dich bremst (und was du tun kannst)",
+      "status": "pending",
+      "hook": "Dein Umfeld ist dein Spiegel – siehst du Wachstum oder Stillstand?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "5 Zeichen,",
+            "dass dein Umfeld",
+            "dich bremst"
+          ],
+          "body": [
+            "Dein Wachstum ist direkt",
+            "mit deinem Umfeld verbunden.",
+            "Erkenne die Warnsignale."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 6",
+          "title": [
+            "Ständige Negativität"
+          ],
+          "body": [
+            "Deine Freunde reden nur über",
+            "Probleme, nie über Lösungen oder Ziele."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 6",
+          "title": [
+            "Mangelnde Unterstützung"
+          ],
+          "body": [
+            "Deine Ambitionen werden belächelt",
+            "oder nicht ernst genommen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 6",
+          "title": [
+            "Keine Herausforderung"
+          ],
+          "body": [
+            "Niemand ermutigt dich, aus deiner",
+            "Komfortzone herauszukommen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #4",
+          "num": "4 / 6",
+          "title": [
+            "Zeitverschwendung"
+          ],
+          "body": [
+            "Man verbringt Stunden mit Aktivitäten,",
+            "die dich nicht weiterbringen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #5",
+          "num": "5 / 6",
+          "title": [
+            "Deine Energie leidet"
+          ],
+          "body": [
+            "Nach Treffen fühlst du dich",
+            "ausgelaugt statt inspiriert."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Dein Umfeld ist ein entscheidender Faktor für deinen Erfolg und dein Wohlbefinden. Wenn du diese Zeichen bei den Menschen um dich herum erkennst, ist es vielleicht an der Zeit, bewusste Entscheidungen zu treffen und dein soziales Netz neu zu gestalten. Suche Menschen, die dich anfeuern und inspirieren! 💪 #mentviro #umfeld #persönlichkeitsentwicklung #mindset #wachstum #toxischebeziehungen #positiveenergie #selbstreflexion #zielerreichung #erfolgsmentalität #inspiration #motivation #grenzensetzen #lebensweisheiten #selbstverbesserung",
+      "pexels_queries": [
+        "colorful urban crowd",
+        "friends talking serious",
+        "person alone thoughtful city",
+        "group laughing superficial",
+        "tired person city",
+        "inspired person sunrise"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "DEIN UMFELD:",
+        "BOOSTER ODER BREMSE?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fühlst du dich manchmal gebremst?",
+      "day": 97,
+      "date": "2026-08-24",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Entscheidungen treffen",
+      "status": "pending",
+      "hook": "Warum gute Entscheidungen der Schlüssel zu deinem Erfolg sind.",
+      "script": [
+        "Warum gute Entscheidungen der Schlüssel zu deinem Erfolg sind.",
+        "Lerne, wie du Klarheit schaffst und Unsicherheit überwindest.",
+        "Meistere die Kunst des bewussten Handelns.",
+        "Folge @mentviro."
+      ],
+      "caption": "Jede Entscheidung, die du triffst, formt deinen Weg. Statt impulsiv zu handeln, kultiviere die Kunst der bewussten Entscheidung. Es geht darum, Informationen zu sammeln, Optionen abzuwägen und mit Überzeugung zu handeln. Dein Erfolg beginnt mit der Klarheit in deinen Entscheidungen. 🔑 #mentviro #erfolgreich #erfolgsmentalität #successmindset #motivation #businesstips #businessmindset #zielsetzung #produktivität #fokus #klarheit #selbstdisziplin #wachstumsdenken #lernen #entscheidungskraft",
+      "pexels_video_query": "dark minimalistic decision path options",
+      "story_text": [
+        "NEUES REEL",
+        "ENTDECK DIE KRAFT",
+        "KLARER ENTSCHEIDUNGEN",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Fällt dir Entscheidungen leicht?",
+      "day": 98,
+      "date": "2026-08-25",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die Kunst, bessere Entscheidungen zu treffen: 3 Strategien für Klarheit",
+      "status": "pending",
+      "hook": "Stehst du vor einer wichtigen Entscheidung? So findest du Klarheit.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die Kunst,",
+            "bessere Entscheidungen",
+            "zu treffen"
+          ],
+          "body": [
+            "Finde Klarheit und handle",
+            "mit Überzeugung –",
+            "3 Strategien für deinen Erfolg."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "STRATEGIE #1",
+          "num": "1 / 4",
+          "title": [
+            "Der 10/10/10-Test"
+          ],
+          "body": [
+            "Wie fühlt sich die Entscheidung",
+            "in 10 Minuten, 10 Monaten,",
+            "und 10 Jahren an?"
+          ]
+        },
+        {
+          "badge": "STRATEGIE #2",
+          "num": "2 / 4",
+          "title": [
+            "Pro-Contra-Matrix Plus"
+          ],
+          "body": [
+            "Liste nicht nur Vor- und Nachteile,",
+            "sondern auch Risiken und Chancen auf."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #3",
+          "num": "3 / 4",
+          "title": [
+            "Werte-Check"
+          ],
+          "body": [
+            "Entspricht die Entscheidung",
+            "deinen tiefsten Werten und",
+            "deiner langfristigen Vision?"
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Strategien für Erfolg"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Große Entscheidungen können überwältigend sein, aber mit den richtigen Strategien kannst du sie mit Zuversicht treffen. Diese 3 Ansätze helfen dir, Perspektiven zu wechseln, tiefgründiger zu analysieren und sicherzustellen, dass deine Entscheidungen im Einklang mit deinen Werten und Zielen stehen. Triff bewusst, lebe kraftvoll! 💡 #mentviro #entscheidungsfindung #klarheit #strategie #mindset #persönlicheentwicklung #produktivität #fokus #zielsetzung #wachstumsdenken #lernen #selbstentwicklung #erfolgsstrategien #denkweisen #bewusstleben",
+      "pexels_queries": [
+        "minimalistic choices path",
+        "person thinking crossroads",
+        "decision matrix pen paper",
+        "values vision goal",
+        "clear sky future",
+        "success path light"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "3 SCHRITTE ZU",
+        "BESSEREN ENTSCHEIDUNGEN",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Bist du ein Kopf- oder Bauchmensch?",
+      "day": 98,
+      "date": "2026-08-25",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Werte statt Zahlen",
+      "status": "pending",
+      "hook": "Manchmal jagt man Zielen hinterher, die nicht wirklich glücklich machen.",
+      "script": [
+        "Manchmal jagt man Zielen hinterher, die nicht wirklich glücklich machen.",
+        "Der wahre Reichtum liegt nicht in Zahlen, sondern in deinen Werten.",
+        "Finde, was wirklich zählt – und lebe danach.",
+        "Folge @mentviro."
+      ],
+      "caption": "In unserer Gesellschaft messen wir Erfolg oft an äußeren Merkmalen und Zahlen. Doch wahre Erfüllung kommt aus der Ausrichtung deines Lebens an deinen tiefsten Werten. Was bedeutet Erfolg wirklich für dich? Es ist Zeit, in dich zu gehen und zu entdecken, was dein Herz wirklich begehrt – jenseits von materiellen Zielen. ❤️ #mentviro #erfolgreich #erfolgsmentalität #successmindset #motivation #zielsetzung #persönlichewerte #sinnsuche #achtsamkeit #innererfrieden #lebensweisheiten #authentizität #selbstliebe #dankbarkeit #glücklichsein",
+      "pexels_video_query": "warm sunset quiet reflection ocean",
+      "story_text": [
+        "NEUES REEL",
+        "WAS WIRKLICH",
+        "IM LEBEN ZÄHLT",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Folgt dein Leben deinen Werten?",
+      "day": 99,
+      "date": "2026-08-26",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Der wahre Wert des Lebens: Warum Werte wichtiger sind als Zahlen",
+      "status": "pending",
+      "hook": "Jenseits von Kontoständen und Karrieretiteln – was gibt deinem Leben wahren Sinn?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Der wahre Wert",
+            "des Lebens"
+          ],
+          "body": [
+            "Warum Werte wichtiger sind",
+            "als Zahlen – eine Reise",
+            "zu innerem Reichtum."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WAHRHEIT #1",
+          "num": "1 / 4",
+          "title": [
+            "Zahlen verblassen"
+          ],
+          "body": [
+            "Materielle Errungenschaften",
+            "bringen oft nur kurzfristige Freude,",
+            "Werte geben dauerhaften Sinn."
+          ]
+        },
+        {
+          "badge": "WAHRHEIT #2",
+          "num": "2 / 4",
+          "title": [
+            "Deine innere Kompassnadel"
+          ],
+          "body": [
+            "Werte sind dein Fundament,",
+            "das dich auch in stürmischen Zeiten",
+            "auf Kurs hält."
+          ]
+        },
+        {
+          "badge": "WAHRHEIT #3",
+          "num": "3 / 4",
+          "title": [
+            "Echter Impact"
+          ],
+          "body": [
+            "Wenn du nach deinen Werten lebst,",
+            "hinterlässt du einen",
+            "authentischen und tiefen Eindruck."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lebensweisheiten"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Wir leben in einer Welt, die uns oft lehrt, Erfolg an Zahlen zu messen. Doch die tiefste Erfüllung und der nachhaltigste Sinn entspringen dem Leben nach unseren wahren Werten. Nimm dir Zeit, deine Kernwerte zu entdecken und dein Leben bewusst danach auszurichten. Das ist der wahre Reichtum. ✨ #mentviro #werte #lebenssinn #authentizität #erfüllung #innererfrieden #achtsamkeit #persönlicheentwicklung #mindset #glück #dankbarkeit #selbstreflexion #selbstliebe #lebensweisheiten #sinnsuche",
+      "pexels_queries": [
+        "warm light forest path",
+        "old tree deep roots",
+        "compass north star",
+        "ripple effect water",
+        "sunset meditation reflection",
+        "sunrise mountain view"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "WAS ZÄHLT",
+        "MEHR ALS GELD?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Sind dir Werte wichtiger als Geld?",
+      "day": 99,
+      "date": "2026-08-26",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -12937,6 +13308,66 @@
       "source": "book_series",
       "series": "book",
       "book_episode": 5
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic city",
+      "quote": {
+        "text": "Du bist der Durchschnitt der fünf Menschen, mit denen du die meiste Zeit verbringst.",
+        "author": "Jim Rohn"
+      },
+      "tips": {
+        "title": "Umfeld optimieren",
+        "items": [
+          "Identifiziere Energieräuber",
+          "Suche Mentoren & Gleichgesinnte",
+          "Setze klare Grenzen"
+        ]
+      },
+      "day": 97,
+      "date": "2026-08-24",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimalistic clarity concept",
+      "quote": {
+        "text": "Nicht das, was uns widerfährt, sondern wie wir darauf reagieren, macht uns aus.",
+        "author": "Epiktet"
+      },
+      "tips": {
+        "title": "Sicherer entscheiden",
+        "items": [
+          "Atme tief durch",
+          "Sammle Fakten",
+          "Vertraue deiner Intuition"
+        ]
+      },
+      "day": 98,
+      "date": "2026-08-25",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural light reflection",
+      "quote": {
+        "text": "Wenn wir keinen Sinn im Leben finden können, können wir immer noch einen Sinn im Leiden finden.",
+        "author": "Viktor Frankl"
+      },
+      "tips": {
+        "title": "Deine Werte finden",
+        "items": [
+          "Reflektiere prägende Momente",
+          "Schreibe deine Ideale auf",
+          "Lebe nach deinen Prinzipien"
+        ]
+      },
+      "day": 99,
+      "date": "2026-08-26",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0,
