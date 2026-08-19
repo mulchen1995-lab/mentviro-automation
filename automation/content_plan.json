@@ -10699,7 +10699,11 @@
       "content_pillar": "emotional",
       "post_id": "18090370436146413",
       "story_id": "17879662212653157",
-      "published_at": "2026-08-19T05:36:18Z"
+      "published_at": "2026-08-19T05:36:18Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Warum wahre Stärke in Gelassenheit liegt",
@@ -13207,7 +13211,7 @@
       "published_at": "2026-08-18T10:35:13Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "calm serene nature warm",
       "quote": {
         "text": "Wir können das, was uns begegnet, nicht kontrollieren, aber wir können kontrollieren, wie wir darauf reagieren.",
@@ -13224,7 +13228,10 @@
       "day": 92,
       "date": "2026-08-19",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "quote_id": null,
+      "tips_id": "17973638390920463",
+      "published_at": "2026-08-19T10:38:11Z"
     },
     {
       "status": "pending",
