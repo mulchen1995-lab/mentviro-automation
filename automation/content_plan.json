@@ -10707,7 +10707,7 @@
     },
     {
       "topic": "Warum wahre Stärke in Gelassenheit liegt",
-      "status": "pending",
+      "status": "published",
       "hook": "Ständig in Bewegung? 🌊 Warum Innehalten der wahre Game Changer ist.",
       "slides": [
         {
@@ -10800,7 +10800,10 @@
       "date": "2026-08-19",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17978582153905308",
+      "story_id": "18104841899182324",
+      "published_at": "2026-08-19T16:31:09Z"
     },
     {
       "topic": "Deep Work für mehr Fokus",
