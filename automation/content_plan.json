@@ -10835,7 +10835,11 @@
       "content_pillar": "educational",
       "post_id": "18175109686428603",
       "story_id": "17893709163397196",
-      "published_at": "2026-08-20T05:31:04Z"
+      "published_at": "2026-08-20T05:31:04Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "3 Methoden für Deep Work",
@@ -13244,7 +13248,7 @@
       "published_at": "2026-08-19T10:38:11Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimalist cinematic focus",
       "quote": {
         "text": "Where focus goes, energy flows.",
@@ -13261,7 +13265,10 @@
       "day": 93,
       "date": "2026-08-20",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-20T10:37:20Z"
     },
     {
       "status": "pending",
