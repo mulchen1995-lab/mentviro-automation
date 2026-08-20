@@ -10803,11 +10803,15 @@
       "content_pillar": "emotional",
       "post_id": "17978582153905308",
       "story_id": "18104841899182324",
-      "published_at": "2026-08-19T16:31:09Z"
+      "published_at": "2026-08-19T16:31:09Z",
+      "insights": {
+        "likes": 4,
+        "comments": 3
+      }
     },
     {
       "topic": "Deep Work für mehr Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "Warum deine beste Arbeit oft ungestört entsteht.",
       "script": [
         "Echte Konzentration ist die Währung des 21. Jahrhunderts.",
@@ -10828,7 +10832,10 @@
       "date": "2026-08-20",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18175109686428603",
+      "story_id": "17893709163397196",
+      "published_at": "2026-08-20T05:31:04Z"
     },
     {
       "topic": "3 Methoden für Deep Work",
