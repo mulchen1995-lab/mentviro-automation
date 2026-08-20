@@ -10843,7 +10843,7 @@
     },
     {
       "topic": "3 Methoden für Deep Work",
-      "status": "pending",
+      "status": "published",
       "hook": "3 Methoden, um deine Fokus-Fähigkeit zu meistern.",
       "slides": [
         {
@@ -10920,7 +10920,10 @@
       "date": "2026-08-20",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18131253733650980",
+      "story_id": "17977266419907881",
+      "published_at": "2026-08-20T16:34:05Z"
     },
     {
       "topic": "Komfortzone verlassen",
