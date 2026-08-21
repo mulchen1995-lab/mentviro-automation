@@ -7,10 +7,6 @@ name: mentviro Cloud Poster (primär)
 
 on:
   schedule:
-    - cron: '0 5 * * *'    # 07:00 CET — reel
-    - cron: '0 7 * * *'    # 09:00 CET — reel (Retry)
-    - cron: '0 10 * * *'   # 12:00 CET — stories
-    - cron: '0 12 * * *'   # 14:00 CET — stories (Retry)
     - cron: '0 16 * * *'   # 18:00 CET — carousel
     - cron: '0 18 * * *'   # 20:00 CET — carousel (Retry)
   workflow_dispatch:
