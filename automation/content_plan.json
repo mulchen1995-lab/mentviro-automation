@@ -10958,7 +10958,7 @@
     },
     {
       "topic": "5 Zeichen, dass du mental wächst",
-      "status": "pending",
+      "status": "published",
       "hook": "5 Zeichen, dass du mental wächst – oft unbemerkt.",
       "slides": [
         {
@@ -11055,7 +11055,10 @@
       "date": "2026-08-21",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18046007966803859",
+      "story_id": "18023225225855802",
+      "published_at": "2026-08-21T16:31:34Z"
     },
     {
       "topic": "Resilienz – Deine innere Stärke",
