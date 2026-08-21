@@ -10923,11 +10923,15 @@
       "content_pillar": "educational",
       "post_id": "18131253733650980",
       "story_id": "17977266419907881",
-      "published_at": "2026-08-20T16:34:05Z"
+      "published_at": "2026-08-20T16:34:05Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Komfortzone verlassen",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Du verlässt deine Komfortzone und merkst...",
       "script": [
         "POV: Du hast Angst, aber machst es trotzdem.",
@@ -10947,7 +10951,10 @@
       "date": "2026-08-21",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17986992072047719",
+      "story_id": "18389416282202562",
+      "published_at": "2026-08-21T05:33:33Z"
     },
     {
       "topic": "5 Zeichen, dass du mental wächst",
