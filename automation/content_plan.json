@@ -13281,7 +13281,7 @@
       "published_at": "2026-08-20T10:37:20Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban personal growth",
       "quote": {
         "text": "Life begins at the end of your comfort zone.",
@@ -13298,7 +13298,10 @@
       "day": 94,
       "date": "2026-08-21",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-21T10:35:50Z"
     },
     {
       "status": "pending",
