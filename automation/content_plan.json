@@ -11058,7 +11058,11 @@
       "content_pillar": "entertaining",
       "post_id": "18046007966803859",
       "story_id": "18023225225855802",
-      "published_at": "2026-08-21T16:31:34Z"
+      "published_at": "2026-08-21T16:31:34Z",
+      "insights": {
+        "likes": 6,
+        "comments": 4
+      }
     },
     {
       "topic": "Resilienz – Deine innere Stärke",
@@ -11087,7 +11091,7 @@
     },
     {
       "topic": "Die 3 Säulen der Resilienz",
-      "status": "pending",
+      "status": "published",
       "hook": "Die 3 Säulen, auf denen mentale Stärke ruht.",
       "slides": [
         {
@@ -11164,7 +11168,10 @@
       "date": "2026-08-22",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18070288124725902",
+      "story_id": "18450879109184630",
+      "published_at": "2026-08-22T16:22:13Z"
     },
     {
       "topic": "mentviro liest: Mindset",
@@ -11636,6 +11643,340 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Die Macht der Disziplin",
+      "status": "pending",
+      "hook": "Was ist der wahre Preis von mangelnder Disziplin?",
+      "script": [
+        "Der Erfolg ist nicht das Ergebnis von Glück, sondern von unerbittlicher Disziplin.",
+        "Jede kleine Entscheidung formt deine Gewohnheiten und damit dein Schicksal.",
+        "Meistere die Disziplin und du meisterst dein Leben."
+      ],
+      "caption": "Disziplin ist nicht das Gegenteil von Freiheit, sondern der Weg dorthin. Sie ermöglicht es dir, deine Ziele zu erreichen und dein volles Potenzial zu entfalten. Baue heute die Gewohnheiten, die du morgen ernten willst. 🌱 #mindset #entrepreneur #mentaltraining #businessmindset #mentviro #erfolgsmentalität #selbstständig #erfolgreich #zielsetzung #persönlicheentwicklung #produktivität #motivation #disziplin #wachstum #gewohnheiten",
+      "pexels_video_query": "dark cinematic discipline focus",
+      "story_text": [
+        "NEUES REEL",
+        "Deine Disziplin",
+        "Dein Erfolg",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Disziplin leicht gemacht?",
+      "day": 100,
+      "date": "2026-08-27",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Schritte zu eiserner Disziplin",
+      "status": "pending",
+      "hook": "Die meisten scheitern hier. Du nicht mehr.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 SCHRITTE ZU EISERNER DISZIPLIN"
+          ],
+          "body": [
+            "Entfessle deine innere Stärke. 💪"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SCHRITT #1",
+          "num": "1 / 3",
+          "title": [
+            "Kleine Schritte beginnen"
+          ],
+          "body": [
+            "Starte mit einer einzigen, einfachen Gewohnheit täglich."
+          ]
+        },
+        {
+          "badge": "SCHRITT #2",
+          "num": "2 / 3",
+          "title": [
+            "Den 'Warum' verstehen"
+          ],
+          "body": [
+            "Verbinde deine Disziplin mit einem tiefen, persönlichen Ziel."
+          ]
+        },
+        {
+          "badge": "SCHRITT #3",
+          "num": "3 / 3",
+          "title": [
+            "Rückschläge akzeptieren"
+          ],
+          "body": [
+            "Betrachte Fehler als Lernchance, nicht als Ende."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lebenspower"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Eiserne Disziplin ist keine angeborene Eigenschaft, sondern eine Fähigkeit, die du entwickeln kannst. Es geht darum, bewusste Entscheidungen zu treffen und diese konsequent umzusetzen, auch wenn es unbequem wird. Diese 3 Schritte helfen dir, deine Disziplin zu stärken und deine Ziele zu erreichen. ✨ #mindset #entrepreneur #mentaltraining #businessmindset #mentviro #erfolgsmentalität #selbstständig #erfolgreich #zielsetzung #persönlicheentwicklung #produktivität #motivation #disziplin #fokus #gewohnheiten",
+      "pexels_queries": [
+        "minimalist dark discipline",
+        "single focused person",
+        "path to success cinematic",
+        "strong will determination",
+        "resilience overcoming obstacles",
+        "growth journey abstract"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Eiserne Disziplin",
+        "So geht's",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Disziplin ist wichtig?",
+      "day": 100,
+      "date": "2026-08-27",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Dein Morgen, dein Tag",
+      "status": "pending",
+      "hook": "POV: Dein Morgen entscheidet, wie dein ganzer Tag läuft.",
+      "script": [
+        "Du wachst auf und scrollst sofort? Das ist dein Tag.",
+        "Du startest mit Klarheit und Action? Das ist auch dein Tag."
+      ],
+      "caption": "Der Start in den Tag setzt den Ton für alles, was kommt. Mach deinen Morgen zu deinem Verbündeten, nicht zu deinem Feind. Kleine Änderungen können Großes bewirken. ⚡️ #mindset #mentviro #produktivität #lifestyle #morgenroutine #erfolgreich #selbstständig #gewohnheiten #motivation #energie #fokus #wachstum #zielsetzung #persönlicheentwicklung #zeitmanagement",
+      "pexels_video_query": "energetic urban sunrise morning",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Morgen-Game",
+        "Check es aus",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Frühaufsteher Typ?",
+      "day": 101,
+      "date": "2026-08-28",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Gewohnheiten für eine Power-Morgenroutine",
+      "status": "pending",
+      "hook": "Du willst den Tag dominieren? So geht's.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "5 GEWOHNHEITEN"
+          ],
+          "body": [
+            "Für eine Power-Morgenroutine 🚀"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "GEWOHNHEIT #1",
+          "num": "1 / 5",
+          "title": [
+            "Kein Smartphone sofort"
+          ],
+          "body": [
+            "Gib deinem Geist 30 min Ruhe vor digitalen Inputs."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #2",
+          "num": "2 / 5",
+          "title": [
+            "Bewegung integrieren"
+          ],
+          "body": [
+            "Kurzes Workout oder Dehnen weckt Körper und Geist."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #3",
+          "num": "3 / 5",
+          "title": [
+            "Hydration ist Key"
+          ],
+          "body": [
+            "Trink ein großes Glas Wasser direkt nach dem Aufstehen."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #4",
+          "num": "4 / 5",
+          "title": [
+            "Deine Top 3 planen"
+          ],
+          "body": [
+            "Definiere die 3 wichtigsten Aufgaben für den Tag."
+          ]
+        },
+        {
+          "badge": "GEWOHNHEIT #5",
+          "num": "5 / 5",
+          "title": [
+            "Kurze Reflexion"
+          ],
+          "body": [
+            "5 Minuten für Dankbarkeit oder eine positive Affirmation."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Energie"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Deine Morgenroutine ist der Anker für einen produktiven und erfolgreichen Tag. Diese 5 einfachen Gewohnheiten helfen dir, mit Energie und Fokus in den Tag zu starten, statt dich treiben zu lassen. Probier es aus! ✨ #mindset #mentviro #produktivität #lifestyle #morgenroutine #erfolgreich #selbstständig #gewohnheiten #motivation #energie #fokus #wachstum #zielsetzung #persönlicheentwicklung #zeitmanagement",
+      "pexels_queries": [
+        "urban energetic morning routine",
+        "person working out sunrise",
+        "minimalist desk morning light",
+        "drinking water healthy start",
+        "planning day notebook",
+        "meditation urban rooftop"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Starte stark",
+        "Deine Morgenroutine",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Deine Morgenroutine top?",
+      "day": 101,
+      "date": "2026-08-28",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Der Kampf um deinen Fokus",
+      "status": "pending",
+      "hook": "Warum es so schwer ist, fokussiert zu bleiben.",
+      "script": [
+        "In unserer lauten Welt kämpfen unzählige Dinge um deine Aufmerksamkeit.",
+        "Doch wahrer Fortschritt entsteht, wenn du Ablenkungen bewusst ausschaltest.",
+        "Meistere deinen Fokus und du meisterst deine Ziele."
+      ],
+      "caption": "Fokus ist die Währung des 21. Jahrhunderts. Wer seinen Fokus kontrolliert, kontrolliert seine Ergebnisse. Lerne, die Störfaktoren zu identifizieren und zu eliminieren, um deine Ziele schneller zu erreichen. 🎯 #mindset #entrepreneur #mentaltraining #businessmindset #mentviro #erfolgsmentalität #selbstständig #erfolgreich #zielsetzung #persönlicheentwicklung #produktivität #motivation #fokus #ablenkung #wachstum",
+      "pexels_video_query": "dark cinematic focused concentration",
+      "story_text": [
+        "NEUES REEL",
+        "Fokus meistern",
+        "Deine Anleitung",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Ablenkungen dein Feind?",
+      "day": 102,
+      "date": "2026-08-29",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Wege, deinen Fokus zu schärfen",
+      "status": "pending",
+      "hook": "Ablenkungen ade: So bleibst du am Ball.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 WEGE, DEINEN FOKUS ZU SCHÄRFEN"
+          ],
+          "body": [
+            "Endlich volle Konzentration. 💡"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 3",
+          "title": [
+            "Time-Blocking nutzen"
+          ],
+          "body": [
+            "Plane feste Zeitblöcke für spezifische Aufgaben ein."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 3",
+          "title": [
+            "Digitale Stille schaffen"
+          ],
+          "body": [
+            "Schalte Benachrichtigungen aus, leg das Handy weg."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 3",
+          "title": [
+            "Eine Aufgabe nach der anderen"
+          ],
+          "body": [
+            "Multi-Tasking ist ein Mythos, fokussiere dich auf ein Ziel."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Effizienz"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "In einer Welt voller ständiger Reize ist Fokus eine Superkraft. Wer sie beherrscht, erzielt außergewöhnliche Ergebnisse. Mit diesen 3 bewährten Wegen kannst du deine Konzentration trainieren und deine Produktivität massiv steigern. 🔑 #mindset #entrepreneur #mentaltraining #businessmindset #mentviro #erfolgsmentalität #selbstständig #erfolgreich #zielsetzung #persönlicheentwicklung #produktivität #motivation #fokus #ablenkung #zeitmanagement",
+      "pexels_queries": [
+        "minimalist dark focus",
+        "person concentrating deep work",
+        "digital detox silence",
+        "single tasking productivity",
+        "laser focus determination",
+        "clear mind abstract"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Fokus-Booster",
+        "Deine Top-Tricks",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Bist du leicht abgelenkt?",
+      "day": 102,
+      "date": "2026-08-29",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -13408,6 +13749,66 @@
       "date": "2026-08-26",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic focus",
+      "quote": {
+        "text": "Disziplin ist die Brücke zwischen Zielen und deren Erfüllung.",
+        "author": "Jim Rohn"
+      },
+      "tips": {
+        "title": "Sofort mehr Fokus",
+        "items": [
+          "Eine Aufgabe festlegen",
+          "Alle Ablenkungen entfernen",
+          "5 Minuten starten"
+        ]
+      },
+      "day": 100,
+      "date": "2026-08-27",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban morning",
+      "quote": {
+        "text": "Der frühe Vogel fängt den Wurm.",
+        "author": "Deutsches Sprichwort"
+      },
+      "tips": {
+        "title": "Morgen-Kickstart",
+        "items": [
+          "Wecker weg vom Bett",
+          "Glas Wasser bereitstellen",
+          "Kurze Dehnübung machen"
+        ]
+      },
+      "day": 101,
+      "date": "2026-08-28",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic focus",
+      "quote": {
+        "text": "Konzentration ist der Schlüssel zum Erfolg. Ohne sie ist Erfolg unmöglich.",
+        "author": "Bruce Lee"
+      },
+      "tips": {
+        "title": "Fokus-Sofort-Tipps",
+        "items": [
+          "Stummschalt-Modus aktivieren",
+          "Eine Task wählen",
+          "Kopfhörer aufsetzen"
+        ]
+      },
+      "day": 102,
+      "date": "2026-08-29",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0,
