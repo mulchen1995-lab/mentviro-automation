@@ -11171,7 +11171,11 @@
       "content_pillar": "educational",
       "post_id": "18070288124725902",
       "story_id": "18450879109184630",
-      "published_at": "2026-08-22T16:22:13Z"
+      "published_at": "2026-08-22T16:22:13Z",
+      "insights": {
+        "likes": 4,
+        "comments": 2
+      }
     },
     {
       "topic": "mentviro liest: Mindset",
@@ -11273,12 +11277,15 @@
       "day": 96,
       "type": "carousel",
       "date": "2026-08-23",
-      "status": "pending",
+      "status": "published",
       "style": "silver",
       "content_pillar": "educational",
       "source": "book_series",
       "series": "book",
-      "book_episode": 5
+      "book_episode": 5,
+      "post_id": "18135124690722609",
+      "story_id": "18134265295628385",
+      "published_at": "2026-08-23T16:22:43Z"
     },
     {
       "topic": "Umfeld gestalten",
