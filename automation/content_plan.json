@@ -11285,7 +11285,11 @@
       "book_episode": 5,
       "post_id": "18135124690722609",
       "story_id": "18134265295628385",
-      "published_at": "2026-08-23T16:22:43Z"
+      "published_at": "2026-08-23T16:22:43Z",
+      "insights": {
+        "likes": 3,
+        "comments": 2
+      }
     },
     {
       "topic": "Umfeld gestalten",
@@ -11313,7 +11317,7 @@
     },
     {
       "topic": "5 Zeichen, dass dein Umfeld dich bremst (und was du tun kannst)",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Umfeld ist dein Spiegel – siehst du Wachstum oder Stillstand?",
       "slides": [
         {
@@ -11419,7 +11423,10 @@
       "date": "2026-08-24",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18212972278358024",
+      "story_id": "18385311763206595",
+      "published_at": "2026-08-24T16:35:24Z"
     },
     {
       "topic": "Entscheidungen treffen",
