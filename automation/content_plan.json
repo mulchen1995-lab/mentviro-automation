@@ -11426,7 +11426,11 @@
       "content_pillar": "entertaining",
       "post_id": "18212972278358024",
       "story_id": "18385311763206595",
-      "published_at": "2026-08-24T16:35:24Z"
+      "published_at": "2026-08-24T16:35:24Z",
+      "insights": {
+        "likes": 7,
+        "comments": 6
+      }
     },
     {
       "topic": "Entscheidungen treffen",
@@ -11455,7 +11459,7 @@
     },
     {
       "topic": "Die Kunst, bessere Entscheidungen zu treffen: 3 Strategien für Klarheit",
-      "status": "pending",
+      "status": "published",
       "hook": "Stehst du vor einer wichtigen Entscheidung? So findest du Klarheit.",
       "slides": [
         {
@@ -11541,7 +11545,10 @@
       "date": "2026-08-25",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18126507670689984",
+      "story_id": "18218069902339715",
+      "published_at": "2026-08-25T16:37:37Z"
     },
     {
       "topic": "Werte statt Zahlen",
@@ -11991,6 +11998,403 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "Überwindung des inneren Kritikers",
+      "status": "pending",
+      "hook": "Hörst du diese Stimme, die dich kleinredet?",
+      "script": [
+        "Jeder von uns kennt den inneren Kritiker, der uns insgeheim sabotiert.",
+        "Doch du hast die Macht, diese Stimme zu erkennen und sie nicht dein Potential bestimmen zu lassen.",
+        "Dein größter Fortschritt beginnt, wenn du lernst, dir selbst zu vertrauen. Folge @mentviro."
+      ],
+      "caption": "Der innere Kritiker ist oft die lauteste Stimme, die uns bremst. Er nährt sich von Zweifel und Angst vor dem Scheitern. Aber stell dir vor, du könntest diese Stimme leiser drehen und deine eigene Stärke entdecken. Es ist ein Prozess, sich von negativen Selbstgesprächen zu lösen, aber jeder kleine Schritt zählt auf dem Weg zu mehr Selbstvertrauen und innerer Freiheit. Fange an, deine Gedanken bewusst zu beobachten und sie sanft umzulenken. Deine mentale Stärke wächst mit jedem Mal, wenn du dich für dich selbst entscheidest. ❤️\n\n#mentviro #motivation #mentaltraining #successmindset #erfolgreich #zielsetzung #businessmindset #selbstständig #persönlichkeitsentwicklung #wachstum #mindset #disziplin #produktivität #fokus #lebensweisheiten",
+      "pexels_video_query": "emotional atmospheric slow motion sunrise forest",
+      "story_text": [
+        "NEUES REEL",
+        "Dein größter",
+        "Gegner bist du selbst.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Kämpfst du auch damit?",
+      "day": 103,
+      "date": "2026-08-30",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Strategien gegen den inneren Kritiker",
+      "status": "pending",
+      "hook": "Stoppe die Selbstsabotage: So besiegst du deinen inneren Kritiker.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Der innere Kritiker",
+            "Dein heimlicher Feind?"
+          ],
+          "body": [
+            "Entdecke, wie du die Stimme",
+            "des Zweifels überwindest",
+            "und dein wahres Potential lebst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SCHRITT #1",
+          "num": "1 / 4",
+          "title": [
+            "Erkenne die Quelle"
+          ],
+          "body": [
+            "Woher kommen diese",
+            "negativen Gedanken?",
+            "Oft aus alten Ängsten",
+            "oder Vergleichen."
+          ]
+        },
+        {
+          "badge": "SCHRITT #2",
+          "num": "2 / 4",
+          "title": [
+            "Hinterfrage die Wahrheit"
+          ],
+          "body": [
+            "Sind die Gedanken",
+            "wirklich wahr?",
+            "Oft sind sie nur",
+            "verzerrte Glaubenssätze."
+          ]
+        },
+        {
+          "badge": "SCHRITT #3",
+          "num": "3 / 4",
+          "title": [
+            "Ersetze destruktive Gedanken"
+          ],
+          "body": [
+            "Formuliere positive",
+            "und realistische",
+            "Gegenargumente.",
+            "Sei dein eigener Coach."
+          ]
+        },
+        {
+          "badge": "SCHRITT #4",
+          "num": "4 / 4",
+          "title": [
+            "Feiere kleine Erfolge"
+          ],
+          "body": [
+            "Jeder Schritt zählt.",
+            "Bestärke dich selbst",
+            "für jeden Sieg",
+            "über den Zweifel."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr mentale Stärke",
+            "& Selbstvertrauen"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Der innere Kritiker kann uns lähmen und uns daran hindern, unser volles Potenzial zu entfalten. Doch die gute Nachricht ist: Du bist nicht deine Gedanken. Du kannst lernen, diese innere Stimme zu erkennen, ihre Botschaften zu hinterfragen und sie durch stärkende Überzeugungen zu ersetzen. Es ist ein Akt der Selbstliebe und des Mutes, sich diesem internen Dialog zu stellen. Beginne heute damit, dir bewusst zu machen, welche Macht du über deine Gedanken hast. Dein Weg zu mehr Selbstachtung beginnt jetzt. 💪\n\n#mentviro #motivation #mentaltraining #successmindset #erfolgreich #zielsetzung #businessmindset #selbstständig #persönlichkeitsentwicklung #wachstum #mindset #disziplin #produktivität #fokus #lebensweisheiten",
+      "pexels_queries": [
+        "shadows light",
+        "inner turmoil",
+        "overcome fear",
+        "self belief",
+        "inner peace",
+        "self love"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deinen inneren Kritiker",
+        "endlich besiegen.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Ist er bei dir laut?",
+      "day": 103,
+      "date": "2026-08-30",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Wachstumsdenken (Growth Mindset)",
+      "status": "pending",
+      "hook": "Was wäre, wenn deine größte Herausforderung dein größter Lehrer ist?",
+      "script": [
+        "Wachstumsdenken ist die Überzeugung, dass du deine Fähigkeiten durch Hingabe und harte Arbeit entwickeln kannst.",
+        "Es verwandelt Rückschläge in Lernchancen und befeuert deine Resilienz.",
+        "Entwickle ein Growth Mindset und schalte dein volles Potenzial frei. Folge @mentviro."
+      ],
+      "caption": "Ein Wachstumsdenken (Growth Mindset) ist eine fundamentale Denkweise, die besagt, dass deine Talente und Fähigkeiten nicht fix sind, sondern durch Engagement, Lernen und harte Arbeit entwickelt werden können. Es ist der Schlüssel, um Herausforderungen nicht als Sackgassen, sondern als Möglichkeiten zur persönlichen Entwicklung zu sehen. Wer diese Denkweise verinnerlicht, ist offener für Feedback, resilienter bei Rückschlägen und dauerhaft motivierter, sich zu verbessern. 💡\n\n#mentviro #motivation #mentaltraining #successmindset #erfolgreich #zielsetzung #businessmindset #selbstständig #persönlichkeitsentwicklung #wachstum #mindset #disziplin #produktivität #fokus #lebensweisheiten",
+      "pexels_video_query": "dark minimal cinematic abstract lines",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Mindset",
+        "entscheidet über Erfolg.",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Hast du ein Growth Mindset?",
+      "day": 104,
+      "date": "2026-08-31",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Fixed Mindset vs. Growth Mindset",
+      "status": "pending",
+      "hook": "Dein Mindset: Dein größter Hebel oder deine größte Bremse?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Wachstumsdenken",
+            "Dein Schlüssel zum Erfolg."
+          ],
+          "body": [
+            "Entdecke den Unterschied",
+            "zwischen Fixed & Growth Mindset",
+            "und wie du es aktiv förderst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "FIXED MINDSET",
+          "num": "1 / 5",
+          "title": [
+            "Fähigkeiten sind fest"
+          ],
+          "body": [
+            "Glaube, dass Intelligenz",
+            "und Talente angeboren",
+            "und unveränderlich sind."
+          ]
+        },
+        {
+          "badge": "GROWTH MINDSET",
+          "num": "2 / 5",
+          "title": [
+            "Fähigkeiten entwickelbar"
+          ],
+          "body": [
+            "Überzeugung, dass man",
+            "Fähigkeiten durch",
+            "Einsatz verbessern kann."
+          ]
+        },
+        {
+          "badge": "FIXED MINDSET",
+          "num": "3 / 5",
+          "title": [
+            "Angst vor Herausforderungen"
+          ],
+          "body": [
+            "Vermeidet Neues, um",
+            "Fehler zu verhindern",
+            "und Kompetenz zu wahren."
+          ]
+        },
+        {
+          "badge": "GROWTH MINDSET",
+          "num": "4 / 5",
+          "title": [
+            "Liebt Herausforderungen"
+          ],
+          "body": [
+            "Sieht Chancen zum",
+            "Lernen und Wachsen",
+            "in neuen Aufgaben."
+          ]
+        },
+        {
+          "badge": "SCHRITT #5",
+          "num": "5 / 5",
+          "title": [
+            "So entwickelst du es"
+          ],
+          "body": [
+            "Sieh Fehler als Feedback.",
+            "Lerne kontinuierlich.",
+            "Konzentriere dich auf den Prozess."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Entwicklungstipps"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Der Unterschied zwischen einem Fixed Mindset und einem Growth Mindset kann über Erfolg und Misserfolg, Zufriedenheit und Frustration entscheiden. Ein Fixed Mindset limitiert dich, indem es dich glauben lässt, dass deine Fähigkeiten statisch sind. Ein Growth Mindset hingegen öffnet dir Türen, indem es dich ermutigt, an dein Potenzial zu glauben und dich stetig weiterzuentwickeln. Welches Mindset pflegst du? 🧠\n\n#mentviro #motivation #mentaltraining #successmindset #erfolgreich #zielsetzung #businessmindset #selbstständig #persönlichkeitsentwicklung #wachstum #mindset #disziplin #produktivität #fokus #lebensweisheiten",
+      "pexels_queries": [
+        "minimalist dark brain",
+        "fixed mindset",
+        "growth mindset concept",
+        "learning process",
+        "personal growth",
+        "mindset shift"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Dein Mindset: Bremse",
+        "oder Beschleuniger?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fixed oder Growth?",
+      "day": 104,
+      "date": "2026-08-31",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Der Multitasking-Mythos",
+      "status": "pending",
+      "hook": "POV: Du bist super im Multitasking und gleichzeitig produktiv. Oder?",
+      "script": [
+        "Die Wahrheit ist: Multitasking macht dich nicht effizienter, es macht dich langsamer und fehleranfälliger.",
+        "Dein Gehirn springt nur zwischen Aufgaben hin und her, statt sich voll zu konzentrieren. Folge @mentviro."
+      ],
+      "caption": "Wir wurden dazu erzogen zu glauben, Multitasking sei eine Superkraft. Aber die Wissenschaft zeigt: Unser Gehirn ist nicht dafür gemacht, mehrere komplexe Aufgaben gleichzeitig zu bearbeiten. Was wir als Multitasking wahrnehmen, ist in Wirklichkeit schnelles Aufgabenwechseln, das mentale Energie verbrennt und die Qualität unserer Arbeit mindert. Es ist Zeit, diesen Mythos zu entlarven und uns auf das Wesentliche zu konzentrieren! ⚡\n\n#mentviro #motivation #mentaltraining #successmindset #erfolgreich #zielsetzung #businessmindset #selbstständig #persönlichkeitsentwicklung #wachstum #mindset #disziplin #produktivität #fokus #lebensweisheiten",
+      "pexels_video_query": "energetic urban street neon lights",
+      "story_text": [
+        "NEUES REEL",
+        "Multitasking: Dein",
+        "Produktivitäts-Killer?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Glaubst du daran?",
+      "day": 105,
+      "date": "2026-09-01",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Multitasking: Mythos oder Superkraft?",
+      "status": "pending",
+      "hook": "Multitasking ist kein Skill, es ist ein Mythos.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Der Multitasking-Mythos",
+            "Deine Produktivität leidet!"
+          ],
+          "body": [
+            "Warum du beim gleichzeitigen",
+            "Erledigen mehrerer Dinge",
+            "weniger erreichst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DER MYTHOS",
+          "num": "1 / 4",
+          "title": [
+            "Effizienz-Booster?"
+          ],
+          "body": [
+            "Viele glauben, dass",
+            "sie so mehr schaffen.",
+            "Doch das Gegenteil",
+            "ist der Fall."
+          ]
+        },
+        {
+          "badge": "DIE REALITÄT",
+          "num": "2 / 4",
+          "title": [
+            "Kontextwechsel-Kosten"
+          ],
+          "body": [
+            "Dein Gehirn springt",
+            "zwischen Aufgaben hin",
+            "und her. Das kostet",
+            "Energie & Zeit."
+          ]
+        },
+        {
+          "badge": "DIE FOLGE",
+          "num": "3 / 4",
+          "title": [
+            "Qualität & Fehler"
+          ],
+          "body": [
+            "Konzentration sinkt.",
+            "Fehler häufen sich.",
+            "Ergebnisse sind",
+            "oft nur mittelmäßig."
+          ]
+        },
+        {
+          "badge": "DIE LÖSUNG",
+          "num": "4 / 4",
+          "title": [
+            "Fokus auf eine Aufgabe"
+          ],
+          "body": [
+            "Single-Tasking erhöht",
+            "Produktivität, Qualität",
+            "und reduziert Stress.",
+            "Probiere Deep Work."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Produktivität",
+            "& Mindset-Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Denkst du, du bist ein Meister im Multitasking? Die Wissenschaft hat schlechte Nachrichten für dich. Multitasking ist eine Illusion, die dich nur scheinbar produktiver macht. In Wahrheit kostet das ständige Umschalten zwischen Aufgaben enorme mentale Energie, führt zu mehr Fehlern und verlängert die Gesamtzeit, die du für Aufgaben benötigst. Es ist Zeit, diesen Mythos zu begraben und dich auf die Kraft des Single-Tasking zu besinnen. Deine Konzentration wird es dir danken! 😄\n\n#mentviro #motivation #mentaltraining #successmindset #erfolgreich #zielsetzung #businessmindset #selbstständig #persönlichkeitsentwicklung #wachstum #mindset #disziplin #produktivität #fokus #lebensweisheiten",
+      "pexels_queries": [
+        "busy chaotic city",
+        "digital overload",
+        "focus distraction",
+        "single tasking",
+        "mind at peace",
+        "productive energy"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Multitasking: Die",
+        "Wahrheit über den Mythos.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Bist du Multitasker?",
+      "day": 105,
+      "date": "2026-09-01",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "story_queue": [
@@ -13823,6 +14227,66 @@
       "date": "2026-08-29",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "emotional atmospheric slow motion sunrise forest",
+      "quote": {
+        "text": "„Was hinter uns liegt und was vor uns liegt, ist winzig im Vergleich zu dem, was in uns liegt.“",
+        "author": "Ralph Waldo Emerson"
+      },
+      "tips": {
+        "title": "Stärke dein Selbstvertrauen",
+        "items": [
+          "Fokus auf deine Stärken",
+          "Setze kleine, erreichbare Ziele",
+          "Umgib dich mit positiven Menschen"
+        ]
+      },
+      "day": 103,
+      "date": "2026-08-30",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "minimalist dark abstract light",
+      "quote": {
+        "text": "„Es gibt keine Misserfolge, nur Feedback.“",
+        "author": "Robert Allen"
+      },
+      "tips": {
+        "title": "Growth Mindset fördern",
+        "items": [
+          "Betrachte Fehler als Chance",
+          "Lerne ständig Neues",
+          "Lobe den Prozess, nicht nur Ergebnis"
+        ]
+      },
+      "day": 104,
+      "date": "2026-08-31",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban street neon lights",
+      "quote": {
+        "text": "„Ich fürchte nicht den Mann, der 10.000 Kicks geübt hat, sondern den, der einen Kick 10.000 Mal geübt hat.“",
+        "author": "Bruce Lee"
+      },
+      "tips": {
+        "title": "Produktivität steigern",
+        "items": [
+          "Eine Aufgabe nach der anderen",
+          "Deaktiviere Benachrichtigungen",
+          "Blocke feste Fokuszeiten"
+        ]
+      },
+      "day": 105,
+      "date": "2026-09-01",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "evergreen_cursor": 0,
