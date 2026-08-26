@@ -11548,7 +11548,11 @@
       "content_pillar": "educational",
       "post_id": "18126507670689984",
       "story_id": "18218069902339715",
-      "published_at": "2026-08-25T16:37:37Z"
+      "published_at": "2026-08-25T16:37:37Z",
+      "insights": {
+        "likes": 2,
+        "comments": 1
+      }
     },
     {
       "topic": "Werte statt Zahlen",
@@ -11577,7 +11581,7 @@
     },
     {
       "topic": "Der wahre Wert des Lebens: Warum Werte wichtiger sind als Zahlen",
-      "status": "pending",
+      "status": "published",
       "hook": "Jenseits von Kontoständen und Karrieretiteln – was gibt deinem Leben wahren Sinn?",
       "slides": [
         {
@@ -11663,7 +11667,10 @@
       "date": "2026-08-26",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "18403092154094186",
+      "story_id": "18620402284060263",
+      "published_at": "2026-08-26T16:47:32Z"
     },
     {
       "topic": "Die Macht der Disziplin",
