@@ -11670,7 +11670,11 @@
       "content_pillar": "emotional",
       "post_id": "18403092154094186",
       "story_id": "18620402284060263",
-      "published_at": "2026-08-26T16:47:32Z"
+      "published_at": "2026-08-26T16:47:32Z",
+      "insights": {
+        "likes": 9,
+        "comments": 6
+      }
     },
     {
       "topic": "Die Macht der Disziplin",
@@ -11802,7 +11806,7 @@
     },
     {
       "topic": "5 Gewohnheiten für eine Power-Morgenroutine",
-      "status": "pending",
+      "status": "published",
       "hook": "Du willst den Tag dominieren? So geht's.",
       "slides": [
         {
@@ -11899,7 +11903,10 @@
       "date": "2026-08-28",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18422970577195666",
+      "story_id": "18091013129540373",
+      "published_at": "2026-08-28T00:46:33Z"
     },
     {
       "topic": "Der Kampf um deinen Fokus",
@@ -12402,6 +12409,424 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Prokrastination überwinden",
+      "status": "pending",
+      "hook": "POV: Du sagst dir 'Morgen mach ich's wirklich!'",
+      "script": [
+        "POV: Du sagst dir 'Morgen mach ich's wirklich!'",
+        "Doch Erfolg kommt von 'Heute', nicht von 'Irgendwann'.",
+        "Folge @mentviro."
+      ],
+      "caption": "Morgen, morgen, nur nicht heute... 😂 Wer kennt's? Prokrastination ist der stille Saboteur unserer Träume. Aber das muss nicht sein! Ein kleiner Schritt heute ist besser als der perfekte Plan morgen. Worauf wartest du? Starten wir! 👇 #motivation #zielsetzung #erfolgsmentalität #businesstips #successmindset #mentviro #produktivität #gewohnheiten #mindset #persönlicheentwicklung #lifestyle #fokus #selbstdisziplin #wachstumsdenken #prokrastination",
+      "pexels_video_query": "energetic urban neon procrastination",
+      "story_text": [
+        "NEUES REEL",
+        "Morgen oder",
+        "Heute?",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Prokrastinierst du oft?",
+      "day": 106,
+      "date": "2026-09-02",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Zeichen, dass du Prokrastination liebst (und wie du sie beendest)",
+      "status": "pending",
+      "hook": "Kennst du das Gefühl? Morgen ist immer besser...",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "5 Zeichen, dass du",
+            "Prokrastination liebst",
+            "(und wie du sie beendest)"
+          ],
+          "body": [
+            "Warum wir das Aufschieben manchmal sogar genießen",
+            "und wie du diesen Kreislauf durchbrichst."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 7",
+          "title": [
+            "Die endlose To-Do-Liste"
+          ],
+          "body": [
+            "Du schreibst lieber neue Aufgaben auf,",
+            "anstatt alte zu erledigen. Perfektion?"
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 7",
+          "title": [
+            "Plötzliche Putzanfälle"
+          ],
+          "body": [
+            "Das Badezimmer muss jetzt glänzen,",
+            "obwohl die Deadline naht. Ablenkung."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 7",
+          "title": [
+            "Der 'Nur noch schnell'-Browser-Tab"
+          ],
+          "body": [
+            "Ein kurzer Blick online wird zur",
+            "Stunden-Session. Digitale Flucht."
+          ]
+        },
+        {
+          "badge": "WIE DU ES ÄNDERST",
+          "num": "4 / 7",
+          "title": [
+            "Die 5-Minuten-Regel"
+          ],
+          "body": [
+            "Starte jede Aufgabe für nur 5 Minuten.",
+            "Oftmals arbeitest du danach weiter."
+          ]
+        },
+        {
+          "badge": "WIE DU ES ÄNDERST",
+          "num": "5 / 7",
+          "title": [
+            "Aufgaben zerlegen"
+          ],
+          "body": [
+            "Große Aufgaben in Mini-Schritte teilen.",
+            "So wirken sie weniger überwältigend."
+          ]
+        },
+        {
+          "badge": "WIE DU ES ÄNDERST",
+          "num": "6 / 7",
+          "title": [
+            "Belohnungen einplanen"
+          ],
+          "body": [
+            "Nach jedem erledigten Schritt gönn dir",
+            "eine kleine, wohlverdiente Pause."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle Hacks"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Morgen, morgen, nur nicht heute, sagen alle faulen Leute... 😉 Aber mal ehrlich, Prokrastination ist mehr als nur Faulheit – es ist ein tief verwurzeltes Muster. Erkennst du dich in diesen Zeichen wieder? Dann ist es Zeit, den Kreislauf zu durchbrechen und aktiv zu werden! Welches Zeichen trifft am meisten auf dich zu? 👇 #motivation #zielsetzung #erfolgsmentalität #businesstips #successmindset #mentviro #produktivität #gewohnheiten #mindset #persönlicheentwicklung #lifestyle #fokus #selbstdisziplin #wachstumsdenken #prokrastination",
+      "pexels_queries": [
+        "colorful urban busy",
+        "person distracted phone",
+        "clean desk organized",
+        "running against clock",
+        "small step forward",
+        "breaking chain",
+        "celebrating success",
+        "energetic city life"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Tipps gegen",
+        "Aufschieberitis",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Kennst du das Problem?",
+      "day": 106,
+      "date": "2026-09-02",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Komfortzone verlassen",
+      "status": "pending",
+      "hook": "Es gab einen Tag, an dem die Angst vor dem Unbekannten mich fast gelähmt hätte.",
+      "script": [
+        "Es gab einen Tag, an dem die Angst vor dem Unbekannten mich fast gelähmt hätte.",
+        "Doch der Sprung ins kalte Wasser war der einzige Weg, mein wahres Potenzial zu finden.",
+        "Wachstum beginnt immer dort, wo die Komfortzone endet.",
+        "Folge @mentviro."
+      ],
+      "caption": "Jeder kennt diesen Moment: Der sichere Hafen der Gewohnheit lockt, aber tief im Inneren spürst du den Ruf des Unbekannten. Der erste Schritt aus der Komfortzone ist der schwerste, doch er ist der Startpunkt jeder wahren Veränderung. ❤️ Was war dein mutigster Schritt bisher? #motivation #zielsetzung #erfolgsmentalität #successmindset #mentviro #persönlicheentwicklung #mindset #wachstumsdenken #resilienz #selbstreflexion #mut #komfortzone #lebensphilosophie #innerestärke #veränderung",
+      "pexels_video_query": "warm natural sunrise forest ocean",
+      "story_text": [
+        "NEUES REEL",
+        "Verlasse deine",
+        "Komfortzone",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Mut oder Angst?",
+      "day": 107,
+      "date": "2026-09-03",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Niemand redet darüber: Die Angst vor dem nächsten Schritt",
+      "status": "pending",
+      "hook": "Das Unbekannte ist beängstigend. Aber es ist auch der Weg zum Wachstum.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Niemand redet darüber:",
+            "Die Angst vor dem",
+            "nächsten Schritt"
+          ],
+          "body": [
+            "Die innere Barriere, die dich zurückhält",
+            "und wie du sie emotional überwindest."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "DIE LEISE ANGST",
+          "num": "1 / 7",
+          "title": [
+            "Angst vor dem Scheitern"
+          ],
+          "body": [
+            "Was, wenn es nicht klappt?",
+            "Der Gedanke lähmt uns oft."
+          ]
+        },
+        {
+          "badge": "DIE LEISE ANGST",
+          "num": "2 / 7",
+          "title": [
+            "Angst vor dem Erfolg"
+          ],
+          "body": [
+            "Was, wenn es klappt?",
+            "Verantwortung und Erwartungen wachsen."
+          ]
+        },
+        {
+          "badge": "DIE LEISE ANGST",
+          "num": "3 / 7",
+          "title": [
+            "Nostalgie für das Gewohnte"
+          ],
+          "body": [
+            "Das Bekannte gibt Sicherheit,",
+            "auch wenn es uns nicht erfüllt."
+          ]
+        },
+        {
+          "badge": "WIE DU SIE UMWANDELST",
+          "num": "4 / 7",
+          "title": [
+            "Fehler als Lehrer sehen"
+          ],
+          "body": [
+            "Jeder Fehltritt ist eine Lektion.",
+            "Wachstum kommt aus der Erfahrung."
+          ]
+        },
+        {
+          "badge": "WIE DU SIE UMWANDELST",
+          "num": "5 / 7",
+          "title": [
+            "Deinen 'Warum'-Antrieb finden"
+          ],
+          "body": [
+            "Erinnere dich an dein tiefes Motiv.",
+            "Es gibt dir die nötige Kraft."
+          ]
+        },
+        {
+          "badge": "WIE DU SIE UMWANDELST",
+          "num": "6 / 7",
+          "title": [
+            "Den Mut in dir entdecken"
+          ],
+          "body": [
+            "Du bist stärker, als du denkst.",
+            "Vertraue auf deine innere Stärke."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Motivation"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Es ist die leise Stimme in uns, die uns oft zurückhält. Die Angst vor dem Unbekannten, vor dem Scheitern, sogar vor dem Erfolg. Aber wahres Wachstum beginnt erst, wenn wir bereit sind, diese Ängste anzuerkennen und den nächsten Schritt zu wagen. Du hast die Kraft in dir. ✨ Welcher Gedanke hält dich am meisten zurück? #motivation #zielsetzung #erfolgsmentalität #successmindset #mentviro #persönlicheentwicklung #mindset #wachstumsdenken #resilienz #selbstreflexion #mut #komfortzone #lebensphilosophie #innerestärke #veränderung",
+      "pexels_queries": [
+        "moody sunrise forest",
+        "person looking vast landscape",
+        "fear dark path",
+        "reflection on water",
+        "sun breaking through clouds",
+        "first step path",
+        "strong person silhouette",
+        "warm nature light"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Traust du dich",
+        "den nächsten Schritt?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Angst vs. Mut?",
+      "day": 107,
+      "date": "2026-09-03",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Deep Work für maximalen Fokus",
+      "status": "pending",
+      "hook": "Wusstest du, dass die meisten Menschen nie wirklich tief arbeiten?",
+      "script": [
+        "Wusstest du, dass die meisten Menschen nie wirklich tief arbeiten?",
+        "Deep Work ist die Fähigkeit, sich ohne Ablenkung auf eine anspruchsvolle Aufgabe zu konzentrieren.",
+        "So erreichst du maximale Produktivität und meisterst komplexe Fähigkeiten schneller.",
+        "Folge @mentviro."
+      ],
+      "caption": "In einer Welt voller Ablenkungen ist die Fähigkeit zu Deep Work deine größte Superkraft. Es geht nicht nur darum, länger zu arbeiten, sondern smarter und fokussierter. Lerne, wie du deine Konzentration schärfst und wirklich wertvolle Ergebnisse erzielst. 💡 Bist du bereit für Deep Work? #motivation #zielsetzung #businessmindset #entrepreneur #erfolgsmentalität #businesstips #successmindset #mentviro #produktivität #fokus #deepwork #zeitmanagement #lernerfolgreich #mindset #gewohnheiten",
+      "pexels_video_query": "dark minimal cinematic focus desk",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Weg zu",
+        "Deep Work",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Arbeitest du fokussiert?",
+      "day": 108,
+      "date": "2026-09-04",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Die Kunst des Deep Work: 3 Strategien für ungestörten Fokus",
+      "status": "pending",
+      "hook": "Im Zeitalter der Ablenkung ist Fokus deine Superkraft.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die Kunst des Deep Work:",
+            "3 Strategien für",
+            "ungestörten Fokus"
+          ],
+          "body": [
+            "Meistere die Fähigkeit, dich ohne Ablenkung",
+            "auf das Wesentliche zu konzentrieren."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "STRATEGIE #1",
+          "num": "1 / 5",
+          "title": [
+            "Feste Deep Work Blöcke"
+          ],
+          "body": [
+            "Plane 60-90 Minuten ungestörter Zeit ein.",
+            "Ohne Meetings, E-Mails oder Social Media."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #2",
+          "num": "2 / 5",
+          "title": [
+            "Digitale Ablenkung eliminieren"
+          ],
+          "body": [
+            "Schalte alle Benachrichtigungen aus.",
+            "Lege das Handy außer Reichweite."
+          ]
+        },
+        {
+          "badge": "STRATEGIE #3",
+          "num": "3 / 5",
+          "title": [
+            "Eine Aufgabe zur Zeit"
+          ],
+          "body": [
+            "Fokus auf eine einzige, wichtige Aufgabe.",
+            "Multitasking ist ein Produktivitätskiller."
+          ]
+        },
+        {
+          "badge": "DEIN ERGEBNIS",
+          "num": "4 / 5",
+          "title": [
+            "Mehr Qualität & Wirkung"
+          ],
+          "body": [
+            "Durch Deep Work erzeugst du bessere",
+            "Ergebnisse in kürzerer Zeit."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Produktivität"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "In unserer hypervernetzten Welt ist echte Konzentration ein rares Gut. Deep Work ist kein Luxus, sondern eine Notwendigkeit, um komplexe Aufgaben zu meistern und deine Fähigkeiten zu maximieren. Lerne, wie du Ablenkungen aussperrst und deine volle mentale Leistung entfaltest. 🧠 Welche Strategie probierst du zuerst aus? #motivation #zielsetzung #businessmindset #entrepreneur #erfolgsmentalität #businesstips #successmindset #mentviro #produktivität #fokus #deepwork #zeitmanagement #lernerfolgreich #mindset #gewohnheiten",
+      "pexels_queries": [
+        "dark minimalist desk",
+        "focused person working",
+        "silent library",
+        "clean workspace",
+        "no distractions",
+        "single task focus",
+        "lightbulb idea",
+        "dark cinematic focus"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Fokus lernen",
+        "mit Deep Work",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Deep Work wichtig?",
+      "day": 108,
+      "date": "2026-09-04",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "story_queue": [
@@ -14294,6 +14719,53 @@
       "date": "2026-09-01",
       "style": "silver",
       "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban",
+      "quote": {
+        "text": "Wir leiden oft mehr in der Vorstellung als in der Realität.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Starten statt Zögern",
+        "items": [
+          "Starte mit nur 5 Minuten.",
+          "Teile große Aufgaben in Mini-Schritte.",
+          "Belohne dich sofort nach dem Start."
+        ]
+      },
+      "day": 106,
+      "date": "2026-09-02",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "day": 107,
+      "date": "2026-09-03",
+      "status": "pending",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic",
+      "quote": {
+        "text": "Um wertvolle Dinge zu produzieren, musst du tief arbeiten.",
+        "author": "Cal Newport"
+      },
+      "tips": {
+        "title": "Fokus-Booster",
+        "items": [
+          "Schaffe feste Blöcke für tiefe Arbeit.",
+          "Schalte alle Benachrichtigungen ab.",
+          "Konzentriere dich auf eine Aufgabe."
+        ]
+      },
+      "day": 108,
+      "date": "2026-09-04",
+      "style": "silver",
+      "content_pillar": "educational"
     }
   ],
   "evergreen_cursor": 0,
