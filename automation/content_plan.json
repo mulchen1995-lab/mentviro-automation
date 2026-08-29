@@ -38,7 +38,7 @@
     },
     "posting_stats": {
       "reel": 11,
-      "carousel": 14
+      "carousel": 0
     }
   },
   "posts": [
@@ -11906,7 +11906,11 @@
       "content_pillar": "entertaining",
       "post_id": "18422970577195666",
       "story_id": "18091013129540373",
-      "published_at": "2026-08-28T00:46:33Z"
+      "published_at": "2026-08-28T00:46:33Z",
+      "insights": {
+        "likes": 6,
+        "comments": 6
+      }
     },
     {
       "topic": "Der Kampf um deinen Fokus",
@@ -11934,7 +11938,7 @@
     },
     {
       "topic": "3 Wege, deinen Fokus zu schärfen",
-      "status": "pending",
+      "status": "published",
       "hook": "Ablenkungen ade: So bleibst du am Ball.",
       "slides": [
         {
@@ -12011,7 +12015,10 @@
       "date": "2026-08-29",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18141198073608331",
+      "story_id": "18132015115562036",
+      "published_at": "2026-08-29T00:24:45Z"
     },
     {
       "topic": "Überwindung des inneren Kritikers",
