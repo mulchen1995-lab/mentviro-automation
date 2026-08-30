@@ -12018,7 +12018,11 @@
       "content_pillar": "educational",
       "post_id": "18141198073608331",
       "story_id": "18132015115562036",
-      "published_at": "2026-08-29T00:24:45Z"
+      "published_at": "2026-08-29T00:24:45Z",
+      "insights": {
+        "likes": 7,
+        "comments": 8
+      }
     },
     {
       "topic": "Überwindung des inneren Kritikers",
@@ -12046,7 +12050,7 @@
     },
     {
       "topic": "Strategien gegen den inneren Kritiker",
-      "status": "pending",
+      "status": "published",
       "hook": "Stoppe die Selbstsabotage: So besiegst du deinen inneren Kritiker.",
       "slides": [
         {
@@ -12148,7 +12152,10 @@
       "date": "2026-08-30",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17943912918069003",
+      "story_id": "18112727588054783",
+      "published_at": "2026-08-30T16:33:42Z"
     },
     {
       "topic": "Wachstumsdenken (Growth Mindset)",
