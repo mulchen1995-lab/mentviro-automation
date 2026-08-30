@@ -7,6 +7,10 @@ name: mentviro Cloud Poster (primär)
 
 on:
   schedule:
+    - cron: '0 5 * * *'    # 07:00 CET — reel
+    - cron: '0 7 * * *'    # 09:00 CET — reel (Retry)
+    - cron: '0 10 * * *'   # 12:00 CET — stories
+    - cron: '0 12 * * *'   # 14:00 CET — stories (Retry)
     - cron: '0 16 * * *'   # 18:00 CET — carousel
     - cron: '0 18 * * *'   # 20:00 CET — carousel (Retry)
   workflow_dispatch:
@@ -121,6 +125,7 @@ jobs:
           MENTVIRO_LOGO_URL:           ${{ secrets.MENTVIRO_LOGO_URL }}
           GEMINI_API_KEY:              ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY:              ${{ secrets.PEXELS_API_KEY }}
+          ELEVENLABS_API_KEY:          ${{ secrets.ELEVENLABS_API_KEY }}
           TELEGRAM_BOT_TOKEN:          ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:            ${{ secrets.TELEGRAM_CHAT_ID }}
           BACKGROUND_MUSIC_URL:        ${{ secrets.BACKGROUND_MUSIC_URL }}
