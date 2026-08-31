@@ -12155,7 +12155,11 @@
       "content_pillar": "emotional",
       "post_id": "17943912918069003",
       "story_id": "18112727588054783",
-      "published_at": "2026-08-30T16:33:42Z"
+      "published_at": "2026-08-30T16:33:42Z",
+      "insights": {
+        "likes": 1,
+        "comments": 0
+      }
     },
     {
       "topic": "Wachstumsdenken (Growth Mindset)",
@@ -12841,6 +12845,340 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "topic": "Entscheidungen treffen",
+      "status": "pending",
+      "hook": "Dein Gehirn spielt dir Streiche bei Entscheidungen.",
+      "script": [
+        "Oft sabotieren wir uns selbst, indem wir Impulsen folgen statt Fakten.",
+        "Echte Klarheit kommt, wenn du deine Emotionen von der Logik trennst.",
+        "Lerne, bewusste Entscheidungen zu treffen und deinen Weg zu bestimmen.",
+        "Folge @mentviro."
+      ],
+      "caption": "Klare Entscheidungen sind der Schlüssel zu einem selbstbestimmten Leben. Dein Gehirn ist komplex, aber mit bewussten Strategien kannst du die Oberhand gewinnen. Es geht darum, Fakten zu sehen, Emotionen zu verstehen und dann erst zu handeln. So gestaltest du deinen Erfolg aktiv. 💪 #motivation #mindset #erfolgsmentalität #unternehmertum #selbstständig #erfolgreich #wohlstand #entrepreneur #wealthbuilding #moneyminds #finanziellefreiheit #vermögensaufbau #finanzbildung #investieren #reichtum #mentviro",
+      "pexels_video_query": "abstract thought process cinematic dark",
+      "story_text": [
+        "NEUES REEL",
+        "Wichtige Entscheidungen",
+        "Nicht dem Zufall überlassen",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Bist du ein Bauchentscheider?",
+      "day": 109,
+      "date": "2026-09-05",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Schritte zu klaren Entscheidungen",
+      "status": "pending",
+      "hook": "Niemand spricht darüber: Die Kunst der klaren Entscheidung.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Die Kunst der klaren Entscheidung"
+          ],
+          "body": [
+            "Überliste dein Gehirn für bessere Ergebnisse"
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "SCHRITT #1",
+          "num": "1 / 4",
+          "title": [
+            "Daten sammeln, nicht spekulieren"
+          ],
+          "body": [
+            "Basis für jede Entscheidung sind Fakten, nicht nur Bauchgefühl."
+          ]
+        },
+        {
+          "badge": "SCHRITT #2",
+          "num": "2 / 4",
+          "title": [
+            "Pro & Contra bewusst wägen"
+          ],
+          "body": [
+            "Schreibe die Konsequenzen jeder Option klar auf – kurz & lang."
+          ]
+        },
+        {
+          "badge": "SCHRITT #3",
+          "num": "3 / 4",
+          "title": [
+            "Emotionen analysieren, nicht ignorieren"
+          ],
+          "body": [
+            "Verstehe, welche Gefühle deine Wahl beeinflussen. Sie sind Indikatoren, keine Diktatoren."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Erfolg"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich neue Impulse."
+          ]
+        }
+      ],
+      "caption": "Entscheidungen sind der Dreh- und Angelpunkt deines Erfolgs. Lerne, wie du dein Denken strukturierst, um Klarheit zu gewinnen und die besten Wege für dich zu wählen. Es ist eine Fähigkeit, die du meistern kannst. 💡 #motivation #mindset #erfolgsmentalität #unternehmertum #selbstständig #erfolgreich #wohlstand #entrepreneur #wealthbuilding #moneyminds #finanziellefreiheit #vermögensaufbau #finanzbildung #investieren #reichtum #mentviro",
+      "pexels_queries": [
+        "minimalist decision making dark",
+        "abstract data analysis dark",
+        "structured thinking process",
+        "brainstorming ideas dark",
+        "clear pathway forest",
+        "focused person thinking"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Nie wieder zögern?",
+        "Entscheidungen meistern",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fällt dir Entscheidungsfindung schwer?",
+      "day": 109,
+      "date": "2026-09-05",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Nein sagen",
+      "status": "pending",
+      "hook": "POV: Du willst mal 'Nein' sagen, aber...",
+      "script": [
+        "Du weißt, du solltest 'Nein' sagen, aber sagst doch 'Ja' – und bereust es sofort.",
+        "Dein größter Hebel für Produktivität ist es, deine Grenzen zu kennen und zu verteidigen.",
+        "Folge @mentviro."
+      ],
+      "caption": "Die Kunst des 'Nein'-Sagens ist eine Superkraft! Sie schützt deine Zeit, deine Energie und deine Ziele. Sei mutig, setze klare Grenzen und beobachte, wie deine Produktivität explodiert. 🚀 Dein 'Ja' wird dadurch noch wertvoller. #motivation #mindset #erfolgsmentalität #unternehmertum #selbstständig #erfolgreich #wohlstand #entrepreneur #wealthbuilding #moneyminds #finanziellefreiheit #vermögensaufbau #finanzbildung #geldanlage #investieren #mentviro",
+      "pexels_video_query": "person struggling decision neon urban",
+      "story_text": [
+        "NEUES REEL",
+        "Grenzen setzen leicht gemacht?",
+        "Produktivität kickstarten",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Sagst du oft 'Ja', obwohl du 'Nein' meinst?",
+      "day": 110,
+      "date": "2026-09-06",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "5 Wege, elegant 'Nein' zu sagen",
+      "status": "pending",
+      "hook": "Dein 'Ja' ist wertvoll. Lerne, dein 'Nein' zu schützen.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Dein 'Nein' ist dein Superheld"
+          ],
+          "body": [
+            "5 Wege, elegant 'Nein' zu sagen"
+          ]
+        },
+        {
+          "badge": "WEG #1",
+          "num": "1 / 5",
+          "title": [
+            "Die 'Ich-muss-nachdenken'-Pause"
+          ],
+          "body": [
+            "Nimm dir Zeit, bevor du eine Zusage gibst."
+          ]
+        },
+        {
+          "badge": "WEG #2",
+          "num": "2 / 5",
+          "title": [
+            "Das 'Es-passt-gerade-nicht'-Frame"
+          ],
+          "body": [
+            "Sei ehrlich, dass deine Kapazität begrenzt ist."
+          ]
+        },
+        {
+          "badge": "WEG #3",
+          "num": "3 / 5",
+          "title": [
+            "Der 'Alternativ-Vorschlag'-Twist"
+          ],
+          "body": [
+            "Biete eine andere Lösung oder Person an."
+          ]
+        },
+        {
+          "badge": "WEG #4",
+          "num": "4 / 5",
+          "title": [
+            "Das 'Danke-aber-nein'-Direkt"
+          ],
+          "body": [
+            "Direkt, aber höflich. Keine lange Rechtfertigung nötig."
+          ]
+        },
+        {
+          "badge": "WEG #5",
+          "num": "5 / 5",
+          "title": [
+            "Die 'Prioritäten'-Erklärung"
+          ],
+          "body": [
+            "Erkläre kurz, dass andere Dinge Vorrang haben."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Lifestyle"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für tägliche Hacks."
+          ]
+        }
+      ],
+      "caption": "Grenzen zu setzen ist keine Schwäche, sondern eine Stärke. Wenn du lernst, 'Nein' zu sagen, schützt du nicht nur deine Energie, sondern auch deine wertvollste Ressource: Zeit. Meistere diese Kunst und gestalte dein Leben aktiv! ✨ #motivation #mindset #erfolgsmentalität #unternehmertum #selbstständig #erfolgreich #wohlstand #entrepreneur #wealthbuilding #moneyminds #finanziellefreiheit #vermögensaufbau #finanzbildung #geldanlage #investieren #mentviro",
+      "pexels_queries": [
+        "person setting boundaries urban",
+        "energetic focus neon",
+        "time management graphic",
+        "personal boundaries illustration",
+        "saying no concept",
+        "confident woman urban"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Nie wieder überrannt werden?",
+        "'Nein' sagen lernen",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Fällt es dir leicht, 'Nein' zu sagen?",
+      "day": 110,
+      "date": "2026-09-06",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "Scheitern & Lernen",
+      "status": "pending",
+      "hook": "Jeder Erfolg hat eine Geschichte des Scheiterns.",
+      "script": [
+        "Wir alle erleben Rückschläge, doch wahre Stärke zeigt sich nicht im Vermeiden, sondern im Aufstehen.",
+        "Jedes Scheitern ist nur eine Lektion, die dich deinem wahren Potenzial näherbringt.",
+        "Folge @mentviro."
+      ],
+      "caption": "Scheitern ist kein Endpunkt, sondern ein Sprungbrett. Es ist der Lehrer, der uns die wertvollsten Lektionen beibringt. Umarme deine Rückschläge, lerne aus ihnen und nutze sie als Treibstoff für deinen Weg nach vorn. Deine Geschichte des Aufstehens inspiriert. ❤️ #motivation #mindset #erfolgsmentalität #unternehmertum #selbstständig #erfolgreich #wohlstand #entrepreneur #wealthbuilding #moneyminds #finanziellefreiheit #vermögensaufbau #finanzbildung #richwerden #reichtum #mentviro",
+      "pexels_video_query": "sunrise over mountains cinematic warm",
+      "story_text": [
+        "NEUES REEL",
+        "Wann Scheitern zum Erfolg wird",
+        "Lektionen fürs Leben",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Siehst du Scheitern als Chance?",
+      "day": 111,
+      "date": "2026-09-07",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Das Geschenk des Scheiterns: 3 Perspektiven",
+      "status": "pending",
+      "hook": "Niemand redet darüber: Der wahre Wert deiner größten Rückschläge.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Das Geschenk des Scheiterns"
+          ],
+          "body": [
+            "Warum deine größten Rückschläge dein größtes Potenzial bergen."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #1",
+          "num": "1 / 4",
+          "title": [
+            "Klarheit durch Verlust"
+          ],
+          "body": [
+            "Was wirklich zählt, wird oft erst im Scheitern sichtbar."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #2",
+          "num": "2 / 4",
+          "title": [
+            "Wachstum durch Widerstand"
+          ],
+          "body": [
+            "Deine Resilienz wächst nur an Herausforderungen, nie am einfachen Weg."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #3",
+          "num": "3 / 4",
+          "title": [
+            "Neuanfang mit Weisheit"
+          ],
+          "body": [
+            "Jedes Ende ist die Chance, mit neuen Erkenntnissen zu starten."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Transformation"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für deine emotionale Reise."
+          ]
+        }
+      ],
+      "caption": "Jede Narbe erzählt eine Geschichte von Stärke. Scheitern ist nicht das Gegenteil von Erfolg, es ist ein Teil davon. Lass dich von Rückschlägen nicht entmutigen, sondern lerne, dich neu zu definieren und noch stärker aus ihnen hervorzugehen. 🌱 Dein Weg ist einzigartig. #motivation #mindset #erfolgsmentalität #unternehmertum #selbstständig #erfolgreich #wohlstand #entrepreneur #wealthbuilding #moneyminds #finanziellefreiheit #vermögensaufbau #finanzbildung #richwerden #reichtum #mentviro",
+      "pexels_queries": [
+        "stormy ocean clearing warm",
+        "person overcoming challenge cinematic",
+        "forest path sunrise",
+        "resilience growth concept",
+        "phoenix rising emotional",
+        "new beginning warm light"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Rückschläge meistern",
+        "Deine größte Stärke",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Hast du aus Rückschlägen gelernt?",
+      "day": 111,
+      "date": "2026-09-07",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "story_queue": [
@@ -14695,7 +15033,7 @@
       "content_pillar": "emotional"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "minimalist dark abstract light",
       "quote": {
         "text": "„Es gibt keine Misserfolge, nur Feedback.“",
@@ -14712,7 +15050,10 @@
       "day": 104,
       "date": "2026-08-31",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-08-31T11:17:30Z"
     },
     {
       "status": "pending",
@@ -14780,6 +15121,66 @@
       "date": "2026-09-04",
       "style": "silver",
       "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "dark minimal cinematic pexels query",
+      "quote": {
+        "text": "Manche Dinge liegen in unserer Macht, andere nicht.",
+        "author": "Epiktet"
+      },
+      "tips": {
+        "title": "3 Schritte zur Klarheit",
+        "items": [
+          "Optionen objektiv prüfen",
+          "Langfristige Folgen abwägen",
+          "Auf innere Werte hören"
+        ]
+      },
+      "day": 109,
+      "date": "2026-09-05",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "energetic urban pexels query",
+      "quote": {
+        "text": "Deine Zeit ist begrenzt, also verschwende sie nicht damit, das Leben eines anderen zu leben.",
+        "author": "Steve Jobs"
+      },
+      "tips": {
+        "title": "3 Tipps für mehr 'Nein'",
+        "items": [
+          "Prioritäten klar definieren",
+          "Ohne Schuldgefühle ablehnen",
+          "Dein 'Nein' selbstbewusst äußern"
+        ]
+      },
+      "day": 110,
+      "date": "2026-09-06",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "status": "pending",
+      "topic": "warm natural atmospheric pexels query",
+      "quote": {
+        "text": "Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "3 Wege, um zu lernen",
+        "items": [
+          "Fehler bewusst analysieren",
+          "Neue Strategien entwickeln",
+          "Stärker denn je starten"
+        ]
+      },
+      "day": 111,
+      "date": "2026-09-07",
+      "style": "silver",
+      "content_pillar": "emotional"
     }
   ],
   "evergreen_cursor": 0,
