@@ -12187,7 +12187,7 @@
     },
     {
       "topic": "Fixed Mindset vs. Growth Mindset",
-      "status": "pending",
+      "status": "published",
       "hook": "Dein Mindset: Dein größter Hebel oder deine größte Bremse?",
       "slides": [
         {
@@ -12297,7 +12297,10 @@
       "date": "2026-08-31",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "18085897289672674",
+      "story_id": "18113224099793298",
+      "published_at": "2026-08-31T17:23:53Z"
     },
     {
       "topic": "Der Multitasking-Mythos",
