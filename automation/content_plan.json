@@ -12338,7 +12338,7 @@
     },
     {
       "topic": "Multitasking: Mythos oder Superkraft?",
-      "status": "pending",
+      "status": "published",
       "hook": "Multitasking ist kein Skill, es ist ein Mythos.",
       "slides": [
         {
@@ -12440,7 +12440,10 @@
       "date": "2026-09-01",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18106502324232319",
+      "story_id": "18332450551275158",
+      "published_at": "2026-09-01T16:29:28Z"
     },
     {
       "topic": "Prokrastination überwinden",
