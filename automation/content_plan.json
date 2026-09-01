@@ -12300,11 +12300,15 @@
       "content_pillar": "educational",
       "post_id": "18085897289672674",
       "story_id": "18113224099793298",
-      "published_at": "2026-08-31T17:23:53Z"
+      "published_at": "2026-08-31T17:23:53Z",
+      "insights": {
+        "likes": 6,
+        "comments": 7
+      }
     },
     {
       "topic": "Der Multitasking-Mythos",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Du bist super im Multitasking und gleichzeitig produktiv. Oder?",
       "script": [
         "Die Wahrheit ist: Multitasking macht dich nicht effizienter, es macht dich langsamer und fehleranfälliger.",
@@ -12323,7 +12327,10 @@
       "date": "2026-09-01",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "18073804604412547",
+      "story_id": "17971297424940420",
+      "published_at": "2026-09-01T09:43:03Z"
     },
     {
       "topic": "Multitasking: Mythos oder Superkraft?",
