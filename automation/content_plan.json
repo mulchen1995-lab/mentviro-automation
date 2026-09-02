@@ -12443,11 +12443,15 @@
       "content_pillar": "entertaining",
       "post_id": "18106502324232319",
       "story_id": "18332450551275158",
-      "published_at": "2026-09-01T16:29:28Z"
+      "published_at": "2026-09-01T16:29:28Z",
+      "insights": {
+        "likes": 4,
+        "comments": 8
+      }
     },
     {
       "topic": "Prokrastination überwinden",
-      "status": "pending",
+      "status": "published",
       "hook": "POV: Du sagst dir 'Morgen mach ich's wirklich!'",
       "script": [
         "POV: Du sagst dir 'Morgen mach ich's wirklich!'",
@@ -12467,7 +12471,10 @@
       "date": "2026-09-02",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17895668334656423",
+      "story_id": "18238247110314275",
+      "published_at": "2026-09-02T09:14:51Z"
     },
     {
       "topic": "5 Zeichen, dass du Prokrastination liebst (und wie du sie beendest)",
