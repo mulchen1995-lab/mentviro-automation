@@ -12482,7 +12482,7 @@
     },
     {
       "topic": "5 Zeichen, dass du Prokrastination liebst (und wie du sie beendest)",
-      "status": "pending",
+      "status": "published",
       "hook": "Kennst du das Gefühl? Morgen ist immer besser...",
       "slides": [
         {
@@ -12600,7 +12600,10 @@
       "date": "2026-09-02",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "post_id": "17987093843860827",
+      "story_id": "18111240398328075",
+      "published_at": "2026-09-02T19:14:15Z"
     },
     {
       "topic": "Komfortzone verlassen",
