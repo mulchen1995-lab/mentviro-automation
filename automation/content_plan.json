@@ -12474,7 +12474,11 @@
       "content_pillar": "entertaining",
       "post_id": "17895668334656423",
       "story_id": "18238247110314275",
-      "published_at": "2026-09-02T09:14:51Z"
+      "published_at": "2026-09-02T09:14:51Z",
+      "insights": {
+        "likes": 2,
+        "comments": 0
+      }
     },
     {
       "topic": "5 Zeichen, dass du Prokrastination liebst (und wie du sie beendest)",
@@ -15103,7 +15107,7 @@
       "published_at": "2026-09-01T12:18:36Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "energetic urban",
       "quote": {
         "text": "Wir leiden oft mehr in der Vorstellung als in der Realität.",
@@ -15120,7 +15124,10 @@
       "day": 106,
       "date": "2026-09-02",
       "style": "silver",
-      "content_pillar": "entertaining"
+      "content_pillar": "entertaining",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-09-02T11:55:15Z"
     },
     {
       "day": 107,
