@@ -12636,7 +12636,7 @@
     },
     {
       "topic": "Niemand redet darüber: Die Angst vor dem nächsten Schritt",
-      "status": "pending",
+      "status": "published",
       "hook": "Das Unbekannte ist beängstigend. Aber es ist auch der Weg zum Wachstum.",
       "slides": [
         {
@@ -12754,7 +12754,10 @@
       "date": "2026-09-03",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "emotional"
+      "content_pillar": "emotional",
+      "post_id": "17871677763585434",
+      "story_id": "18125788399833892",
+      "published_at": "2026-09-03T19:08:48Z"
     },
     {
       "topic": "Deep Work für maximalen Fokus",
