@@ -12757,11 +12757,15 @@
       "content_pillar": "emotional",
       "post_id": "17871677763585434",
       "story_id": "18125788399833892",
-      "published_at": "2026-09-03T19:08:48Z"
+      "published_at": "2026-09-03T19:08:48Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Deep Work für maximalen Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "Wusstest du, dass die meisten Menschen nie wirklich tief arbeiten?",
       "script": [
         "Wusstest du, dass die meisten Menschen nie wirklich tief arbeiten?",
@@ -12782,7 +12786,10 @@
       "date": "2026-09-04",
       "type": "reel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17915760426444102",
+      "story_id": "17885411292476004",
+      "published_at": "2026-09-04T09:17:34Z"
     },
     {
       "topic": "Die Kunst des Deep Work: 3 Strategien für ungestörten Fokus",
