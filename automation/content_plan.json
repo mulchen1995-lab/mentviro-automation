@@ -12797,7 +12797,7 @@
     },
     {
       "topic": "Die Kunst des Deep Work: 3 Strategien für ungestörten Fokus",
-      "status": "pending",
+      "status": "published",
       "hook": "Im Zeitalter der Ablenkung ist Fokus deine Superkraft.",
       "slides": [
         {
@@ -12893,7 +12893,10 @@
       "date": "2026-09-04",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17898452865665884",
+      "story_id": "17906498118541726",
+      "published_at": "2026-09-04T16:13:35Z"
     },
     {
       "topic": "Entscheidungen treffen",
