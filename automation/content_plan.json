@@ -12789,7 +12789,11 @@
       "content_pillar": "educational",
       "post_id": "17915760426444102",
       "story_id": "17885411292476004",
-      "published_at": "2026-09-04T09:17:34Z"
+      "published_at": "2026-09-04T09:17:34Z",
+      "insights": {
+        "likes": 0,
+        "comments": 0
+      }
     },
     {
       "topic": "Die Kunst des Deep Work: 3 Strategien für ungestörten Fokus",
@@ -13224,6 +13228,352 @@
       "type": "carousel",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "topic": "Der wahre Wert der eigenen Werte",
+      "status": "pending",
+      "hook": "Es gab einen Moment, der alles veränderte.",
+      "script": [
+        "Es ist nicht das, was du besitzt, sondern das, was dich antreibt, das wirklich zählt.",
+        "Wenn du deine tiefsten Werte kennst, wird jeder Schritt klar und erfüllt.",
+        "Das ist wahre Stärke, die niemand dir nehmen kann."
+      ],
+      "caption": "In einer Welt, die oft nur Zahlen und Erfolge misst, verlieren wir leicht den Blick für das, was wirklich zählt: unsere innersten Werte. Sie sind der Kompass, der uns durch Stürme leitet und uns daran erinnert, wer wir sind und wofür wir stehen. Finde deine Werte, lebe nach ihnen und entdecke eine unerschütterliche Quelle der Kraft. Dein Weg wird klarer, wenn dein Herz die Richtung vorgibt. ❤️ #mindset #motivation #mentaltraining #selbstständig #entrepreneur #finanziellefreiheit #passiveseinkommen #businessmindset #reichtum #vermögensaufbau #investieren #geldanlage #sparplan #richwerden #depot #mentviro",
+      "pexels_video_query": "warm sunlight forest path reflection",
+      "story_text": [
+        "NEUES REEL",
+        "Was treibt dich wirklich an?",
+        "Entdecke deine Werte!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Werte > Zahlen?",
+      "day": 112,
+      "date": "2026-09-08",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Warum wahre Erfüllung kein Preisetikett hat",
+      "status": "pending",
+      "hook": "Niemand redet darüber, aber...",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "Wahre Erfüllung",
+            "findet man nicht auf dem Kontoauszug."
+          ],
+          "body": [
+            "Entdecke die unsichtbaren Werte, die dein Leben reicher machen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "PERSPEKTIVE #1",
+          "num": "1 / 5",
+          "title": [
+            "Der Wert der Zeit"
+          ],
+          "body": [
+            "Unbezahlbare Momente statt unendlicher To-Do-Listen."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #2",
+          "num": "2 / 5",
+          "title": [
+            "Die Kraft der Beziehungen"
+          ],
+          "body": [
+            "Echte Verbindungen sind mehr wert als jedes Netzwerk."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #3",
+          "num": "3 / 5",
+          "title": [
+            "Die Ruhe im Geist"
+          ],
+          "body": [
+            "Innerer Frieden ist ein Luxus, den Geld nicht kaufen kann."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #4",
+          "num": "4 / 5",
+          "title": [
+            "Die Freude am Lernen"
+          ],
+          "body": [
+            "Wissen & Wachstum sind unvergängliche Schätze."
+          ]
+        },
+        {
+          "badge": "PERSPEKTIVE #5",
+          "num": "5 / 5",
+          "title": [
+            "Dein persönlicher Beitrag"
+          ],
+          "body": [
+            "Einen Unterschied machen, der bleibt."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Money Moves"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Wir jagen oft externen Zielen hinterher und vergessen dabei, dass die reichsten Schätze oft unsichtbar sind. Wahre Erfüllung kommt aus dem Inneren – aus der Ausrichtung unserer Handlungen mit unseren tiefsten Werten. Es ist das Lachen deiner Lieben, die Stille eines Morgens oder das Gefühl, etwas Sinnvolles zu tun, das zählt. Was ist dein unbezahlbarster Wert? Teile es in den Kommentaren! 👇 #mindset #motivation #mentaltraining #selbstständig #entrepreneur #finanziellefreiheit #passiveseinkommen #businessmindset #reichtum #vermögensaufbau #investieren #geldanlage #sparplan #richwerden #depot #mentviro",
+      "pexels_queries": [
+        "calm ocean sunset",
+        "friends laughing outdoors",
+        "person meditating forest",
+        "old books reading",
+        "helping hands community",
+        "forest path sunrise"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Wahre Erfüllung?",
+        "Mehr als nur Geld.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Zufriedenheit > Reichtum?",
+      "day": 112,
+      "date": "2026-09-08",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "topic": "Die Kraft kleiner Gewohnheiten",
+      "status": "pending",
+      "hook": "Was steckt hinter mentaler Stärke?",
+      "script": [
+        "Mentale Stärke entsteht nicht über Nacht, sondern durch bewusste, kleine Gewohnheiten.",
+        "Jede Wiederholung formt dich, selbst wenn du es kaum bemerkst.",
+        "Bleib dran, denn der wahre Fortschritt ist unsichtbar, bis er unaufhaltbar wird."
+      ],
+      "caption": "Du willst Großes erreichen? Dann fang klein an. Jede noch so unscheinbare Gewohnheit, die du täglich pflegst, ist ein Baustein für deine mentale Stärke und deinen Erfolg. Es ist wie der Zinseszins-Effekt, nur für dein Leben: Kleine Entscheidungen häufen sich an und entfalten eine unglaubliche Wirkung. Welche kleine Gewohnheit willst du heute starten? 💡 #mindset #mentaltraining #motivation #selbstständig #entrepreneur #businessmindset #finanzbildung #investieren #geldanlage #sparplan #reichtum #vermögensaufbau #finanziellefreiheit #passiveseinkommen #richwerden #mentviro",
+      "pexels_video_query": "dark minimalist focus loop",
+      "story_text": [
+        "NEUES REEL",
+        "Kleine Schritte, große Wirkung.",
+        "Meistere deine Gewohnheiten!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Gewohnheiten sind Schlüssel?",
+      "day": 113,
+      "date": "2026-09-09",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "3 Regeln für unaufhaltsame Gewohnheiten",
+      "status": "pending",
+      "hook": "Die geheime Formel für unaufhaltsame Gewohnheiten.",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "3 Regeln für",
+            "unaufhaltsame Gewohnheiten"
+          ],
+          "body": [
+            "Baue ein System, das dich zum Erfolg zwingt."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "REGEL #1",
+          "num": "1 / 4",
+          "title": [
+            "Mach es offensichtlich"
+          ],
+          "body": [
+            "Platziere Auslöser sichtbar in deiner Umgebung. Erinnere dich."
+          ]
+        },
+        {
+          "badge": "REGEL #2",
+          "num": "2 / 4",
+          "title": [
+            "Mach es attraktiv"
+          ],
+          "body": [
+            "Verbinde die Gewohnheit mit etwas Angenehmem. Belohne dich sofort."
+          ]
+        },
+        {
+          "badge": "REGEL #3",
+          "num": "3 / 4",
+          "title": [
+            "Mach es einfach"
+          ],
+          "body": [
+            "Reduziere den Aufwand. Starte mit 2 Minuten. Beseitige Hürden."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Money Moves"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Warum scheitern wir oft an guten Vorsätzen? Weil wir uns zu sehr auf Motivation verlassen und zu wenig auf ein klares System. Diese 3 Regeln helfen dir, jede Gewohnheit fest in deinem Alltag zu verankern und sie unaufhaltsam zu machen. Es geht nicht um Willenskraft, sondern um smarte Gestaltung deiner Umgebung und Routinen. Welche Regel wendest du schon an? 👇 #mindset #mentaltraining #motivation #selbstständig #entrepreneur #businessmindset #finanzbildung #investieren #geldanlage #sparplan #reichtum #vermögensaufbau #finanziellefreiheit #passiveseinkommen #richwerden #mentviro",
+      "pexels_queries": [
+        "dark minimal blueprint",
+        "desk organized clean",
+        "person enjoying coffee book",
+        "simple path forward",
+        "dark minimalist structure"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Deine Gewohnheiten",
+        "für mehr Erfolg.",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Willenskraft vs. System?",
+      "day": 113,
+      "date": "2026-09-09",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "topic": "Der Einfluss deines Umfelds",
+      "status": "pending",
+      "hook": "POV: Du merkst, dass dein Umfeld dein Potenzial bestimmt.",
+      "script": [
+        "Dein Umfeld ist dein größter Spiegel – umgib dich mit Energie, die dich pusht.",
+        "Wen du täglich siehst, bestimmt, wohin du gehst. Wähle weise."
+      ],
+      "caption": "Kennst du das Gefühl, wenn ein bestimmtes Gespräch dich plötzlich beflügelt? Oder wenn du merkst, wie dich bestimmte Menschen ausbremsen? Dein Umfeld ist kein Zufall, sondern ein entscheidender Faktor für dein Wachstum. Wähle bewusst, wer dich umgibt, denn du bist der Durchschnitt der 5 Menschen, mit denen du die meiste Zeit verbringst. 💪 #mindset #motivation #selbstständig #entrepreneur #businessmindset #mentaltraining #finanziellefreiheit #passiveseinkommen #reichtum #vermögensaufbau #investieren #geldanlage #sparplan #richwerden #depot #mentviro",
+      "pexels_video_query": "energetic urban youth talking",
+      "story_text": [
+        "NEUES REEL",
+        "Dein Umfeld entscheidet.",
+        "Wähle weise!",
+        "Jetzt anschauen"
+      ],
+      "story_poll": "Umfeld = Schicksal?",
+      "day": 114,
+      "date": "2026-09-10",
+      "type": "reel",
+      "style": "silver",
+      "content_pillar": "entertaining"
+    },
+    {
+      "topic": "4 Zeichen, dass dein Umfeld dich nach vorne bringt",
+      "status": "pending",
+      "hook": "Ist dein Umfeld ein Booster oder ein Bremsklotz?",
+      "slides": [
+        {
+          "badge": null,
+          "num": null,
+          "title": [
+            "4 Zeichen:",
+            "Dein Umfeld pusht dich!"
+          ],
+          "body": [
+            "Die Menschen um dich herum formen dein Morgen."
+          ],
+          "is_cover": true
+        },
+        {
+          "badge": "ZEICHEN #1",
+          "num": "1 / 5",
+          "title": [
+            "Sie inspirieren dich"
+          ],
+          "body": [
+            "Ihre Erfolge motivieren, statt zu neidisch zu machen."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #2",
+          "num": "2 / 5",
+          "title": [
+            "Sie fordern dich heraus"
+          ],
+          "body": [
+            "Konstruktive Kritik, die dich wachsen lässt."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #3",
+          "num": "3 / 5",
+          "title": [
+            "Sie feiern deine Siege"
+          ],
+          "body": [
+            "Echte Freude für deine Erfolge, egal wie klein."
+          ]
+        },
+        {
+          "badge": "ZEICHEN #4",
+          "num": "4 / 5",
+          "title": [
+            "Sie glauben an dich"
+          ],
+          "body": [
+            "Auch wenn du selbst zweifelst, geben sie dir Rückhalt."
+          ]
+        },
+        {
+          "badge": "FOLGE UNS",
+          "num": null,
+          "title": [
+            "Mehr Mindset",
+            "& Money Moves"
+          ],
+          "body": [
+            "Folge @mentviro",
+            "für täglich mehr."
+          ]
+        }
+      ],
+      "caption": "Dein Umfeld ist dein Energie-Level! Bist du von Menschen umgeben, die dich aufbauen, inspirieren und herausfordern? Oder ziehen sie dich eher runter? Achte auf diese 4 Zeichen, denn sie verraten dir, ob dein Kreis dich nach vorne bringt oder bremst. Es ist Zeit, bewusste Entscheidungen für dein Wachstum zu treffen. Wen hast du in deinem Kreis, der dich beflügelt? Markiere sie! 👇 #mindset #motivation #selbstständig #entrepreneur #businessmindset #mentaltraining #finanziellefreiheit #passiveseinkommen #reichtum #vermögensaufbau #investieren #geldanlage #sparplan #richwerden #depot #mentviro",
+      "pexels_queries": [
+        "vibrant cityscape group",
+        "friends collaborating cafe",
+        "person climbing mountain support",
+        "team celebrating success",
+        "friends encouraging each other",
+        "energetic neon lights"
+      ],
+      "story_text": [
+        "NEU AUF MENTVIRO",
+        "Check dein Umfeld:",
+        "Booster oder Bremse?",
+        "Jetzt ansehen"
+      ],
+      "story_poll": "Booster / Bremse?",
+      "day": 114,
+      "date": "2026-09-10",
+      "type": "carousel",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "story_queue": [
@@ -15157,7 +15507,7 @@
       "published_at": "2026-09-03T11:54:52Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic",
       "quote": {
         "text": "Um wertvolle Dinge zu produzieren, musst du tief arbeiten.",
@@ -15174,7 +15524,10 @@
       "day": 108,
       "date": "2026-09-04",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-09-04T11:57:49Z"
     },
     {
       "status": "pending",
@@ -15235,6 +15588,66 @@
       "date": "2026-09-07",
       "style": "silver",
       "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "calm nature cinematic light",
+      "quote": {
+        "text": "Nicht der Mensch, der wenig hat, sondern der, der nach mehr giert, ist arm.",
+        "author": "Seneca"
+      },
+      "tips": {
+        "title": "Finde deine Werte",
+        "items": [
+          "Reflektiere deine größten Erfolge.",
+          "Notiere, was dich wirklich wütend macht.",
+          "Frage dich: Wofür stehst du ein?"
+        ]
+      },
+      "day": 112,
+      "date": "2026-09-08",
+      "style": "silver",
+      "content_pillar": "emotional"
+    },
+    {
+      "status": "pending",
+      "topic": "dark clean geometric lines",
+      "quote": {
+        "text": "Wir sind das, was wir wiederholt tun. Exzellenz ist also keine Handlung, sondern eine Gewohnheit.",
+        "author": "Aristoteles"
+      },
+      "tips": {
+        "title": "Gewohnheiten starten",
+        "items": [
+          "Definiere klare, kleine Schritte.",
+          "Verbinde sie mit bestehenden Routinen.",
+          "Belohne dich sofort (klein)."
+        ]
+      },
+      "day": 113,
+      "date": "2026-09-09",
+      "style": "silver",
+      "content_pillar": "educational"
+    },
+    {
+      "status": "pending",
+      "topic": "vibrant city group laughing",
+      "quote": {
+        "text": "Du bist der Durchschnitt der fünf Menschen, mit denen du die meiste Zeit verbringst.",
+        "author": "Jim Rohn"
+      },
+      "tips": {
+        "title": "Umfeld gestalten",
+        "items": [
+          "Identifiziere deine Top 5.",
+          "Suche Mentoren oder Vorbilder.",
+          "Setze klare Grenzen zu Negativität."
+        ]
+      },
+      "day": 114,
+      "date": "2026-09-10",
+      "style": "silver",
+      "content_pillar": "entertaining"
     }
   ],
   "evergreen_cursor": 0,
