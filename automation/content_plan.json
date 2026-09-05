@@ -12929,7 +12929,7 @@
     },
     {
       "topic": "3 Schritte zu klaren Entscheidungen",
-      "status": "pending",
+      "status": "published",
       "hook": "Niemand spricht darüber: Die Kunst der klaren Entscheidung.",
       "slides": [
         {
@@ -13006,7 +13006,10 @@
       "date": "2026-09-05",
       "type": "carousel",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "post_id": "17884642116685336",
+      "story_id": "18140181679511654",
+      "published_at": "2026-09-05T17:55:23Z"
     },
     {
       "topic": "Nein sagen",
