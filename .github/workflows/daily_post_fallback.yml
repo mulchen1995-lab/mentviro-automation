@@ -5,14 +5,24 @@ name: mentviro Cloud Poster (primär)
 # geplante Crons gern droppt/verzögert. Der "already posted"-Check + zeitbasierte
 # Guards verhindern Doppel-Posts beim Retry.
 
+# ============================================================================
+# STILLGELEGT am 05.09.2026 auf Entscheidung von Julian.
+# Grund: 30-Tage-Zahlen 06.08.-04.09.2026 -> 264 Follower, Reach 985,
+# Saves 0, Shares 2, 0 Conversions bei 163 Posts + 72 Stories seit 17.05.
+# Ausserdem ist der Ursprungszweck entfallen (O&M-Restschuld getilgt).
+# Die Crons sind bewusst nur auskommentiert, nicht geloescht - Reaktivierung
+# = diese sechs Zeilen wieder einkommentieren. workflow_dispatch bleibt aktiv,
+# damit manuell einzelne Posts moeglich bleiben.
+# ============================================================================
+
 on:
-  schedule:
-    - cron: '0 5 * * *'    # 07:00 CET — reel
-    - cron: '0 7 * * *'    # 09:00 CET — reel (Retry)
-    - cron: '0 10 * * *'   # 12:00 CET — stories
-    - cron: '0 12 * * *'   # 14:00 CET — stories (Retry)
-    - cron: '0 16 * * *'   # 18:00 CET — carousel
-    - cron: '0 18 * * *'   # 20:00 CET — carousel (Retry)
+  # schedule:
+  #   - cron: '0 5 * * *'    # 07:00 CET — reel
+  #   - cron: '0 7 * * *'    # 09:00 CET — reel (Retry)
+  #   - cron: '0 10 * * *'   # 12:00 CET — stories
+  #   - cron: '0 12 * * *'   # 14:00 CET — stories (Retry)
+  #   - cron: '0 16 * * *'   # 18:00 CET — carousel
+  #   - cron: '0 18 * * *'   # 20:00 CET — carousel (Retry)
   workflow_dispatch:
     inputs:
       mode:
