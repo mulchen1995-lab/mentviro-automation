@@ -12896,7 +12896,11 @@
       "content_pillar": "educational",
       "post_id": "17898452865665884",
       "story_id": "17906498118541726",
-      "published_at": "2026-09-04T16:13:35Z"
+      "published_at": "2026-09-04T16:13:35Z",
+      "insights": {
+        "likes": 1,
+        "comments": 5
+      }
     },
     {
       "topic": "Entscheidungen treffen",
@@ -15533,7 +15537,7 @@
       "published_at": "2026-09-04T11:57:49Z"
     },
     {
-      "status": "pending",
+      "status": "published",
       "topic": "dark minimal cinematic pexels query",
       "quote": {
         "text": "Manche Dinge liegen in unserer Macht, andere nicht.",
@@ -15550,7 +15554,10 @@
       "day": 109,
       "date": "2026-09-05",
       "style": "silver",
-      "content_pillar": "educational"
+      "content_pillar": "educational",
+      "quote_id": null,
+      "tips_id": null,
+      "published_at": "2026-09-05T11:06:39Z"
     },
     {
       "status": "pending",
